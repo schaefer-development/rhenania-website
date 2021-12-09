@@ -9363,21 +9363,25 @@ export type Unnamed_1_Query = {
 					| { __typename: 'ArticleHeroTeaser' }
 					| {
 							__typename: 'CardsContainer';
+							id: string;
 							headline?: string | null | undefined;
 							cards: Array<
 								| {
 										__typename: 'CardIcon';
+										id: string;
 										icon?: { __typename?: 'Asset'; url: string } | null | undefined;
 								  }
 								| {
 										__typename: 'CardImage';
+										id: string;
 										image?: { __typename?: 'Asset'; url: string } | null | undefined;
 								  }
 							>;
 					  }
-					| { __typename: 'Divider'; padding: number }
+					| { __typename: 'Divider'; id: string; padding: number }
 					| {
 							__typename: 'Eyecatcher';
+							id: string;
 							headline?: string | null | undefined;
 							subheadline?: string | null | undefined;
 							buttonLabel?: string | null | undefined;

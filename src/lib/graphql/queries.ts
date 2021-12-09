@@ -7,23 +7,28 @@ export const START = gql`
 			modules {
 				__typename
 				... on Eyecatcher {
+					id
 					headline
 					subheadline
 					buttonLabel
 				}
 				... on Divider {
+					id
 					padding
 				}
 				... on CardsContainer {
+					id
 					headline
 					cards {
 						__typename
 						... on CardImage {
+							id
 							image {
 								url
 							}
 						}
 						... on CardIcon {
+							id
 							icon {
 								url
 							}
