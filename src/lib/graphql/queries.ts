@@ -4,7 +4,7 @@ export const START = gql`
 		page(where: { slug: "start" }) {
 			id
 			slug
-			modul {
+			modules {
 				__typename
 				... on Eyecatcher {
 					headline
@@ -16,7 +16,7 @@ export const START = gql`
 				}
 				... on CardsContainer {
 					headline
-					card {
+					cards {
 						__typename
 						... on CardImage {
 							image {
