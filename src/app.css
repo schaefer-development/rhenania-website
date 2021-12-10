@@ -42,6 +42,10 @@ body {
 }
 
 
-.rc_menu_hidden_position{
+.rc_menu_visible{
+	margin-top:0;
+}
+
+.rc_menu_hidden{
 	margin-top:-50vh;
 }
