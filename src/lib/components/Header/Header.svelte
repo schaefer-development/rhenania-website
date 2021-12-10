@@ -90,7 +90,7 @@
 -->
 
 <!-- aside menu -->
-<aside id="drawer" on:click={toggleMenu} class="{open ? 'top-20 ' : 'top-20'} transform bg-rc_darkblue-darkest h-1/2 left-0 w-full fixed overflow-auto ease-in-out transition-all duration-300 z-40">
+<aside id="drawer" on:click={toggleMenu} class="{open ? 'top-20 ' : 'rc_hidden_position'} transform bg-rc_darkblue-darkest h-1/2 left-0 w-full fixed overflow-auto ease-in-out transition-all duration-300 z-40">
   
 
 
