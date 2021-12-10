@@ -21,3 +21,8 @@ body {
 	@apply font-bold text-base lg:text-xl uppercase tracking-wider break-words;
 }
 
+
+.rc_rotate{
+    transform: rotate(40deg);
+}
+
