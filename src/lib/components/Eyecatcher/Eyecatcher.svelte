@@ -7,7 +7,7 @@
 	<div class="absolute border rc_background_triangle w-full h-full -mt-12" />
 	<div class="relative z-10 max-w-screen-lg mx-auto grid grid-cols-1 md:grid-cols-5 gap-x-8 px-10 ">
 		<div class="col-span-full md:col-span-1 flex items-center">
-			<img src={module.image.url} class="rounded-full mx-auto w-5/12 md:w-full" />
+			<img src={module.image.url} alt="Nächster Termin | Upcoming event" class="rounded-full mx-auto w-5/12 md:w-full" />
 		</div>
 		<div class="col-span-full md:col-span-1 flex items-stretch ">
 			<span class="w-px border-r border-white mx-auto inline-block transform rc_rotate" />

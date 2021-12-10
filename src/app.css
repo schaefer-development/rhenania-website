@@ -33,3 +33,15 @@ body {
    background-repeat: no-repeat;
    background-position: 0 50%;
 }
+
+.rc_hr{
+	background-image:url(/hr.svg);
+	background-repeat: repeat-y;
+	height:4px;
+	margin-top:-4px;
+}
+
+
+.rc_menu_hidden_position{
+	margin-top:-50vh;
+}
