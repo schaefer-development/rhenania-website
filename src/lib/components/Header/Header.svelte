@@ -1,5 +1,5 @@
 <script lang="ts">
-  	import Logo from '$lib/components/Logo/Logo.svelte';
+  import Logo from '$lib/components/Logo/Logo.svelte';
   import { page } from '$app/stores';
   import { base } from '$app/paths';
   import { browser } from '$app/env';
@@ -26,8 +26,35 @@
   });
 </script>
 
-<header class="sticky top-0 z-50 shadow-md h-20 flex flex-wrap content-center">
+<header class="sticky top-0 z-50 bg-white shadow-md flex space-between">
+<div class="inner w-full max-w-screen-2xl mx-auto flex flex-row items-center h-20 ">
 
+
+  <a sveltekit:prefetch href="{base}/" class="text-rc_darkblue w-32 none"><Logo /></a>
+
+  <div class="flex-grow flex justify-end">
+    <div class="text-black px-4">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+    </div>
+    <div class="font-medium uppercase px-4 text-sm tracking-wider">start</div>
+    <div class="font-medium uppercase px-4 text-sm tracking-wider">produkte</div>
+    <div class="font-medium uppercase px-4 text-sm tracking-wider">unternehmen</div>
+    <div class="font-medium uppercase px-4 text-sm tracking-wider">service</div>
+  </div>
+</div>
+</header>
+<!--
+
+  <div class="w-full max-w-xl border">
+  <a sveltekit:prefetch href="{base}/" class="text-rc_darkblue w-32 flex items-stretch"><Logo /></a>
+
+<nav class="flex justify-end max-w-screen-2xl mx-auto w-full">
+
+<div class="menu">menu 12 34 56</div>
+</nav>
+</div>
   <a sveltekit:prefetch href="{base}/" class="text-rc_darkblue w-32 flex items-stretch"><Logo /></a>
 
   <nav class="container flex items-center justify-end flex-wrap px-6 py-4 mx-auto w-full">
@@ -38,8 +65,12 @@
       </button>
     </div>
   </nav>
-</header>
 
+
+
+-->
+
+<!-- aside menu -->
 <aside id="drawer" style="opacity:1;" on:click={toggleMenu} class="{open ? 'translate-x-0' : 'translate-x-full'} transform bg-rc_darkblue-darkest top-0 left-0 w-full fixed h-full overflow-auto ease-in-out transition-all duration-300 z-50">
   <div class="container flex flex-col flex-wrap px-6 py-4 mx-auto w-full menu_points">
     <div class="flex justify-end w-full block">
