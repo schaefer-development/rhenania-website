@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.css';
-	import '@fontsource/red-hat-text';
+	import '@fontsource/red-hat-text/variable.css';
 
 	import Header from '$lib/components/Header/Header.svelte';
 	import Footer from '$lib/components/Footer/Footer.svelte';
@@ -17,7 +17,7 @@
 <div class="flex flex-col h-screen justify-between">
 <Header />
 
-<main class="mb-auto">
+<main class="mb-auto bg-gray-50 py-20">
 	<slot />
 </main>
 
