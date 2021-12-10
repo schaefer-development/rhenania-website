@@ -37,8 +37,8 @@ body {
 .rc_hr{
 	background-image:url(/hr.svg);
 	background-repeat: repeat-y;
-	height:4px;
-	margin-top:-4px;
+	height:7px;
+	margin-top:-5px;
 }
 
 
