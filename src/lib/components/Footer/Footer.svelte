@@ -5,7 +5,7 @@
 <footer class="text-white bg-rc_darkblue-darkest">
 	<div class="bg-rc_darkblue">
 		<div
-			class="grid grid-cols-5 gap-4 mx-auto max-w-screen-xl py-20 text-xs text-center text-rc_darkblue-darkest"
+			class="grid grid-cols-5 gap-4 mx-auto max-w-screen-2xl py-20 text-xs text-center text-rc_darkblue-darkest"
 		>
 			<div>
 				<img src="/logo_clients/lamy.svg" alt="Lamy" />
@@ -17,7 +17,7 @@
 		</div>
 	</div>
 	<div
-		class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-4 mx-auto max-w-screen-xl px-10 py-20 text-xs "
+		class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-4 mx-auto max-w-screen-2xl px-10 py-20 text-xs "
 	>
 		<div class="col-span-full text-white">
 			<div class="w-16">
