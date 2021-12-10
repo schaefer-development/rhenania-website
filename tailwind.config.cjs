@@ -4,10 +4,7 @@ const { transform, updateImportClause } = require('typescript');
 module.exports = {
 
 	purge: ['./src/**/*.html', './src/**/*.svelte'],
-	plugins: [
-		require('@tailwindcss/aspect-ratio'),
-		// ...
-	  ],
+	plugins: [],
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		extend: {

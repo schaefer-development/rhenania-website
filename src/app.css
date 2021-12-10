@@ -14,11 +14,11 @@ body {
 }
 
 .rc_h2 {
-	@apply font-bold text-xl lg:text-2xl uppercase tracking-widest break-words;
+	@apply font-bold text-base lg:text-xl uppercase tracking-widest break-words;
 }
 
 .rc_h3 {
-	@apply font-bold text-base lg:text-xl uppercase tracking-wider break-words;
+	@apply font-bold text-sm lg:text-base uppercase tracking-wider break-words;
 }
 
 
