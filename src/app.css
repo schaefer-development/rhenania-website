@@ -44,9 +44,8 @@ body {
 	margin-top:-5px;
 }
 
-.rc_menu_desktop{
+.rc_menu{
 	height:auto;
-	max-height:50vh;
 	background-color: rgba(21, 37, 79, 0.99);
 }
 
@@ -56,5 +55,5 @@ body {
 }
 
 .rc_menu_hidden{
-	margin-top:calc(-50vh - 5rem);
+	margin-top:calc(-100vh - 5rem);
 }
