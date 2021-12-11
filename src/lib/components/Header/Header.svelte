@@ -1,29 +1,17 @@
 <script lang="ts">
   import Logo from '$lib/components/Logo/Logo.svelte';
-  import { page } from '$app/stores';
+  import HeaderAccordion from '$lib/components/HeaderAccordion/HeaderAccordion.svelte';
   import { base } from '$app/paths';
 
-
-  const linkClass = (path, pge) => {
-    const defaults = 'inline-block no-underline py-2 px-4';
-    const active = 'text-white';
-    const inactive = 'text-white';
-    return `${pge.path === path ? active : inactive} ${defaults}`;
+  let openProdukte = false;
+  const toggleMenuProdukte = () => {
+    openProdukte = !openProdukte;
   };
 
-  let links = [
-    { path: `${base}/start`, label: 'Start' },
-    { path: `${base}/produkte`, label: 'Produkte' },
-    { path: `${base}/kontakt`, label: 'Kontakt' }
-  ];
-  let open = false;
-  const toggleMenu = () => {
-    open = !open;
+  let openMenuUnternehmen= false;
+  const toggleMenuUnternehmen = () => {
+    openMenuUnternehmen = !openMenuUnternehmen;
   };
-
-  $: styledLinks = links.map((link) => {
-    return { ...link, class: linkClass(link.path, $page) };
-  });
 </script>
 
 <header class="sticky top-0 z-50 bg-white shadow-md flex space-between">
@@ -45,78 +33,65 @@
  
       
 
-    <button on:click={toggleMenu} class="">
-      <span class="font-medium uppercase px-4 text-black hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider">Produkte</span>
+    <button on:click={toggleMenuProdukte}>
+      <span class="{openProdukte ? 'border-b border-rc_red': ''} font-medium uppercase px-2 py-2 mx-2 text-black hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider">Produkte</span>
     </button>
 
+    <button on:click={toggleMenuUnternehmen}>
+      <span class="{openProdukte ? 'border-b border-rc_red': ''} font-medium uppercase px-2 py-2 mx-2 text-black hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider">Unternehmen</span>
+    </button>
 
-      <!--
-      <a sveltekit:prefetch href="{base}/" class="font-medium uppercase px-4 text-black hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider">Start</a>
- 
-
-      <a sveltekit:prefetch href="{base}/" class="font-medium uppercase px-4 text-black hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider">Produkte</a>
-
-
-      <button on:click={toggleMenu} class="flex items-center px-2 py-2 focus:border-0 text-rc_red tracking-wider hover:text-ti_blue_accent focus:ring-0 focus:outline-none focus:text-ti_blue_accent ">
-        <span class="uppercase font-bold px-2 ">Menu</span>
-        <svg class="fill-current h-6 w-6 text-rc_red" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
-      </button>-->
   </div>
 </div>
 </header>
-<!--
 
-  <div class="w-full max-w-xl border">
-  <a sveltekit:prefetch href="{base}/" class="text-rc_darkblue w-32 flex items-stretch"><Logo /></a>
-
-<nav class="flex justify-end max-w-screen-2xl mx-auto w-full">
-
-<div class="menu">menu 12 34 56</div>
-</nav>
-</div>
-  <a sveltekit:prefetch href="{base}/" class="text-rc_darkblue w-32 flex items-stretch"><Logo /></a>
-
-  <nav class="container flex items-center justify-end flex-wrap px-6 py-4 mx-auto w-full">
-    <div class="block self-align-end">
-      <button on:click={toggleMenu} class="flex items-center px-2 py-2 focus:border-0 text-rc_red tracking-wider hover:text-ti_blue_accent focus:ring-0 focus:outline-none focus:text-ti_blue_accent ">
-        <span class="uppercase font-bold px-2 ">Menu</span>
-        <svg class="fill-current h-6 w-6 text-rc_red" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
-      </button>
-    </div>
-  </nav>
-
-
-
--->
 
 <!-- aside menu -->
-<aside id="drawer" on:click={toggleMenu} class="{open ? 'rc_menu_visible' : 'rc_menu_hidden'} transform bg-rc_darkblue-darkest h-1/2 left-0 w-full fixed overflow-auto ease-in-out transition-all duration-300 z-40">
-  
 
-
-
-  
-  <div class="flex items-stretch h-full max-w-screen-2xl mx-auto">
-
-
+<aside id="drawer" on:click={toggleMenuProdukte} class="{openProdukte ? 'rc_menu_visible' : 'rc_menu_hidden'} rc_menu_desktop left-0 top-20 w-full shadow-md fixed overflow-auto ease-in-out transform transition-all duration-300 z-40">
     <div class="flex flex-row w-full max-w-screen-2xl mx-auto ">
-      <div class="border flex flex-grow items-center">
-        <div class="flex-grow">1</div>
-        <div class="flex-grow">1</div>
-        <div class="flex-grow">1</div>
-
+      <div class="w-full grid grid-cols-3 gap-10 px-10 py-10">
+          <HeaderAccordion id="versandlogistiksystem">
+            <span slot="headline">Versandlogistiksystem</span>
+            <div slot="content">
+             <a href="{base}/" class="rc_desktopmenu_subpoint">F95 - Paket und Palettenversand</a>
+             <a href="{base}/" class="rc_desktopmenu_subpoint">K04 - Kommissionieren, Kontrollieren, Packen</a>
+             <a href="{base}/" class="rc_desktopmenu_subpoint">VKA - Versandkostenkontrolle und Abrechnung</a>
+            </div>
+          </HeaderAccordion>
+          <HeaderAccordion id="versandoptimierung">
+            <span slot="headline">Versandoptimierung</span>
+            <div slot="content">
+             <a href="{base}/" class="rc_desktopmenu_subpoint">U12 - Umsatzbefreiung sichern</a>
+             <a href="{base}/" class="rc_desktopmenu_subpoint">DUV - Dubletten vermeiden</a>
+             <a href="{base}/" class="rc_desktopmenu_subpoint">APK - Adressprüfung und Korrektur</a>
+             <a href="{base}/" class="rc_desktopmenu_subpoint">G10 - Gefahrgutversand</a>
+            </div>
+          </HeaderAccordion>
+          <HeaderAccordion id="hardware">
+            <span slot="headline">Hardware</span>
+            <div slot="content">
+             <a href="{base}/" class="rc_desktopmenu_subpoint">Etikettendrucker</a>
+             <a href="{base}/" class="rc_desktopmenu_subpoint">Waagen</a>
+             <a href="{base}/" class="rc_desktopmenu_subpoint">Barcodescanner</a>
+            </div>
+          </HeaderAccordion>
       </div>
-
-
-  
-    </div>
-
-
-
-
-  
   </div>
-  
-  
-
 </aside>
+
+
+<aside id="drawer" on:click={toggleMenuUnternehmen} class="{openMenuUnternehmen ? 'rc_menu_visible' : 'rc_menu_hidden'} rc_menu_desktop left-0 top-20 w-full shadow-md fixed overflow-auto ease-in-out transform transition-all duration-300 z-40">
+  <div class="flex flex-row w-full max-w-screen-2xl mx-auto ">
+    <div class="w-full px-10 py-10 text-right">
+      <a href="{base}/" class="w-full text-white block font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red">Kontakt und Anfahrt</a>
+      <a href="{base}/" class="w-full text-white block font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red">Karriere</a>
+      <a href="{base}/" class="w-full text-white block font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red">Termine</a>
+      <a href="{base}/" class="w-full text-white block font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red">Partner</a>
+      <a href="{base}/" class="w-full text-white block font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red">Referenzen</a>
+    </div>
+</div>
+</aside>
+
+
+

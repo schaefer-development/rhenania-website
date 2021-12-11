@@ -10,17 +10,20 @@ body {
 }
 
 .rc_h1 {
-	@apply font-bold text-2xl lg:text-3xl uppercase tracking-widest break-words;
+	@apply font-bold text-2xl lg:text-3xl uppercase tracking-wider break-words;
 }
 
 .rc_h2 {
-	@apply font-bold text-base lg:text-xl uppercase tracking-widest break-words;
+	@apply font-bold text-base lg:text-xl uppercase tracking-wider	 break-words;
 }
 
 .rc_h3 {
 	@apply font-bold text-sm lg:text-base uppercase tracking-wider break-words;
 }
 
+.rc_desktopmenu_subpoint {
+	@apply block py-2 text-rc_skyblue uppercase tracking-wider border-b border-rc_darkblue text-sm font-medium hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red
+}
 
 .rc_rotate{
     transform: rotate(40deg);
@@ -39,6 +42,12 @@ body {
 	background-repeat: repeat-y;
 	height:7px;
 	margin-top:-5px;
+}
+
+.rc_menu_desktop{
+	height:auto;
+	max-height:50vh;
+	background-color: rgba(21, 37, 79, 0.99);
 }
 
 

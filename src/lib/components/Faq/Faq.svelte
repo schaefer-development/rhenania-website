@@ -11,16 +11,16 @@
 		<Accordion id="1">
             <span slot="headline">Welche Arbeitsschritte kann F95 abwickeln?</span>
             <div slot="content">
-				<p class="py-2">Mit F95 können Sendungen beim Betriebsdurchlauf und nach der Auslieferung
+				Mit F95 können Sendungen beim Betriebsdurchlauf und nach der Auslieferung
 					verwaltet werden. Die Software steuert das Fertigmachen der Sendungen, die Einlieferung/Abholung,
-					sowie die Verwaltung und Abwicklung mit den Frachtführern. [...]</p>
+					sowie die Verwaltung und Abwicklung mit den Frachtführern. [...]
             </div>
           </Accordion>
 
 		  <Accordion id="2">
             <span slot="headline">Wie lautet die zweite Frage?</span>
             <div slot="content">
-				<p class="py-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
             </div>
           </Accordion>
 
