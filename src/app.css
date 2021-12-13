@@ -10,11 +10,11 @@ body {
 }
 
 .rc_h1 {
-	@apply font-bold text-2xl lg:text-3xl uppercase tracking-wider break-words;
+	@apply font-medium text-2xl lg:text-3xl uppercase tracking-wider break-words;
 }
 
 .rc_h2 {
-	@apply font-bold text-base lg:text-xl uppercase tracking-wider	 break-words;
+	@apply font-bold text-base lg:text-xl uppercase tracking-widest break-words;
 }
 
 .rc_h3 {
