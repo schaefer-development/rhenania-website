@@ -1,7 +1,5 @@
 <script>
-
 	import Accordion from '$lib/components/Accordion/Accordion.svelte';
-
   </script>
 
 <div class="relative bg-white py-12 shadow-md">

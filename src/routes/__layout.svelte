@@ -14,12 +14,14 @@
 
 
 
-<div class="flex flex-col h-screen justify-between">
+<div class="flex flex-col min-h-screen justify-between">
 <Header />
 
-<main class="mb-auto bg-gray-50 py-20">
+<main class="mb-auto bg-gray-50 pb-20">
 	<slot />
 </main>
 
+
 <Footer />
+
 </div>
