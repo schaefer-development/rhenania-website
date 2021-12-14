@@ -9358,23 +9358,29 @@ export type Unnamed_1_Query = {
 		| {
 				__typename?: 'Page';
 				id: string;
-				slug: string;
 				modules: Array<
-					| { __typename: 'ArticleHeroTeaser' }
+					| {
+							__typename: 'ArticleHeroTeaser';
+							id: string;
+							headline?: string | null | undefined;
+							subheadline?: string | null | undefined;
+							teaserText?: string | null | undefined;
+							heroBackgroundImage?:
+								| { __typename?: 'Asset'; id: string; url: string }
+								| null
+								| undefined;
+					  }
 					| {
 							__typename: 'CardsContainer';
 							id: string;
 							headline?: string | null | undefined;
 							cards: Array<
-								| {
-										__typename: 'CardIcon';
-										id: string;
-										icon?: { __typename?: 'Asset'; url: string } | null | undefined;
-								  }
+								| { __typename: 'CardIcon' }
 								| {
 										__typename: 'CardImage';
 										id: string;
-										image?: { __typename?: 'Asset'; url: string } | null | undefined;
+										headline?: string | null | undefined;
+										image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
 								  }
 							>;
 					  }
@@ -9384,10 +9390,20 @@ export type Unnamed_1_Query = {
 							id: string;
 							headline?: string | null | undefined;
 							subheadline?: string | null | undefined;
-							buttonLabel?: string | null | undefined;
+							image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
 					  }
-					| { __typename: 'Faq' }
-					| { __typename: 'HeroImage' }
+					| {
+							__typename: 'Faq';
+							id: string;
+							question: string;
+							answer: { __typename?: 'RichText'; markdown: string };
+					  }
+					| {
+							__typename: 'HeroImage';
+							id: string;
+							image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
+							icon?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
+					  }
 					| { __typename: 'Text' }
 				>;
 		  }

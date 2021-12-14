@@ -27,5 +27,4 @@
 	export let data = { page: {} };
 </script>
 
-
 <Page page={data.page} />

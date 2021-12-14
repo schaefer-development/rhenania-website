@@ -1,9 +1,8 @@
 <script lang="ts">
 	import type { CardImage } from '$lib/graphql/generated/schema';
+	import { base } from '$app/paths';
 	export let card: Partial<CardImage> = {};
-	import { base, assets } from '$app/paths';
 </script>
-
 
 <div class="singleCard bg-white shadow-md hover:shadow-lg">
 	<div
@@ -13,7 +12,7 @@
 	<div
 		class="cardText h4-24 lg:h-32 px-4 py-4 flex flex-col w-full text-center items-center justify-end"
 	>
-		<span class="rc_h4 text-rc_darkblue pb-2">dfsdf</span>
+		<span class="rc_h4 text-rc_darkblue pb-2">{card.headline} </span>
 
 		<div class="moreLink flex w-full items-center justify-center text-rc_red">
 			<a href="{base}/" class="text-rc_red uppercase tracking-wider text-sm font-medium pr-2"
@@ -36,4 +35,3 @@
 		</div>
 	</div>
 </div>
-

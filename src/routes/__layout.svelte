@@ -8,20 +8,18 @@
 
 <svelte:head>
 	<title>Rhenania Computer</title>
-	<meta name="description" content="Software zum Optimieren des Versandprozesses aus Aegidenberg (Bad Honnef)" />
-	
+	<meta
+		name="description"
+		content="Software zum Optimieren des Versandprozesses aus Aegidenberg (Bad Honnef)"
+	/>
 </svelte:head>
 
-
-
 <div class="flex flex-col min-h-screen justify-between">
-<Header />
+	<Header />
 
-<main class="mb-auto bg-gray-50 pb-20">
-	<slot />
-</main>
+	<main class="mb-auto bg-gray-50 pb-20">
+		<slot />
+	</main>
 
-
-<Footer />
-
+	<Footer />
 </div>

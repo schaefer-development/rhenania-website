@@ -3,8 +3,6 @@
 	export let module: Partial<ArticleHeroTeaser> = {};
 </script>
 
-
 <div>
-
 	<h1>ArticleHeroTeaser</h1>
 </div>

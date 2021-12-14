@@ -79,20 +79,26 @@
 			</div>
 
 			<div id="menu_mobil" class="visible md:hidden">
-
-
-
-
-				<button on:click={toggleMenuFull} class="text-rc_red flex w-full items-center justify-end focus:border-0 uppercase font-medium tracking-wider hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red ">
-					<span
-					class="uppercase font-medium px-2"
-					>Menu</span
+				<button
+					on:click={toggleMenuFull}
+					class="text-rc_red flex w-full items-center justify-end focus:border-0 uppercase font-medium tracking-wider hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red "
 				>
-				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-				  </svg>
-				  </button>
-
+					<span class="uppercase font-medium px-2">Menu</span>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="h-6 w-6"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M4 6h16M4 12h16M4 18h16"
+						/>
+					</svg>
+				</button>
 			</div>
 		</div>
 	</div>
@@ -224,16 +230,28 @@
 		<div
 			class="w-full px-4 md:px-10 py-10 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-10 text-white "
 		>
-
-		<div class="col-span-1 sm:col-span-2">
-			<button class="flex w-full items-center justify-end focus:border-0 text-rc_red uppercase font-medium tracking-wider hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red ">
-				<span class="uppercase font-medium px-2">Schliessen</span>
-				<svg xmlns="http://www.w3.org/2000/svg" class="fill-current h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-				  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-				</svg>
-			  </button>
-			<hr class="my-4 border-rc_red">
-		</div>
+			<div class="col-span-1 sm:col-span-2">
+				<button
+					class="flex w-full items-center justify-end focus:border-0 text-rc_red uppercase font-medium tracking-wider hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red "
+				>
+					<span class="uppercase font-medium px-2">Schliessen</span>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="fill-current h-6 w-6"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M6 18L18 6M6 6l12 12"
+						/>
+					</svg>
+				</button>
+				<hr class="my-4 border-rc_red" />
+			</div>
 			<div class="left">
 				<!-- left start -->
 				<a href="{base}/" class="rc_h1 text-rc_skyblue">Start</a>

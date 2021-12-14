@@ -6,7 +6,7 @@
 
 body {
 	font-family: 'Red Hat Text';
-    font-size: calc(12px + 0.25vw);
+	font-size: calc(12px + 0.25vw);
 }
 
 .rc_h1 {
@@ -21,60 +21,56 @@ body {
 	@apply font-bold text-sm lg:text-base uppercase tracking-wider break-words;
 }
 
-
 .rc_h4 {
 	@apply font-bold text-xs lg:text-sm uppercase tracking-wider;
 }
 
-
 .rc_desktopmenu_subpoint {
-	@apply block py-2 text-rc_skyblue uppercase tracking-wider border-b border-rc_darkblue text-sm font-medium hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red
+	@apply block py-2 text-rc_skyblue uppercase tracking-wider border-b border-rc_darkblue text-sm font-medium hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red;
 }
 
-.rc_rotate{
-    transform: rotate(40deg);
+.rc_rotate {
+	transform: rotate(40deg);
 }
 
-.rc_text_shadow{
+.rc_text_shadow {
 	text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
-.rc_button_corner:after{
-	content: "";
-    position: absolute;
-    right: -1em;
-    top: 0px;
+.rc_button_corner:after {
+	content: '';
+	position: absolute;
+	right: -1em;
+	top: 0px;
 	width: 1em;
 	height: 100%;
-	background:inherit;
+	background: inherit;
 	clip-path: polygon(100% 0, 0 0, 0 100%);
-
 }
 
-.rc_background_triangle{
-   background-image:url(/triangle.svg);
-   background-size: contain;
-   background-repeat: no-repeat;
-   background-position: 0 50%;
+.rc_background_triangle {
+	background-image: url(/triangle.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 0 50%;
 }
 
-.rc_hr{
-	background-image:url(/hr.svg);
+.rc_hr {
+	background-image: url(/hr.svg);
 	background-repeat: repeat-y;
-	height:8px;
-	margin-top:-4px;
+	height: 8px;
+	margin-top: -4px;
 }
 
-.rc_menu{
-	height:auto;
+.rc_menu {
+	height: auto;
 	background-color: rgba(21, 37, 79, 0.99);
 }
 
-
-.rc_menu_visible{
-	margin-top:0;
+.rc_menu_visible {
+	margin-top: 0;
 }
 
-.rc_menu_hidden{
-	margin-top:calc(-100vh - 5rem);
+.rc_menu_hidden {
+	margin-top: calc(-100vh - 5rem);
 }
