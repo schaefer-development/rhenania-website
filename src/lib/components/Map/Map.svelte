@@ -24,7 +24,7 @@
 	onMount(async () => {
 		await import('leaflet');
 		const icon = L.icon(iconOptions);
-		const map = L.map('map').setView(coordinates, zoom);
+		const map = L.map('map', { scrollWheelZoom: false }).setView(coordinates, zoom);
 		L.tileLayer(...layerOptions).addTo(map);
 		L.marker(coordinates, { icon }).addTo(map);
 
@@ -41,4 +41,4 @@
 	/>
 </svelte:head>
 
-<div id="map" {...mapAttributes} />
+<div id="map" {...mapAttributes} class="z-10" />

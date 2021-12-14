@@ -20,7 +20,7 @@
 			<div class="self-center py-10">
 				<h1 class="text-white rc_h1">{module.headline}</h1>
 				<h2 class="text-rc_skyblue rc_h3 pb-4">{module.subheadline}</h2>
-				<hr class="border-b-1 border-rc_darkblue-darkest k" />
+				<hr class="border-b-1 border-rc_darkblue-darkest" />
 			</div>
 		</div>
 	</div>
