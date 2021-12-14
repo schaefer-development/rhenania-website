@@ -21,6 +21,12 @@ body {
 	@apply font-bold text-sm lg:text-base uppercase tracking-wider break-words;
 }
 
+
+.rc_h4 {
+	@apply font-bold text-xs lg:text-sm uppercase tracking-wider;
+}
+
+
 .rc_desktopmenu_subpoint {
 	@apply block py-2 text-rc_skyblue uppercase tracking-wider border-b border-rc_darkblue text-sm font-medium hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red
 }
@@ -55,8 +61,8 @@ body {
 .rc_hr{
 	background-image:url(/hr.svg);
 	background-repeat: repeat-y;
-	height:7px;
-	margin-top:-5px;
+	height:8px;
+	margin-top:-4px;
 }
 
 .rc_menu{

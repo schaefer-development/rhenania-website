@@ -5,13 +5,18 @@
 	export let cardsContainer: Partial<CardsContainer> = {};
 </script>
 
-<div class="border mx-auto max-w-screen-2xl">
-	<h1>Headline</h1>
-{#each cardsContainer.cards as card}
-	{#if card.__typename === 'CardImage'}
-		<CardImage {card} />
-	{:else if card.__typename === 'CardIcon'}
-		<CardIcon {card} />
-	{/if}
-{/each}
+<div class="MultipleCardsImage ">
+	<div class="inner max-w-screen-2xl mx-auto px-10 py-20">
+		<h1 class="rc_h1 text-rc_darkblue text-center pb-8">headline</h1>
+
+		<div class="cardsContainer grid grid-cols-2 lg:grid-cols-4 gap-4">
+			{#each cardsContainer.cards as card}
+				{#if card.__typename === 'CardImage'}
+					<CardImage {card} />
+				{:else if card.__typename === 'CardIcon'}
+					<CardIcon {card} />
+				{/if}
+			{/each}
+		</div>
+	</div>
 </div>
