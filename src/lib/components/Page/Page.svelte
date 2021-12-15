@@ -7,18 +7,9 @@
 	import BlogTeaser from '$lib/components/BlogTeaser/BlogTeaser.svelte';
 	import type { Page } from '$lib/graphql/generated/schema';
 	export let page: Partial<Page> = {};
-
-	import Map from '$lib/components/Map/Map.svelte';
-	const mapAttributes = {
-		class: '',
-		style: 'width: 100%; height: 100%; min-height:500px; max-height:40vh;'
-	};
-
-	export const prerender = true;
 </script>
 
 <HeroStart />
-<Map {mapAttributes} />
 
 <BlogTeaser />
 
