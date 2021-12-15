@@ -6,16 +6,22 @@
 	let openMenuProdukte = false;
 	const toggleMenuProdukte = () => {
 		openMenuProdukte = !openMenuProdukte;
+		openMenuUnternehmen = false;
+		openMenuService = false;
 	};
 
 	let openMenuUnternehmen = false;
 	const toggleMenuUnternehmen = () => {
 		openMenuUnternehmen = !openMenuUnternehmen;
+		openMenuProdukte = false;
+		openMenuService = false;
 	};
 
 	let openMenuService = false;
 	const toggleMenuService = () => {
 		openMenuService = !openMenuService;
+		openMenuProdukte = false;
+		openMenuUnternehmen = false;
 	};
 
 	let openMenuFull = false;
