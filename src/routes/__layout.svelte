@@ -1,7 +1,6 @@
 <script lang="ts">
 	import '../app.css';
 	import '@fontsource/red-hat-text/variable.css';
-
 	import Header from '$lib/components/Header/Header.svelte';
 	import Footer from '$lib/components/Footer/Footer.svelte';
 </script>
@@ -14,12 +13,10 @@
 	/>
 </svelte:head>
 
-<div class="flex flex-col min-h-screen justify-between">
+<div class="flex flex-col min-h-screen justify-between bg-gray-50 ">
 	<Header />
-
-	<main class="mb-auto bg-gray-50 pb-20">
+	<main class="mb-auto">
 		<slot />
 	</main>
-
 	<Footer />
 </div>
