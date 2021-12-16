@@ -25,7 +25,7 @@
 	<div>
 		<h3 class="rc_h3 pt-2">Datenschutz</h3>
 		<p class="py-2">
-			Ssssofern innerhalb des Internetangebotes die Möglichkeit zur Eingabe persönlicher oder
+			Sofern innerhalb des Internetangebotes die Möglichkeit zur Eingabe persönlicher oder
 			geschäftlicher Daten (Emailadressen, Namen, Anschriften) besteht, so erfolgt die Preisgabe
 			dieser Daten seitens des Nutzers auf ausdrücklich freiwilliger Basis. Die Inanspruchnahme und
 			Bezahlung aller angebotenen Dienste ist - soweit technisch möglich und zumutbar - auch ohne
