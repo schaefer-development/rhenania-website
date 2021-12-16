@@ -66,19 +66,19 @@
 			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Produkte</p>
 			<p class="text-center sm:text-left tracking-wide">
 				<a
-					href="{base}/versandlogistik/"
+					href="{base}/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Versandlogistik</a
 				><br />
 
 				<a
-					href="{base}/versandoptimierung/"
+					href="{base}/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Versandoptimierung</a
 				><br />
 
 				<a
-					href="{base}/hardware/"
+					href="{base}/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Hardware</a
 				><br />
@@ -122,18 +122,18 @@
 			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Service</p>
 			<p class="text-center sm:text-left tracking-wide">
 				<a
-					href="{base}/cloudloesungen/"
+					href="{base}/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Cloudlösungen</a
 				><br />
 				<a
-					href="{base}/onlinesupport/"
+					href="{base}/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Online-Support</a
 				><br />
 
 				<a
-					href="{base}/download/"
+					href="{base}/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Download</a
 				><br />

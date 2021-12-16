@@ -1,8 +1,8 @@
 <script lang="ts">
 	import '../app.css';
-	import '@fontsource/red-hat-text/latin-400.css';
-	import '@fontsource/red-hat-text/latin-500.css';
-	import '@fontsource/red-hat-text/latin-700.css';
+	import '@fontsource/red-hat-text/400.css';
+	import '@fontsource/red-hat-text/500.css';
+	import '@fontsource/red-hat-text/700.css';
 	import Header from '$lib/components/Header/Header.svelte';
 	import Footer from '$lib/components/Footer/Footer.svelte';
 </script>

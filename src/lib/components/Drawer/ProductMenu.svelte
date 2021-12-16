@@ -11,10 +11,10 @@
 				<a href="{base}/products/f95/" class="rc_desktopmenu_subpoint"
 					>F95 - Paket und Palettenversand</a
 				>
-				<a href="{base}/products/k04/" class="rc_desktopmenu_subpoint"
+				<a href="{base}/" class="rc_desktopmenu_subpoint"
 					>K04 - Kommissionieren, Kontrollieren, Packen</a
 				>
-				<a href="{base}/products/vka/" class="rc_desktopmenu_subpoint"
+				<a href="{base}/" class="rc_desktopmenu_subpoint"
 					>VKA - Versandkostenkontrolle und Abrechnung</a
 				>
 			</div>
@@ -22,22 +22,18 @@
 		<DrawerAccordion id="versandoptimierung">
 			<span slot="headline">Versandoptimierung</span>
 			<div slot="content">
-				<a href="{base}/products/u12/" class="rc_desktopmenu_subpoint"
-					>U12 - Umsatzbefreiung sichern</a
-				>
-				<a href="{base}/products/duv/" class="rc_desktopmenu_subpoint">DUV - Dubletten vermeiden</a>
-				<a href="{base}/products/apk/" class="rc_desktopmenu_subpoint"
-					>APK - Adressprüfung und Korrektur</a
-				>
-				<a href="{base}/products/g10/" class="rc_desktopmenu_subpoint">G10 - Gefahrgutversand</a>
+				<a href="{base}/" class="rc_desktopmenu_subpoint">U12 - Umsatzbefreiung sichern</a>
+				<a href="{base}/" class="rc_desktopmenu_subpoint">DUV - Dubletten vermeiden</a>
+				<a href="{base}/" class="rc_desktopmenu_subpoint">APK - Adressprüfung und Korrektur</a>
+				<a href="{base}/" class="rc_desktopmenu_subpoint">G10 - Gefahrgutversand</a>
 			</div>
 		</DrawerAccordion>
 		<DrawerAccordion id="hardware">
 			<span slot="headline">Hardware</span>
 			<div slot="content">
-				<a href="{base}/etikettendrucker/" class="rc_desktopmenu_subpoint">Etikettendrucker</a>
-				<a href="{base}/waagen/" class="rc_desktopmenu_subpoint">Waagen</a>
-				<a href="{base}/barcodescanner/" class="rc_desktopmenu_subpoint">Barcodescanner</a>
+				<a href="{base}/" class="rc_desktopmenu_subpoint">Etikettendrucker</a>
+				<a href="{base}/" class="rc_desktopmenu_subpoint">Waagen</a>
+				<a href="{base}/" class="rc_desktopmenu_subpoint">Barcodescanner</a>
 			</div>
 		</DrawerAccordion>
 	</div>
