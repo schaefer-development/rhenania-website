@@ -19,11 +19,14 @@ export const PAGE = gql`
 						url
 					}
 				}
-				... on Faq {
+				... on FaqContainer {
 					id
-					question
-					answer {
-						html
+					faqItems {
+						id
+						question
+						answer {
+							html
+						}
 					}
 				}
 				... on HeroImage {

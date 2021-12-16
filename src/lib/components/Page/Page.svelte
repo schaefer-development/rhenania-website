@@ -2,7 +2,7 @@
 	import Divider from '$lib/components/Divider/Divider.svelte';
 	import CardsContainer from '$lib/components/CardsContainer/CardsContainer.svelte';
 	import Eyecatcher from '$lib/components/Eyecatcher/Eyecatcher.svelte';
-	import Faq from '$lib/components/Faq/Faq.svelte';
+	import FaqContainer from '$lib/components/FaqContainer/FaqContainer.svelte';
 	import type { Page } from '$lib/graphql/generated/schema';
 	export let page: Partial<Page>;
 </script>
@@ -17,8 +17,8 @@
 				<CardsContainer {module} />
 			{:else if module.__typename === 'Eyecatcher'}
 				<Eyecatcher {module} />
-			{:else if module.__typename === 'Faq'}
-				<Faq {module} />
+			{:else if module.__typename === 'FaqContainer'}
+				<FaqContainer {module} />
 			{/if}
 		{/each}
 	</div>
