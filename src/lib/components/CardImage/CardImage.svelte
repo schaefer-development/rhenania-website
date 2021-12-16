@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { CardImage } from '$lib/graphql/generated/schema';
 	import { base } from '$app/paths';
+
 	export let card: Partial<CardImage> = {};
 </script>
 
@@ -15,8 +16,9 @@
 		<span class="rc_h4 text-rc_darkblue pb-2">{card.headline} </span>
 
 		<div class="moreLink flex w-full items-center justify-center text-rc_red">
-			<a href="{base}/" class="text-rc_red uppercase tracking-wider text-sm font-medium pr-2"
-				>Mehr</a
+			<a
+				href="{base}/{card.link.module.page.slug}#{card.link.module.id}"
+				class="text-rc_red uppercase tracking-wider text-sm font-medium pr-2">Mehr</a
 			>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"

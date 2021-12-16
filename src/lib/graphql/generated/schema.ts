@@ -44,6 +44,7 @@ export type ArticleHeroTeaser = Node & {
 	history: Array<Version>;
 	/** The unique identifier */
 	id: Scalars['ID'];
+	incomingLink?: Maybe<Link>;
 	page?: Maybe<Page>;
 	/** The time the document was published. Null on documents in draft stage. */
 	publishedAt?: Maybe<Scalars['DateTime']>;
@@ -78,6 +79,10 @@ export type ArticleHeroTeaserHistoryArgs = {
 	limit?: Scalars['Int'];
 	skip?: Scalars['Int'];
 	stageOverride?: InputMaybe<Stage>;
+};
+
+export type ArticleHeroTeaserIncomingLinkArgs = {
+	locales?: InputMaybe<Array<Locale>>;
 };
 
 export type ArticleHeroTeaserPageArgs = {
@@ -123,6 +128,7 @@ export type ArticleHeroTeaserCreateInput = {
 	createdAt?: InputMaybe<Scalars['DateTime']>;
 	headline?: InputMaybe<Scalars['String']>;
 	heroBackgroundImage?: InputMaybe<AssetCreateOneInlineInput>;
+	incomingLink?: InputMaybe<LinkCreateOneInlineInput>;
 	page?: InputMaybe<PageCreateOneInlineInput>;
 	subheadline?: InputMaybe<Scalars['String']>;
 	teaserText?: InputMaybe<Scalars['String']>;
@@ -217,6 +223,7 @@ export type ArticleHeroTeaserManyWhereInput = {
 	id_not_starts_with?: InputMaybe<Scalars['ID']>;
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
+	incomingLink?: InputMaybe<LinkWhereInput>;
 	page?: InputMaybe<PageWhereInput>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
@@ -313,6 +320,7 @@ export enum ArticleHeroTeaserOrderByInput {
 export type ArticleHeroTeaserUpdateInput = {
 	headline?: InputMaybe<Scalars['String']>;
 	heroBackgroundImage?: InputMaybe<AssetUpdateOneInlineInput>;
+	incomingLink?: InputMaybe<LinkUpdateOneInlineInput>;
 	page?: InputMaybe<PageUpdateOneInlineInput>;
 	subheadline?: InputMaybe<Scalars['String']>;
 	teaserText?: InputMaybe<Scalars['String']>;
@@ -449,6 +457,7 @@ export type ArticleHeroTeaserWhereInput = {
 	id_not_starts_with?: InputMaybe<Scalars['ID']>;
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
+	incomingLink?: InputMaybe<LinkWhereInput>;
 	page?: InputMaybe<PageWhereInput>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
@@ -1294,6 +1303,7 @@ export type CardIcon = Node & {
 	icon?: Maybe<Asset>;
 	/** The unique identifier */
 	id: Scalars['ID'];
+	link?: Maybe<Link>;
 	/** The time the document was published. Null on documents in draft stage. */
 	publishedAt?: Maybe<Scalars['DateTime']>;
 	/** User that last published this document */
@@ -1329,6 +1339,10 @@ export type CardIconHistoryArgs = {
 };
 
 export type CardIconIconArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type CardIconLinkArgs = {
 	locales?: InputMaybe<Array<Locale>>;
 };
 
@@ -1373,6 +1387,7 @@ export type CardIconCreateInput = {
 	createdAt?: InputMaybe<Scalars['DateTime']>;
 	headline?: InputMaybe<Scalars['String']>;
 	icon?: InputMaybe<AssetCreateOneInlineInput>;
+	link?: InputMaybe<LinkCreateOneInlineInput>;
 	subheadline?: InputMaybe<Scalars['String']>;
 	updatedAt?: InputMaybe<Scalars['DateTime']>;
 };
@@ -1466,6 +1481,7 @@ export type CardIconManyWhereInput = {
 	id_not_starts_with?: InputMaybe<Scalars['ID']>;
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
+	link?: InputMaybe<LinkWhereInput>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
 	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -1542,6 +1558,7 @@ export type CardIconUpdateInput = {
 	cardsContainer?: InputMaybe<CardsContainerUpdateOneInlineInput>;
 	headline?: InputMaybe<Scalars['String']>;
 	icon?: InputMaybe<AssetUpdateOneInlineInput>;
+	link?: InputMaybe<LinkUpdateOneInlineInput>;
 	subheadline?: InputMaybe<Scalars['String']>;
 };
 
@@ -1677,6 +1694,7 @@ export type CardIconWhereInput = {
 	id_not_starts_with?: InputMaybe<Scalars['ID']>;
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
+	link?: InputMaybe<LinkWhereInput>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
 	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -1753,6 +1771,7 @@ export type CardImage = Node & {
 	/** The unique identifier */
 	id: Scalars['ID'];
 	image?: Maybe<Asset>;
+	link?: Maybe<Link>;
 	/** The time the document was published. Null on documents in draft stage. */
 	publishedAt?: Maybe<Scalars['DateTime']>;
 	/** User that last published this document */
@@ -1787,6 +1806,10 @@ export type CardImageHistoryArgs = {
 };
 
 export type CardImageImageArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type CardImageLinkArgs = {
 	locales?: InputMaybe<Array<Locale>>;
 };
 
@@ -1830,6 +1853,7 @@ export type CardImageCreateInput = {
 	createdAt?: InputMaybe<Scalars['DateTime']>;
 	headline?: InputMaybe<Scalars['String']>;
 	image?: InputMaybe<AssetCreateOneInlineInput>;
+	link?: InputMaybe<LinkCreateOneInlineInput>;
 	updatedAt?: InputMaybe<Scalars['DateTime']>;
 };
 
@@ -1922,6 +1946,7 @@ export type CardImageManyWhereInput = {
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
 	image?: InputMaybe<AssetWhereInput>;
+	link?: InputMaybe<LinkWhereInput>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
 	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -1976,6 +2001,7 @@ export type CardImageUpdateInput = {
 	cardsContainer?: InputMaybe<CardsContainerUpdateOneInlineInput>;
 	headline?: InputMaybe<Scalars['String']>;
 	image?: InputMaybe<AssetUpdateOneInlineInput>;
+	link?: InputMaybe<LinkUpdateOneInlineInput>;
 };
 
 export type CardImageUpdateManyInlineInput = {
@@ -2108,6 +2134,7 @@ export type CardImageWhereInput = {
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
 	image?: InputMaybe<AssetWhereInput>;
+	link?: InputMaybe<LinkWhereInput>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
 	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -2164,6 +2191,7 @@ export type CardsContainer = Node & {
 	history: Array<Version>;
 	/** The unique identifier */
 	id: Scalars['ID'];
+	incomingLink?: Maybe<Link>;
 	page?: Maybe<Page>;
 	/** The time the document was published. Null on documents in draft stage. */
 	publishedAt?: Maybe<Scalars['DateTime']>;
@@ -2201,6 +2229,10 @@ export type CardsContainerHistoryArgs = {
 	limit?: Scalars['Int'];
 	skip?: Scalars['Int'];
 	stageOverride?: InputMaybe<Stage>;
+};
+
+export type CardsContainerIncomingLinkArgs = {
+	locales?: InputMaybe<Array<Locale>>;
 };
 
 export type CardsContainerPageArgs = {
@@ -2334,6 +2366,7 @@ export type CardsContainerCreateInput = {
 	cards?: InputMaybe<CardsContainerCardCreateManyInlineInput>;
 	createdAt?: InputMaybe<Scalars['DateTime']>;
 	headline?: InputMaybe<Scalars['String']>;
+	incomingLink?: InputMaybe<LinkCreateOneInlineInput>;
 	page?: InputMaybe<PageCreateOneInlineInput>;
 	updatedAt?: InputMaybe<Scalars['DateTime']>;
 };
@@ -2425,6 +2458,7 @@ export type CardsContainerManyWhereInput = {
 	id_not_starts_with?: InputMaybe<Scalars['ID']>;
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
+	incomingLink?: InputMaybe<LinkWhereInput>;
 	page?: InputMaybe<PageWhereInput>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
@@ -2479,6 +2513,7 @@ export enum CardsContainerOrderByInput {
 export type CardsContainerUpdateInput = {
 	cards?: InputMaybe<CardsContainerCardUpdateManyInlineInput>;
 	headline?: InputMaybe<Scalars['String']>;
+	incomingLink?: InputMaybe<LinkUpdateOneInlineInput>;
 	page?: InputMaybe<PageUpdateOneInlineInput>;
 };
 
@@ -2610,6 +2645,7 @@ export type CardsContainerWhereInput = {
 	id_not_starts_with?: InputMaybe<Scalars['ID']>;
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
+	incomingLink?: InputMaybe<LinkWhereInput>;
 	page?: InputMaybe<PageWhereInput>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
@@ -3152,6 +3188,7 @@ export type Eyecatcher = Node & {
 	/** The unique identifier */
 	id: Scalars['ID'];
 	image?: Maybe<Asset>;
+	incomingLink?: Maybe<Link>;
 	/** System Locale field */
 	locale: Locale;
 	/** Get the other localizations for this document */
@@ -3192,6 +3229,10 @@ export type EyecatcherHistoryArgs = {
 };
 
 export type EyecatcherImageArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type EyecatcherIncomingLinkArgs = {
 	locales?: InputMaybe<Array<Locale>>;
 };
 
@@ -3253,6 +3294,7 @@ export type EyecatcherCreateInput = {
 	/** headline input for default locale (en) */
 	headline?: InputMaybe<Scalars['String']>;
 	image?: InputMaybe<AssetCreateOneInlineInput>;
+	incomingLink?: InputMaybe<LinkCreateOneInlineInput>;
 	/** Inline mutations for managing document localizations excluding the default locale */
 	localizations?: InputMaybe<EyecatcherCreateLocalizationsInput>;
 	page?: InputMaybe<PageCreateOneInlineInput>;
@@ -3367,6 +3409,7 @@ export type EyecatcherManyWhereInput = {
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
 	image?: InputMaybe<AssetWhereInput>;
+	incomingLink?: InputMaybe<LinkWhereInput>;
 	page?: InputMaybe<PageWhereInput>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
@@ -3427,6 +3470,7 @@ export type EyecatcherUpdateInput = {
 	/** headline input for default locale (en) */
 	headline?: InputMaybe<Scalars['String']>;
 	image?: InputMaybe<AssetUpdateOneInlineInput>;
+	incomingLink?: InputMaybe<LinkUpdateOneInlineInput>;
 	/** Manage document localizations */
 	localizations?: InputMaybe<EyecatcherUpdateLocalizationsInput>;
 	page?: InputMaybe<PageUpdateOneInlineInput>;
@@ -3629,6 +3673,7 @@ export type EyecatcherWhereInput = {
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
 	image?: InputMaybe<AssetWhereInput>;
+	incomingLink?: InputMaybe<LinkWhereInput>;
 	page?: InputMaybe<PageWhereInput>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
@@ -3691,20 +3736,410 @@ export type EyecatcherWhereUniqueInput = {
 	id?: InputMaybe<Scalars['ID']>;
 };
 
-export type Faq = Node & {
-	__typename?: 'Faq';
+export type FaqContainer = Node & {
+	__typename?: 'FaqContainer';
+	/** The time the document was created */
+	createdAt: Scalars['DateTime'];
+	/** User that created this document */
+	createdBy?: Maybe<User>;
+	/** Get the document in other stages */
+	documentInStages: Array<FaqContainer>;
+	faqItems: Array<FaqItem>;
+	/** List of FaqContainer versions */
+	history: Array<Version>;
+	/** The unique identifier */
+	id: Scalars['ID'];
+	incomingLink?: Maybe<Link>;
+	page?: Maybe<Page>;
+	/** The time the document was published. Null on documents in draft stage. */
+	publishedAt?: Maybe<Scalars['DateTime']>;
+	/** User that last published this document */
+	publishedBy?: Maybe<User>;
+	scheduledIn: Array<ScheduledOperation>;
+	/** System stage field */
+	stage: Stage;
+	/** The time the document was updated */
+	updatedAt: Scalars['DateTime'];
+	/** User that last updated this document */
+	updatedBy?: Maybe<User>;
+};
+
+export type FaqContainerCreatedByArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type FaqContainerDocumentInStagesArgs = {
+	includeCurrent?: Scalars['Boolean'];
+	inheritLocale?: Scalars['Boolean'];
+	stages?: Array<Stage>;
+};
+
+export type FaqContainerFaqItemsArgs = {
+	after?: InputMaybe<Scalars['String']>;
+	before?: InputMaybe<Scalars['String']>;
+	first?: InputMaybe<Scalars['Int']>;
+	last?: InputMaybe<Scalars['Int']>;
+	locales?: InputMaybe<Array<Locale>>;
+	orderBy?: InputMaybe<FaqItemOrderByInput>;
+	skip?: InputMaybe<Scalars['Int']>;
+	where?: InputMaybe<FaqItemWhereInput>;
+};
+
+export type FaqContainerHistoryArgs = {
+	limit?: Scalars['Int'];
+	skip?: Scalars['Int'];
+	stageOverride?: InputMaybe<Stage>;
+};
+
+export type FaqContainerIncomingLinkArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type FaqContainerPageArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type FaqContainerPublishedByArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type FaqContainerScheduledInArgs = {
+	after?: InputMaybe<Scalars['String']>;
+	before?: InputMaybe<Scalars['String']>;
+	first?: InputMaybe<Scalars['Int']>;
+	last?: InputMaybe<Scalars['Int']>;
+	locales?: InputMaybe<Array<Locale>>;
+	skip?: InputMaybe<Scalars['Int']>;
+	where?: InputMaybe<ScheduledOperationWhereInput>;
+};
+
+export type FaqContainerUpdatedByArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type FaqContainerConnectInput = {
+	/** Allow to specify document position in list of connected documents, will default to appending at end of list */
+	position?: InputMaybe<ConnectPositionInput>;
+	/** Document to connect */
+	where: FaqContainerWhereUniqueInput;
+};
+
+/** A connection to a list of items. */
+export type FaqContainerConnection = {
+	__typename?: 'FaqContainerConnection';
+	aggregate: Aggregate;
+	/** A list of edges. */
+	edges: Array<FaqContainerEdge>;
+	/** Information to aid in pagination. */
+	pageInfo: PageInfo;
+};
+
+export type FaqContainerCreateInput = {
+	createdAt?: InputMaybe<Scalars['DateTime']>;
+	faqItems?: InputMaybe<FaqItemCreateManyInlineInput>;
+	incomingLink?: InputMaybe<LinkCreateOneInlineInput>;
+	page?: InputMaybe<PageCreateOneInlineInput>;
+	updatedAt?: InputMaybe<Scalars['DateTime']>;
+};
+
+export type FaqContainerCreateManyInlineInput = {
+	/** Connect multiple existing FaqContainer documents */
+	connect?: InputMaybe<Array<FaqContainerWhereUniqueInput>>;
+	/** Create and connect multiple existing FaqContainer documents */
+	create?: InputMaybe<Array<FaqContainerCreateInput>>;
+};
+
+export type FaqContainerCreateOneInlineInput = {
+	/** Connect one existing FaqContainer document */
+	connect?: InputMaybe<FaqContainerWhereUniqueInput>;
+	/** Create and connect one FaqContainer document */
+	create?: InputMaybe<FaqContainerCreateInput>;
+};
+
+/** An edge in a connection. */
+export type FaqContainerEdge = {
+	__typename?: 'FaqContainerEdge';
+	/** A cursor for use in pagination. */
+	cursor: Scalars['String'];
+	/** The item at the end of the edge. */
+	node: FaqContainer;
+};
+
+/** Identifies documents */
+export type FaqContainerManyWhereInput = {
+	/** Logical AND on all given filters. */
+	AND?: InputMaybe<Array<FaqContainerWhereInput>>;
+	/** Logical NOT on all given filters combined by AND. */
+	NOT?: InputMaybe<Array<FaqContainerWhereInput>>;
+	/** Logical OR on all given filters. */
+	OR?: InputMaybe<Array<FaqContainerWhereInput>>;
+	/** Contains search across all appropriate fields. */
+	_search?: InputMaybe<Scalars['String']>;
+	createdAt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than the given value. */
+	createdAt_gt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than or equal the given value. */
+	createdAt_gte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are contained in given list. */
+	createdAt_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	/** All values less than the given value. */
+	createdAt_lt?: InputMaybe<Scalars['DateTime']>;
+	/** All values less than or equal the given value. */
+	createdAt_lte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not equal to given value. */
+	createdAt_not?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not contained in given list. */
+	createdAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	createdBy?: InputMaybe<UserWhereInput>;
+	faqItems_every?: InputMaybe<FaqItemWhereInput>;
+	faqItems_none?: InputMaybe<FaqItemWhereInput>;
+	faqItems_some?: InputMaybe<FaqItemWhereInput>;
+	id?: InputMaybe<Scalars['ID']>;
+	/** All values containing the given string. */
+	id_contains?: InputMaybe<Scalars['ID']>;
+	/** All values ending with the given string. */
+	id_ends_with?: InputMaybe<Scalars['ID']>;
+	/** All values that are contained in given list. */
+	id_in?: InputMaybe<Array<Scalars['ID']>>;
+	/** All values that are not equal to given value. */
+	id_not?: InputMaybe<Scalars['ID']>;
+	/** All values not containing the given string. */
+	id_not_contains?: InputMaybe<Scalars['ID']>;
+	/** All values not ending with the given string */
+	id_not_ends_with?: InputMaybe<Scalars['ID']>;
+	/** All values that are not contained in given list. */
+	id_not_in?: InputMaybe<Array<Scalars['ID']>>;
+	/** All values not starting with the given string. */
+	id_not_starts_with?: InputMaybe<Scalars['ID']>;
+	/** All values starting with the given string. */
+	id_starts_with?: InputMaybe<Scalars['ID']>;
+	incomingLink?: InputMaybe<LinkWhereInput>;
+	page?: InputMaybe<PageWhereInput>;
+	publishedAt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than the given value. */
+	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than or equal the given value. */
+	publishedAt_gte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are contained in given list. */
+	publishedAt_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	/** All values less than the given value. */
+	publishedAt_lt?: InputMaybe<Scalars['DateTime']>;
+	/** All values less than or equal the given value. */
+	publishedAt_lte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not equal to given value. */
+	publishedAt_not?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not contained in given list. */
+	publishedAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	publishedBy?: InputMaybe<UserWhereInput>;
+	scheduledIn_every?: InputMaybe<ScheduledOperationWhereInput>;
+	scheduledIn_none?: InputMaybe<ScheduledOperationWhereInput>;
+	scheduledIn_some?: InputMaybe<ScheduledOperationWhereInput>;
+	updatedAt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than the given value. */
+	updatedAt_gt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than or equal the given value. */
+	updatedAt_gte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are contained in given list. */
+	updatedAt_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	/** All values less than the given value. */
+	updatedAt_lt?: InputMaybe<Scalars['DateTime']>;
+	/** All values less than or equal the given value. */
+	updatedAt_lte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not equal to given value. */
+	updatedAt_not?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not contained in given list. */
+	updatedAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	updatedBy?: InputMaybe<UserWhereInput>;
+};
+
+export enum FaqContainerOrderByInput {
+	CreatedAtAsc = 'createdAt_ASC',
+	CreatedAtDesc = 'createdAt_DESC',
+	IdAsc = 'id_ASC',
+	IdDesc = 'id_DESC',
+	PublishedAtAsc = 'publishedAt_ASC',
+	PublishedAtDesc = 'publishedAt_DESC',
+	UpdatedAtAsc = 'updatedAt_ASC',
+	UpdatedAtDesc = 'updatedAt_DESC'
+}
+
+export type FaqContainerUpdateInput = {
+	faqItems?: InputMaybe<FaqItemUpdateManyInlineInput>;
+	incomingLink?: InputMaybe<LinkUpdateOneInlineInput>;
+	page?: InputMaybe<PageUpdateOneInlineInput>;
+};
+
+export type FaqContainerUpdateManyInlineInput = {
+	/** Connect multiple existing FaqContainer documents */
+	connect?: InputMaybe<Array<FaqContainerConnectInput>>;
+	/** Create and connect multiple FaqContainer documents */
+	create?: InputMaybe<Array<FaqContainerCreateInput>>;
+	/** Delete multiple FaqContainer documents */
+	delete?: InputMaybe<Array<FaqContainerWhereUniqueInput>>;
+	/** Disconnect multiple FaqContainer documents */
+	disconnect?: InputMaybe<Array<FaqContainerWhereUniqueInput>>;
+	/** Override currently-connected documents with multiple existing FaqContainer documents */
+	set?: InputMaybe<Array<FaqContainerWhereUniqueInput>>;
+	/** Update multiple FaqContainer documents */
+	update?: InputMaybe<Array<FaqContainerUpdateWithNestedWhereUniqueInput>>;
+	/** Upsert multiple FaqContainer documents */
+	upsert?: InputMaybe<Array<FaqContainerUpsertWithNestedWhereUniqueInput>>;
+};
+
+export type FaqContainerUpdateManyInput = {
+	/** No fields in updateMany data input */
+	_?: InputMaybe<Scalars['String']>;
+};
+
+export type FaqContainerUpdateManyWithNestedWhereInput = {
+	/** Update many input */
+	data: FaqContainerUpdateManyInput;
+	/** Document search */
+	where: FaqContainerWhereInput;
+};
+
+export type FaqContainerUpdateOneInlineInput = {
+	/** Connect existing FaqContainer document */
+	connect?: InputMaybe<FaqContainerWhereUniqueInput>;
+	/** Create and connect one FaqContainer document */
+	create?: InputMaybe<FaqContainerCreateInput>;
+	/** Delete currently connected FaqContainer document */
+	delete?: InputMaybe<Scalars['Boolean']>;
+	/** Disconnect currently connected FaqContainer document */
+	disconnect?: InputMaybe<Scalars['Boolean']>;
+	/** Update single FaqContainer document */
+	update?: InputMaybe<FaqContainerUpdateWithNestedWhereUniqueInput>;
+	/** Upsert single FaqContainer document */
+	upsert?: InputMaybe<FaqContainerUpsertWithNestedWhereUniqueInput>;
+};
+
+export type FaqContainerUpdateWithNestedWhereUniqueInput = {
+	/** Document to update */
+	data: FaqContainerUpdateInput;
+	/** Unique document search */
+	where: FaqContainerWhereUniqueInput;
+};
+
+export type FaqContainerUpsertInput = {
+	/** Create document if it didn't exist */
+	create: FaqContainerCreateInput;
+	/** Update document if it exists */
+	update: FaqContainerUpdateInput;
+};
+
+export type FaqContainerUpsertWithNestedWhereUniqueInput = {
+	/** Upsert data */
+	data: FaqContainerUpsertInput;
+	/** Unique document search */
+	where: FaqContainerWhereUniqueInput;
+};
+
+/** Identifies documents */
+export type FaqContainerWhereInput = {
+	/** Logical AND on all given filters. */
+	AND?: InputMaybe<Array<FaqContainerWhereInput>>;
+	/** Logical NOT on all given filters combined by AND. */
+	NOT?: InputMaybe<Array<FaqContainerWhereInput>>;
+	/** Logical OR on all given filters. */
+	OR?: InputMaybe<Array<FaqContainerWhereInput>>;
+	/** Contains search across all appropriate fields. */
+	_search?: InputMaybe<Scalars['String']>;
+	createdAt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than the given value. */
+	createdAt_gt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than or equal the given value. */
+	createdAt_gte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are contained in given list. */
+	createdAt_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	/** All values less than the given value. */
+	createdAt_lt?: InputMaybe<Scalars['DateTime']>;
+	/** All values less than or equal the given value. */
+	createdAt_lte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not equal to given value. */
+	createdAt_not?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not contained in given list. */
+	createdAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	createdBy?: InputMaybe<UserWhereInput>;
+	faqItems_every?: InputMaybe<FaqItemWhereInput>;
+	faqItems_none?: InputMaybe<FaqItemWhereInput>;
+	faqItems_some?: InputMaybe<FaqItemWhereInput>;
+	id?: InputMaybe<Scalars['ID']>;
+	/** All values containing the given string. */
+	id_contains?: InputMaybe<Scalars['ID']>;
+	/** All values ending with the given string. */
+	id_ends_with?: InputMaybe<Scalars['ID']>;
+	/** All values that are contained in given list. */
+	id_in?: InputMaybe<Array<Scalars['ID']>>;
+	/** All values that are not equal to given value. */
+	id_not?: InputMaybe<Scalars['ID']>;
+	/** All values not containing the given string. */
+	id_not_contains?: InputMaybe<Scalars['ID']>;
+	/** All values not ending with the given string */
+	id_not_ends_with?: InputMaybe<Scalars['ID']>;
+	/** All values that are not contained in given list. */
+	id_not_in?: InputMaybe<Array<Scalars['ID']>>;
+	/** All values not starting with the given string. */
+	id_not_starts_with?: InputMaybe<Scalars['ID']>;
+	/** All values starting with the given string. */
+	id_starts_with?: InputMaybe<Scalars['ID']>;
+	incomingLink?: InputMaybe<LinkWhereInput>;
+	page?: InputMaybe<PageWhereInput>;
+	publishedAt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than the given value. */
+	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than or equal the given value. */
+	publishedAt_gte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are contained in given list. */
+	publishedAt_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	/** All values less than the given value. */
+	publishedAt_lt?: InputMaybe<Scalars['DateTime']>;
+	/** All values less than or equal the given value. */
+	publishedAt_lte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not equal to given value. */
+	publishedAt_not?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not contained in given list. */
+	publishedAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	publishedBy?: InputMaybe<UserWhereInput>;
+	scheduledIn_every?: InputMaybe<ScheduledOperationWhereInput>;
+	scheduledIn_none?: InputMaybe<ScheduledOperationWhereInput>;
+	scheduledIn_some?: InputMaybe<ScheduledOperationWhereInput>;
+	updatedAt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than the given value. */
+	updatedAt_gt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than or equal the given value. */
+	updatedAt_gte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are contained in given list. */
+	updatedAt_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	/** All values less than the given value. */
+	updatedAt_lt?: InputMaybe<Scalars['DateTime']>;
+	/** All values less than or equal the given value. */
+	updatedAt_lte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not equal to given value. */
+	updatedAt_not?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not contained in given list. */
+	updatedAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	updatedBy?: InputMaybe<UserWhereInput>;
+};
+
+/** References FaqContainer record uniquely */
+export type FaqContainerWhereUniqueInput = {
+	id?: InputMaybe<Scalars['ID']>;
+};
+
+export type FaqItem = Node & {
+	__typename?: 'FaqItem';
 	answer: RichText;
 	/** The time the document was created */
 	createdAt: Scalars['DateTime'];
 	/** User that created this document */
 	createdBy?: Maybe<User>;
 	/** Get the document in other stages */
-	documentInStages: Array<Faq>;
-	/** List of Faq versions */
+	documentInStages: Array<FaqItem>;
+	faqContainer?: Maybe<FaqContainer>;
+	/** List of FaqItem versions */
 	history: Array<Version>;
 	/** The unique identifier */
 	id: Scalars['ID'];
-	page?: Maybe<Page>;
 	/** The time the document was published. Null on documents in draft stage. */
 	publishedAt?: Maybe<Scalars['DateTime']>;
 	/** User that last published this document */
@@ -3719,31 +4154,31 @@ export type Faq = Node & {
 	updatedBy?: Maybe<User>;
 };
 
-export type FaqCreatedByArgs = {
+export type FaqItemCreatedByArgs = {
 	locales?: InputMaybe<Array<Locale>>;
 };
 
-export type FaqDocumentInStagesArgs = {
+export type FaqItemDocumentInStagesArgs = {
 	includeCurrent?: Scalars['Boolean'];
 	inheritLocale?: Scalars['Boolean'];
 	stages?: Array<Stage>;
 };
 
-export type FaqHistoryArgs = {
+export type FaqItemFaqContainerArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type FaqItemHistoryArgs = {
 	limit?: Scalars['Int'];
 	skip?: Scalars['Int'];
 	stageOverride?: InputMaybe<Stage>;
 };
 
-export type FaqPageArgs = {
+export type FaqItemPublishedByArgs = {
 	locales?: InputMaybe<Array<Locale>>;
 };
 
-export type FaqPublishedByArgs = {
-	locales?: InputMaybe<Array<Locale>>;
-};
-
-export type FaqScheduledInArgs = {
+export type FaqItemScheduledInArgs = {
 	after?: InputMaybe<Scalars['String']>;
 	before?: InputMaybe<Scalars['String']>;
 	first?: InputMaybe<Scalars['Int']>;
@@ -3753,66 +4188,66 @@ export type FaqScheduledInArgs = {
 	where?: InputMaybe<ScheduledOperationWhereInput>;
 };
 
-export type FaqUpdatedByArgs = {
+export type FaqItemUpdatedByArgs = {
 	locales?: InputMaybe<Array<Locale>>;
 };
 
-export type FaqConnectInput = {
+export type FaqItemConnectInput = {
 	/** Allow to specify document position in list of connected documents, will default to appending at end of list */
 	position?: InputMaybe<ConnectPositionInput>;
 	/** Document to connect */
-	where: FaqWhereUniqueInput;
+	where: FaqItemWhereUniqueInput;
 };
 
 /** A connection to a list of items. */
-export type FaqConnection = {
-	__typename?: 'FaqConnection';
+export type FaqItemConnection = {
+	__typename?: 'FaqItemConnection';
 	aggregate: Aggregate;
 	/** A list of edges. */
-	edges: Array<FaqEdge>;
+	edges: Array<FaqItemEdge>;
 	/** Information to aid in pagination. */
 	pageInfo: PageInfo;
 };
 
-export type FaqCreateInput = {
+export type FaqItemCreateInput = {
 	answer: Scalars['RichTextAST'];
 	createdAt?: InputMaybe<Scalars['DateTime']>;
-	page?: InputMaybe<PageCreateOneInlineInput>;
+	faqContainer?: InputMaybe<FaqContainerCreateOneInlineInput>;
 	question: Scalars['String'];
 	updatedAt?: InputMaybe<Scalars['DateTime']>;
 };
 
-export type FaqCreateManyInlineInput = {
-	/** Connect multiple existing Faq documents */
-	connect?: InputMaybe<Array<FaqWhereUniqueInput>>;
-	/** Create and connect multiple existing Faq documents */
-	create?: InputMaybe<Array<FaqCreateInput>>;
+export type FaqItemCreateManyInlineInput = {
+	/** Connect multiple existing FaqItem documents */
+	connect?: InputMaybe<Array<FaqItemWhereUniqueInput>>;
+	/** Create and connect multiple existing FaqItem documents */
+	create?: InputMaybe<Array<FaqItemCreateInput>>;
 };
 
-export type FaqCreateOneInlineInput = {
-	/** Connect one existing Faq document */
-	connect?: InputMaybe<FaqWhereUniqueInput>;
-	/** Create and connect one Faq document */
-	create?: InputMaybe<FaqCreateInput>;
+export type FaqItemCreateOneInlineInput = {
+	/** Connect one existing FaqItem document */
+	connect?: InputMaybe<FaqItemWhereUniqueInput>;
+	/** Create and connect one FaqItem document */
+	create?: InputMaybe<FaqItemCreateInput>;
 };
 
 /** An edge in a connection. */
-export type FaqEdge = {
-	__typename?: 'FaqEdge';
+export type FaqItemEdge = {
+	__typename?: 'FaqItemEdge';
 	/** A cursor for use in pagination. */
 	cursor: Scalars['String'];
 	/** The item at the end of the edge. */
-	node: Faq;
+	node: FaqItem;
 };
 
 /** Identifies documents */
-export type FaqManyWhereInput = {
+export type FaqItemManyWhereInput = {
 	/** Logical AND on all given filters. */
-	AND?: InputMaybe<Array<FaqWhereInput>>;
+	AND?: InputMaybe<Array<FaqItemWhereInput>>;
 	/** Logical NOT on all given filters combined by AND. */
-	NOT?: InputMaybe<Array<FaqWhereInput>>;
+	NOT?: InputMaybe<Array<FaqItemWhereInput>>;
 	/** Logical OR on all given filters. */
-	OR?: InputMaybe<Array<FaqWhereInput>>;
+	OR?: InputMaybe<Array<FaqItemWhereInput>>;
 	/** Contains search across all appropriate fields. */
 	_search?: InputMaybe<Scalars['String']>;
 	createdAt?: InputMaybe<Scalars['DateTime']>;
@@ -3831,6 +4266,7 @@ export type FaqManyWhereInput = {
 	/** All values that are not contained in given list. */
 	createdAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
 	createdBy?: InputMaybe<UserWhereInput>;
+	faqContainer?: InputMaybe<FaqContainerWhereInput>;
 	id?: InputMaybe<Scalars['ID']>;
 	/** All values containing the given string. */
 	id_contains?: InputMaybe<Scalars['ID']>;
@@ -3850,7 +4286,6 @@ export type FaqManyWhereInput = {
 	id_not_starts_with?: InputMaybe<Scalars['ID']>;
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
-	page?: InputMaybe<PageWhereInput>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
 	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -3907,7 +4342,7 @@ export type FaqManyWhereInput = {
 	updatedBy?: InputMaybe<UserWhereInput>;
 };
 
-export enum FaqOrderByInput {
+export enum FaqItemOrderByInput {
 	CreatedAtAsc = 'createdAt_ASC',
 	CreatedAtDesc = 'createdAt_DESC',
 	IdAsc = 'id_ASC',
@@ -3920,85 +4355,85 @@ export enum FaqOrderByInput {
 	UpdatedAtDesc = 'updatedAt_DESC'
 }
 
-export type FaqUpdateInput = {
+export type FaqItemUpdateInput = {
 	answer?: InputMaybe<Scalars['RichTextAST']>;
-	page?: InputMaybe<PageUpdateOneInlineInput>;
+	faqContainer?: InputMaybe<FaqContainerUpdateOneInlineInput>;
 	question?: InputMaybe<Scalars['String']>;
 };
 
-export type FaqUpdateManyInlineInput = {
-	/** Connect multiple existing Faq documents */
-	connect?: InputMaybe<Array<FaqConnectInput>>;
-	/** Create and connect multiple Faq documents */
-	create?: InputMaybe<Array<FaqCreateInput>>;
-	/** Delete multiple Faq documents */
-	delete?: InputMaybe<Array<FaqWhereUniqueInput>>;
-	/** Disconnect multiple Faq documents */
-	disconnect?: InputMaybe<Array<FaqWhereUniqueInput>>;
-	/** Override currently-connected documents with multiple existing Faq documents */
-	set?: InputMaybe<Array<FaqWhereUniqueInput>>;
-	/** Update multiple Faq documents */
-	update?: InputMaybe<Array<FaqUpdateWithNestedWhereUniqueInput>>;
-	/** Upsert multiple Faq documents */
-	upsert?: InputMaybe<Array<FaqUpsertWithNestedWhereUniqueInput>>;
+export type FaqItemUpdateManyInlineInput = {
+	/** Connect multiple existing FaqItem documents */
+	connect?: InputMaybe<Array<FaqItemConnectInput>>;
+	/** Create and connect multiple FaqItem documents */
+	create?: InputMaybe<Array<FaqItemCreateInput>>;
+	/** Delete multiple FaqItem documents */
+	delete?: InputMaybe<Array<FaqItemWhereUniqueInput>>;
+	/** Disconnect multiple FaqItem documents */
+	disconnect?: InputMaybe<Array<FaqItemWhereUniqueInput>>;
+	/** Override currently-connected documents with multiple existing FaqItem documents */
+	set?: InputMaybe<Array<FaqItemWhereUniqueInput>>;
+	/** Update multiple FaqItem documents */
+	update?: InputMaybe<Array<FaqItemUpdateWithNestedWhereUniqueInput>>;
+	/** Upsert multiple FaqItem documents */
+	upsert?: InputMaybe<Array<FaqItemUpsertWithNestedWhereUniqueInput>>;
 };
 
-export type FaqUpdateManyInput = {
+export type FaqItemUpdateManyInput = {
 	answer?: InputMaybe<Scalars['RichTextAST']>;
 	question?: InputMaybe<Scalars['String']>;
 };
 
-export type FaqUpdateManyWithNestedWhereInput = {
+export type FaqItemUpdateManyWithNestedWhereInput = {
 	/** Update many input */
-	data: FaqUpdateManyInput;
+	data: FaqItemUpdateManyInput;
 	/** Document search */
-	where: FaqWhereInput;
+	where: FaqItemWhereInput;
 };
 
-export type FaqUpdateOneInlineInput = {
-	/** Connect existing Faq document */
-	connect?: InputMaybe<FaqWhereUniqueInput>;
-	/** Create and connect one Faq document */
-	create?: InputMaybe<FaqCreateInput>;
-	/** Delete currently connected Faq document */
+export type FaqItemUpdateOneInlineInput = {
+	/** Connect existing FaqItem document */
+	connect?: InputMaybe<FaqItemWhereUniqueInput>;
+	/** Create and connect one FaqItem document */
+	create?: InputMaybe<FaqItemCreateInput>;
+	/** Delete currently connected FaqItem document */
 	delete?: InputMaybe<Scalars['Boolean']>;
-	/** Disconnect currently connected Faq document */
+	/** Disconnect currently connected FaqItem document */
 	disconnect?: InputMaybe<Scalars['Boolean']>;
-	/** Update single Faq document */
-	update?: InputMaybe<FaqUpdateWithNestedWhereUniqueInput>;
-	/** Upsert single Faq document */
-	upsert?: InputMaybe<FaqUpsertWithNestedWhereUniqueInput>;
+	/** Update single FaqItem document */
+	update?: InputMaybe<FaqItemUpdateWithNestedWhereUniqueInput>;
+	/** Upsert single FaqItem document */
+	upsert?: InputMaybe<FaqItemUpsertWithNestedWhereUniqueInput>;
 };
 
-export type FaqUpdateWithNestedWhereUniqueInput = {
+export type FaqItemUpdateWithNestedWhereUniqueInput = {
 	/** Document to update */
-	data: FaqUpdateInput;
+	data: FaqItemUpdateInput;
 	/** Unique document search */
-	where: FaqWhereUniqueInput;
+	where: FaqItemWhereUniqueInput;
 };
 
-export type FaqUpsertInput = {
+export type FaqItemUpsertInput = {
 	/** Create document if it didn't exist */
-	create: FaqCreateInput;
+	create: FaqItemCreateInput;
 	/** Update document if it exists */
-	update: FaqUpdateInput;
+	update: FaqItemUpdateInput;
 };
 
-export type FaqUpsertWithNestedWhereUniqueInput = {
+export type FaqItemUpsertWithNestedWhereUniqueInput = {
 	/** Upsert data */
-	data: FaqUpsertInput;
+	data: FaqItemUpsertInput;
 	/** Unique document search */
-	where: FaqWhereUniqueInput;
+	where: FaqItemWhereUniqueInput;
 };
 
 /** Identifies documents */
-export type FaqWhereInput = {
+export type FaqItemWhereInput = {
 	/** Logical AND on all given filters. */
-	AND?: InputMaybe<Array<FaqWhereInput>>;
+	AND?: InputMaybe<Array<FaqItemWhereInput>>;
 	/** Logical NOT on all given filters combined by AND. */
-	NOT?: InputMaybe<Array<FaqWhereInput>>;
+	NOT?: InputMaybe<Array<FaqItemWhereInput>>;
 	/** Logical OR on all given filters. */
-	OR?: InputMaybe<Array<FaqWhereInput>>;
+	OR?: InputMaybe<Array<FaqItemWhereInput>>;
 	/** Contains search across all appropriate fields. */
 	_search?: InputMaybe<Scalars['String']>;
 	createdAt?: InputMaybe<Scalars['DateTime']>;
@@ -4017,6 +4452,7 @@ export type FaqWhereInput = {
 	/** All values that are not contained in given list. */
 	createdAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
 	createdBy?: InputMaybe<UserWhereInput>;
+	faqContainer?: InputMaybe<FaqContainerWhereInput>;
 	id?: InputMaybe<Scalars['ID']>;
 	/** All values containing the given string. */
 	id_contains?: InputMaybe<Scalars['ID']>;
@@ -4036,7 +4472,6 @@ export type FaqWhereInput = {
 	id_not_starts_with?: InputMaybe<Scalars['ID']>;
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
-	page?: InputMaybe<PageWhereInput>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
 	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -4093,8 +4528,8 @@ export type FaqWhereInput = {
 	updatedBy?: InputMaybe<UserWhereInput>;
 };
 
-/** References Faq record uniquely */
-export type FaqWhereUniqueInput = {
+/** References FaqItem record uniquely */
+export type FaqItemWhereUniqueInput = {
 	id?: InputMaybe<Scalars['ID']>;
 };
 
@@ -4503,6 +4938,523 @@ export type ImageTransformationInput = {
 	resize?: InputMaybe<ImageResizeInput>;
 };
 
+export type Link = Node & {
+	__typename?: 'Link';
+	/** The time the document was created */
+	createdAt: Scalars['DateTime'];
+	/** User that created this document */
+	createdBy?: Maybe<User>;
+	/** Get the document in other stages */
+	documentInStages: Array<Link>;
+	/** List of Link versions */
+	history: Array<Version>;
+	/** The unique identifier */
+	id: Scalars['ID'];
+	label?: Maybe<Scalars['String']>;
+	module?: Maybe<LinkModule>;
+	/** The time the document was published. Null on documents in draft stage. */
+	publishedAt?: Maybe<Scalars['DateTime']>;
+	/** User that last published this document */
+	publishedBy?: Maybe<User>;
+	scheduledIn: Array<ScheduledOperation>;
+	/** System stage field */
+	stage: Stage;
+	/** The time the document was updated */
+	updatedAt: Scalars['DateTime'];
+	/** User that last updated this document */
+	updatedBy?: Maybe<User>;
+};
+
+export type LinkCreatedByArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type LinkDocumentInStagesArgs = {
+	includeCurrent?: Scalars['Boolean'];
+	inheritLocale?: Scalars['Boolean'];
+	stages?: Array<Stage>;
+};
+
+export type LinkHistoryArgs = {
+	limit?: Scalars['Int'];
+	skip?: Scalars['Int'];
+	stageOverride?: InputMaybe<Stage>;
+};
+
+export type LinkModuleArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type LinkPublishedByArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type LinkScheduledInArgs = {
+	after?: InputMaybe<Scalars['String']>;
+	before?: InputMaybe<Scalars['String']>;
+	first?: InputMaybe<Scalars['Int']>;
+	last?: InputMaybe<Scalars['Int']>;
+	locales?: InputMaybe<Array<Locale>>;
+	skip?: InputMaybe<Scalars['Int']>;
+	where?: InputMaybe<ScheduledOperationWhereInput>;
+};
+
+export type LinkUpdatedByArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type LinkConnectInput = {
+	/** Allow to specify document position in list of connected documents, will default to appending at end of list */
+	position?: InputMaybe<ConnectPositionInput>;
+	/** Document to connect */
+	where: LinkWhereUniqueInput;
+};
+
+/** A connection to a list of items. */
+export type LinkConnection = {
+	__typename?: 'LinkConnection';
+	aggregate: Aggregate;
+	/** A list of edges. */
+	edges: Array<LinkEdge>;
+	/** Information to aid in pagination. */
+	pageInfo: PageInfo;
+};
+
+export type LinkCreateInput = {
+	ckx8urpys01qg01z6hntc2w45?: InputMaybe<CardImageCreateManyInlineInput>;
+	ckx8uschu02xj01zc71rq5bxw?: InputMaybe<CardIconCreateManyInlineInput>;
+	createdAt?: InputMaybe<Scalars['DateTime']>;
+	label?: InputMaybe<Scalars['String']>;
+	module?: InputMaybe<LinkModuleCreateOneInlineInput>;
+	updatedAt?: InputMaybe<Scalars['DateTime']>;
+};
+
+export type LinkCreateManyInlineInput = {
+	/** Connect multiple existing Link documents */
+	connect?: InputMaybe<Array<LinkWhereUniqueInput>>;
+	/** Create and connect multiple existing Link documents */
+	create?: InputMaybe<Array<LinkCreateInput>>;
+};
+
+export type LinkCreateOneInlineInput = {
+	/** Connect one existing Link document */
+	connect?: InputMaybe<LinkWhereUniqueInput>;
+	/** Create and connect one Link document */
+	create?: InputMaybe<LinkCreateInput>;
+};
+
+/** An edge in a connection. */
+export type LinkEdge = {
+	__typename?: 'LinkEdge';
+	/** A cursor for use in pagination. */
+	cursor: Scalars['String'];
+	/** The item at the end of the edge. */
+	node: Link;
+};
+
+/** Identifies documents */
+export type LinkManyWhereInput = {
+	/** Logical AND on all given filters. */
+	AND?: InputMaybe<Array<LinkWhereInput>>;
+	/** Logical NOT on all given filters combined by AND. */
+	NOT?: InputMaybe<Array<LinkWhereInput>>;
+	/** Logical OR on all given filters. */
+	OR?: InputMaybe<Array<LinkWhereInput>>;
+	/** Contains search across all appropriate fields. */
+	_search?: InputMaybe<Scalars['String']>;
+	createdAt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than the given value. */
+	createdAt_gt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than or equal the given value. */
+	createdAt_gte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are contained in given list. */
+	createdAt_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	/** All values less than the given value. */
+	createdAt_lt?: InputMaybe<Scalars['DateTime']>;
+	/** All values less than or equal the given value. */
+	createdAt_lte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not equal to given value. */
+	createdAt_not?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not contained in given list. */
+	createdAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	createdBy?: InputMaybe<UserWhereInput>;
+	id?: InputMaybe<Scalars['ID']>;
+	/** All values containing the given string. */
+	id_contains?: InputMaybe<Scalars['ID']>;
+	/** All values ending with the given string. */
+	id_ends_with?: InputMaybe<Scalars['ID']>;
+	/** All values that are contained in given list. */
+	id_in?: InputMaybe<Array<Scalars['ID']>>;
+	/** All values that are not equal to given value. */
+	id_not?: InputMaybe<Scalars['ID']>;
+	/** All values not containing the given string. */
+	id_not_contains?: InputMaybe<Scalars['ID']>;
+	/** All values not ending with the given string */
+	id_not_ends_with?: InputMaybe<Scalars['ID']>;
+	/** All values that are not contained in given list. */
+	id_not_in?: InputMaybe<Array<Scalars['ID']>>;
+	/** All values not starting with the given string. */
+	id_not_starts_with?: InputMaybe<Scalars['ID']>;
+	/** All values starting with the given string. */
+	id_starts_with?: InputMaybe<Scalars['ID']>;
+	label?: InputMaybe<Scalars['String']>;
+	/** All values containing the given string. */
+	label_contains?: InputMaybe<Scalars['String']>;
+	/** All values ending with the given string. */
+	label_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are contained in given list. */
+	label_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values that are not equal to given value. */
+	label_not?: InputMaybe<Scalars['String']>;
+	/** All values not containing the given string. */
+	label_not_contains?: InputMaybe<Scalars['String']>;
+	/** All values not ending with the given string */
+	label_not_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are not contained in given list. */
+	label_not_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values not starting with the given string. */
+	label_not_starts_with?: InputMaybe<Scalars['String']>;
+	/** All values starting with the given string. */
+	label_starts_with?: InputMaybe<Scalars['String']>;
+	publishedAt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than the given value. */
+	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than or equal the given value. */
+	publishedAt_gte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are contained in given list. */
+	publishedAt_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	/** All values less than the given value. */
+	publishedAt_lt?: InputMaybe<Scalars['DateTime']>;
+	/** All values less than or equal the given value. */
+	publishedAt_lte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not equal to given value. */
+	publishedAt_not?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not contained in given list. */
+	publishedAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	publishedBy?: InputMaybe<UserWhereInput>;
+	scheduledIn_every?: InputMaybe<ScheduledOperationWhereInput>;
+	scheduledIn_none?: InputMaybe<ScheduledOperationWhereInput>;
+	scheduledIn_some?: InputMaybe<ScheduledOperationWhereInput>;
+	updatedAt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than the given value. */
+	updatedAt_gt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than or equal the given value. */
+	updatedAt_gte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are contained in given list. */
+	updatedAt_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	/** All values less than the given value. */
+	updatedAt_lt?: InputMaybe<Scalars['DateTime']>;
+	/** All values less than or equal the given value. */
+	updatedAt_lte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not equal to given value. */
+	updatedAt_not?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not contained in given list. */
+	updatedAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	updatedBy?: InputMaybe<UserWhereInput>;
+};
+
+export type LinkModule = ArticleHeroTeaser | CardsContainer | Eyecatcher | FaqContainer | Text;
+
+export type LinkModuleConnectInput = {
+	ArticleHeroTeaser?: InputMaybe<ArticleHeroTeaserConnectInput>;
+	CardsContainer?: InputMaybe<CardsContainerConnectInput>;
+	Eyecatcher?: InputMaybe<EyecatcherConnectInput>;
+	FaqContainer?: InputMaybe<FaqContainerConnectInput>;
+	Text?: InputMaybe<TextConnectInput>;
+};
+
+export type LinkModuleCreateInput = {
+	ArticleHeroTeaser?: InputMaybe<ArticleHeroTeaserCreateInput>;
+	CardsContainer?: InputMaybe<CardsContainerCreateInput>;
+	Eyecatcher?: InputMaybe<EyecatcherCreateInput>;
+	FaqContainer?: InputMaybe<FaqContainerCreateInput>;
+	Text?: InputMaybe<TextCreateInput>;
+};
+
+export type LinkModuleCreateManyInlineInput = {
+	/** Connect multiple existing LinkModule documents */
+	connect?: InputMaybe<Array<LinkModuleWhereUniqueInput>>;
+	/** Create and connect multiple existing LinkModule documents */
+	create?: InputMaybe<Array<LinkModuleCreateInput>>;
+};
+
+export type LinkModuleCreateOneInlineInput = {
+	/** Connect one existing LinkModule document */
+	connect?: InputMaybe<LinkModuleWhereUniqueInput>;
+	/** Create and connect one LinkModule document */
+	create?: InputMaybe<LinkModuleCreateInput>;
+};
+
+export type LinkModuleUpdateInput = {
+	ArticleHeroTeaser?: InputMaybe<ArticleHeroTeaserUpdateInput>;
+	CardsContainer?: InputMaybe<CardsContainerUpdateInput>;
+	Eyecatcher?: InputMaybe<EyecatcherUpdateInput>;
+	FaqContainer?: InputMaybe<FaqContainerUpdateInput>;
+	Text?: InputMaybe<TextUpdateInput>;
+};
+
+export type LinkModuleUpdateManyInlineInput = {
+	/** Connect multiple existing LinkModule documents */
+	connect?: InputMaybe<Array<LinkModuleConnectInput>>;
+	/** Create and connect multiple LinkModule documents */
+	create?: InputMaybe<Array<LinkModuleCreateInput>>;
+	/** Delete multiple LinkModule documents */
+	delete?: InputMaybe<Array<LinkModuleWhereUniqueInput>>;
+	/** Disconnect multiple LinkModule documents */
+	disconnect?: InputMaybe<Array<LinkModuleWhereUniqueInput>>;
+	/** Override currently-connected documents with multiple existing LinkModule documents */
+	set?: InputMaybe<Array<LinkModuleWhereUniqueInput>>;
+	/** Update multiple LinkModule documents */
+	update?: InputMaybe<Array<LinkModuleUpdateWithNestedWhereUniqueInput>>;
+	/** Upsert multiple LinkModule documents */
+	upsert?: InputMaybe<Array<LinkModuleUpsertWithNestedWhereUniqueInput>>;
+};
+
+export type LinkModuleUpdateManyWithNestedWhereInput = {
+	ArticleHeroTeaser?: InputMaybe<ArticleHeroTeaserUpdateManyWithNestedWhereInput>;
+	CardsContainer?: InputMaybe<CardsContainerUpdateManyWithNestedWhereInput>;
+	Eyecatcher?: InputMaybe<EyecatcherUpdateManyWithNestedWhereInput>;
+	FaqContainer?: InputMaybe<FaqContainerUpdateManyWithNestedWhereInput>;
+	Text?: InputMaybe<TextUpdateManyWithNestedWhereInput>;
+};
+
+export type LinkModuleUpdateOneInlineInput = {
+	/** Connect existing LinkModule document */
+	connect?: InputMaybe<LinkModuleWhereUniqueInput>;
+	/** Create and connect one LinkModule document */
+	create?: InputMaybe<LinkModuleCreateInput>;
+	/** Delete currently connected LinkModule document */
+	delete?: InputMaybe<Scalars['Boolean']>;
+	/** Disconnect currently connected LinkModule document */
+	disconnect?: InputMaybe<Scalars['Boolean']>;
+	/** Update single LinkModule document */
+	update?: InputMaybe<LinkModuleUpdateWithNestedWhereUniqueInput>;
+	/** Upsert single LinkModule document */
+	upsert?: InputMaybe<LinkModuleUpsertWithNestedWhereUniqueInput>;
+};
+
+export type LinkModuleUpdateWithNestedWhereUniqueInput = {
+	ArticleHeroTeaser?: InputMaybe<ArticleHeroTeaserUpdateWithNestedWhereUniqueInput>;
+	CardsContainer?: InputMaybe<CardsContainerUpdateWithNestedWhereUniqueInput>;
+	Eyecatcher?: InputMaybe<EyecatcherUpdateWithNestedWhereUniqueInput>;
+	FaqContainer?: InputMaybe<FaqContainerUpdateWithNestedWhereUniqueInput>;
+	Text?: InputMaybe<TextUpdateWithNestedWhereUniqueInput>;
+};
+
+export type LinkModuleUpsertWithNestedWhereUniqueInput = {
+	ArticleHeroTeaser?: InputMaybe<ArticleHeroTeaserUpsertWithNestedWhereUniqueInput>;
+	CardsContainer?: InputMaybe<CardsContainerUpsertWithNestedWhereUniqueInput>;
+	Eyecatcher?: InputMaybe<EyecatcherUpsertWithNestedWhereUniqueInput>;
+	FaqContainer?: InputMaybe<FaqContainerUpsertWithNestedWhereUniqueInput>;
+	Text?: InputMaybe<TextUpsertWithNestedWhereUniqueInput>;
+};
+
+export type LinkModuleWhereInput = {
+	ArticleHeroTeaser?: InputMaybe<ArticleHeroTeaserWhereInput>;
+	CardsContainer?: InputMaybe<CardsContainerWhereInput>;
+	Eyecatcher?: InputMaybe<EyecatcherWhereInput>;
+	FaqContainer?: InputMaybe<FaqContainerWhereInput>;
+	Text?: InputMaybe<TextWhereInput>;
+};
+
+export type LinkModuleWhereUniqueInput = {
+	ArticleHeroTeaser?: InputMaybe<ArticleHeroTeaserWhereUniqueInput>;
+	CardsContainer?: InputMaybe<CardsContainerWhereUniqueInput>;
+	Eyecatcher?: InputMaybe<EyecatcherWhereUniqueInput>;
+	FaqContainer?: InputMaybe<FaqContainerWhereUniqueInput>;
+	Text?: InputMaybe<TextWhereUniqueInput>;
+};
+
+export enum LinkOrderByInput {
+	CreatedAtAsc = 'createdAt_ASC',
+	CreatedAtDesc = 'createdAt_DESC',
+	IdAsc = 'id_ASC',
+	IdDesc = 'id_DESC',
+	LabelAsc = 'label_ASC',
+	LabelDesc = 'label_DESC',
+	PublishedAtAsc = 'publishedAt_ASC',
+	PublishedAtDesc = 'publishedAt_DESC',
+	UpdatedAtAsc = 'updatedAt_ASC',
+	UpdatedAtDesc = 'updatedAt_DESC'
+}
+
+export type LinkUpdateInput = {
+	ckx8urpys01qg01z6hntc2w45?: InputMaybe<CardImageUpdateManyInlineInput>;
+	ckx8uschu02xj01zc71rq5bxw?: InputMaybe<CardIconUpdateManyInlineInput>;
+	label?: InputMaybe<Scalars['String']>;
+	module?: InputMaybe<LinkModuleUpdateOneInlineInput>;
+};
+
+export type LinkUpdateManyInlineInput = {
+	/** Connect multiple existing Link documents */
+	connect?: InputMaybe<Array<LinkConnectInput>>;
+	/** Create and connect multiple Link documents */
+	create?: InputMaybe<Array<LinkCreateInput>>;
+	/** Delete multiple Link documents */
+	delete?: InputMaybe<Array<LinkWhereUniqueInput>>;
+	/** Disconnect multiple Link documents */
+	disconnect?: InputMaybe<Array<LinkWhereUniqueInput>>;
+	/** Override currently-connected documents with multiple existing Link documents */
+	set?: InputMaybe<Array<LinkWhereUniqueInput>>;
+	/** Update multiple Link documents */
+	update?: InputMaybe<Array<LinkUpdateWithNestedWhereUniqueInput>>;
+	/** Upsert multiple Link documents */
+	upsert?: InputMaybe<Array<LinkUpsertWithNestedWhereUniqueInput>>;
+};
+
+export type LinkUpdateManyInput = {
+	label?: InputMaybe<Scalars['String']>;
+};
+
+export type LinkUpdateManyWithNestedWhereInput = {
+	/** Update many input */
+	data: LinkUpdateManyInput;
+	/** Document search */
+	where: LinkWhereInput;
+};
+
+export type LinkUpdateOneInlineInput = {
+	/** Connect existing Link document */
+	connect?: InputMaybe<LinkWhereUniqueInput>;
+	/** Create and connect one Link document */
+	create?: InputMaybe<LinkCreateInput>;
+	/** Delete currently connected Link document */
+	delete?: InputMaybe<Scalars['Boolean']>;
+	/** Disconnect currently connected Link document */
+	disconnect?: InputMaybe<Scalars['Boolean']>;
+	/** Update single Link document */
+	update?: InputMaybe<LinkUpdateWithNestedWhereUniqueInput>;
+	/** Upsert single Link document */
+	upsert?: InputMaybe<LinkUpsertWithNestedWhereUniqueInput>;
+};
+
+export type LinkUpdateWithNestedWhereUniqueInput = {
+	/** Document to update */
+	data: LinkUpdateInput;
+	/** Unique document search */
+	where: LinkWhereUniqueInput;
+};
+
+export type LinkUpsertInput = {
+	/** Create document if it didn't exist */
+	create: LinkCreateInput;
+	/** Update document if it exists */
+	update: LinkUpdateInput;
+};
+
+export type LinkUpsertWithNestedWhereUniqueInput = {
+	/** Upsert data */
+	data: LinkUpsertInput;
+	/** Unique document search */
+	where: LinkWhereUniqueInput;
+};
+
+/** Identifies documents */
+export type LinkWhereInput = {
+	/** Logical AND on all given filters. */
+	AND?: InputMaybe<Array<LinkWhereInput>>;
+	/** Logical NOT on all given filters combined by AND. */
+	NOT?: InputMaybe<Array<LinkWhereInput>>;
+	/** Logical OR on all given filters. */
+	OR?: InputMaybe<Array<LinkWhereInput>>;
+	/** Contains search across all appropriate fields. */
+	_search?: InputMaybe<Scalars['String']>;
+	createdAt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than the given value. */
+	createdAt_gt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than or equal the given value. */
+	createdAt_gte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are contained in given list. */
+	createdAt_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	/** All values less than the given value. */
+	createdAt_lt?: InputMaybe<Scalars['DateTime']>;
+	/** All values less than or equal the given value. */
+	createdAt_lte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not equal to given value. */
+	createdAt_not?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not contained in given list. */
+	createdAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	createdBy?: InputMaybe<UserWhereInput>;
+	id?: InputMaybe<Scalars['ID']>;
+	/** All values containing the given string. */
+	id_contains?: InputMaybe<Scalars['ID']>;
+	/** All values ending with the given string. */
+	id_ends_with?: InputMaybe<Scalars['ID']>;
+	/** All values that are contained in given list. */
+	id_in?: InputMaybe<Array<Scalars['ID']>>;
+	/** All values that are not equal to given value. */
+	id_not?: InputMaybe<Scalars['ID']>;
+	/** All values not containing the given string. */
+	id_not_contains?: InputMaybe<Scalars['ID']>;
+	/** All values not ending with the given string */
+	id_not_ends_with?: InputMaybe<Scalars['ID']>;
+	/** All values that are not contained in given list. */
+	id_not_in?: InputMaybe<Array<Scalars['ID']>>;
+	/** All values not starting with the given string. */
+	id_not_starts_with?: InputMaybe<Scalars['ID']>;
+	/** All values starting with the given string. */
+	id_starts_with?: InputMaybe<Scalars['ID']>;
+	label?: InputMaybe<Scalars['String']>;
+	/** All values containing the given string. */
+	label_contains?: InputMaybe<Scalars['String']>;
+	/** All values ending with the given string. */
+	label_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are contained in given list. */
+	label_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values that are not equal to given value. */
+	label_not?: InputMaybe<Scalars['String']>;
+	/** All values not containing the given string. */
+	label_not_contains?: InputMaybe<Scalars['String']>;
+	/** All values not ending with the given string */
+	label_not_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are not contained in given list. */
+	label_not_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values not starting with the given string. */
+	label_not_starts_with?: InputMaybe<Scalars['String']>;
+	/** All values starting with the given string. */
+	label_starts_with?: InputMaybe<Scalars['String']>;
+	publishedAt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than the given value. */
+	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than or equal the given value. */
+	publishedAt_gte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are contained in given list. */
+	publishedAt_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	/** All values less than the given value. */
+	publishedAt_lt?: InputMaybe<Scalars['DateTime']>;
+	/** All values less than or equal the given value. */
+	publishedAt_lte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not equal to given value. */
+	publishedAt_not?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not contained in given list. */
+	publishedAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	publishedBy?: InputMaybe<UserWhereInput>;
+	scheduledIn_every?: InputMaybe<ScheduledOperationWhereInput>;
+	scheduledIn_none?: InputMaybe<ScheduledOperationWhereInput>;
+	scheduledIn_some?: InputMaybe<ScheduledOperationWhereInput>;
+	updatedAt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than the given value. */
+	updatedAt_gt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than or equal the given value. */
+	updatedAt_gte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are contained in given list. */
+	updatedAt_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	/** All values less than the given value. */
+	updatedAt_lt?: InputMaybe<Scalars['DateTime']>;
+	/** All values less than or equal the given value. */
+	updatedAt_lte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not equal to given value. */
+	updatedAt_not?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not contained in given list. */
+	updatedAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	updatedBy?: InputMaybe<UserWhereInput>;
+};
+
+/** References Link record uniquely */
+export type LinkWhereUniqueInput = {
+	id?: InputMaybe<Scalars['ID']>;
+};
+
 /** Locale system enumeration */
 export enum Locale {
 	/** System locale */
@@ -4547,10 +5499,14 @@ export type Mutation = {
 	createDivider?: Maybe<Divider>;
 	/** Create one eyecatcher */
 	createEyecatcher?: Maybe<Eyecatcher>;
-	/** Create one faq */
-	createFaq?: Maybe<Faq>;
+	/** Create one faqContainer */
+	createFaqContainer?: Maybe<FaqContainer>;
+	/** Create one faqItem */
+	createFaqItem?: Maybe<FaqItem>;
 	/** Create one heroImage */
 	createHeroImage?: Maybe<HeroImage>;
+	/** Create one link */
+	createLink?: Maybe<Link>;
 	/** Create one page */
 	createPage?: Maybe<Page>;
 	/** Create one scheduledRelease */
@@ -4571,10 +5527,14 @@ export type Mutation = {
 	deleteDivider?: Maybe<Divider>;
 	/** Delete one eyecatcher from _all_ existing stages. Returns deleted document. */
 	deleteEyecatcher?: Maybe<Eyecatcher>;
-	/** Delete one faq from _all_ existing stages. Returns deleted document. */
-	deleteFaq?: Maybe<Faq>;
+	/** Delete one faqContainer from _all_ existing stages. Returns deleted document. */
+	deleteFaqContainer?: Maybe<FaqContainer>;
+	/** Delete one faqItem from _all_ existing stages. Returns deleted document. */
+	deleteFaqItem?: Maybe<FaqItem>;
 	/** Delete one heroImage from _all_ existing stages. Returns deleted document. */
 	deleteHeroImage?: Maybe<HeroImage>;
+	/** Delete one link from _all_ existing stages. Returns deleted document. */
+	deleteLink?: Maybe<Link>;
 	/**
 	 * Delete many ArticleHeroTeaser documents
 	 * @deprecated Please use the new paginated many mutation (deleteManyArticleHeroTeasersConnection)
@@ -4625,12 +5585,19 @@ export type Mutation = {
 	/** Delete many Eyecatcher documents, return deleted documents */
 	deleteManyEyecatchersConnection: EyecatcherConnection;
 	/**
-	 * Delete many Faq documents
-	 * @deprecated Please use the new paginated many mutation (deleteManyFaqsConnection)
+	 * Delete many FaqContainer documents
+	 * @deprecated Please use the new paginated many mutation (deleteManyFaqContainersConnection)
 	 */
-	deleteManyFaqs: BatchPayload;
-	/** Delete many Faq documents, return deleted documents */
-	deleteManyFaqsConnection: FaqConnection;
+	deleteManyFaqContainers: BatchPayload;
+	/** Delete many FaqContainer documents, return deleted documents */
+	deleteManyFaqContainersConnection: FaqContainerConnection;
+	/**
+	 * Delete many FaqItem documents
+	 * @deprecated Please use the new paginated many mutation (deleteManyFaqItemsConnection)
+	 */
+	deleteManyFaqItems: BatchPayload;
+	/** Delete many FaqItem documents, return deleted documents */
+	deleteManyFaqItemsConnection: FaqItemConnection;
 	/**
 	 * Delete many HeroImage documents
 	 * @deprecated Please use the new paginated many mutation (deleteManyHeroImagesConnection)
@@ -4638,6 +5605,13 @@ export type Mutation = {
 	deleteManyHeroImages: BatchPayload;
 	/** Delete many HeroImage documents, return deleted documents */
 	deleteManyHeroImagesConnection: HeroImageConnection;
+	/**
+	 * Delete many Link documents
+	 * @deprecated Please use the new paginated many mutation (deleteManyLinksConnection)
+	 */
+	deleteManyLinks: BatchPayload;
+	/** Delete many Link documents, return deleted documents */
+	deleteManyLinksConnection: LinkConnection;
 	/**
 	 * Delete many Page documents
 	 * @deprecated Please use the new paginated many mutation (deleteManyPagesConnection)
@@ -4674,10 +5648,14 @@ export type Mutation = {
 	publishDivider?: Maybe<Divider>;
 	/** Publish one eyecatcher */
 	publishEyecatcher?: Maybe<Eyecatcher>;
-	/** Publish one faq */
-	publishFaq?: Maybe<Faq>;
+	/** Publish one faqContainer */
+	publishFaqContainer?: Maybe<FaqContainer>;
+	/** Publish one faqItem */
+	publishFaqItem?: Maybe<FaqItem>;
 	/** Publish one heroImage */
 	publishHeroImage?: Maybe<HeroImage>;
+	/** Publish one link */
+	publishLink?: Maybe<Link>;
 	/**
 	 * Publish many ArticleHeroTeaser documents
 	 * @deprecated Please use the new paginated many mutation (publishManyArticleHeroTeasersConnection)
@@ -4728,12 +5706,19 @@ export type Mutation = {
 	/** Publish many Eyecatcher documents */
 	publishManyEyecatchersConnection: EyecatcherConnection;
 	/**
-	 * Publish many Faq documents
-	 * @deprecated Please use the new paginated many mutation (publishManyFaqsConnection)
+	 * Publish many FaqContainer documents
+	 * @deprecated Please use the new paginated many mutation (publishManyFaqContainersConnection)
 	 */
-	publishManyFaqs: BatchPayload;
-	/** Publish many Faq documents */
-	publishManyFaqsConnection: FaqConnection;
+	publishManyFaqContainers: BatchPayload;
+	/** Publish many FaqContainer documents */
+	publishManyFaqContainersConnection: FaqContainerConnection;
+	/**
+	 * Publish many FaqItem documents
+	 * @deprecated Please use the new paginated many mutation (publishManyFaqItemsConnection)
+	 */
+	publishManyFaqItems: BatchPayload;
+	/** Publish many FaqItem documents */
+	publishManyFaqItemsConnection: FaqItemConnection;
 	/**
 	 * Publish many HeroImage documents
 	 * @deprecated Please use the new paginated many mutation (publishManyHeroImagesConnection)
@@ -4741,6 +5726,13 @@ export type Mutation = {
 	publishManyHeroImages: BatchPayload;
 	/** Publish many HeroImage documents */
 	publishManyHeroImagesConnection: HeroImageConnection;
+	/**
+	 * Publish many Link documents
+	 * @deprecated Please use the new paginated many mutation (publishManyLinksConnection)
+	 */
+	publishManyLinks: BatchPayload;
+	/** Publish many Link documents */
+	publishManyLinksConnection: LinkConnection;
 	/**
 	 * Publish many Page documents
 	 * @deprecated Please use the new paginated many mutation (publishManyPagesConnection)
@@ -4773,10 +5765,14 @@ export type Mutation = {
 	schedulePublishDivider?: Maybe<Divider>;
 	/** Schedule to publish one eyecatcher */
 	schedulePublishEyecatcher?: Maybe<Eyecatcher>;
-	/** Schedule to publish one faq */
-	schedulePublishFaq?: Maybe<Faq>;
+	/** Schedule to publish one faqContainer */
+	schedulePublishFaqContainer?: Maybe<FaqContainer>;
+	/** Schedule to publish one faqItem */
+	schedulePublishFaqItem?: Maybe<FaqItem>;
 	/** Schedule to publish one heroImage */
 	schedulePublishHeroImage?: Maybe<HeroImage>;
+	/** Schedule to publish one link */
+	schedulePublishLink?: Maybe<Link>;
 	/** Schedule to publish one page */
 	schedulePublishPage?: Maybe<Page>;
 	/** Schedule to publish one text */
@@ -4795,10 +5791,14 @@ export type Mutation = {
 	scheduleUnpublishDivider?: Maybe<Divider>;
 	/** Unpublish one eyecatcher from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
 	scheduleUnpublishEyecatcher?: Maybe<Eyecatcher>;
-	/** Unpublish one faq from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
-	scheduleUnpublishFaq?: Maybe<Faq>;
+	/** Unpublish one faqContainer from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
+	scheduleUnpublishFaqContainer?: Maybe<FaqContainer>;
+	/** Unpublish one faqItem from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
+	scheduleUnpublishFaqItem?: Maybe<FaqItem>;
 	/** Unpublish one heroImage from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
 	scheduleUnpublishHeroImage?: Maybe<HeroImage>;
+	/** Unpublish one link from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
+	scheduleUnpublishLink?: Maybe<Link>;
 	/** Unpublish one page from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
 	scheduleUnpublishPage?: Maybe<Page>;
 	/** Unpublish one text from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
@@ -4817,10 +5817,14 @@ export type Mutation = {
 	unpublishDivider?: Maybe<Divider>;
 	/** Unpublish one eyecatcher from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
 	unpublishEyecatcher?: Maybe<Eyecatcher>;
-	/** Unpublish one faq from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
-	unpublishFaq?: Maybe<Faq>;
+	/** Unpublish one faqContainer from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
+	unpublishFaqContainer?: Maybe<FaqContainer>;
+	/** Unpublish one faqItem from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
+	unpublishFaqItem?: Maybe<FaqItem>;
 	/** Unpublish one heroImage from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
 	unpublishHeroImage?: Maybe<HeroImage>;
+	/** Unpublish one link from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
+	unpublishLink?: Maybe<Link>;
 	/**
 	 * Unpublish many ArticleHeroTeaser documents
 	 * @deprecated Please use the new paginated many mutation (unpublishManyArticleHeroTeasersConnection)
@@ -4871,12 +5875,19 @@ export type Mutation = {
 	/** Find many Eyecatcher documents that match criteria in specified stage and unpublish from target stages */
 	unpublishManyEyecatchersConnection: EyecatcherConnection;
 	/**
-	 * Unpublish many Faq documents
-	 * @deprecated Please use the new paginated many mutation (unpublishManyFaqsConnection)
+	 * Unpublish many FaqContainer documents
+	 * @deprecated Please use the new paginated many mutation (unpublishManyFaqContainersConnection)
 	 */
-	unpublishManyFaqs: BatchPayload;
-	/** Find many Faq documents that match criteria in specified stage and unpublish from target stages */
-	unpublishManyFaqsConnection: FaqConnection;
+	unpublishManyFaqContainers: BatchPayload;
+	/** Find many FaqContainer documents that match criteria in specified stage and unpublish from target stages */
+	unpublishManyFaqContainersConnection: FaqContainerConnection;
+	/**
+	 * Unpublish many FaqItem documents
+	 * @deprecated Please use the new paginated many mutation (unpublishManyFaqItemsConnection)
+	 */
+	unpublishManyFaqItems: BatchPayload;
+	/** Find many FaqItem documents that match criteria in specified stage and unpublish from target stages */
+	unpublishManyFaqItemsConnection: FaqItemConnection;
 	/**
 	 * Unpublish many HeroImage documents
 	 * @deprecated Please use the new paginated many mutation (unpublishManyHeroImagesConnection)
@@ -4884,6 +5895,13 @@ export type Mutation = {
 	unpublishManyHeroImages: BatchPayload;
 	/** Find many HeroImage documents that match criteria in specified stage and unpublish from target stages */
 	unpublishManyHeroImagesConnection: HeroImageConnection;
+	/**
+	 * Unpublish many Link documents
+	 * @deprecated Please use the new paginated many mutation (unpublishManyLinksConnection)
+	 */
+	unpublishManyLinks: BatchPayload;
+	/** Find many Link documents that match criteria in specified stage and unpublish from target stages */
+	unpublishManyLinksConnection: LinkConnection;
 	/**
 	 * Unpublish many Page documents
 	 * @deprecated Please use the new paginated many mutation (unpublishManyPagesConnection)
@@ -4916,10 +5934,14 @@ export type Mutation = {
 	updateDivider?: Maybe<Divider>;
 	/** Update one eyecatcher */
 	updateEyecatcher?: Maybe<Eyecatcher>;
-	/** Update one faq */
-	updateFaq?: Maybe<Faq>;
+	/** Update one faqContainer */
+	updateFaqContainer?: Maybe<FaqContainer>;
+	/** Update one faqItem */
+	updateFaqItem?: Maybe<FaqItem>;
 	/** Update one heroImage */
 	updateHeroImage?: Maybe<HeroImage>;
+	/** Update one link */
+	updateLink?: Maybe<Link>;
 	/**
 	 * Update many articleHeroTeasers
 	 * @deprecated Please use the new paginated many mutation (updateManyArticleHeroTeasersConnection)
@@ -4970,12 +5992,19 @@ export type Mutation = {
 	/** Update many Eyecatcher documents */
 	updateManyEyecatchersConnection: EyecatcherConnection;
 	/**
-	 * Update many faqs
-	 * @deprecated Please use the new paginated many mutation (updateManyFaqsConnection)
+	 * Update many faqContainers
+	 * @deprecated Please use the new paginated many mutation (updateManyFaqContainersConnection)
 	 */
-	updateManyFaqs: BatchPayload;
-	/** Update many Faq documents */
-	updateManyFaqsConnection: FaqConnection;
+	updateManyFaqContainers: BatchPayload;
+	/** Update many FaqContainer documents */
+	updateManyFaqContainersConnection: FaqContainerConnection;
+	/**
+	 * Update many faqItems
+	 * @deprecated Please use the new paginated many mutation (updateManyFaqItemsConnection)
+	 */
+	updateManyFaqItems: BatchPayload;
+	/** Update many FaqItem documents */
+	updateManyFaqItemsConnection: FaqItemConnection;
 	/**
 	 * Update many heroImages
 	 * @deprecated Please use the new paginated many mutation (updateManyHeroImagesConnection)
@@ -4983,6 +6012,13 @@ export type Mutation = {
 	updateManyHeroImages: BatchPayload;
 	/** Update many HeroImage documents */
 	updateManyHeroImagesConnection: HeroImageConnection;
+	/**
+	 * Update many links
+	 * @deprecated Please use the new paginated many mutation (updateManyLinksConnection)
+	 */
+	updateManyLinks: BatchPayload;
+	/** Update many Link documents */
+	updateManyLinksConnection: LinkConnection;
 	/**
 	 * Update many pages
 	 * @deprecated Please use the new paginated many mutation (updateManyPagesConnection)
@@ -5017,10 +6053,14 @@ export type Mutation = {
 	upsertDivider?: Maybe<Divider>;
 	/** Upsert one eyecatcher */
 	upsertEyecatcher?: Maybe<Eyecatcher>;
-	/** Upsert one faq */
-	upsertFaq?: Maybe<Faq>;
+	/** Upsert one faqContainer */
+	upsertFaqContainer?: Maybe<FaqContainer>;
+	/** Upsert one faqItem */
+	upsertFaqItem?: Maybe<FaqItem>;
 	/** Upsert one heroImage */
 	upsertHeroImage?: Maybe<HeroImage>;
+	/** Upsert one link */
+	upsertLink?: Maybe<Link>;
 	/** Upsert one page */
 	upsertPage?: Maybe<Page>;
 	/** Upsert one text */
@@ -5055,12 +6095,20 @@ export type MutationCreateEyecatcherArgs = {
 	data: EyecatcherCreateInput;
 };
 
-export type MutationCreateFaqArgs = {
-	data: FaqCreateInput;
+export type MutationCreateFaqContainerArgs = {
+	data: FaqContainerCreateInput;
+};
+
+export type MutationCreateFaqItemArgs = {
+	data: FaqItemCreateInput;
 };
 
 export type MutationCreateHeroImageArgs = {
 	data: HeroImageCreateInput;
+};
+
+export type MutationCreateLinkArgs = {
+	data: LinkCreateInput;
 };
 
 export type MutationCreatePageArgs = {
@@ -5103,12 +6151,20 @@ export type MutationDeleteEyecatcherArgs = {
 	where: EyecatcherWhereUniqueInput;
 };
 
-export type MutationDeleteFaqArgs = {
-	where: FaqWhereUniqueInput;
+export type MutationDeleteFaqContainerArgs = {
+	where: FaqContainerWhereUniqueInput;
+};
+
+export type MutationDeleteFaqItemArgs = {
+	where: FaqItemWhereUniqueInput;
 };
 
 export type MutationDeleteHeroImageArgs = {
 	where: HeroImageWhereUniqueInput;
+};
+
+export type MutationDeleteLinkArgs = {
+	where: LinkWhereUniqueInput;
 };
 
 export type MutationDeleteManyArticleHeroTeasersArgs = {
@@ -5202,17 +6258,30 @@ export type MutationDeleteManyEyecatchersConnectionArgs = {
 	where?: InputMaybe<EyecatcherManyWhereInput>;
 };
 
-export type MutationDeleteManyFaqsArgs = {
-	where?: InputMaybe<FaqManyWhereInput>;
+export type MutationDeleteManyFaqContainersArgs = {
+	where?: InputMaybe<FaqContainerManyWhereInput>;
 };
 
-export type MutationDeleteManyFaqsConnectionArgs = {
+export type MutationDeleteManyFaqContainersConnectionArgs = {
 	after?: InputMaybe<Scalars['ID']>;
 	before?: InputMaybe<Scalars['ID']>;
 	first?: InputMaybe<Scalars['Int']>;
 	last?: InputMaybe<Scalars['Int']>;
 	skip?: InputMaybe<Scalars['Int']>;
-	where?: InputMaybe<FaqManyWhereInput>;
+	where?: InputMaybe<FaqContainerManyWhereInput>;
+};
+
+export type MutationDeleteManyFaqItemsArgs = {
+	where?: InputMaybe<FaqItemManyWhereInput>;
+};
+
+export type MutationDeleteManyFaqItemsConnectionArgs = {
+	after?: InputMaybe<Scalars['ID']>;
+	before?: InputMaybe<Scalars['ID']>;
+	first?: InputMaybe<Scalars['Int']>;
+	last?: InputMaybe<Scalars['Int']>;
+	skip?: InputMaybe<Scalars['Int']>;
+	where?: InputMaybe<FaqItemManyWhereInput>;
 };
 
 export type MutationDeleteManyHeroImagesArgs = {
@@ -5226,6 +6295,19 @@ export type MutationDeleteManyHeroImagesConnectionArgs = {
 	last?: InputMaybe<Scalars['Int']>;
 	skip?: InputMaybe<Scalars['Int']>;
 	where?: InputMaybe<HeroImageManyWhereInput>;
+};
+
+export type MutationDeleteManyLinksArgs = {
+	where?: InputMaybe<LinkManyWhereInput>;
+};
+
+export type MutationDeleteManyLinksConnectionArgs = {
+	after?: InputMaybe<Scalars['ID']>;
+	before?: InputMaybe<Scalars['ID']>;
+	first?: InputMaybe<Scalars['Int']>;
+	last?: InputMaybe<Scalars['Int']>;
+	skip?: InputMaybe<Scalars['Int']>;
+	where?: InputMaybe<LinkManyWhereInput>;
 };
 
 export type MutationDeleteManyPagesArgs = {
@@ -5311,14 +6393,24 @@ export type MutationPublishEyecatcherArgs = {
 	withDefaultLocale?: InputMaybe<Scalars['Boolean']>;
 };
 
-export type MutationPublishFaqArgs = {
+export type MutationPublishFaqContainerArgs = {
 	to?: Array<Stage>;
-	where: FaqWhereUniqueInput;
+	where: FaqContainerWhereUniqueInput;
+};
+
+export type MutationPublishFaqItemArgs = {
+	to?: Array<Stage>;
+	where: FaqItemWhereUniqueInput;
 };
 
 export type MutationPublishHeroImageArgs = {
 	to?: Array<Stage>;
 	where: HeroImageWhereUniqueInput;
+};
+
+export type MutationPublishLinkArgs = {
+	to?: Array<Stage>;
+	where: LinkWhereUniqueInput;
 };
 
 export type MutationPublishManyArticleHeroTeasersArgs = {
@@ -5445,12 +6537,12 @@ export type MutationPublishManyEyecatchersConnectionArgs = {
 	withDefaultLocale?: InputMaybe<Scalars['Boolean']>;
 };
 
-export type MutationPublishManyFaqsArgs = {
+export type MutationPublishManyFaqContainersArgs = {
 	to?: Array<Stage>;
-	where?: InputMaybe<FaqManyWhereInput>;
+	where?: InputMaybe<FaqContainerManyWhereInput>;
 };
 
-export type MutationPublishManyFaqsConnectionArgs = {
+export type MutationPublishManyFaqContainersConnectionArgs = {
 	after?: InputMaybe<Scalars['ID']>;
 	before?: InputMaybe<Scalars['ID']>;
 	first?: InputMaybe<Scalars['Int']>;
@@ -5458,7 +6550,23 @@ export type MutationPublishManyFaqsConnectionArgs = {
 	last?: InputMaybe<Scalars['Int']>;
 	skip?: InputMaybe<Scalars['Int']>;
 	to?: Array<Stage>;
-	where?: InputMaybe<FaqManyWhereInput>;
+	where?: InputMaybe<FaqContainerManyWhereInput>;
+};
+
+export type MutationPublishManyFaqItemsArgs = {
+	to?: Array<Stage>;
+	where?: InputMaybe<FaqItemManyWhereInput>;
+};
+
+export type MutationPublishManyFaqItemsConnectionArgs = {
+	after?: InputMaybe<Scalars['ID']>;
+	before?: InputMaybe<Scalars['ID']>;
+	first?: InputMaybe<Scalars['Int']>;
+	from?: InputMaybe<Stage>;
+	last?: InputMaybe<Scalars['Int']>;
+	skip?: InputMaybe<Scalars['Int']>;
+	to?: Array<Stage>;
+	where?: InputMaybe<FaqItemManyWhereInput>;
 };
 
 export type MutationPublishManyHeroImagesArgs = {
@@ -5475,6 +6583,22 @@ export type MutationPublishManyHeroImagesConnectionArgs = {
 	skip?: InputMaybe<Scalars['Int']>;
 	to?: Array<Stage>;
 	where?: InputMaybe<HeroImageManyWhereInput>;
+};
+
+export type MutationPublishManyLinksArgs = {
+	to?: Array<Stage>;
+	where?: InputMaybe<LinkManyWhereInput>;
+};
+
+export type MutationPublishManyLinksConnectionArgs = {
+	after?: InputMaybe<Scalars['ID']>;
+	before?: InputMaybe<Scalars['ID']>;
+	first?: InputMaybe<Scalars['Int']>;
+	from?: InputMaybe<Stage>;
+	last?: InputMaybe<Scalars['Int']>;
+	skip?: InputMaybe<Scalars['Int']>;
+	to?: Array<Stage>;
+	where?: InputMaybe<LinkManyWhereInput>;
 };
 
 export type MutationPublishManyPagesArgs = {
@@ -5574,11 +6698,18 @@ export type MutationSchedulePublishEyecatcherArgs = {
 	withDefaultLocale?: InputMaybe<Scalars['Boolean']>;
 };
 
-export type MutationSchedulePublishFaqArgs = {
+export type MutationSchedulePublishFaqContainerArgs = {
 	releaseAt?: InputMaybe<Scalars['DateTime']>;
 	releaseId?: InputMaybe<Scalars['String']>;
 	to?: Array<Stage>;
-	where: FaqWhereUniqueInput;
+	where: FaqContainerWhereUniqueInput;
+};
+
+export type MutationSchedulePublishFaqItemArgs = {
+	releaseAt?: InputMaybe<Scalars['DateTime']>;
+	releaseId?: InputMaybe<Scalars['String']>;
+	to?: Array<Stage>;
+	where: FaqItemWhereUniqueInput;
 };
 
 export type MutationSchedulePublishHeroImageArgs = {
@@ -5586,6 +6717,13 @@ export type MutationSchedulePublishHeroImageArgs = {
 	releaseId?: InputMaybe<Scalars['String']>;
 	to?: Array<Stage>;
 	where: HeroImageWhereUniqueInput;
+};
+
+export type MutationSchedulePublishLinkArgs = {
+	releaseAt?: InputMaybe<Scalars['DateTime']>;
+	releaseId?: InputMaybe<Scalars['String']>;
+	to?: Array<Stage>;
+	where: LinkWhereUniqueInput;
 };
 
 export type MutationSchedulePublishPageArgs = {
@@ -5655,11 +6793,18 @@ export type MutationScheduleUnpublishEyecatcherArgs = {
 	where: EyecatcherWhereUniqueInput;
 };
 
-export type MutationScheduleUnpublishFaqArgs = {
+export type MutationScheduleUnpublishFaqContainerArgs = {
 	from?: Array<Stage>;
 	releaseAt?: InputMaybe<Scalars['DateTime']>;
 	releaseId?: InputMaybe<Scalars['String']>;
-	where: FaqWhereUniqueInput;
+	where: FaqContainerWhereUniqueInput;
+};
+
+export type MutationScheduleUnpublishFaqItemArgs = {
+	from?: Array<Stage>;
+	releaseAt?: InputMaybe<Scalars['DateTime']>;
+	releaseId?: InputMaybe<Scalars['String']>;
+	where: FaqItemWhereUniqueInput;
 };
 
 export type MutationScheduleUnpublishHeroImageArgs = {
@@ -5667,6 +6812,13 @@ export type MutationScheduleUnpublishHeroImageArgs = {
 	releaseAt?: InputMaybe<Scalars['DateTime']>;
 	releaseId?: InputMaybe<Scalars['String']>;
 	where: HeroImageWhereUniqueInput;
+};
+
+export type MutationScheduleUnpublishLinkArgs = {
+	from?: Array<Stage>;
+	releaseAt?: InputMaybe<Scalars['DateTime']>;
+	releaseId?: InputMaybe<Scalars['String']>;
+	where: LinkWhereUniqueInput;
 };
 
 export type MutationScheduleUnpublishPageArgs = {
@@ -5722,14 +6874,24 @@ export type MutationUnpublishEyecatcherArgs = {
 	where: EyecatcherWhereUniqueInput;
 };
 
-export type MutationUnpublishFaqArgs = {
+export type MutationUnpublishFaqContainerArgs = {
 	from?: Array<Stage>;
-	where: FaqWhereUniqueInput;
+	where: FaqContainerWhereUniqueInput;
+};
+
+export type MutationUnpublishFaqItemArgs = {
+	from?: Array<Stage>;
+	where: FaqItemWhereUniqueInput;
 };
 
 export type MutationUnpublishHeroImageArgs = {
 	from?: Array<Stage>;
 	where: HeroImageWhereUniqueInput;
+};
+
+export type MutationUnpublishLinkArgs = {
+	from?: Array<Stage>;
+	where: LinkWhereUniqueInput;
 };
 
 export type MutationUnpublishManyArticleHeroTeasersArgs = {
@@ -5852,12 +7014,12 @@ export type MutationUnpublishManyEyecatchersConnectionArgs = {
 	where?: InputMaybe<EyecatcherManyWhereInput>;
 };
 
-export type MutationUnpublishManyFaqsArgs = {
+export type MutationUnpublishManyFaqContainersArgs = {
 	from?: Array<Stage>;
-	where?: InputMaybe<FaqManyWhereInput>;
+	where?: InputMaybe<FaqContainerManyWhereInput>;
 };
 
-export type MutationUnpublishManyFaqsConnectionArgs = {
+export type MutationUnpublishManyFaqContainersConnectionArgs = {
 	after?: InputMaybe<Scalars['ID']>;
 	before?: InputMaybe<Scalars['ID']>;
 	first?: InputMaybe<Scalars['Int']>;
@@ -5865,7 +7027,23 @@ export type MutationUnpublishManyFaqsConnectionArgs = {
 	last?: InputMaybe<Scalars['Int']>;
 	skip?: InputMaybe<Scalars['Int']>;
 	stage?: InputMaybe<Stage>;
-	where?: InputMaybe<FaqManyWhereInput>;
+	where?: InputMaybe<FaqContainerManyWhereInput>;
+};
+
+export type MutationUnpublishManyFaqItemsArgs = {
+	from?: Array<Stage>;
+	where?: InputMaybe<FaqItemManyWhereInput>;
+};
+
+export type MutationUnpublishManyFaqItemsConnectionArgs = {
+	after?: InputMaybe<Scalars['ID']>;
+	before?: InputMaybe<Scalars['ID']>;
+	first?: InputMaybe<Scalars['Int']>;
+	from?: Array<Stage>;
+	last?: InputMaybe<Scalars['Int']>;
+	skip?: InputMaybe<Scalars['Int']>;
+	stage?: InputMaybe<Stage>;
+	where?: InputMaybe<FaqItemManyWhereInput>;
 };
 
 export type MutationUnpublishManyHeroImagesArgs = {
@@ -5882,6 +7060,22 @@ export type MutationUnpublishManyHeroImagesConnectionArgs = {
 	skip?: InputMaybe<Scalars['Int']>;
 	stage?: InputMaybe<Stage>;
 	where?: InputMaybe<HeroImageManyWhereInput>;
+};
+
+export type MutationUnpublishManyLinksArgs = {
+	from?: Array<Stage>;
+	where?: InputMaybe<LinkManyWhereInput>;
+};
+
+export type MutationUnpublishManyLinksConnectionArgs = {
+	after?: InputMaybe<Scalars['ID']>;
+	before?: InputMaybe<Scalars['ID']>;
+	first?: InputMaybe<Scalars['Int']>;
+	from?: Array<Stage>;
+	last?: InputMaybe<Scalars['Int']>;
+	skip?: InputMaybe<Scalars['Int']>;
+	stage?: InputMaybe<Stage>;
+	where?: InputMaybe<LinkManyWhereInput>;
 };
 
 export type MutationUnpublishManyPagesArgs = {
@@ -5961,14 +7155,24 @@ export type MutationUpdateEyecatcherArgs = {
 	where: EyecatcherWhereUniqueInput;
 };
 
-export type MutationUpdateFaqArgs = {
-	data: FaqUpdateInput;
-	where: FaqWhereUniqueInput;
+export type MutationUpdateFaqContainerArgs = {
+	data: FaqContainerUpdateInput;
+	where: FaqContainerWhereUniqueInput;
+};
+
+export type MutationUpdateFaqItemArgs = {
+	data: FaqItemUpdateInput;
+	where: FaqItemWhereUniqueInput;
 };
 
 export type MutationUpdateHeroImageArgs = {
 	data: HeroImageUpdateInput;
 	where: HeroImageWhereUniqueInput;
+};
+
+export type MutationUpdateLinkArgs = {
+	data: LinkUpdateInput;
+	where: LinkWhereUniqueInput;
 };
 
 export type MutationUpdateManyArticleHeroTeasersArgs = {
@@ -6076,19 +7280,34 @@ export type MutationUpdateManyEyecatchersConnectionArgs = {
 	where?: InputMaybe<EyecatcherManyWhereInput>;
 };
 
-export type MutationUpdateManyFaqsArgs = {
-	data: FaqUpdateManyInput;
-	where?: InputMaybe<FaqManyWhereInput>;
+export type MutationUpdateManyFaqContainersArgs = {
+	data: FaqContainerUpdateManyInput;
+	where?: InputMaybe<FaqContainerManyWhereInput>;
 };
 
-export type MutationUpdateManyFaqsConnectionArgs = {
+export type MutationUpdateManyFaqContainersConnectionArgs = {
 	after?: InputMaybe<Scalars['ID']>;
 	before?: InputMaybe<Scalars['ID']>;
-	data: FaqUpdateManyInput;
+	data: FaqContainerUpdateManyInput;
 	first?: InputMaybe<Scalars['Int']>;
 	last?: InputMaybe<Scalars['Int']>;
 	skip?: InputMaybe<Scalars['Int']>;
-	where?: InputMaybe<FaqManyWhereInput>;
+	where?: InputMaybe<FaqContainerManyWhereInput>;
+};
+
+export type MutationUpdateManyFaqItemsArgs = {
+	data: FaqItemUpdateManyInput;
+	where?: InputMaybe<FaqItemManyWhereInput>;
+};
+
+export type MutationUpdateManyFaqItemsConnectionArgs = {
+	after?: InputMaybe<Scalars['ID']>;
+	before?: InputMaybe<Scalars['ID']>;
+	data: FaqItemUpdateManyInput;
+	first?: InputMaybe<Scalars['Int']>;
+	last?: InputMaybe<Scalars['Int']>;
+	skip?: InputMaybe<Scalars['Int']>;
+	where?: InputMaybe<FaqItemManyWhereInput>;
 };
 
 export type MutationUpdateManyHeroImagesArgs = {
@@ -6104,6 +7323,21 @@ export type MutationUpdateManyHeroImagesConnectionArgs = {
 	last?: InputMaybe<Scalars['Int']>;
 	skip?: InputMaybe<Scalars['Int']>;
 	where?: InputMaybe<HeroImageManyWhereInput>;
+};
+
+export type MutationUpdateManyLinksArgs = {
+	data: LinkUpdateManyInput;
+	where?: InputMaybe<LinkManyWhereInput>;
+};
+
+export type MutationUpdateManyLinksConnectionArgs = {
+	after?: InputMaybe<Scalars['ID']>;
+	before?: InputMaybe<Scalars['ID']>;
+	data: LinkUpdateManyInput;
+	first?: InputMaybe<Scalars['Int']>;
+	last?: InputMaybe<Scalars['Int']>;
+	skip?: InputMaybe<Scalars['Int']>;
+	where?: InputMaybe<LinkManyWhereInput>;
 };
 
 export type MutationUpdateManyPagesArgs = {
@@ -6186,14 +7420,24 @@ export type MutationUpsertEyecatcherArgs = {
 	where: EyecatcherWhereUniqueInput;
 };
 
-export type MutationUpsertFaqArgs = {
-	upsert: FaqUpsertInput;
-	where: FaqWhereUniqueInput;
+export type MutationUpsertFaqContainerArgs = {
+	upsert: FaqContainerUpsertInput;
+	where: FaqContainerWhereUniqueInput;
+};
+
+export type MutationUpsertFaqItemArgs = {
+	upsert: FaqItemUpsertInput;
+	where: FaqItemWhereUniqueInput;
 };
 
 export type MutationUpsertHeroImageArgs = {
 	upsert: HeroImageUpsertInput;
 	where: HeroImageWhereUniqueInput;
+};
+
+export type MutationUpsertLinkArgs = {
+	upsert: LinkUpsertInput;
+	where: LinkWhereUniqueInput;
 };
 
 export type MutationUpsertPageArgs = {
@@ -6452,7 +7696,7 @@ export type PageModul =
 	| CardsContainer
 	| Divider
 	| Eyecatcher
-	| Faq
+	| FaqContainer
 	| HeroImage
 	| Text;
 
@@ -6461,7 +7705,7 @@ export type PageModulConnectInput = {
 	CardsContainer?: InputMaybe<CardsContainerConnectInput>;
 	Divider?: InputMaybe<DividerConnectInput>;
 	Eyecatcher?: InputMaybe<EyecatcherConnectInput>;
-	Faq?: InputMaybe<FaqConnectInput>;
+	FaqContainer?: InputMaybe<FaqContainerConnectInput>;
 	HeroImage?: InputMaybe<HeroImageConnectInput>;
 	Text?: InputMaybe<TextConnectInput>;
 };
@@ -6471,7 +7715,7 @@ export type PageModulCreateInput = {
 	CardsContainer?: InputMaybe<CardsContainerCreateInput>;
 	Divider?: InputMaybe<DividerCreateInput>;
 	Eyecatcher?: InputMaybe<EyecatcherCreateInput>;
-	Faq?: InputMaybe<FaqCreateInput>;
+	FaqContainer?: InputMaybe<FaqContainerCreateInput>;
 	HeroImage?: InputMaybe<HeroImageCreateInput>;
 	Text?: InputMaybe<TextCreateInput>;
 };
@@ -6495,7 +7739,7 @@ export type PageModulUpdateInput = {
 	CardsContainer?: InputMaybe<CardsContainerUpdateInput>;
 	Divider?: InputMaybe<DividerUpdateInput>;
 	Eyecatcher?: InputMaybe<EyecatcherUpdateInput>;
-	Faq?: InputMaybe<FaqUpdateInput>;
+	FaqContainer?: InputMaybe<FaqContainerUpdateInput>;
 	HeroImage?: InputMaybe<HeroImageUpdateInput>;
 	Text?: InputMaybe<TextUpdateInput>;
 };
@@ -6522,7 +7766,7 @@ export type PageModulUpdateManyWithNestedWhereInput = {
 	CardsContainer?: InputMaybe<CardsContainerUpdateManyWithNestedWhereInput>;
 	Divider?: InputMaybe<DividerUpdateManyWithNestedWhereInput>;
 	Eyecatcher?: InputMaybe<EyecatcherUpdateManyWithNestedWhereInput>;
-	Faq?: InputMaybe<FaqUpdateManyWithNestedWhereInput>;
+	FaqContainer?: InputMaybe<FaqContainerUpdateManyWithNestedWhereInput>;
 	HeroImage?: InputMaybe<HeroImageUpdateManyWithNestedWhereInput>;
 	Text?: InputMaybe<TextUpdateManyWithNestedWhereInput>;
 };
@@ -6547,7 +7791,7 @@ export type PageModulUpdateWithNestedWhereUniqueInput = {
 	CardsContainer?: InputMaybe<CardsContainerUpdateWithNestedWhereUniqueInput>;
 	Divider?: InputMaybe<DividerUpdateWithNestedWhereUniqueInput>;
 	Eyecatcher?: InputMaybe<EyecatcherUpdateWithNestedWhereUniqueInput>;
-	Faq?: InputMaybe<FaqUpdateWithNestedWhereUniqueInput>;
+	FaqContainer?: InputMaybe<FaqContainerUpdateWithNestedWhereUniqueInput>;
 	HeroImage?: InputMaybe<HeroImageUpdateWithNestedWhereUniqueInput>;
 	Text?: InputMaybe<TextUpdateWithNestedWhereUniqueInput>;
 };
@@ -6557,7 +7801,7 @@ export type PageModulUpsertWithNestedWhereUniqueInput = {
 	CardsContainer?: InputMaybe<CardsContainerUpsertWithNestedWhereUniqueInput>;
 	Divider?: InputMaybe<DividerUpsertWithNestedWhereUniqueInput>;
 	Eyecatcher?: InputMaybe<EyecatcherUpsertWithNestedWhereUniqueInput>;
-	Faq?: InputMaybe<FaqUpsertWithNestedWhereUniqueInput>;
+	FaqContainer?: InputMaybe<FaqContainerUpsertWithNestedWhereUniqueInput>;
 	HeroImage?: InputMaybe<HeroImageUpsertWithNestedWhereUniqueInput>;
 	Text?: InputMaybe<TextUpsertWithNestedWhereUniqueInput>;
 };
@@ -6567,7 +7811,7 @@ export type PageModulWhereInput = {
 	CardsContainer?: InputMaybe<CardsContainerWhereInput>;
 	Divider?: InputMaybe<DividerWhereInput>;
 	Eyecatcher?: InputMaybe<EyecatcherWhereInput>;
-	Faq?: InputMaybe<FaqWhereInput>;
+	FaqContainer?: InputMaybe<FaqContainerWhereInput>;
 	HeroImage?: InputMaybe<HeroImageWhereInput>;
 	Text?: InputMaybe<TextWhereInput>;
 };
@@ -6577,7 +7821,7 @@ export type PageModulWhereUniqueInput = {
 	CardsContainer?: InputMaybe<CardsContainerWhereUniqueInput>;
 	Divider?: InputMaybe<DividerWhereUniqueInput>;
 	Eyecatcher?: InputMaybe<EyecatcherWhereUniqueInput>;
-	Faq?: InputMaybe<FaqWhereUniqueInput>;
+	FaqContainer?: InputMaybe<FaqContainerWhereUniqueInput>;
 	HeroImage?: InputMaybe<HeroImageWhereUniqueInput>;
 	Text?: InputMaybe<TextWhereUniqueInput>;
 };
@@ -6837,14 +8081,22 @@ export type Query = {
 	eyecatchers: Array<Eyecatcher>;
 	/** Retrieve multiple eyecatchers using the Relay connection interface */
 	eyecatchersConnection: EyecatcherConnection;
-	/** Retrieve a single faq */
-	faq?: Maybe<Faq>;
+	/** Retrieve a single faqContainer */
+	faqContainer?: Maybe<FaqContainer>;
 	/** Retrieve document version */
-	faqVersion?: Maybe<DocumentVersion>;
-	/** Retrieve multiple faqs */
-	faqs: Array<Faq>;
-	/** Retrieve multiple faqs using the Relay connection interface */
-	faqsConnection: FaqConnection;
+	faqContainerVersion?: Maybe<DocumentVersion>;
+	/** Retrieve multiple faqContainers */
+	faqContainers: Array<FaqContainer>;
+	/** Retrieve multiple faqContainers using the Relay connection interface */
+	faqContainersConnection: FaqContainerConnection;
+	/** Retrieve a single faqItem */
+	faqItem?: Maybe<FaqItem>;
+	/** Retrieve document version */
+	faqItemVersion?: Maybe<DocumentVersion>;
+	/** Retrieve multiple faqItems */
+	faqItems: Array<FaqItem>;
+	/** Retrieve multiple faqItems using the Relay connection interface */
+	faqItemsConnection: FaqItemConnection;
 	/** Retrieve a single heroImage */
 	heroImage?: Maybe<HeroImage>;
 	/** Retrieve document version */
@@ -6853,6 +8105,14 @@ export type Query = {
 	heroImages: Array<HeroImage>;
 	/** Retrieve multiple heroImages using the Relay connection interface */
 	heroImagesConnection: HeroImageConnection;
+	/** Retrieve a single link */
+	link?: Maybe<Link>;
+	/** Retrieve document version */
+	linkVersion?: Maybe<DocumentVersion>;
+	/** Retrieve multiple links */
+	links: Array<Link>;
+	/** Retrieve multiple links using the Relay connection interface */
+	linksConnection: LinkConnection;
 	/** Fetches an object given its ID */
 	node?: Maybe<Node>;
 	/** Retrieve a single page */
@@ -7129,38 +8389,72 @@ export type QueryEyecatchersConnectionArgs = {
 	where?: InputMaybe<EyecatcherWhereInput>;
 };
 
-export type QueryFaqArgs = {
+export type QueryFaqContainerArgs = {
 	locales?: Array<Locale>;
 	stage?: Stage;
-	where: FaqWhereUniqueInput;
+	where: FaqContainerWhereUniqueInput;
 };
 
-export type QueryFaqVersionArgs = {
+export type QueryFaqContainerVersionArgs = {
 	where: VersionWhereInput;
 };
 
-export type QueryFaqsArgs = {
+export type QueryFaqContainersArgs = {
 	after?: InputMaybe<Scalars['String']>;
 	before?: InputMaybe<Scalars['String']>;
 	first?: InputMaybe<Scalars['Int']>;
 	last?: InputMaybe<Scalars['Int']>;
 	locales?: Array<Locale>;
-	orderBy?: InputMaybe<FaqOrderByInput>;
+	orderBy?: InputMaybe<FaqContainerOrderByInput>;
 	skip?: InputMaybe<Scalars['Int']>;
 	stage?: Stage;
-	where?: InputMaybe<FaqWhereInput>;
+	where?: InputMaybe<FaqContainerWhereInput>;
 };
 
-export type QueryFaqsConnectionArgs = {
+export type QueryFaqContainersConnectionArgs = {
 	after?: InputMaybe<Scalars['String']>;
 	before?: InputMaybe<Scalars['String']>;
 	first?: InputMaybe<Scalars['Int']>;
 	last?: InputMaybe<Scalars['Int']>;
 	locales?: Array<Locale>;
-	orderBy?: InputMaybe<FaqOrderByInput>;
+	orderBy?: InputMaybe<FaqContainerOrderByInput>;
 	skip?: InputMaybe<Scalars['Int']>;
 	stage?: Stage;
-	where?: InputMaybe<FaqWhereInput>;
+	where?: InputMaybe<FaqContainerWhereInput>;
+};
+
+export type QueryFaqItemArgs = {
+	locales?: Array<Locale>;
+	stage?: Stage;
+	where: FaqItemWhereUniqueInput;
+};
+
+export type QueryFaqItemVersionArgs = {
+	where: VersionWhereInput;
+};
+
+export type QueryFaqItemsArgs = {
+	after?: InputMaybe<Scalars['String']>;
+	before?: InputMaybe<Scalars['String']>;
+	first?: InputMaybe<Scalars['Int']>;
+	last?: InputMaybe<Scalars['Int']>;
+	locales?: Array<Locale>;
+	orderBy?: InputMaybe<FaqItemOrderByInput>;
+	skip?: InputMaybe<Scalars['Int']>;
+	stage?: Stage;
+	where?: InputMaybe<FaqItemWhereInput>;
+};
+
+export type QueryFaqItemsConnectionArgs = {
+	after?: InputMaybe<Scalars['String']>;
+	before?: InputMaybe<Scalars['String']>;
+	first?: InputMaybe<Scalars['Int']>;
+	last?: InputMaybe<Scalars['Int']>;
+	locales?: Array<Locale>;
+	orderBy?: InputMaybe<FaqItemOrderByInput>;
+	skip?: InputMaybe<Scalars['Int']>;
+	stage?: Stage;
+	where?: InputMaybe<FaqItemWhereInput>;
 };
 
 export type QueryHeroImageArgs = {
@@ -7195,6 +8489,40 @@ export type QueryHeroImagesConnectionArgs = {
 	skip?: InputMaybe<Scalars['Int']>;
 	stage?: Stage;
 	where?: InputMaybe<HeroImageWhereInput>;
+};
+
+export type QueryLinkArgs = {
+	locales?: Array<Locale>;
+	stage?: Stage;
+	where: LinkWhereUniqueInput;
+};
+
+export type QueryLinkVersionArgs = {
+	where: VersionWhereInput;
+};
+
+export type QueryLinksArgs = {
+	after?: InputMaybe<Scalars['String']>;
+	before?: InputMaybe<Scalars['String']>;
+	first?: InputMaybe<Scalars['Int']>;
+	last?: InputMaybe<Scalars['Int']>;
+	locales?: Array<Locale>;
+	orderBy?: InputMaybe<LinkOrderByInput>;
+	skip?: InputMaybe<Scalars['Int']>;
+	stage?: Stage;
+	where?: InputMaybe<LinkWhereInput>;
+};
+
+export type QueryLinksConnectionArgs = {
+	after?: InputMaybe<Scalars['String']>;
+	before?: InputMaybe<Scalars['String']>;
+	first?: InputMaybe<Scalars['Int']>;
+	last?: InputMaybe<Scalars['Int']>;
+	locales?: Array<Locale>;
+	orderBy?: InputMaybe<LinkOrderByInput>;
+	skip?: InputMaybe<Scalars['Int']>;
+	stage?: Stage;
+	where?: InputMaybe<LinkWhereInput>;
 };
 
 export type QueryNodeArgs = {
@@ -7470,8 +8798,10 @@ export type ScheduledOperationAffectedDocument =
 	| CardsContainer
 	| Divider
 	| Eyecatcher
-	| Faq
+	| FaqContainer
+	| FaqItem
 	| HeroImage
+	| Link
 	| Page
 	| Text;
 
@@ -8408,6 +9738,7 @@ export type Text = Node & {
 	history: Array<Version>;
 	/** The unique identifier */
 	id: Scalars['ID'];
+	incomingLink?: Maybe<Link>;
 	page?: Maybe<Page>;
 	/** The time the document was published. Null on documents in draft stage. */
 	publishedAt?: Maybe<Scalars['DateTime']>;
@@ -8437,6 +9768,10 @@ export type TextHistoryArgs = {
 	limit?: Scalars['Int'];
 	skip?: Scalars['Int'];
 	stageOverride?: InputMaybe<Stage>;
+};
+
+export type TextIncomingLinkArgs = {
+	locales?: InputMaybe<Array<Locale>>;
 };
 
 export type TextPageArgs = {
@@ -8483,6 +9818,7 @@ export type TextCreateInput = {
 	heading1?: InputMaybe<Scalars['String']>;
 	heading2?: InputMaybe<Scalars['String']>;
 	heading3?: InputMaybe<Scalars['String']>;
+	incomingLink?: InputMaybe<LinkCreateOneInlineInput>;
 	page?: InputMaybe<PageCreateOneInlineInput>;
 	text?: InputMaybe<Scalars['RichTextAST']>;
 	updatedAt?: InputMaybe<Scalars['DateTime']>;
@@ -8613,6 +9949,7 @@ export type TextManyWhereInput = {
 	id_not_starts_with?: InputMaybe<Scalars['ID']>;
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
+	incomingLink?: InputMaybe<LinkWhereInput>;
 	page?: InputMaybe<PageWhereInput>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
@@ -8672,6 +10009,7 @@ export type TextUpdateInput = {
 	heading1?: InputMaybe<Scalars['String']>;
 	heading2?: InputMaybe<Scalars['String']>;
 	heading3?: InputMaybe<Scalars['String']>;
+	incomingLink?: InputMaybe<LinkUpdateOneInlineInput>;
 	page?: InputMaybe<PageUpdateOneInlineInput>;
 	text?: InputMaybe<Scalars['RichTextAST']>;
 };
@@ -8845,6 +10183,7 @@ export type TextWhereInput = {
 	id_not_starts_with?: InputMaybe<Scalars['ID']>;
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
+	incomingLink?: InputMaybe<LinkWhereInput>;
 	page?: InputMaybe<PageWhereInput>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
@@ -9350,7 +10689,9 @@ export enum _SystemDateTimeFieldVariation {
 	Localization = 'localization'
 }
 
-export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never }>;
+export type Unnamed_1_QueryVariables = Exact<{
+	slug: Scalars['String'];
+}>;
 
 export type Unnamed_1_Query = {
 	__typename?: 'Query';
@@ -9358,6 +10699,7 @@ export type Unnamed_1_Query = {
 		| {
 				__typename?: 'Page';
 				id: string;
+				slug: string;
 				modules: Array<
 					| {
 							__typename: 'ArticleHeroTeaser';
@@ -9381,6 +10723,42 @@ export type Unnamed_1_Query = {
 										id: string;
 										headline?: string | null | undefined;
 										image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
+										link?:
+											| {
+													__typename?: 'Link';
+													id: string;
+													label?: string | null | undefined;
+													module?:
+														| {
+																__typename: 'ArticleHeroTeaser';
+																id: string;
+																page?: { __typename?: 'Page'; slug: string } | null | undefined;
+														  }
+														| {
+																__typename: 'CardsContainer';
+																id: string;
+																page?: { __typename?: 'Page'; slug: string } | null | undefined;
+														  }
+														| {
+																__typename: 'Eyecatcher';
+																id: string;
+																page?: { __typename?: 'Page'; slug: string } | null | undefined;
+														  }
+														| {
+																__typename: 'FaqContainer';
+																id: string;
+																page?: { __typename?: 'Page'; slug: string } | null | undefined;
+														  }
+														| {
+																__typename: 'Text';
+																id: string;
+																page?: { __typename?: 'Page'; slug: string } | null | undefined;
+														  }
+														| null
+														| undefined;
+											  }
+											| null
+											| undefined;
 								  }
 							>;
 					  }
@@ -9393,10 +10771,14 @@ export type Unnamed_1_Query = {
 							image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
 					  }
 					| {
-							__typename: 'Faq';
+							__typename: 'FaqContainer';
 							id: string;
-							question: string;
-							answer: { __typename?: 'RichText'; markdown: string };
+							faqItems: Array<{
+								__typename?: 'FaqItem';
+								id: string;
+								question: string;
+								answer: { __typename?: 'RichText'; html: string };
+							}>;
 					  }
 					| {
 							__typename: 'HeroImage';

@@ -62,6 +62,43 @@ export const PAGE = gql`
 								id
 								url
 							}
+							link {
+								id
+								label
+								module {
+									__typename
+									... on Eyecatcher {
+										id
+										page {
+											slug
+										}
+									}
+									... on CardsContainer {
+										id
+										page {
+											slug
+										}
+									}
+									... on Text {
+										id
+										page {
+											slug
+										}
+									}
+									... on ArticleHeroTeaser {
+										id
+										page {
+											slug
+										}
+									}
+									... on FaqContainer {
+										id
+										page {
+											slug
+										}
+									}
+								}
+							}
 						}
 					}
 				}
