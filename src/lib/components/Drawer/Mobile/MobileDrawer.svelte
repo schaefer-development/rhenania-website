@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import DrawerAccordion from '$lib/components/Drawer/DrawerAccordion.svelte';
-	export let toggleMenuFull;
-	export let openMenuFull;
+	export let toggleMenuFull: () => void;
+	export let openMenuFull: boolean;
 </script>
 
 <aside
@@ -40,7 +40,7 @@
 			</div>
 			<div class="left">
 				<!-- left start -->
-				<a href="{base}/" class="rc_h1 text-rc_skyblue">Start</a>
+				<a href="{base}/start" class="rc_h1 text-rc_skyblue">Start</a>
 				<hr class="my-4 border-rc_darkblue" />
 				<p class="rc_h1 text-rc_skyblue">Produkte</p>
 				<DrawerAccordion id="versandlogistiksystem_drawer_full">

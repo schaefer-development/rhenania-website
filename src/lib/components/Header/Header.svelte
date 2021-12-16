@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import { page } from '$app/stores';
 	import Logo from '$lib/components/Logo/Logo.svelte';
 	import Drawer from '$lib/components/Drawer/Drawer.svelte';
 	import ProductMenu from '$lib/components/Drawer/ProductMenu.svelte';
@@ -8,8 +9,8 @@
 
 	import MobileDrawer from '$lib/components/Drawer/Mobile/MobileDrawer.svelte';
 
-	let openMenu = null;
-	const toggleMenu = (menu) => {
+	let openMenu: string | null = null;
+	const toggleMenu = (menu: string) => {
 		openMenu = openMenu === menu ? null : menu;
 	};
 
@@ -42,9 +43,9 @@
 			</div>
 
 			<div id="menu" class="hidden md:inline-block">
-				<a href="{base}/" on:click={() => toggleMenu('start')}>
+				<a href="{base}/start">
 					<span
-						class="{openMenu === 'start'
+						class="{$page.path === `${base}/start`
 							? 'border-b-4 border-rc_red'
 							: ''} font-medium uppercase py-1 mx-4 text-black hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
 						>Start</span
@@ -104,13 +105,13 @@
 </header>
 
 <!-- aside menu -->
-<Drawer {openMenu} menuLabel={'produkte'}>
+<Drawer {openMenu} {toggleMenu} menuLabel={'produkte'}>
 	<ProductMenu />
 </Drawer>
-<Drawer {openMenu} menuLabel={'unternehmen'}>
+<Drawer {openMenu} {toggleMenu} menuLabel={'unternehmen'}>
 	<CompanyMenu />
 </Drawer>
-<Drawer {openMenu} menuLabel={'service'}>
+<Drawer {openMenu} {toggleMenu} menuLabel={'service'}>
 	<ServiceMenu />
 </Drawer>
 

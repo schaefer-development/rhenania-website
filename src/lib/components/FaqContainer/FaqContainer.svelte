@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Accordion from '$lib/components/Accordion/Accordion.svelte';
-	import type { Faq } from '$lib/graphql/generated/schema';
-	export let module: Partial<Faq> = {};
+	import type { FaqContainer } from '$lib/graphql/generated/schema';
+	export let module: Partial<FaqContainer> = {};
 </script>
 
 <div id={module.id} class="relative bg-white my-10 py-12 shadow-md">

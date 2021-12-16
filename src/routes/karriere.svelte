@@ -1,29 +1,13 @@
 <script context="module" lang="ts">
 	import Page from '$lib/components/Page/Page.svelte';
-	export const load: Load = async ({ fetch }) => {
-		const res = await fetch('/karriere.json');
-		if (res.ok) {
-			const { data } = await res.json();
-			return {
-				props: { data }
-			};
-		}
-
-		const {
-			errors: [error]
-		} = await res.json();
-
-		return {
-			status: res.status,
-			error: new Error(error.message)
-		};
-	};
-
+	import type { LoadPageData } from '$lib/helpers';
+	import { LoadPage } from '$lib/helpers';
+	export const load = LoadPage('karriere');
 	export const prerender = true;
 </script>
 
 <script lang="ts">
-	export let data = {};
+	export let data: LoadPageData = { page: null };
 </script>
 
 <svelte:head>

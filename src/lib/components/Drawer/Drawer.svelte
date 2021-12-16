@@ -1,6 +1,7 @@
 <script lang="ts">
-	export let menuLabel;
-	export let openMenu;
+	export let menuLabel: string;
+	export let openMenu: string | null;
+	export let toggleMenu: (menuLabel: string) => void;
 </script>
 
 <aside
