@@ -47,7 +47,14 @@
 				<br /><br />
 				Telefon: 02224 . 96 00 00<br />
 				Telefax: 02224 . 960 00 96<br />
-				E-Mail: info@rhenania.biz
+				E-Mail:
+
+				<a
+					href="mailto:info@rhenania.biz"
+					alt="Eine E-Mail mit Ihrem Standard Mailprogramm schreiben"
+					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					>info@rhenania.biz</a
+				>
 			</p>
 		</div>
 		<div class="pb-8 hidden xl:block w-full">
@@ -58,35 +65,102 @@
 		<div class="pb-8">
 			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Produkte</p>
 			<p class="text-center sm:text-left tracking-wide">
-				Versandlogistik<br />
-				Versandoptimierung<br />
-				Hardware<br />
+				<a
+					href="{base}/versandlogistik/"
+					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					>Versandlogistik</a
+				><br />
+
+				<a
+					href="{base}/versandoptimierung/"
+					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					>Versandoptimierung</a
+				><br />
+
+				<a
+					href="{base}/hardware/"
+					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					>Hardware</a
+				><br />
 			</p>
 		</div>
 		<div class="pb-8">
 			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Unternehmen</p>
 			<p class="text-center sm:text-left tracking-wide">
-				Kontakt und Anfahrt<br />
-				Karriere<br />
-				Termine<br />
-				Partner<br />
-				Referenzen<br />
+				<a
+					href="{base}/kontakt/"
+					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					>Kontakt und Anfahrt</a
+				><br />
+
+				<a
+					href="{base}/karriere/"
+					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					>Karriere</a
+				><br />
+
+				<a
+					href="{base}/termine/"
+					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					>Termin</a
+				><br />
+
+				<a
+					href="{base}/partner/"
+					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					>Partner</a
+				><br />
+
+				<a
+					href="{base}/referenzen/"
+					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					>Referenzen</a
+				><br />
 			</p>
 		</div>
 		<div class="pb-8">
 			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Service</p>
 			<p class="text-center sm:text-left tracking-wide">
-				Cloudlösungen<br />
-				Online-Support<br />
-				Download<br />
-				FAQ<br />
+				<a
+					href="{base}/cloudloesungen/"
+					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					>Cloudlösungen</a
+				><br />
+				<a
+					href="{base}/onlinesupport/"
+					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					>Online-Support</a
+				><br />
+
+				<a
+					href="{base}/download/"
+					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					>Download</a
+				><br />
+
+				<a
+					href="{base}/faq/"
+					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					>FAQ</a
+				><br />
 			</p>
 		</div>
 		<div class="pb-8">
 			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Kontakt</p>
 			<p class="text-center sm:text-left tracking-wide">
-				Impressum<br />
-				Datenschutz<br />
+				<a
+					href="{base}/impressum/"
+					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					>Impressum</a
+				>
+				<br />
+
+				<a
+					href="{base}/datenschutz/"
+					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					>Datenschutz</a
+				>
+				<br />
 				Copyright 2021<br />
 			</p>
 		</div>
