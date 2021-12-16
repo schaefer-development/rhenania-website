@@ -5,21 +5,19 @@
 	import FaqContainer from '$lib/components/FaqContainer/FaqContainer.svelte';
 	import type { Page } from '$lib/graphql/generated/schema';
 	export let page: Partial<Page>;
+	const mapping = {
+		Divider,
+		CardsContainer,
+		Eyecatcher,
+		FaqContainer
+	};
 </script>
 
 {#if page}
 	<h1>Ich bin die Page componente für /{page.slug}</h1>
 	<div class="relative">
 		{#each page.modules as module (module.id)}
-			{#if module.__typename === 'Divider'}
-				<Divider {module} />
-			{:else if module.__typename === 'CardsContainer'}
-				<CardsContainer {module} />
-			{:else if module.__typename === 'Eyecatcher'}
-				<Eyecatcher {module} />
-			{:else if module.__typename === 'FaqContainer'}
-				<FaqContainer {module} />
-			{/if}
+			<svelte:component this={mapping[module.__typename]} {module} />
 		{/each}
 	</div>
 {/if}
