@@ -1,6 +1,7 @@
 <script context="module" lang="ts">
-	import type { Load } from '@sveltejs/kit';
 	import Page from '$lib/components/Page/Page.svelte';
+	import HeroStart from '$lib/components/HeroStart/HeroStart.svelte';
+	import type { Load } from '@sveltejs/kit';
 	export const load: Load = async ({ fetch }) => {
 		const res = await fetch('/index.json');
 		if (res.ok) {
@@ -26,5 +27,7 @@
 <script lang="ts">
 	export let data = { page: {} };
 </script>
+
+<HeroStart />
 
 <Page page={data.page} />

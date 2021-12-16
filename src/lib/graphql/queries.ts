@@ -1,7 +1,7 @@
 import { gql } from '$lib/helpers';
-export const START = gql`
-	{
-		page(where: { slug: "start" }) {
+export const PAGE = gql`
+	query ($slug: String!) {
+		page(where: { slug: $slug }) {
 			id
 			slug
 			modules {
