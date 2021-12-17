@@ -1,5 +1,43 @@
 import { gql } from '$lib/helpers';
 export const PAGE = gql`
+	fragment linkFragment on Link {
+		id
+		label
+		module {
+			__typename
+			... on Eyecatcher {
+				id
+				page {
+					slug
+				}
+			}
+			... on CardsContainer {
+				id
+				page {
+					slug
+				}
+			}
+			... on Text {
+				id
+				page {
+					slug
+				}
+			}
+			... on ArticleHeroTeaser {
+				id
+				page {
+					slug
+				}
+			}
+			... on FaqContainer {
+				id
+				page {
+					slug
+				}
+			}
+		}
+	}
+
 	query ($slug: String!) {
 		page(where: { slug: $slug }) {
 			id
@@ -63,41 +101,28 @@ export const PAGE = gql`
 								url
 							}
 							link {
-								id
-								label
-								module {
-									__typename
-									... on Eyecatcher {
-										id
-										page {
-											slug
-										}
-									}
-									... on CardsContainer {
-										id
-										page {
-											slug
-										}
-									}
-									... on Text {
-										id
-										page {
-											slug
-										}
-									}
-									... on ArticleHeroTeaser {
-										id
-										page {
-											slug
-										}
-									}
-									... on FaqContainer {
-										id
-										page {
-											slug
-										}
-									}
+								...linkFragment
+							}
+						}
+						... on CardIcon {
+							id
+							backgroundColor {
+								hex
+								rgba {
+									r
+									g
+									b
+									a
 								}
+							}
+							icon {
+								id
+								url
+							}
+							headline
+							subheadline
+							link {
+								...linkFragment
 							}
 						}
 					}

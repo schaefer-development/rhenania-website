@@ -7,10 +7,6 @@
 	export const prerender = true;
 </script>
 
-<svelte:head>
-	<title>Kontakt</title>
-</svelte:head>
-
 <section>
 	<Map {mapAttributes} />
 

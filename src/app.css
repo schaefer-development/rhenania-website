@@ -25,6 +25,11 @@ body {
 	@apply font-bold text-xs lg:text-sm uppercase tracking-wider;
 }
 
+.rc_break_hyphens {
+	-moz-hyphens: auto;
+	hyphens: auto;
+}
+
 .rc_desktopmenu_subpoint {
 	@apply block py-2 text-rc_skyblue uppercase tracking-wider border-b border-rc_darkblue text-sm font-medium hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red;
 }
