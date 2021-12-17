@@ -67,7 +67,7 @@ body {
 .rc_hr {
 	background-image: url(/hr.svg);
 	background-repeat: repeat-y;
-	height: 8px;
+	height: 4px;
 	margin-top: -4px;
 }
 
