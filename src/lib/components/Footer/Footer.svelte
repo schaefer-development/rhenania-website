@@ -88,31 +88,31 @@
 			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Unternehmen</p>
 			<p class="text-center sm:text-left tracking-wide">
 				<a
-					href="{base}/kontakt/"
+					href="{base}/unternehmen/kontakt/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Kontakt und Anfahrt</a
 				><br />
 
 				<a
-					href="{base}/karriere/"
+					href="{base}/unternehmen/karriere/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Karriere</a
 				><br />
 
 				<a
-					href="{base}/termine/"
+					href="{base}/unternehmen/termine/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-					>Termin</a
+					>Termine</a
 				><br />
 
 				<a
-					href="{base}/partner/"
+					href="{base}/unternehmen/partner/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Partner</a
 				><br />
 
 				<a
-					href="{base}/referenzen/"
+					href="{base}/unternehmen/referenzen/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Referenzen</a
 				><br />

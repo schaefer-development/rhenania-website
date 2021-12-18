@@ -2,12 +2,13 @@
 	import Page from '$lib/components/Page/Page.svelte';
 	import HeroStart from '$lib/components/HeroStart/HeroStart.svelte';
 	import { LoadPage } from '$lib/helpers';
+	import type { LoadPageData } from '$lib/helpers';
 	export const load = LoadPage('start');
 	export const prerender = true;
 </script>
 
 <script lang="ts">
-	export let data = { page: {} };
+	export let data: LoadPageData = { page: null };
 </script>
 
 <HeroStart />

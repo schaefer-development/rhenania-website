@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import type { ArticleHeroTeaser } from '$lib/graphql/generated/schema';
 	export let module: Partial<ArticleHeroTeaser> = {};
 </script>
