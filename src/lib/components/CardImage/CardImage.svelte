@@ -8,7 +8,7 @@
 	<div class="cardImage h-48 bg-cover bg-center" style="background-image: url({card.image.url})" />
 	<div class="px-6 py-6 flex flex-col text-center">
 		<div class="rc_h4 text-rc_darkblue rc_break_hyphens mb-2">{card.headline}</div>
-		<a
+		<!--<a
 			href="{base}/{card.link.module.page.slug}#{card.link.module.id}"
 			class="flex flex-row items-center mx-auto text-rc_red"
 		>
@@ -27,6 +27,6 @@
 					d="M17 8l4 4m0 0l-4 4m4-4H3"
 				/>
 			</svg>
-		</a>
+		</a>-->
 	</div>
 </div>
