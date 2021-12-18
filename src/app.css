@@ -83,3 +83,9 @@ body {
 .rc_menu_hidden {
 	margin-top: calc(-100vh - 5rem);
 }
+
+blockquote {
+	padding: 0.5em 1em;
+	margin: 1em 0;
+	border-left: 2px solid #7a7a7a;
+}

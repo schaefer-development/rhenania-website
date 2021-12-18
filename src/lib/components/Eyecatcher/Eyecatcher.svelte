@@ -21,6 +21,10 @@
 				<h1 class="text-white rc_h1">{module.headline}</h1>
 				<h2 class="text-rc_skyblue rc_h3 pb-4">{module.subheadline}</h2>
 				<hr class="border-b-1 border-rc_darkblue-darkest" />
+				<button
+					class="relative mt-8 pl-5 pr-3 py-2 bg-rc_red text-white text-sm font-bold uppercase tracking-widest hover:bg-rc_red-darker rc_button_corner"
+					>mehr erfahren</button
+				>
 			</div>
 		</div>
 	</div>

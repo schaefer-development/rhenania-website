@@ -73,9 +73,27 @@ export const PAGE = gql`
 						id
 						url
 					}
+					strokeColor {
+						hex
+						rgba {
+							r
+							g
+							b
+							a
+						}
+					}
 					icon {
 						id
 						url
+					}
+				}
+				... on Text {
+					id
+					heading1
+					heading2
+					heading3
+					text {
+						html
 					}
 				}
 				... on ArticleHeroTeaser {
