@@ -10,9 +10,9 @@
 	on:click={toggleMenuFull}
 	class="{openMenuFull
 		? 'rc_menu_visible'
-		: 'rc_menu_hidden'} visible md:hidden rc_menu min-h-screen left-0 top-20 w-full shadow-md fixed overflow-auto ease-in-out transform transition-all duration-300 z-40"
+		: 'rc_menu_hidden'} absolute visible md:hidden rc_menu left-0 top-20 w-full shadow-md overflow-auto ease-in-out transform transition-all duration-300 z-40"
 >
-	<div class="flex flex-row w-full max-w-screen-2xl mx-auto ">
+	<div class="relative flex flex-row w-full max-w-screen-2xl mx-auto">
 		<div
 			class="w-full px-4 md:px-10 py-10 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-10 text-white "
 		>

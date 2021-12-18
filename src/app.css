@@ -81,7 +81,7 @@ body {
 }
 
 .rc_menu_hidden {
-	margin-top: calc(-100vh - 5rem);
+	margin-top: -333vh;
 }
 
 blockquote {
