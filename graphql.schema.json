@@ -33609,6 +33609,18 @@
 						"deprecationReason": null
 					},
 					{
+						"name": "strokeColor",
+						"description": null,
+						"args": [],
+						"type": {
+							"kind": "OBJECT",
+							"name": "Color",
+							"ofType": null
+						},
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
 						"name": "updatedAt",
 						"description": "The time the document was updated",
 						"args": [],
@@ -33823,6 +33835,18 @@
 						"type": {
 							"kind": "INPUT_OBJECT",
 							"name": "PageCreateOneInlineInput",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "strokeColor",
+						"description": null,
+						"type": {
+							"kind": "INPUT_OBJECT",
+							"name": "ColorInput",
 							"ofType": null
 						},
 						"defaultValue": null,
@@ -34738,6 +34762,18 @@
 						"defaultValue": null,
 						"isDeprecated": false,
 						"deprecationReason": null
+					},
+					{
+						"name": "strokeColor",
+						"description": null,
+						"type": {
+							"kind": "INPUT_OBJECT",
+							"name": "ColorInput",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
 					}
 				],
 				"interfaces": null,
@@ -34902,11 +34938,11 @@
 				"fields": null,
 				"inputFields": [
 					{
-						"name": "_",
-						"description": "No fields in updateMany data input",
+						"name": "strokeColor",
+						"description": null,
 						"type": {
-							"kind": "SCALAR",
-							"name": "String",
+							"kind": "INPUT_OBJECT",
+							"name": "ColorInput",
 							"ofType": null
 						},
 						"defaultValue": null,

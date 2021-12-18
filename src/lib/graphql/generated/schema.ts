@@ -4555,6 +4555,7 @@ export type HeroImage = Node & {
 	scheduledIn: Array<ScheduledOperation>;
 	/** System stage field */
 	stage: Stage;
+	strokeColor?: Maybe<Color>;
 	/** The time the document was updated */
 	updatedAt: Scalars['DateTime'];
 	/** User that last updated this document */
@@ -4629,6 +4630,7 @@ export type HeroImageCreateInput = {
 	icon?: InputMaybe<AssetCreateOneInlineInput>;
 	image?: InputMaybe<AssetCreateOneInlineInput>;
 	page?: InputMaybe<PageCreateOneInlineInput>;
+	strokeColor?: InputMaybe<ColorInput>;
 	updatedAt?: InputMaybe<Scalars['DateTime']>;
 };
 
@@ -4755,6 +4757,7 @@ export type HeroImageUpdateInput = {
 	icon?: InputMaybe<AssetUpdateOneInlineInput>;
 	image?: InputMaybe<AssetUpdateOneInlineInput>;
 	page?: InputMaybe<PageUpdateOneInlineInput>;
+	strokeColor?: InputMaybe<ColorInput>;
 };
 
 export type HeroImageUpdateManyInlineInput = {
@@ -4775,8 +4778,7 @@ export type HeroImageUpdateManyInlineInput = {
 };
 
 export type HeroImageUpdateManyInput = {
-	/** No fields in updateMany data input */
-	_?: InputMaybe<Scalars['String']>;
+	strokeColor?: InputMaybe<ColorInput>;
 };
 
 export type HeroImageUpdateManyWithNestedWhereInput = {
@@ -10689,6 +10691,40 @@ export enum _SystemDateTimeFieldVariation {
 	Localization = 'localization'
 }
 
+export type LinkFragmentFragment = {
+	__typename?: 'Link';
+	id: string;
+	label?: string | null | undefined;
+	module?:
+		| {
+				__typename: 'ArticleHeroTeaser';
+				id: string;
+				page?: { __typename?: 'Page'; slug: string } | null | undefined;
+		  }
+		| {
+				__typename: 'CardsContainer';
+				id: string;
+				page?: { __typename?: 'Page'; slug: string } | null | undefined;
+		  }
+		| {
+				__typename: 'Eyecatcher';
+				id: string;
+				page?: { __typename?: 'Page'; slug: string } | null | undefined;
+		  }
+		| {
+				__typename: 'FaqContainer';
+				id: string;
+				page?: { __typename?: 'Page'; slug: string } | null | undefined;
+		  }
+		| {
+				__typename: 'Text';
+				id: string;
+				page?: { __typename?: 'Page'; slug: string } | null | undefined;
+		  }
+		| null
+		| undefined;
+};
+
 export type Unnamed_1_QueryVariables = Exact<{
 	slug: Scalars['String'];
 }>;
@@ -10717,7 +10753,57 @@ export type Unnamed_1_Query = {
 							id: string;
 							headline?: string | null | undefined;
 							cards: Array<
-								| { __typename: 'CardIcon' }
+								| {
+										__typename: 'CardIcon';
+										id: string;
+										headline?: string | null | undefined;
+										subheadline?: string | null | undefined;
+										backgroundColor?:
+											| {
+													__typename?: 'Color';
+													hex: any;
+													rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
+											  }
+											| null
+											| undefined;
+										icon?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
+										link?:
+											| {
+													__typename?: 'Link';
+													id: string;
+													label?: string | null | undefined;
+													module?:
+														| {
+																__typename: 'ArticleHeroTeaser';
+																id: string;
+																page?: { __typename?: 'Page'; slug: string } | null | undefined;
+														  }
+														| {
+																__typename: 'CardsContainer';
+																id: string;
+																page?: { __typename?: 'Page'; slug: string } | null | undefined;
+														  }
+														| {
+																__typename: 'Eyecatcher';
+																id: string;
+																page?: { __typename?: 'Page'; slug: string } | null | undefined;
+														  }
+														| {
+																__typename: 'FaqContainer';
+																id: string;
+																page?: { __typename?: 'Page'; slug: string } | null | undefined;
+														  }
+														| {
+																__typename: 'Text';
+																id: string;
+																page?: { __typename?: 'Page'; slug: string } | null | undefined;
+														  }
+														| null
+														| undefined;
+											  }
+											| null
+											| undefined;
+								  }
 								| {
 										__typename: 'CardImage';
 										id: string;
@@ -10784,9 +10870,24 @@ export type Unnamed_1_Query = {
 							__typename: 'HeroImage';
 							id: string;
 							image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
+							strokeColor?:
+								| {
+										__typename?: 'Color';
+										hex: any;
+										rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
+								  }
+								| null
+								| undefined;
 							icon?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
 					  }
-					| { __typename: 'Text' }
+					| {
+							__typename: 'Text';
+							id: string;
+							heading1?: string | null | undefined;
+							heading2?: string | null | undefined;
+							heading3?: string | null | undefined;
+							text?: { __typename?: 'RichText'; html: string } | null | undefined;
+					  }
 				>;
 		  }
 		| null
