@@ -3,7 +3,9 @@
 	export let module: Partial<Eyecatcher> = {};
 </script>
 
-<div class="relative bg-rc_darkblue pt-10 pt-{module.paddingTop} pb-10 pb-{module.paddingBottom}">
+<div
+	class="relative bg-rc_darkblue overflow-hidden pt-10 pt-{module.paddingTop} pb-10 pb-{module.paddingBottom}"
+>
 	<div class="absolute rc_background_triangle w-full h-full -mt-12" />
 	<div class="relative z-10 max-w-screen-lg mx-auto grid grid-cols-1 md:grid-cols-5 gap-x-8 px-10 ">
 		<div class="col-span-full md:col-span-1 flex items-center">
