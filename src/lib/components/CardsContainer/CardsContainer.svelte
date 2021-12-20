@@ -9,7 +9,9 @@
 	};
 </script>
 
-<div class="max-w-screen-2xl mx-auto px-10 pt-{module.paddingTop} pb-{module.paddingBottom}">
+<div
+	class="max-w-screen-2xl mx-auto px-10 pt-10 pt-{module.paddingTop} pb-10 pb-{module.paddingBottom}"
+>
 	<h1 class="rc_h1 text-rc_darkblue text-center pb-8">{module.headline}</h1>
 	<div class="cardsContainer grid grid-cols-2 lg:grid-cols-4 gap-4">
 		{#each module.cards as card (card.id)}
