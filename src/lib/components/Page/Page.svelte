@@ -5,6 +5,7 @@
 	import FaqContainer from '$lib/components/FaqContainer/FaqContainer.svelte';
 	import ArticleHeroTeaser from '$lib/components/ArticleHeroTeaser/ArticleHeroTeaser.svelte';
 	import HeroImage from '$lib/components/HeroImage/HeroImage.svelte';
+	import FullWidthImage from '$lib/components/FullWidthImage/FullWidthImage.svelte';
 	import Text from '$lib/components/Text/Text.svelte';
 	import type { Page } from '$lib/graphql/generated/schema';
 	export let page: Partial<Page>;
@@ -15,6 +16,7 @@
 		FaqContainer,
 		ArticleHeroTeaser,
 		Text,
+		FullWidthImage,
 		HeroImage
 	};
 </script>

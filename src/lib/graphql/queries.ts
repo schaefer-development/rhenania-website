@@ -67,6 +67,13 @@ export const PAGE = gql`
 						}
 					}
 				}
+				... on FullWidthImage {
+					id
+					image {
+						id
+						url
+					}
+				}
 				... on HeroImage {
 					id
 					image {
