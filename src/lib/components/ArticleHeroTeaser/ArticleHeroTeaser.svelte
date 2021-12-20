@@ -3,12 +3,12 @@
 	export let module: Partial<ArticleHeroTeaser> = {};
 </script>
 
-<div class=" w-full overflow-hidden h-50v">
+<div class="relative w-full overflow-hidden h-auto">
 	<div
-		class="bg_layer absolute w-full h-50v bg-cover bg-center "
+		class="bg_layer absolute w-full h-full bg-cover bg-center "
 		style="background-image: url({module.heroBackgroundImage.url})"
 	/>
-	<div class="relative z-2 h-full flex items-center max-w-screen-md mx-auto px-10">
+	<div class="relative z-2 h-full flex items-center max-w-screen-md mx-auto px-10 py-10 lg:py-24">
 		<div class="blogteaserbg px-10 py-10">
 			<h2 class="rc_h1 text-rc_skyblue">{module.headline}</h2>
 			<h3 class="text-white text-lg font-medium">{module.subheadline}</h3>
