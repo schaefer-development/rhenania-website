@@ -122,24 +122,24 @@
 			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Service</p>
 			<p class="text-center sm:text-left tracking-wide">
 				<a
-					href="{base}/"
+					href="{base}/service/cloudloesung/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-					>Cloudlösungen</a
+					>Cloudlösung</a
 				><br />
 				<a
-					href="{base}/"
+					href="{base}/service/onlinesupport/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Online-Support</a
 				><br />
 
 				<a
-					href="{base}/"
+					href="{base}/service/download/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Download</a
 				><br />
 
 				<a
-					href="{base}/faq/"
+					href="{base}/service/faq/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>FAQ</a
 				><br />
