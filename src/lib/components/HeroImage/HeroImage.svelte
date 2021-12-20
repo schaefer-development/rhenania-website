@@ -8,6 +8,12 @@
 		class="absolute w-full h-30v bg-cover bg-center "
 		style="background-image: url({module.image.url}"
 	/>
+
+		<div
+			class="absolute w-full h-30v bg-cover bg-center opacity-50 "
+			style="background-color:{module.strokeColor.hex};"
+		/>
+
 	<div class="absolute -bottom-3 w-full h-4" style="background-color:{module.strokeColor.hex}" />
 	<div class="absolute -bottom-20 w-full h-36">
 		<div class="max-w-screen-lg mx-auto h-full px-10">

@@ -45,8 +45,8 @@
 				Aegidiusplatz 15 b<br />
 				53604 Bad Honnef
 				<br /><br />
-				Telefon: 02224 . 96 00 00<br />
-				Telefax: 02224 . 960 00 96<br />
+				Telefon: 02224 - 96 00 00<br />
+				Telefax: 02224 - 960 00 96<br />
 				E-Mail:
 
 				<a
@@ -66,13 +66,13 @@
 			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Produkte</p>
 			<p class="text-center sm:text-left tracking-wide">
 				<a
-					href="{base}/"
+					href="{base}/#Versandlogistik/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Versandlogistik</a
 				><br />
 
 				<a
-					href="{base}/"
+					href="{base}/#Versandoptimierung/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Versandoptimierung</a
 				><br />
