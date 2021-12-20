@@ -46,12 +46,15 @@ export const PAGE = gql`
 				__typename
 				... on Divider {
 					id
-					padding
+					paddingTop
+					paddingBottom
 				}
 				... on Eyecatcher {
 					id
 					headline
 					subheadline
+					paddingTop
+					paddingBottom
 					image {
 						id
 						url
@@ -59,6 +62,8 @@ export const PAGE = gql`
 				}
 				... on FaqContainer {
 					id
+					paddingTop
+					paddingBottom
 					faqItems {
 						id
 						question
@@ -69,6 +74,8 @@ export const PAGE = gql`
 				}
 				... on FullWidthImage {
 					id
+					paddingTop
+					paddingBottom
 					image {
 						id
 						url
@@ -99,6 +106,8 @@ export const PAGE = gql`
 					heading1
 					heading2
 					heading3
+					paddingTop
+					paddingBottom
 					text {
 						html
 					}
@@ -116,6 +125,8 @@ export const PAGE = gql`
 				... on CardsContainer {
 					id
 					headline
+					paddingTop
+					paddingBottom
 					cards {
 						__typename
 						... on CardImage {

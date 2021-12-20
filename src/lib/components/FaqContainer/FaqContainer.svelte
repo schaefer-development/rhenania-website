@@ -4,7 +4,10 @@
 	export let module: Partial<FaqContainer> = {};
 </script>
 
-<div id={module.id} class="relative bg-white my-10 py-12 shadow-md">
+<div
+	id={module.id}
+	class="relative bg-white py-12 shadow-md mt-{module.paddingTop} mb-{module.paddingBottom}"
+>
 	<div class="relative z-10 max-w-screen-md mx-auto px-10 ">
 		<h1 class="rc_h1 text-rc_darkblue-darkest pb-8">FAQ - Häufig gestellte Fragen</h1>
 		{#each module.faqItems as faqItem (faqItem.id)}
