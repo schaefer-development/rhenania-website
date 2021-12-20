@@ -64,13 +64,6 @@ body {
 	background-position: 0 50%;
 }
 
-.rc_hr {
-	background-image: url(/hr.svg);
-	background-repeat: repeat-y;
-	height: 4px;
-	margin-top: -4px;
-}
-
 .rc_menu {
 	height: auto;
 	background-color: rgba(21, 37, 79, 0.99);
