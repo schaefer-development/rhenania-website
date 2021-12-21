@@ -12,6 +12,8 @@
 	</div>
 	<div class="px-6 py-6 flex flex-col text-center rc_break_hyphens">
 		<div class="rc_h4 text-rc_darkblue mb-2">{card.headline}</div>
-		<div class="mb-2">{card.subheadline}</div>
+		{#if card.subheadline}	
+			<div class="mb-2">{card.subheadline}</div>
+		{/if}
 	</div>
 </div>
