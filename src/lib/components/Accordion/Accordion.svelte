@@ -2,7 +2,7 @@
 	export let id;
 </script>
 
-<div class="tab w-full overflow-hidden pb-4">
+<div class="mod_accordion tab w-full overflow-hidden pb-4">
 	<input class="absolute opacity-0 " {id} type="checkbox" name="tabs" />
 	<label class="cursor-pointer flex border-b-2 py-2" for={id}>
 		<div class="w-full font-medium"><slot name="headline" /></div>

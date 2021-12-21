@@ -3,7 +3,7 @@
 	export let card: Partial<CardImage> = {};
 </script>
 
-<div class="overflow-hidden bg-white shadow-md">
+<div class="mod_cardimage overflow-hidden bg-white shadow-md">
 	<div class="cardImage h-48 bg-cover bg-center" style="background-image: url({card.image.url})" />
 	<div class="px-6 py-6 flex flex-col text-center">
 		<div class="rc_h4 text-rc_darkblue rc_break_hyphens mb-2">{card.headline}</div>

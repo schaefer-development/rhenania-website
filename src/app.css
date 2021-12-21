@@ -77,6 +77,10 @@ body {
 	margin-top: -333vh;
 }
 
+.rc_blur {
+	filter: blur(0.25em);
+}
+
 blockquote {
 	padding: 0.5em 1em;
 	margin: 1em 0;

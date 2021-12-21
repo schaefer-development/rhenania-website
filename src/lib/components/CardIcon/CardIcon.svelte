@@ -3,7 +3,7 @@
 	export let card: Partial<CardIcon> = {};
 </script>
 
-<div class="overflow-hidden bg-white shadow-md border">
+<div class="mod_cardicon overflow-hidden bg-white shadow-md">
 	<div
 		class="cardImage h-48 bg-red flex items-center justify-center"
 		style="background-color:{card.backgroundColor.hex}"
@@ -12,7 +12,7 @@
 	</div>
 	<div class="px-6 py-6 flex flex-col text-center rc_break_hyphens">
 		<div class="rc_h4 text-rc_darkblue mb-2">{card.headline}</div>
-		{#if card.subheadline}	
+		{#if card.subheadline}
 			<div class="mb-2">{card.subheadline}</div>
 		{/if}
 	</div>

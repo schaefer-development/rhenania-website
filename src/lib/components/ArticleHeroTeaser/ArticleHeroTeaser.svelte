@@ -3,7 +3,7 @@
 	export let module: Partial<ArticleHeroTeaser> = {};
 </script>
 
-<div class="relative w-full overflow-hidden h-auto">
+<div class="mod_articleheroteaser relative w-full overflow-hidden h-auto">
 	<div
 		class="bg_layer absolute w-full h-full bg-cover bg-center "
 		style="background-image: url({module.heroBackgroundImage.url})"
