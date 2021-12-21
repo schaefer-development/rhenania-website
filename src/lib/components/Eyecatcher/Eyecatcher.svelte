@@ -4,7 +4,8 @@
 </script>
 
 <div
-	class="mod_eyecatcher relative bg-rc_darkblue overflow-hidden pt-10 pt-{module.paddingTop} pb-10 pb-{module.paddingBottom}"
+	class="mod_eyecatcher relative bg-rc_darkblue overflow-hidden pt-{module.paddingTop ||
+		'10'} pb-{module.paddingBottom || '10'}"
 >
 	<div class="absolute rc_background_triangle w-full h-full -mt-12" />
 	<div class="relative z-10 max-w-screen-lg mx-auto grid grid-cols-1 md:grid-cols-5 gap-x-8 px-10 ">

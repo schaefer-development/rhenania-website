@@ -4,7 +4,8 @@
 </script>
 
 <div
-	class="mod_fullwidthimage relative bg-white shadow-md pt-10 pt-{module.paddingTop} pb-10 pb-{module.paddingBottom}"
+	class="mod_fullwidthimage relative bg-white shadow-md pt-{module.paddingTop ||
+		'10'} pb-{module.paddingBottom || '10'}"
 >
 	<div class="relative z-10 max-w-screen-lg mx-auto  px-10 ">
 		<img src={module.image.url} alt="Rhenania" />

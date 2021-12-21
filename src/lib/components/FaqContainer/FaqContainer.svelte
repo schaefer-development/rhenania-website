@@ -6,7 +6,8 @@
 
 <div
 	id={module.id}
-	class="mod_faqcontainer relative bg-white py-12 shadow-md mt-10 mt-{module.paddingTop} mb-10 mb-{module.paddingBottom}"
+	class="mod_faqcontainer relative bg-white py-12 shadow-md mt-{module.paddingTop ||
+		'10'} mb-{module.paddingBottom || '10'}"
 >
 	<div class="relative z-10 max-w-screen-md mx-auto px-10 ">
 		<h1 class="rc_h1 text-rc_darkblue-darkest pb-8">{module.headline}</h1>
