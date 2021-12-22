@@ -30,6 +30,7 @@ export const LoadPage: (slug: string) => Load =
 	};
 
 const mapping = {
+	None: '',
 	Small: 'rc_padding_small',
 	Medium: 'rc_padding_medium',
 	Large: 'rc_padding_large'

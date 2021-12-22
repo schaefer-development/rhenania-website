@@ -3,6 +3,7 @@
 	export let module: Partial<Image> = {};
 </script>
 
+
 <div class="relative w-full {mapPadding(module.paddingTop)}" />
 <div class="mod_fullwidthimage relative">
 	{#if module.imageWidth == 'FullWidth'}
