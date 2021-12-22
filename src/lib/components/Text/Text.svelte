@@ -1,8 +1,10 @@
 <script lang="ts">
+	import { mapPadding } from '$lib/helpers';
 	import type { Text } from '$lib/graphql/generated/schema';
 	export let module: Partial<Text> = {};
 </script>
 
+<div class="relative w-full {mapPadding(module.paddingTop)}" />
 <div
 	class="mod_text relative z-10 max-w-screen-md mx-auto px-10 pt-{module.paddingTop ||
 		'10'} pb-{module.paddingBottom || '10'}"
@@ -22,7 +24,4 @@
 		</div>
 	{/if}
 </div>
-
-<style>
-	/* */
-</style>
+<div class="relative w-full {mapPadding(module.paddingBottom)}" />

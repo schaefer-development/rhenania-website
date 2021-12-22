@@ -81,6 +81,18 @@ body {
 	filter: blur(0.25em);
 }
 
+.rc_padding_small {
+	height: 2vw;
+}
+
+.rc_padding_medium {
+	height: 5vw;
+}
+
+.rc_padding_large {
+	height: 10vw;
+}
+
 blockquote {
 	padding: 0.5em 1em;
 	margin: 1em 0;

@@ -28,3 +28,10 @@ export const LoadPage: (slug: string) => Load =
 			error: new Error(error.message)
 		};
 	};
+
+const mapping = {
+	Small: 'rc_padding_small',
+	Medium: 'rc_padding_medium',
+	Large: 'rc_padding_large'
+};
+export const mapPadding = (padding: string) => mapping[padding];

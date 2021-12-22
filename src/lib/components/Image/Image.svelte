@@ -1,11 +1,10 @@
 <script lang="ts">
+	import { mapPadding } from '$lib/helpers';
 	export let module: Partial<Image> = {};
 </script>
 
-<div
-	class="mod_fullwidthimage relative pt-{module.paddingTop || '10'} pb-{module.paddingBottom ||
-		'10'}"
->
+<div class="relative w-full {mapPadding(module.paddingTop)}" />
+<div class="mod_fullwidthimage relative">
 	{#if module.imageWidth == 'FullWidth'}
 		<div
 			class="w-full h-30v bg-cover bg-center "
@@ -19,3 +18,4 @@
 		</div>
 	{/if}
 </div>
+<div class="relative w-full {mapPadding(module.paddingBottom)}" />
