@@ -1,9 +1,16 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import Logo from '$lib/components/Logo/Logo.svelte';
-</script>
+
+  </script>
+
+
+
+
 
 <footer class="text-white bg-rc_darkblue-darkest">
+
+
 	<div class="bg-rc_darkblue">
 		<div
 			class="grid grid-cols-3 sm:grid-cols-5 gap-4 mx-auto max-w-screen-2xl px-10 text-xs text-rc_darkblue-darkest flex items-center"
