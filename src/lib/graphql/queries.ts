@@ -41,12 +41,6 @@ export const PAGE = gql`
 					slug
 				}
 			}
-			... on FullWidthImage {
-				id
-				page {
-					slug
-				}
-			}
 			... on Image {
 				id
 				page {
@@ -90,17 +84,10 @@ export const PAGE = gql`
 						}
 					}
 				}
-				... on FullWidthImage {
+				... on Image {
 					id
 					paddingTop
 					paddingBottom
-					image {
-						id
-						url
-					}
-				}
-				... on Image {
-					id
 				}
 				... on HeroImage {
 					id
