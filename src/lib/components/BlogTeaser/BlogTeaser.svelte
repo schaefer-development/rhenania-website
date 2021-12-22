@@ -2,7 +2,7 @@
 	import { base } from '$app/paths';
 </script>
 
-<div class="mod_blogteaser w-full overflow-hidden h-50v">
+<div class="mod_blogTeaser w-full overflow-hidden h-50v">
 	<div
 		class="bg_layer absolute w-full h-50v bg-cover bg-center "
 		style="background-image: url({base}/hero_example2.jpg)"

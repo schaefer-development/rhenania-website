@@ -4,9 +4,16 @@
 	export let card: Partial<CardImage> = {};
 </script>
 
-<div class="mod_cardimage overflow-hidden bg-white shadow-md">
-	<div class="cardImage h-48 bg-cover bg-center" style="background-image: url({card.image.url})" />
-	<div class="px-6 py-6 flex flex-col text-center">
+<div
+	class="mod_cardImage overflow-hidden bg-white shadow-md hover:shadow-lg duration-150 ease-in-out"
+>
+	<div class="cardImageWrapper h-48 overflow-hidden">
+		<div
+			class="cardImage h-full bg-cover bg-center"
+			style="background-image: url({card.image.url})"
+		/>
+	</div>
+	<div class="text px-6 py-6 flex flex-col text-center">
 		<div class="rc_h4 text-rc_darkblue rc_break_hyphens mb-2">{card.headline}</div>
 
 		{#if card.link}
@@ -33,3 +40,17 @@
 		{/if}
 	</div>
 </div>
+
+<style>
+	.mod_cardImage .cardImageWrapper .cardImage {
+		transform: scale(1);
+		transition: all;
+		transition-duration: 0.5s;
+	}
+	.mod_cardImage:hover .cardImageWrapper .cardImage {
+		transform: scale(1.2);
+	}
+
+	.mod_cardImage .text {
+	}
+</style>

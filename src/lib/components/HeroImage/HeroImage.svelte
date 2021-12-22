@@ -3,7 +3,7 @@
 	export let module: Partial<HeroImage> = {};
 </script>
 
-<div class="mod_heroimage relative w-full h-30v mb-24">
+<div class="mod_heroImage relative w-full h-30v mb-24">
 	<div
 		class="absolute w-full h-30v bg-cover bg-center rc_blur"
 		style="background-image: url({module.image.url}"
