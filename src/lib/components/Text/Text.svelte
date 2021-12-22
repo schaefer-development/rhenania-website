@@ -4,7 +4,8 @@
 </script>
 
 <div
-	class="mod_text relative z-10 max-w-screen-md mx-auto px-10 pt-{module.paddingTop || '10'} pb-{module.paddingBottom || '10'}"
+	class="mod_text relative z-10 max-w-screen-md mx-auto px-10 pt-{module.paddingTop ||
+		'10'} pb-{module.paddingBottom || '10'}"
 >
 	{#if module.heading1}
 		<h1 class="rc_h1 text-rc_darkblue">{module.heading1}</h1>

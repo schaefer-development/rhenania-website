@@ -46,13 +46,12 @@
 				<DrawerAccordion id="versandlogistiksystem_drawer_full">
 					<span slot="headline">Versandlogistiksystem</span>
 					<div slot="content">
-						<a href="{base}/produkte/f95/" class="rc_desktopmenu_subpoint"
-							>F95 - Paket und Palettenversand</a
+						<a href="{base}/f95/" class="rc_desktopmenu_subpoint">F95 - Paket und Palettenversand</a
 						>
-						<a href="{base}/produkte/k04" class="rc_desktopmenu_subpoint"
+						<a href="{base}/k04" class="rc_desktopmenu_subpoint"
 							>K04 - Kommissionieren, Kontrollieren, Packen</a
 						>
-						<a href="{base}/produkte/vka" class="rc_desktopmenu_subpoint"
+						<a href="{base}/vka" class="rc_desktopmenu_subpoint"
 							>VKA - Versandkostenkontrolle und Abrechnung</a
 						>
 					</div>
@@ -60,29 +59,20 @@
 				<DrawerAccordion id="versandoptimierung_drawer_full">
 					<span slot="headline">Versandoptimierung</span>
 					<div slot="content">
-						<a href="{base}/produkte/u12/" class="rc_desktopmenu_subpoint"
-							>U12 - Umsatzbefreiung sichern</a
-						>
-						<a href="{base}/produkte/duv/" class="rc_desktopmenu_subpoint"
-							>DUV - Dubletten vermeiden</a
-						>
-						<a href="{base}/produkte/apk/" class="rc_desktopmenu_subpoint"
+						<a href="{base}/u12/" class="rc_desktopmenu_subpoint">U12 - Umsatzbefreiung sichern</a>
+						<a href="{base}/duv/" class="rc_desktopmenu_subpoint">DUV - Dubletten vermeiden</a>
+						<a href="{base}/apk/" class="rc_desktopmenu_subpoint"
 							>APK - Adressprüfung und Korrektur</a
 						>
-						<a href="{base}/produkte/g10/" class="rc_desktopmenu_subpoint">G10 - Gefahrgutversand</a
-						>
+						<a href="{base}/g10/" class="rc_desktopmenu_subpoint">G10 - Gefahrgutversand</a>
 					</div>
 				</DrawerAccordion>
 				<DrawerAccordion id="hardware_drawer_full">
 					<span slot="headline">Hardware</span>
 					<div slot="content">
-						<a href="{base}/produkte/etikettendrucker/" class="rc_desktopmenu_subpoint"
-							>Etikettendrucker</a
-						>
-						<a href="{base}/produkte/waagen/" class="rc_desktopmenu_subpoint">Waagen</a>
-						<a href="{base}/produkte/barcodescanner/" class="rc_desktopmenu_subpoint"
-							>Barcodescanner</a
-						>
+						<a href="{base}/etikettendrucker/" class="rc_desktopmenu_subpoint">Etikettendrucker</a>
+						<a href="{base}/waagen/" class="rc_desktopmenu_subpoint">Waagen</a>
+						<a href="{base}/barcodescanner/" class="rc_desktopmenu_subpoint">Barcodescanner</a>
 					</div>
 				</DrawerAccordion>
 
@@ -93,27 +83,27 @@
 				<p class="rc_h1 text-rc_skyblue">Unternehmen</p>
 
 				<a
-					href="{base}/unternehmen/kontakt/"
+					href="{base}/kontakt/"
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Kontakt und Anfahrt</a
 				>
 				<a
-					href="{base}/unternehmen/karriere/"
+					href="{base}/karriere/"
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Karriere</a
 				>
 				<a
-					href="{base}/unternehmen/termine/"
+					href="{base}/termine/"
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Termine</a
 				>
 				<a
-					href="{base}/unternehmen/partner/"
+					href="{base}/partner/"
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Partner</a
 				>
 				<a
-					href="{base}/unternehmen/referenzen"
+					href="{base}/referenzen"
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Referenzen</a
 				>
@@ -122,22 +112,22 @@
 				<p class="rc_h1 text-rc_skyblue">Service</p>
 
 				<a
-					href="{base}/service/cloudloesung/"
+					href="{base}/cloudloesung/"
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Cloudlösung</a
 				>
 				<a
-					href="{base}/service/onlinesupport"
+					href="{base}/onlinesupport"
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Online-Support</a
 				>
 				<a
-					href="{base}/service/download/"
+					href="{base}/download/"
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Download</a
 				>
 				<a
-					href="{base}/service/faq/"
+					href="{base}/faq/"
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>FAQ</a
 				>

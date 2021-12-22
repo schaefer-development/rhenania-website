@@ -3,7 +3,7 @@ export const PAGE = gql`
 	fragment linkFragment on Link {
 		id
 		label
-		module {
+		target {
 			__typename
 			... on Eyecatcher {
 				id
@@ -35,6 +35,24 @@ export const PAGE = gql`
 					slug
 				}
 			}
+			... on HeroImage {
+				id
+				page {
+					slug
+				}
+			}
+			... on FullWidthImage {
+				id
+				page {
+					slug
+				}
+			}
+			... on Image {
+				id
+				page {
+					slug
+				}
+			}
 		}
 	}
 
@@ -46,8 +64,7 @@ export const PAGE = gql`
 				__typename
 				... on Divider {
 					id
-					paddingTop
-					paddingBottom
+					padding
 				}
 				... on Eyecatcher {
 					id
@@ -81,6 +98,9 @@ export const PAGE = gql`
 						id
 						url
 					}
+				}
+				... on Image {
+					id
 				}
 				... on HeroImage {
 					id

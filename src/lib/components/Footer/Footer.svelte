@@ -1,16 +1,9 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import Logo from '$lib/components/Logo/Logo.svelte';
-
-  </script>
-
-
-
-
+</script>
 
 <footer class="text-white bg-rc_darkblue-darkest">
-
-
 	<div class="bg-rc_darkblue">
 		<div
 			class="grid grid-cols-3 sm:grid-cols-5 gap-4 mx-auto max-w-screen-2xl px-10 text-xs text-rc_darkblue-darkest flex items-center"
@@ -95,31 +88,31 @@
 			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Unternehmen</p>
 			<p class="text-center sm:text-left tracking-wide">
 				<a
-					href="{base}/unternehmen/kontakt/"
+					href="{base}/kontakt/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Kontakt und Anfahrt</a
 				><br />
 
 				<a
-					href="{base}/unternehmen/karriere/"
+					href="{base}/karriere/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Karriere</a
 				><br />
 
 				<a
-					href="{base}/unternehmen/termine/"
+					href="{base}/termine/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Termine</a
 				><br />
 
 				<a
-					href="{base}/unternehmen/partner/"
+					href="{base}/partner/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Partner</a
 				><br />
 
 				<a
-					href="{base}/unternehmen/referenzen/"
+					href="{base}/referenzen/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Referenzen</a
 				><br />
@@ -129,24 +122,24 @@
 			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Service</p>
 			<p class="text-center sm:text-left tracking-wide">
 				<a
-					href="{base}/service/cloudloesung/"
+					href="{base}/cloudloesung/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Cloudlösung</a
 				><br />
 				<a
-					href="{base}/service/onlinesupport/"
+					href="{base}/onlinesupport/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Online-Support</a
 				><br />
 
 				<a
-					href="{base}/service/download/"
+					href="{base}/download/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Download</a
 				><br />
 
 				<a
-					href="{base}/service/faq/"
+					href="{base}/faq/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>FAQ</a
 				><br />
