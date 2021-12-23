@@ -5,10 +5,10 @@
 
 <div class="mod_fullWidthImage">
 	<div class="relative w-full {mapPadding(module.paddingTop)}" />
-	<div class="relative">
+	<div class="relative ">
 		{#if module.imageWidth == 'FullWidth'}
 			<div
-				class="w-full h-30v bg-cover bg-center "
+				class="w-full h-30v bg-cover bg-center"
 				style="background-image: url({module.image.url})"
 			/>
 		{/if}

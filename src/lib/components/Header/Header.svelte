@@ -25,7 +25,7 @@
 		<a sveltekit:prefetch href="{base}/" class="text-rc_darkblue w-28 none"><Logo /></a>
 
 		<div id="search" class="flex-grow flex justify-end">
-			<div class="text-black px-8">
+			<div class="text-black px-10">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					class="h-6 w-6"
@@ -42,37 +42,39 @@
 				</svg>
 			</div>
 
-			<div id="menu" class="hidden md:inline-block">
-				<a href="{base}/start">
+			<div id="menu" class="relative hidden md:inline-block">
+				<a href="{base}/start" class="relative ">
 					<span
 						class="{$page.path === `${base}/start`
-							? 'border-b-4 border-rc_red'
-							: ''} font-medium uppercase py-1 mx-4 text-black hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
+							? 'menupoint_underline'
+							: ''}  relative menupoint font-medium uppercase  text-black hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
 						>Start</span
 					>
 				</a>
 
-				<button on:click={() => toggleMenu('produkte')}>
+				<div class="w-4 inline-block spacer" />
+
+				<button on:click={() => toggleMenu('produkte')} class="relative menupoint mx-4">
 					<span
 						class="{openMenu === 'produkte'
-							? 'border-b-4 border-rc_red'
-							: ''} font-medium uppercase py-1 mx-4 text-black hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
+							? 'menupoint_underline text-rc_red'
+							: ''} font-medium uppercase py-1 hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
 						>Produkte</span
 					>
 				</button>
-				<button on:click={() => toggleMenu('unternehmen')}>
+				<button on:click={() => toggleMenu('unternehmen')} class="relative menupoint mx-4">
 					<span
 						class="{openMenu === 'unternehmen'
-							? 'border-b-4 border-rc_red'
-							: ''} font-medium uppercase py-1 mx-4 text-black hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
+							? 'menupoint_underline text-rc_red'
+							: ''} font-medium uppercase py-1 hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
 						>Unternehmen</span
 					>
 				</button>
-				<button on:click={() => toggleMenu('service')}>
+				<button on:click={() => toggleMenu('service')} class="relative menupoint mx-4">
 					<span
 						class="{openMenu === 'service'
-							? 'border-b-4 border-rc_red'
-							: ''} font-medium uppercase py-1 mx-4 text-black hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
+							? 'menupoint_underline text-rc_red'
+							: ''} font-medium uppercase py-1 hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
 						>Service</span
 					>
 				</button>
@@ -116,3 +118,32 @@
 </Drawer>
 
 <MobileDrawer {openMenuFull} {toggleMenuFull} />
+
+<style>
+	.menupoint::after {
+		background-color: #ea3336;
+		bottom: -7px;
+		content: '';
+		display: block;
+		height: 4px;
+		position: absolute;
+		width: 0%;
+		transition: all;
+		transition-duration: 0.25s;
+	}
+
+	.menupoint_underline::after {
+		background-color: #ea3336;
+		bottom: -7px;
+		content: '';
+		display: block;
+		height: 4px;
+		position: absolute;
+		width: 100%;
+		transition: all;
+		transition-duration: 0.25s;
+	}
+	.menupoint:hover::after {
+		width: 100%;
+	}
+</style>
