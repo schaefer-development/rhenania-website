@@ -5561,7 +5561,8 @@ export type ImageWhereUniqueInput = {
 
 export enum ImageWidth {
 	ContentWidth = 'ContentWidth',
-	FullWidth = 'FullWidth'
+	FullWidth = 'FullWidth',
+	Pattern = 'Pattern'
 }
 
 export type Link = Node & {
@@ -5649,6 +5650,7 @@ export type LinkConnection = {
 export type LinkCreateInput = {
 	ckx8urpys01qg01z6hntc2w45?: InputMaybe<CardImageCreateManyInlineInput>;
 	ckx8uschu02xj01zc71rq5bxw?: InputMaybe<CardIconCreateManyInlineInput>;
+	ckxj50hw42v6x01xpgtk195ql?: InputMaybe<TextCreateManyInlineInput>;
 	createdAt?: InputMaybe<Scalars['DateTime']>;
 	label?: InputMaybe<Scalars['String']>;
 	target?: InputMaybe<LinkTargetCreateOneInlineInput>;
@@ -5930,6 +5932,7 @@ export type LinkTargetWhereUniqueInput = {
 export type LinkUpdateInput = {
 	ckx8urpys01qg01z6hntc2w45?: InputMaybe<CardImageUpdateManyInlineInput>;
 	ckx8uschu02xj01zc71rq5bxw?: InputMaybe<CardIconUpdateManyInlineInput>;
+	ckxj50hw42v6x01xpgtk195ql?: InputMaybe<TextUpdateManyInlineInput>;
 	label?: InputMaybe<Scalars['String']>;
 	target?: InputMaybe<LinkTargetUpdateOneInlineInput>;
 };
@@ -8256,6 +8259,7 @@ export type Node = {
 export enum Padding {
 	Large = 'Large',
 	Medium = 'Medium',
+	None = 'None',
 	Small = 'Small'
 }
 
@@ -10591,6 +10595,7 @@ export type Text = Node & {
 	history: Array<Version>;
 	/** The unique identifier */
 	id: Scalars['ID'];
+	link?: Maybe<Link>;
 	paddingBottom?: Maybe<Padding>;
 	paddingTop?: Maybe<Padding>;
 	page?: Maybe<Page>;
@@ -10624,6 +10629,10 @@ export type TextHistoryArgs = {
 	limit?: Scalars['Int'];
 	skip?: Scalars['Int'];
 	stageOverride?: InputMaybe<Stage>;
+};
+
+export type TextLinkArgs = {
+	locales?: InputMaybe<Array<Locale>>;
 };
 
 export type TextPageArgs = {
@@ -10674,6 +10683,7 @@ export type TextCreateInput = {
 	heading1?: InputMaybe<Scalars['String']>;
 	heading2?: InputMaybe<Scalars['String']>;
 	heading3?: InputMaybe<Scalars['String']>;
+	link?: InputMaybe<LinkCreateOneInlineInput>;
 	paddingBottom?: InputMaybe<Padding>;
 	paddingTop?: InputMaybe<Padding>;
 	page?: InputMaybe<PageCreateOneInlineInput>;
@@ -10807,6 +10817,7 @@ export type TextManyWhereInput = {
 	id_not_starts_with?: InputMaybe<Scalars['ID']>;
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
+	link?: InputMaybe<LinkWhereInput>;
 	paddingBottom?: InputMaybe<Padding>;
 	/** All values that are contained in given list. */
 	paddingBottom_in?: InputMaybe<Array<Padding>>;
@@ -10885,6 +10896,7 @@ export type TextUpdateInput = {
 	heading1?: InputMaybe<Scalars['String']>;
 	heading2?: InputMaybe<Scalars['String']>;
 	heading3?: InputMaybe<Scalars['String']>;
+	link?: InputMaybe<LinkUpdateOneInlineInput>;
 	paddingBottom?: InputMaybe<Padding>;
 	paddingTop?: InputMaybe<Padding>;
 	page?: InputMaybe<PageUpdateOneInlineInput>;
@@ -11063,6 +11075,7 @@ export type TextWhereInput = {
 	id_not_starts_with?: InputMaybe<Scalars['ID']>;
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
+	link?: InputMaybe<LinkWhereInput>;
 	paddingBottom?: InputMaybe<Padding>;
 	/** All values that are contained in given list. */
 	paddingBottom_in?: InputMaybe<Array<Padding>>;
@@ -11812,8 +11825,10 @@ export type Unnamed_1_Query = {
 					| {
 							__typename: 'Image';
 							id: string;
+							imageWidth?: ImageWidth | null | undefined;
 							paddingTop?: Padding | null | undefined;
 							paddingBottom?: Padding | null | undefined;
+							image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
 					  }
 					| {
 							__typename: 'Text';
@@ -11823,6 +11838,7 @@ export type Unnamed_1_Query = {
 							heading3?: string | null | undefined;
 							paddingTop?: Padding | null | undefined;
 							paddingBottom?: Padding | null | undefined;
+							link?: { __typename?: 'Link'; id: string } | null | undefined;
 							text?: { __typename?: 'RichText'; html: string } | null | undefined;
 					  }
 				>;

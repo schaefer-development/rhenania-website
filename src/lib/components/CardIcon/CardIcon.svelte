@@ -5,7 +5,7 @@
 </script>
 
 <div
-	class="mod_cardIcon relative overflow-hidden bg-white shadow-md hover:shadow-lg duration-150 ease-in-out"
+	class="mod_cardIcon relative overflow-hidden bg-white hover:shadow-lg duration-150 ease-in-out"
 >
 	{#if card.link}
 		<a

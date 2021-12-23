@@ -10,7 +10,7 @@ body {
 }
 
 .rc_h1 {
-	@apply font-medium text-2xl md:text-3xl lg:text-4xl uppercase tracking-wider break-words;
+	@apply font-normal text-2xl md:text-3xl lg:text-4xl uppercase tracking-wider break-words;
 }
 
 .rc_h2 {
@@ -97,4 +97,8 @@ blockquote {
 	padding: 0.5em 1em;
 	margin: 1em 0;
 	border-left: 2px solid #7a7a7a;
+}
+
+.rc_menuIsOpen {
+	max-height: 100vh;
 }

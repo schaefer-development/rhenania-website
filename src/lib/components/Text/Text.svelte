@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { mapPadding } from '$lib/helpers';
+	import { base } from '$app/paths';
 	import type { Text } from '$lib/graphql/generated/schema';
 	export let module: Partial<Text> = {};
 </script>
@@ -20,6 +21,9 @@
 			<div class="py-4 rc_break_hyphens">
 				{@html module.text.html}
 			</div>
+		{/if}
+		{#if module.link}
+			{base}/{module.link.target.page.slug}#{module.link.target.id}
 		{/if}
 	</div>
 	<div class="relative w-full {mapPadding(module.paddingBottom)}" />

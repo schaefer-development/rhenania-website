@@ -2,13 +2,13 @@
 	import { base } from '$app/paths';
 </script>
 
-<div class="mod_heroStart w-full overflow-hidden h-50v">
+<div class="mod_heroStart w-full overflow-hidden h-60v">
 	<div
-		class="bg_layer absolute w-full h-50v bg-cover bg-center "
+		class="bg_layer absolute w-full h-60v bg-cover bg-center "
 		style="background-image: url({base}/hero_example.jpg)"
 	/>
-	<div class="bg_layer absolute w-full h-50v bg-rc_darkblue-darker opacity-90" />
-	<div class="bg_layer absolute w-full h-50v rc_background_triangle" />
+	<div class="bg_layer absolute w-full h-60v bg-rc_darkblue-darker opacity-90" />
+	<div class="bg_layer absolute w-full h-60v rc_background_triangle" />
 	<div
 		class="content relative z-2 w-full h-full max-w-screen-2xl mx-auto px-16 flex flex-col items-center justify-center text-center"
 	>
