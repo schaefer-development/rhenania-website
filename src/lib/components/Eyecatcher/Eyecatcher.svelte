@@ -6,8 +6,8 @@
 
 <div class="mod_eyecatcher">
 	<div class="relative w-full {mapPadding(module.paddingTop)}" />
-	<div class="relative bg-rc_darkblue overflow-hidden">
-		<div class="absolute rc_background_triangle w-full h-full -mt-12" />
+	<div class="relative bg-rc_darkblue overflow-hidden py-10 lg:py-20">
+		<div class="absolute rc_background_triangle w-full h-full -mt-10 lg:-mt-20" />
 		<div
 			class="relative z-10 max-w-screen-lg mx-auto grid grid-cols-1 md:grid-cols-5 gap-x-8 px-10 "
 		>
@@ -22,7 +22,7 @@
 				<span class="w-px border-r mx-auto inline-block transform rc_rotate" />
 			</div>
 			<div class="col-span-full md:col-span-3">
-				<div class="self-center py-10">
+				<div class="self-center pt-10 pb-5">
 					<h1 class="text-white rc_h1">{module.headline}</h1>
 					<h2 class="text-rc_skyblue rc_h3 pb-4">{module.subheadline}</h2>
 					<hr class="border-b-1 border-rc_darkblue-darkest" />
