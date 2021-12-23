@@ -2,7 +2,7 @@
 	export let id: string;
 </script>
 
-<div class="tab w-full overflow-hidden pb-4">
+<div class="tab w-full overflow-hidden">
 	<input class="absolute opacity-0 " {id} type="checkbox" name="tabs" />
 	<label class="cursor-pointer flex border-b border-rc_darkblue py-2" for={id}>
 		<div

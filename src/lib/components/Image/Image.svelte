@@ -5,7 +5,7 @@
 
 <div class="mod_fullWidthImage">
 	<div class="relative w-full {mapPadding(module.paddingTop)}" />
-	<div class="relative ">
+	<div class="relative flex flex-col">
 		{#if module.imageWidth == 'FullWidth'}
 			<div
 				class="w-full h-30v bg-cover bg-center"
@@ -17,6 +17,10 @@
 			<div class="max-w-screen-md mx-auto px-10">
 				<img src={module.image.url} alt="Rhenania" />
 			</div>
+		{/if}
+
+		{#if module.imageWidth == 'Pattern'}
+			<img src={module.image.url} alt="Rhenania" class="h-20" />
 		{/if}
 	</div>
 	<div class="relative w-full {mapPadding(module.paddingBottom)}" />

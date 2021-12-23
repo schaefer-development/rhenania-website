@@ -42,7 +42,7 @@
 				</svg>
 			</div>
 
-			<div id="menu" class="relative hidden md:inline-block">
+			<div id="menu" class="relative hidden lg:inline-block">
 				<a href="{base}/start" class="relative ">
 					<span
 						class="{$page.path === `${base}/start`
@@ -80,7 +80,7 @@
 				</button>
 			</div>
 
-			<div id="menu_mobil" class="visible md:hidden">
+			<div id="menu_mobil" class="visible lg:hidden">
 				<button
 					on:click={toggleMenuFull}
 					class="text-rc_red flex w-full items-center justify-end focus:border-0 uppercase font-medium tracking-wider hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red "

@@ -10,11 +10,11 @@
 	on:click={toggleMenuFull}
 	class="{openMenuFull
 		? 'rc_menu_visible'
-		: 'rc_menu_hidden'} absolute visible md:hidden rc_menu left-0 top-20 w-full shadow-md overflow-auto ease-in-out transform transition-all duration-300 z-40"
+		: 'rc_menu_hidden'} absolute visible lg:hidden rc_menu left-0 top-20 w-full min-h-screen overflow-auto ease-in-out transform transition-all duration-300 z-40"
 >
 	<div class="relative flex flex-row w-full max-w-screen-2xl mx-auto">
 		<div
-			class="w-full px-4 md:px-10 py-10 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-10 text-white "
+			class="w-full px-4 md:px-10 py-10 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 text-white "
 		>
 			<div class="col-span-1 sm:col-span-2">
 				<button
@@ -40,9 +40,15 @@
 			</div>
 			<div class="left">
 				<!-- left start -->
-				<a href="{base}/start" class="rc_h1 text-rc_skyblue">Start</a>
+				<a
+					href="{base}/start"
+					class="font-medium text-xl uppercase tracking-wider break-words text-rc_skyblue text-rc_skyblue"
+					>Start</a
+				>
 				<hr class="my-4 border-rc_darkblue" />
-				<p class="rc_h1 text-rc_skyblue">Produkte</p>
+				<p class="font-medium text-xl uppercase tracking-wider break-words text-rc_skyblue">
+					Produkte
+				</p>
 				<DrawerAccordion id="versandlogistiksystem_drawer_full">
 					<span slot="headline">Versandlogistiksystem</span>
 					<div slot="content">
@@ -80,7 +86,11 @@
 			</div>
 			<div class="right">
 				<!-- right start -->
-				<p class="rc_h1 text-rc_skyblue">Unternehmen</p>
+				<p
+					class="font-medium text-xl uppercase tracking-wider break-words text-rc_skyblue text-rc_skyblue"
+				>
+					Unternehmen
+				</p>
 
 				<a
 					href="{base}/kontakt/"
@@ -109,7 +119,11 @@
 				>
 				<hr class="my-4 border-rc_darkblue" />
 				<!---  -->
-				<p class="rc_h1 text-rc_skyblue">Service</p>
+				<p
+					class="font-medium text-xl uppercase tracking-wider break-words text-rc_skyblue text-rc_skyblue"
+				>
+					Service
+				</p>
 
 				<a
 					href="{base}/cloudloesung/"

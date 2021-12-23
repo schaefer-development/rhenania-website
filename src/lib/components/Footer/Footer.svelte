@@ -6,7 +6,7 @@
 <footer class="text-white bg-rc_darkblue-darkest">
 	<div class="bg-rc_darkblue">
 		<div
-			class="grid grid-cols-3 sm:grid-cols-5 gap-4 mx-auto max-w-screen-2xl px-10 text-xs text-rc_darkblue-darkest flex items-center"
+			class="grid grid-cols-3 md:grid-cols-5 gap-4 mx-auto max-w-screen-2xl px-10 text-xs text-rc_darkblue-darkest flex items-center"
 		>
 			<div>
 				<img src="{base}/logo_clients/clients_jumo.svg" alt="Jumo" class="w-10/12 mx-auto" />
