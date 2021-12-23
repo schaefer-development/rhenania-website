@@ -14,10 +14,8 @@
 		openMenu = openMenu === menu ? null : menu;
 	};
 
-	let openMenuFull = false;
-	const toggleMenuFull = () => {
-		openMenuFull = !openMenuFull;
-	};
+	export let openMenuFull: boolean;
+	export let toggleMenuFull: () => void;
 </script>
 
 <header class="sticky top-0 z-50 bg-white shadow-md flex space-between">

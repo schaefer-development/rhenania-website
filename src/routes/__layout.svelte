@@ -5,6 +5,11 @@
 	import '@fontsource/red-hat-text/700.css';
 	import Header from '$lib/components/Header/Header.svelte';
 	import Footer from '$lib/components/Footer/Footer.svelte';
+
+	let openMenuFull = false;
+	const toggleMenuFull = () => {
+		openMenuFull = !openMenuFull;
+	};
 </script>
 
 <svelte:head>
@@ -15,8 +20,11 @@
 	/>
 </svelte:head>
 
-<div class="flex flex-col min-h-screen justify-between bg-gray-50 ">
-	<Header />
+<div
+	class="flex flex-col min-h-screen justify-between bg-gray-50"
+	class:rc_menuIsOpen={openMenuFull}
+>
+	<Header {toggleMenuFull} {openMenuFull} />
 	<main class="mb-auto">
 		<slot />
 	</main>

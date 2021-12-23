@@ -69,6 +69,11 @@ body {
 	background-color: rgba(21, 37, 79, 0.99);
 }
 
+.rc_menuIsOpen {
+	max-height: 100vh;
+	overflow: hidden;
+}
+
 .rc_menu_visible {
 	margin-top: 0;
 }
@@ -97,8 +102,4 @@ blockquote {
 	padding: 0.5em 1em;
 	margin: 1em 0;
 	border-left: 2px solid #7a7a7a;
-}
-
-.rc_menuIsOpen {
-	max-height: 100vh;
 }
