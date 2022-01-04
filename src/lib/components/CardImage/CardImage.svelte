@@ -4,7 +4,9 @@
 	export let card: Partial<CardImage> = {};
 </script>
 
-<div class="mod_cardImage overflow-hidden bg-white hover:shadow-lg duration-150 ease-in-out">
+<div
+	class="mod_cardImage overflow-hidden bg-white shadow-sm hover:shadow-lg duration-150 ease-in-out"
+>
 	{#if card.link}
 		<a href="#">
 			<!--<a

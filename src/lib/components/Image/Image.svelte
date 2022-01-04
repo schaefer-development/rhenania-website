@@ -14,7 +14,7 @@
 		{/if}
 
 		{#if module.imageWidth == 'ContentWidth'}
-			<div class="max-w-screen-md mx-auto px-10">
+			<div class="max-w-screen-lg mx-auto px-10">
 				<img src={module.image.url} alt="Rhenania" />
 			</div>
 		{/if}
