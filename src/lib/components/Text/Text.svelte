@@ -8,7 +8,7 @@
 <div class="mod_text">
 	<div class="relative w-full {mapPadding(module.paddingTop)}" />
 
-	{#if module.link && module.link.target && module.link.target.page}
+	{#if module?.link?.target?.page}
 		<div class="relative z-10 max-w-screen-lg mx-auto px-10">
 			{#if module.heading1}
 				<h1 class="rc_h1 text-rc_darkblue">{module.heading1}</h1>

@@ -7,7 +7,7 @@
 <div
 	class="mod_cardIcon relative overflow-hidden bg-white shadow-sm hover:shadow-lg duration-150 ease-in-out"
 >
-	{#if card.link && card.link.target && card.link.target.page}
+	{#if card?.link?.target?.page}
 		<a
 			href="{base}/{card.link.target.page.slug}#{card.link.target.id}"
 			title="{base}/{card.link.target.page.slug}#{card.link.target.id}"
