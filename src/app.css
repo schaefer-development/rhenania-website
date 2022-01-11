@@ -104,43 +104,40 @@ blockquote {
 	border-left: 2px solid #7a7a7a;
 }
 
-
-ul{
-	padding:1.5em 0;
+ul {
+	padding: 1.5em 0;
 }
 
-
-ul li{
+ul li {
 	list-style-type: none;
-	padding:0.25em 1em;
+	padding: 0.25em 1em;
 	text-indent: 1em;
 }
 
-ul li:before{
-	position:absolute;
-	content: "■";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+ul li:before {
+	position: absolute;
+	content: '■'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
 	color: rgba(42, 73, 157, 1);
-	margin-left:-3em;
+	margin-left: -3em;
 }
 
-
-ol{
+ol {
 	padding: 1.5em 0;
 	counter-reset: item;
 }
 
-ol li{
-	list-style-type:numeric;
-	padding:0.25em 1em;
+ol li {
+	list-style-type: numeric;
+	padding: 0.25em 1em;
 	text-indent: 1em;
 	display: block;
 }
 
 ol li:before {
 	position: absolute;
-	content: counter(item) ". ";
+	content: counter(item) '. ';
 	counter-increment: item;
 	color: rgba(42, 73, 157, 1);
-	margin-left:-3em;
-	font-weight:bold;
+	margin-left: -3em;
+	font-weight: bold;
 }

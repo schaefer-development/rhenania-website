@@ -7,12 +7,11 @@
 <div
 	class="mod_cardImage overflow-hidden bg-white shadow-sm hover:shadow-lg duration-150 ease-in-out"
 >
-	{#if card.link}
-		<a href="#">
-			<!--<a
+	{#if card.link && card.link.target}
+		<a
 			href="{base}/{card.link.target.page.slug}#{card.link.target.id}"
 			title="{base}/{card.link.target.page.slug}#{card.link.target.id}"
-		>-->
+		>
 			<div class="cardImageWrapper h-48 overflow-hidden">
 				<div
 					class="cardImage h-full bg-cover bg-center"
