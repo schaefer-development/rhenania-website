@@ -3,8 +3,8 @@
 	import { base } from '$app/paths';
 </script>
 
-<div class="flex flex-row w-full max-w-screen-2xl mx-auto ">
-	<div class="w-full grid grid-cols-3 gap-10 px-10 py-10">
+<div class="flex flex-row w-full max-w-screen-2xl mx-auto">
+	<div class="w-full grid grid-cols-3 gap-20 px-10 py-10">
 		<DrawerAccordion id="versandlogistiksystem">
 			<span slot="headline" class="breakwords">Versandlogistiksystem</span>
 			<div slot="content">

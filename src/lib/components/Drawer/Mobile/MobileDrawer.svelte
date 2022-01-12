@@ -14,7 +14,7 @@
 >
 	<div class="relative flex flex-row w-full max-w-screen-2xl mx-auto">
 		<div
-			class="w-full px-4 md:px-10 py-10 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 text-white "
+			class="w-full px-4 md:px-10 py-10 grid grid-cols-1 sm:grid-cols-2 gap-x-10 md:gap-x-20 gap-y-4 text-white "
 		>
 			<div class="col-span-1 sm:col-span-2">
 				<button
@@ -36,7 +36,7 @@
 						/>
 					</svg>
 				</button>
-				<hr class="my-4 border-rc_red" />
+				<div class="block bg-rc_red h-0.5 my-2" />
 			</div>
 			<div class="left">
 				<!-- left start -->
@@ -45,7 +45,8 @@
 					class="font-medium text-xl uppercase tracking-wider break-words text-rc_skyblue text-rc_skyblue"
 					>Start</a
 				>
-				<hr class="my-4 border-rc_darkblue" />
+
+				<div class="block bg-rc_darkblue h-0.5 my-4" />
 				<p class="font-medium text-xl uppercase tracking-wider break-words text-rc_skyblue">
 					Produkte
 				</p>
@@ -117,7 +118,7 @@
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Referenzen</a
 				>
-				<hr class="my-4 border-rc_darkblue" />
+				<div class="block bg-rc_darkblue h-0.5 my-4" />
 				<!---  -->
 				<p
 					class="font-medium text-xl uppercase tracking-wider break-words text-rc_skyblue text-rc_skyblue"

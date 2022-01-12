@@ -7,8 +7,8 @@
 <aside
 	on:click={() => toggleMenu(menuLabel)}
 	class="{openMenu === menuLabel
-		? 'rc_menu_visible'
-		: 'rc_menu_hidden'} hidden md:inline-block rc_menu left-0 top-20 w-full shadow-md fixed overflow-auto ease-in-out transform transition-all duration-300 z-40"
+		? 'rc_menu_visible hidden lg:block'
+		: 'rc_menu_hidden'} rc_menu left-0 top-20 w-full shadow-md fixed overflow-auto ease-in-out transform transition-all duration-300 z-40"
 >
 	<slot />
 </aside>

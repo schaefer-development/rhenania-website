@@ -2,7 +2,7 @@
 	import { base } from '$app/paths';
 </script>
 
-<div class="flex flex-row w-full max-w-screen-2xl mx-auto ">
+<div class="flex flex-row w-full max-w-screen-2xl mx-auto">
 	<div class="w-full px-10 py-10 text-center flex flex-row">
 		<a
 			href="{base}/cloudloesung/"

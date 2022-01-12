@@ -4,9 +4,12 @@
 
 <div class="tab w-full overflow-hidden">
 	<input class="absolute opacity-0 " {id} type="checkbox" name="tabs" />
-	<label class="cursor-pointer flex border-b border-rc_darkblue py-2" for={id}>
+	<label
+		class="cursor-pointer flex items-stretch  border-b-2 border-rc_darkblue py-2 flex "
+		for={id}
+	>
 		<div
-			class="w-full text-white flex font-medium text-sm tracking-widest uppercase hover:text-rc_red"
+			class="w-full self-center text-white font-medium text-sm tracking-widest uppercase hover:text-rc_red"
 		>
 			<slot name="headline" />
 		</div>
@@ -52,9 +55,5 @@
 	}
 	.tab input[type='checkbox']:checked + label .icon {
 		color: #fff;
-	}
-
-	.tab-content {
-		text-indent: 1em;
 	}
 </style>
