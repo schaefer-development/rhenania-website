@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import Logo from '$lib/components/Logo/Logo.svelte';
+	let date = new Date().getFullYear();
 </script>
 
 <footer class="text-white bg-rc_darkblue-darkest">
@@ -161,7 +162,7 @@
 					>Datenschutz</a
 				>
 				<br />
-				Copyright 2021<br />
+				Copyright {date}<br />
 			</p>
 		</div>
 	</div>
