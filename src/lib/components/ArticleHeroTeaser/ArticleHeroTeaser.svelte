@@ -12,7 +12,7 @@
 		<div class="blogteaserbg px-10 py-10">
 			<h2 class="rc_h1 text-rc_skyblue">{module.headline}</h2>
 			<h3 class="text-white text-lg font-medium">{module.subheadline}</h3>
-			<hr class="border-rc_darkblue-darkest my-4" />
+			<div class="block bg-rc_darkblue-darkest h-0.5 my-4" />
 			<p class="text-white w-10/12">
 				{module.teaserText}
 			</p>
