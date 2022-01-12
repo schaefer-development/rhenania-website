@@ -4,7 +4,7 @@
 </script>
 
 <div class="flex flex-row w-full max-w-screen-2xl mx-auto">
-	<div class="w-full grid grid-cols-3 gap-20 px-10 py-10">
+	<div class="w-full grid grid-cols-3 gap-24 px-10 py-10">
 		<DrawerAccordion id="versandlogistiksystem">
 			<span slot="headline" class="breakwords">Versandlogistiksystem</span>
 			<div slot="content">
