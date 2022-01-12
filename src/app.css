@@ -70,6 +70,7 @@ body {
 }
 
 .rc_menuIsOpen {
+	/* only mobile */
 	max-height: 100vh;
 	overflow: hidden;
 }
@@ -96,6 +97,10 @@ body {
 
 .rc_padding_large {
 	height: 10vw;
+}
+
+hr {
+	height: 12px;
 }
 
 blockquote {
