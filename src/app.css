@@ -35,7 +35,7 @@ body {
 }
 
 .rc_rotate {
-	transform: rotate(40deg);
+	transform: rotate(45deg);
 }
 
 .rc_text_shadow {

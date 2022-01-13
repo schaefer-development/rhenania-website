@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import Logo from '$lib/components/Logo/Logo.svelte';
+	import FooterAccordion from '$lib/components/Footer/FooterAccordion.svelte';
 	let date = new Date().getFullYear();
 </script>
 
@@ -59,30 +60,92 @@
 			</p>
 		</div>
 		<div class="pb-8 hidden xl:block w-full">
-			<div class="h-full flex items-stretch ">
-				<span class="w-px border-r border-white mx-auto inline-block transform rc_rotate" />
+			<div class="w-full aspect-square flex justify-center  ">
+				<div class="border-r h-32 rc_rotate" />
 			</div>
 		</div>
 		<div class="pb-8">
 			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Produkte</p>
 			<p class="text-center sm:text-left tracking-wide">
-				<a
-					href="{base}/#Versandlogistik/"
-					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-					>Versandlogistik</a
-				><br />
+				<FooterAccordion id="FooterVersandlogistiksystem">
+					<span
+						slot="headline"
+						class="block text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+						>Versandlogistiksystem</span
+					>
+					<div slot="content" class="pb-2">
+						<a
+							href="{base}/f95/"
+							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+							>– F95</a
+						>
+						<a
+							href="{base}/k04/"
+							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+							>– K04</a
+						>
+						<a
+							href="{base}/vka/"
+							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+							>– VKA</a
+						>
+					</div>
+				</FooterAccordion>
 
-				<a
-					href="{base}/#Versandoptimierung/"
-					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-					>Versandoptimierung</a
-				><br />
+				<FooterAccordion id="FooterVersandoptimierung">
+					<span
+						slot="headline"
+						class="block text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+						>Versandlogistiksystem</span
+					>
+					<div slot="content" class="pb-2">
+						<a
+							href="{base}/u12/"
+							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+							>– U12</a
+						>
+						<a
+							href="{base}/apk/"
+							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+							>– APK</a
+						>
+						<a
+							href="{base}/duv/"
+							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+							>– DUV</a
+						>
+						<a
+							href="{base}/g10/"
+							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+							>– G10</a
+						>
+					</div>
+				</FooterAccordion>
 
-				<a
-					href="{base}/"
-					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-					>Hardware</a
-				><br />
+				<FooterAccordion id="FooterHardware">
+					<span
+						slot="headline"
+						class="block text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+						>Hardware</span
+					>
+					<div slot="content" class="pb-2">
+						<a
+							href="{base}/etikettendrucker/"
+							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+							>– Etikettendrucker</a
+						>
+						<a
+							href="{base}/waagen/"
+							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+							>– Waagen</a
+						>
+						<a
+							href="{base}/barcodescanner/"
+							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+							>– Barcodescanner</a
+						>
+					</div>
+				</FooterAccordion>
 			</p>
 		</div>
 		<div class="pb-8">
