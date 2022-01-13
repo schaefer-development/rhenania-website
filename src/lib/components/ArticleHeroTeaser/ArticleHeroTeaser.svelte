@@ -8,16 +8,18 @@
 		class="bg_layer absolute w-full h-full bg-cover bg-center "
 		style="background-image: url({module.heroBackgroundImage.url})"
 	/>
-	<div class="relative z-2 h-full flex items-center max-w-screen-md mx-auto px-10 py-10 lg:py-24">
-		<div class="blogteaserbg px-10 py-10">
+	<div
+		class="relative z-2 h-full flex items-center max-w-screen-md mx-auto px-4 lg:px-10 py-10 lg:py-24"
+	>
+		<div class="blogteaserbg px-6 lg:px-10 py-6 lg:py-10">
 			<h2 class="rc_h1 text-rc_skyblue">{module.headline}</h2>
-			<h3 class="text-white text-lg font-medium">{module.subheadline}</h3>
+			<h3 class="rc_h3 text-white py-2 w-full md:w-10/12">{module.subheadline}</h3>
 			<div class="block bg-rc_darkblue-darkest h-0.5 my-4" />
-			<p class="text-white w-10/12">
+			<p class="text-white w-full md:w-10/12">
 				{module.teaserText}
 			</p>
 			<button
-				class="relative mt-8 pl-5 pr-3 py-2 bg-rc_red text-white text-sm font-bold uppercase tracking-widest hover:bg-rc_red-darker rc_button_corner"
+				class="relative mt-6 pl-5 pr-3 py-2 bg-rc_red text-white text-xs md:text-sm font-bold uppercase tracking-widest hover:bg-rc_red-darker rc_button_corner"
 				>mehr erfahren</button
 			>
 		</div>

@@ -10,7 +10,7 @@ body {
 }
 
 .rc_h1 {
-	@apply font-normal text-2xl md:text-3xl lg:text-4xl uppercase tracking-wider break-words;
+	@apply font-normal text-xl md:text-2xl lg:text-4xl uppercase tracking-wider;
 }
 
 .rc_h2 {
@@ -22,7 +22,7 @@ body {
 }
 
 .rc_h4 {
-	@apply font-bold text-xs lg:text-sm uppercase tracking-wider;
+	@apply font-bold text-xs lg:text-sm uppercase tracking-widest;
 }
 
 .rc_break_hyphens {
