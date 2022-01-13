@@ -3,7 +3,7 @@
 	import CardsContainer from '$lib/components/CardsContainer/CardsContainer.svelte';
 	import Eyecatcher from '$lib/components/Eyecatcher/Eyecatcher.svelte';
 	import FaqContainer from '$lib/components/FaqContainer/FaqContainer.svelte';
-	import ArticleHeroTeaser from '$lib/components/ArticleHeroTeaser/ArticleHeroTeaser.svelte';
+	import BlogEntry from '$lib/components/BlogEntry/BlogEntry.svelte';
 	import HeroImage from '$lib/components/HeroImage/HeroImage.svelte';
 	import Image from '$lib/components/Image/Image.svelte';
 	import Text from '$lib/components/Text/Text.svelte';
@@ -14,7 +14,7 @@
 		CardsContainer,
 		Eyecatcher,
 		FaqContainer,
-		ArticleHeroTeaser,
+		BlogEntry,
 		Image,
 		Text,
 		HeroImage

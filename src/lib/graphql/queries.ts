@@ -23,12 +23,6 @@ export const PAGE = gql`
 					slug
 				}
 			}
-			... on ArticleHeroTeaser {
-				id
-				page {
-					slug
-				}
-			}
 			... on FaqContainer {
 				id
 				page {
@@ -128,10 +122,10 @@ export const PAGE = gql`
 						html
 					}
 				}
-				... on ArticleHeroTeaser {
+				... on BlogEntry {
 					id
-					headline
-					subheadline
+					teaserHeadline
+					teaserSubheadline
 					teaserText
 					heroBackgroundImage {
 						id
