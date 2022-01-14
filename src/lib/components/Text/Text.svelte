@@ -8,7 +8,7 @@
 <div class="mod_text">
 	<div class="relative w-full {mapPadding(module.paddingTop)}" />
 
-	{#if module?.link?.target?.page}
+	{#if module?.link?.target}
 		<div class="relative z-10 max-w-screen-lg mx-auto px-10">
 			{#if module.heading1}
 				<h1 class="rc_h1 text-rc_darkblue">{module.heading1}</h1>
@@ -26,7 +26,7 @@
 
 				<div class="col-span-12 lg:col-span-6 flex items-stretch justify-start lg:justify-end">
 					<a
-						href="{base}/{module.link.target.page.slug}#{module.link.target.id}"
+						href="{base}/{module.link.target.slug}"
 						class="relative self-center pl-5 pr-3 py-2 md:mr-4 bg-rc_red text-white text-sm font-bold uppercase tracking-widest hover:bg-rc_red-darker rc_button_corner"
 						>{module.link.label}</a
 					>

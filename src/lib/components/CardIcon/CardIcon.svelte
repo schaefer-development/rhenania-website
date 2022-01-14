@@ -7,10 +7,10 @@
 <div
 	class="mod_cardIcon mx-5 my-5 grow relative overflow-hidden bg-white shadow-sm hover:shadow-lg duration-150 ease-in-out"
 >
-	{#if card?.link?.target?.page}
+	{#if card?.link?.target}
 		<a
-			href="{base}/{card.link.target.page.slug}#{card.link.target.id}"
-			title="{base}/{card.link.target.page.slug}#{card.link.target.id}"
+			href="{base}/{card.link.target.slug}"
+			title="{base}/{card.link.target.slug}"
 		>
 			<div
 				class="cardIcon h-48 bg-red flex items-center justify-center"
