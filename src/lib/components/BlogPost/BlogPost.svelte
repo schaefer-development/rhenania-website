@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { BlogEntry } from '$lib/graphql/generated/schema';
-	export let module: Partial<BlogEntry> = {};
+	import type { BlogPost } from '$lib/graphql/generated/schema';
+	export let module: Partial<BlogPost> = {};
 </script>
 
 <div class="mod_blogEntry relative w-full overflow-hidden h-auto">

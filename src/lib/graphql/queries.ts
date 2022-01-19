@@ -5,41 +5,13 @@ export const PAGE = gql`
 		label
 		target {
 			__typename
-			... on Eyecatcher {
+			... on Page {
 				id
-				page {
-					slug
-				}
+				slug
 			}
-			... on CardsContainer {
+			... on BlogPost {
 				id
-				page {
-					slug
-				}
-			}
-			... on Text {
-				id
-				page {
-					slug
-				}
-			}
-			... on FaqContainer {
-				id
-				page {
-					slug
-				}
-			}
-			... on HeroImage {
-				id
-				page {
-					slug
-				}
-			}
-			... on Image {
-				id
-				page {
-					slug
-				}
+				slug
 			}
 		}
 	}
@@ -120,16 +92,6 @@ export const PAGE = gql`
 					paddingBottom
 					text {
 						html
-					}
-				}
-				... on BlogEntry {
-					id
-					teaserHeadline
-					teaserSubheadline
-					teaserText
-					heroBackgroundImage {
-						id
-						url
 					}
 				}
 				... on CardsContainer {
