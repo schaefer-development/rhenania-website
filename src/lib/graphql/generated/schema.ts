@@ -11692,6 +11692,17 @@ export enum _SystemDateTimeFieldVariation {
 	Localization = 'localization'
 }
 
+export type LinkFragmentFragment = {
+	__typename?: 'Link';
+	id: string;
+	label?: string | null | undefined;
+	target?:
+		| { __typename: 'BlogPost'; id: string; slug: string }
+		| { __typename: 'Page'; id: string; slug: string }
+		| null
+		| undefined;
+};
+
 export type Unnamed_1_QueryVariables = Exact<{
 	slug: Scalars['String'];
 }>;
@@ -11707,18 +11718,98 @@ export type Unnamed_1_Query = {
 				teaserSubheadline?: string | null | undefined;
 				teaserText?: string | null | undefined;
 				heroBackgroundImage?: { __typename?: 'Asset'; url: string } | null | undefined;
+				modules: Array<
+					| {
+							__typename: 'CardsContainer';
+							id: string;
+							headline?: string | null | undefined;
+							paddingTop?: Padding | null | undefined;
+							paddingBottom?: Padding | null | undefined;
+							cards: Array<
+								| {
+										__typename: 'CardIcon';
+										id: string;
+										headline?: string | null | undefined;
+										subheadline?: string | null | undefined;
+										backgroundColor?:
+											| {
+													__typename?: 'Color';
+													hex: any;
+													rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
+											  }
+											| null
+											| undefined;
+										icon?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
+										link?:
+											| {
+													__typename?: 'Link';
+													id: string;
+													label?: string | null | undefined;
+													target?:
+														| { __typename: 'BlogPost'; id: string; slug: string }
+														| { __typename: 'Page'; id: string; slug: string }
+														| null
+														| undefined;
+											  }
+											| null
+											| undefined;
+								  }
+								| {
+										__typename: 'CardImage';
+										id: string;
+										headline?: string | null | undefined;
+										image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
+										link?:
+											| {
+													__typename?: 'Link';
+													id: string;
+													label?: string | null | undefined;
+													target?:
+														| { __typename: 'BlogPost'; id: string; slug: string }
+														| { __typename: 'Page'; id: string; slug: string }
+														| null
+														| undefined;
+											  }
+											| null
+											| undefined;
+								  }
+							>;
+					  }
+					| { __typename: 'Divider'; id: string; padding?: Padding | null | undefined }
+					| { __typename: 'FaqItem' }
+					| {
+							__typename: 'Image';
+							id: string;
+							imageWidth?: ImageWidth | null | undefined;
+							paddingTop?: Padding | null | undefined;
+							paddingBottom?: Padding | null | undefined;
+							image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
+					  }
+					| {
+							__typename: 'Text';
+							id: string;
+							heading1?: string | null | undefined;
+							heading2?: string | null | undefined;
+							heading3?: string | null | undefined;
+							paddingTop?: Padding | null | undefined;
+							paddingBottom?: Padding | null | undefined;
+							link?:
+								| {
+										__typename?: 'Link';
+										id: string;
+										label?: string | null | undefined;
+										target?:
+											| { __typename: 'BlogPost'; id: string; slug: string }
+											| { __typename: 'Page'; id: string; slug: string }
+											| null
+											| undefined;
+								  }
+								| null
+								| undefined;
+							text?: { __typename?: 'RichText'; html: string } | null | undefined;
+					  }
+				>;
 		  }
-		| null
-		| undefined;
-};
-
-export type LinkFragmentFragment = {
-	__typename?: 'Link';
-	id: string;
-	label?: string | null | undefined;
-	target?:
-		| { __typename: 'BlogPost'; id: string; slug: string }
-		| { __typename: 'Page'; id: string; slug: string }
 		| null
 		| undefined;
 };

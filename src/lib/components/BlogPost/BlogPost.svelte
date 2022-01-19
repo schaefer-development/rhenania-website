@@ -1,6 +1,17 @@
 <script lang="ts">
 	import type { BlogPost } from '$lib/graphql/generated/schema';
+	import Divider from '$lib/components/Divider/Divider.svelte';
+	import CardsContainer from '$lib/components/CardsContainer/CardsContainer.svelte';
+	import Image from '$lib/components/Image/Image.svelte';
+	import Text from '$lib/components/Text/Text.svelte';
+
 	export let blogPost: Partial<BlogPost> = {};
+	const mapping = {
+		Divider,
+		CardsContainer,
+		Image,
+		Text
+	};
 </script>
 
 {#if blogPost}
@@ -25,5 +36,10 @@
 				>
 			</div>
 		</div>
+	</div>
+	<div class="relative">
+		{#each blogPost.modules as module (module.id)}
+			<svelte:component this={mapping[module.__typename]} {module} />
+		{/each}
 	</div>
 {/if}
