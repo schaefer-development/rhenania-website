@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { mapPadding } from '$lib/helpers';
 	import { base } from '$app/paths';
-	import type { LinkOrderByInput, Text } from '$lib/graphql/generated/schema';
+	import type { Text } from '$lib/graphql/generated/schema';
 	export let module: Partial<Text> = {};
 </script>
 

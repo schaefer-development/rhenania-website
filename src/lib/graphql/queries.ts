@@ -1,4 +1,19 @@
 import { gql } from '$lib/helpers';
+export const BLOG_POST = gql`
+	query ($slug: String!) {
+		blogPost(where: { slug: $slug }) {
+			id
+			slug
+			teaserHeadline
+			teaserSubheadline
+			teaserText
+			heroBackgroundImage {
+				url
+			}
+		}
+	}
+`;
+
 export const PAGE = gql`
 	fragment linkFragment on Link {
 		id
