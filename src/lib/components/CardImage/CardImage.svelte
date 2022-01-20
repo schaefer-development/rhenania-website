@@ -7,11 +7,8 @@
 <div
 	class="mod_cardImage mx-5 my-5 grow overflow-hidden bg-white shadow-sm hover:shadow-lg duration-150 ease-in-out"
 >
-	{#if card?.link?.target?.page}
-		<a
-			href="{base}/{card.link.target.page.slug}#{card.link.target.id}"
-			title="{base}/{card.link.target.page.slug}#{card.link.target.id}"
-		>
+	{#if card?.link?.target}
+		<a href="{base}/{card.link.target.slug}" title="{base}/{card.link.target.slug}">
 			<div class="cardImageWrapper h-48 overflow-hidden">
 				<div
 					class="cardImage h-full bg-cover bg-center"

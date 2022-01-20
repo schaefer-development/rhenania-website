@@ -7,7 +7,7 @@
 
 <div class="mod_faqContainer">
 	<div class="relative w-full {mapPadding(module.paddingTop)}" />
-	<div id={module.id} class="relative bg-white py-12 shadow-md">
+	<div class="relative bg-white py-12 shadow-md">
 		<div class="relative z-10 max-w-screen-md mx-auto px-10 ">
 			<h1 class="rc_h1 text-rc_darkblue-darkest pb-8">{module.headline}</h1>
 			{#each module.faqItems as faqItem (faqItem.id)}

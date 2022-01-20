@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { Image } from '$lib/graphql/generated/schema';
 	import { mapPadding } from '$lib/helpers';
 	export let module: Partial<Image> = {};
 </script>
