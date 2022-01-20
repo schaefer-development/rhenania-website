@@ -33,7 +33,7 @@
 				</div>
 			</div>
 			{#if module.text.html}
-				<div class="py-4 rc_break_hyphens">
+				<div class="py-4 rc_break_hyphens haha">
 					{@html module.text.html}
 				</div>
 			{/if}
@@ -50,7 +50,7 @@
 				<h3 class="rc_h3 py-2">{module.heading3}</h3>
 			{/if}
 			{#if module.text.html}
-				<div class="py-4 rc_break_hyphens">
+				<div class="py-4 rc_break_hyphens haha">
 					{@html module.text.html}
 				</div>
 			{/if}
@@ -61,36 +61,36 @@
 </div>
 
 <style>
-	:global ul {
+	:global .mod_text ul {
 		padding: 1.5em 0;
 	}
 
-	:global ul li {
+	:global .mod_text ul li {
 		list-style-type: none;
 		padding: 0.25em 1em;
 		text-indent: 1em;
 	}
 
-	:global ul li:before {
+	:global .mod_text ul li:before {
 		position: absolute;
-		content: '■'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+		content: '■';
 		color: rgba(42, 73, 157, 1);
 		margin-left: -3em;
 	}
 
-	:global ol {
+	:global .mod_text ol {
 		padding: 1.5em 0;
 		counter-reset: item;
 	}
 
-	:global ol li {
+	:global .mod_text ol li {
 		list-style-type: numeric;
 		padding: 0.25em 1em;
 		text-indent: 1em;
 		display: block;
 	}
 
-	:global ol li:before {
+	:global .mod_text ol li:before {
 		position: absolute;
 		content: counter(item) '. ';
 		counter-increment: item;

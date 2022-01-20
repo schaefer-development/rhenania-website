@@ -35,11 +35,7 @@
 			<img src="{base}/logo_clients/clients_abus.svg" alt="Abus" class="w-10/12 mx-auto" />
 		</SplideSlide>
 		<SplideSlide>
-			<img
-			src="{base}/logo_clients/clients_fujifilm.svg"
-			alt="Fujifilm"
-			class="w-10/12 mx-auto"
-		/>
+			<img src="{base}/logo_clients/clients_fujifilm.svg" alt="Fujifilm" class="w-10/12 mx-auto" />
 		</SplideSlide>
 		<SplideSlide>
 			<img
