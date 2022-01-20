@@ -39,6 +39,7 @@
 	},
 	"dependencies": {
 		"@fontsource/red-hat-text": "^4.5.1",
+		"@splidejs/splide-extension-auto-scroll": "^0.3.7",
 		"@splidejs/svelte-splide": "^0.1.17",
 		"graphql": "^15.8.0",
 		"leaflet": "^1.7.1"
