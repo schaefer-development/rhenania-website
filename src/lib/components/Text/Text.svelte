@@ -59,3 +59,43 @@
 
 	<div class="relative w-full {mapPadding(module.paddingBottom)}" />
 </div>
+
+<style>
+	:global ul {
+		padding: 1.5em 0;
+	}
+
+	:global ul li {
+		list-style-type: none;
+		padding: 0.25em 1em;
+		text-indent: 1em;
+	}
+
+	:global ul li:before {
+		position: absolute;
+		content: '■'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+		color: rgba(42, 73, 157, 1);
+		margin-left: -3em;
+	}
+
+	:global ol {
+		padding: 1.5em 0;
+		counter-reset: item;
+	}
+
+	:global ol li {
+		list-style-type: numeric;
+		padding: 0.25em 1em;
+		text-indent: 1em;
+		display: block;
+	}
+
+	:global ol li:before {
+		position: absolute;
+		content: counter(item) '. ';
+		counter-increment: item;
+		color: rgba(42, 73, 157, 1);
+		margin-left: -3em;
+		font-weight: bold;
+	}
+</style>

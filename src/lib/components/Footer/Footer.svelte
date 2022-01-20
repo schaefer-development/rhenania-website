@@ -2,10 +2,23 @@
 	import { base } from '$app/paths';
 	import Logo from '$lib/components/Logo/Logo.svelte';
 	import FooterAccordion from '$lib/components/Footer/FooterAccordion.svelte';
+
+	import Slideshow from '$lib/components/Slideshow/Slideshow.svelte';
+
 	let date = new Date().getFullYear();
 </script>
 
 <footer class="text-white bg-rc_darkblue-darkest">
+	<!-- -->
+	<div class="bg-rc_darkblue">
+		<div
+			class="mx-auto max-w-screen-2xl px-10 text-xs text-rc_darkblue-darkest flex items-center"
+		>
+		<Slideshow />
+		</div>
+	</div>
+
+	<!-- 
 	<div class="bg-rc_darkblue">
 		<div
 			class="grid grid-cols-3 md:grid-cols-5 gap-4 mx-auto max-w-screen-2xl px-10 text-xs text-rc_darkblue-darkest flex items-center"
@@ -31,7 +44,12 @@
 			</div>
 		</div>
 	</div>
+-->
+
+
+
 	<div
+
 		class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-4 mx-auto max-w-screen-2xl px-10 pt-20 pb-10 text-xs "
 	>
 		<div class="col-span-full text-white grid">
@@ -230,3 +248,11 @@
 		</div>
 	</div>
 </footer>
+
+
+<style>
+
+.splide__pagination{
+	display:none;
+}
+</style>
