@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { BlogPost } from '$lib/graphql/generated/schema';
+	import { base } from '$app/paths';
 	export let module: Partial<BlogPost> = {};
 </script>
 
@@ -18,9 +19,10 @@
 			<p class="text-white w-full md:w-10/12">
 				{module.teaserText}
 			</p>
-			<button
+			<a
+				href="{base}/blog/{module.slug}"
 				class="relative mt-6 pl-5 pr-3 py-2 bg-rc_red text-white text-xs md:text-sm font-bold uppercase tracking-widest hover:bg-rc_red-darker rc_button_corner"
-				>mehr erfahren</button
+				>mehr erfahren</a
 			>
 		</div>
 	</div>
