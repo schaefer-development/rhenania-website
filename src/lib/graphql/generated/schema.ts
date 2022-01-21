@@ -813,6 +813,7 @@ export type BlogPost = Node & {
 	/** The unique identifier */
 	id: Scalars['ID'];
 	modules: Array<BlogPostModules>;
+	page?: Maybe<Page>;
 	/** The time the document was published. Null on documents in draft stage. */
 	publishedAt?: Maybe<Scalars['DateTime']>;
 	/** User that last published this document */
@@ -860,6 +861,10 @@ export type BlogPostModulesArgs = {
 	skip?: InputMaybe<Scalars['Int']>;
 };
 
+export type BlogPostPageArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+};
+
 export type BlogPostPublishedByArgs = {
 	locales?: InputMaybe<Array<Locale>>;
 };
@@ -903,6 +908,7 @@ export type BlogPostCreateInput = {
 	createdAt?: InputMaybe<Scalars['DateTime']>;
 	heroBackgroundImage?: InputMaybe<AssetCreateOneInlineInput>;
 	modules?: InputMaybe<BlogPostModulesCreateManyInlineInput>;
+	page?: InputMaybe<PageCreateOneInlineInput>;
 	slug: Scalars['String'];
 	source?: InputMaybe<LinkCreateOneInlineInput>;
 	teaserHeadline?: InputMaybe<Scalars['String']>;
@@ -980,6 +986,7 @@ export type BlogPostManyWhereInput = {
 	id_not_starts_with?: InputMaybe<Scalars['ID']>;
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
+	page?: InputMaybe<PageWhereInput>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
 	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -1228,6 +1235,7 @@ export enum BlogPostOrderByInput {
 export type BlogPostUpdateInput = {
 	heroBackgroundImage?: InputMaybe<AssetUpdateOneInlineInput>;
 	modules?: InputMaybe<BlogPostModulesUpdateManyInlineInput>;
+	page?: InputMaybe<PageUpdateOneInlineInput>;
 	slug?: InputMaybe<Scalars['String']>;
 	source?: InputMaybe<LinkUpdateOneInlineInput>;
 	teaserHeadline?: InputMaybe<Scalars['String']>;
@@ -1347,6 +1355,7 @@ export type BlogPostWhereInput = {
 	id_not_starts_with?: InputMaybe<Scalars['ID']>;
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
+	page?: InputMaybe<PageWhereInput>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
 	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -8601,6 +8610,7 @@ export type PageManyWhereInput = {
 };
 
 export type PageModul =
+	| BlogPost
 	| CardsContainer
 	| Divider
 	| Eyecatcher
@@ -8610,6 +8620,7 @@ export type PageModul =
 	| Text;
 
 export type PageModulConnectInput = {
+	BlogPost?: InputMaybe<BlogPostConnectInput>;
 	CardsContainer?: InputMaybe<CardsContainerConnectInput>;
 	Divider?: InputMaybe<DividerConnectInput>;
 	Eyecatcher?: InputMaybe<EyecatcherConnectInput>;
@@ -8620,6 +8631,7 @@ export type PageModulConnectInput = {
 };
 
 export type PageModulCreateInput = {
+	BlogPost?: InputMaybe<BlogPostCreateInput>;
 	CardsContainer?: InputMaybe<CardsContainerCreateInput>;
 	Divider?: InputMaybe<DividerCreateInput>;
 	Eyecatcher?: InputMaybe<EyecatcherCreateInput>;
@@ -8644,6 +8656,7 @@ export type PageModulCreateOneInlineInput = {
 };
 
 export type PageModulUpdateInput = {
+	BlogPost?: InputMaybe<BlogPostUpdateInput>;
 	CardsContainer?: InputMaybe<CardsContainerUpdateInput>;
 	Divider?: InputMaybe<DividerUpdateInput>;
 	Eyecatcher?: InputMaybe<EyecatcherUpdateInput>;
@@ -8671,6 +8684,7 @@ export type PageModulUpdateManyInlineInput = {
 };
 
 export type PageModulUpdateManyWithNestedWhereInput = {
+	BlogPost?: InputMaybe<BlogPostUpdateManyWithNestedWhereInput>;
 	CardsContainer?: InputMaybe<CardsContainerUpdateManyWithNestedWhereInput>;
 	Divider?: InputMaybe<DividerUpdateManyWithNestedWhereInput>;
 	Eyecatcher?: InputMaybe<EyecatcherUpdateManyWithNestedWhereInput>;
@@ -8696,6 +8710,7 @@ export type PageModulUpdateOneInlineInput = {
 };
 
 export type PageModulUpdateWithNestedWhereUniqueInput = {
+	BlogPost?: InputMaybe<BlogPostUpdateWithNestedWhereUniqueInput>;
 	CardsContainer?: InputMaybe<CardsContainerUpdateWithNestedWhereUniqueInput>;
 	Divider?: InputMaybe<DividerUpdateWithNestedWhereUniqueInput>;
 	Eyecatcher?: InputMaybe<EyecatcherUpdateWithNestedWhereUniqueInput>;
@@ -8706,6 +8721,7 @@ export type PageModulUpdateWithNestedWhereUniqueInput = {
 };
 
 export type PageModulUpsertWithNestedWhereUniqueInput = {
+	BlogPost?: InputMaybe<BlogPostUpsertWithNestedWhereUniqueInput>;
 	CardsContainer?: InputMaybe<CardsContainerUpsertWithNestedWhereUniqueInput>;
 	Divider?: InputMaybe<DividerUpsertWithNestedWhereUniqueInput>;
 	Eyecatcher?: InputMaybe<EyecatcherUpsertWithNestedWhereUniqueInput>;
@@ -8716,6 +8732,7 @@ export type PageModulUpsertWithNestedWhereUniqueInput = {
 };
 
 export type PageModulWhereInput = {
+	BlogPost?: InputMaybe<BlogPostWhereInput>;
 	CardsContainer?: InputMaybe<CardsContainerWhereInput>;
 	Divider?: InputMaybe<DividerWhereInput>;
 	Eyecatcher?: InputMaybe<EyecatcherWhereInput>;
@@ -8726,6 +8743,7 @@ export type PageModulWhereInput = {
 };
 
 export type PageModulWhereUniqueInput = {
+	BlogPost?: InputMaybe<BlogPostWhereUniqueInput>;
 	CardsContainer?: InputMaybe<CardsContainerWhereUniqueInput>;
 	Divider?: InputMaybe<DividerWhereUniqueInput>;
 	Eyecatcher?: InputMaybe<EyecatcherWhereUniqueInput>;
@@ -11826,6 +11844,15 @@ export type Unnamed_2_Query = {
 				id: string;
 				slug: string;
 				modules: Array<
+					| {
+							__typename: 'BlogPost';
+							id: string;
+							slug: string;
+							teaserHeadline?: string | null | undefined;
+							teaserSubheadline?: string | null | undefined;
+							teaserText?: string | null | undefined;
+							heroBackgroundImage?: { __typename?: 'Asset'; url: string } | null | undefined;
+					  }
 					| {
 							__typename: 'CardsContainer';
 							id: string;
