@@ -11832,11 +11832,26 @@ export type Unnamed_1_Query = {
 		| undefined;
 };
 
-export type Unnamed_2_QueryVariables = Exact<{
+export type Unnamed_2_QueryVariables = Exact<{ [key: string]: never }>;
+
+export type Unnamed_2_Query = {
+	__typename?: 'Query';
+	blogPosts: Array<{
+		__typename?: 'BlogPost';
+		id: string;
+		slug: string;
+		teaserHeadline?: string | null | undefined;
+		teaserSubheadline?: string | null | undefined;
+		teaserText?: string | null | undefined;
+		heroBackgroundImage?: { __typename?: 'Asset'; url: string } | null | undefined;
+	}>;
+};
+
+export type Unnamed_3_QueryVariables = Exact<{
 	slug: Scalars['String'];
 }>;
 
-export type Unnamed_2_Query = {
+export type Unnamed_3_Query = {
 	__typename?: 'Query';
 	page?:
 		| {
