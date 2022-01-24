@@ -135,6 +135,16 @@ export const PAGE = gql`
 						}
 					}
 				}
+				... on BlogPost {
+					id
+					slug
+					teaserHeadline
+					teaserSubheadline
+					teaserText
+					heroBackgroundImage {
+						url
+					}
+				}
 			}
 		}
 	}

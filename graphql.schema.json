@@ -6451,6 +6451,39 @@
 						"deprecationReason": null
 					},
 					{
+						"name": "page",
+						"description": null,
+						"args": [
+							{
+								"name": "locales",
+								"description": "Allows to optionally override locale filtering behaviour in the query's subtree.\n\nNote that `page` is a model without localized fields and will not be affected directly by this argument, however the locales will be passed on to any relational fields in the query's subtree for filtering.\nFor related models with localized fields in the query's subtree, the first locale matching the provided list of locales will be returned, entries with non matching locales will be filtered out.\n\nThis argument will overwrite any existing locale filtering defined in the query's tree for the subtree.",
+								"type": {
+									"kind": "LIST",
+									"name": null,
+									"ofType": {
+										"kind": "NON_NULL",
+										"name": null,
+										"ofType": {
+											"kind": "ENUM",
+											"name": "Locale",
+											"ofType": null
+										}
+									}
+								},
+								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							}
+						],
+						"type": {
+							"kind": "OBJECT",
+							"name": "Page",
+							"ofType": null
+						},
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
 						"name": "publishedAt",
 						"description": "The time the document was published. Null on documents in draft stage.",
 						"args": [],
@@ -6916,6 +6949,18 @@
 						"type": {
 							"kind": "INPUT_OBJECT",
 							"name": "BlogPostModulesCreateManyInlineInput",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "page",
+						"description": null,
+						"type": {
+							"kind": "INPUT_OBJECT",
+							"name": "PageCreateOneInlineInput",
 							"ofType": null
 						},
 						"defaultValue": null,
@@ -7476,6 +7521,18 @@
 						"type": {
 							"kind": "SCALAR",
 							"name": "ID",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "page",
+						"description": null,
+						"type": {
+							"kind": "INPUT_OBJECT",
+							"name": "PageWhereInput",
 							"ofType": null
 						},
 						"defaultValue": null,
@@ -9389,6 +9446,18 @@
 						"deprecationReason": null
 					},
 					{
+						"name": "page",
+						"description": null,
+						"type": {
+							"kind": "INPUT_OBJECT",
+							"name": "PageUpdateOneInlineInput",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
 						"name": "slug",
 						"description": null,
 						"type": {
@@ -10250,6 +10319,18 @@
 						"type": {
 							"kind": "SCALAR",
 							"name": "ID",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "page",
+						"description": null,
+						"type": {
+							"kind": "INPUT_OBJECT",
+							"name": "PageWhereInput",
 							"ofType": null
 						},
 						"defaultValue": null,
@@ -63122,6 +63203,11 @@
 				"possibleTypes": [
 					{
 						"kind": "OBJECT",
+						"name": "BlogPost",
+						"ofType": null
+					},
+					{
+						"kind": "OBJECT",
 						"name": "CardsContainer",
 						"ofType": null
 					},
@@ -63163,6 +63249,18 @@
 				"description": null,
 				"fields": null,
 				"inputFields": [
+					{
+						"name": "BlogPost",
+						"description": null,
+						"type": {
+							"kind": "INPUT_OBJECT",
+							"name": "BlogPostConnectInput",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
 					{
 						"name": "CardsContainer",
 						"description": null,
@@ -63258,6 +63356,18 @@
 				"description": null,
 				"fields": null,
 				"inputFields": [
+					{
+						"name": "BlogPost",
+						"description": null,
+						"type": {
+							"kind": "INPUT_OBJECT",
+							"name": "BlogPostCreateInput",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
 					{
 						"name": "CardsContainer",
 						"description": null,
@@ -63439,6 +63549,18 @@
 				"description": null,
 				"fields": null,
 				"inputFields": [
+					{
+						"name": "BlogPost",
+						"description": null,
+						"type": {
+							"kind": "INPUT_OBJECT",
+							"name": "BlogPostUpdateInput",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
 					{
 						"name": "CardsContainer",
 						"description": null,
@@ -63686,6 +63808,18 @@
 				"fields": null,
 				"inputFields": [
 					{
+						"name": "BlogPost",
+						"description": null,
+						"type": {
+							"kind": "INPUT_OBJECT",
+							"name": "BlogPostUpdateManyWithNestedWhereInput",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
 						"name": "CardsContainer",
 						"description": null,
 						"type": {
@@ -63864,6 +63998,18 @@
 				"fields": null,
 				"inputFields": [
 					{
+						"name": "BlogPost",
+						"description": null,
+						"type": {
+							"kind": "INPUT_OBJECT",
+							"name": "BlogPostUpdateWithNestedWhereUniqueInput",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
 						"name": "CardsContainer",
 						"description": null,
 						"type": {
@@ -63958,6 +64104,18 @@
 				"description": null,
 				"fields": null,
 				"inputFields": [
+					{
+						"name": "BlogPost",
+						"description": null,
+						"type": {
+							"kind": "INPUT_OBJECT",
+							"name": "BlogPostUpsertWithNestedWhereUniqueInput",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
 					{
 						"name": "CardsContainer",
 						"description": null,
@@ -64054,6 +64212,18 @@
 				"fields": null,
 				"inputFields": [
 					{
+						"name": "BlogPost",
+						"description": null,
+						"type": {
+							"kind": "INPUT_OBJECT",
+							"name": "BlogPostWhereInput",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
 						"name": "CardsContainer",
 						"description": null,
 						"type": {
@@ -64148,6 +64318,18 @@
 				"description": null,
 				"fields": null,
 				"inputFields": [
+					{
+						"name": "BlogPost",
+						"description": null,
+						"type": {
+							"kind": "INPUT_OBJECT",
+							"name": "BlogPostWhereUniqueInput",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
 					{
 						"name": "CardsContainer",
 						"description": null,

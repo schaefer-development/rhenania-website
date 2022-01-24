@@ -30,10 +30,6 @@
 				<p class="text-white w-full md:w-10/12">
 					{blogPost.teaserText}
 				</p>
-				<button
-					class="relative mt-6 pl-5 pr-3 py-2 bg-rc_red text-white text-xs md:text-sm font-bold uppercase tracking-widest hover:bg-rc_red-darker rc_button_corner"
-					>mehr erfahren</button
-				>
 			</div>
 		</div>
 	</div>
