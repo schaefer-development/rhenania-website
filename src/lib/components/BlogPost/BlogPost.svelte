@@ -20,16 +20,13 @@
 			class="bg_layer absolute w-full h-full bg-cover bg-center "
 			style="background-image: url({blogPost.heroBackgroundImage.url})"
 		/>
-	<div
+		<div
 			class="relative z-2 h-30v flex items-center max-w-screen-md mx-auto px-4 lg:px-10 py-16 lg:py-24"
-		>
-		</div>
-		
+		/>
 	</div>
 	<div class="relative">
 		{#each blogPost.modules as module (module.id)}
 			<svelte:component this={mapping[module.__typename]} {module} />
 		{/each}
 	</div>
-
-	{/if}
+{/if}
