@@ -94,6 +94,11 @@
 				</p>
 
 				<a
+					href="{base}/ueberuns/"
+					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					>Über uns</a
+				>
+				<a
 					href="{base}/kontakt/"
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Kontakt und Anfahrt</a

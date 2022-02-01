@@ -63,12 +63,12 @@
 <style>
 	:global .mod_text ul {
 		padding: 1.5em 0;
+		margin-left: 2em;
 	}
 
 	:global .mod_text ul li {
 		list-style-type: none;
 		padding: 0.25em 1em;
-		text-indent: 1em;
 	}
 
 	:global .mod_text ul li:before {
