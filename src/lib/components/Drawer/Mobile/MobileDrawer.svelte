@@ -53,7 +53,7 @@
 				<DrawerAccordion id="versandlogistiksystem_drawer_full">
 					<span slot="headline">Versandlogistiksystem</span>
 					<div slot="content">
-						<a href="{base}/f95/" class="rc_desktopmenu_subpoint">F95 - Paket und Palettenversand</a
+						<a href="{base}/f95/" class="rc_desktopmenu_subpoint">F95 - Paket- und Palettenversand</a
 						>
 						<a href="{base}/k04" class="rc_desktopmenu_subpoint"
 							>K04 - Kommissionieren, Kontrollieren, Packen</a
@@ -66,7 +66,7 @@
 				<DrawerAccordion id="versandoptimierung_drawer_full">
 					<span slot="headline">Versandoptimierung</span>
 					<div slot="content">
-						<a href="{base}/u12/" class="rc_desktopmenu_subpoint">U12 - Umsatzbefreiung sichern</a>
+						<a href="{base}/u12/" class="rc_desktopmenu_subpoint">U12 - Umsatzsteuer Befreiung sichern</a>
 						<a href="{base}/duv/" class="rc_desktopmenu_subpoint">DUV - Dubletten vermeiden</a>
 						<a href="{base}/apk/" class="rc_desktopmenu_subpoint"
 							>APK - Adressprüfung und Korrektur</a
