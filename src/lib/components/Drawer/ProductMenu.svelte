@@ -20,7 +20,9 @@
 		<DrawerAccordion id="versandoptimierung">
 			<span slot="headline">Versandoptimierung</span>
 			<div slot="content">
-				<a href="{base}/u12/" class="rc_desktopmenu_subpoint">U12 - Umsatzsteuer Befreiung sichern</a>
+				<a href="{base}/u12/" class="rc_desktopmenu_subpoint"
+					>U12 - Umsatzsteuer Befreiung sichern</a
+				>
 				<a href="{base}/apk/" class="rc_desktopmenu_subpoint">APK - Adressprüfung und Korrektur</a>
 				<a href="{base}/duv/" class="rc_desktopmenu_subpoint">DUV - Dubletten vermeiden</a>
 				<a href="{base}/g10/" class="rc_desktopmenu_subpoint">G10 - Gefahrgutversand</a>

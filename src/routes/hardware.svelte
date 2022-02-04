@@ -11,4 +11,3 @@
 </script>
 
 <Page page={data.page} />
-
