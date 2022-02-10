@@ -244,6 +244,11 @@
 				>
 				<br />
 				Copyright {date}<br />
+				<a
+					href="{base}/sandbox/"
+					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					>Sandbox</a
+				>
 			</p>
 		</div>
 	</div>
