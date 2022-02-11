@@ -22,6 +22,14 @@ export const PAGE = gql`
 			slug
 			modules {
 				__typename
+				... on AssetLink {
+					id
+					headline
+					downloadlinkLabel
+					assetPicker {
+						url
+					}
+				}
 				... on Divider {
 					id
 					padding
