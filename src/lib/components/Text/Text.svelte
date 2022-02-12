@@ -33,7 +33,7 @@
 				</div>
 			</div>
 			{#if module.text.html}
-				<div class="py-4 rc_break_hyphens haha">
+				<div class="py-4 rc_break_hyphens">
 					{@html module.text.html}
 				</div>
 			{/if}

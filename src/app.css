@@ -108,7 +108,3 @@ blockquote {
 	margin: 1em 0;
 	border-left: 2px solid #7a7a7a;
 }
-
-#custom_splide ul.splide__pagination {
-	display: none;
-}
