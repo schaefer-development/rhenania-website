@@ -16,7 +16,7 @@
 				<img src={card.icon.url} alt="Rhenania Icon" />
 			</div>
 			<div class="text px-6 py-6 flex flex-col text-center">
-				<div class="rc_h4 text-rc_darkblue mb-2">{card.headline}</div>
+				<div class="rc_h3 text-rc_darkblue mb-2">{card.headline}</div>
 				{#if card.subheadline}
 					<div class="mb-2">{card.subheadline}</div>
 				{/if}
@@ -49,7 +49,7 @@
 			<img src={card.icon.url} alt="Rhenania Icon" />
 		</div>
 		<div class="text px-6 py-6 flex flex-col text-center">
-			<div class="rc_h4 text-rc_darkblue mb-2">{card.headline}</div>
+			<div class="rc_h3 text-rc_darkblue mb-2">{card.headline}</div>
 			{#if card.subheadline}
 				<div class="mb-2">{card.subheadline}</div>
 			{/if}

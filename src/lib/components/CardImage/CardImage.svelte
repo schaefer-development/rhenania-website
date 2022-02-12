@@ -16,7 +16,7 @@
 				/>
 			</div>
 			<div class="text px-6 py-6 flex flex-col text-center">
-				<div class="rc_h4 text-rc_darkblue mb-2">{card.headline}</div>
+				<div class="rc_h3 text-rc_darkblue mb-2">{card.headline}</div>
 				<span class="relative flex flex-row items-center mx-auto text-rc_red">
 					<span class="uppercase tracking-wider text-sm font-medium">Mehr</span>
 					<svg
@@ -44,7 +44,7 @@
 			/>
 		</div>
 		<div class="text px-6 py-6 flex flex-col text-center">
-			<div class="rc_h4 text-rc_darkblue mb-2">{card.headline}</div>
+			<div class="rc_h3 text-rc_darkblue mb-2">{card.headline}</div>
 		</div>
 	{/if}
 </div>

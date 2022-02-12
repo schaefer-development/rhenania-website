@@ -1,8 +1,22 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+
+	let y;
+	let paraEffect = 0.5;
 </script>
 
+
+<svelte:window bind:scrollY={y} />
+
 <div class="mod_heroStart w-full overflow-hidden h-60v">
+
+
+
+
+<div
+	class="relative parallax h-60v"
+	style="transform: translate(0, {y < 2 ? y * 1 : y * paraEffect}px)"
+>
 	<div
 		class="bg_layer absolute w-full h-60v bg-cover bg-center "
 		style="background-image: url({base}/hero_example.jpg)"
@@ -23,4 +37,6 @@
 			>mehr erfahren</button
 		>
 	</div>
+</div>
+
 </div>

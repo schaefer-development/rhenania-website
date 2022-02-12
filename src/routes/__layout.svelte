@@ -10,6 +10,8 @@
 	const toggleMenuFull = () => {
 		openMenuFull = !openMenuFull;
 	};
+
+
 </script>
 
 <svelte:head>
@@ -19,6 +21,7 @@
 		content="Software aus Aegidenberg (Bad Honnef) zum Optimieren des Versandprozesses "
 	/>
 </svelte:head>
+
 
 <div
 	class="flex flex-col min-h-screen justify-between bg-gray-50"
