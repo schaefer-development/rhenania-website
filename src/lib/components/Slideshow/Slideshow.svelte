@@ -46,30 +46,30 @@
 		</div>
 
 		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_jumo.png" alt="Jumo" class="w-10/12 mx-auto" />
+			<img src="{base}/logo_clients/clients_jumo.svg" alt="Jumo" class="w-10/12 mx-auto" />
 		</SplideSlide>
 		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_lamy.png" alt="Lamy" class="w-10/12 mx-auto" />
-		</SplideSlide>
-
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_duravit.png" alt="Duravit" class="w-10/12 mx-auto" />
+			<img src="{base}/logo_clients/clients_lamy.svg" alt="Lamy" class="w-10/12 mx-auto" />
 		</SplideSlide>
 
 		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_abus.png" alt="Abus" class="w-10/12 mx-auto" />
+			<img src="{base}/logo_clients/clients_duravit.svg" alt="Duravit" class="w-10/12 mx-auto" />
+		</SplideSlide>
+
+		<SplideSlide data-splide-interval="9000">
+			<img src="{base}/logo_clients/clients_abus.svg" alt="Abus" class="w-10/12 mx-auto" />
 		</SplideSlide>
 		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_fujifilm.png" alt="Fujifilm" class="w-10/12 mx-auto" />
+			<img src="{base}/logo_clients/clients_fujifilm.svg" alt="Fujifilm" class="w-10/12 mx-auto" />
 		</SplideSlide>
 		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_vanlaack.png" alt="Fujifilm" class="w-10/12 mx-auto" />
+			<img src="{base}/logo_clients/clients_vanlaack.svg" alt="Fujifilm" class="w-10/12 mx-auto" />
 		</SplideSlide>
 		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_igepa.png" alt="Fujifilm" class="w-10/12 mx-auto" />
+			<img src="{base}/logo_clients/clients_igepa.svg" alt="Fujifilm" class="w-10/12 mx-auto" />
 		</SplideSlide>
 		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_dom.png" alt="Fujifilm" class="w-10/12 mx-auto" />
+			<img src="{base}/logo_clients/clients_dom.svg" alt="Fujifilm" class="w-10/12 mx-auto" />
 		</SplideSlide>
 	</Splide>
 </div>
