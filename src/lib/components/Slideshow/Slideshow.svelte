@@ -11,6 +11,7 @@
 			perPage: 5,
 			perMove: 1,
 			gap: '1rem',
+			pagination: false,
 			autoScroll: {
 				speed: 2
 			}
