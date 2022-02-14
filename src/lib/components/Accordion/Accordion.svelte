@@ -24,7 +24,7 @@
 		</div>
 	</label>
 	<div class="tab-content overflow-hidden">
-		<div class="py-4"><slot name="content" /></div>
+		<div class="pt-4 pb-8"><slot name="content" /></div>
 	</div>
 </div>
 
