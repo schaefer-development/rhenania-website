@@ -2,7 +2,7 @@
 	import Page from '$lib/components/Page/Page.svelte';
 	import type { LoadPageData } from '$lib/helpers';
 	import { LoadPage } from '$lib/helpers';
-	export const load = LoadPage('gelangensbestaetigung');
+	export const load = LoadPage('abliefernachweis');
 	export const prerender = true;
 </script>
 

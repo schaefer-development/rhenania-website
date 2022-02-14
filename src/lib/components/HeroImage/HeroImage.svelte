@@ -1,6 +1,9 @@
 <script lang="ts">
 	import type { HeroImage } from '$lib/graphql/generated/schema';
 	export let module: Partial<HeroImage> = {};
+
+	let y;
+	let paraEffect = 0.5;
 </script>
 
 <div class="mod_heroImage relative w-full h-30v mb-24">
