@@ -56,6 +56,19 @@ export const BLOG_POST = gql`
 						html
 					}
 				}
+				... on AccordionContainer {
+					id
+					headline
+					paddingTop
+					paddingBottom
+					accordionItems {
+						id
+						question
+						answer {
+							html
+						}
+					}
+				}
 				... on CardsContainer {
 					id
 					headline

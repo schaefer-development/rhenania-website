@@ -45,12 +45,12 @@ export const PAGE = gql`
 						url
 					}
 				}
-				... on FaqContainer {
+				... on AccordionContainer {
 					id
 					headline
 					paddingTop
 					paddingBottom
-					faqItems {
+					accordionItems {
 						id
 						question
 						answer {

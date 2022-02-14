@@ -3,7 +3,7 @@
 	import Divider from '$lib/components/Divider/Divider.svelte';
 	import CardsContainer from '$lib/components/CardsContainer/CardsContainer.svelte';
 	import Eyecatcher from '$lib/components/Eyecatcher/Eyecatcher.svelte';
-	import FaqContainer from '$lib/components/FaqContainer/FaqContainer.svelte';
+	import AccordionContainer from '$lib/components/AccordionContainer/AccordionContainer.svelte';
 	import HeroImage from '$lib/components/HeroImage/HeroImage.svelte';
 	import Image from '$lib/components/Image/Image.svelte';
 	import Text from '$lib/components/Text/Text.svelte';
@@ -15,7 +15,7 @@
 		Divider,
 		CardsContainer,
 		Eyecatcher,
-		FaqContainer,
+		AccordionContainer,
 		Image,
 		Text,
 		HeroImage,
