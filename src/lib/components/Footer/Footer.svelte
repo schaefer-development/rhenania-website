@@ -10,39 +10,11 @@
 
 <footer class="text-white bg-rc_darkblue-darkest">
 	<!-- -->
-	<div class="bg-rc_darkblue">
-		<div class="mx-auto max-w-screen-2xl px-10 text-xs text-rc_darkblue-darkest flex items-center">
+	<div class="bg-rc_darkblue w-full">
+		<div class="mx-auto max-w-screen-2xl px-10 text-rc_darkblue-darkest flex items-center">
 			<Slideshow />
 		</div>
 	</div>
-
-	<!-- 
-	<div class="bg-rc_darkblue">
-		<div
-			class="grid grid-cols-3 md:grid-cols-5 gap-4 mx-auto max-w-screen-2xl px-10 text-xs text-rc_darkblue-darkest flex items-center"
-		>
-			<div>
-				<img src="{base}/logo_clients/clients_jumo.svg" alt="Jumo" class="w-10/12 mx-auto" />
-			</div>
-			<div>
-				<img src="{base}/logo_clients/clients_lamy.svg" alt="Lamy" class="w-10/12 mx-auto" />
-			</div>
-			<div>
-				<img src="{base}/logo_clients/clients_duravit.svg" alt="Duravit" class="w-10/12 mx-auto" />
-			</div>
-			<div>
-				<img src="{base}/logo_clients/clients_abus.svg" alt="Abus" class="w-10/12 mx-auto" />
-			</div>
-			<div>
-				<img
-					src="{base}/logo_clients/clients_fujifilm.svg"
-					alt="Fujifilm"
-					class="w-10/12 mx-auto"
-				/>
-			</div>
-		</div>
-	</div>
--->
 
 	<div
 		class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-4 mx-auto max-w-screen-2xl px-10 pt-20 pb-10 text-xs "

@@ -45,16 +45,14 @@
 	.st39{clip-path:url(#SVGID_4_);}
 	.st40{clip-path:url(#SVGID_6_);fill:#D0D0D0;}
 	.st41{clip-path:url(#SVGID_8_);fill:#D0D0D0;}
-	.st42{fill:#1C1C1C;}
-	.st43{fill-rule:evenodd;clip-rule:evenodd;fill:#1C1C1C;}
-	.st44{fill:#3F3E3C;}
-	.st45{fill:#2374BA;}
-	.st46{fill:#AEB2B5;}
-	.st47{fill-rule:evenodd;clip-rule:evenodd;fill:#164194;}
-	.st48{fill:#E30613;}
-	.st49{fill-rule:evenodd;clip-rule:evenodd;fill:#DC911B;}
-	.st50{fill:#DC911B;}
-	.st51{fill:#FF0066;}
+	.st42{fill:#3F3E3C;}
+	.st43{fill:#2374BA;}
+	.st44{fill:#AEB2B5;}
+	.st45{fill-rule:evenodd;clip-rule:evenodd;fill:#164194;}
+	.st46{fill:#E30613;}
+	.st47{fill-rule:evenodd;clip-rule:evenodd;fill:#DC911B;}
+	.st48{fill:#DC911B;}
+	.st49{fill:#FF0066;}
 </style>
 <path class="st1" d="M76.3,107.4L91.1,84h14.4l-18.8,29.6c-0.9,1.5-2.6,2.4-4.4,2.4H70.2c-1.8,0-3.4-0.9-4.4-2.4L47.1,84h14.4
 	L76.3,107.4z M151.3,84h-35.5c-3.8,0-6.9,3.1-6.9,6.9v18.2c0,3.8,3.1,6.9,6.9,6.9h35.5c3.8,0,6.9-3.1,6.9-6.9V90.9
