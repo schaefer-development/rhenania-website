@@ -63,8 +63,8 @@ export const BLOG_POST = gql`
 					paddingBottom
 					accordionItems {
 						id
-						question
-						answer {
+						headline
+						content {
 							html
 						}
 					}

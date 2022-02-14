@@ -12,9 +12,9 @@
 			<h1 class="rc_h1 text-rc_darkblue-darkest pb-8">{module.headline}</h1>
 			{#each module.accordionItems as accordionItem (accordionItem.id)}
 				<Accordion id={accordionItem.id}>
-					<span slot="headline" class="faq_question">{accordionItem.question}</span>
-					<div slot="content" class="faq_answer">
-						{@html accordionItem.answer.html}
+					<span slot="headline" class="item_headline">{accordionItem.headline}</span>
+					<div slot="content" class="item_content">
+						{@html accordionItem.content.html}
 					</div>
 				</Accordion>
 			{/each}
@@ -24,7 +24,7 @@
 </div>
 
 <style>
-	:global .faq_answer a {
+	:global .item_headline a {
 		color: #ea3336;
 		font-weight: 600;
 		font-size: 0.875rem;
@@ -33,7 +33,7 @@
 		text-transform: uppercase;
 	}
 
-	:global .faq_answer a:hover {
+	:global .item_content a:hover {
 		text-decoration: underline;
 	}
 </style>

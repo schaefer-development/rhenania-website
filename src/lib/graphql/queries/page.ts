@@ -52,8 +52,8 @@ export const PAGE = gql`
 					paddingBottom
 					accordionItems {
 						id
-						question
-						answer {
+						headline
+						content {
 							html
 						}
 					}
