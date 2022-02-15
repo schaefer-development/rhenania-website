@@ -3,7 +3,7 @@
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 </script>
 
-<div id="custom_splide" class="w-full">
+<div id="custom_splide" class="w-full relative">
 	<Splide
 		options={{
 			autoplay: true,
@@ -37,12 +37,12 @@
 					xml:space="preserve"
 				>
 					<style type="text/css">
-						.st0 {
+						.arrow {
 							fill: #ffffff;
 						}
 					</style>
 					<defs />
-					<polygon class="st0" points="1.4,39.4 0,38.1 18.3,19.7 0,1.4 1.4,0 21.1,19.7 " />
+					<polygon class="arrow" points="1.4,39.4 0,38.1 18.3,19.7 0,1.4 1.4,0 21.1,19.7 " />
 				</svg>
 			</button>
 
@@ -66,12 +66,12 @@
 					xml:space="preserve"
 				>
 					<style type="text/css">
-						.st0 {
+						.arrow {
 							fill: #ffffff;
 						}
 					</style>
 					<defs />
-					<polygon class="st0" points="1.4,39.4 0,38.1 18.3,19.7 0,1.4 1.4,0 21.1,19.7 " />
+					<polygon class="arrow" points="1.4,39.4 0,38.1 18.3,19.7 0,1.4 1.4,0 21.1,19.7 " />
 				</svg>
 			</button>
 		</div>
