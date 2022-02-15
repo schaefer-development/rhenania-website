@@ -34,6 +34,10 @@ export const PAGE = gql`
 					id
 					padding
 				}
+				... on CtaLink {
+					id
+					padding
+				}
 				... on Eyecatcher {
 					id
 					headline

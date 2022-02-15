@@ -32,6 +32,10 @@ export const BLOG_POST = gql`
 					id
 					padding
 				}
+				... on CtaLink {
+					id
+					padding
+				}
 				... on Image {
 					id
 					image {
