@@ -5,7 +5,7 @@
 	export let module: Partial<AccordionContainer> = {};
 </script>
 
-<div class="mod_accordionContainer">
+<div class="mod_accordionContainer relative">
 	<div class="relative w-full {mapPadding(module.paddingTop)}" />
 	<div class="relative bg-white py-12 shadow-md">
 		<div class="relative z-10 max-w-screen-md mx-auto px-10 ">

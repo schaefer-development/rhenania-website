@@ -4,7 +4,7 @@
 	export let module: Partial<Divider> = {};
 </script>
 
-<div class="mod_divider">
+<div class="mod_divider relative">
 	<div class="w-full {mapPadding(module.padding)}" />
 	<div class="mod_divider w-full">
 		<div class="h-1 w-full border-gray-300 border-b-4" />

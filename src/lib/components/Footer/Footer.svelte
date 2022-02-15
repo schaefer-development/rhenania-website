@@ -8,7 +8,7 @@
 	let date = new Date().getFullYear();
 </script>
 
-<footer class="text-white bg-rc_darkblue-darkest">
+<footer class="text-white bg-rc_darkblue-darkest relative">
 	<!-- -->
 	<div class="bg-rc_darkblue w-full">
 		<div class="mx-auto max-w-screen-2xl px-10 text-rc_darkblue-darkest flex items-center">

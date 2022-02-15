@@ -7,7 +7,7 @@
 
 <svelte:window bind:scrollY={y} />
 
-<div class="mod_heroStart w-full overflow-hidden h-60v">
+<div class="mod_heroStart relative w-full overflow-hidden h-60v">
 	<div
 		class="relative parallax h-60v"
 		style="transform: translate(0, {y < 2 ? y * 1 : y * paraEffect}px)"

@@ -2,7 +2,7 @@
 	export let module: Partial<AssetLink> = {};
 </script>
 
-<div class="mod_assetlink">
+<div class="mod_assetlink relative">
 	<div class="relative z-10 max-w-screen-lg mx-auto px-10 py-2">
 		{#if module?.headline}
 			<h2 class="rc_h2 pb-6 text-rc_red">{module.headline}</h2>

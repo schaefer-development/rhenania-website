@@ -4,7 +4,7 @@
 	export let module: Partial<Eyecatcher> = {};
 </script>
 
-<div class="mod_eyecatcher">
+<div class="mod_eyecatcher relative">
 	<div class="relative w-full {mapPadding(module.paddingTop)}" />
 	<div class="relative bg-rc_darkblue overflow-hidden py-10 lg:py-20">
 		<div class="absolute rc_background_triangle w-full h-full -mt-10 lg:-mt-20" />

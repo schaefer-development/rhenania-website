@@ -10,7 +10,7 @@
 	};
 </script>
 
-<div class="mod_cardsContainer">
+<div class="mod_cardsContainer relative">
 	<div class="relative {mapPadding(module.paddingTop)}" />
 	<div class="max-w-screen-2xl px-4 lg:px-10 mx-auto py-6 lg:py-12">
 		<h1 id={module.headline} class="rc_h1 text-rc_darkblue text-center pb-4">{module.headline}</h1>

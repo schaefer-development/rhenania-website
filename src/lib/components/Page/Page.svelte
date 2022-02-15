@@ -1,6 +1,7 @@
 <script lang="ts">
 	import AssetLink from '$lib/components/AssetLink/AssetLink.svelte';
 	import Divider from '$lib/components/Divider/Divider.svelte';
+	import CtaLink from '$lib/components/CtaLink/CtaLink.svelte';
 	import CardsContainer from '$lib/components/CardsContainer/CardsContainer.svelte';
 	import Eyecatcher from '$lib/components/Eyecatcher/Eyecatcher.svelte';
 	import AccordionContainer from '$lib/components/AccordionContainer/AccordionContainer.svelte';
@@ -13,6 +14,7 @@
 	const mapping = {
 		AssetLink,
 		Divider,
+		CtaLink,
 		CardsContainer,
 		Eyecatcher,
 		AccordionContainer,

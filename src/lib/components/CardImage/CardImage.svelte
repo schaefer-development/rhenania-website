@@ -5,7 +5,7 @@
 </script>
 
 <div
-	class="mod_cardImage mx-5 my-5 grow overflow-hidden bg-white shadow-sm hover:shadow-lg duration-150 ease-in-out"
+	class="mod_cardImage relative mx-5 my-5 grow overflow-hidden bg-white shadow-sm hover:shadow-lg duration-150 ease-in-out"
 >
 	{#if card?.link?.target}
 		<a href="{base}/{card.link.target.slug}" title="{base}/{card.link.target.slug}">

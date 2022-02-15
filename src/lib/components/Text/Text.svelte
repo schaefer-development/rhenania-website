@@ -5,7 +5,7 @@
 	export let module: Partial<Text> = {};
 </script>
 
-<div class="mod_text">
+<div class="mod_text relative">
 	<div class="relative w-full {mapPadding(module.paddingTop)}" />
 
 	{#if module?.link?.target}
