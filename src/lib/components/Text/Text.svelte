@@ -68,14 +68,14 @@
 
 	:global .mod_text ul li {
 		list-style-type: none;
-		padding: 0.25em 1em;
+		padding: 0.25em 1em 1em 0.25em;
 	}
 
 	:global .mod_text ul li:before {
 		position: absolute;
 		content: '■';
 		color: rgba(42, 73, 157, 1);
-		margin-left: -3em;
+		margin-left: -2em;
 	}
 
 	:global .mod_text ol {
@@ -97,5 +97,12 @@
 		color: rgba(42, 73, 157, 1);
 		margin-left: -3em;
 		font-weight: bold;
+	}
+
+	:global .mod_text .highlight_blue {
+		background-color: #2a499d;
+		color: #fff;
+		padding: 1em;
+		margin: 1em 0;
 	}
 </style>

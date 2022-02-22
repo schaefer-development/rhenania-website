@@ -108,3 +108,20 @@ blockquote {
 	margin: 1em 0;
 	border-left: 2px solid #7a7a7a;
 }
+
+.mod_accordion .item_content ul {
+	padding: 1.5em 0;
+	margin-left: 2em;
+}
+
+.mod_accordion .item_content ul li {
+	list-style-type: none;
+	padding: 0.25em 1em 1em 0.25em;
+}
+
+.mod_accordion .item_content ul li:before {
+	position: absolute;
+	content: '■';
+	color: rgba(42, 73, 157, 1);
+	margin-left: -2em;
+}
