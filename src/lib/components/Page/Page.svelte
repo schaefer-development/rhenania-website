@@ -5,6 +5,7 @@
 	import CardsContainer from '$lib/components/CardsContainer/CardsContainer.svelte';
 	import Eyecatcher from '$lib/components/Eyecatcher/Eyecatcher.svelte';
 	import AccordionContainer from '$lib/components/AccordionContainer/AccordionContainer.svelte';
+	import ReferencesContainer from '$lib/components/ReferencesContainer/ReferencesContainer.svelte';
 	import HeroImage from '$lib/components/HeroImage/HeroImage.svelte';
 	import Image from '$lib/components/Image/Image.svelte';
 	import Text from '$lib/components/Text/Text.svelte';
@@ -18,6 +19,7 @@
 		CardsContainer,
 		Eyecatcher,
 		AccordionContainer,
+		ReferencesContainer,
 		Image,
 		Text,
 		HeroImage,

@@ -157,6 +157,16 @@ export const PAGE = gql`
 						url
 					}
 				}
+				... on ReferencesContainer {
+					id
+					referenceItems {
+						id
+						referenceLogo {
+							id
+							url
+						}
+					}
+				}
 			}
 		}
 	}

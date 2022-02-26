@@ -1,6 +1,10 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
+
+	import ReferenceItem from '$lib/components/ReferenceItem/ReferenceItem.svelte';
+	import type { ReferencesContainer } from '$lib/graphql/generated/schema';
+	export let module: Partial<ReferencesContainer> = {};
 </script>
 
 <div id="custom_splide" class="w-full relative">
@@ -79,6 +83,7 @@
 		<SplideSlide data-splide-interval="9000">
 			<img src="{base}/logo_clients/clients_abus.svg" alt="Abus" class="w-10/12 mx-auto" />
 		</SplideSlide>
+
 		<SplideSlide data-splide-interval="9000">
 			<img
 				src="{base}/logo_clients/clients_aokverlag.svg"

@@ -68,7 +68,7 @@
 
 	:global .mod_text ul li {
 		list-style-type: none;
-		padding: 0.25em 1em 1em 0.25em;
+		padding: 0.25em 1em 0.5em 0.25em;
 	}
 
 	:global .mod_text ul li:before {
@@ -85,7 +85,7 @@
 
 	:global .mod_text ol li {
 		list-style-type: numeric;
-		padding: 0.25em 1em;
+		padding: 0.25em 1em 0.5em 0.25em;
 		text-indent: 1em;
 		display: block;
 	}
