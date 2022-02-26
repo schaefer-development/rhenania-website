@@ -1,10 +1,7 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
-
-	import ReferenceItem from '$lib/components/ReferenceItem/ReferenceItem.svelte';
-	import type { ReferencesContainer } from '$lib/graphql/generated/schema';
-	export let module: Partial<ReferencesContainer> = {};
+	import type { ReferencesItem } from '$lib/graphql/generated/schema';
+	export let referenceItems: ReferencesItem[] = [];
 </script>
 
 <div id="custom_splide" class="w-full relative">
@@ -80,174 +77,14 @@
 			</button>
 		</div>
 
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_abus.svg" alt="Abus" class="w-10/12 mx-auto" />
-		</SplideSlide>
-
-		<SplideSlide data-splide-interval="9000">
-			<img
-				src="{base}/logo_clients/clients_aokverlag.svg"
-				alt="AOK Verlag"
-				class="w-10/12 mx-auto"
-			/>
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_aperam.svg" alt="Aperam" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img
-				src="{base}/logo_clients/clients_bernstein.svg"
-				alt="Bernstein"
-				class="w-10/12 mx-auto"
-			/>
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_damstahl.svg" alt="Damstahl" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_detax.svg" alt="Detax" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_dom.svg" alt="DOM" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_dometic.svg" alt="Dometic" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img
-				src="{base}/logo_clients/clients_drittewelt.svg"
-				alt="Dritte Welt Shop"
-				class="w-10/12 mx-auto"
-			/>
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_duravit.svg" alt="Duravit" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img
-				src="{base}/logo_clients/clients_duttenhofer.svg"
-				alt="Duttenhofer"
-				class="w-10/12 mx-auto"
-			/>
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_ekz.svg" alt="EKZ" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_eska.svg" alt="ESKA" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_esv.svg" alt="ESV" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img
-				src="{base}/logo_clients/clients_fahrenberger.svg"
-				alt="Fahrenberger"
-				class="w-10/12 mx-auto"
-			/>
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_flintec.svg" alt="Flintec" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_fujifilm.svg" alt="Fujifilm" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_gewa.svg" alt="Gewa" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_gondrom.svg" alt="Gondrom" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_hagesued.svg" alt="HageSüd" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_hoermann.svg" alt="Hörmann" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_igepa.svg" alt="IGEPA" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_intenso.svg" alt="Intenso" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_jordan.svg" alt="Jordan" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_jumo.svg" alt="Jumo" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_kindundco.svg" alt="Kind&Co" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img
-				src="{base}/logo_clients/clients_labothene.svg"
-				alt="Labothene"
-				class="w-10/12 mx-auto"
-			/>
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_lamy.svg" alt="Lamy" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_lr.svg" alt="LR" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_marbach.svg" alt="Marbach" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_meindl.svg" alt="Meindl" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_noegel.svg" alt="Nögel" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_oui.svg" alt="Oui" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img
-				src="{base}/logo_clients/clients_perschmann.svg"
-				alt="Perschmann"
-				class="w-10/12 mx-auto"
-			/>
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_picard.svg" alt="Picard" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_rrteam.svg" alt="RR Team" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img
-				src="{base}/logo_clients/clients_schlengermann.svg"
-				alt="Schlengermann"
-				class="w-10/12 mx-auto"
-			/>
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_techem.svg" alt="Techem" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_troeber.svg" alt="Tröber" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_tucker.svg" alt="Tucker" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_vanlaack.svg" alt="van Laack" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_volz.svg" alt="Volz" class="w-10/12 mx-auto" />
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img
-				src="{base}/logo_clients/clients_westaflex.svg"
-				alt="Westaflex"
-				class="w-10/12 mx-auto"
-			/>
-		</SplideSlide>
-		<SplideSlide data-splide-interval="9000">
-			<img src="{base}/logo_clients/clients_wundw.svg" alt="W und W" class="w-10/12 mx-auto" />
-		</SplideSlide>
+		{#each referenceItems as referenceItem (referenceItem.id)}
+			<SplideSlide data-splide-interval="9000">
+				<img
+					src={referenceItem.referenceLogo.url}
+					alt="Hier fehlt der alt text"
+					class="w-10/12 mx-auto"
+				/>
+			</SplideSlide>
+		{/each}
 	</Splide>
 </div>

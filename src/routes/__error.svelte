@@ -11,10 +11,10 @@
 	}
 </script>
 
-<script>
-	export let title;
-	export let status;
-	export let error;
+<script lang="ts">
+	export let title: string;
+	export let status: number;
+	export let error: { message: string };
 </script>
 
 <svelte:head>
