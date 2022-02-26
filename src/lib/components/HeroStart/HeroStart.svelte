@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 
-	let y;
+	let y: number;
 	let paraEffect = 0.5;
 </script>
 

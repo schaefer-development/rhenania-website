@@ -4,15 +4,16 @@
 	import FooterAccordion from '$lib/components/Footer/FooterAccordion.svelte';
 
 	import Slideshow from '$lib/components/Slideshow/Slideshow.svelte';
+	import type { ReferencesItem } from '$lib/graphql/generated/schema';
 
 	let date = new Date().getFullYear();
+	export let referenceItems: ReferencesItem[];
 </script>
 
 <footer class="text-white bg-rc_darkblue-darkest relative">
-	<!-- -->
 	<div class="bg-rc_darkblue w-full">
 		<div class="mx-auto max-w-screen-2xl px-10 text-rc_darkblue-darkest flex items-center">
-			<Slideshow />
+			<Slideshow {referenceItems} />
 		</div>
 	</div>
 

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { HeroImage } from '$lib/graphql/generated/schema';
 	export let module: Partial<HeroImage> = {};
-	let y;
+	let y: number;
 	let paraEffect = 0.5;
 </script>
 
