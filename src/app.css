@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'Red Hat Text';
 	font-size: calc(12.5px + 0.25vw);

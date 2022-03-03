@@ -27,10 +27,14 @@
 				Wir optimieren Ihren Versand
 			</h1>
 			<h2 class="rc_h2 text-rc_skyblue rc_text_shadow">Software und Systeme für Versandlogistik</h2>
-			<button
+
+			<a
+				href="#Unser Leistungsangebot"
+				title="Unser Leistungsangebot"
 				class="relative mt-8 pl-5 pr-3 py-2 bg-rc_red text-white text-sm font-bold uppercase tracking-widest hover:bg-rc_red-darker rc_button_corner"
-				>mehr erfahren</button
 			>
+				Mehr erfahren
+			</a>
 		</div>
 	</div>
 </div>
