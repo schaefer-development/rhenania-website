@@ -83,6 +83,7 @@ export const BLOG_POST = gql`
 						... on CardImage {
 							id
 							headline
+							linkToId
 							image {
 								id
 								url

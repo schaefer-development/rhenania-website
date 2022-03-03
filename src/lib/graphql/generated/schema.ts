@@ -3370,6 +3370,7 @@ export type CardImage = Node & {
 	id: Scalars['ID'];
 	image?: Maybe<Asset>;
 	link?: Maybe<Link>;
+	linkToId?: Maybe<Scalars['String']>;
 	/** The time the document was published. Null on documents in draft stage. */
 	publishedAt?: Maybe<Scalars['DateTime']>;
 	/** User that last published this document */
@@ -3452,6 +3453,7 @@ export type CardImageCreateInput = {
 	headline?: InputMaybe<Scalars['String']>;
 	image?: InputMaybe<AssetCreateOneInlineInput>;
 	link?: InputMaybe<LinkCreateOneInlineInput>;
+	linkToId?: InputMaybe<Scalars['String']>;
 	updatedAt?: InputMaybe<Scalars['DateTime']>;
 };
 
@@ -3545,6 +3547,25 @@ export type CardImageManyWhereInput = {
 	id_starts_with?: InputMaybe<Scalars['ID']>;
 	image?: InputMaybe<AssetWhereInput>;
 	link?: InputMaybe<LinkWhereInput>;
+	linkToId?: InputMaybe<Scalars['String']>;
+	/** All values containing the given string. */
+	linkToId_contains?: InputMaybe<Scalars['String']>;
+	/** All values ending with the given string. */
+	linkToId_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are contained in given list. */
+	linkToId_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values that are not equal to given value. */
+	linkToId_not?: InputMaybe<Scalars['String']>;
+	/** All values not containing the given string. */
+	linkToId_not_contains?: InputMaybe<Scalars['String']>;
+	/** All values not ending with the given string */
+	linkToId_not_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are not contained in given list. */
+	linkToId_not_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values not starting with the given string. */
+	linkToId_not_starts_with?: InputMaybe<Scalars['String']>;
+	/** All values starting with the given string. */
+	linkToId_starts_with?: InputMaybe<Scalars['String']>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
 	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -3589,6 +3610,8 @@ export enum CardImageOrderByInput {
 	HeadlineDesc = 'headline_DESC',
 	IdAsc = 'id_ASC',
 	IdDesc = 'id_DESC',
+	LinkToIdAsc = 'linkToId_ASC',
+	LinkToIdDesc = 'linkToId_DESC',
 	PublishedAtAsc = 'publishedAt_ASC',
 	PublishedAtDesc = 'publishedAt_DESC',
 	UpdatedAtAsc = 'updatedAt_ASC',
@@ -3600,6 +3623,7 @@ export type CardImageUpdateInput = {
 	headline?: InputMaybe<Scalars['String']>;
 	image?: InputMaybe<AssetUpdateOneInlineInput>;
 	link?: InputMaybe<LinkUpdateOneInlineInput>;
+	linkToId?: InputMaybe<Scalars['String']>;
 };
 
 export type CardImageUpdateManyInlineInput = {
@@ -3621,6 +3645,7 @@ export type CardImageUpdateManyInlineInput = {
 
 export type CardImageUpdateManyInput = {
 	headline?: InputMaybe<Scalars['String']>;
+	linkToId?: InputMaybe<Scalars['String']>;
 };
 
 export type CardImageUpdateManyWithNestedWhereInput = {
@@ -3733,6 +3758,25 @@ export type CardImageWhereInput = {
 	id_starts_with?: InputMaybe<Scalars['ID']>;
 	image?: InputMaybe<AssetWhereInput>;
 	link?: InputMaybe<LinkWhereInput>;
+	linkToId?: InputMaybe<Scalars['String']>;
+	/** All values containing the given string. */
+	linkToId_contains?: InputMaybe<Scalars['String']>;
+	/** All values ending with the given string. */
+	linkToId_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are contained in given list. */
+	linkToId_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values that are not equal to given value. */
+	linkToId_not?: InputMaybe<Scalars['String']>;
+	/** All values not containing the given string. */
+	linkToId_not_contains?: InputMaybe<Scalars['String']>;
+	/** All values not ending with the given string */
+	linkToId_not_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are not contained in given list. */
+	linkToId_not_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values not starting with the given string. */
+	linkToId_not_starts_with?: InputMaybe<Scalars['String']>;
+	/** All values starting with the given string. */
+	linkToId_starts_with?: InputMaybe<Scalars['String']>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
 	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -14373,6 +14417,7 @@ export type Unnamed_1_Query = {
 										__typename: 'CardImage';
 										id: string;
 										headline?: string | null | undefined;
+										linkToId?: string | null | undefined;
 										image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
 										link?:
 											| {
@@ -14524,6 +14569,7 @@ export type Unnamed_3_Query = {
 										__typename: 'CardImage';
 										id: string;
 										headline?: string | null | undefined;
+										linkToId?: string | null | undefined;
 										image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
 										link?:
 											| {
