@@ -14489,11 +14489,26 @@ export type Unnamed_2_Query = {
 	}>;
 };
 
-export type Unnamed_3_QueryVariables = Exact<{
+export type Unnamed_3_QueryVariables = Exact<{ [key: string]: never }>;
+
+export type Unnamed_3_Query = {
+	__typename?: 'Query';
+	referencesContainers: Array<{
+		__typename?: 'ReferencesContainer';
+		id: string;
+		referenceItems: Array<{
+			__typename?: 'ReferencesItem';
+			id: string;
+			referenceLogo?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
+		}>;
+	}>;
+};
+
+export type Unnamed_4_QueryVariables = Exact<{
 	slug: Scalars['String'];
 }>;
 
-export type Unnamed_3_Query = {
+export type Unnamed_4_Query = {
 	__typename?: 'Query';
 	page?:
 		| {

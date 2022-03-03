@@ -1,3 +1,27 @@
+<script context="module">
+	/** @type {import('@sveltejs/kit').Load} */
+	export async function load({ fetch }) {
+		const url = `/layout.json`;
+		const res = await fetch(url);
+
+		if (res.ok) {
+			const { data } = await res.json();
+			return {
+				props: { data }
+			};
+		}
+
+		const {
+			errors: [error]
+		} = await res.json();
+
+		return {
+			status: res.status,
+			error: new Error(error.message)
+		};
+	}
+</script>
+
 <script lang="ts">
 	import '../app.css';
 	import '@fontsource/red-hat-text/400.css';
@@ -10,6 +34,10 @@
 	const toggleMenuFull = () => {
 		openMenuFull = !openMenuFull;
 	};
+
+	export let data = { referencesContainers: null };
+
+	let referenceItems = data.referencesContainers?.[0].referenceItems;
 </script>
 
 <svelte:head>
@@ -28,5 +56,5 @@
 	<main class="mb-auto">
 		<slot />
 	</main>
-	<Footer />
+	<Footer {referenceItems} />
 </div>
