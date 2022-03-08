@@ -1,5 +1,6 @@
 <script lang="ts">
-	export let partnerItem: Partial<partnerItem> = {};
+	import type { PartnerItem } from '$lib/graphql/generated/schema';
+	export let partnerItem: Partial<PartnerItem> = {};
 </script>
 
 <div class="mod_partnerItem relative grid grid-cols-1 sm:grid-cols-2 gap-4">

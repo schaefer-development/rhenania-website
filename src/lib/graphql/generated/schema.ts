@@ -4432,7 +4432,6 @@ export type CtaLink = Node & {
 	id: Scalars['ID'];
 	padding: Padding;
 	page?: Maybe<Page>;
-	pages: Array<Page>;
 	/** The time the document was published. Null on documents in draft stage. */
 	publishedAt?: Maybe<Scalars['DateTime']>;
 	/** User that last published this document */
@@ -4468,16 +4467,6 @@ export type CtaLinkHistoryArgs = {
 
 export type CtaLinkPageArgs = {
 	locales?: InputMaybe<Array<Locale>>;
-};
-
-export type CtaLinkPagesArgs = {
-	after?: InputMaybe<Scalars['String']>;
-	before?: InputMaybe<Scalars['String']>;
-	first?: InputMaybe<Scalars['Int']>;
-	last?: InputMaybe<Scalars['Int']>;
-	locales?: InputMaybe<Array<Locale>>;
-	skip?: InputMaybe<Scalars['Int']>;
-	where?: InputMaybe<PageWhereInput>;
 };
 
 export type CtaLinkPublishedByArgs = {
@@ -4520,7 +4509,6 @@ export type CtaLinkCreateInput = {
 	createdAt?: InputMaybe<Scalars['DateTime']>;
 	padding: Padding;
 	page?: InputMaybe<PageCreateOneInlineInput>;
-	pages?: InputMaybe<PageCreateManyInlineInput>;
 	updatedAt?: InputMaybe<Scalars['DateTime']>;
 };
 
@@ -4601,9 +4589,6 @@ export type CtaLinkManyWhereInput = {
 	/** All values that are not contained in given list. */
 	padding_not_in?: InputMaybe<Array<Padding>>;
 	page?: InputMaybe<PageWhereInput>;
-	pages_every?: InputMaybe<PageWhereInput>;
-	pages_none?: InputMaybe<PageWhereInput>;
-	pages_some?: InputMaybe<PageWhereInput>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
 	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -4658,7 +4643,6 @@ export type CtaLinkUpdateInput = {
 	blogPost?: InputMaybe<BlogPostUpdateOneInlineInput>;
 	padding?: InputMaybe<Padding>;
 	page?: InputMaybe<PageUpdateOneInlineInput>;
-	pages?: InputMaybe<PageUpdateManyInlineInput>;
 };
 
 export type CtaLinkUpdateManyInlineInput = {
@@ -4779,9 +4763,6 @@ export type CtaLinkWhereInput = {
 	/** All values that are not contained in given list. */
 	padding_not_in?: InputMaybe<Array<Padding>>;
 	page?: InputMaybe<PageWhereInput>;
-	pages_every?: InputMaybe<PageWhereInput>;
-	pages_none?: InputMaybe<PageWhereInput>;
-	pages_some?: InputMaybe<PageWhereInput>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
 	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -4839,7 +4820,6 @@ export type Divider = Node & {
 	id: Scalars['ID'];
 	padding: Padding;
 	page?: Maybe<Page>;
-	pages: Array<Page>;
 	/** The time the document was published. Null on documents in draft stage. */
 	publishedAt?: Maybe<Scalars['DateTime']>;
 	/** User that last published this document */
@@ -4875,16 +4855,6 @@ export type DividerHistoryArgs = {
 
 export type DividerPageArgs = {
 	locales?: InputMaybe<Array<Locale>>;
-};
-
-export type DividerPagesArgs = {
-	after?: InputMaybe<Scalars['String']>;
-	before?: InputMaybe<Scalars['String']>;
-	first?: InputMaybe<Scalars['Int']>;
-	last?: InputMaybe<Scalars['Int']>;
-	locales?: InputMaybe<Array<Locale>>;
-	skip?: InputMaybe<Scalars['Int']>;
-	where?: InputMaybe<PageWhereInput>;
 };
 
 export type DividerPublishedByArgs = {
@@ -4927,7 +4897,6 @@ export type DividerCreateInput = {
 	createdAt?: InputMaybe<Scalars['DateTime']>;
 	padding: Padding;
 	page?: InputMaybe<PageCreateOneInlineInput>;
-	pages?: InputMaybe<PageCreateManyInlineInput>;
 	updatedAt?: InputMaybe<Scalars['DateTime']>;
 };
 
@@ -5008,9 +4977,6 @@ export type DividerManyWhereInput = {
 	/** All values that are not contained in given list. */
 	padding_not_in?: InputMaybe<Array<Padding>>;
 	page?: InputMaybe<PageWhereInput>;
-	pages_every?: InputMaybe<PageWhereInput>;
-	pages_none?: InputMaybe<PageWhereInput>;
-	pages_some?: InputMaybe<PageWhereInput>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
 	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -5065,7 +5031,6 @@ export type DividerUpdateInput = {
 	blogPost?: InputMaybe<BlogPostUpdateOneInlineInput>;
 	padding?: InputMaybe<Padding>;
 	page?: InputMaybe<PageUpdateOneInlineInput>;
-	pages?: InputMaybe<PageUpdateManyInlineInput>;
 };
 
 export type DividerUpdateManyInlineInput = {
@@ -5186,9 +5151,6 @@ export type DividerWhereInput = {
 	/** All values that are not contained in given list. */
 	padding_not_in?: InputMaybe<Array<Padding>>;
 	page?: InputMaybe<PageWhereInput>;
-	pages_every?: InputMaybe<PageWhereInput>;
-	pages_none?: InputMaybe<PageWhereInput>;
-	pages_some?: InputMaybe<PageWhereInput>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
 	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -7294,6 +7256,8 @@ export type Mutation = {
 	createLink?: Maybe<Link>;
 	/** Create one page */
 	createPage?: Maybe<Page>;
+	/** Create one partnerContainer */
+	createPartnerContainer?: Maybe<PartnerContainer>;
 	/** Create one partnerItem */
 	createPartnerItem?: Maybe<PartnerItem>;
 	/** Create one referencesContainer */
@@ -7438,6 +7402,13 @@ export type Mutation = {
 	/** Delete many Page documents, return deleted documents */
 	deleteManyPagesConnection: PageConnection;
 	/**
+	 * Delete many PartnerContainer documents
+	 * @deprecated Please use the new paginated many mutation (deleteManyPartnerContainersConnection)
+	 */
+	deleteManyPartnerContainers: BatchPayload;
+	/** Delete many PartnerContainer documents, return deleted documents */
+	deleteManyPartnerContainersConnection: PartnerContainerConnection;
+	/**
 	 * Delete many PartnerItem documents
 	 * @deprecated Please use the new paginated many mutation (deleteManyPartnerItemsConnection)
 	 */
@@ -7467,6 +7438,8 @@ export type Mutation = {
 	deleteManyTextsConnection: TextConnection;
 	/** Delete one page from _all_ existing stages. Returns deleted document. */
 	deletePage?: Maybe<Page>;
+	/** Delete one partnerContainer from _all_ existing stages. Returns deleted document. */
+	deletePartnerContainer?: Maybe<PartnerContainer>;
 	/** Delete one partnerItem from _all_ existing stages. Returns deleted document. */
 	deletePartnerItem?: Maybe<PartnerItem>;
 	/** Delete one referencesContainer from _all_ existing stages. Returns deleted document. */
@@ -7613,6 +7586,13 @@ export type Mutation = {
 	/** Publish many Page documents */
 	publishManyPagesConnection: PageConnection;
 	/**
+	 * Publish many PartnerContainer documents
+	 * @deprecated Please use the new paginated many mutation (publishManyPartnerContainersConnection)
+	 */
+	publishManyPartnerContainers: BatchPayload;
+	/** Publish many PartnerContainer documents */
+	publishManyPartnerContainersConnection: PartnerContainerConnection;
+	/**
 	 * Publish many PartnerItem documents
 	 * @deprecated Please use the new paginated many mutation (publishManyPartnerItemsConnection)
 	 */
@@ -7642,6 +7622,8 @@ export type Mutation = {
 	publishManyTextsConnection: TextConnection;
 	/** Publish one page */
 	publishPage?: Maybe<Page>;
+	/** Publish one partnerContainer */
+	publishPartnerContainer?: Maybe<PartnerContainer>;
 	/** Publish one partnerItem */
 	publishPartnerItem?: Maybe<PartnerItem>;
 	/** Publish one referencesContainer */
@@ -7680,6 +7662,8 @@ export type Mutation = {
 	schedulePublishLink?: Maybe<Link>;
 	/** Schedule to publish one page */
 	schedulePublishPage?: Maybe<Page>;
+	/** Schedule to publish one partnerContainer */
+	schedulePublishPartnerContainer?: Maybe<PartnerContainer>;
 	/** Schedule to publish one partnerItem */
 	schedulePublishPartnerItem?: Maybe<PartnerItem>;
 	/** Schedule to publish one referencesContainer */
@@ -7718,6 +7702,8 @@ export type Mutation = {
 	scheduleUnpublishLink?: Maybe<Link>;
 	/** Unpublish one page from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
 	scheduleUnpublishPage?: Maybe<Page>;
+	/** Unpublish one partnerContainer from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
+	scheduleUnpublishPartnerContainer?: Maybe<PartnerContainer>;
 	/** Unpublish one partnerItem from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
 	scheduleUnpublishPartnerItem?: Maybe<PartnerItem>;
 	/** Unpublish one referencesContainer from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
@@ -7860,6 +7846,13 @@ export type Mutation = {
 	/** Find many Page documents that match criteria in specified stage and unpublish from target stages */
 	unpublishManyPagesConnection: PageConnection;
 	/**
+	 * Unpublish many PartnerContainer documents
+	 * @deprecated Please use the new paginated many mutation (unpublishManyPartnerContainersConnection)
+	 */
+	unpublishManyPartnerContainers: BatchPayload;
+	/** Find many PartnerContainer documents that match criteria in specified stage and unpublish from target stages */
+	unpublishManyPartnerContainersConnection: PartnerContainerConnection;
+	/**
 	 * Unpublish many PartnerItem documents
 	 * @deprecated Please use the new paginated many mutation (unpublishManyPartnerItemsConnection)
 	 */
@@ -7889,6 +7882,8 @@ export type Mutation = {
 	unpublishManyTextsConnection: TextConnection;
 	/** Unpublish one page from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
 	unpublishPage?: Maybe<Page>;
+	/** Unpublish one partnerContainer from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
+	unpublishPartnerContainer?: Maybe<PartnerContainer>;
 	/** Unpublish one partnerItem from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
 	unpublishPartnerItem?: Maybe<PartnerItem>;
 	/** Unpublish one referencesContainer from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
@@ -8031,6 +8026,13 @@ export type Mutation = {
 	/** Update many Page documents */
 	updateManyPagesConnection: PageConnection;
 	/**
+	 * Update many partnerContainers
+	 * @deprecated Please use the new paginated many mutation (updateManyPartnerContainersConnection)
+	 */
+	updateManyPartnerContainers: BatchPayload;
+	/** Update many PartnerContainer documents */
+	updateManyPartnerContainersConnection: PartnerContainerConnection;
+	/**
 	 * Update many partnerItems
 	 * @deprecated Please use the new paginated many mutation (updateManyPartnerItemsConnection)
 	 */
@@ -8060,6 +8062,8 @@ export type Mutation = {
 	updateManyTextsConnection: TextConnection;
 	/** Update one page */
 	updatePage?: Maybe<Page>;
+	/** Update one partnerContainer */
+	updatePartnerContainer?: Maybe<PartnerContainer>;
 	/** Update one partnerItem */
 	updatePartnerItem?: Maybe<PartnerItem>;
 	/** Update one referencesContainer */
@@ -8100,6 +8104,8 @@ export type Mutation = {
 	upsertLink?: Maybe<Link>;
 	/** Upsert one page */
 	upsertPage?: Maybe<Page>;
+	/** Upsert one partnerContainer */
+	upsertPartnerContainer?: Maybe<PartnerContainer>;
 	/** Upsert one partnerItem */
 	upsertPartnerItem?: Maybe<PartnerItem>;
 	/** Upsert one referencesContainer */
@@ -8168,6 +8174,10 @@ export type MutationCreateLinkArgs = {
 
 export type MutationCreatePageArgs = {
 	data: PageCreateInput;
+};
+
+export type MutationCreatePartnerContainerArgs = {
+	data: PartnerContainerCreateInput;
 };
 
 export type MutationCreatePartnerItemArgs = {
@@ -8441,6 +8451,19 @@ export type MutationDeleteManyPagesConnectionArgs = {
 	where?: InputMaybe<PageManyWhereInput>;
 };
 
+export type MutationDeleteManyPartnerContainersArgs = {
+	where?: InputMaybe<PartnerContainerManyWhereInput>;
+};
+
+export type MutationDeleteManyPartnerContainersConnectionArgs = {
+	after?: InputMaybe<Scalars['ID']>;
+	before?: InputMaybe<Scalars['ID']>;
+	first?: InputMaybe<Scalars['Int']>;
+	last?: InputMaybe<Scalars['Int']>;
+	skip?: InputMaybe<Scalars['Int']>;
+	where?: InputMaybe<PartnerContainerManyWhereInput>;
+};
+
 export type MutationDeleteManyPartnerItemsArgs = {
 	where?: InputMaybe<PartnerItemManyWhereInput>;
 };
@@ -8495,6 +8518,10 @@ export type MutationDeleteManyTextsConnectionArgs = {
 
 export type MutationDeletePageArgs = {
 	where: PageWhereUniqueInput;
+};
+
+export type MutationDeletePartnerContainerArgs = {
+	where: PartnerContainerWhereUniqueInput;
 };
 
 export type MutationDeletePartnerItemArgs = {
@@ -8849,6 +8876,22 @@ export type MutationPublishManyPagesConnectionArgs = {
 	where?: InputMaybe<PageManyWhereInput>;
 };
 
+export type MutationPublishManyPartnerContainersArgs = {
+	to?: Array<Stage>;
+	where?: InputMaybe<PartnerContainerManyWhereInput>;
+};
+
+export type MutationPublishManyPartnerContainersConnectionArgs = {
+	after?: InputMaybe<Scalars['ID']>;
+	before?: InputMaybe<Scalars['ID']>;
+	first?: InputMaybe<Scalars['Int']>;
+	from?: InputMaybe<Stage>;
+	last?: InputMaybe<Scalars['Int']>;
+	skip?: InputMaybe<Scalars['Int']>;
+	to?: Array<Stage>;
+	where?: InputMaybe<PartnerContainerManyWhereInput>;
+};
+
 export type MutationPublishManyPartnerItemsArgs = {
 	to?: Array<Stage>;
 	where?: InputMaybe<PartnerItemManyWhereInput>;
@@ -8916,6 +8959,11 @@ export type MutationPublishManyTextsConnectionArgs = {
 export type MutationPublishPageArgs = {
 	to?: Array<Stage>;
 	where: PageWhereUniqueInput;
+};
+
+export type MutationPublishPartnerContainerArgs = {
+	to?: Array<Stage>;
+	where: PartnerContainerWhereUniqueInput;
 };
 
 export type MutationPublishPartnerItemArgs = {
@@ -9047,6 +9095,13 @@ export type MutationSchedulePublishPageArgs = {
 	releaseId?: InputMaybe<Scalars['String']>;
 	to?: Array<Stage>;
 	where: PageWhereUniqueInput;
+};
+
+export type MutationSchedulePublishPartnerContainerArgs = {
+	releaseAt?: InputMaybe<Scalars['DateTime']>;
+	releaseId?: InputMaybe<Scalars['String']>;
+	to?: Array<Stage>;
+	where: PartnerContainerWhereUniqueInput;
 };
 
 export type MutationSchedulePublishPartnerItemArgs = {
@@ -9184,6 +9239,13 @@ export type MutationScheduleUnpublishPageArgs = {
 	releaseAt?: InputMaybe<Scalars['DateTime']>;
 	releaseId?: InputMaybe<Scalars['String']>;
 	where: PageWhereUniqueInput;
+};
+
+export type MutationScheduleUnpublishPartnerContainerArgs = {
+	from?: Array<Stage>;
+	releaseAt?: InputMaybe<Scalars['DateTime']>;
+	releaseId?: InputMaybe<Scalars['String']>;
+	where: PartnerContainerWhereUniqueInput;
 };
 
 export type MutationScheduleUnpublishPartnerItemArgs = {
@@ -9536,6 +9598,22 @@ export type MutationUnpublishManyPagesConnectionArgs = {
 	where?: InputMaybe<PageManyWhereInput>;
 };
 
+export type MutationUnpublishManyPartnerContainersArgs = {
+	from?: Array<Stage>;
+	where?: InputMaybe<PartnerContainerManyWhereInput>;
+};
+
+export type MutationUnpublishManyPartnerContainersConnectionArgs = {
+	after?: InputMaybe<Scalars['ID']>;
+	before?: InputMaybe<Scalars['ID']>;
+	first?: InputMaybe<Scalars['Int']>;
+	from?: Array<Stage>;
+	last?: InputMaybe<Scalars['Int']>;
+	skip?: InputMaybe<Scalars['Int']>;
+	stage?: InputMaybe<Stage>;
+	where?: InputMaybe<PartnerContainerManyWhereInput>;
+};
+
 export type MutationUnpublishManyPartnerItemsArgs = {
 	from?: Array<Stage>;
 	where?: InputMaybe<PartnerItemManyWhereInput>;
@@ -9603,6 +9681,11 @@ export type MutationUnpublishManyTextsConnectionArgs = {
 export type MutationUnpublishPageArgs = {
 	from?: Array<Stage>;
 	where: PageWhereUniqueInput;
+};
+
+export type MutationUnpublishPartnerContainerArgs = {
+	from?: Array<Stage>;
+	where: PartnerContainerWhereUniqueInput;
 };
 
 export type MutationUnpublishPartnerItemArgs = {
@@ -9920,6 +10003,21 @@ export type MutationUpdateManyPagesConnectionArgs = {
 	where?: InputMaybe<PageManyWhereInput>;
 };
 
+export type MutationUpdateManyPartnerContainersArgs = {
+	data: PartnerContainerUpdateManyInput;
+	where?: InputMaybe<PartnerContainerManyWhereInput>;
+};
+
+export type MutationUpdateManyPartnerContainersConnectionArgs = {
+	after?: InputMaybe<Scalars['ID']>;
+	before?: InputMaybe<Scalars['ID']>;
+	data: PartnerContainerUpdateManyInput;
+	first?: InputMaybe<Scalars['Int']>;
+	last?: InputMaybe<Scalars['Int']>;
+	skip?: InputMaybe<Scalars['Int']>;
+	where?: InputMaybe<PartnerContainerManyWhereInput>;
+};
+
 export type MutationUpdateManyPartnerItemsArgs = {
 	data: PartnerItemUpdateManyInput;
 	where?: InputMaybe<PartnerItemManyWhereInput>;
@@ -9983,6 +10081,11 @@ export type MutationUpdateManyTextsConnectionArgs = {
 export type MutationUpdatePageArgs = {
 	data: PageUpdateInput;
 	where: PageWhereUniqueInput;
+};
+
+export type MutationUpdatePartnerContainerArgs = {
+	data: PartnerContainerUpdateInput;
+	where: PartnerContainerWhereUniqueInput;
 };
 
 export type MutationUpdatePartnerItemArgs = {
@@ -10085,6 +10188,11 @@ export type MutationUpsertPageArgs = {
 	where: PageWhereUniqueInput;
 };
 
+export type MutationUpsertPartnerContainerArgs = {
+	upsert: PartnerContainerUpsertInput;
+	where: PartnerContainerWhereUniqueInput;
+};
+
 export type MutationUpsertPartnerItemArgs = {
 	upsert: PartnerItemUpsertInput;
 	where: PartnerItemWhereUniqueInput;
@@ -10132,7 +10240,6 @@ export type Page = Node & {
 	history: Array<Version>;
 	/** The unique identifier */
 	id: Scalars['ID'];
-	manytomanymodulsperpage: Array<PageMultiplemodulsperpage>;
 	modules: Array<PageModul>;
 	/** The time the document was published. Null on documents in draft stage. */
 	publishedAt?: Maybe<Scalars['DateTime']>;
@@ -10163,15 +10270,6 @@ export type PageHistoryArgs = {
 	limit?: Scalars['Int'];
 	skip?: Scalars['Int'];
 	stageOverride?: InputMaybe<Stage>;
-};
-
-export type PageManytomanymodulsperpageArgs = {
-	after?: InputMaybe<Scalars['String']>;
-	before?: InputMaybe<Scalars['String']>;
-	first?: InputMaybe<Scalars['Int']>;
-	last?: InputMaybe<Scalars['Int']>;
-	locales?: InputMaybe<Array<Locale>>;
-	skip?: InputMaybe<Scalars['Int']>;
 };
 
 export type PageModulesArgs = {
@@ -10224,7 +10322,6 @@ export type PageConnection = {
 
 export type PageCreateInput = {
 	createdAt?: InputMaybe<Scalars['DateTime']>;
-	manytomanymodulsperpage?: InputMaybe<PageMultiplemodulsperpageCreateManyInlineInput>;
 	modules?: InputMaybe<PageModulCreateManyInlineInput>;
 	slug: Scalars['String'];
 	source?: InputMaybe<LinkCreateOneInlineInput>;
@@ -10381,7 +10478,7 @@ export type PageModul =
 	| Eyecatcher
 	| HeroImage
 	| Image
-	| PartnerItem
+	| PartnerContainer
 	| ReferencesContainer
 	| Text;
 
@@ -10395,7 +10492,7 @@ export type PageModulConnectInput = {
 	Eyecatcher?: InputMaybe<EyecatcherConnectInput>;
 	HeroImage?: InputMaybe<HeroImageConnectInput>;
 	Image?: InputMaybe<ImageConnectInput>;
-	PartnerItem?: InputMaybe<PartnerItemConnectInput>;
+	PartnerContainer?: InputMaybe<PartnerContainerConnectInput>;
 	ReferencesContainer?: InputMaybe<ReferencesContainerConnectInput>;
 	Text?: InputMaybe<TextConnectInput>;
 };
@@ -10410,7 +10507,7 @@ export type PageModulCreateInput = {
 	Eyecatcher?: InputMaybe<EyecatcherCreateInput>;
 	HeroImage?: InputMaybe<HeroImageCreateInput>;
 	Image?: InputMaybe<ImageCreateInput>;
-	PartnerItem?: InputMaybe<PartnerItemCreateInput>;
+	PartnerContainer?: InputMaybe<PartnerContainerCreateInput>;
 	ReferencesContainer?: InputMaybe<ReferencesContainerCreateInput>;
 	Text?: InputMaybe<TextCreateInput>;
 };
@@ -10439,7 +10536,7 @@ export type PageModulUpdateInput = {
 	Eyecatcher?: InputMaybe<EyecatcherUpdateInput>;
 	HeroImage?: InputMaybe<HeroImageUpdateInput>;
 	Image?: InputMaybe<ImageUpdateInput>;
-	PartnerItem?: InputMaybe<PartnerItemUpdateInput>;
+	PartnerContainer?: InputMaybe<PartnerContainerUpdateInput>;
 	ReferencesContainer?: InputMaybe<ReferencesContainerUpdateInput>;
 	Text?: InputMaybe<TextUpdateInput>;
 };
@@ -10471,7 +10568,7 @@ export type PageModulUpdateManyWithNestedWhereInput = {
 	Eyecatcher?: InputMaybe<EyecatcherUpdateManyWithNestedWhereInput>;
 	HeroImage?: InputMaybe<HeroImageUpdateManyWithNestedWhereInput>;
 	Image?: InputMaybe<ImageUpdateManyWithNestedWhereInput>;
-	PartnerItem?: InputMaybe<PartnerItemUpdateManyWithNestedWhereInput>;
+	PartnerContainer?: InputMaybe<PartnerContainerUpdateManyWithNestedWhereInput>;
 	ReferencesContainer?: InputMaybe<ReferencesContainerUpdateManyWithNestedWhereInput>;
 	Text?: InputMaybe<TextUpdateManyWithNestedWhereInput>;
 };
@@ -10501,7 +10598,7 @@ export type PageModulUpdateWithNestedWhereUniqueInput = {
 	Eyecatcher?: InputMaybe<EyecatcherUpdateWithNestedWhereUniqueInput>;
 	HeroImage?: InputMaybe<HeroImageUpdateWithNestedWhereUniqueInput>;
 	Image?: InputMaybe<ImageUpdateWithNestedWhereUniqueInput>;
-	PartnerItem?: InputMaybe<PartnerItemUpdateWithNestedWhereUniqueInput>;
+	PartnerContainer?: InputMaybe<PartnerContainerUpdateWithNestedWhereUniqueInput>;
 	ReferencesContainer?: InputMaybe<ReferencesContainerUpdateWithNestedWhereUniqueInput>;
 	Text?: InputMaybe<TextUpdateWithNestedWhereUniqueInput>;
 };
@@ -10516,7 +10613,7 @@ export type PageModulUpsertWithNestedWhereUniqueInput = {
 	Eyecatcher?: InputMaybe<EyecatcherUpsertWithNestedWhereUniqueInput>;
 	HeroImage?: InputMaybe<HeroImageUpsertWithNestedWhereUniqueInput>;
 	Image?: InputMaybe<ImageUpsertWithNestedWhereUniqueInput>;
-	PartnerItem?: InputMaybe<PartnerItemUpsertWithNestedWhereUniqueInput>;
+	PartnerContainer?: InputMaybe<PartnerContainerUpsertWithNestedWhereUniqueInput>;
 	ReferencesContainer?: InputMaybe<ReferencesContainerUpsertWithNestedWhereUniqueInput>;
 	Text?: InputMaybe<TextUpsertWithNestedWhereUniqueInput>;
 };
@@ -10531,7 +10628,7 @@ export type PageModulWhereInput = {
 	Eyecatcher?: InputMaybe<EyecatcherWhereInput>;
 	HeroImage?: InputMaybe<HeroImageWhereInput>;
 	Image?: InputMaybe<ImageWhereInput>;
-	PartnerItem?: InputMaybe<PartnerItemWhereInput>;
+	PartnerContainer?: InputMaybe<PartnerContainerWhereInput>;
 	ReferencesContainer?: InputMaybe<ReferencesContainerWhereInput>;
 	Text?: InputMaybe<TextWhereInput>;
 };
@@ -10546,97 +10643,9 @@ export type PageModulWhereUniqueInput = {
 	Eyecatcher?: InputMaybe<EyecatcherWhereUniqueInput>;
 	HeroImage?: InputMaybe<HeroImageWhereUniqueInput>;
 	Image?: InputMaybe<ImageWhereUniqueInput>;
-	PartnerItem?: InputMaybe<PartnerItemWhereUniqueInput>;
+	PartnerContainer?: InputMaybe<PartnerContainerWhereUniqueInput>;
 	ReferencesContainer?: InputMaybe<ReferencesContainerWhereUniqueInput>;
 	Text?: InputMaybe<TextWhereUniqueInput>;
-};
-
-export type PageMultiplemodulsperpage = CtaLink | Divider;
-
-export type PageMultiplemodulsperpageConnectInput = {
-	CtaLink?: InputMaybe<CtaLinkConnectInput>;
-	Divider?: InputMaybe<DividerConnectInput>;
-};
-
-export type PageMultiplemodulsperpageCreateInput = {
-	CtaLink?: InputMaybe<CtaLinkCreateInput>;
-	Divider?: InputMaybe<DividerCreateInput>;
-};
-
-export type PageMultiplemodulsperpageCreateManyInlineInput = {
-	/** Connect multiple existing PageMultiplemodulsperpage documents */
-	connect?: InputMaybe<Array<PageMultiplemodulsperpageWhereUniqueInput>>;
-	/** Create and connect multiple existing PageMultiplemodulsperpage documents */
-	create?: InputMaybe<Array<PageMultiplemodulsperpageCreateInput>>;
-};
-
-export type PageMultiplemodulsperpageCreateOneInlineInput = {
-	/** Connect one existing PageMultiplemodulsperpage document */
-	connect?: InputMaybe<PageMultiplemodulsperpageWhereUniqueInput>;
-	/** Create and connect one PageMultiplemodulsperpage document */
-	create?: InputMaybe<PageMultiplemodulsperpageCreateInput>;
-};
-
-export type PageMultiplemodulsperpageUpdateInput = {
-	CtaLink?: InputMaybe<CtaLinkUpdateInput>;
-	Divider?: InputMaybe<DividerUpdateInput>;
-};
-
-export type PageMultiplemodulsperpageUpdateManyInlineInput = {
-	/** Connect multiple existing PageMultiplemodulsperpage documents */
-	connect?: InputMaybe<Array<PageMultiplemodulsperpageConnectInput>>;
-	/** Create and connect multiple PageMultiplemodulsperpage documents */
-	create?: InputMaybe<Array<PageMultiplemodulsperpageCreateInput>>;
-	/** Delete multiple PageMultiplemodulsperpage documents */
-	delete?: InputMaybe<Array<PageMultiplemodulsperpageWhereUniqueInput>>;
-	/** Disconnect multiple PageMultiplemodulsperpage documents */
-	disconnect?: InputMaybe<Array<PageMultiplemodulsperpageWhereUniqueInput>>;
-	/** Override currently-connected documents with multiple existing PageMultiplemodulsperpage documents */
-	set?: InputMaybe<Array<PageMultiplemodulsperpageWhereUniqueInput>>;
-	/** Update multiple PageMultiplemodulsperpage documents */
-	update?: InputMaybe<Array<PageMultiplemodulsperpageUpdateWithNestedWhereUniqueInput>>;
-	/** Upsert multiple PageMultiplemodulsperpage documents */
-	upsert?: InputMaybe<Array<PageMultiplemodulsperpageUpsertWithNestedWhereUniqueInput>>;
-};
-
-export type PageMultiplemodulsperpageUpdateManyWithNestedWhereInput = {
-	CtaLink?: InputMaybe<CtaLinkUpdateManyWithNestedWhereInput>;
-	Divider?: InputMaybe<DividerUpdateManyWithNestedWhereInput>;
-};
-
-export type PageMultiplemodulsperpageUpdateOneInlineInput = {
-	/** Connect existing PageMultiplemodulsperpage document */
-	connect?: InputMaybe<PageMultiplemodulsperpageWhereUniqueInput>;
-	/** Create and connect one PageMultiplemodulsperpage document */
-	create?: InputMaybe<PageMultiplemodulsperpageCreateInput>;
-	/** Delete currently connected PageMultiplemodulsperpage document */
-	delete?: InputMaybe<Scalars['Boolean']>;
-	/** Disconnect currently connected PageMultiplemodulsperpage document */
-	disconnect?: InputMaybe<Scalars['Boolean']>;
-	/** Update single PageMultiplemodulsperpage document */
-	update?: InputMaybe<PageMultiplemodulsperpageUpdateWithNestedWhereUniqueInput>;
-	/** Upsert single PageMultiplemodulsperpage document */
-	upsert?: InputMaybe<PageMultiplemodulsperpageUpsertWithNestedWhereUniqueInput>;
-};
-
-export type PageMultiplemodulsperpageUpdateWithNestedWhereUniqueInput = {
-	CtaLink?: InputMaybe<CtaLinkUpdateWithNestedWhereUniqueInput>;
-	Divider?: InputMaybe<DividerUpdateWithNestedWhereUniqueInput>;
-};
-
-export type PageMultiplemodulsperpageUpsertWithNestedWhereUniqueInput = {
-	CtaLink?: InputMaybe<CtaLinkUpsertWithNestedWhereUniqueInput>;
-	Divider?: InputMaybe<DividerUpsertWithNestedWhereUniqueInput>;
-};
-
-export type PageMultiplemodulsperpageWhereInput = {
-	CtaLink?: InputMaybe<CtaLinkWhereInput>;
-	Divider?: InputMaybe<DividerWhereInput>;
-};
-
-export type PageMultiplemodulsperpageWhereUniqueInput = {
-	CtaLink?: InputMaybe<CtaLinkWhereUniqueInput>;
-	Divider?: InputMaybe<DividerWhereUniqueInput>;
 };
 
 export enum PageOrderByInput {
@@ -10653,7 +10662,6 @@ export enum PageOrderByInput {
 }
 
 export type PageUpdateInput = {
-	manytomanymodulsperpage?: InputMaybe<PageMultiplemodulsperpageUpdateManyInlineInput>;
 	modules?: InputMaybe<PageModulUpdateManyInlineInput>;
 	slug?: InputMaybe<Scalars['String']>;
 	source?: InputMaybe<LinkUpdateOneInlineInput>;
@@ -10832,6 +10840,387 @@ export type PageWhereUniqueInput = {
 	slug?: InputMaybe<Scalars['String']>;
 };
 
+export type PartnerContainer = Node & {
+	__typename?: 'PartnerContainer';
+	/** The time the document was created */
+	createdAt: Scalars['DateTime'];
+	/** User that created this document */
+	createdBy?: Maybe<User>;
+	/** Get the document in other stages */
+	documentInStages: Array<PartnerContainer>;
+	/** List of PartnerContainer versions */
+	history: Array<Version>;
+	/** The unique identifier */
+	id: Scalars['ID'];
+	page?: Maybe<Page>;
+	partnerItems: Array<PartnerItem>;
+	/** The time the document was published. Null on documents in draft stage. */
+	publishedAt?: Maybe<Scalars['DateTime']>;
+	/** User that last published this document */
+	publishedBy?: Maybe<User>;
+	scheduledIn: Array<ScheduledOperation>;
+	/** System stage field */
+	stage: Stage;
+	/** The time the document was updated */
+	updatedAt: Scalars['DateTime'];
+	/** User that last updated this document */
+	updatedBy?: Maybe<User>;
+};
+
+export type PartnerContainerCreatedByArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type PartnerContainerDocumentInStagesArgs = {
+	includeCurrent?: Scalars['Boolean'];
+	inheritLocale?: Scalars['Boolean'];
+	stages?: Array<Stage>;
+};
+
+export type PartnerContainerHistoryArgs = {
+	limit?: Scalars['Int'];
+	skip?: Scalars['Int'];
+	stageOverride?: InputMaybe<Stage>;
+};
+
+export type PartnerContainerPageArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type PartnerContainerPartnerItemsArgs = {
+	after?: InputMaybe<Scalars['String']>;
+	before?: InputMaybe<Scalars['String']>;
+	first?: InputMaybe<Scalars['Int']>;
+	last?: InputMaybe<Scalars['Int']>;
+	locales?: InputMaybe<Array<Locale>>;
+	orderBy?: InputMaybe<PartnerItemOrderByInput>;
+	skip?: InputMaybe<Scalars['Int']>;
+	where?: InputMaybe<PartnerItemWhereInput>;
+};
+
+export type PartnerContainerPublishedByArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type PartnerContainerScheduledInArgs = {
+	after?: InputMaybe<Scalars['String']>;
+	before?: InputMaybe<Scalars['String']>;
+	first?: InputMaybe<Scalars['Int']>;
+	last?: InputMaybe<Scalars['Int']>;
+	locales?: InputMaybe<Array<Locale>>;
+	skip?: InputMaybe<Scalars['Int']>;
+	where?: InputMaybe<ScheduledOperationWhereInput>;
+};
+
+export type PartnerContainerUpdatedByArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type PartnerContainerConnectInput = {
+	/** Allow to specify document position in list of connected documents, will default to appending at end of list */
+	position?: InputMaybe<ConnectPositionInput>;
+	/** Document to connect */
+	where: PartnerContainerWhereUniqueInput;
+};
+
+/** A connection to a list of items. */
+export type PartnerContainerConnection = {
+	__typename?: 'PartnerContainerConnection';
+	aggregate: Aggregate;
+	/** A list of edges. */
+	edges: Array<PartnerContainerEdge>;
+	/** Information to aid in pagination. */
+	pageInfo: PageInfo;
+};
+
+export type PartnerContainerCreateInput = {
+	createdAt?: InputMaybe<Scalars['DateTime']>;
+	page?: InputMaybe<PageCreateOneInlineInput>;
+	partnerItems?: InputMaybe<PartnerItemCreateManyInlineInput>;
+	updatedAt?: InputMaybe<Scalars['DateTime']>;
+};
+
+export type PartnerContainerCreateManyInlineInput = {
+	/** Connect multiple existing PartnerContainer documents */
+	connect?: InputMaybe<Array<PartnerContainerWhereUniqueInput>>;
+	/** Create and connect multiple existing PartnerContainer documents */
+	create?: InputMaybe<Array<PartnerContainerCreateInput>>;
+};
+
+export type PartnerContainerCreateOneInlineInput = {
+	/** Connect one existing PartnerContainer document */
+	connect?: InputMaybe<PartnerContainerWhereUniqueInput>;
+	/** Create and connect one PartnerContainer document */
+	create?: InputMaybe<PartnerContainerCreateInput>;
+};
+
+/** An edge in a connection. */
+export type PartnerContainerEdge = {
+	__typename?: 'PartnerContainerEdge';
+	/** A cursor for use in pagination. */
+	cursor: Scalars['String'];
+	/** The item at the end of the edge. */
+	node: PartnerContainer;
+};
+
+/** Identifies documents */
+export type PartnerContainerManyWhereInput = {
+	/** Logical AND on all given filters. */
+	AND?: InputMaybe<Array<PartnerContainerWhereInput>>;
+	/** Logical NOT on all given filters combined by AND. */
+	NOT?: InputMaybe<Array<PartnerContainerWhereInput>>;
+	/** Logical OR on all given filters. */
+	OR?: InputMaybe<Array<PartnerContainerWhereInput>>;
+	/** Contains search across all appropriate fields. */
+	_search?: InputMaybe<Scalars['String']>;
+	createdAt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than the given value. */
+	createdAt_gt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than or equal the given value. */
+	createdAt_gte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are contained in given list. */
+	createdAt_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	/** All values less than the given value. */
+	createdAt_lt?: InputMaybe<Scalars['DateTime']>;
+	/** All values less than or equal the given value. */
+	createdAt_lte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not equal to given value. */
+	createdAt_not?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not contained in given list. */
+	createdAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	createdBy?: InputMaybe<UserWhereInput>;
+	id?: InputMaybe<Scalars['ID']>;
+	/** All values containing the given string. */
+	id_contains?: InputMaybe<Scalars['ID']>;
+	/** All values ending with the given string. */
+	id_ends_with?: InputMaybe<Scalars['ID']>;
+	/** All values that are contained in given list. */
+	id_in?: InputMaybe<Array<Scalars['ID']>>;
+	/** All values that are not equal to given value. */
+	id_not?: InputMaybe<Scalars['ID']>;
+	/** All values not containing the given string. */
+	id_not_contains?: InputMaybe<Scalars['ID']>;
+	/** All values not ending with the given string */
+	id_not_ends_with?: InputMaybe<Scalars['ID']>;
+	/** All values that are not contained in given list. */
+	id_not_in?: InputMaybe<Array<Scalars['ID']>>;
+	/** All values not starting with the given string. */
+	id_not_starts_with?: InputMaybe<Scalars['ID']>;
+	/** All values starting with the given string. */
+	id_starts_with?: InputMaybe<Scalars['ID']>;
+	page?: InputMaybe<PageWhereInput>;
+	partnerItems_every?: InputMaybe<PartnerItemWhereInput>;
+	partnerItems_none?: InputMaybe<PartnerItemWhereInput>;
+	partnerItems_some?: InputMaybe<PartnerItemWhereInput>;
+	publishedAt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than the given value. */
+	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than or equal the given value. */
+	publishedAt_gte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are contained in given list. */
+	publishedAt_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	/** All values less than the given value. */
+	publishedAt_lt?: InputMaybe<Scalars['DateTime']>;
+	/** All values less than or equal the given value. */
+	publishedAt_lte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not equal to given value. */
+	publishedAt_not?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not contained in given list. */
+	publishedAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	publishedBy?: InputMaybe<UserWhereInput>;
+	scheduledIn_every?: InputMaybe<ScheduledOperationWhereInput>;
+	scheduledIn_none?: InputMaybe<ScheduledOperationWhereInput>;
+	scheduledIn_some?: InputMaybe<ScheduledOperationWhereInput>;
+	updatedAt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than the given value. */
+	updatedAt_gt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than or equal the given value. */
+	updatedAt_gte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are contained in given list. */
+	updatedAt_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	/** All values less than the given value. */
+	updatedAt_lt?: InputMaybe<Scalars['DateTime']>;
+	/** All values less than or equal the given value. */
+	updatedAt_lte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not equal to given value. */
+	updatedAt_not?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not contained in given list. */
+	updatedAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	updatedBy?: InputMaybe<UserWhereInput>;
+};
+
+export enum PartnerContainerOrderByInput {
+	CreatedAtAsc = 'createdAt_ASC',
+	CreatedAtDesc = 'createdAt_DESC',
+	IdAsc = 'id_ASC',
+	IdDesc = 'id_DESC',
+	PublishedAtAsc = 'publishedAt_ASC',
+	PublishedAtDesc = 'publishedAt_DESC',
+	UpdatedAtAsc = 'updatedAt_ASC',
+	UpdatedAtDesc = 'updatedAt_DESC'
+}
+
+export type PartnerContainerUpdateInput = {
+	page?: InputMaybe<PageUpdateOneInlineInput>;
+	partnerItems?: InputMaybe<PartnerItemUpdateManyInlineInput>;
+};
+
+export type PartnerContainerUpdateManyInlineInput = {
+	/** Connect multiple existing PartnerContainer documents */
+	connect?: InputMaybe<Array<PartnerContainerConnectInput>>;
+	/** Create and connect multiple PartnerContainer documents */
+	create?: InputMaybe<Array<PartnerContainerCreateInput>>;
+	/** Delete multiple PartnerContainer documents */
+	delete?: InputMaybe<Array<PartnerContainerWhereUniqueInput>>;
+	/** Disconnect multiple PartnerContainer documents */
+	disconnect?: InputMaybe<Array<PartnerContainerWhereUniqueInput>>;
+	/** Override currently-connected documents with multiple existing PartnerContainer documents */
+	set?: InputMaybe<Array<PartnerContainerWhereUniqueInput>>;
+	/** Update multiple PartnerContainer documents */
+	update?: InputMaybe<Array<PartnerContainerUpdateWithNestedWhereUniqueInput>>;
+	/** Upsert multiple PartnerContainer documents */
+	upsert?: InputMaybe<Array<PartnerContainerUpsertWithNestedWhereUniqueInput>>;
+};
+
+export type PartnerContainerUpdateManyInput = {
+	/** No fields in updateMany data input */
+	_?: InputMaybe<Scalars['String']>;
+};
+
+export type PartnerContainerUpdateManyWithNestedWhereInput = {
+	/** Update many input */
+	data: PartnerContainerUpdateManyInput;
+	/** Document search */
+	where: PartnerContainerWhereInput;
+};
+
+export type PartnerContainerUpdateOneInlineInput = {
+	/** Connect existing PartnerContainer document */
+	connect?: InputMaybe<PartnerContainerWhereUniqueInput>;
+	/** Create and connect one PartnerContainer document */
+	create?: InputMaybe<PartnerContainerCreateInput>;
+	/** Delete currently connected PartnerContainer document */
+	delete?: InputMaybe<Scalars['Boolean']>;
+	/** Disconnect currently connected PartnerContainer document */
+	disconnect?: InputMaybe<Scalars['Boolean']>;
+	/** Update single PartnerContainer document */
+	update?: InputMaybe<PartnerContainerUpdateWithNestedWhereUniqueInput>;
+	/** Upsert single PartnerContainer document */
+	upsert?: InputMaybe<PartnerContainerUpsertWithNestedWhereUniqueInput>;
+};
+
+export type PartnerContainerUpdateWithNestedWhereUniqueInput = {
+	/** Document to update */
+	data: PartnerContainerUpdateInput;
+	/** Unique document search */
+	where: PartnerContainerWhereUniqueInput;
+};
+
+export type PartnerContainerUpsertInput = {
+	/** Create document if it didn't exist */
+	create: PartnerContainerCreateInput;
+	/** Update document if it exists */
+	update: PartnerContainerUpdateInput;
+};
+
+export type PartnerContainerUpsertWithNestedWhereUniqueInput = {
+	/** Upsert data */
+	data: PartnerContainerUpsertInput;
+	/** Unique document search */
+	where: PartnerContainerWhereUniqueInput;
+};
+
+/** Identifies documents */
+export type PartnerContainerWhereInput = {
+	/** Logical AND on all given filters. */
+	AND?: InputMaybe<Array<PartnerContainerWhereInput>>;
+	/** Logical NOT on all given filters combined by AND. */
+	NOT?: InputMaybe<Array<PartnerContainerWhereInput>>;
+	/** Logical OR on all given filters. */
+	OR?: InputMaybe<Array<PartnerContainerWhereInput>>;
+	/** Contains search across all appropriate fields. */
+	_search?: InputMaybe<Scalars['String']>;
+	createdAt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than the given value. */
+	createdAt_gt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than or equal the given value. */
+	createdAt_gte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are contained in given list. */
+	createdAt_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	/** All values less than the given value. */
+	createdAt_lt?: InputMaybe<Scalars['DateTime']>;
+	/** All values less than or equal the given value. */
+	createdAt_lte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not equal to given value. */
+	createdAt_not?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not contained in given list. */
+	createdAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	createdBy?: InputMaybe<UserWhereInput>;
+	id?: InputMaybe<Scalars['ID']>;
+	/** All values containing the given string. */
+	id_contains?: InputMaybe<Scalars['ID']>;
+	/** All values ending with the given string. */
+	id_ends_with?: InputMaybe<Scalars['ID']>;
+	/** All values that are contained in given list. */
+	id_in?: InputMaybe<Array<Scalars['ID']>>;
+	/** All values that are not equal to given value. */
+	id_not?: InputMaybe<Scalars['ID']>;
+	/** All values not containing the given string. */
+	id_not_contains?: InputMaybe<Scalars['ID']>;
+	/** All values not ending with the given string */
+	id_not_ends_with?: InputMaybe<Scalars['ID']>;
+	/** All values that are not contained in given list. */
+	id_not_in?: InputMaybe<Array<Scalars['ID']>>;
+	/** All values not starting with the given string. */
+	id_not_starts_with?: InputMaybe<Scalars['ID']>;
+	/** All values starting with the given string. */
+	id_starts_with?: InputMaybe<Scalars['ID']>;
+	page?: InputMaybe<PageWhereInput>;
+	partnerItems_every?: InputMaybe<PartnerItemWhereInput>;
+	partnerItems_none?: InputMaybe<PartnerItemWhereInput>;
+	partnerItems_some?: InputMaybe<PartnerItemWhereInput>;
+	publishedAt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than the given value. */
+	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than or equal the given value. */
+	publishedAt_gte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are contained in given list. */
+	publishedAt_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	/** All values less than the given value. */
+	publishedAt_lt?: InputMaybe<Scalars['DateTime']>;
+	/** All values less than or equal the given value. */
+	publishedAt_lte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not equal to given value. */
+	publishedAt_not?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not contained in given list. */
+	publishedAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	publishedBy?: InputMaybe<UserWhereInput>;
+	scheduledIn_every?: InputMaybe<ScheduledOperationWhereInput>;
+	scheduledIn_none?: InputMaybe<ScheduledOperationWhereInput>;
+	scheduledIn_some?: InputMaybe<ScheduledOperationWhereInput>;
+	updatedAt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than the given value. */
+	updatedAt_gt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than or equal the given value. */
+	updatedAt_gte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are contained in given list. */
+	updatedAt_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	/** All values less than the given value. */
+	updatedAt_lt?: InputMaybe<Scalars['DateTime']>;
+	/** All values less than or equal the given value. */
+	updatedAt_lte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not equal to given value. */
+	updatedAt_not?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not contained in given list. */
+	updatedAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	updatedBy?: InputMaybe<UserWhereInput>;
+};
+
+/** References PartnerContainer record uniquely */
+export type PartnerContainerWhereUniqueInput = {
+	id?: InputMaybe<Scalars['ID']>;
+};
+
 export type PartnerItem = Node & {
 	__typename?: 'PartnerItem';
 	/** The time the document was created */
@@ -10844,7 +11233,6 @@ export type PartnerItem = Node & {
 	history: Array<Version>;
 	/** The unique identifier */
 	id: Scalars['ID'];
-	page?: Maybe<Page>;
 	partnerDescription?: Maybe<RichText>;
 	partnerLogo?: Maybe<Asset>;
 	/** The time the document was published. Null on documents in draft stage. */
@@ -10874,10 +11262,6 @@ export type PartnerItemHistoryArgs = {
 	limit?: Scalars['Int'];
 	skip?: Scalars['Int'];
 	stageOverride?: InputMaybe<Stage>;
-};
-
-export type PartnerItemPageArgs = {
-	locales?: InputMaybe<Array<Locale>>;
 };
 
 export type PartnerItemPartnerLogoArgs = {
@@ -10920,8 +11304,8 @@ export type PartnerItemConnection = {
 };
 
 export type PartnerItemCreateInput = {
+	cl0i8071x1ma101xkeh3f1876?: InputMaybe<PartnerContainerCreateManyInlineInput>;
 	createdAt?: InputMaybe<Scalars['DateTime']>;
-	page?: InputMaybe<PageCreateOneInlineInput>;
 	partnerDescription?: InputMaybe<Scalars['RichTextAST']>;
 	partnerLogo?: InputMaybe<AssetCreateOneInlineInput>;
 	updatedAt?: InputMaybe<Scalars['DateTime']>;
@@ -10995,7 +11379,6 @@ export type PartnerItemManyWhereInput = {
 	id_not_starts_with?: InputMaybe<Scalars['ID']>;
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
-	page?: InputMaybe<PageWhereInput>;
 	partnerLogo?: InputMaybe<AssetWhereInput>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
@@ -11046,7 +11429,7 @@ export enum PartnerItemOrderByInput {
 }
 
 export type PartnerItemUpdateInput = {
-	page?: InputMaybe<PageUpdateOneInlineInput>;
+	cl0i8071x1ma101xkeh3f1876?: InputMaybe<PartnerContainerUpdateManyInlineInput>;
 	partnerDescription?: InputMaybe<Scalars['RichTextAST']>;
 	partnerLogo?: InputMaybe<AssetUpdateOneInlineInput>;
 };
@@ -11160,7 +11543,6 @@ export type PartnerItemWhereInput = {
 	id_not_starts_with?: InputMaybe<Scalars['ID']>;
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
-	page?: InputMaybe<PageWhereInput>;
 	partnerLogo?: InputMaybe<AssetWhereInput>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
@@ -11335,6 +11717,14 @@ export type Query = {
 	pages: Array<Page>;
 	/** Retrieve multiple pages using the Relay connection interface */
 	pagesConnection: PageConnection;
+	/** Retrieve a single partnerContainer */
+	partnerContainer?: Maybe<PartnerContainer>;
+	/** Retrieve document version */
+	partnerContainerVersion?: Maybe<DocumentVersion>;
+	/** Retrieve multiple partnerContainers */
+	partnerContainers: Array<PartnerContainer>;
+	/** Retrieve multiple partnerContainers using the Relay connection interface */
+	partnerContainersConnection: PartnerContainerConnection;
 	/** Retrieve a single partnerItem */
 	partnerItem?: Maybe<PartnerItem>;
 	/** Retrieve document version */
@@ -11901,6 +12291,40 @@ export type QueryPagesConnectionArgs = {
 	skip?: InputMaybe<Scalars['Int']>;
 	stage?: Stage;
 	where?: InputMaybe<PageWhereInput>;
+};
+
+export type QueryPartnerContainerArgs = {
+	locales?: Array<Locale>;
+	stage?: Stage;
+	where: PartnerContainerWhereUniqueInput;
+};
+
+export type QueryPartnerContainerVersionArgs = {
+	where: VersionWhereInput;
+};
+
+export type QueryPartnerContainersArgs = {
+	after?: InputMaybe<Scalars['String']>;
+	before?: InputMaybe<Scalars['String']>;
+	first?: InputMaybe<Scalars['Int']>;
+	last?: InputMaybe<Scalars['Int']>;
+	locales?: Array<Locale>;
+	orderBy?: InputMaybe<PartnerContainerOrderByInput>;
+	skip?: InputMaybe<Scalars['Int']>;
+	stage?: Stage;
+	where?: InputMaybe<PartnerContainerWhereInput>;
+};
+
+export type QueryPartnerContainersConnectionArgs = {
+	after?: InputMaybe<Scalars['String']>;
+	before?: InputMaybe<Scalars['String']>;
+	first?: InputMaybe<Scalars['Int']>;
+	last?: InputMaybe<Scalars['Int']>;
+	locales?: Array<Locale>;
+	orderBy?: InputMaybe<PartnerContainerOrderByInput>;
+	skip?: InputMaybe<Scalars['Int']>;
+	stage?: Stage;
+	where?: InputMaybe<PartnerContainerWhereInput>;
 };
 
 export type QueryPartnerItemArgs = {
@@ -12990,6 +13414,7 @@ export type ScheduledOperationAffectedDocument =
 	| Image
 	| Link
 	| Page
+	| PartnerContainer
 	| PartnerItem
 	| ReferencesContainer
 	| ReferencesItem
@@ -15229,10 +15654,14 @@ export type Unnamed_4_Query = {
 							image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
 					  }
 					| {
-							__typename: 'PartnerItem';
+							__typename: 'PartnerContainer';
 							id: string;
-							partnerLogo?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
-							partnerDescription?: { __typename?: 'RichText'; html: string } | null | undefined;
+							partnerItems: Array<{
+								__typename?: 'PartnerItem';
+								id: string;
+								partnerLogo?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
+								partnerDescription?: { __typename?: 'RichText'; html: string } | null | undefined;
+							}>;
 					  }
 					| { __typename: 'ReferencesContainer' }
 					| {
