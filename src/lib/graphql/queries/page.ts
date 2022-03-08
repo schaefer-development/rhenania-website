@@ -129,6 +129,7 @@ export const PAGE = gql`
 						... on CardImage {
 							id
 							headline
+							linkToId
 							image {
 								id
 								url

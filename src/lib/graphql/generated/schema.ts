@@ -15010,6 +15010,7 @@ export type Unnamed_1_Query = {
 										__typename: 'CardImage';
 										id: string;
 										headline?: string | null | undefined;
+										linkToId?: string | null | undefined;
 										image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
 										link?:
 											| {
@@ -15176,6 +15177,7 @@ export type Unnamed_4_Query = {
 										__typename: 'CardImage';
 										id: string;
 										headline?: string | null | undefined;
+										linkToId?: string | null | undefined;
 										image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
 										link?:
 											| {
