@@ -49,6 +49,19 @@ export const PAGE = gql`
 						url
 					}
 				}
+				... on PartnerContainer {
+					id
+					partnerItems {
+						id
+						partnerLogo {
+							id
+							url
+						}
+						partnerDescription {
+							html
+						}
+					}
+				}
 				... on AccordionContainer {
 					id
 					headline
@@ -155,16 +168,6 @@ export const PAGE = gql`
 					teaserText
 					heroBackgroundImage {
 						url
-					}
-				}
-				... on ReferencesContainer {
-					id
-					referenceItems {
-						id
-						referenceLogo {
-							id
-							url
-						}
 					}
 				}
 			}
