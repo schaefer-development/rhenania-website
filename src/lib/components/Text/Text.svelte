@@ -49,7 +49,7 @@
 			{#if module.heading3}
 				<h3 class="rc_h3 py-2">{module.heading3}</h3>
 			{/if}
-			{#if module.text.html}
+			{#if module.text}
 				<div class="py-4 rc_break_hyphens">
 					{@html module.text.html}
 				</div>

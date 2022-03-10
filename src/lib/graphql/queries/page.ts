@@ -42,6 +42,9 @@ export const PAGE = gql`
 					id
 					headline
 					subheadline
+					link {
+						...linkFragment
+					}
 					paddingTop
 					paddingBottom
 					image {

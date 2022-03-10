@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import type { Eyecatcher } from '$lib/graphql/generated/schema';
 	import { mapPadding } from '$lib/helpers';
 	export let module: Partial<Eyecatcher> = {};
@@ -26,11 +27,12 @@
 					<h1 class="text-white rc_h1">{module.headline}</h1>
 					<h2 class="text-rc_skyblue rc_h3 pb-4">{module.subheadline}</h2>
 					<div class="block bg-rc_darkblue-darkest h-0.5 my-4" />
-					<button
-						class="relative mt-8 pl-5 pr-3 py-2 bg-rc_red text-white text-sm font-bold uppercase tracking-widest hover:bg-rc_red-darker rc_button_corner"
-						>mehr erfahren</button
-					>
 				</div>
+				<a
+					class="relative mt-8 pl-5 pr-3 py-2 bg-rc_red text-white text-sm font-bold uppercase tracking-widest hover:bg-rc_red-darker rc_button_corner"
+					href="{base}/{module.link.target.slug}"
+					title="{base}/{module.link.target.slug}">{module.link.label}</a
+				>
 			</div>
 		</div>
 	</div>

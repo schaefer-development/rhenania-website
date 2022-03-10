@@ -13,7 +13,7 @@
 			style="transform: translate(0, {y < 2 ? y * 1 : y * paraEffect}px)"
 		>
 			<div
-				class="absolute w-full h-30v bg-cover bg-center scale-105 rc_blur"
+				class="absolute w-full h-30v bg-cover bg-center scale-105"
 				style="background-image: url({module.image.url}"
 			/>
 		</div>
@@ -25,9 +25,3 @@
 		</div>
 	</div>
 </div>
-
-<!--
-<div
-	class="absolute w-full h-30v bg-cover bg-center opacity-10 "
-	style="background-color:{module.strokeColor.hex};"
-/>-->
