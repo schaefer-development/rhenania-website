@@ -8,9 +8,7 @@
 <div class="mod_ctalink relative">
 	<div class="w-full {mapPadding(module.padding)}" />
 	<div class="mod_divider w-full max-w-screen-lg px-4 lg:px-10 mx-auto py-6 lg:py-12">
-		<h2 class="rc_h2 text-black">Möchten Sie mehr erfahren?</h2>
-
-		<br />
+		<h2 class="rc_h2 text-black pb-10">{module.headline}</h2>
 
 		<a
 			sveltekit:prefetch

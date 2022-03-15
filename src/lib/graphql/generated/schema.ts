@@ -5259,7 +5259,6 @@ export type DocumentVersion = {
 
 export type Eyecatcher = Node & {
 	__typename?: 'Eyecatcher';
-	buttonLabel?: Maybe<Scalars['String']>;
 	/** The time the document was created */
 	createdAt: Scalars['DateTime'];
 	/** User that created this document */
@@ -5272,6 +5271,7 @@ export type Eyecatcher = Node & {
 	/** The unique identifier */
 	id: Scalars['ID'];
 	image?: Maybe<Asset>;
+	link?: Maybe<Link>;
 	/** System Locale field */
 	locale: Locale;
 	/** Get the other localizations for this document */
@@ -5314,6 +5314,10 @@ export type EyecatcherHistoryArgs = {
 };
 
 export type EyecatcherImageArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type EyecatcherLinkArgs = {
 	locales?: InputMaybe<Array<Locale>>;
 };
 
@@ -5370,11 +5374,11 @@ export type EyecatcherConnection = {
 };
 
 export type EyecatcherCreateInput = {
-	buttonLabel?: InputMaybe<Scalars['String']>;
 	createdAt?: InputMaybe<Scalars['DateTime']>;
 	/** headline input for default locale (en) */
 	headline?: InputMaybe<Scalars['String']>;
 	image?: InputMaybe<AssetCreateOneInlineInput>;
+	link?: InputMaybe<LinkCreateOneInlineInput>;
 	/** Inline mutations for managing document localizations excluding the default locale */
 	localizations?: InputMaybe<EyecatcherCreateLocalizationsInput>;
 	paddingBottom?: InputMaybe<Padding>;
@@ -5436,25 +5440,6 @@ export type EyecatcherManyWhereInput = {
 	OR?: InputMaybe<Array<EyecatcherWhereInput>>;
 	/** Contains search across all appropriate fields. */
 	_search?: InputMaybe<Scalars['String']>;
-	buttonLabel?: InputMaybe<Scalars['String']>;
-	/** All values containing the given string. */
-	buttonLabel_contains?: InputMaybe<Scalars['String']>;
-	/** All values ending with the given string. */
-	buttonLabel_ends_with?: InputMaybe<Scalars['String']>;
-	/** All values that are contained in given list. */
-	buttonLabel_in?: InputMaybe<Array<Scalars['String']>>;
-	/** All values that are not equal to given value. */
-	buttonLabel_not?: InputMaybe<Scalars['String']>;
-	/** All values not containing the given string. */
-	buttonLabel_not_contains?: InputMaybe<Scalars['String']>;
-	/** All values not ending with the given string */
-	buttonLabel_not_ends_with?: InputMaybe<Scalars['String']>;
-	/** All values that are not contained in given list. */
-	buttonLabel_not_in?: InputMaybe<Array<Scalars['String']>>;
-	/** All values not starting with the given string. */
-	buttonLabel_not_starts_with?: InputMaybe<Scalars['String']>;
-	/** All values starting with the given string. */
-	buttonLabel_starts_with?: InputMaybe<Scalars['String']>;
 	createdAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
 	createdAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -5491,6 +5476,7 @@ export type EyecatcherManyWhereInput = {
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
 	image?: InputMaybe<AssetWhereInput>;
+	link?: InputMaybe<LinkWhereInput>;
 	paddingBottom?: InputMaybe<Padding>;
 	/** All values that are contained in given list. */
 	paddingBottom_in?: InputMaybe<Array<Padding>>;
@@ -5544,8 +5530,6 @@ export type EyecatcherManyWhereInput = {
 };
 
 export enum EyecatcherOrderByInput {
-	ButtonLabelAsc = 'buttonLabel_ASC',
-	ButtonLabelDesc = 'buttonLabel_DESC',
 	CreatedAtAsc = 'createdAt_ASC',
 	CreatedAtDesc = 'createdAt_DESC',
 	HeadlineAsc = 'headline_ASC',
@@ -5565,10 +5549,10 @@ export enum EyecatcherOrderByInput {
 }
 
 export type EyecatcherUpdateInput = {
-	buttonLabel?: InputMaybe<Scalars['String']>;
 	/** headline input for default locale (en) */
 	headline?: InputMaybe<Scalars['String']>;
 	image?: InputMaybe<AssetUpdateOneInlineInput>;
+	link?: InputMaybe<LinkUpdateOneInlineInput>;
 	/** Manage document localizations */
 	localizations?: InputMaybe<EyecatcherUpdateLocalizationsInput>;
 	paddingBottom?: InputMaybe<Padding>;
@@ -5616,7 +5600,6 @@ export type EyecatcherUpdateManyInlineInput = {
 };
 
 export type EyecatcherUpdateManyInput = {
-	buttonLabel?: InputMaybe<Scalars['String']>;
 	/** headline input for default locale (en) */
 	headline?: InputMaybe<Scalars['String']>;
 	/** Optional updates to localizations */
@@ -5701,25 +5684,6 @@ export type EyecatcherWhereInput = {
 	OR?: InputMaybe<Array<EyecatcherWhereInput>>;
 	/** Contains search across all appropriate fields. */
 	_search?: InputMaybe<Scalars['String']>;
-	buttonLabel?: InputMaybe<Scalars['String']>;
-	/** All values containing the given string. */
-	buttonLabel_contains?: InputMaybe<Scalars['String']>;
-	/** All values ending with the given string. */
-	buttonLabel_ends_with?: InputMaybe<Scalars['String']>;
-	/** All values that are contained in given list. */
-	buttonLabel_in?: InputMaybe<Array<Scalars['String']>>;
-	/** All values that are not equal to given value. */
-	buttonLabel_not?: InputMaybe<Scalars['String']>;
-	/** All values not containing the given string. */
-	buttonLabel_not_contains?: InputMaybe<Scalars['String']>;
-	/** All values not ending with the given string */
-	buttonLabel_not_ends_with?: InputMaybe<Scalars['String']>;
-	/** All values that are not contained in given list. */
-	buttonLabel_not_in?: InputMaybe<Array<Scalars['String']>>;
-	/** All values not starting with the given string. */
-	buttonLabel_not_starts_with?: InputMaybe<Scalars['String']>;
-	/** All values starting with the given string. */
-	buttonLabel_starts_with?: InputMaybe<Scalars['String']>;
 	createdAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
 	createdAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -5775,6 +5739,7 @@ export type EyecatcherWhereInput = {
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
 	image?: InputMaybe<AssetWhereInput>;
+	link?: InputMaybe<LinkWhereInput>;
 	paddingBottom?: InputMaybe<Padding>;
 	/** All values that are contained in given list. */
 	paddingBottom_in?: InputMaybe<Array<Padding>>;
@@ -6787,6 +6752,7 @@ export type LinkCreateInput = {
 	ckx8urpys01qg01z6hntc2w45?: InputMaybe<CardImageCreateManyInlineInput>;
 	ckx8uschu02xj01zc71rq5bxw?: InputMaybe<CardIconCreateManyInlineInput>;
 	ckxj50hw42v6x01xpgtk195ql?: InputMaybe<TextCreateManyInlineInput>;
+	cl0laatxs64os01z2b3np7fuc?: InputMaybe<EyecatcherCreateManyInlineInput>;
 	createdAt?: InputMaybe<Scalars['DateTime']>;
 	label?: InputMaybe<Scalars['String']>;
 	target?: InputMaybe<LinkTargetCreateOneInlineInput>;
@@ -7022,6 +6988,7 @@ export type LinkUpdateInput = {
 	ckx8urpys01qg01z6hntc2w45?: InputMaybe<CardImageUpdateManyInlineInput>;
 	ckx8uschu02xj01zc71rq5bxw?: InputMaybe<CardIconUpdateManyInlineInput>;
 	ckxj50hw42v6x01xpgtk195ql?: InputMaybe<TextUpdateManyInlineInput>;
+	cl0laatxs64os01z2b3np7fuc?: InputMaybe<EyecatcherUpdateManyInlineInput>;
 	label?: InputMaybe<Scalars['String']>;
 	target?: InputMaybe<LinkTargetUpdateOneInlineInput>;
 };
@@ -15629,6 +15596,19 @@ export type Unnamed_4_Query = {
 							subheadline?: string | null | undefined;
 							paddingTop?: Padding | null | undefined;
 							paddingBottom?: Padding | null | undefined;
+							link?:
+								| {
+										__typename?: 'Link';
+										id: string;
+										label?: string | null | undefined;
+										target?:
+											| { __typename: 'BlogPost'; id: string; slug: string }
+											| { __typename: 'Page'; id: string; slug: string }
+											| null
+											| undefined;
+								  }
+								| null
+								| undefined;
 							image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
 					  }
 					| {
@@ -15663,7 +15643,18 @@ export type Unnamed_4_Query = {
 								partnerDescription?: { __typename?: 'RichText'; html: string } | null | undefined;
 							}>;
 					  }
-					| { __typename: 'ReferencesContainer' }
+					| {
+							__typename: 'ReferencesContainer';
+							id: string;
+							referenceItems: Array<{
+								__typename?: 'ReferencesItem';
+								id: string;
+								referenceLogo?:
+									| { __typename?: 'Asset'; id: string; url: string }
+									| null
+									| undefined;
+							}>;
+					  }
 					| {
 							__typename: 'Text';
 							id: string;

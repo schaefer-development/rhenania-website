@@ -2,7 +2,7 @@
 	import Page from '$lib/components/Page/Page.svelte';
 	import type { LoadPageData } from '$lib/helpers';
 	import { LoadPage } from '$lib/helpers';
-	export const load = LoadPage('gefahrgutversand');
+	export const load = LoadPage('gefahrgutabwicklung');
 	export const prerender = true;
 </script>
 

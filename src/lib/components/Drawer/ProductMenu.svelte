@@ -8,10 +8,11 @@
 		<DrawerAccordion id="versandlogistiksystem">
 			<span slot="headline" class="breakwords">Versandlogistiksystem</span>
 			<div slot="content">
-				<a href="{base}/f95/" class="rc_desktopmenu_subpoint">F95 - Paket- und Palettenversand</a>
 				<a href="{base}/k04/" class="rc_desktopmenu_subpoint"
 					>K04 - Kommissionieren, Kontrollieren, Packen</a
 				>
+				<a href="{base}/f95/" class="rc_desktopmenu_subpoint">F95 - Paket- und Palettenversand</a>
+
 				<a href="{base}/vka/" class="rc_desktopmenu_subpoint"
 					>VKA - Versandkostenkontrolle und Abrechnung</a
 				>
