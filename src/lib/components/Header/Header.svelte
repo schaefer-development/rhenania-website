@@ -22,25 +22,41 @@
 	<div class="w-full max-w-screen-2xl mx-auto flex flex-row items-center h-20 px-4 md:px-10 ">
 		<a sveltekit:prefetch href="{base}/" class="text-rc_darkblue w-28 none"><Logo /></a>
 
-		<div id="search" class="flex-grow flex justify-end">
-			<div class="text-black px-10">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-6 w-6"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+		<div id="navbar" class="flex-grow flex justify-end items-center">
+			<div id="search" class="flex-grow px-3 sm:px-6 md:px-10 lg:px-16 flex">
+				<div class="input-group relative flex items-stretch w-full justify-end pl-4">
+					<input
+						type="search"
+						class="form-control relative flex-auto min-w-0 block w-full max-w-sm px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none"
+						placeholder=""
+						aria-label="Search"
+						aria-describedby="button-addon"
 					/>
-				</svg>
+					<button
+						class="btn inline-block pl-2 sm:pl-4 py-2.5 text-black font-medium text-xs leading-tight uppercase hover:text-rc_red focus:text-rc_red focus:outline-none focus:ring-0 active:text-rc_red transition duration-150 ease-in-out flex items-center"
+						type="button"
+						id="button-addon"
+					>
+						<svg
+							aria-hidden="true"
+							focusable="false"
+							data-prefix="fas"
+							data-icon="search"
+							class="w-4"
+							role="img"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 512 512"
+						>
+							<path
+								fill="currentColor"
+								d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+							/>
+						</svg>
+					</button>
+				</div>
 			</div>
 
-			<div id="menu" class="relative hidden lg:inline-block">
+			<div id="menu" class="relative flex hidden lg:inline-block">
 				<a href="{base}/start" class="relative ">
 					<span
 						class="{$page.path === `${base}/start`

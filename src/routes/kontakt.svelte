@@ -39,13 +39,13 @@
 				<div class="flex flex-wrap -mx-3 mb-6">
 					<div class="w-full px-3 mb-10">
 						<input
-							class="appearance-none block w-full bg-white text-gray-700 border border-black py-4 px-4 mb-1 leading-tight focus:outline-none focus:bg-white focus:border-rc_red"
+							class="appearance-none block w-full bg-white text-gray-700 border border-gray-300 py-4 px-4 mb-2 leading-tight focus:outline-none focus:bg-white focus:border-black"
 							id="company"
 							type="text"
 							placeholder="Musterfirma"
 						/>
 						<label
-							class="block uppercase tracking-widest text-gray-700 text-xs font-bold "
+							class="block uppercase tracking-widest text-gray-700 text-xs px-1 font-bold "
 							for="company"
 						>
 							Firma (Optional)
@@ -54,13 +54,13 @@
 
 					<div class="w-full px-3 mb-10">
 						<input
-							class="appearance-none block w-full bg-white text-gray-700 border border-black py-4 px-4 mb-1 leading-tight focus:outline-none focus:bg-white focus:border-rc_red"
+							class="appearance-none block w-full bg-white text-gray-700 border border-gray-300 py-4 px-4 mb-2 leading-tight focus:outline-none focus:bg-white focus:border-black"
 							id="name"
 							type="text"
 							placeholder="Max Mustermann"
 						/>
 						<label
-							class="block uppercase tracking-widest text-gray-700 text-xs font-bold"
+							class="block uppercase tracking-widest text-gray-700 text-xs px-1 font-bold"
 							for="name"
 						>
 							Name
@@ -69,13 +69,13 @@
 
 					<div class="w-full px-3 mb-10">
 						<input
-							class="appearance-none block w-full bg-white text-gray-700 border border-black py-4 px-4 mb-1 leading-tight focus:outline-none focus:bg-white focus:border-rc_red"
+							class="appearance-none block w-full bg-white text-gray-700 border border-gray-300 py-4 px-4 mb-2 leading-tight focus:outline-none focus:bg-white focus:border-black"
 							id="mail"
 							type="text"
 							placeholder="mail@beispiel.de"
 						/>
 						<label
-							class="block uppercase tracking-widest text-gray-700 text-xs font-bold "
+							class="block uppercase tracking-widest text-gray-700 text-xs px-1 font-bold "
 							for="mail"
 						>
 							E-Mail
@@ -84,13 +84,13 @@
 
 					<div class="w-full px-3 mb-4">
 						<input
-							class="appearance-none block w-full bg-white text-gray-700 border border-black py-4 px-4 mb-1 leading-tight focus:outline-none focus:bg-white focus:border-rc_red"
+							class="appearance-none block w-full bg-white text-gray-700 border border-gray-300 py-4 px-4 mb-2 leading-tight focus:outline-none focus:bg-white focus:border-black"
 							id="phone"
 							type="text"
 							placeholder="0123456789"
 						/>
 						<label
-							class="block uppercase tracking-widest text-gray-700 text-xs font-bold "
+							class="block uppercase tracking-widest text-gray-700 text-xs px-1 font-bold "
 							for="phone"
 						>
 							Telefon (Optional)
@@ -101,11 +101,11 @@
 				<div class="flex flex-wrap -mx-3 mb-6">
 					<div class="w-full px-3">
 						<textarea
-							class=" no-resize appearance-none block w-full bg-white text-gray-700 border border-black py-4 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-rc_red h-48 resize-none"
+							class=" no-resize appearance-none block w-full bg-white text-gray-700 border border-gray-300 py-4 px-4 mb-2 leading-tight focus:outline-none focus:bg-white focus:border-black h-48 resize-none"
 							id="message"
 						/>
 						<label
-							class="block uppercase tracking-widest text-gray-700 text-xs font-bold mb-2"
+							class="block uppercase tracking-widest text-gray-700 text-xs px-1 font-bold mb-1"
 							for="grid-password"
 						>
 							Ihre Nachricht

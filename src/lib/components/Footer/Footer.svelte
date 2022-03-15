@@ -26,10 +26,10 @@
 			</div>
 		</div>
 		<div class="col-span-full xl:col-span-1 pb-8">
-			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">
+			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2 leading-relaxed">
 				RC Rhenania Computer
 			</p>
-			<p class="text-center sm:text-left tracking-wide">
+			<p class="text-center sm:text-left tracking-wide leading-relaxed">
 				Aegidiusplatz 15 b<br />
 				53604 Bad Honnef
 				<br /><br />
@@ -52,24 +52,25 @@
 		</div>
 		<div class="pb-8">
 			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Produkte</p>
-			<p class="text-center sm:text-left tracking-wide">
+			<p class="text-center sm:text-left tracking-wide leading-relaxed">
 				<FooterAccordion id="FooterVersandlogistiksystem">
 					<span
 						slot="headline"
 						class="block text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 						>Versandlogistiksystem</span
 					>
-					<div slot="content" class="pb-2">
-						<a
-							href="{base}/f95/"
-							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-							>– F95</a
-						>
+					<div slot="content" class="pb-2 ">
 						<a
 							href="{base}/k04/"
 							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 							>– K04</a
 						>
+						<a
+							href="{base}/f95/"
+							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+							>– F95</a
+						>
+
 						<a
 							href="{base}/vka/"
 							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
@@ -136,7 +137,7 @@
 		</div>
 		<div class="pb-8">
 			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Unternehmen</p>
-			<p class="text-center sm:text-left tracking-wide">
+			<p class="text-center sm:text-left tracking-wide leading-relaxed">
 				<a
 					href="{base}/ueberuns/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
@@ -175,7 +176,7 @@
 		</div>
 		<div class="pb-8">
 			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Service</p>
-			<p class="text-center sm:text-left tracking-wide">
+			<p class="text-center sm:text-left tracking-wide leading-relaxed">
 				<a
 					href="{base}/cloudloesung/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
@@ -202,7 +203,7 @@
 		</div>
 		<div class="pb-8">
 			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Kontakt</p>
-			<p class="text-center sm:text-left tracking-wide">
+			<p class="text-center sm:text-left tracking-wide leading-relaxed">
 				<a
 					href="{base}/impressum/"
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
