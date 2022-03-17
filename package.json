@@ -23,6 +23,7 @@
 		"@types/leaflet": "^1.7.6",
 		"@typescript-eslint/eslint-plugin": "^5.7.0",
 		"@typescript-eslint/parser": "^5.7.0",
+		"accept-language": "^3.0.18",
 		"autoprefixer": "^10.4.0",
 		"eslint": "^8.5.0",
 		"eslint-config-prettier": "^8.3.0",

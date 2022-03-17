@@ -14,8 +14,9 @@ export type LoadBlogPostData = {
 
 export const LoadPage: (slug: string) => Load =
 	(slug) =>
-	async ({ fetch }) => {
-		const res = await fetch(`/${slug}.json`);
+	async ({ fetch, session }) => {
+		const { lang } = session;
+		const res = await fetch(`/${slug}.json?lang=${lang}`);
 		if (res.ok) {
 			const { data } = await res.json();
 			return {
@@ -33,9 +34,10 @@ export const LoadPage: (slug: string) => Load =
 		};
 	};
 
-export const LoadBlogPost: Load = async ({ page, fetch }) => {
+export const LoadBlogPost: Load = async ({ session, page, fetch }) => {
+	const { lang } = session;
 	const { slug } = page.params;
-	const res = await fetch(`/blog/${slug}.json`);
+	const res = await fetch(`/blog/${slug}.json?lang=${lang}`);
 	if (res.ok) {
 		const { data } = await res.json();
 		const { blogPost } = data;
