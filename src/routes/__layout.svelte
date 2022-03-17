@@ -1,7 +1,8 @@
 <script context="module">
 	/** @type {import('@sveltejs/kit').Load} */
-	export async function load({ fetch }) {
-		const url = `/layout.json`;
+	export async function load({ session, fetch }) {
+		const { lang } = session;
+		const url = `/layout.json?lang=${lang}`;
 		const res = await fetch(url);
 
 		if (res.ok) {
