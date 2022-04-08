@@ -1,15 +1,10 @@
 import { GRAPHCMS_ENDPOINT } from '$lib/env';
 import type { RequestHandler } from '@sveltejs/kit';
 
-type Api = (
-	query: string,
-	variables?: Record<string, unknown>
-) => RequestHandler
+type Api = (query: string, variables?: Record<string, unknown>) => RequestHandler;
 
-export const api: Api = (
-	query, variables
-) => async (event) => {
-	const lang = event.query.get('lang') ?? 'de'
+export const api: Api = (query, variables) => async (event) => {
+	const lang = event.query.get('lang') ?? 'de';
 	const headers = {
 		'Content-Type': 'application/json',
 		Accept: 'application/json',
@@ -32,4 +27,4 @@ export const api: Api = (
 		status,
 		body
 	};
-}
+};

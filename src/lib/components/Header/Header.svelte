@@ -19,8 +19,8 @@
 	export let toggleMenuFull: () => void;
 
 	async function search({ target }) {
-		const params = new URLSearchParams({q: target.query.value})
-		await goto(`/search?${params.toString()}`)
+		const params = new URLSearchParams({ q: target.query.value });
+		await goto(`/search?${params.toString()}`);
 	}
 </script>
 
@@ -30,7 +30,10 @@
 
 		<div id="navbar" class="flex-grow flex justify-end items-center">
 			<div class="flex-grow px-3 sm:px-6 md:px-10 lg:px-16 flex">
-				<form class="input-group relative flex items-stretch w-full justify-end pl-4" on:submit|preventDefault={search}>
+				<form
+					class="input-group relative flex items-stretch w-full justify-end pl-4"
+					on:submit|preventDefault={search}
+				>
 					<input
 						type="search"
 						name="query"
