@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
 	import { page } from '$app/stores';
 	import Logo from '$lib/components/Logo/Logo.svelte';
@@ -16,6 +17,11 @@
 
 	export let openMenuFull: boolean;
 	export let toggleMenuFull: () => void;
+
+	async function search({ target }) {
+		const params = new URLSearchParams({q: target.query.value})
+		await goto(`/search?${params.toString()}`)
+	}
 </script>
 
 <header class="sticky top-0 z-50 bg-white shadow-md flex space-between">
@@ -23,10 +29,11 @@
 		<a sveltekit:prefetch href="{base}/" class="text-rc_darkblue w-28 none"><Logo /></a>
 
 		<div id="navbar" class="flex-grow flex justify-end items-center">
-			<div id="search" class="flex-grow px-3 sm:px-6 md:px-10 lg:px-16 flex">
-				<div class="input-group relative flex items-stretch w-full justify-end pl-4">
+			<div class="flex-grow px-3 sm:px-6 md:px-10 lg:px-16 flex">
+				<form class="input-group relative flex items-stretch w-full justify-end pl-4" on:submit|preventDefault={search}>
 					<input
 						type="search"
+						name="query"
 						class="form-control relative flex-auto min-w-0 block w-full max-w-sm px-3 py-2 font-normal bg-white bg-clip-padding peer border-y border-l border-gray-400 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none"
 						placeholder="Suchen"
 						aria-label="Search"
@@ -53,7 +60,7 @@
 							/>
 						</svg>
 					</button>
-				</div>
+				</form>
 			</div>
 
 			<div id="menu" class="relative flex hidden lg:inline-block">
