@@ -13,8 +13,11 @@ const fuseOptions = {
 		'modules.heading1',
 		'modules.heading2',
 		'modules.heading3',
+		'modules.text.html',
+		'modules.accordionItems.headline',
 		'modules.accordionItems.content.html',
-		'modules.text.html'
+		'modules.cards.headline',
+		'modules.cards.subheadline',
 	]
 };
 
@@ -35,7 +38,6 @@ export const get: RequestHandler = async (event) => {
 	});
 	const { status } = res;
 	const { data } = await res.json();
-
 	const documents = [...data.pages, ...data.blogPosts];
 	if (!query) return { status, body: { results: documents } };
 	const fuse = new Fuse(documents, fuseOptions);
