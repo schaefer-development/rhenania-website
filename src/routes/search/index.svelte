@@ -1,34 +1,16 @@
 <script context="module" lang="ts">
 	import SearchResult from '$lib/components/SearchResult/SearchResult.svelte';
 	import type { Load } from '@sveltejs/kit';
-	import Fuse from 'fuse.js';
-
-	const fuseOptions = {
-		includeScore: true,
-		keys: [
-			'teaserHeadline',
-			'teaserSubheadline',
-			'teaserText',
-			'modules.headline',
-			'modules.heading1',
-			'modules.heading2',
-			'modules.heading3',
-			'modules.accordionItems.content.html',
-			'modules.text.html'
-		]
-	};
 
 	export const load: Load = async ({ session, fetch, page }) => {
 		const { lang } = session;
-		const query = page.query.get('q');
-		const res = await fetch(`/search.json?lang=${lang}`);
+		const q = page.query.get('q');
+		const searchParms = new URLSearchParams({ lang, q });
+		const res = await fetch(`/search.json?${searchParms.toString()}`);
 		if (res.ok) {
-			const { data } = await res.json();
-			const documents = [...data.pages, ...data.blogPosts];
-			const fuse = new Fuse(documents, fuseOptions);
-			const results = fuse.search(query) ?? [];
+			const { results } = await res.json();
 			return {
-				props: { results, query }
+				props: { results, query: q }
 			};
 		}
 
