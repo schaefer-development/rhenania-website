@@ -27,13 +27,12 @@
 
 <script lang="ts">
 	export let results: { item: Record<string, unknown> }[] = [];
-	export let query: string = '';
+	export let query: string;
 </script>
 
-<p>
-	<strong>Query</strong>: {query}
-</p>
+<h1 class="rc_h1 text-rc_darkblue pb-8">Suchanfrage: <strong>{query ?? ''}</strong></h1>
 
+<h2 class="rc_h2 pb-6 text-rc_darkblue">Suchergebnisse</h2>
 {#each results as result (result.item.id)}
 	<SearchResult {result} />
 {/each}
