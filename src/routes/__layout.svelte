@@ -31,6 +31,8 @@
 	import '@fontsource/red-hat-text/700.css';
 	import Header from '$lib/components/Header/Header.svelte';
 	import Footer from '$lib/components/Footer/Footer.svelte';
+	import LoadingIndicator from '$lib/components/LoadingIndicator/LoadingIndicator.svelte';
+	import { navigating } from '$app/stores';
 
 	let openMenuFull = false;
 	const toggleMenuFull = () => {
@@ -56,8 +58,12 @@
 	class:rc_menuIsOpen={openMenuFull}
 >
 	<Header {toggleMenuFull} {openMenuFull} {q} />
-	<main class="mb-auto">
-		<slot />
-	</main>
+	{#if $navigating}
+		<LoadingIndicator />
+	{:else}
+		<main class="mb-auto">
+			<slot />
+		</main>
+	{/if}
 	<Footer {referenceItems} />
 </div>
