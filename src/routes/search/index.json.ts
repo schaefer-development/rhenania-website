@@ -17,7 +17,7 @@ const fuseOptions = {
 		'modules.accordionItems.headline',
 		'modules.accordionItems.content.html',
 		'modules.cards.headline',
-		'modules.cards.subheadline',
+		'modules.cards.subheadline'
 	]
 };
 

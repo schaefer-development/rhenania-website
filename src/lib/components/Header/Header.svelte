@@ -17,6 +17,7 @@
 
 	export let openMenuFull: boolean;
 	export let toggleMenuFull: () => void;
+	export let q: string;
 
 	async function search({ target }) {
 		const params = new URLSearchParams({ q: target.query.value });
@@ -37,6 +38,7 @@
 					<input
 						type="search"
 						name="query"
+						value={q ?? ''}
 						class="form-control relative flex-auto min-w-0 block w-full max-w-sm px-3 py-2 font-normal bg-white bg-clip-padding peer border-y border-l border-gray-400 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none"
 						placeholder="Suchen"
 						aria-label="Search"
