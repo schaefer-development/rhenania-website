@@ -30,9 +30,11 @@
 	export let query: string;
 </script>
 
-<h1 class="rc_h1 text-rc_darkblue pb-8">Suchanfrage: <strong>{query ?? ''}</strong></h1>
+<div class="relative z-10 max-w-screen-lg mx-auto px-10 py-24">
+	<h1 class="rc_h1 text-rc_darkblue pb-8">Suchanfrage:<br />{query ?? ''}</h1>
 
-<h2 class="rc_h2 pb-6 text-rc_darkblue">Suchergebnisse</h2>
-{#each results as result (result.item.id)}
-	<SearchResult {result} />
-{/each}
+	<h2 class="rc_h2 text-black py-2">Suchergebnisse:</h2>
+	{#each results as result (result.item.id)}
+		<SearchResult {result} />
+	{/each}
+</div>

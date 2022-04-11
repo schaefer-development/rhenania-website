@@ -4,6 +4,10 @@
 	export let page: Partial<Page>;
 </script>
 
-<div>
-	<a href="{base}/{page.slug}" title={page.slug}>Zur Page: {page.slug}</a>
+<div class="py-2 border-b">
+	<span>Zur Page: </span><a
+		class="relative flex-none text-rc_red font-bold"
+		href="{base}/{page.slug}"
+		title={page.slug}>{page.slug}</a
+	>
 </div>
