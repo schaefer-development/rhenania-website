@@ -5,7 +5,7 @@
 </script>
 
 <div class="py-2 border-b">
-	<span>Zum Blog</span><a
+	<span>Zum Blog: </span><a
 		class="relative flex-none text-rc_red font-bold pr-1"
 		href="{base}/blog/{blogPost.slug}"
 		title={blogPost.slug}>{blogPost.slug}</a
