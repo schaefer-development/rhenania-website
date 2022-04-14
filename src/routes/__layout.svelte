@@ -1,14 +1,15 @@
 <script context="module">
 	/** @type {import('@sveltejs/kit').Load} */
-	export async function load({ session, fetch }) {
+	export async function load({ session, fetch, page }) {
 		const { lang } = session;
+		const q = page.query.get('q');
 		const url = `/layout.json?lang=${lang}`;
 		const res = await fetch(url);
 
 		if (res.ok) {
 			const { data } = await res.json();
 			return {
-				props: { data }
+				props: { data, q }
 			};
 		}
 
@@ -30,6 +31,8 @@
 	import '@fontsource/red-hat-text/700.css';
 	import Header from '$lib/components/Header/Header.svelte';
 	import Footer from '$lib/components/Footer/Footer.svelte';
+	import LoadingIndicator from '$lib/components/LoadingIndicator/LoadingIndicator.svelte';
+	import { navigating } from '$app/stores';
 
 	let openMenuFull = false;
 	const toggleMenuFull = () => {
@@ -37,6 +40,7 @@
 	};
 
 	export let data = { referencesContainers: null };
+	export let q: string;
 
 	let referenceItems = data.referencesContainers?.[0].referenceItems;
 </script>
@@ -53,9 +57,13 @@
 	class="flex flex-col min-h-screen justify-between bg-gray-50"
 	class:rc_menuIsOpen={openMenuFull}
 >
-	<Header {toggleMenuFull} {openMenuFull} />
-	<main class="mb-auto">
-		<slot />
-	</main>
+	<Header {toggleMenuFull} {openMenuFull} {q} />
+	{#if $navigating}
+		<LoadingIndicator />
+	{:else}
+		<main class="mb-auto">
+			<slot />
+		</main>
+	{/if}
 	<Footer {referenceItems} />
 </div>
