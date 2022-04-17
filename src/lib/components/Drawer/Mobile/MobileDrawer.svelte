@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { linkTo } from '$lib/helpers';
 	import DrawerAccordion from '$lib/components/Drawer/DrawerAccordion.svelte';
 	export let toggleMenuFull: () => void;
 	export let openMenuFull: boolean;
@@ -41,7 +41,7 @@
 			<div class="left">
 				<!-- left start -->
 				<a
-					href="{base}/start"
+					href={$linkTo('/start')}
 					class="font-medium text-xl uppercase tracking-wider break-words text-rc_skyblue text-rc_skyblue"
 					>Start</a
 				>
@@ -53,14 +53,14 @@
 				<DrawerAccordion id="versandlogistiksystem_drawer_full">
 					<span slot="headline">Versandlogistiksystem</span>
 					<div slot="content">
-						<a href="{base}/k04" class="rc_desktopmenu_subpoint"
+						<a href={$linkTo('/k04')} class="rc_desktopmenu_subpoint"
 							>K04 - Kommissionieren, Kontrollieren, Packen</a
 						>
-						<a href="{base}/f95/" class="rc_desktopmenu_subpoint"
+						<a href={$linkTo('/f95/')} class="rc_desktopmenu_subpoint"
 							>F95 - Paket- und Palettenversand</a
 						>
 
-						<a href="{base}/vka" class="rc_desktopmenu_subpoint"
+						<a href={$linkTo('/vka')} class="rc_desktopmenu_subpoint"
 							>VKA - Versandkostenkontrolle und Abrechnung</a
 						>
 					</div>
@@ -68,22 +68,24 @@
 				<DrawerAccordion id="versandoptimierung_drawer_full">
 					<span slot="headline">Versandoptimierung</span>
 					<div slot="content">
-						<a href="{base}/u12/" class="rc_desktopmenu_subpoint"
+						<a href={$linkTo('/u12/')} class="rc_desktopmenu_subpoint"
 							>U12 - Umsatzsteuer Befreiung sichern</a
 						>
-						<a href="{base}/duv/" class="rc_desktopmenu_subpoint">DUV - Dubletten vermeiden</a>
-						<a href="{base}/apk/" class="rc_desktopmenu_subpoint"
+						<a href={$linkTo('/duv/')} class="rc_desktopmenu_subpoint">DUV - Dubletten vermeiden</a>
+						<a href={$linkTo('/apk/')} class="rc_desktopmenu_subpoint"
 							>APK - Adressprüfung und Korrektur</a
 						>
-						<a href="{base}/g10/" class="rc_desktopmenu_subpoint">G10 - Gefahrgutversand</a>
+						<a href={$linkTo('/g10/')} class="rc_desktopmenu_subpoint">G10 - Gefahrgutversand</a>
 					</div>
 				</DrawerAccordion>
 				<DrawerAccordion id="hardware_drawer_full">
 					<span slot="headline">Hardware</span>
 					<div slot="content">
-						<a href="{base}/etikettendrucker/" class="rc_desktopmenu_subpoint">Etikettendrucker</a>
-						<a href="{base}/waagen/" class="rc_desktopmenu_subpoint">Waagen</a>
-						<a href="{base}/barcodescanner/" class="rc_desktopmenu_subpoint">Barcodescanner</a>
+						<a href={$linkTo('/etikettendrucker/')} class="rc_desktopmenu_subpoint"
+							>Etikettendrucker</a
+						>
+						<a href={$linkTo('/waagen/')} class="rc_desktopmenu_subpoint">Waagen</a>
+						<a href={$linkTo('/barcodescanner/')} class="rc_desktopmenu_subpoint">Barcodescanner</a>
 					</div>
 				</DrawerAccordion>
 
@@ -98,32 +100,32 @@
 				</p>
 
 				<a
-					href="{base}/ueberuns/"
+					href={$linkTo('/ueberuns/')}
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Über uns</a
 				>
 				<a
-					href="{base}/kontakt/"
+					href={$linkTo('/kontakt/')}
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Kontakt und Anfahrt</a
 				>
 				<a
-					href="{base}/karriere/"
+					href={$linkTo('/karriere/')}
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Karriere</a
 				>
 				<a
-					href="{base}/termine/"
+					href={$linkTo('/termine/')}
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Termine</a
 				>
 				<a
-					href="{base}/partner/"
+					href={$linkTo('/partner/')}
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Partner</a
 				>
 				<a
-					href="{base}/referenzen"
+					href={$linkTo('/referenzen')}
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Referenzen</a
 				>
@@ -136,22 +138,22 @@
 				</p>
 
 				<a
-					href="{base}/cloudloesung/"
+					href={$linkTo('/cloudloesung/')}
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Cloudlösung</a
 				>
 				<a
-					href="{base}/onlinesupport"
+					href={$linkTo('/onlinesupport')}
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Online-Support</a
 				>
 				<a
-					href="{base}/download/"
+					href={$linkTo('/download/')}
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Download</a
 				>
 				<a
-					href="{base}/faq/"
+					href={$linkTo('/faq/')}
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>FAQ</a
 				>

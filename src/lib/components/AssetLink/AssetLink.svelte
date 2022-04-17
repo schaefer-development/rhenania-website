@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { AssetLink } from '$lib/graphql/generated/schema';
+	import { linkTo } from '$lib/helpers';
 	export let module: Partial<AssetLink> = {};
 </script>
 

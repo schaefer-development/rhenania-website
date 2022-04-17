@@ -1,19 +1,20 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import Logo from '$lib/components/Logo/Logo.svelte';
+	import { linkTo } from '$lib/helpers';
 	import FooterAccordion from '$lib/components/Footer/FooterAccordion.svelte';
+	import LanguageMenu from '$lib/components/LanguageMenu/LanguageMenu.svelte';
 
 	import Slideshow from '$lib/components/Slideshow/Slideshow.svelte';
-	import type { ReferencesItem } from '$lib/graphql/generated/schema';
+	import type { ReferencesContainer } from '$lib/graphql/generated/schema';
 
 	let date = new Date().getFullYear();
-	export let referenceItems: ReferencesItem[];
+	export let data: { referencesContainers: ReferencesContainer[] };
 </script>
 
 <footer class="text-white bg-rc_darkblue-darkest relative">
 	<div class="bg-rc_darkblue w-full">
 		<div class="mx-auto max-w-screen-2xl px-10 text-rc_darkblue-darkest flex items-center">
-			<Slideshow {referenceItems} />
+			<Slideshow referenceItems={data?.referencesContainers?.[0].referenceItems} />
 		</div>
 	</div>
 
@@ -50,6 +51,7 @@
 				<div class="border-r h-32 rc_rotate" />
 			</div>
 		</div>
+		<LanguageMenu />
 		<div class="pb-8">
 			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Produkte</p>
 			<p class="text-center sm:text-left tracking-wide leading-relaxed">
@@ -61,18 +63,18 @@
 					>
 					<div slot="content" class="pb-2 ">
 						<a
-							href="{base}/k04/"
+							href={$linkTo('/k04/')}
 							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 							>– K04</a
 						>
 						<a
-							href="{base}/f95/"
+							href={$linkTo('/f95/')}
 							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 							>– F95</a
 						>
 
 						<a
-							href="{base}/vka/"
+							href={$linkTo('/vka/')}
 							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 							>– VKA</a
 						>
@@ -87,22 +89,22 @@
 					>
 					<div slot="content" class="pb-2">
 						<a
-							href="{base}/u12/"
+							href={$linkTo('/u12/')}
 							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 							>– U12</a
 						>
 						<a
-							href="{base}/apk/"
+							href={$linkTo('/apk/')}
 							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 							>– APK</a
 						>
 						<a
-							href="{base}/duv/"
+							href={$linkTo('/duv/')}
 							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 							>– DUV</a
 						>
 						<a
-							href="{base}/g10/"
+							href={$linkTo('/g10/')}
 							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 							>– G10</a
 						>
@@ -117,17 +119,17 @@
 					>
 					<div slot="content" class="pb-2">
 						<a
-							href="{base}/etikettendrucker/"
+							href={$linkTo('/etikettendrucker/')}
 							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 							>– Etikettendrucker</a
 						>
 						<a
-							href="{base}/waagen/"
+							href={$linkTo('/waagen/')}
 							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 							>– Waagen</a
 						>
 						<a
-							href="{base}/barcodescanner/"
+							href={$linkTo('/barcodescanner/')}
 							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 							>– Barcodescanner</a
 						>
@@ -139,36 +141,36 @@
 			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Unternehmen</p>
 			<p class="text-center sm:text-left tracking-wide leading-relaxed">
 				<a
-					href="{base}/ueberuns/"
+					href={$linkTo('/ueberuns/')}
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Über uns</a
 				><br />
 				<a
-					href="{base}/kontakt/"
+					href={$linkTo('/kontakt/')}
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Kontakt und Anfahrt</a
 				><br />
 
 				<a
-					href="{base}/karriere/"
+					href={$linkTo('/karriere/')}
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Karriere</a
 				><br />
 
 				<a
-					href="{base}/termine/"
+					href={$linkTo('/termine/')}
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Termine</a
 				><br />
 
 				<a
-					href="{base}/partner/"
+					href={$linkTo('/partner/')}
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Partner</a
 				><br />
 
 				<a
-					href="{base}/referenzen/"
+					href={$linkTo('/referenzen/')}
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Referenzen</a
 				><br />
@@ -178,24 +180,24 @@
 			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Service</p>
 			<p class="text-center sm:text-left tracking-wide leading-relaxed">
 				<a
-					href="{base}/cloudloesung/"
+					href={$linkTo('/cloudloesung/')}
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Cloudlösung</a
 				><br />
 				<a
-					href="{base}/onlinesupport/"
+					href={$linkTo('/onlinesupport/')}
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Online-Support</a
 				><br />
 
 				<a
-					href="{base}/download/"
+					href={$linkTo('/download/')}
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Download</a
 				><br />
 
 				<a
-					href="{base}/faq/"
+					href={$linkTo('/faq/')}
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>FAQ</a
 				><br />
@@ -205,21 +207,21 @@
 			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Kontakt</p>
 			<p class="text-center sm:text-left tracking-wide leading-relaxed">
 				<a
-					href="{base}/impressum/"
+					href={$linkTo('/impressum/')}
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Impressum</a
 				>
 				<br />
 
 				<a
-					href="{base}/datenschutz/"
+					href={$linkTo('/datenschutz/')}
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Datenschutz</a
 				>
 				<br />
 				Copyright {date}<br />
 				<a
-					href="{base}/sandbox/"
+					href={$linkTo('/sandbox/')}
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Sandbox</a
 				>

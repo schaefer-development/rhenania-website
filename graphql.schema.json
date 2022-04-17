@@ -7962,7 +7962,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de, en]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							}
@@ -33345,6 +33345,18 @@
 						"deprecationReason": null
 					},
 					{
+						"name": "headline",
+						"description": null,
+						"args": [],
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
 						"name": "history",
 						"description": "List of CtaLink versions",
 						"args": [
@@ -33854,6 +33866,18 @@
 						"deprecationReason": null
 					},
 					{
+						"name": "headline",
+						"description": null,
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
 						"name": "padding",
 						"description": null,
 						"type": {
@@ -34235,6 +34259,142 @@
 						"type": {
 							"kind": "INPUT_OBJECT",
 							"name": "UserWhereInput",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "headline",
+						"description": null,
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "headline_contains",
+						"description": "All values containing the given string.",
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "headline_ends_with",
+						"description": "All values ending with the given string.",
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "headline_in",
+						"description": "All values that are contained in given list.",
+						"type": {
+							"kind": "LIST",
+							"name": null,
+							"ofType": {
+								"kind": "NON_NULL",
+								"name": null,
+								"ofType": {
+									"kind": "SCALAR",
+									"name": "String",
+									"ofType": null
+								}
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "headline_not",
+						"description": "All values that are not equal to given value.",
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "headline_not_contains",
+						"description": "All values not containing the given string.",
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "headline_not_ends_with",
+						"description": "All values not ending with the given string",
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "headline_not_in",
+						"description": "All values that are not contained in given list.",
+						"type": {
+							"kind": "LIST",
+							"name": null,
+							"ofType": {
+								"kind": "NON_NULL",
+								"name": null,
+								"ofType": {
+									"kind": "SCALAR",
+									"name": "String",
+									"ofType": null
+								}
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "headline_not_starts_with",
+						"description": "All values not starting with the given string.",
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "headline_starts_with",
+						"description": "All values starting with the given string.",
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
 							"ofType": null
 						},
 						"defaultValue": null,
@@ -34763,6 +34923,18 @@
 						"deprecationReason": null
 					},
 					{
+						"name": "headline_ASC",
+						"description": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "headline_DESC",
+						"description": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
 						"name": "id_ASC",
 						"description": null,
 						"isDeprecated": false,
@@ -34825,6 +34997,18 @@
 						"type": {
 							"kind": "INPUT_OBJECT",
 							"name": "BlogPostUpdateOneInlineInput",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "headline",
+						"description": null,
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
 							"ofType": null
 						},
 						"defaultValue": null,
@@ -35017,6 +35201,18 @@
 				"description": null,
 				"fields": null,
 				"inputFields": [
+					{
+						"name": "headline",
+						"description": null,
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
 					{
 						"name": "padding",
 						"description": null,
@@ -35497,6 +35693,142 @@
 						"type": {
 							"kind": "INPUT_OBJECT",
 							"name": "UserWhereInput",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "headline",
+						"description": null,
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "headline_contains",
+						"description": "All values containing the given string.",
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "headline_ends_with",
+						"description": "All values ending with the given string.",
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "headline_in",
+						"description": "All values that are contained in given list.",
+						"type": {
+							"kind": "LIST",
+							"name": null,
+							"ofType": {
+								"kind": "NON_NULL",
+								"name": null,
+								"ofType": {
+									"kind": "SCALAR",
+									"name": "String",
+									"ofType": null
+								}
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "headline_not",
+						"description": "All values that are not equal to given value.",
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "headline_not_contains",
+						"description": "All values not containing the given string.",
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "headline_not_ends_with",
+						"description": "All values not ending with the given string",
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "headline_not_in",
+						"description": "All values that are not contained in given list.",
+						"type": {
+							"kind": "LIST",
+							"name": null,
+							"ofType": {
+								"kind": "NON_NULL",
+								"name": null,
+								"ofType": {
+									"kind": "SCALAR",
+									"name": "String",
+									"ofType": null
+								}
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "headline_not_starts_with",
+						"description": "All values not starting with the given string.",
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "headline_starts_with",
+						"description": "All values starting with the given string.",
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
 							"ofType": null
 						},
 						"defaultValue": null,
@@ -39509,7 +39841,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de, en]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							}
@@ -40002,7 +40334,7 @@
 					},
 					{
 						"name": "headline",
-						"description": "headline input for default locale (en)",
+						"description": "headline input for default locale (de)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -40086,7 +40418,7 @@
 					},
 					{
 						"name": "subheadline",
-						"description": "subheadline input for default locale (en)",
+						"description": "subheadline input for default locale (de)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -41281,7 +41613,7 @@
 				"inputFields": [
 					{
 						"name": "headline",
-						"description": "headline input for default locale (en)",
+						"description": "headline input for default locale (de)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -41365,7 +41697,7 @@
 					},
 					{
 						"name": "subheadline",
-						"description": "subheadline input for default locale (en)",
+						"description": "subheadline input for default locale (de)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -41708,7 +42040,7 @@
 				"inputFields": [
 					{
 						"name": "headline",
-						"description": "headline input for default locale (en)",
+						"description": "headline input for default locale (de)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -41756,7 +42088,7 @@
 					},
 					{
 						"name": "subheadline",
-						"description": "subheadline input for default locale (en)",
+						"description": "subheadline input for default locale (de)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -49556,7 +49888,24 @@
 					{
 						"name": "createdAt",
 						"description": "The time the document was created",
-						"args": [],
+						"args": [
+							{
+								"name": "variation",
+								"description": "Variation of DateTime field to return, allows value from base document, current localization, or combined by returning the newer value of both",
+								"type": {
+									"kind": "NON_NULL",
+									"name": null,
+									"ofType": {
+										"kind": "ENUM",
+										"name": "SystemDateTimeFieldVariation",
+										"ofType": null
+									}
+								},
+								"defaultValue": "COMBINED",
+								"isDeprecated": false,
+								"deprecationReason": null
+							}
+						],
 						"type": {
 							"kind": "NON_NULL",
 							"name": null,
@@ -49781,9 +50130,107 @@
 						"deprecationReason": null
 					},
 					{
+						"name": "locale",
+						"description": "System Locale field",
+						"args": [],
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "ENUM",
+								"name": "Locale",
+								"ofType": null
+							}
+						},
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "localizations",
+						"description": "Get the other localizations for this document",
+						"args": [
+							{
+								"name": "includeCurrent",
+								"description": "Decides if the current locale should be included or not",
+								"type": {
+									"kind": "NON_NULL",
+									"name": null,
+									"ofType": {
+										"kind": "SCALAR",
+										"name": "Boolean",
+										"ofType": null
+									}
+								},
+								"defaultValue": "false",
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "locales",
+								"description": "Potential locales that should be returned",
+								"type": {
+									"kind": "NON_NULL",
+									"name": null,
+									"ofType": {
+										"kind": "LIST",
+										"name": null,
+										"ofType": {
+											"kind": "NON_NULL",
+											"name": null,
+											"ofType": {
+												"kind": "ENUM",
+												"name": "Locale",
+												"ofType": null
+											}
+										}
+									}
+								},
+								"defaultValue": "[de, en]",
+								"isDeprecated": false,
+								"deprecationReason": null
+							}
+						],
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "LIST",
+								"name": null,
+								"ofType": {
+									"kind": "NON_NULL",
+									"name": null,
+									"ofType": {
+										"kind": "OBJECT",
+										"name": "Link",
+										"ofType": null
+									}
+								}
+							}
+						},
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
 						"name": "publishedAt",
 						"description": "The time the document was published. Null on documents in draft stage.",
-						"args": [],
+						"args": [
+							{
+								"name": "variation",
+								"description": "Variation of DateTime field to return, allows value from base document, current localization, or combined by returning the newer value of both",
+								"type": {
+									"kind": "NON_NULL",
+									"name": null,
+									"ofType": {
+										"kind": "ENUM",
+										"name": "SystemDateTimeFieldVariation",
+										"ofType": null
+									}
+								},
+								"defaultValue": "COMBINED",
+								"isDeprecated": false,
+								"deprecationReason": null
+							}
+						],
 						"type": {
 							"kind": "SCALAR",
 							"name": "DateTime",
@@ -49994,7 +50441,24 @@
 					{
 						"name": "updatedAt",
 						"description": "The time the document was updated",
-						"args": [],
+						"args": [
+							{
+								"name": "variation",
+								"description": "Variation of DateTime field to return, allows value from base document, current localization, or combined by returning the newer value of both",
+								"type": {
+									"kind": "NON_NULL",
+									"name": null,
+									"ofType": {
+										"kind": "ENUM",
+										"name": "SystemDateTimeFieldVariation",
+										"ofType": null
+									}
+								},
+								"defaultValue": "COMBINED",
+								"isDeprecated": false,
+								"deprecationReason": null
+							}
+						],
 						"type": {
 							"kind": "NON_NULL",
 							"name": null,
@@ -50226,10 +50690,22 @@
 					},
 					{
 						"name": "label",
-						"description": null,
+						"description": "label input for default locale (de)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "localizations",
+						"description": "Inline mutations for managing document localizations excluding the default locale",
+						"type": {
+							"kind": "INPUT_OBJECT",
+							"name": "LinkCreateLocalizationsInput",
 							"ofType": null
 						},
 						"defaultValue": null,
@@ -50255,6 +50731,127 @@
 							"kind": "SCALAR",
 							"name": "DateTime",
 							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					}
+				],
+				"interfaces": null,
+				"enumValues": null,
+				"possibleTypes": null
+			},
+			{
+				"kind": "INPUT_OBJECT",
+				"name": "LinkCreateLocalizationDataInput",
+				"description": null,
+				"fields": null,
+				"inputFields": [
+					{
+						"name": "createdAt",
+						"description": null,
+						"type": {
+							"kind": "SCALAR",
+							"name": "DateTime",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "label",
+						"description": null,
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "updatedAt",
+						"description": null,
+						"type": {
+							"kind": "SCALAR",
+							"name": "DateTime",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					}
+				],
+				"interfaces": null,
+				"enumValues": null,
+				"possibleTypes": null
+			},
+			{
+				"kind": "INPUT_OBJECT",
+				"name": "LinkCreateLocalizationInput",
+				"description": null,
+				"fields": null,
+				"inputFields": [
+					{
+						"name": "data",
+						"description": "Localization input",
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "INPUT_OBJECT",
+								"name": "LinkCreateLocalizationDataInput",
+								"ofType": null
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "locale",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "ENUM",
+								"name": "Locale",
+								"ofType": null
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					}
+				],
+				"interfaces": null,
+				"enumValues": null,
+				"possibleTypes": null
+			},
+			{
+				"kind": "INPUT_OBJECT",
+				"name": "LinkCreateLocalizationsInput",
+				"description": null,
+				"fields": null,
+				"inputFields": [
+					{
+						"name": "create",
+						"description": "Create localizations for the newly-created document",
+						"type": {
+							"kind": "LIST",
+							"name": null,
+							"ofType": {
+								"kind": "NON_NULL",
+								"name": null,
+								"ofType": {
+									"kind": "INPUT_OBJECT",
+									"name": "LinkCreateLocalizationInput",
+									"ofType": null
+								}
+							}
 						},
 						"defaultValue": null,
 						"isDeprecated": false,
@@ -50726,142 +51323,6 @@
 						"type": {
 							"kind": "SCALAR",
 							"name": "ID",
-							"ofType": null
-						},
-						"defaultValue": null,
-						"isDeprecated": false,
-						"deprecationReason": null
-					},
-					{
-						"name": "label",
-						"description": null,
-						"type": {
-							"kind": "SCALAR",
-							"name": "String",
-							"ofType": null
-						},
-						"defaultValue": null,
-						"isDeprecated": false,
-						"deprecationReason": null
-					},
-					{
-						"name": "label_contains",
-						"description": "All values containing the given string.",
-						"type": {
-							"kind": "SCALAR",
-							"name": "String",
-							"ofType": null
-						},
-						"defaultValue": null,
-						"isDeprecated": false,
-						"deprecationReason": null
-					},
-					{
-						"name": "label_ends_with",
-						"description": "All values ending with the given string.",
-						"type": {
-							"kind": "SCALAR",
-							"name": "String",
-							"ofType": null
-						},
-						"defaultValue": null,
-						"isDeprecated": false,
-						"deprecationReason": null
-					},
-					{
-						"name": "label_in",
-						"description": "All values that are contained in given list.",
-						"type": {
-							"kind": "LIST",
-							"name": null,
-							"ofType": {
-								"kind": "NON_NULL",
-								"name": null,
-								"ofType": {
-									"kind": "SCALAR",
-									"name": "String",
-									"ofType": null
-								}
-							}
-						},
-						"defaultValue": null,
-						"isDeprecated": false,
-						"deprecationReason": null
-					},
-					{
-						"name": "label_not",
-						"description": "All values that are not equal to given value.",
-						"type": {
-							"kind": "SCALAR",
-							"name": "String",
-							"ofType": null
-						},
-						"defaultValue": null,
-						"isDeprecated": false,
-						"deprecationReason": null
-					},
-					{
-						"name": "label_not_contains",
-						"description": "All values not containing the given string.",
-						"type": {
-							"kind": "SCALAR",
-							"name": "String",
-							"ofType": null
-						},
-						"defaultValue": null,
-						"isDeprecated": false,
-						"deprecationReason": null
-					},
-					{
-						"name": "label_not_ends_with",
-						"description": "All values not ending with the given string",
-						"type": {
-							"kind": "SCALAR",
-							"name": "String",
-							"ofType": null
-						},
-						"defaultValue": null,
-						"isDeprecated": false,
-						"deprecationReason": null
-					},
-					{
-						"name": "label_not_in",
-						"description": "All values that are not contained in given list.",
-						"type": {
-							"kind": "LIST",
-							"name": null,
-							"ofType": {
-								"kind": "NON_NULL",
-								"name": null,
-								"ofType": {
-									"kind": "SCALAR",
-									"name": "String",
-									"ofType": null
-								}
-							}
-						},
-						"defaultValue": null,
-						"isDeprecated": false,
-						"deprecationReason": null
-					},
-					{
-						"name": "label_not_starts_with",
-						"description": "All values not starting with the given string.",
-						"type": {
-							"kind": "SCALAR",
-							"name": "String",
-							"ofType": null
-						},
-						"defaultValue": null,
-						"isDeprecated": false,
-						"deprecationReason": null
-					},
-					{
-						"name": "label_starts_with",
-						"description": "All values starting with the given string.",
-						"type": {
-							"kind": "SCALAR",
-							"name": "String",
 							"ofType": null
 						},
 						"defaultValue": null,
@@ -51905,10 +52366,22 @@
 					},
 					{
 						"name": "label",
-						"description": null,
+						"description": "label input for default locale (de)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "localizations",
+						"description": "Manage document localizations",
+						"type": {
+							"kind": "INPUT_OBJECT",
+							"name": "LinkUpdateLocalizationsInput",
 							"ofType": null
 						},
 						"defaultValue": null,
@@ -51922,6 +52395,163 @@
 							"kind": "INPUT_OBJECT",
 							"name": "LinkTargetUpdateOneInlineInput",
 							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					}
+				],
+				"interfaces": null,
+				"enumValues": null,
+				"possibleTypes": null
+			},
+			{
+				"kind": "INPUT_OBJECT",
+				"name": "LinkUpdateLocalizationDataInput",
+				"description": null,
+				"fields": null,
+				"inputFields": [
+					{
+						"name": "label",
+						"description": null,
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					}
+				],
+				"interfaces": null,
+				"enumValues": null,
+				"possibleTypes": null
+			},
+			{
+				"kind": "INPUT_OBJECT",
+				"name": "LinkUpdateLocalizationInput",
+				"description": null,
+				"fields": null,
+				"inputFields": [
+					{
+						"name": "data",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "INPUT_OBJECT",
+								"name": "LinkUpdateLocalizationDataInput",
+								"ofType": null
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "locale",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "ENUM",
+								"name": "Locale",
+								"ofType": null
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					}
+				],
+				"interfaces": null,
+				"enumValues": null,
+				"possibleTypes": null
+			},
+			{
+				"kind": "INPUT_OBJECT",
+				"name": "LinkUpdateLocalizationsInput",
+				"description": null,
+				"fields": null,
+				"inputFields": [
+					{
+						"name": "create",
+						"description": "Localizations to create",
+						"type": {
+							"kind": "LIST",
+							"name": null,
+							"ofType": {
+								"kind": "NON_NULL",
+								"name": null,
+								"ofType": {
+									"kind": "INPUT_OBJECT",
+									"name": "LinkCreateLocalizationInput",
+									"ofType": null
+								}
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "delete",
+						"description": "Localizations to delete",
+						"type": {
+							"kind": "LIST",
+							"name": null,
+							"ofType": {
+								"kind": "NON_NULL",
+								"name": null,
+								"ofType": {
+									"kind": "ENUM",
+									"name": "Locale",
+									"ofType": null
+								}
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "update",
+						"description": "Localizations to update",
+						"type": {
+							"kind": "LIST",
+							"name": null,
+							"ofType": {
+								"kind": "NON_NULL",
+								"name": null,
+								"ofType": {
+									"kind": "INPUT_OBJECT",
+									"name": "LinkUpdateLocalizationInput",
+									"ofType": null
+								}
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "upsert",
+						"description": null,
+						"type": {
+							"kind": "LIST",
+							"name": null,
+							"ofType": {
+								"kind": "NON_NULL",
+								"name": null,
+								"ofType": {
+									"kind": "INPUT_OBJECT",
+									"name": "LinkUpsertLocalizationInput",
+									"ofType": null
+								}
+							}
 						},
 						"defaultValue": null,
 						"isDeprecated": false,
@@ -52091,11 +52721,120 @@
 				"inputFields": [
 					{
 						"name": "label",
+						"description": "label input for default locale (de)",
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "localizations",
+						"description": "Optional updates to localizations",
+						"type": {
+							"kind": "INPUT_OBJECT",
+							"name": "LinkUpdateManyLocalizationsInput",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					}
+				],
+				"interfaces": null,
+				"enumValues": null,
+				"possibleTypes": null
+			},
+			{
+				"kind": "INPUT_OBJECT",
+				"name": "LinkUpdateManyLocalizationDataInput",
+				"description": null,
+				"fields": null,
+				"inputFields": [
+					{
+						"name": "label",
 						"description": null,
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
 							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					}
+				],
+				"interfaces": null,
+				"enumValues": null,
+				"possibleTypes": null
+			},
+			{
+				"kind": "INPUT_OBJECT",
+				"name": "LinkUpdateManyLocalizationInput",
+				"description": null,
+				"fields": null,
+				"inputFields": [
+					{
+						"name": "data",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "INPUT_OBJECT",
+								"name": "LinkUpdateManyLocalizationDataInput",
+								"ofType": null
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "locale",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "ENUM",
+								"name": "Locale",
+								"ofType": null
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					}
+				],
+				"interfaces": null,
+				"enumValues": null,
+				"possibleTypes": null
+			},
+			{
+				"kind": "INPUT_OBJECT",
+				"name": "LinkUpdateManyLocalizationsInput",
+				"description": null,
+				"fields": null,
+				"inputFields": [
+					{
+						"name": "update",
+						"description": "Localizations to update",
+						"type": {
+							"kind": "LIST",
+							"name": null,
+							"ofType": {
+								"kind": "NON_NULL",
+								"name": null,
+								"ofType": {
+									"kind": "INPUT_OBJECT",
+									"name": "LinkUpdateManyLocalizationInput",
+									"ofType": null
+								}
+							}
 						},
 						"defaultValue": null,
 						"isDeprecated": false,
@@ -52306,6 +53045,65 @@
 							"ofType": {
 								"kind": "INPUT_OBJECT",
 								"name": "LinkUpdateInput",
+								"ofType": null
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					}
+				],
+				"interfaces": null,
+				"enumValues": null,
+				"possibleTypes": null
+			},
+			{
+				"kind": "INPUT_OBJECT",
+				"name": "LinkUpsertLocalizationInput",
+				"description": null,
+				"fields": null,
+				"inputFields": [
+					{
+						"name": "create",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "INPUT_OBJECT",
+								"name": "LinkCreateLocalizationDataInput",
+								"ofType": null
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "locale",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "ENUM",
+								"name": "Locale",
+								"ofType": null
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "update",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "INPUT_OBJECT",
+								"name": "LinkUpdateLocalizationDataInput",
 								"ofType": null
 							}
 						},
@@ -53156,8 +53954,14 @@
 				"interfaces": null,
 				"enumValues": [
 					{
-						"name": "en",
+						"name": "de",
 						"description": "System locale",
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "en",
+						"description": null,
 						"isDeprecated": false,
 						"deprecationReason": null
 					}
@@ -57687,6 +58491,38 @@
 						"description": "Publish one link",
 						"args": [
 							{
+								"name": "locales",
+								"description": "Optional localizations to publish",
+								"type": {
+									"kind": "LIST",
+									"name": null,
+									"ofType": {
+										"kind": "NON_NULL",
+										"name": null,
+										"ofType": {
+											"kind": "ENUM",
+											"name": "Locale",
+											"ofType": null
+										}
+									}
+								},
+								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "publishBase",
+								"description": "Whether to publish the base document",
+								"type": {
+									"kind": "SCALAR",
+									"name": "Boolean",
+									"ofType": null
+								},
+								"defaultValue": "true",
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
 								"name": "to",
 								"description": "Publishing target stage",
 								"type": {
@@ -57723,6 +58559,18 @@
 									}
 								},
 								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "withDefaultLocale",
+								"description": "Whether to include the default locale when publishBase is set",
+								"type": {
+									"kind": "SCALAR",
+									"name": "Boolean",
+									"ofType": null
+								},
+								"defaultValue": "true",
 								"isDeprecated": false,
 								"deprecationReason": null
 							}
@@ -60230,6 +61078,38 @@
 						"description": "Publish many Link documents",
 						"args": [
 							{
+								"name": "locales",
+								"description": "Document localizations to publish",
+								"type": {
+									"kind": "LIST",
+									"name": null,
+									"ofType": {
+										"kind": "NON_NULL",
+										"name": null,
+										"ofType": {
+											"kind": "ENUM",
+											"name": "Locale",
+											"ofType": null
+										}
+									}
+								},
+								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "publishBase",
+								"description": "Whether to publish the base document",
+								"type": {
+									"kind": "SCALAR",
+									"name": "Boolean",
+									"ofType": null
+								},
+								"defaultValue": "true",
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
 								"name": "to",
 								"description": "Stages to publish documents to",
 								"type": {
@@ -60262,6 +61142,18 @@
 									"ofType": null
 								},
 								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "withDefaultLocale",
+								"description": "Whether to include the default locale when publishBase is true",
+								"type": {
+									"kind": "SCALAR",
+									"name": "Boolean",
+									"ofType": null
+								},
+								"defaultValue": "true",
 								"isDeprecated": false,
 								"deprecationReason": null
 							}
@@ -60343,6 +61235,38 @@
 								"deprecationReason": null
 							},
 							{
+								"name": "locales",
+								"description": "Document localizations to publish",
+								"type": {
+									"kind": "LIST",
+									"name": null,
+									"ofType": {
+										"kind": "NON_NULL",
+										"name": null,
+										"ofType": {
+											"kind": "ENUM",
+											"name": "Locale",
+											"ofType": null
+										}
+									}
+								},
+								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "publishBase",
+								"description": "Whether to publish the base document",
+								"type": {
+									"kind": "SCALAR",
+									"name": "Boolean",
+									"ofType": null
+								},
+								"defaultValue": "true",
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
 								"name": "skip",
 								"description": null,
 								"type": {
@@ -60387,6 +61311,18 @@
 									"ofType": null
 								},
 								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "withDefaultLocale",
+								"description": "Whether to include the default locale when publishBase is true",
+								"type": {
+									"kind": "SCALAR",
+									"name": "Boolean",
+									"ofType": null
+								},
+								"defaultValue": "true",
 								"isDeprecated": false,
 								"deprecationReason": null
 							}
@@ -61298,6 +62234,38 @@
 						"description": "Publish many Text documents",
 						"args": [
 							{
+								"name": "locales",
+								"description": "Document localizations to publish",
+								"type": {
+									"kind": "LIST",
+									"name": null,
+									"ofType": {
+										"kind": "NON_NULL",
+										"name": null,
+										"ofType": {
+											"kind": "ENUM",
+											"name": "Locale",
+											"ofType": null
+										}
+									}
+								},
+								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "publishBase",
+								"description": "Whether to publish the base document",
+								"type": {
+									"kind": "SCALAR",
+									"name": "Boolean",
+									"ofType": null
+								},
+								"defaultValue": "true",
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
 								"name": "to",
 								"description": "Stages to publish documents to",
 								"type": {
@@ -61330,6 +62298,18 @@
 									"ofType": null
 								},
 								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "withDefaultLocale",
+								"description": "Whether to include the default locale when publishBase is true",
+								"type": {
+									"kind": "SCALAR",
+									"name": "Boolean",
+									"ofType": null
+								},
+								"defaultValue": "true",
 								"isDeprecated": false,
 								"deprecationReason": null
 							}
@@ -61411,6 +62391,38 @@
 								"deprecationReason": null
 							},
 							{
+								"name": "locales",
+								"description": "Document localizations to publish",
+								"type": {
+									"kind": "LIST",
+									"name": null,
+									"ofType": {
+										"kind": "NON_NULL",
+										"name": null,
+										"ofType": {
+											"kind": "ENUM",
+											"name": "Locale",
+											"ofType": null
+										}
+									}
+								},
+								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "publishBase",
+								"description": "Whether to publish the base document",
+								"type": {
+									"kind": "SCALAR",
+									"name": "Boolean",
+									"ofType": null
+								},
+								"defaultValue": "true",
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
 								"name": "skip",
 								"description": null,
 								"type": {
@@ -61455,6 +62467,18 @@
 									"ofType": null
 								},
 								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "withDefaultLocale",
+								"description": "Whether to include the default locale when publishBase is true",
+								"type": {
+									"kind": "SCALAR",
+									"name": "Boolean",
+									"ofType": null
+								},
+								"defaultValue": "true",
 								"isDeprecated": false,
 								"deprecationReason": null
 							}
@@ -61741,6 +62765,38 @@
 						"description": "Publish one text",
 						"args": [
 							{
+								"name": "locales",
+								"description": "Optional localizations to publish",
+								"type": {
+									"kind": "LIST",
+									"name": null,
+									"ofType": {
+										"kind": "NON_NULL",
+										"name": null,
+										"ofType": {
+											"kind": "ENUM",
+											"name": "Locale",
+											"ofType": null
+										}
+									}
+								},
+								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "publishBase",
+								"description": "Whether to publish the base document",
+								"type": {
+									"kind": "SCALAR",
+									"name": "Boolean",
+									"ofType": null
+								},
+								"defaultValue": "true",
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
 								"name": "to",
 								"description": "Publishing target stage",
 								"type": {
@@ -61777,6 +62833,18 @@
 									}
 								},
 								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "withDefaultLocale",
+								"description": "Whether to include the default locale when publishBase is set",
+								"type": {
+									"kind": "SCALAR",
+									"name": "Boolean",
+									"ofType": null
+								},
+								"defaultValue": "true",
 								"isDeprecated": false,
 								"deprecationReason": null
 							}
@@ -62883,6 +63951,38 @@
 						"description": "Schedule to publish one link",
 						"args": [
 							{
+								"name": "locales",
+								"description": "Optional localizations to publish",
+								"type": {
+									"kind": "LIST",
+									"name": null,
+									"ofType": {
+										"kind": "NON_NULL",
+										"name": null,
+										"ofType": {
+											"kind": "ENUM",
+											"name": "Locale",
+											"ofType": null
+										}
+									}
+								},
+								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "publishBase",
+								"description": "Whether to publish the base document",
+								"type": {
+									"kind": "SCALAR",
+									"name": "Boolean",
+									"ofType": null
+								},
+								"defaultValue": "true",
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
 								"name": "releaseAt",
 								"description": "Release at point in time, will create new release containing this operation",
 								"type": {
@@ -62943,6 +64043,18 @@
 									}
 								},
 								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "withDefaultLocale",
+								"description": "Whether to include the default locale when publishBase is set",
+								"type": {
+									"kind": "SCALAR",
+									"name": "Boolean",
+									"ofType": null
+								},
+								"defaultValue": "true",
 								"isDeprecated": false,
 								"deprecationReason": null
 							}
@@ -63345,6 +64457,38 @@
 						"description": "Schedule to publish one text",
 						"args": [
 							{
+								"name": "locales",
+								"description": "Optional localizations to publish",
+								"type": {
+									"kind": "LIST",
+									"name": null,
+									"ofType": {
+										"kind": "NON_NULL",
+										"name": null,
+										"ofType": {
+											"kind": "ENUM",
+											"name": "Locale",
+											"ofType": null
+										}
+									}
+								},
+								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "publishBase",
+								"description": "Whether to publish the base document",
+								"type": {
+									"kind": "SCALAR",
+									"name": "Boolean",
+									"ofType": null
+								},
+								"defaultValue": "true",
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
 								"name": "releaseAt",
 								"description": "Release at point in time, will create new release containing this operation",
 								"type": {
@@ -63405,6 +64549,18 @@
 									}
 								},
 								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "withDefaultLocale",
+								"description": "Whether to include the default locale when publishBase is set",
+								"type": {
+									"kind": "SCALAR",
+									"name": "Boolean",
+									"ofType": null
+								},
+								"defaultValue": "true",
 								"isDeprecated": false,
 								"deprecationReason": null
 							}
@@ -64511,6 +65667,26 @@
 								"deprecationReason": null
 							},
 							{
+								"name": "locales",
+								"description": "Optional locales to unpublish. Unpublishing the default locale will completely remove the document from the selected stages",
+								"type": {
+									"kind": "LIST",
+									"name": null,
+									"ofType": {
+										"kind": "NON_NULL",
+										"name": null,
+										"ofType": {
+											"kind": "ENUM",
+											"name": "Locale",
+											"ofType": null
+										}
+									}
+								},
+								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
 								"name": "releaseAt",
 								"description": "Release at point in time, will create new release containing this operation",
 								"type": {
@@ -64531,6 +65707,18 @@
 									"ofType": null
 								},
 								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "unpublishBase",
+								"description": "Unpublish complete document including default localization and relations from stages. Can be disabled.",
+								"type": {
+									"kind": "SCALAR",
+									"name": "Boolean",
+									"ofType": null
+								},
+								"defaultValue": "true",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -64973,6 +66161,26 @@
 								"deprecationReason": null
 							},
 							{
+								"name": "locales",
+								"description": "Optional locales to unpublish. Unpublishing the default locale will completely remove the document from the selected stages",
+								"type": {
+									"kind": "LIST",
+									"name": null,
+									"ofType": {
+										"kind": "NON_NULL",
+										"name": null,
+										"ofType": {
+											"kind": "ENUM",
+											"name": "Locale",
+											"ofType": null
+										}
+									}
+								},
+								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
 								"name": "releaseAt",
 								"description": "Release at point in time, will create new release containing this operation",
 								"type": {
@@ -64993,6 +66201,18 @@
 									"ofType": null
 								},
 								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "unpublishBase",
+								"description": "Unpublish complete document including default localization and relations from stages. Can be disabled.",
+								"type": {
+									"kind": "SCALAR",
+									"name": "Boolean",
+									"ofType": null
+								},
+								"defaultValue": "true",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -65799,6 +67019,38 @@
 									}
 								},
 								"defaultValue": "[PUBLISHED]",
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "locales",
+								"description": "Optional locales to unpublish. Unpublishing the default locale will completely remove the document from the selected stages",
+								"type": {
+									"kind": "LIST",
+									"name": null,
+									"ofType": {
+										"kind": "NON_NULL",
+										"name": null,
+										"ofType": {
+											"kind": "ENUM",
+											"name": "Locale",
+											"ofType": null
+										}
+									}
+								},
+								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "unpublishBase",
+								"description": "Unpublish complete document including default localization and relations from stages. Can be disabled.",
+								"type": {
+									"kind": "SCALAR",
+									"name": "Boolean",
+									"ofType": null
+								},
+								"defaultValue": "true",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -68298,6 +69550,38 @@
 								"deprecationReason": null
 							},
 							{
+								"name": "locales",
+								"description": "Locales to unpublish",
+								"type": {
+									"kind": "LIST",
+									"name": null,
+									"ofType": {
+										"kind": "NON_NULL",
+										"name": null,
+										"ofType": {
+											"kind": "ENUM",
+											"name": "Locale",
+											"ofType": null
+										}
+									}
+								},
+								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "unpublishBase",
+								"description": "Whether to unpublish the base document and default localization",
+								"type": {
+									"kind": "SCALAR",
+									"name": "Boolean",
+									"ofType": null
+								},
+								"defaultValue": "true",
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
 								"name": "where",
 								"description": "Identifies documents in each stage",
 								"type": {
@@ -68399,6 +69683,26 @@
 								"deprecationReason": null
 							},
 							{
+								"name": "locales",
+								"description": "Locales to unpublish",
+								"type": {
+									"kind": "LIST",
+									"name": null,
+									"ofType": {
+										"kind": "NON_NULL",
+										"name": null,
+										"ofType": {
+											"kind": "ENUM",
+											"name": "Locale",
+											"ofType": null
+										}
+									}
+								},
+								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
 								"name": "skip",
 								"description": null,
 								"type": {
@@ -68419,6 +69723,18 @@
 									"ofType": null
 								},
 								"defaultValue": "DRAFT",
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "unpublishBase",
+								"description": "Whether to unpublish the base document and default localization",
+								"type": {
+									"kind": "SCALAR",
+									"name": "Boolean",
+									"ofType": null
+								},
+								"defaultValue": "true",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -69366,6 +70682,38 @@
 								"deprecationReason": null
 							},
 							{
+								"name": "locales",
+								"description": "Locales to unpublish",
+								"type": {
+									"kind": "LIST",
+									"name": null,
+									"ofType": {
+										"kind": "NON_NULL",
+										"name": null,
+										"ofType": {
+											"kind": "ENUM",
+											"name": "Locale",
+											"ofType": null
+										}
+									}
+								},
+								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "unpublishBase",
+								"description": "Whether to unpublish the base document and default localization",
+								"type": {
+									"kind": "SCALAR",
+									"name": "Boolean",
+									"ofType": null
+								},
+								"defaultValue": "true",
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
 								"name": "where",
 								"description": "Identifies documents in each stage",
 								"type": {
@@ -69467,6 +70815,26 @@
 								"deprecationReason": null
 							},
 							{
+								"name": "locales",
+								"description": "Locales to unpublish",
+								"type": {
+									"kind": "LIST",
+									"name": null,
+									"ofType": {
+										"kind": "NON_NULL",
+										"name": null,
+										"ofType": {
+											"kind": "ENUM",
+											"name": "Locale",
+											"ofType": null
+										}
+									}
+								},
+								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
 								"name": "skip",
 								"description": null,
 								"type": {
@@ -69487,6 +70855,18 @@
 									"ofType": null
 								},
 								"defaultValue": "DRAFT",
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "unpublishBase",
+								"description": "Whether to unpublish the base document and default localization",
+								"type": {
+									"kind": "SCALAR",
+									"name": "Boolean",
+									"ofType": null
+								},
+								"defaultValue": "true",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -69805,6 +71185,38 @@
 									}
 								},
 								"defaultValue": "[PUBLISHED]",
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "locales",
+								"description": "Optional locales to unpublish. Unpublishing the default locale will completely remove the document from the selected stages",
+								"type": {
+									"kind": "LIST",
+									"name": null,
+									"ofType": {
+										"kind": "NON_NULL",
+										"name": null,
+										"ofType": {
+											"kind": "ENUM",
+											"name": "Locale",
+											"ofType": null
+										}
+									}
+								},
+								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "unpublishBase",
+								"description": "Unpublish complete document including default localization and relations from stages. Can be disabled.",
+								"type": {
+									"kind": "SCALAR",
+									"name": "Boolean",
+									"ofType": null
+								},
+								"defaultValue": "true",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -85180,7 +86592,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -85326,7 +86738,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -85475,7 +86887,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -85568,7 +86980,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -85714,7 +87126,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -85863,7 +87275,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -85956,7 +87368,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -86025,7 +87437,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -86171,7 +87583,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -86320,7 +87732,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -86490,7 +87902,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -86639,7 +88051,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -86732,7 +88144,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -86878,7 +88290,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -87027,7 +88439,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -87120,7 +88532,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -87266,7 +88678,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -87415,7 +88827,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -87508,7 +88920,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -87654,7 +89066,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -87803,7 +89215,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -87896,7 +89308,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -88042,7 +89454,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -88191,7 +89603,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -88284,7 +89696,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -88430,7 +89842,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -88579,7 +89991,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -88672,7 +90084,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -88818,7 +90230,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -88967,7 +90379,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -89060,7 +90472,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -89206,7 +90618,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -89355,7 +90767,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -89448,7 +90860,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -89594,7 +91006,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -89743,7 +91155,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -89836,7 +91248,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -89982,7 +91394,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -90131,7 +91543,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -90206,7 +91618,7 @@
 						"args": [
 							{
 								"name": "locales",
-								"description": "Defines which locales should be returned.\n\nNote that `Link` is a model without localized fields and will not be affected directly by this argument, however the locales will be passed on to any relational fields in the query's subtree for filtering.\nFor related models with localized fields in the query's subtree, the first locale matching the provided list of locales will be returned, entries with non matching locales will be filtered out.\n\nThis argument may be overwritten by another locales definition in a relational child field, this will effectively use the overwritten argument for the affected query's subtree.",
+								"description": "Defines which locales should be returned.\n\nNote that `Link` will be affected directly by this argument, as well as any other related models with localized fields in the query's subtree.\nThe first locale matching the provided list will be returned, entries with non matching locales will be filtered out.\n\nThis argument may be overwritten by another locales definition in a relational child field, this will effectively use the overwritten argument for the affected query's subtree.",
 								"type": {
 									"kind": "NON_NULL",
 									"name": null,
@@ -90224,7 +91636,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -90352,7 +91764,7 @@
 							},
 							{
 								"name": "locales",
-								"description": "Defines which locales should be returned.\n\nNote that `Link` is a model without localized fields and will not be affected directly by this argument, however the locales will be passed on to any relational fields in the query's subtree for filtering.\nFor related models with localized fields in the query's subtree, the first locale matching the provided list of locales will be returned, entries with non matching locales will be filtered out.\n\nThis argument may be overwritten by another locales definition in a relational child field, this will effectively use the overwritten argument for the affected query's subtree.",
+								"description": "Defines which locales should be returned.\n\nNote that `Link` will be affected directly by this argument, as well as any other related models with localized fields in the query's subtree.\nThe first locale matching the provided list will be returned, entries with non matching locales will be filtered out.\n\nThis argument may be overwritten by another locales definition in a relational child field, this will effectively use the overwritten argument for the affected query's subtree.",
 								"type": {
 									"kind": "NON_NULL",
 									"name": null,
@@ -90370,7 +91782,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -90501,7 +91913,7 @@
 							},
 							{
 								"name": "locales",
-								"description": "Defines which locales should be returned.\n\nNote that `Link` is a model without localized fields and will not be affected directly by this argument, however the locales will be passed on to any relational fields in the query's subtree for filtering.\nFor related models with localized fields in the query's subtree, the first locale matching the provided list of locales will be returned, entries with non matching locales will be filtered out.\n\nThis argument may be overwritten by another locales definition in a relational child field, this will effectively use the overwritten argument for the affected query's subtree.",
+								"description": "Defines which locales should be returned.\n\nNote that `Link` will be affected directly by this argument, as well as any other related models with localized fields in the query's subtree.\nThe first locale matching the provided list will be returned, entries with non matching locales will be filtered out.\n\nThis argument may be overwritten by another locales definition in a relational child field, this will effectively use the overwritten argument for the affected query's subtree.",
 								"type": {
 									"kind": "NON_NULL",
 									"name": null,
@@ -90519,7 +91931,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -90628,7 +92040,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -90681,7 +92093,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -90827,7 +92239,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -90976,7 +92388,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -91069,7 +92481,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -91215,7 +92627,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -91364,7 +92776,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -91457,7 +92869,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -91603,7 +93015,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -91752,7 +93164,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -91845,7 +93257,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -91991,7 +93403,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -92140,7 +93552,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -92233,7 +93645,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -92379,7 +93791,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -92528,7 +93940,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -92621,7 +94033,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -92738,7 +94150,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -92887,7 +94299,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -92980,7 +94392,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -93097,7 +94509,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -93246,7 +94658,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -93321,7 +94733,7 @@
 						"args": [
 							{
 								"name": "locales",
-								"description": "Defines which locales should be returned.\n\nNote that `Text` is a model without localized fields and will not be affected directly by this argument, however the locales will be passed on to any relational fields in the query's subtree for filtering.\nFor related models with localized fields in the query's subtree, the first locale matching the provided list of locales will be returned, entries with non matching locales will be filtered out.\n\nThis argument may be overwritten by another locales definition in a relational child field, this will effectively use the overwritten argument for the affected query's subtree.",
+								"description": "Defines which locales should be returned.\n\nNote that `Text` will be affected directly by this argument, as well as any other related models with localized fields in the query's subtree.\nThe first locale matching the provided list will be returned, entries with non matching locales will be filtered out.\n\nThis argument may be overwritten by another locales definition in a relational child field, this will effectively use the overwritten argument for the affected query's subtree.",
 								"type": {
 									"kind": "NON_NULL",
 									"name": null,
@@ -93339,7 +94751,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -93467,7 +94879,7 @@
 							},
 							{
 								"name": "locales",
-								"description": "Defines which locales should be returned.\n\nNote that `Text` is a model without localized fields and will not be affected directly by this argument, however the locales will be passed on to any relational fields in the query's subtree for filtering.\nFor related models with localized fields in the query's subtree, the first locale matching the provided list of locales will be returned, entries with non matching locales will be filtered out.\n\nThis argument may be overwritten by another locales definition in a relational child field, this will effectively use the overwritten argument for the affected query's subtree.",
+								"description": "Defines which locales should be returned.\n\nNote that `Text` will be affected directly by this argument, as well as any other related models with localized fields in the query's subtree.\nThe first locale matching the provided list will be returned, entries with non matching locales will be filtered out.\n\nThis argument may be overwritten by another locales definition in a relational child field, this will effectively use the overwritten argument for the affected query's subtree.",
 								"type": {
 									"kind": "NON_NULL",
 									"name": null,
@@ -93485,7 +94897,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -93616,7 +95028,7 @@
 							},
 							{
 								"name": "locales",
-								"description": "Defines which locales should be returned.\n\nNote that `Text` is a model without localized fields and will not be affected directly by this argument, however the locales will be passed on to any relational fields in the query's subtree for filtering.\nFor related models with localized fields in the query's subtree, the first locale matching the provided list of locales will be returned, entries with non matching locales will be filtered out.\n\nThis argument may be overwritten by another locales definition in a relational child field, this will effectively use the overwritten argument for the affected query's subtree.",
+								"description": "Defines which locales should be returned.\n\nNote that `Text` will be affected directly by this argument, as well as any other related models with localized fields in the query's subtree.\nThe first locale matching the provided list will be returned, entries with non matching locales will be filtered out.\n\nThis argument may be overwritten by another locales definition in a relational child field, this will effectively use the overwritten argument for the affected query's subtree.",
 								"type": {
 									"kind": "NON_NULL",
 									"name": null,
@@ -93634,7 +95046,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -93727,7 +95139,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -93844,7 +95256,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -93993,7 +95405,7 @@
 										}
 									}
 								},
-								"defaultValue": "[en]",
+								"defaultValue": "[de]",
 								"isDeprecated": false,
 								"deprecationReason": null
 							},
@@ -106866,7 +108278,24 @@
 					{
 						"name": "createdAt",
 						"description": "The time the document was created",
-						"args": [],
+						"args": [
+							{
+								"name": "variation",
+								"description": "Variation of DateTime field to return, allows value from base document, current localization, or combined by returning the newer value of both",
+								"type": {
+									"kind": "NON_NULL",
+									"name": null,
+									"ofType": {
+										"kind": "ENUM",
+										"name": "SystemDateTimeFieldVariation",
+										"ofType": null
+									}
+								},
+								"defaultValue": "COMBINED",
+								"isDeprecated": false,
+								"deprecationReason": null
+							}
+						],
 						"type": {
 							"kind": "NON_NULL",
 							"name": null,
@@ -107148,6 +108577,87 @@
 						"deprecationReason": null
 					},
 					{
+						"name": "locale",
+						"description": "System Locale field",
+						"args": [],
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "ENUM",
+								"name": "Locale",
+								"ofType": null
+							}
+						},
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "localizations",
+						"description": "Get the other localizations for this document",
+						"args": [
+							{
+								"name": "includeCurrent",
+								"description": "Decides if the current locale should be included or not",
+								"type": {
+									"kind": "NON_NULL",
+									"name": null,
+									"ofType": {
+										"kind": "SCALAR",
+										"name": "Boolean",
+										"ofType": null
+									}
+								},
+								"defaultValue": "false",
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "locales",
+								"description": "Potential locales that should be returned",
+								"type": {
+									"kind": "NON_NULL",
+									"name": null,
+									"ofType": {
+										"kind": "LIST",
+										"name": null,
+										"ofType": {
+											"kind": "NON_NULL",
+											"name": null,
+											"ofType": {
+												"kind": "ENUM",
+												"name": "Locale",
+												"ofType": null
+											}
+										}
+									}
+								},
+								"defaultValue": "[de, en]",
+								"isDeprecated": false,
+								"deprecationReason": null
+							}
+						],
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "LIST",
+								"name": null,
+								"ofType": {
+									"kind": "NON_NULL",
+									"name": null,
+									"ofType": {
+										"kind": "OBJECT",
+										"name": "Text",
+										"ofType": null
+									}
+								}
+							}
+						},
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
 						"name": "paddingBottom",
 						"description": null,
 						"args": [],
@@ -107207,7 +108717,24 @@
 					{
 						"name": "publishedAt",
 						"description": "The time the document was published. Null on documents in draft stage.",
-						"args": [],
+						"args": [
+							{
+								"name": "variation",
+								"description": "Variation of DateTime field to return, allows value from base document, current localization, or combined by returning the newer value of both",
+								"type": {
+									"kind": "NON_NULL",
+									"name": null,
+									"ofType": {
+										"kind": "ENUM",
+										"name": "SystemDateTimeFieldVariation",
+										"ofType": null
+									}
+								},
+								"defaultValue": "COMBINED",
+								"isDeprecated": false,
+								"deprecationReason": null
+							}
+						],
 						"type": {
 							"kind": "SCALAR",
 							"name": "DateTime",
@@ -107397,7 +108924,24 @@
 					{
 						"name": "updatedAt",
 						"description": "The time the document was updated",
-						"args": [],
+						"args": [
+							{
+								"name": "variation",
+								"description": "Variation of DateTime field to return, allows value from base document, current localization, or combined by returning the newer value of both",
+								"type": {
+									"kind": "NON_NULL",
+									"name": null,
+									"ofType": {
+										"kind": "ENUM",
+										"name": "SystemDateTimeFieldVariation",
+										"ofType": null
+									}
+								},
+								"defaultValue": "COMBINED",
+								"isDeprecated": false,
+								"deprecationReason": null
+							}
+						],
 						"type": {
 							"kind": "NON_NULL",
 							"name": null,
@@ -107617,7 +109161,7 @@
 					},
 					{
 						"name": "heading3",
-						"description": null,
+						"description": "heading3 input for default locale (de)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -107633,6 +109177,18 @@
 						"type": {
 							"kind": "INPUT_OBJECT",
 							"name": "LinkCreateOneInlineInput",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "localizations",
+						"description": "Inline mutations for managing document localizations excluding the default locale",
+						"type": {
+							"kind": "INPUT_OBJECT",
+							"name": "TextCreateLocalizationsInput",
 							"ofType": null
 						},
 						"defaultValue": null,
@@ -107677,6 +109233,65 @@
 					},
 					{
 						"name": "text",
+						"description": "text input for default locale (de)",
+						"type": {
+							"kind": "SCALAR",
+							"name": "RichTextAST",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "updatedAt",
+						"description": null,
+						"type": {
+							"kind": "SCALAR",
+							"name": "DateTime",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					}
+				],
+				"interfaces": null,
+				"enumValues": null,
+				"possibleTypes": null
+			},
+			{
+				"kind": "INPUT_OBJECT",
+				"name": "TextCreateLocalizationDataInput",
+				"description": null,
+				"fields": null,
+				"inputFields": [
+					{
+						"name": "createdAt",
+						"description": null,
+						"type": {
+							"kind": "SCALAR",
+							"name": "DateTime",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "heading3",
+						"description": null,
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "text",
 						"description": null,
 						"type": {
 							"kind": "SCALAR",
@@ -107694,6 +109309,80 @@
 							"kind": "SCALAR",
 							"name": "DateTime",
 							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					}
+				],
+				"interfaces": null,
+				"enumValues": null,
+				"possibleTypes": null
+			},
+			{
+				"kind": "INPUT_OBJECT",
+				"name": "TextCreateLocalizationInput",
+				"description": null,
+				"fields": null,
+				"inputFields": [
+					{
+						"name": "data",
+						"description": "Localization input",
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "INPUT_OBJECT",
+								"name": "TextCreateLocalizationDataInput",
+								"ofType": null
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "locale",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "ENUM",
+								"name": "Locale",
+								"ofType": null
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					}
+				],
+				"interfaces": null,
+				"enumValues": null,
+				"possibleTypes": null
+			},
+			{
+				"kind": "INPUT_OBJECT",
+				"name": "TextCreateLocalizationsInput",
+				"description": null,
+				"fields": null,
+				"inputFields": [
+					{
+						"name": "create",
+						"description": "Create localizations for the newly-created document",
+						"type": {
+							"kind": "LIST",
+							"name": null,
+							"ofType": {
+								"kind": "NON_NULL",
+								"name": null,
+								"ofType": {
+									"kind": "INPUT_OBJECT",
+									"name": "TextCreateLocalizationInput",
+									"ofType": null
+								}
+							}
 						},
 						"defaultValue": null,
 						"isDeprecated": false,
@@ -108309,142 +109998,6 @@
 					},
 					{
 						"name": "heading2_starts_with",
-						"description": "All values starting with the given string.",
-						"type": {
-							"kind": "SCALAR",
-							"name": "String",
-							"ofType": null
-						},
-						"defaultValue": null,
-						"isDeprecated": false,
-						"deprecationReason": null
-					},
-					{
-						"name": "heading3",
-						"description": null,
-						"type": {
-							"kind": "SCALAR",
-							"name": "String",
-							"ofType": null
-						},
-						"defaultValue": null,
-						"isDeprecated": false,
-						"deprecationReason": null
-					},
-					{
-						"name": "heading3_contains",
-						"description": "All values containing the given string.",
-						"type": {
-							"kind": "SCALAR",
-							"name": "String",
-							"ofType": null
-						},
-						"defaultValue": null,
-						"isDeprecated": false,
-						"deprecationReason": null
-					},
-					{
-						"name": "heading3_ends_with",
-						"description": "All values ending with the given string.",
-						"type": {
-							"kind": "SCALAR",
-							"name": "String",
-							"ofType": null
-						},
-						"defaultValue": null,
-						"isDeprecated": false,
-						"deprecationReason": null
-					},
-					{
-						"name": "heading3_in",
-						"description": "All values that are contained in given list.",
-						"type": {
-							"kind": "LIST",
-							"name": null,
-							"ofType": {
-								"kind": "NON_NULL",
-								"name": null,
-								"ofType": {
-									"kind": "SCALAR",
-									"name": "String",
-									"ofType": null
-								}
-							}
-						},
-						"defaultValue": null,
-						"isDeprecated": false,
-						"deprecationReason": null
-					},
-					{
-						"name": "heading3_not",
-						"description": "All values that are not equal to given value.",
-						"type": {
-							"kind": "SCALAR",
-							"name": "String",
-							"ofType": null
-						},
-						"defaultValue": null,
-						"isDeprecated": false,
-						"deprecationReason": null
-					},
-					{
-						"name": "heading3_not_contains",
-						"description": "All values not containing the given string.",
-						"type": {
-							"kind": "SCALAR",
-							"name": "String",
-							"ofType": null
-						},
-						"defaultValue": null,
-						"isDeprecated": false,
-						"deprecationReason": null
-					},
-					{
-						"name": "heading3_not_ends_with",
-						"description": "All values not ending with the given string",
-						"type": {
-							"kind": "SCALAR",
-							"name": "String",
-							"ofType": null
-						},
-						"defaultValue": null,
-						"isDeprecated": false,
-						"deprecationReason": null
-					},
-					{
-						"name": "heading3_not_in",
-						"description": "All values that are not contained in given list.",
-						"type": {
-							"kind": "LIST",
-							"name": null,
-							"ofType": {
-								"kind": "NON_NULL",
-								"name": null,
-								"ofType": {
-									"kind": "SCALAR",
-									"name": "String",
-									"ofType": null
-								}
-							}
-						},
-						"defaultValue": null,
-						"isDeprecated": false,
-						"deprecationReason": null
-					},
-					{
-						"name": "heading3_not_starts_with",
-						"description": "All values not starting with the given string.",
-						"type": {
-							"kind": "SCALAR",
-							"name": "String",
-							"ofType": null
-						},
-						"defaultValue": null,
-						"isDeprecated": false,
-						"deprecationReason": null
-					},
-					{
-						"name": "heading3_starts_with",
 						"description": "All values starting with the given string.",
 						"type": {
 							"kind": "SCALAR",
@@ -109195,7 +110748,7 @@
 					},
 					{
 						"name": "heading3",
-						"description": null,
+						"description": "heading3 input for default locale (de)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -109211,6 +110764,18 @@
 						"type": {
 							"kind": "INPUT_OBJECT",
 							"name": "LinkUpdateOneInlineInput",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "localizations",
+						"description": "Manage document localizations",
+						"type": {
+							"kind": "INPUT_OBJECT",
+							"name": "TextUpdateLocalizationsInput",
 							"ofType": null
 						},
 						"defaultValue": null,
@@ -109255,11 +110820,180 @@
 					},
 					{
 						"name": "text",
+						"description": "text input for default locale (de)",
+						"type": {
+							"kind": "SCALAR",
+							"name": "RichTextAST",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					}
+				],
+				"interfaces": null,
+				"enumValues": null,
+				"possibleTypes": null
+			},
+			{
+				"kind": "INPUT_OBJECT",
+				"name": "TextUpdateLocalizationDataInput",
+				"description": null,
+				"fields": null,
+				"inputFields": [
+					{
+						"name": "heading3",
+						"description": null,
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "text",
 						"description": null,
 						"type": {
 							"kind": "SCALAR",
 							"name": "RichTextAST",
 							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					}
+				],
+				"interfaces": null,
+				"enumValues": null,
+				"possibleTypes": null
+			},
+			{
+				"kind": "INPUT_OBJECT",
+				"name": "TextUpdateLocalizationInput",
+				"description": null,
+				"fields": null,
+				"inputFields": [
+					{
+						"name": "data",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "INPUT_OBJECT",
+								"name": "TextUpdateLocalizationDataInput",
+								"ofType": null
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "locale",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "ENUM",
+								"name": "Locale",
+								"ofType": null
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					}
+				],
+				"interfaces": null,
+				"enumValues": null,
+				"possibleTypes": null
+			},
+			{
+				"kind": "INPUT_OBJECT",
+				"name": "TextUpdateLocalizationsInput",
+				"description": null,
+				"fields": null,
+				"inputFields": [
+					{
+						"name": "create",
+						"description": "Localizations to create",
+						"type": {
+							"kind": "LIST",
+							"name": null,
+							"ofType": {
+								"kind": "NON_NULL",
+								"name": null,
+								"ofType": {
+									"kind": "INPUT_OBJECT",
+									"name": "TextCreateLocalizationInput",
+									"ofType": null
+								}
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "delete",
+						"description": "Localizations to delete",
+						"type": {
+							"kind": "LIST",
+							"name": null,
+							"ofType": {
+								"kind": "NON_NULL",
+								"name": null,
+								"ofType": {
+									"kind": "ENUM",
+									"name": "Locale",
+									"ofType": null
+								}
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "update",
+						"description": "Localizations to update",
+						"type": {
+							"kind": "LIST",
+							"name": null,
+							"ofType": {
+								"kind": "NON_NULL",
+								"name": null,
+								"ofType": {
+									"kind": "INPUT_OBJECT",
+									"name": "TextUpdateLocalizationInput",
+									"ofType": null
+								}
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "upsert",
+						"description": null,
+						"type": {
+							"kind": "LIST",
+							"name": null,
+							"ofType": {
+								"kind": "NON_NULL",
+								"name": null,
+								"ofType": {
+									"kind": "INPUT_OBJECT",
+									"name": "TextUpsertLocalizationInput",
+									"ofType": null
+								}
+							}
 						},
 						"defaultValue": null,
 						"isDeprecated": false,
@@ -109453,10 +111187,22 @@
 					},
 					{
 						"name": "heading3",
-						"description": null,
+						"description": "heading3 input for default locale (de)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "localizations",
+						"description": "Optional updates to localizations",
+						"type": {
+							"kind": "INPUT_OBJECT",
+							"name": "TextUpdateManyLocalizationsInput",
 							"ofType": null
 						},
 						"defaultValue": null,
@@ -109489,11 +111235,120 @@
 					},
 					{
 						"name": "text",
+						"description": "text input for default locale (de)",
+						"type": {
+							"kind": "SCALAR",
+							"name": "RichTextAST",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					}
+				],
+				"interfaces": null,
+				"enumValues": null,
+				"possibleTypes": null
+			},
+			{
+				"kind": "INPUT_OBJECT",
+				"name": "TextUpdateManyLocalizationDataInput",
+				"description": null,
+				"fields": null,
+				"inputFields": [
+					{
+						"name": "heading3",
+						"description": null,
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "text",
 						"description": null,
 						"type": {
 							"kind": "SCALAR",
 							"name": "RichTextAST",
 							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					}
+				],
+				"interfaces": null,
+				"enumValues": null,
+				"possibleTypes": null
+			},
+			{
+				"kind": "INPUT_OBJECT",
+				"name": "TextUpdateManyLocalizationInput",
+				"description": null,
+				"fields": null,
+				"inputFields": [
+					{
+						"name": "data",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "INPUT_OBJECT",
+								"name": "TextUpdateManyLocalizationDataInput",
+								"ofType": null
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "locale",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "ENUM",
+								"name": "Locale",
+								"ofType": null
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					}
+				],
+				"interfaces": null,
+				"enumValues": null,
+				"possibleTypes": null
+			},
+			{
+				"kind": "INPUT_OBJECT",
+				"name": "TextUpdateManyLocalizationsInput",
+				"description": null,
+				"fields": null,
+				"inputFields": [
+					{
+						"name": "update",
+						"description": "Localizations to update",
+						"type": {
+							"kind": "LIST",
+							"name": null,
+							"ofType": {
+								"kind": "NON_NULL",
+								"name": null,
+								"ofType": {
+									"kind": "INPUT_OBJECT",
+									"name": "TextUpdateManyLocalizationInput",
+									"ofType": null
+								}
+							}
 						},
 						"defaultValue": null,
 						"isDeprecated": false,
@@ -109704,6 +111559,65 @@
 							"ofType": {
 								"kind": "INPUT_OBJECT",
 								"name": "TextUpdateInput",
+								"ofType": null
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					}
+				],
+				"interfaces": null,
+				"enumValues": null,
+				"possibleTypes": null
+			},
+			{
+				"kind": "INPUT_OBJECT",
+				"name": "TextUpsertLocalizationInput",
+				"description": null,
+				"fields": null,
+				"inputFields": [
+					{
+						"name": "create",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "INPUT_OBJECT",
+								"name": "TextCreateLocalizationDataInput",
+								"ofType": null
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "locale",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "ENUM",
+								"name": "Locale",
+								"ofType": null
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "update",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "INPUT_OBJECT",
+								"name": "TextUpdateLocalizationDataInput",
 								"ofType": null
 							}
 						},
@@ -114759,7 +116673,7 @@
 			{
 				"kind": "OBJECT",
 				"name": "__Type",
-				"description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name, description and optional `specifiedByUrl`, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.",
+				"description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name, description and optional `specifiedByURL`, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.",
 				"fields": [
 					{
 						"name": "kind",
@@ -114802,7 +116716,7 @@
 						"deprecationReason": null
 					},
 					{
-						"name": "specifiedByUrl",
+						"name": "specifiedByURL",
 						"description": null,
 						"args": [],
 						"type": {
@@ -115916,6 +117830,106 @@
 				"locations": ["FIELD_DEFINITION"],
 				"args": [
 					{
+						"name": "debugEnabled",
+						"description": "Flag whether debug options are enabled on a given field or not",
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "Boolean",
+								"ofType": null
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "docPlaceholderFields",
+						"description": "list of field storage ids that will be fetched in any case from the content db to make them available for {{doc.*}} template placeholders in headers, parameters etc for the remote call",
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "LIST",
+								"name": null,
+								"ofType": {
+									"kind": "NON_NULL",
+									"name": null,
+									"ofType": {
+										"kind": "SCALAR",
+										"name": "String",
+										"ofType": null
+									}
+								}
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "forwardClientHeaders",
+						"description": "Flag whether to pass headers that are sent by the client to the remote source or not",
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "Boolean",
+								"ofType": null
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "gqlEntryPointPath",
+						"description": "JSON path pointing to the entry point type that is defined by the GraphQL Query.",
+						"type": {
+							"kind": "LIST",
+							"name": null,
+							"ofType": {
+								"kind": "NON_NULL",
+								"name": null,
+								"ofType": {
+									"kind": "SCALAR",
+									"name": "String",
+									"ofType": null
+								}
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "gqlOperationName",
+						"description": "Operation name of the gqlQuery in case of a remote GraphQL API",
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "gqlQuery",
+						"description": "GraphQL entry point query that will be used to fetch the remote type in case of a remote GraphQL PI",
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
 						"name": "headers",
 						"description": "optional headers that will be sent in the remote call",
 						"type": {
@@ -115944,23 +117958,15 @@
 						"deprecationReason": null
 					},
 					{
-						"name": "payloadFields",
-						"description": "list of field storage ids that will available for templates and parameters for the remote call",
+						"name": "sourceType",
+						"description": "Which type of api should be called. Currently supported: GRAPHQL, REST",
 						"type": {
 							"kind": "NON_NULL",
 							"name": null,
 							"ofType": {
-								"kind": "LIST",
-								"name": null,
-								"ofType": {
-									"kind": "NON_NULL",
-									"name": null,
-									"ofType": {
-										"kind": "SCALAR",
-										"name": "String",
-										"ofType": null
-									}
-								}
+								"kind": "SCALAR",
+								"name": "String",
+								"ofType": null
 							}
 						},
 						"defaultValue": null,
@@ -115968,24 +117974,12 @@
 						"deprecationReason": null
 					},
 					{
-						"name": "requestParamFields",
-						"description": "list of field apiIds that should be send as payload in the remote call",
+						"name": "ttlInSeconds",
+						"description": "optional ttl value used for caching",
 						"type": {
-							"kind": "NON_NULL",
-							"name": null,
-							"ofType": {
-								"kind": "LIST",
-								"name": null,
-								"ofType": {
-									"kind": "NON_NULL",
-									"name": null,
-									"ofType": {
-										"kind": "SCALAR",
-										"name": "String",
-										"ofType": null
-									}
-								}
-							}
+							"kind": "SCALAR",
+							"name": "Int",
+							"ofType": null
 						},
 						"defaultValue": null,
 						"isDeprecated": false,
@@ -116035,13 +118029,13 @@
 			},
 			{
 				"name": "specifiedBy",
-				"description": "Exposes a URL that specifies the behaviour of this scalar.",
+				"description": "Exposes a URL that specifies the behavior of this scalar.",
 				"isRepeatable": false,
 				"locations": ["SCALAR"],
 				"args": [
 					{
 						"name": "url",
-						"description": "The URL that specifies the behaviour of this scalar.",
+						"description": "The URL that specifies the behavior of this scalar.",
 						"type": {
 							"kind": "NON_NULL",
 							"name": null,

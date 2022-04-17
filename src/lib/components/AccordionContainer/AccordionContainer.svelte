@@ -24,7 +24,7 @@
 </div>
 
 <style>
-	:global .item_headline a {
+	:global(.item_headline a) {
 		color: #ea3336;
 		font-weight: 600;
 		font-size: 0.875rem;
@@ -33,7 +33,7 @@
 		text-transform: uppercase;
 	}
 
-	:global .item_content a:hover {
+	:global(.item_content a:hover) {
 		text-decoration: underline;
 	}
 </style>

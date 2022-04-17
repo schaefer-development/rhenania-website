@@ -1,6 +1,7 @@
 <script lang="ts">
+	import { prerendering } from '$app/env';
 	import { goto } from '$app/navigation';
-	import { base } from '$app/paths';
+	import { linkTo } from '$lib/helpers';
 	import { page } from '$app/stores';
 	import Logo from '$lib/components/Logo/Logo.svelte';
 	import Drawer from '$lib/components/Drawer/Drawer.svelte';
@@ -17,28 +18,31 @@
 
 	export let openMenuFull: boolean;
 	export let toggleMenuFull: () => void;
-	export let q: string;
 
-	async function search({ target }) {
-		const params = new URLSearchParams({ q: target.query.value });
-		await goto(`/search?${params.toString()}`);
-	}
+	const search =
+		({ url, params }: { url: URL; params: Record<string, string> }) =>
+		async ({ target }) => {
+			const newUrl = new URL(url);
+			newUrl.pathname = `/${params.lang}/suche`;
+			newUrl.searchParams.set('q', target.query.value);
+			await goto(newUrl.toString());
+		};
 </script>
 
 <header class="sticky top-0 z-50 bg-white shadow-md flex space-between">
 	<div class="w-full max-w-screen-2xl mx-auto flex flex-row items-center h-20 px-4 md:px-10 ">
-		<a sveltekit:prefetch href="{base}/" class="text-rc_darkblue w-28 none"><Logo /></a>
+		<a sveltekit:prefetch href={$linkTo('/start')} class="text-rc_darkblue w-28 none"><Logo /></a>
 
 		<div id="navbar" class="flex-grow flex justify-end items-center">
 			<div class="flex-grow px-3 sm:px-6 md:px-10 lg:px-16 flex">
 				<form
 					class="input-group relative flex items-stretch w-full justify-end pl-4"
-					on:submit|preventDefault={search}
+					on:submit|preventDefault={search($page)}
 				>
 					<input
 						type="search"
 						name="query"
-						value={q ?? ''}
+						value={(!prerendering && $page.url.searchParams.get('q')) ?? ''}
 						class="form-control relative flex-auto min-w-0 block w-full max-w-sm px-3 py-2 font-normal bg-white bg-clip-padding peer border-y border-l border-gray-400 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none"
 						placeholder="Suchen"
 						aria-label="Search"
@@ -69,9 +73,9 @@
 			</div>
 
 			<div id="menu" class="relative flex hidden lg:inline-block">
-				<a href="{base}/start" class="relative ">
+				<a href={$linkTo('/start')} class="relative ">
 					<span
-						class="{$page.path === `${base}/start`
+						class="{$page.url.pathname === '/start'
 							? 'menupoint_underline'
 							: ''}  relative menupoint font-medium uppercase  text-black hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
 						>Start</span

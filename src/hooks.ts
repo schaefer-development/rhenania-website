@@ -1,8 +1,9 @@
 import type { GetSession } from '@sveltejs/kit';
+import { localeCodes, fallbackLocale } from '$lib/i18n';
 import acceptLanguage from 'accept-language';
-acceptLanguage.languages(['de', 'en']);
+acceptLanguage.languages(localeCodes);
 
 export const getSession: GetSession = (event) => {
-	const lang = acceptLanguage.get(event.headers['accept-language']);
+	const lang = acceptLanguage.get(event.request.headers['accept-language']) ?? fallbackLocale;
 	return { lang };
 };

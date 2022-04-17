@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import { _ } from 'svelte-i18n';
 
 	let y: number;
 	let paraEffect = 0.5;
@@ -24,7 +25,7 @@
 			<h1
 				class="font-bold text-4xl md:text-5xl lg:text-6xl uppercase tracking-wider text-white pb-2 rc_text_shadow"
 			>
-				Wir optimieren Ihren Versand
+				{$_('components.HeroStart.headline')}
 			</h1>
 			<h2 class="rc_h2 text-rc_skyblue rc_text_shadow">Software und Systeme für Versandlogistik</h2>
 

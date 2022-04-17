@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import type { Eyecatcher } from '$lib/graphql/generated/schema';
+	import { linkTo } from '$lib/helpers';
 	import { mapPadding } from '$lib/helpers';
 	export let module: Partial<Eyecatcher> = {};
 </script>
@@ -30,8 +30,8 @@
 				</div>
 				<a
 					class="relative mt-8 pl-5 pr-3 py-2 bg-rc_red text-white text-sm font-bold uppercase tracking-widest hover:bg-rc_red-darker rc_button_corner"
-					href="{base}/{module.link.target.slug}"
-					title="{base}/{module.link.target.slug}">{module.link.label}</a
+					href={$linkTo(module.link.target.slug)}
+					title={module.headline}>{module.link.label}</a
 				>
 			</div>
 		</div>
