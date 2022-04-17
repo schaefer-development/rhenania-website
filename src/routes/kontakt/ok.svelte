@@ -3,6 +3,12 @@
 </script>
 
 <div class="col-span-2">
-	<h1 class="rc_h1 text-rc_darkblue">Vielen Dank für Ihre Nachricht</h1>
-	<p class="pt-12">Wir haben Ihnen eine Bestätigung zugeschickt</p>
+	<h1 class="rc_h1 text-rc_darkblue">Vielen Dank für Ihre Anfrage.</h1>
+	<p class="py-6">
+		Wir werden uns schnellstmöglich um Ihr Anliegen kümmern und mit Ihnen Kontakt aufnehmen.
+	</p>
+	<p>
+		Freundliche Grüße<br />
+		Ihr Team der RC Rhenania Computer GmbH
+	</p>
 </div>
