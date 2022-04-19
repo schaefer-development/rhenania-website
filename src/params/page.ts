@@ -25,7 +25,6 @@ const pages = [
 	'rechnungskontrolle',
 	'referenzen',
 	'sandbox',
-	'start',
 	'support',
 	'termine',
 	'u12',

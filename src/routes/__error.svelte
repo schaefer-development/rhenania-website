@@ -1,5 +1,4 @@
 <script context="module" lang="ts">
-	import { linkTo } from '$lib/helpers';
 	export function load({ error, status }) {
 		return {
 			props: {

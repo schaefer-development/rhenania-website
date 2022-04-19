@@ -41,7 +41,7 @@
 			<div class="left">
 				<!-- left start -->
 				<a
-					href={$linkTo('/start')}
+					href={$linkTo('/')}
 					class="font-medium text-xl uppercase tracking-wider break-words text-rc_skyblue text-rc_skyblue"
 					>Start</a
 				>

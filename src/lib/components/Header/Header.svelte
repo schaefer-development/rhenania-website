@@ -31,7 +31,7 @@
 
 <header class="sticky top-0 z-50 bg-white shadow-md flex space-between">
 	<div class="w-full max-w-screen-2xl mx-auto flex flex-row items-center h-20 px-4 md:px-10 ">
-		<a sveltekit:prefetch href={$linkTo('/start')} class="text-rc_darkblue w-28 none"><Logo /></a>
+		<a sveltekit:prefetch href={$linkTo('/')} class="text-rc_darkblue w-28 none"><Logo /></a>
 
 		<div id="navbar" class="flex-grow flex justify-end items-center">
 			<div class="flex-grow px-3 sm:px-6 md:px-10 lg:px-16 flex">
@@ -73,9 +73,9 @@
 			</div>
 
 			<div id="menu" class="relative flex hidden lg:inline-block">
-				<a href={$linkTo('/start')} class="relative ">
+				<a href={$linkTo('/')} class="relative ">
 					<span
-						class="{$page.url.pathname === '/start'
+						class="{$page.url.pathname === '/'
 							? 'menupoint_underline'
 							: ''}  relative menupoint font-medium uppercase  text-black hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
 						>Start</span
