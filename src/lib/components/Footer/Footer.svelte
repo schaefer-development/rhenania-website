@@ -51,7 +51,11 @@
 				<div class="border-r h-32 rc_rotate" />
 			</div>
 		</div>
+<<<<<<< HEAD
 		<LanguageMenu />
+=======
+
+>>>>>>> b6a5c6d (feat: language toggler placed in header)
 		<div class="pb-8">
 			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Produkte</p>
 			<p class="text-center sm:text-left tracking-wide leading-relaxed">
