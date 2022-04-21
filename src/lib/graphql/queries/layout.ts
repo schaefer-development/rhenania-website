@@ -1,5 +1,5 @@
 import { gql } from '$lib/helpers';
-export const LAYOUT = gql`
+export const FOOTER = gql`
 	{
 		referencesContainers {
 			id

@@ -1,12 +1,14 @@
 <script lang="ts">
+	import { prerendering } from '$app/env';
 	import { goto } from '$app/navigation';
-	import { base } from '$app/paths';
+	import { linkTo } from '$lib/helpers';
 	import { page } from '$app/stores';
 	import Logo from '$lib/components/Logo/Logo.svelte';
 	import Drawer from '$lib/components/Drawer/Drawer.svelte';
 	import ProductMenu from '$lib/components/Drawer/ProductMenu.svelte';
 	import CompanyMenu from '$lib/components/Drawer/CompanyMenu.svelte';
 	import ServiceMenu from '$lib/components/Drawer/ServiceMenu.svelte';
+	import LanguageMenu from '$lib/components/LanguageMenu/LanguageMenu.svelte';
 
 	import MobileDrawer from '$lib/components/Drawer/Mobile/MobileDrawer.svelte';
 
@@ -17,28 +19,31 @@
 
 	export let openMenuFull: boolean;
 	export let toggleMenuFull: () => void;
-	export let q: string;
 
-	async function search({ target }) {
-		const params = new URLSearchParams({ q: target.query.value });
-		await goto(`/search?${params.toString()}`);
-	}
+	const search =
+		({ url, params }: { url: URL; params: Record<string, string> }) =>
+		async ({ target }) => {
+			const newUrl = new URL(url);
+			newUrl.pathname = `/${params.lang}/suche`;
+			newUrl.searchParams.set('q', target.query.value);
+			await goto(newUrl.toString());
+		};
 </script>
 
 <header class="sticky top-0 z-50 bg-white shadow-md flex space-between">
 	<div class="w-full max-w-screen-2xl mx-auto flex flex-row items-center h-20 px-4 md:px-10 ">
-		<a sveltekit:prefetch href="{base}/" class="text-rc_darkblue w-28 none"><Logo /></a>
+		<a sveltekit:prefetch href={$linkTo('/')} class="text-rc_darkblue w-28 shrink-0"><Logo /></a>
 
-		<div id="navbar" class="flex-grow flex justify-end items-center">
+		<div class="flex-grow flex justify-end items-center">
 			<div class="flex-grow px-3 sm:px-6 md:px-10 lg:px-16 flex">
 				<form
 					class="input-group relative flex items-stretch w-full justify-end pl-4"
-					on:submit|preventDefault={search}
+					on:submit|preventDefault={search($page)}
 				>
 					<input
 						type="search"
 						name="query"
-						value={q ?? ''}
+						value={(!prerendering && $page.url.searchParams.get('q')) ?? ''}
 						class="form-control relative flex-auto min-w-0 block w-full max-w-sm px-3 py-2 font-normal bg-white bg-clip-padding peer border-y border-l border-gray-400 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none"
 						placeholder="Suchen"
 						aria-label="Search"
@@ -68,19 +73,19 @@
 				</form>
 			</div>
 
-			<div id="menu" class="relative flex hidden lg:inline-block">
-				<a href="{base}/start" class="relative ">
+			<div class="grow lg:grow-0 justify-end items-center hidden lg:flex invisible lg:visible">
+				<!-- menu points -->
+
+				<a href={$linkTo('/')} class="relative ">
 					<span
-						class="{$page.path === `${base}/start`
+						class="{$page.url.pathname === '/'
 							? 'menupoint_underline'
-							: ''}  relative menupoint font-medium uppercase  text-black hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
+							: ''}  relative menupoint font-medium uppercase text-black hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
 						>Start</span
 					>
 				</a>
 
-				<div class="w-4 inline-block spacer" />
-
-				<button on:click={() => toggleMenu('produkte')} class="relative menupoint mx-4">
+				<button on:click={() => toggleMenu('produkte')} class="relative menupoint mx-2 lg:mx-3">
 					<span
 						class="{openMenu === 'produkte'
 							? 'menupoint_underline text-rc_red'
@@ -88,7 +93,8 @@
 						>Produkte</span
 					>
 				</button>
-				<button on:click={() => toggleMenu('unternehmen')} class="relative menupoint mx-4">
+
+				<button on:click={() => toggleMenu('unternehmen')} class="relative menupoint mx-2 lg:mx-3">
 					<span
 						class="{openMenu === 'unternehmen'
 							? 'menupoint_underline text-rc_red'
@@ -96,7 +102,7 @@
 						>Unternehmen</span
 					>
 				</button>
-				<button on:click={() => toggleMenu('service')} class="relative menupoint mx-4">
+				<button on:click={() => toggleMenu('service')} class="relative menupoint mx-2 lg:mx-3">
 					<span
 						class="{openMenu === 'service'
 							? 'menupoint_underline text-rc_red'
@@ -104,9 +110,19 @@
 						>Service</span
 					>
 				</button>
+
+				<!-- end of menu points -->
+
+				<div class="pl-6">
+					<LanguageMenu />
+				</div>
 			</div>
 
-			<div id="menu_mobil" class="visible lg:hidden">
+			<div id="menu_mobil" class="visible block lg:invisible lg:hidden flex">
+				<div class="flex items-center px-1 sm:px-2 md:px-8">
+					<LanguageMenu />
+				</div>
+
 				<button
 					on:click={toggleMenuFull}
 					class="text-rc_red flex w-full items-center justify-end focus:border-0 uppercase font-medium tracking-wider hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red "

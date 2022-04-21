@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import { mapPadding } from '$lib/helpers';
+	import { linkTo } from '$lib/helpers';
 	import type { CtaLink } from '$lib/graphql/generated/schema';
 	export let module: Partial<CtaLink> = {};
 </script>
@@ -12,7 +12,7 @@
 
 		<a
 			sveltekit:prefetch
-			href="{base}/kontakt"
+			href={$linkTo('/kontakt')}
 			class="relative mt-8 pl-5 pr-3 py-2 bg-rc_red text-white text-sm font-bold uppercase tracking-widest hover:bg-rc_red-darker rc_button_corner"
 			>Jetzt Kontakt aufnehmen</a
 		>

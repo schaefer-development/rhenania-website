@@ -1,5 +1,4 @@
 <script context="module" lang="ts">
-	import { base } from '$app/paths';
 	export function load({ error, status }) {
 		return {
 			props: {
@@ -28,7 +27,7 @@
 		<div class="flex hyperlink">
 			<div class="relative flex-none text-rc_red font-bold pr-1 mx-auto">
 				<a
-					href="{base}/start/"
+					href="/"
 					class="flex w-full text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					target="_blank"
 				>

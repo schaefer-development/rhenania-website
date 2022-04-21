@@ -4426,6 +4426,7 @@ export type CtaLink = Node & {
 	createdBy?: Maybe<User>;
 	/** Get the document in other stages */
 	documentInStages: Array<CtaLink>;
+	headline?: Maybe<Scalars['String']>;
 	/** List of CtaLink versions */
 	history: Array<Version>;
 	/** The unique identifier */
@@ -4507,6 +4508,7 @@ export type CtaLinkConnection = {
 export type CtaLinkCreateInput = {
 	blogPost?: InputMaybe<BlogPostCreateOneInlineInput>;
 	createdAt?: InputMaybe<Scalars['DateTime']>;
+	headline?: InputMaybe<Scalars['String']>;
 	padding: Padding;
 	page?: InputMaybe<PageCreateOneInlineInput>;
 	updatedAt?: InputMaybe<Scalars['DateTime']>;
@@ -4562,6 +4564,25 @@ export type CtaLinkManyWhereInput = {
 	/** All values that are not contained in given list. */
 	createdAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
 	createdBy?: InputMaybe<UserWhereInput>;
+	headline?: InputMaybe<Scalars['String']>;
+	/** All values containing the given string. */
+	headline_contains?: InputMaybe<Scalars['String']>;
+	/** All values ending with the given string. */
+	headline_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are contained in given list. */
+	headline_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values that are not equal to given value. */
+	headline_not?: InputMaybe<Scalars['String']>;
+	/** All values not containing the given string. */
+	headline_not_contains?: InputMaybe<Scalars['String']>;
+	/** All values not ending with the given string */
+	headline_not_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are not contained in given list. */
+	headline_not_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values not starting with the given string. */
+	headline_not_starts_with?: InputMaybe<Scalars['String']>;
+	/** All values starting with the given string. */
+	headline_starts_with?: InputMaybe<Scalars['String']>;
 	id?: InputMaybe<Scalars['ID']>;
 	/** All values containing the given string. */
 	id_contains?: InputMaybe<Scalars['ID']>;
@@ -4629,6 +4650,8 @@ export type CtaLinkManyWhereInput = {
 export enum CtaLinkOrderByInput {
 	CreatedAtAsc = 'createdAt_ASC',
 	CreatedAtDesc = 'createdAt_DESC',
+	HeadlineAsc = 'headline_ASC',
+	HeadlineDesc = 'headline_DESC',
 	IdAsc = 'id_ASC',
 	IdDesc = 'id_DESC',
 	PaddingAsc = 'padding_ASC',
@@ -4641,6 +4664,7 @@ export enum CtaLinkOrderByInput {
 
 export type CtaLinkUpdateInput = {
 	blogPost?: InputMaybe<BlogPostUpdateOneInlineInput>;
+	headline?: InputMaybe<Scalars['String']>;
 	padding?: InputMaybe<Padding>;
 	page?: InputMaybe<PageUpdateOneInlineInput>;
 };
@@ -4663,6 +4687,7 @@ export type CtaLinkUpdateManyInlineInput = {
 };
 
 export type CtaLinkUpdateManyInput = {
+	headline?: InputMaybe<Scalars['String']>;
 	padding?: InputMaybe<Padding>;
 };
 
@@ -4736,6 +4761,25 @@ export type CtaLinkWhereInput = {
 	/** All values that are not contained in given list. */
 	createdAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
 	createdBy?: InputMaybe<UserWhereInput>;
+	headline?: InputMaybe<Scalars['String']>;
+	/** All values containing the given string. */
+	headline_contains?: InputMaybe<Scalars['String']>;
+	/** All values ending with the given string. */
+	headline_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are contained in given list. */
+	headline_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values that are not equal to given value. */
+	headline_not?: InputMaybe<Scalars['String']>;
+	/** All values not containing the given string. */
+	headline_not_contains?: InputMaybe<Scalars['String']>;
+	/** All values not ending with the given string */
+	headline_not_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are not contained in given list. */
+	headline_not_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values not starting with the given string. */
+	headline_not_starts_with?: InputMaybe<Scalars['String']>;
+	/** All values starting with the given string. */
+	headline_starts_with?: InputMaybe<Scalars['String']>;
 	id?: InputMaybe<Scalars['ID']>;
 	/** All values containing the given string. */
 	id_contains?: InputMaybe<Scalars['ID']>;
@@ -5375,7 +5419,7 @@ export type EyecatcherConnection = {
 
 export type EyecatcherCreateInput = {
 	createdAt?: InputMaybe<Scalars['DateTime']>;
-	/** headline input for default locale (en) */
+	/** headline input for default locale (de) */
 	headline?: InputMaybe<Scalars['String']>;
 	image?: InputMaybe<AssetCreateOneInlineInput>;
 	link?: InputMaybe<LinkCreateOneInlineInput>;
@@ -5384,7 +5428,7 @@ export type EyecatcherCreateInput = {
 	paddingBottom?: InputMaybe<Padding>;
 	paddingTop?: InputMaybe<Padding>;
 	page?: InputMaybe<PageCreateOneInlineInput>;
-	/** subheadline input for default locale (en) */
+	/** subheadline input for default locale (de) */
 	subheadline?: InputMaybe<Scalars['String']>;
 	updatedAt?: InputMaybe<Scalars['DateTime']>;
 };
@@ -5549,7 +5593,7 @@ export enum EyecatcherOrderByInput {
 }
 
 export type EyecatcherUpdateInput = {
-	/** headline input for default locale (en) */
+	/** headline input for default locale (de) */
 	headline?: InputMaybe<Scalars['String']>;
 	image?: InputMaybe<AssetUpdateOneInlineInput>;
 	link?: InputMaybe<LinkUpdateOneInlineInput>;
@@ -5558,7 +5602,7 @@ export type EyecatcherUpdateInput = {
 	paddingBottom?: InputMaybe<Padding>;
 	paddingTop?: InputMaybe<Padding>;
 	page?: InputMaybe<PageUpdateOneInlineInput>;
-	/** subheadline input for default locale (en) */
+	/** subheadline input for default locale (de) */
 	subheadline?: InputMaybe<Scalars['String']>;
 };
 
@@ -5600,13 +5644,13 @@ export type EyecatcherUpdateManyInlineInput = {
 };
 
 export type EyecatcherUpdateManyInput = {
-	/** headline input for default locale (en) */
+	/** headline input for default locale (de) */
 	headline?: InputMaybe<Scalars['String']>;
 	/** Optional updates to localizations */
 	localizations?: InputMaybe<EyecatcherUpdateManyLocalizationsInput>;
 	paddingBottom?: InputMaybe<Padding>;
 	paddingTop?: InputMaybe<Padding>;
-	/** subheadline input for default locale (en) */
+	/** subheadline input for default locale (de) */
 	subheadline?: InputMaybe<Scalars['String']>;
 };
 
@@ -6679,6 +6723,10 @@ export type Link = Node & {
 	/** The unique identifier */
 	id: Scalars['ID'];
 	label?: Maybe<Scalars['String']>;
+	/** System Locale field */
+	locale: Locale;
+	/** Get the other localizations for this document */
+	localizations: Array<Link>;
 	/** The time the document was published. Null on documents in draft stage. */
 	publishedAt?: Maybe<Scalars['DateTime']>;
 	/** User that last published this document */
@@ -6691,6 +6739,10 @@ export type Link = Node & {
 	updatedAt: Scalars['DateTime'];
 	/** User that last updated this document */
 	updatedBy?: Maybe<User>;
+};
+
+export type LinkCreatedAtArgs = {
+	variation?: SystemDateTimeFieldVariation;
 };
 
 export type LinkCreatedByArgs = {
@@ -6709,6 +6761,15 @@ export type LinkHistoryArgs = {
 	stageOverride?: InputMaybe<Stage>;
 };
 
+export type LinkLocalizationsArgs = {
+	includeCurrent?: Scalars['Boolean'];
+	locales?: Array<Locale>;
+};
+
+export type LinkPublishedAtArgs = {
+	variation?: SystemDateTimeFieldVariation;
+};
+
 export type LinkPublishedByArgs = {
 	locales?: InputMaybe<Array<Locale>>;
 };
@@ -6725,6 +6786,10 @@ export type LinkScheduledInArgs = {
 
 export type LinkTargetArgs = {
 	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type LinkUpdatedAtArgs = {
+	variation?: SystemDateTimeFieldVariation;
 };
 
 export type LinkUpdatedByArgs = {
@@ -6754,9 +6819,29 @@ export type LinkCreateInput = {
 	ckxj50hw42v6x01xpgtk195ql?: InputMaybe<TextCreateManyInlineInput>;
 	cl0laatxs64os01z2b3np7fuc?: InputMaybe<EyecatcherCreateManyInlineInput>;
 	createdAt?: InputMaybe<Scalars['DateTime']>;
+	/** label input for default locale (de) */
 	label?: InputMaybe<Scalars['String']>;
+	/** Inline mutations for managing document localizations excluding the default locale */
+	localizations?: InputMaybe<LinkCreateLocalizationsInput>;
 	target?: InputMaybe<LinkTargetCreateOneInlineInput>;
 	updatedAt?: InputMaybe<Scalars['DateTime']>;
+};
+
+export type LinkCreateLocalizationDataInput = {
+	createdAt?: InputMaybe<Scalars['DateTime']>;
+	label?: InputMaybe<Scalars['String']>;
+	updatedAt?: InputMaybe<Scalars['DateTime']>;
+};
+
+export type LinkCreateLocalizationInput = {
+	/** Localization input */
+	data: LinkCreateLocalizationDataInput;
+	locale: Locale;
+};
+
+export type LinkCreateLocalizationsInput = {
+	/** Create localizations for the newly-created document */
+	create?: InputMaybe<Array<LinkCreateLocalizationInput>>;
 };
 
 export type LinkCreateManyInlineInput = {
@@ -6827,25 +6912,6 @@ export type LinkManyWhereInput = {
 	id_not_starts_with?: InputMaybe<Scalars['ID']>;
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
-	label?: InputMaybe<Scalars['String']>;
-	/** All values containing the given string. */
-	label_contains?: InputMaybe<Scalars['String']>;
-	/** All values ending with the given string. */
-	label_ends_with?: InputMaybe<Scalars['String']>;
-	/** All values that are contained in given list. */
-	label_in?: InputMaybe<Array<Scalars['String']>>;
-	/** All values that are not equal to given value. */
-	label_not?: InputMaybe<Scalars['String']>;
-	/** All values not containing the given string. */
-	label_not_contains?: InputMaybe<Scalars['String']>;
-	/** All values not ending with the given string */
-	label_not_ends_with?: InputMaybe<Scalars['String']>;
-	/** All values that are not contained in given list. */
-	label_not_in?: InputMaybe<Array<Scalars['String']>>;
-	/** All values not starting with the given string. */
-	label_not_starts_with?: InputMaybe<Scalars['String']>;
-	/** All values starting with the given string. */
-	label_starts_with?: InputMaybe<Scalars['String']>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
 	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -6989,8 +7055,30 @@ export type LinkUpdateInput = {
 	ckx8uschu02xj01zc71rq5bxw?: InputMaybe<CardIconUpdateManyInlineInput>;
 	ckxj50hw42v6x01xpgtk195ql?: InputMaybe<TextUpdateManyInlineInput>;
 	cl0laatxs64os01z2b3np7fuc?: InputMaybe<EyecatcherUpdateManyInlineInput>;
+	/** label input for default locale (de) */
 	label?: InputMaybe<Scalars['String']>;
+	/** Manage document localizations */
+	localizations?: InputMaybe<LinkUpdateLocalizationsInput>;
 	target?: InputMaybe<LinkTargetUpdateOneInlineInput>;
+};
+
+export type LinkUpdateLocalizationDataInput = {
+	label?: InputMaybe<Scalars['String']>;
+};
+
+export type LinkUpdateLocalizationInput = {
+	data: LinkUpdateLocalizationDataInput;
+	locale: Locale;
+};
+
+export type LinkUpdateLocalizationsInput = {
+	/** Localizations to create */
+	create?: InputMaybe<Array<LinkCreateLocalizationInput>>;
+	/** Localizations to delete */
+	delete?: InputMaybe<Array<Locale>>;
+	/** Localizations to update */
+	update?: InputMaybe<Array<LinkUpdateLocalizationInput>>;
+	upsert?: InputMaybe<Array<LinkUpsertLocalizationInput>>;
 };
 
 export type LinkUpdateManyInlineInput = {
@@ -7011,7 +7099,24 @@ export type LinkUpdateManyInlineInput = {
 };
 
 export type LinkUpdateManyInput = {
+	/** label input for default locale (de) */
 	label?: InputMaybe<Scalars['String']>;
+	/** Optional updates to localizations */
+	localizations?: InputMaybe<LinkUpdateManyLocalizationsInput>;
+};
+
+export type LinkUpdateManyLocalizationDataInput = {
+	label?: InputMaybe<Scalars['String']>;
+};
+
+export type LinkUpdateManyLocalizationInput = {
+	data: LinkUpdateManyLocalizationDataInput;
+	locale: Locale;
+};
+
+export type LinkUpdateManyLocalizationsInput = {
+	/** Localizations to update */
+	update?: InputMaybe<Array<LinkUpdateManyLocalizationInput>>;
 };
 
 export type LinkUpdateManyWithNestedWhereInput = {
@@ -7048,6 +7153,12 @@ export type LinkUpsertInput = {
 	create: LinkCreateInput;
 	/** Update document if it exists */
 	update: LinkUpdateInput;
+};
+
+export type LinkUpsertLocalizationInput = {
+	create: LinkCreateLocalizationDataInput;
+	locale: Locale;
+	update: LinkUpdateLocalizationDataInput;
 };
 
 export type LinkUpsertWithNestedWhereUniqueInput = {
@@ -7166,6 +7277,7 @@ export type LinkWhereUniqueInput = {
 /** Locale system enumeration */
 export enum Locale {
 	/** System locale */
+	De = 'de',
 	En = 'en'
 }
 
@@ -8587,8 +8699,11 @@ export type MutationPublishImageArgs = {
 };
 
 export type MutationPublishLinkArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+	publishBase?: InputMaybe<Scalars['Boolean']>;
 	to?: Array<Stage>;
 	where: LinkWhereUniqueInput;
+	withDefaultLocale?: InputMaybe<Scalars['Boolean']>;
 };
 
 export type MutationPublishManyAccordionContainersArgs = {
@@ -8812,8 +8927,11 @@ export type MutationPublishManyImagesConnectionArgs = {
 };
 
 export type MutationPublishManyLinksArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+	publishBase?: InputMaybe<Scalars['Boolean']>;
 	to?: Array<Stage>;
 	where?: InputMaybe<LinkManyWhereInput>;
+	withDefaultLocale?: InputMaybe<Scalars['Boolean']>;
 };
 
 export type MutationPublishManyLinksConnectionArgs = {
@@ -8822,9 +8940,12 @@ export type MutationPublishManyLinksConnectionArgs = {
 	first?: InputMaybe<Scalars['Int']>;
 	from?: InputMaybe<Stage>;
 	last?: InputMaybe<Scalars['Int']>;
+	locales?: InputMaybe<Array<Locale>>;
+	publishBase?: InputMaybe<Scalars['Boolean']>;
 	skip?: InputMaybe<Scalars['Int']>;
 	to?: Array<Stage>;
 	where?: InputMaybe<LinkManyWhereInput>;
+	withDefaultLocale?: InputMaybe<Scalars['Boolean']>;
 };
 
 export type MutationPublishManyPagesArgs = {
@@ -8908,8 +9029,11 @@ export type MutationPublishManyReferencesItemsConnectionArgs = {
 };
 
 export type MutationPublishManyTextsArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+	publishBase?: InputMaybe<Scalars['Boolean']>;
 	to?: Array<Stage>;
 	where?: InputMaybe<TextManyWhereInput>;
+	withDefaultLocale?: InputMaybe<Scalars['Boolean']>;
 };
 
 export type MutationPublishManyTextsConnectionArgs = {
@@ -8918,9 +9042,12 @@ export type MutationPublishManyTextsConnectionArgs = {
 	first?: InputMaybe<Scalars['Int']>;
 	from?: InputMaybe<Stage>;
 	last?: InputMaybe<Scalars['Int']>;
+	locales?: InputMaybe<Array<Locale>>;
+	publishBase?: InputMaybe<Scalars['Boolean']>;
 	skip?: InputMaybe<Scalars['Int']>;
 	to?: Array<Stage>;
 	where?: InputMaybe<TextManyWhereInput>;
+	withDefaultLocale?: InputMaybe<Scalars['Boolean']>;
 };
 
 export type MutationPublishPageArgs = {
@@ -8949,8 +9076,11 @@ export type MutationPublishReferencesItemArgs = {
 };
 
 export type MutationPublishTextArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+	publishBase?: InputMaybe<Scalars['Boolean']>;
 	to?: Array<Stage>;
 	where: TextWhereUniqueInput;
+	withDefaultLocale?: InputMaybe<Scalars['Boolean']>;
 };
 
 export type MutationSchedulePublishAccordionContainerArgs = {
@@ -9051,10 +9181,13 @@ export type MutationSchedulePublishImageArgs = {
 };
 
 export type MutationSchedulePublishLinkArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+	publishBase?: InputMaybe<Scalars['Boolean']>;
 	releaseAt?: InputMaybe<Scalars['DateTime']>;
 	releaseId?: InputMaybe<Scalars['String']>;
 	to?: Array<Stage>;
 	where: LinkWhereUniqueInput;
+	withDefaultLocale?: InputMaybe<Scalars['Boolean']>;
 };
 
 export type MutationSchedulePublishPageArgs = {
@@ -9093,10 +9226,13 @@ export type MutationSchedulePublishReferencesItemArgs = {
 };
 
 export type MutationSchedulePublishTextArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+	publishBase?: InputMaybe<Scalars['Boolean']>;
 	releaseAt?: InputMaybe<Scalars['DateTime']>;
 	releaseId?: InputMaybe<Scalars['String']>;
 	to?: Array<Stage>;
 	where: TextWhereUniqueInput;
+	withDefaultLocale?: InputMaybe<Scalars['Boolean']>;
 };
 
 export type MutationScheduleUnpublishAccordionContainerArgs = {
@@ -9196,8 +9332,10 @@ export type MutationScheduleUnpublishImageArgs = {
 
 export type MutationScheduleUnpublishLinkArgs = {
 	from?: Array<Stage>;
+	locales?: InputMaybe<Array<Locale>>;
 	releaseAt?: InputMaybe<Scalars['DateTime']>;
 	releaseId?: InputMaybe<Scalars['String']>;
+	unpublishBase?: InputMaybe<Scalars['Boolean']>;
 	where: LinkWhereUniqueInput;
 };
 
@@ -9238,8 +9376,10 @@ export type MutationScheduleUnpublishReferencesItemArgs = {
 
 export type MutationScheduleUnpublishTextArgs = {
 	from?: Array<Stage>;
+	locales?: InputMaybe<Array<Locale>>;
 	releaseAt?: InputMaybe<Scalars['DateTime']>;
 	releaseId?: InputMaybe<Scalars['String']>;
+	unpublishBase?: InputMaybe<Scalars['Boolean']>;
 	where: TextWhereUniqueInput;
 };
 
@@ -9314,6 +9454,8 @@ export type MutationUnpublishImageArgs = {
 
 export type MutationUnpublishLinkArgs = {
 	from?: Array<Stage>;
+	locales?: InputMaybe<Array<Locale>>;
+	unpublishBase?: InputMaybe<Scalars['Boolean']>;
 	where: LinkWhereUniqueInput;
 };
 
@@ -9535,6 +9677,8 @@ export type MutationUnpublishManyImagesConnectionArgs = {
 
 export type MutationUnpublishManyLinksArgs = {
 	from?: Array<Stage>;
+	locales?: InputMaybe<Array<Locale>>;
+	unpublishBase?: InputMaybe<Scalars['Boolean']>;
 	where?: InputMaybe<LinkManyWhereInput>;
 };
 
@@ -9544,8 +9688,10 @@ export type MutationUnpublishManyLinksConnectionArgs = {
 	first?: InputMaybe<Scalars['Int']>;
 	from?: Array<Stage>;
 	last?: InputMaybe<Scalars['Int']>;
+	locales?: InputMaybe<Array<Locale>>;
 	skip?: InputMaybe<Scalars['Int']>;
 	stage?: InputMaybe<Stage>;
+	unpublishBase?: InputMaybe<Scalars['Boolean']>;
 	where?: InputMaybe<LinkManyWhereInput>;
 };
 
@@ -9631,6 +9777,8 @@ export type MutationUnpublishManyReferencesItemsConnectionArgs = {
 
 export type MutationUnpublishManyTextsArgs = {
 	from?: Array<Stage>;
+	locales?: InputMaybe<Array<Locale>>;
+	unpublishBase?: InputMaybe<Scalars['Boolean']>;
 	where?: InputMaybe<TextManyWhereInput>;
 };
 
@@ -9640,8 +9788,10 @@ export type MutationUnpublishManyTextsConnectionArgs = {
 	first?: InputMaybe<Scalars['Int']>;
 	from?: Array<Stage>;
 	last?: InputMaybe<Scalars['Int']>;
+	locales?: InputMaybe<Array<Locale>>;
 	skip?: InputMaybe<Scalars['Int']>;
 	stage?: InputMaybe<Stage>;
+	unpublishBase?: InputMaybe<Scalars['Boolean']>;
 	where?: InputMaybe<TextManyWhereInput>;
 };
 
@@ -9672,6 +9822,8 @@ export type MutationUnpublishReferencesItemArgs = {
 
 export type MutationUnpublishTextArgs = {
 	from?: Array<Stage>;
+	locales?: InputMaybe<Array<Locale>>;
+	unpublishBase?: InputMaybe<Scalars['Boolean']>;
 	where: TextWhereUniqueInput;
 };
 
@@ -14322,6 +14474,10 @@ export type Text = Node & {
 	/** The unique identifier */
 	id: Scalars['ID'];
 	link?: Maybe<Link>;
+	/** System Locale field */
+	locale: Locale;
+	/** Get the other localizations for this document */
+	localizations: Array<Text>;
 	paddingBottom?: Maybe<Padding>;
 	paddingTop?: Maybe<Padding>;
 	page?: Maybe<Page>;
@@ -14341,6 +14497,10 @@ export type Text = Node & {
 
 export type TextBlogPostArgs = {
 	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type TextCreatedAtArgs = {
+	variation?: SystemDateTimeFieldVariation;
 };
 
 export type TextCreatedByArgs = {
@@ -14363,8 +14523,17 @@ export type TextLinkArgs = {
 	locales?: InputMaybe<Array<Locale>>;
 };
 
+export type TextLocalizationsArgs = {
+	includeCurrent?: Scalars['Boolean'];
+	locales?: Array<Locale>;
+};
+
 export type TextPageArgs = {
 	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type TextPublishedAtArgs = {
+	variation?: SystemDateTimeFieldVariation;
 };
 
 export type TextPublishedByArgs = {
@@ -14379,6 +14548,10 @@ export type TextScheduledInArgs = {
 	locales?: InputMaybe<Array<Locale>>;
 	skip?: InputMaybe<Scalars['Int']>;
 	where?: InputMaybe<ScheduledOperationWhereInput>;
+};
+
+export type TextUpdatedAtArgs = {
+	variation?: SystemDateTimeFieldVariation;
 };
 
 export type TextUpdatedByArgs = {
@@ -14407,13 +14580,35 @@ export type TextCreateInput = {
 	createdAt?: InputMaybe<Scalars['DateTime']>;
 	heading1?: InputMaybe<Scalars['String']>;
 	heading2?: InputMaybe<Scalars['String']>;
+	/** heading3 input for default locale (de) */
 	heading3?: InputMaybe<Scalars['String']>;
 	link?: InputMaybe<LinkCreateOneInlineInput>;
+	/** Inline mutations for managing document localizations excluding the default locale */
+	localizations?: InputMaybe<TextCreateLocalizationsInput>;
 	paddingBottom?: InputMaybe<Padding>;
 	paddingTop?: InputMaybe<Padding>;
 	page?: InputMaybe<PageCreateOneInlineInput>;
+	/** text input for default locale (de) */
 	text?: InputMaybe<Scalars['RichTextAST']>;
 	updatedAt?: InputMaybe<Scalars['DateTime']>;
+};
+
+export type TextCreateLocalizationDataInput = {
+	createdAt?: InputMaybe<Scalars['DateTime']>;
+	heading3?: InputMaybe<Scalars['String']>;
+	text?: InputMaybe<Scalars['RichTextAST']>;
+	updatedAt?: InputMaybe<Scalars['DateTime']>;
+};
+
+export type TextCreateLocalizationInput = {
+	/** Localization input */
+	data: TextCreateLocalizationDataInput;
+	locale: Locale;
+};
+
+export type TextCreateLocalizationsInput = {
+	/** Create localizations for the newly-created document */
+	create?: InputMaybe<Array<TextCreateLocalizationInput>>;
 };
 
 export type TextCreateManyInlineInput = {
@@ -14504,25 +14699,6 @@ export type TextManyWhereInput = {
 	heading2_not_starts_with?: InputMaybe<Scalars['String']>;
 	/** All values starting with the given string. */
 	heading2_starts_with?: InputMaybe<Scalars['String']>;
-	heading3?: InputMaybe<Scalars['String']>;
-	/** All values containing the given string. */
-	heading3_contains?: InputMaybe<Scalars['String']>;
-	/** All values ending with the given string. */
-	heading3_ends_with?: InputMaybe<Scalars['String']>;
-	/** All values that are contained in given list. */
-	heading3_in?: InputMaybe<Array<Scalars['String']>>;
-	/** All values that are not equal to given value. */
-	heading3_not?: InputMaybe<Scalars['String']>;
-	/** All values not containing the given string. */
-	heading3_not_contains?: InputMaybe<Scalars['String']>;
-	/** All values not ending with the given string */
-	heading3_not_ends_with?: InputMaybe<Scalars['String']>;
-	/** All values that are not contained in given list. */
-	heading3_not_in?: InputMaybe<Array<Scalars['String']>>;
-	/** All values not starting with the given string. */
-	heading3_not_starts_with?: InputMaybe<Scalars['String']>;
-	/** All values starting with the given string. */
-	heading3_starts_with?: InputMaybe<Scalars['String']>;
 	id?: InputMaybe<Scalars['ID']>;
 	/** All values containing the given string. */
 	id_contains?: InputMaybe<Scalars['ID']>;
@@ -14620,12 +14796,36 @@ export type TextUpdateInput = {
 	blogPost?: InputMaybe<BlogPostUpdateOneInlineInput>;
 	heading1?: InputMaybe<Scalars['String']>;
 	heading2?: InputMaybe<Scalars['String']>;
+	/** heading3 input for default locale (de) */
 	heading3?: InputMaybe<Scalars['String']>;
 	link?: InputMaybe<LinkUpdateOneInlineInput>;
+	/** Manage document localizations */
+	localizations?: InputMaybe<TextUpdateLocalizationsInput>;
 	paddingBottom?: InputMaybe<Padding>;
 	paddingTop?: InputMaybe<Padding>;
 	page?: InputMaybe<PageUpdateOneInlineInput>;
+	/** text input for default locale (de) */
 	text?: InputMaybe<Scalars['RichTextAST']>;
+};
+
+export type TextUpdateLocalizationDataInput = {
+	heading3?: InputMaybe<Scalars['String']>;
+	text?: InputMaybe<Scalars['RichTextAST']>;
+};
+
+export type TextUpdateLocalizationInput = {
+	data: TextUpdateLocalizationDataInput;
+	locale: Locale;
+};
+
+export type TextUpdateLocalizationsInput = {
+	/** Localizations to create */
+	create?: InputMaybe<Array<TextCreateLocalizationInput>>;
+	/** Localizations to delete */
+	delete?: InputMaybe<Array<Locale>>;
+	/** Localizations to update */
+	update?: InputMaybe<Array<TextUpdateLocalizationInput>>;
+	upsert?: InputMaybe<Array<TextUpsertLocalizationInput>>;
 };
 
 export type TextUpdateManyInlineInput = {
@@ -14648,10 +14848,29 @@ export type TextUpdateManyInlineInput = {
 export type TextUpdateManyInput = {
 	heading1?: InputMaybe<Scalars['String']>;
 	heading2?: InputMaybe<Scalars['String']>;
+	/** heading3 input for default locale (de) */
 	heading3?: InputMaybe<Scalars['String']>;
+	/** Optional updates to localizations */
+	localizations?: InputMaybe<TextUpdateManyLocalizationsInput>;
 	paddingBottom?: InputMaybe<Padding>;
 	paddingTop?: InputMaybe<Padding>;
+	/** text input for default locale (de) */
 	text?: InputMaybe<Scalars['RichTextAST']>;
+};
+
+export type TextUpdateManyLocalizationDataInput = {
+	heading3?: InputMaybe<Scalars['String']>;
+	text?: InputMaybe<Scalars['RichTextAST']>;
+};
+
+export type TextUpdateManyLocalizationInput = {
+	data: TextUpdateManyLocalizationDataInput;
+	locale: Locale;
+};
+
+export type TextUpdateManyLocalizationsInput = {
+	/** Localizations to update */
+	update?: InputMaybe<Array<TextUpdateManyLocalizationInput>>;
 };
 
 export type TextUpdateManyWithNestedWhereInput = {
@@ -14688,6 +14907,12 @@ export type TextUpsertInput = {
 	create: TextCreateInput;
 	/** Update document if it exists */
 	update: TextUpdateInput;
+};
+
+export type TextUpsertLocalizationInput = {
+	create: TextCreateLocalizationDataInput;
+	locale: Locale;
+	update: TextUpdateLocalizationDataInput;
 };
 
 export type TextUpsertWithNestedWhereUniqueInput = {
@@ -15322,141 +15547,112 @@ export enum _SystemDateTimeFieldVariation {
 	Localization = 'localization'
 }
 
-export type LinkFragmentFragment = {
-	__typename?: 'Link';
-	id: string;
-	label?: string | null | undefined;
-	target?:
-		| { __typename: 'BlogPost'; id: string; slug: string }
-		| { __typename: 'Page'; id: string; slug: string }
-		| null
-		| undefined;
-};
-
 export type Unnamed_1_QueryVariables = Exact<{
 	slug: Scalars['String'];
 }>;
 
 export type Unnamed_1_Query = {
 	__typename?: 'Query';
-	blogPost?:
-		| {
-				__typename?: 'BlogPost';
-				id: string;
-				slug: string;
-				teaserHeadline?: string | null | undefined;
-				teaserSubheadline?: string | null | undefined;
-				teaserText?: string | null | undefined;
-				heroBackgroundImage?: { __typename?: 'Asset'; url: string } | null | undefined;
-				modules: Array<
-					| {
-							__typename: 'AccordionContainer';
-							id: string;
-							headline?: string | null | undefined;
-							paddingTop?: Padding | null | undefined;
-							paddingBottom?: Padding | null | undefined;
-							accordionItems: Array<{
-								__typename?: 'AccordionItem';
+	blogPost?: {
+		__typename: 'BlogPost';
+		id: string;
+		slug: string;
+		teaserHeadline?: string | null;
+		teaserSubheadline?: string | null;
+		teaserText?: string | null;
+		heroBackgroundImage?: { __typename?: 'Asset'; url: string } | null;
+		modules: Array<
+			| {
+					__typename: 'AccordionContainer';
+					id: string;
+					headline?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					accordionItems: Array<{
+						__typename?: 'AccordionItem';
+						id: string;
+						headline: string;
+						content: { __typename?: 'RichText'; html: string };
+					}>;
+			  }
+			| { __typename: 'AssetLink' }
+			| {
+					__typename: 'CardsContainer';
+					id: string;
+					headline?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					cards: Array<
+						| {
+								__typename: 'CardIcon';
 								id: string;
-								headline: string;
-								content: { __typename?: 'RichText'; html: string };
-							}>;
-					  }
-					| { __typename: 'AssetLink' }
-					| {
-							__typename: 'CardsContainer';
-							id: string;
-							headline?: string | null | undefined;
-							paddingTop?: Padding | null | undefined;
-							paddingBottom?: Padding | null | undefined;
-							cards: Array<
-								| {
-										__typename: 'CardIcon';
-										id: string;
-										headline?: string | null | undefined;
-										subheadline?: string | null | undefined;
-										backgroundColor?:
-											| {
-													__typename?: 'Color';
-													hex: any;
-													rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
-											  }
-											| null
-											| undefined;
-										icon?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
-										link?:
-											| {
-													__typename?: 'Link';
-													id: string;
-													label?: string | null | undefined;
-													target?:
-														| { __typename: 'BlogPost'; id: string; slug: string }
-														| { __typename: 'Page'; id: string; slug: string }
-														| null
-														| undefined;
-											  }
-											| null
-											| undefined;
-								  }
-								| {
-										__typename: 'CardImage';
-										id: string;
-										headline?: string | null | undefined;
-										linkToId?: string | null | undefined;
-										image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
-										link?:
-											| {
-													__typename?: 'Link';
-													id: string;
-													label?: string | null | undefined;
-													target?:
-														| { __typename: 'BlogPost'; id: string; slug: string }
-														| { __typename: 'Page'; id: string; slug: string }
-														| null
-														| undefined;
-											  }
-											| null
-											| undefined;
-								  }
-							>;
-					  }
-					| { __typename: 'CtaLink'; id: string; padding: Padding }
-					| { __typename: 'Divider'; id: string; padding: Padding }
-					| {
-							__typename: 'Image';
-							id: string;
-							imageWidth?: ImageWidth | null | undefined;
-							paddingTop?: Padding | null | undefined;
-							paddingBottom?: Padding | null | undefined;
-							image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
-					  }
-					| {
-							__typename: 'Text';
-							id: string;
-							heading1?: string | null | undefined;
-							heading2?: string | null | undefined;
-							heading3?: string | null | undefined;
-							paddingTop?: Padding | null | undefined;
-							paddingBottom?: Padding | null | undefined;
-							link?:
-								| {
-										__typename?: 'Link';
-										id: string;
-										label?: string | null | undefined;
-										target?:
-											| { __typename: 'BlogPost'; id: string; slug: string }
-											| { __typename: 'Page'; id: string; slug: string }
-											| null
-											| undefined;
-								  }
-								| null
-								| undefined;
-							text?: { __typename?: 'RichText'; html: string } | null | undefined;
-					  }
-				>;
-		  }
-		| null
-		| undefined;
+								headline?: string | null;
+								subheadline?: string | null;
+								backgroundColor?: {
+									__typename?: 'Color';
+									hex: any;
+									rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
+								} | null;
+								icon?: { __typename?: 'Asset'; id: string; url: string } | null;
+								link?: {
+									__typename: 'Link';
+									id: string;
+									label?: string | null;
+									target?:
+										| { __typename: 'BlogPost'; id: string; slug: string }
+										| { __typename: 'Page'; id: string; slug: string }
+										| null;
+								} | null;
+						  }
+						| {
+								__typename: 'CardImage';
+								id: string;
+								headline?: string | null;
+								linkToId?: string | null;
+								image?: { __typename?: 'Asset'; id: string; url: string } | null;
+								link?: {
+									__typename: 'Link';
+									id: string;
+									label?: string | null;
+									target?:
+										| { __typename: 'BlogPost'; id: string; slug: string }
+										| { __typename: 'Page'; id: string; slug: string }
+										| null;
+								} | null;
+						  }
+					>;
+			  }
+			| { __typename: 'CtaLink'; id: string; padding: Padding }
+			| { __typename: 'Divider'; id: string; padding: Padding }
+			| {
+					__typename: 'Image';
+					id: string;
+					imageWidth?: ImageWidth | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					image?: { __typename?: 'Asset'; id: string; url: string } | null;
+			  }
+			| {
+					__typename: 'Text';
+					id: string;
+					heading1?: string | null;
+					heading2?: string | null;
+					heading3?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					link?: {
+						__typename: 'Link';
+						id: string;
+						label?: string | null;
+						target?:
+							| { __typename: 'BlogPost'; id: string; slug: string }
+							| { __typename: 'Page'; id: string; slug: string }
+							| null;
+					} | null;
+					text?: { __typename?: 'RichText'; html: string } | null;
+			  }
+		>;
+	} | null;
 };
 
 export type Unnamed_2_QueryVariables = Exact<{ [key: string]: never }>;
@@ -15467,11 +15663,282 @@ export type Unnamed_2_Query = {
 		__typename?: 'BlogPost';
 		id: string;
 		slug: string;
-		teaserHeadline?: string | null | undefined;
-		teaserSubheadline?: string | null | undefined;
-		teaserText?: string | null | undefined;
-		heroBackgroundImage?: { __typename?: 'Asset'; url: string } | null | undefined;
+		teaserHeadline?: string | null;
+		teaserSubheadline?: string | null;
+		teaserText?: string | null;
+		heroBackgroundImage?: { __typename?: 'Asset'; url: string } | null;
 	}>;
+};
+
+export type LinkFragmentFragment = {
+	__typename: 'Link';
+	id: string;
+	label?: string | null;
+	target?:
+		| { __typename: 'BlogPost'; id: string; slug: string }
+		| { __typename: 'Page'; id: string; slug: string }
+		| null;
+};
+
+export type PageFragmentFragment = {
+	__typename: 'Page';
+	id: string;
+	slug: string;
+	modules: Array<
+		| {
+				__typename: 'AccordionContainer';
+				id: string;
+				headline?: string | null;
+				paddingTop?: Padding | null;
+				paddingBottom?: Padding | null;
+				accordionItems: Array<{
+					__typename?: 'AccordionItem';
+					id: string;
+					headline: string;
+					content: { __typename?: 'RichText'; html: string };
+				}>;
+		  }
+		| {
+				__typename: 'AssetLink';
+				id: string;
+				headline?: string | null;
+				downloadlinkLabel?: string | null;
+				assetPicker?: { __typename?: 'Asset'; url: string } | null;
+		  }
+		| {
+				__typename: 'BlogPost';
+				id: string;
+				slug: string;
+				teaserHeadline?: string | null;
+				teaserSubheadline?: string | null;
+				teaserText?: string | null;
+				heroBackgroundImage?: { __typename?: 'Asset'; url: string } | null;
+		  }
+		| {
+				__typename: 'CardsContainer';
+				id: string;
+				headline?: string | null;
+				paddingTop?: Padding | null;
+				paddingBottom?: Padding | null;
+				cards: Array<
+					| {
+							__typename: 'CardIcon';
+							id: string;
+							headline?: string | null;
+							subheadline?: string | null;
+							backgroundColor?: {
+								__typename?: 'Color';
+								hex: any;
+								rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
+							} | null;
+							icon?: { __typename?: 'Asset'; id: string; url: string } | null;
+							link?: {
+								__typename: 'Link';
+								id: string;
+								label?: string | null;
+								target?:
+									| { __typename: 'BlogPost'; id: string; slug: string }
+									| { __typename: 'Page'; id: string; slug: string }
+									| null;
+							} | null;
+					  }
+					| {
+							__typename: 'CardImage';
+							id: string;
+							headline?: string | null;
+							linkToId?: string | null;
+							image?: { __typename?: 'Asset'; id: string; url: string } | null;
+							link?: {
+								__typename: 'Link';
+								id: string;
+								label?: string | null;
+								target?:
+									| { __typename: 'BlogPost'; id: string; slug: string }
+									| { __typename: 'Page'; id: string; slug: string }
+									| null;
+							} | null;
+					  }
+				>;
+		  }
+		| { __typename: 'CtaLink'; id: string; headline?: string | null; padding: Padding }
+		| { __typename: 'Divider'; id: string; padding: Padding }
+		| {
+				__typename: 'Eyecatcher';
+				id: string;
+				headline?: string | null;
+				subheadline?: string | null;
+				paddingTop?: Padding | null;
+				paddingBottom?: Padding | null;
+				link?: {
+					__typename: 'Link';
+					id: string;
+					label?: string | null;
+					target?:
+						| { __typename: 'BlogPost'; id: string; slug: string }
+						| { __typename: 'Page'; id: string; slug: string }
+						| null;
+				} | null;
+				image?: { __typename?: 'Asset'; id: string; url: string } | null;
+		  }
+		| {
+				__typename: 'HeroImage';
+				id: string;
+				image?: { __typename?: 'Asset'; id: string; url: string } | null;
+				strokeColor?: {
+					__typename?: 'Color';
+					hex: any;
+					rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
+				} | null;
+				icon?: { __typename?: 'Asset'; id: string; url: string } | null;
+		  }
+		| {
+				__typename: 'Image';
+				id: string;
+				imageWidth?: ImageWidth | null;
+				paddingTop?: Padding | null;
+				paddingBottom?: Padding | null;
+				image?: { __typename?: 'Asset'; id: string; url: string } | null;
+		  }
+		| {
+				__typename: 'PartnerContainer';
+				id: string;
+				partnerItems: Array<{
+					__typename?: 'PartnerItem';
+					id: string;
+					partnerLogo?: { __typename?: 'Asset'; id: string; url: string } | null;
+					partnerDescription?: { __typename?: 'RichText'; html: string } | null;
+				}>;
+		  }
+		| {
+				__typename: 'ReferencesContainer';
+				id: string;
+				referenceItems: Array<{
+					__typename?: 'ReferencesItem';
+					id: string;
+					referenceLogo?: { __typename?: 'Asset'; id: string; url: string } | null;
+				}>;
+		  }
+		| {
+				__typename: 'Text';
+				id: string;
+				heading1?: string | null;
+				heading2?: string | null;
+				heading3?: string | null;
+				paddingTop?: Padding | null;
+				paddingBottom?: Padding | null;
+				link?: {
+					__typename: 'Link';
+					id: string;
+					label?: string | null;
+					target?:
+						| { __typename: 'BlogPost'; id: string; slug: string }
+						| { __typename: 'Page'; id: string; slug: string }
+						| null;
+				} | null;
+				text?: { __typename?: 'RichText'; html: string } | null;
+		  }
+	>;
+};
+
+export type BlogPostFragmentFragment = {
+	__typename: 'BlogPost';
+	id: string;
+	slug: string;
+	teaserHeadline?: string | null;
+	teaserSubheadline?: string | null;
+	teaserText?: string | null;
+	heroBackgroundImage?: { __typename?: 'Asset'; url: string } | null;
+	modules: Array<
+		| {
+				__typename: 'AccordionContainer';
+				id: string;
+				headline?: string | null;
+				paddingTop?: Padding | null;
+				paddingBottom?: Padding | null;
+				accordionItems: Array<{
+					__typename?: 'AccordionItem';
+					id: string;
+					headline: string;
+					content: { __typename?: 'RichText'; html: string };
+				}>;
+		  }
+		| { __typename: 'AssetLink' }
+		| {
+				__typename: 'CardsContainer';
+				id: string;
+				headline?: string | null;
+				paddingTop?: Padding | null;
+				paddingBottom?: Padding | null;
+				cards: Array<
+					| {
+							__typename: 'CardIcon';
+							id: string;
+							headline?: string | null;
+							subheadline?: string | null;
+							backgroundColor?: {
+								__typename?: 'Color';
+								hex: any;
+								rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
+							} | null;
+							icon?: { __typename?: 'Asset'; id: string; url: string } | null;
+							link?: {
+								__typename: 'Link';
+								id: string;
+								label?: string | null;
+								target?:
+									| { __typename: 'BlogPost'; id: string; slug: string }
+									| { __typename: 'Page'; id: string; slug: string }
+									| null;
+							} | null;
+					  }
+					| {
+							__typename: 'CardImage';
+							id: string;
+							headline?: string | null;
+							linkToId?: string | null;
+							image?: { __typename?: 'Asset'; id: string; url: string } | null;
+							link?: {
+								__typename: 'Link';
+								id: string;
+								label?: string | null;
+								target?:
+									| { __typename: 'BlogPost'; id: string; slug: string }
+									| { __typename: 'Page'; id: string; slug: string }
+									| null;
+							} | null;
+					  }
+				>;
+		  }
+		| { __typename: 'CtaLink'; id: string; padding: Padding }
+		| { __typename: 'Divider'; id: string; padding: Padding }
+		| {
+				__typename: 'Image';
+				id: string;
+				imageWidth?: ImageWidth | null;
+				paddingTop?: Padding | null;
+				paddingBottom?: Padding | null;
+				image?: { __typename?: 'Asset'; id: string; url: string } | null;
+		  }
+		| {
+				__typename: 'Text';
+				id: string;
+				heading1?: string | null;
+				heading2?: string | null;
+				heading3?: string | null;
+				paddingTop?: Padding | null;
+				paddingBottom?: Padding | null;
+				link?: {
+					__typename: 'Link';
+					id: string;
+					label?: string | null;
+					target?:
+						| { __typename: 'BlogPost'; id: string; slug: string }
+						| { __typename: 'Page'; id: string; slug: string }
+						| null;
+				} | null;
+				text?: { __typename?: 'RichText'; html: string } | null;
+		  }
+	>;
 };
 
 export type Unnamed_3_QueryVariables = Exact<{ [key: string]: never }>;
@@ -15484,7 +15951,7 @@ export type Unnamed_3_Query = {
 		referenceItems: Array<{
 			__typename?: 'ReferencesItem';
 			id: string;
-			referenceLogo?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
+			referenceLogo?: { __typename?: 'Asset'; id: string; url: string } | null;
 		}>;
 	}>;
 };
@@ -15495,191 +15962,428 @@ export type Unnamed_4_QueryVariables = Exact<{
 
 export type Unnamed_4_Query = {
 	__typename?: 'Query';
-	page?:
-		| {
-				__typename?: 'Page';
-				id: string;
-				slug: string;
-				modules: Array<
-					| {
-							__typename: 'AccordionContainer';
-							id: string;
-							headline?: string | null | undefined;
-							paddingTop?: Padding | null | undefined;
-							paddingBottom?: Padding | null | undefined;
-							accordionItems: Array<{
-								__typename?: 'AccordionItem';
+	page?: {
+		__typename: 'Page';
+		id: string;
+		slug: string;
+		modules: Array<
+			| {
+					__typename: 'AccordionContainer';
+					id: string;
+					headline?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					accordionItems: Array<{
+						__typename?: 'AccordionItem';
+						id: string;
+						headline: string;
+						content: { __typename?: 'RichText'; html: string };
+					}>;
+			  }
+			| {
+					__typename: 'AssetLink';
+					id: string;
+					headline?: string | null;
+					downloadlinkLabel?: string | null;
+					assetPicker?: { __typename?: 'Asset'; url: string } | null;
+			  }
+			| {
+					__typename: 'BlogPost';
+					id: string;
+					slug: string;
+					teaserHeadline?: string | null;
+					teaserSubheadline?: string | null;
+					teaserText?: string | null;
+					heroBackgroundImage?: { __typename?: 'Asset'; url: string } | null;
+			  }
+			| {
+					__typename: 'CardsContainer';
+					id: string;
+					headline?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					cards: Array<
+						| {
+								__typename: 'CardIcon';
 								id: string;
-								headline: string;
-								content: { __typename?: 'RichText'; html: string };
-							}>;
-					  }
-					| {
-							__typename: 'AssetLink';
-							id: string;
-							headline?: string | null | undefined;
-							downloadlinkLabel?: string | null | undefined;
-							assetPicker?: { __typename?: 'Asset'; url: string } | null | undefined;
-					  }
-					| {
-							__typename: 'BlogPost';
-							id: string;
-							slug: string;
-							teaserHeadline?: string | null | undefined;
-							teaserSubheadline?: string | null | undefined;
-							teaserText?: string | null | undefined;
-							heroBackgroundImage?: { __typename?: 'Asset'; url: string } | null | undefined;
-					  }
-					| {
-							__typename: 'CardsContainer';
-							id: string;
-							headline?: string | null | undefined;
-							paddingTop?: Padding | null | undefined;
-							paddingBottom?: Padding | null | undefined;
-							cards: Array<
-								| {
-										__typename: 'CardIcon';
-										id: string;
-										headline?: string | null | undefined;
-										subheadline?: string | null | undefined;
-										backgroundColor?:
-											| {
-													__typename?: 'Color';
-													hex: any;
-													rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
-											  }
-											| null
-											| undefined;
-										icon?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
-										link?:
-											| {
-													__typename?: 'Link';
-													id: string;
-													label?: string | null | undefined;
-													target?:
-														| { __typename: 'BlogPost'; id: string; slug: string }
-														| { __typename: 'Page'; id: string; slug: string }
-														| null
-														| undefined;
-											  }
-											| null
-											| undefined;
-								  }
-								| {
-										__typename: 'CardImage';
-										id: string;
-										headline?: string | null | undefined;
-										linkToId?: string | null | undefined;
-										image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
-										link?:
-											| {
-													__typename?: 'Link';
-													id: string;
-													label?: string | null | undefined;
-													target?:
-														| { __typename: 'BlogPost'; id: string; slug: string }
-														| { __typename: 'Page'; id: string; slug: string }
-														| null
-														| undefined;
-											  }
-											| null
-											| undefined;
-								  }
-							>;
-					  }
-					| { __typename: 'CtaLink'; id: string; padding: Padding }
-					| { __typename: 'Divider'; id: string; padding: Padding }
-					| {
-							__typename: 'Eyecatcher';
-							id: string;
-							headline?: string | null | undefined;
-							subheadline?: string | null | undefined;
-							paddingTop?: Padding | null | undefined;
-							paddingBottom?: Padding | null | undefined;
-							link?:
-								| {
-										__typename?: 'Link';
-										id: string;
-										label?: string | null | undefined;
-										target?:
-											| { __typename: 'BlogPost'; id: string; slug: string }
-											| { __typename: 'Page'; id: string; slug: string }
-											| null
-											| undefined;
-								  }
-								| null
-								| undefined;
-							image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
-					  }
-					| {
-							__typename: 'HeroImage';
-							id: string;
-							image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
-							strokeColor?:
-								| {
-										__typename?: 'Color';
-										hex: any;
-										rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
-								  }
-								| null
-								| undefined;
-							icon?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
-					  }
-					| {
-							__typename: 'Image';
-							id: string;
-							imageWidth?: ImageWidth | null | undefined;
-							paddingTop?: Padding | null | undefined;
-							paddingBottom?: Padding | null | undefined;
-							image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
-					  }
-					| {
-							__typename: 'PartnerContainer';
-							id: string;
-							partnerItems: Array<{
-								__typename?: 'PartnerItem';
+								headline?: string | null;
+								subheadline?: string | null;
+								backgroundColor?: {
+									__typename?: 'Color';
+									hex: any;
+									rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
+								} | null;
+								icon?: { __typename?: 'Asset'; id: string; url: string } | null;
+								link?: {
+									__typename: 'Link';
+									id: string;
+									label?: string | null;
+									target?:
+										| { __typename: 'BlogPost'; id: string; slug: string }
+										| { __typename: 'Page'; id: string; slug: string }
+										| null;
+								} | null;
+						  }
+						| {
+								__typename: 'CardImage';
 								id: string;
-								partnerLogo?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
-								partnerDescription?: { __typename?: 'RichText'; html: string } | null | undefined;
-							}>;
-					  }
-					| {
-							__typename: 'ReferencesContainer';
-							id: string;
-							referenceItems: Array<{
-								__typename?: 'ReferencesItem';
+								headline?: string | null;
+								linkToId?: string | null;
+								image?: { __typename?: 'Asset'; id: string; url: string } | null;
+								link?: {
+									__typename: 'Link';
+									id: string;
+									label?: string | null;
+									target?:
+										| { __typename: 'BlogPost'; id: string; slug: string }
+										| { __typename: 'Page'; id: string; slug: string }
+										| null;
+								} | null;
+						  }
+					>;
+			  }
+			| { __typename: 'CtaLink'; id: string; headline?: string | null; padding: Padding }
+			| { __typename: 'Divider'; id: string; padding: Padding }
+			| {
+					__typename: 'Eyecatcher';
+					id: string;
+					headline?: string | null;
+					subheadline?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					link?: {
+						__typename: 'Link';
+						id: string;
+						label?: string | null;
+						target?:
+							| { __typename: 'BlogPost'; id: string; slug: string }
+							| { __typename: 'Page'; id: string; slug: string }
+							| null;
+					} | null;
+					image?: { __typename?: 'Asset'; id: string; url: string } | null;
+			  }
+			| {
+					__typename: 'HeroImage';
+					id: string;
+					image?: { __typename?: 'Asset'; id: string; url: string } | null;
+					strokeColor?: {
+						__typename?: 'Color';
+						hex: any;
+						rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
+					} | null;
+					icon?: { __typename?: 'Asset'; id: string; url: string } | null;
+			  }
+			| {
+					__typename: 'Image';
+					id: string;
+					imageWidth?: ImageWidth | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					image?: { __typename?: 'Asset'; id: string; url: string } | null;
+			  }
+			| {
+					__typename: 'PartnerContainer';
+					id: string;
+					partnerItems: Array<{
+						__typename?: 'PartnerItem';
+						id: string;
+						partnerLogo?: { __typename?: 'Asset'; id: string; url: string } | null;
+						partnerDescription?: { __typename?: 'RichText'; html: string } | null;
+					}>;
+			  }
+			| {
+					__typename: 'ReferencesContainer';
+					id: string;
+					referenceItems: Array<{
+						__typename?: 'ReferencesItem';
+						id: string;
+						referenceLogo?: { __typename?: 'Asset'; id: string; url: string } | null;
+					}>;
+			  }
+			| {
+					__typename: 'Text';
+					id: string;
+					heading1?: string | null;
+					heading2?: string | null;
+					heading3?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					link?: {
+						__typename: 'Link';
+						id: string;
+						label?: string | null;
+						target?:
+							| { __typename: 'BlogPost'; id: string; slug: string }
+							| { __typename: 'Page'; id: string; slug: string }
+							| null;
+					} | null;
+					text?: { __typename?: 'RichText'; html: string } | null;
+			  }
+		>;
+	} | null;
+};
+
+export type Unnamed_5_QueryVariables = Exact<{ [key: string]: never }>;
+
+export type Unnamed_5_Query = {
+	__typename?: 'Query';
+	pages: Array<{
+		__typename: 'Page';
+		id: string;
+		slug: string;
+		modules: Array<
+			| {
+					__typename: 'AccordionContainer';
+					id: string;
+					headline?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					accordionItems: Array<{
+						__typename?: 'AccordionItem';
+						id: string;
+						headline: string;
+						content: { __typename?: 'RichText'; html: string };
+					}>;
+			  }
+			| {
+					__typename: 'AssetLink';
+					id: string;
+					headline?: string | null;
+					downloadlinkLabel?: string | null;
+					assetPicker?: { __typename?: 'Asset'; url: string } | null;
+			  }
+			| {
+					__typename: 'BlogPost';
+					id: string;
+					slug: string;
+					teaserHeadline?: string | null;
+					teaserSubheadline?: string | null;
+					teaserText?: string | null;
+					heroBackgroundImage?: { __typename?: 'Asset'; url: string } | null;
+			  }
+			| {
+					__typename: 'CardsContainer';
+					id: string;
+					headline?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					cards: Array<
+						| {
+								__typename: 'CardIcon';
 								id: string;
-								referenceLogo?:
-									| { __typename?: 'Asset'; id: string; url: string }
-									| null
-									| undefined;
-							}>;
-					  }
-					| {
-							__typename: 'Text';
-							id: string;
-							heading1?: string | null | undefined;
-							heading2?: string | null | undefined;
-							heading3?: string | null | undefined;
-							paddingTop?: Padding | null | undefined;
-							paddingBottom?: Padding | null | undefined;
-							link?:
-								| {
-										__typename?: 'Link';
-										id: string;
-										label?: string | null | undefined;
-										target?:
-											| { __typename: 'BlogPost'; id: string; slug: string }
-											| { __typename: 'Page'; id: string; slug: string }
-											| null
-											| undefined;
-								  }
-								| null
-								| undefined;
-							text?: { __typename?: 'RichText'; html: string } | null | undefined;
-					  }
-				>;
-		  }
-		| null
-		| undefined;
+								headline?: string | null;
+								subheadline?: string | null;
+								backgroundColor?: {
+									__typename?: 'Color';
+									hex: any;
+									rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
+								} | null;
+								icon?: { __typename?: 'Asset'; id: string; url: string } | null;
+								link?: {
+									__typename: 'Link';
+									id: string;
+									label?: string | null;
+									target?:
+										| { __typename: 'BlogPost'; id: string; slug: string }
+										| { __typename: 'Page'; id: string; slug: string }
+										| null;
+								} | null;
+						  }
+						| {
+								__typename: 'CardImage';
+								id: string;
+								headline?: string | null;
+								linkToId?: string | null;
+								image?: { __typename?: 'Asset'; id: string; url: string } | null;
+								link?: {
+									__typename: 'Link';
+									id: string;
+									label?: string | null;
+									target?:
+										| { __typename: 'BlogPost'; id: string; slug: string }
+										| { __typename: 'Page'; id: string; slug: string }
+										| null;
+								} | null;
+						  }
+					>;
+			  }
+			| { __typename: 'CtaLink'; id: string; headline?: string | null; padding: Padding }
+			| { __typename: 'Divider'; id: string; padding: Padding }
+			| {
+					__typename: 'Eyecatcher';
+					id: string;
+					headline?: string | null;
+					subheadline?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					link?: {
+						__typename: 'Link';
+						id: string;
+						label?: string | null;
+						target?:
+							| { __typename: 'BlogPost'; id: string; slug: string }
+							| { __typename: 'Page'; id: string; slug: string }
+							| null;
+					} | null;
+					image?: { __typename?: 'Asset'; id: string; url: string } | null;
+			  }
+			| {
+					__typename: 'HeroImage';
+					id: string;
+					image?: { __typename?: 'Asset'; id: string; url: string } | null;
+					strokeColor?: {
+						__typename?: 'Color';
+						hex: any;
+						rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
+					} | null;
+					icon?: { __typename?: 'Asset'; id: string; url: string } | null;
+			  }
+			| {
+					__typename: 'Image';
+					id: string;
+					imageWidth?: ImageWidth | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					image?: { __typename?: 'Asset'; id: string; url: string } | null;
+			  }
+			| {
+					__typename: 'PartnerContainer';
+					id: string;
+					partnerItems: Array<{
+						__typename?: 'PartnerItem';
+						id: string;
+						partnerLogo?: { __typename?: 'Asset'; id: string; url: string } | null;
+						partnerDescription?: { __typename?: 'RichText'; html: string } | null;
+					}>;
+			  }
+			| {
+					__typename: 'ReferencesContainer';
+					id: string;
+					referenceItems: Array<{
+						__typename?: 'ReferencesItem';
+						id: string;
+						referenceLogo?: { __typename?: 'Asset'; id: string; url: string } | null;
+					}>;
+			  }
+			| {
+					__typename: 'Text';
+					id: string;
+					heading1?: string | null;
+					heading2?: string | null;
+					heading3?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					link?: {
+						__typename: 'Link';
+						id: string;
+						label?: string | null;
+						target?:
+							| { __typename: 'BlogPost'; id: string; slug: string }
+							| { __typename: 'Page'; id: string; slug: string }
+							| null;
+					} | null;
+					text?: { __typename?: 'RichText'; html: string } | null;
+			  }
+		>;
+	}>;
+	blogPosts: Array<{
+		__typename: 'BlogPost';
+		id: string;
+		slug: string;
+		teaserHeadline?: string | null;
+		teaserSubheadline?: string | null;
+		teaserText?: string | null;
+		heroBackgroundImage?: { __typename?: 'Asset'; url: string } | null;
+		modules: Array<
+			| {
+					__typename: 'AccordionContainer';
+					id: string;
+					headline?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					accordionItems: Array<{
+						__typename?: 'AccordionItem';
+						id: string;
+						headline: string;
+						content: { __typename?: 'RichText'; html: string };
+					}>;
+			  }
+			| { __typename: 'AssetLink' }
+			| {
+					__typename: 'CardsContainer';
+					id: string;
+					headline?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					cards: Array<
+						| {
+								__typename: 'CardIcon';
+								id: string;
+								headline?: string | null;
+								subheadline?: string | null;
+								backgroundColor?: {
+									__typename?: 'Color';
+									hex: any;
+									rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
+								} | null;
+								icon?: { __typename?: 'Asset'; id: string; url: string } | null;
+								link?: {
+									__typename: 'Link';
+									id: string;
+									label?: string | null;
+									target?:
+										| { __typename: 'BlogPost'; id: string; slug: string }
+										| { __typename: 'Page'; id: string; slug: string }
+										| null;
+								} | null;
+						  }
+						| {
+								__typename: 'CardImage';
+								id: string;
+								headline?: string | null;
+								linkToId?: string | null;
+								image?: { __typename?: 'Asset'; id: string; url: string } | null;
+								link?: {
+									__typename: 'Link';
+									id: string;
+									label?: string | null;
+									target?:
+										| { __typename: 'BlogPost'; id: string; slug: string }
+										| { __typename: 'Page'; id: string; slug: string }
+										| null;
+								} | null;
+						  }
+					>;
+			  }
+			| { __typename: 'CtaLink'; id: string; padding: Padding }
+			| { __typename: 'Divider'; id: string; padding: Padding }
+			| {
+					__typename: 'Image';
+					id: string;
+					imageWidth?: ImageWidth | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					image?: { __typename?: 'Asset'; id: string; url: string } | null;
+			  }
+			| {
+					__typename: 'Text';
+					id: string;
+					heading1?: string | null;
+					heading2?: string | null;
+					heading3?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					link?: {
+						__typename: 'Link';
+						id: string;
+						label?: string | null;
+						target?:
+							| { __typename: 'BlogPost'; id: string; slug: string }
+							| { __typename: 'Page'; id: string; slug: string }
+							| null;
+					} | null;
+					text?: { __typename?: 'RichText'; html: string } | null;
+			  }
+		>;
+	}>;
 };

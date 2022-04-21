@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { mapPadding } from '$lib/helpers';
-	import { base } from '$app/paths';
+	import { linkTo } from '$lib/helpers';
 	import type { Text } from '$lib/graphql/generated/schema';
 	export let module: Partial<Text> = {};
 </script>
@@ -26,7 +26,7 @@
 
 				<div class="col-span-12 lg:col-span-6 flex items-stretch justify-start lg:justify-end">
 					<a
-						href="{base}/{module.link.target.slug}"
+						href={$linkTo('/{module.link.target.slug}')}
 						class="relative self-center pl-5 pr-3 py-2 md:mr-4 bg-rc_red text-white text-sm font-bold uppercase tracking-widest hover:bg-rc_red-darker rc_button_corner"
 						>{module.link.label}</a
 					>
@@ -61,36 +61,36 @@
 </div>
 
 <style>
-	:global .mod_text ul {
+	:global(.mod_text ul) {
 		padding: 1.5em 0;
 		margin-left: 2em;
 	}
 
-	:global .mod_text ul li {
+	:global(.mod_text ul li) {
 		list-style-type: none;
 		padding: 0.25em 1em 0.5em 0.25em;
 	}
 
-	:global .mod_text ul li:before {
+	:global(.mod_text ul li:before) {
 		position: absolute;
 		content: '■';
 		color: rgba(42, 73, 157, 1);
 		margin-left: -2em;
 	}
 
-	:global .mod_text ol {
+	:global(.mod_text ol) {
 		padding: 1.5em 0;
 		counter-reset: item;
 	}
 
-	:global .mod_text ol li {
+	:global(.mod_text ol li) {
 		list-style-type: numeric;
 		padding: 0.25em 1em 0.5em 0.25em;
 		text-indent: 1em;
 		display: block;
 	}
 
-	:global .mod_text ol li:before {
+	:global(.mod_text ol li:before) {
 		position: absolute;
 		content: counter(item) '. ';
 		counter-increment: item;
@@ -99,7 +99,7 @@
 		font-weight: bold;
 	}
 
-	:global .mod_text .highlight_blue {
+	:global(.mod_text .highlight_blue) {
 		background-color: #2a499d;
 		color: #fff;
 		padding: 1em;

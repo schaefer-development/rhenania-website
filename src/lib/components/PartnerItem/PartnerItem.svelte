@@ -13,11 +13,11 @@
 </div>
 
 <style>
-	:global .mod_partnerItem a {
+	:global(.mod_partnerItem a) {
 		color: #ea3336;
 		font-weight: bold;
 	}
-	:global .mod_partnerItem a:hover {
+	:global(.mod_partnerItem a:hover) {
 		text-decoration: underline;
 	}
 </style>
