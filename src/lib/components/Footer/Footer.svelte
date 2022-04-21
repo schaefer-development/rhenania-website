@@ -2,7 +2,6 @@
 	import Logo from '$lib/components/Logo/Logo.svelte';
 	import { linkTo } from '$lib/helpers';
 	import FooterAccordion from '$lib/components/Footer/FooterAccordion.svelte';
-	import LanguageMenu from '$lib/components/LanguageMenu/LanguageMenu.svelte';
 
 	import Slideshow from '$lib/components/Slideshow/Slideshow.svelte';
 	import type { ReferencesContainer } from '$lib/graphql/generated/schema';
@@ -51,7 +50,6 @@
 				<div class="border-r h-32 rc_rotate" />
 			</div>
 		</div>
-		<LanguageMenu />
 		<div class="pb-8">
 			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Produkte</p>
 			<p class="text-center sm:text-left tracking-wide leading-relaxed">

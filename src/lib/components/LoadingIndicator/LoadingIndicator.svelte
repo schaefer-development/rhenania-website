@@ -1,4 +1,4 @@
-<div class="py-12 text-center">
+<div class="py-12 text-center min-h-screen">
 	<svg
 		role="status"
 		class="inline mr-2 w-10 h-10 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"

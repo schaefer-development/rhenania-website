@@ -8,6 +8,7 @@
 	import ProductMenu from '$lib/components/Drawer/ProductMenu.svelte';
 	import CompanyMenu from '$lib/components/Drawer/CompanyMenu.svelte';
 	import ServiceMenu from '$lib/components/Drawer/ServiceMenu.svelte';
+	import LanguageMenu from '$lib/components/LanguageMenu/LanguageMenu.svelte';
 
 	import MobileDrawer from '$lib/components/Drawer/Mobile/MobileDrawer.svelte';
 
@@ -31,9 +32,9 @@
 
 <header class="sticky top-0 z-50 bg-white shadow-md flex space-between">
 	<div class="w-full max-w-screen-2xl mx-auto flex flex-row items-center h-20 px-4 md:px-10 ">
-		<a sveltekit:prefetch href={$linkTo('/')} class="text-rc_darkblue w-28 none"><Logo /></a>
+		<a sveltekit:prefetch href={$linkTo('/')} class="text-rc_darkblue w-28 shrink-0"><Logo /></a>
 
-		<div id="navbar" class="flex-grow flex justify-end items-center">
+		<div class="flex-grow flex justify-end items-center">
 			<div class="flex-grow px-3 sm:px-6 md:px-10 lg:px-16 flex">
 				<form
 					class="input-group relative flex items-stretch w-full justify-end pl-4"
@@ -72,19 +73,19 @@
 				</form>
 			</div>
 
-			<div id="menu" class="relative flex hidden lg:inline-block">
+			<div class="grow lg:grow-0 justify-end items-center hidden lg:flex invisible lg:visible">
+				<!-- menu points -->
+
 				<a href={$linkTo('/')} class="relative ">
 					<span
 						class="{$page.url.pathname === '/'
 							? 'menupoint_underline'
-							: ''}  relative menupoint font-medium uppercase  text-black hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
+							: ''}  relative menupoint font-medium uppercase text-black hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
 						>Start</span
 					>
 				</a>
 
-				<div class="w-4 inline-block spacer" />
-
-				<button on:click={() => toggleMenu('produkte')} class="relative menupoint mx-4">
+				<button on:click={() => toggleMenu('produkte')} class="relative menupoint mx-2 lg:mx-3">
 					<span
 						class="{openMenu === 'produkte'
 							? 'menupoint_underline text-rc_red'
@@ -92,7 +93,8 @@
 						>Produkte</span
 					>
 				</button>
-				<button on:click={() => toggleMenu('unternehmen')} class="relative menupoint mx-4">
+
+				<button on:click={() => toggleMenu('unternehmen')} class="relative menupoint mx-2 lg:mx-3">
 					<span
 						class="{openMenu === 'unternehmen'
 							? 'menupoint_underline text-rc_red'
@@ -100,7 +102,7 @@
 						>Unternehmen</span
 					>
 				</button>
-				<button on:click={() => toggleMenu('service')} class="relative menupoint mx-4">
+				<button on:click={() => toggleMenu('service')} class="relative menupoint mx-2 lg:mx-3">
 					<span
 						class="{openMenu === 'service'
 							? 'menupoint_underline text-rc_red'
@@ -108,9 +110,19 @@
 						>Service</span
 					>
 				</button>
+
+				<!-- end of menu points -->
+
+				<div class="pl-6">
+					<LanguageMenu />
+				</div>
 			</div>
 
-			<div id="menu_mobil" class="visible lg:hidden">
+			<div id="menu_mobil" class="visible block lg:invisible lg:hidden flex">
+				<div class="flex items-center px-1 sm:px-2 md:px-8">
+					<LanguageMenu />
+				</div>
+
 				<button
 					on:click={toggleMenuFull}
 					class="text-rc_red flex w-full items-center justify-end focus:border-0 uppercase font-medium tracking-wider hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red "
