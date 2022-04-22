@@ -39,7 +39,7 @@
 			{/if}
 		</div>
 	{:else}
-		<div class="relative z-10 max-w-screen-lg mx-auto px-10">
+		<div class="relative z-10 max-w-screen-lg mx-auto px-10 ">
 			{#if module.heading1}
 				<h1 class="rc_h1 text-rc_darkblue">{module.heading1}</h1>
 			{/if}
@@ -104,5 +104,36 @@
 		color: #fff;
 		padding: 1em;
 		margin: 1em 0;
+	}
+
+	:global(.mod_text a) {
+		position: relative;
+		display: inline-block;
+		font-weight: bold;
+		color: #ea3336;
+	}
+
+	:global(.mod_text a::after) {
+		background-color: #ea3336;
+		bottom: -7px;
+		content: '';
+		display: block;
+		height: 4px;
+		position: absolute;
+		width: 0%;
+		transition: all;
+		transition-duration: 0.25s;
+	}
+
+	:global(.mod_text a:hover::after) {
+		background-color: #ea3336;
+		bottom: -7px;
+		content: '';
+		display: block;
+		height: 4px;
+		position: absolute;
+		width: 100%;
+		transition: all;
+		transition-duration: 0.25s;
 	}
 </style>
