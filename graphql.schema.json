@@ -49852,7 +49852,13 @@
 						"deprecationReason": null
 					},
 					{
-						"name": "Pattern",
+						"name": "HalfContentWidth",
+						"description": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "QuarterContentWidth",
 						"description": null,
 						"isDeprecated": false,
 						"deprecationReason": null

@@ -6706,8 +6706,9 @@ export type ImageWhereUniqueInput = {
 
 export enum ImageWidth {
 	ContentWidth = 'ContentWidth',
-	FullWidth = 'FullWidth',
-	Pattern = 'Pattern'
+	HalfContentWidth = 'HalfContentWidth',
+	QuarterContentWidth = 'QuarterContentWidth',
+	FullWidth = 'FullWidth'
 }
 
 export type Link = Node & {
