@@ -32,10 +32,12 @@
 
 <header class="sticky top-0 z-50 bg-white shadow-md flex space-between">
 	<div class="w-full max-w-screen-2xl mx-auto flex flex-row items-center h-20 px-4 md:px-10 ">
-		<a sveltekit:prefetch href={$linkTo('/')} class="text-rc_darkblue w-28 shrink-0"><Logo /></a>
+		<a sveltekit:prefetch href={$linkTo('/')} class="text-rc_darkblue w-20 md:w-28 shrink-0"
+			><Logo /></a
+		>
 
 		<div class="flex-grow flex justify-end items-center">
-			<div class="flex-grow px-3 sm:px-6 md:px-10 lg:px-16 flex">
+			<div class="flex-grow px-2 sm:px-6 md:px-10 lg:px-16 flex">
 				<form
 					class="input-group relative flex items-stretch w-full justify-end pl-4"
 					on:submit|preventDefault={search($page)}
@@ -76,7 +78,7 @@
 			<div class="grow lg:grow-0 justify-end items-center hidden lg:flex invisible lg:visible">
 				<!-- menu points -->
 
-				<a href={$linkTo('/')} class="relative ">
+				<a href={$linkTo('/')} class="relative mx-2 lg:mx-3">
 					<span
 						class="{$page.url.pathname === '/'
 							? 'menupoint_underline'
@@ -119,7 +121,7 @@
 			</div>
 
 			<div id="menu_mobil" class="visible block lg:invisible lg:hidden flex">
-				<div class="flex items-center px-1 sm:px-2 md:px-8">
+				<div class="flex items-center px-2 sm:px-4 md:px-8">
 					<LanguageMenu />
 				</div>
 
@@ -127,7 +129,7 @@
 					on:click={toggleMenuFull}
 					class="text-rc_red flex w-full items-center justify-end focus:border-0 uppercase font-medium tracking-wider hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red "
 				>
-					<span class="uppercase font-medium px-2">Menu</span>
+					<span class="uppercase font-medium px-1">Menu</span>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="h-6 w-6"
