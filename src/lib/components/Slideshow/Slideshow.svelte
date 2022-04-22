@@ -61,7 +61,7 @@
 			<SplideSlide data-splide-interval="9000">
 				<img
 					src={referenceItem.referenceLogo.url}
-					alt="Hier fehlt der alt text"
+					alt="Kundenlogos von Rhenania Computer GmbH"
 					class="w-10/12 mx-auto"
 				/>
 			</SplideSlide>
