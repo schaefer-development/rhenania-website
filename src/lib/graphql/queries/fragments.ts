@@ -50,6 +50,10 @@ export const pageFragment = gql`
 					url
 				}
 				textImageOrientation
+				downloadLabel
+				assetPicker {
+					url
+				}
 				paddingTop
 				paddingBottom
 			}
