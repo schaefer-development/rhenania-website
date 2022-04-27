@@ -37,6 +37,22 @@ export const pageFragment = gql`
 				id
 				padding
 			}
+			... on TextAndImage {
+				id
+				heading1
+				heading2
+				heading3
+				text {
+					html
+				}
+				image {
+					id
+					url
+				}
+				textImageOrientation
+				paddingTop
+				paddingBottom
+			}
 			... on CtaLink {
 				id
 				headline

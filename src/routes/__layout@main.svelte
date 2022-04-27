@@ -45,7 +45,7 @@
 	<title>Rhenania Computer</title>
 	<meta
 		name="description"
-		content="Software aus Aegidenberg (Bad Honnef) zum Optimieren des Versandprozesses "
+		content="RC Rhenania Computer optimiert Ihren Versand. Softwarelösungen für die Versandlogistik und die Versandoptimierung seit mehr als 30 Jahren. Mehr erfahren"
 	/>
 </svelte:head>
 
