@@ -4,7 +4,7 @@
 	export let module: Partial<Image> = {};
 </script>
 
-<div class="mod_fullWidthImage relative">
+<div class="mod_image relative">
 	<div class="relative w-full {mapPadding(module.paddingTop)}" />
 	<div class="relative flex flex-col">
 		{#if module.imageWidth == 'FullWidth'}
