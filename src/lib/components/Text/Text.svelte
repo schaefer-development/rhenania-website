@@ -9,7 +9,7 @@
 	<div class="relative w-full {mapPadding(module.paddingTop)}" />
 
 	{#if module?.link?.target}
-		<div class="relative z-10 max-w-screen-lg mx-auto px-10">
+		<div class="relative z-10 max-w-screen-lg mx-auto px-4 lg:px-10">
 			{#if module.heading1}
 				<h1 class="rc_h1 text-rc_darkblue">{module.heading1}</h1>
 			{/if}
@@ -39,7 +39,7 @@
 			{/if}
 		</div>
 	{:else}
-		<div class="relative z-10 max-w-screen-lg mx-auto px-10 ">
+		<div class="relative z-10 max-w-screen-lg mx-auto px-4 lg:px-10">
 			{#if module.heading1}
 				<h1 class="rc_h1 text-rc_darkblue">{module.heading1}</h1>
 			{/if}
