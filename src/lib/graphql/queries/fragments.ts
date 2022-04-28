@@ -23,6 +23,8 @@ export const pageFragment = gql`
 		__typename
 		id
 		slug
+		title
+		description
 		modules {
 			__typename
 			... on AssetLink {
