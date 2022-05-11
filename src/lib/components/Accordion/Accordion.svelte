@@ -62,7 +62,6 @@
 		text-decoration: none;
 	}
 
-
 	:global(.item_content a::after) {
 		background-color: #ea3336;
 		bottom: -7px;
