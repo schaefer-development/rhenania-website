@@ -23,7 +23,7 @@
 			</svg>
 		</div>
 	</label>
-	<div class="tab-content overflow-hidden">
+	<div class="tab-content">
 		<div class="pt-4 pb-8"><slot name="content" /></div>
 	</div>
 </div>
@@ -48,5 +48,36 @@
 	}
 	.tab input[type='checkbox']:checked + label .icon {
 		color: #6e7071;
+	}
+
+	:global(.item_content a) {
+		position: relative;
+		display: inline-block;
+		font-weight: bold;
+		color: #ea3336;
+	}
+
+	:global(.item_content a::after) {
+		background-color: #ea3336;
+		bottom: -7px;
+		content: '';
+		display: block;
+		height: 4px;
+		position: absolute;
+		width: 0%;
+		transition: all;
+		transition-duration: 0.25s;
+	}
+
+	:global(.item_content a:hover::after) {
+		background-color: #ea3336;
+		bottom: -7px;
+		content: '';
+		display: block;
+		height: 4px;
+		position: absolute;
+		width: 100%;
+		transition: all;
+		transition-duration: 0.25s;
 	}
 </style>
