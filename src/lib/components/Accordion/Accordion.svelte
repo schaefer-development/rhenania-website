@@ -55,7 +55,13 @@
 		display: inline-block;
 		font-weight: bold;
 		color: #ea3336;
+		text-decoration: none !important;
 	}
+
+	:global(.item_content a:hover) {
+		text-decoration: none;
+	}
+
 
 	:global(.item_content a::after) {
 		background-color: #ea3336;
