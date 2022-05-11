@@ -193,12 +193,6 @@
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Download</a
 				><br />
-
-				<a
-					href={$linkTo('/faq/')}
-					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-					>FAQ</a
-				><br />
 			</p>
 		</div>
 		<div class="pb-8">
