@@ -115,11 +115,9 @@
 
 				<!-- end of menu points -->
 
-				
 				<div class="pl-6">
 					<LanguageMenu />
 				</div>
-			
 			</div>
 
 			<div id="menu_mobil" class="visible block lg:invisible lg:hidden flex">
