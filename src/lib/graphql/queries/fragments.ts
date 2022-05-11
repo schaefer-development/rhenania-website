@@ -96,7 +96,9 @@ export const pageFragment = gql`
 				paddingBottom
 				accordionItems {
 					id
-					headline
+					heading1
+					heading2
+					heading3
 					content {
 						html
 					}
@@ -264,7 +266,9 @@ export const blogPostFragment = gql`
 				paddingBottom
 				accordionItems {
 					id
-					headline
+					heading1
+					heading2
+					heading3
 					content {
 						html
 					}
