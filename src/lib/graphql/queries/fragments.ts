@@ -23,6 +23,8 @@ export const pageFragment = gql`
 		__typename
 		id
 		slug
+		title
+		description
 		modules {
 			__typename
 			... on AssetLink {
@@ -96,7 +98,9 @@ export const pageFragment = gql`
 				paddingBottom
 				accordionItems {
 					id
-					headline
+					heading1
+					heading2
+					heading3
 					content {
 						html
 					}
@@ -264,9 +268,20 @@ export const blogPostFragment = gql`
 				paddingBottom
 				accordionItems {
 					id
-					headline
+					heading1
+					heading2
+					heading3
 					content {
 						html
+					}
+					image {
+						id
+						url
+					}
+					textImageOrientation
+					downloadLabel
+					assetPicker {
+						url
 					}
 				}
 			}

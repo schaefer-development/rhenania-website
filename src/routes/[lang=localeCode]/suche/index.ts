@@ -6,6 +6,8 @@ import Fuse from 'fuse.js';
 const fuseOptions = {
 	includeScore: true,
 	keys: [
+		'title',
+		'description',
 		'teaserHeadline',
 		'teaserSubheadline',
 		'teaserText',
