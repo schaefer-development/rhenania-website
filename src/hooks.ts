@@ -4,6 +4,6 @@ import acceptLanguage from 'accept-language';
 acceptLanguage.languages(localeCodes);
 
 export const getSession: GetSession = (event) => {
-	const lang = acceptLanguage.get(event.request.headers['accept-language']) ?? fallbackLocale;
+	const lang = acceptLanguage.get(event.request.headers.get('accept-language')) ?? fallbackLocale;
 	return { lang };
 };
