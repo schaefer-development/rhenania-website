@@ -7,8 +7,8 @@
 <div class="mod_textAndImage relative">
 	<div class="relative w-full {mapPadding(module.paddingTop)}" />
 	<div class="relative z-10 max-w-screen-lg mx-auto px-4 md:px-10">
-		<div class="flex items-center flex-col pb-8 md:pb-0 gap-y-10 gap-x md:gap-x-20 md:flex-row">
-			{#if module.textImageOrientation == 'ImageLeftAndTextRight'}
+		{#if module.textImageOrientation == 'ImageLeftAndTextRight'}
+			<div class="flex items-center flex-col pb-8 md:pb-0 gap-y-10 gap-x md:gap-x-20 md:flex-row">
 				<div class="w-full md:w-6/12">
 					{#if module.image}
 						<img
@@ -61,8 +61,13 @@
 						</div>
 					{/if}
 				</div>
-			{/if}
-			{#if module.textImageOrientation == 'ImageRightAndTextLeft'}
+			</div>
+		{/if}
+
+		{#if module.textImageOrientation == 'ImageRightAndTextLeft'}
+			<div
+				class="flex items-center flex-col flex-col-reverse pb-8 md:pb-0 gap-y-10 gap-x md:gap-x-20 md:flex-row"
+			>
 				<div class="w-full md:w-6/12">
 					{#if module.heading1}
 						<h1 class="rc_h1 text-rc_darkblue">{module.heading1}</h1>
@@ -115,8 +120,8 @@
 						/>
 					{/if}
 				</div>
-			{/if}
-		</div>
+			</div>
+		{/if}
 	</div>
 	<div class="relative w-full {mapPadding(module.paddingBottom)}" />
 </div>
