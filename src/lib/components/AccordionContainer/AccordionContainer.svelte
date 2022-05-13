@@ -11,12 +11,15 @@
 		<div class="relative z-10 max-w-screen-md mx-auto px-10 ">
 			<h1 class="rc_h1 text-rc_darkblue pb-8">{module.headline}</h1>
 			{#each module.accordionItems as accordionItem (accordionItem.id)}
+
 				<Accordion id={accordionItem.id}>
 					<span slot="headline" class="item_headline">{accordionItem.heading1}</span>
 					<div slot="content" class="item_content">
 						{@html accordionItem.content.html}
 					</div>
 				</Accordion>
+
+		
 			{/each}
 		</div>
 	</div>

@@ -272,6 +272,15 @@ export const blogPostFragment = gql`
 					content {
 						html
 					}
+					image {
+						id
+						url
+					}
+					textImageOrientation
+					downloadLabel
+					assetPicker {
+						url
+					}
 				}
 			}
 			... on CardsContainer {
