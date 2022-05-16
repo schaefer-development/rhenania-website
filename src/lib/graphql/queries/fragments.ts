@@ -104,6 +104,16 @@ export const pageFragment = gql`
 					content {
 						html
 					}
+					image {
+						id
+						url
+					}
+					textImageOrientation
+					downloadLabel
+					assetPicker {
+						url
+					}
+
 				}
 			}
 			... on Image {
