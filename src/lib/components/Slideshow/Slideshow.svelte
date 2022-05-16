@@ -32,8 +32,13 @@
 					style="overflow:visible;enable-background:new 0 0 21.1 39.4;"
 					xml:space="preserve"
 				>
+					<style type="text/css">
+						.arrow {
+							fill: #ffffff;
+						}
+					</style>
 					<defs />
-					<polygon points="1.4,39.4 0,38.1 18.3,19.7 0,1.4 1.4,0 21.1,19.7 " />
+					<polygon class="arrow" points="1.4,39.4 0,38.1 18.3,19.7 0,1.4 1.4,0 21.1,19.7 " />
 				</svg>
 			</button>
 
@@ -51,8 +56,13 @@
 					style="overflow:visible;enable-background:new 0 0 21.1 39.4;"
 					xml:space="preserve"
 				>
+					<style type="text/css">
+						.arrow {
+							fill: #ffffff;
+						}
+					</style>
 					<defs />
-					<polygon points="1.4,39.4 0,38.1 18.3,19.7 0,1.4 1.4,0 21.1,19.7 " />
+					<polygon class="arrow" points="1.4,39.4 0,38.1 18.3,19.7 0,1.4 1.4,0 21.1,19.7 " />
 				</svg>
 			</button>
 		</div>
