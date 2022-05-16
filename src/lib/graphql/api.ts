@@ -1,17 +1,22 @@
-import { GRAPHCMS_ENDPOINT } from '$lib/env';
 import type { RequestHandler } from '@sveltejs/kit';
+import { GRAPHCMS_ENDPOINT } from '$lib/env';
+import { fallbackLocale } from '$lib/i18n';
 
 type Api = (query: string, variables?: Record<string, unknown>) => RequestHandler;
+type GraphQlRequest = (
+	query: string,
+	variables?: Record<string, unknown>
+) => (event: Parameters<RequestHandler>[0]) => Promise<Response>;
 
-export const api: Api = (query, variables) => async (event) => {
-	const lang = event.query.get('lang') ?? 'de';
+export const graphQlRequest: GraphQlRequest = (query, variables) => async (event) => {
+	const { lang: requestedLocale } = event.params;
 	const headers = {
 		'Content-Type': 'application/json',
 		Accept: 'application/json',
-		'gcms-locales': `${lang},de`
+		'gcms-locales': [requestedLocale, fallbackLocale].filter(Boolean).join(',')
 	};
 
-	const res = await fetch(GRAPHCMS_ENDPOINT, {
+	return fetch(GRAPHCMS_ENDPOINT, {
 		method: 'POST',
 		headers,
 		body: JSON.stringify({
@@ -19,7 +24,10 @@ export const api: Api = (query, variables) => async (event) => {
 			variables
 		})
 	});
+};
 
+export const api: Api = (query, variables) => async (event) => {
+	const res = await graphQlRequest(query, variables)(event);
 	const { status } = res;
 	const body = await res.json();
 

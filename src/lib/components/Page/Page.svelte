@@ -10,6 +10,7 @@
 	import HeroImage from '$lib/components/HeroImage/HeroImage.svelte';
 	import Image from '$lib/components/Image/Image.svelte';
 	import Text from '$lib/components/Text/Text.svelte';
+	import TextAndImage from '$lib/components/TextAndImage/TextAndImage.svelte';
 	import BlogPost from '$lib/components/BlogPostTeaser/BlogPostTeaser.svelte';
 	import type { Page } from '$lib/graphql/generated/schema';
 	export let page: Partial<Page>;
@@ -24,6 +25,7 @@
 		ReferencesContainer,
 		Image,
 		Text,
+		TextAndImage,
 		HeroImage,
 		BlogPost
 	};

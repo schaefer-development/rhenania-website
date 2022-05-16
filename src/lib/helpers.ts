@@ -1,66 +1,13 @@
-import type { Load } from '@sveltejs/kit';
-import type { Page, BlogPost } from '$lib/graphql/generated/schema';
+import { derived } from 'svelte/store';
+import { page } from '$app/stores';
+
+export const linkTo = derived([page], ([$page]): ((path: string) => string) => (path) => {
+	if (path.startsWith('/')) return `/${$page.params.lang}${path}`;
+	return `/${$page.params.lang}/${path}`;
+});
 
 // A little silly, but offers graphQL syntax highlighting in the editor
 export const gql = String.raw;
-
-export type LoadPageData = {
-	page: Page | null;
-};
-
-export type LoadBlogPostData = {
-	blogPost: BlogPost | null;
-};
-
-export const LoadPage: (slug: string) => Load =
-	(slug) =>
-	async ({ fetch, session }) => {
-		const { lang } = session;
-		const res = await fetch(`/${slug}.json?lang=${lang}`);
-		if (res.ok) {
-			const { data } = await res.json();
-			return {
-				props: { data }
-			};
-		}
-
-		const {
-			errors: [error]
-		} = await res.json();
-
-		return {
-			status: res.status,
-			error: new Error(error.message)
-		};
-	};
-
-export const LoadBlogPost: Load = async ({ session, page, fetch }) => {
-	const { lang } = session;
-	const { slug } = page.params;
-	const res = await fetch(`/blog/${slug}.json?lang=${lang}`);
-	if (res.ok) {
-		const { data } = await res.json();
-		const { blogPost } = data;
-		if (!blogPost) {
-			return {
-				status: 404,
-				error: new Error(`BlogPost not found: ${slug}`)
-			};
-		}
-		return {
-			props: { data }
-		};
-	}
-
-	const {
-		errors: [error]
-	} = await res.json();
-
-	return {
-		status: res.status,
-		error: new Error(error.message)
-	};
-};
 
 const mapping = {
 	None: '',

@@ -18,12 +18,7 @@
 		}}
 	>
 		<div class="splide__arrows" slot="before-track">
-			<button
-				class="splide__arrow splide__arrow--prev text-white opacity-100 ease-in-out transition-all duration-300 -ml-8"
-				type="button"
-				aria-controls="splide01-track"
-				aria-label="Go to last slide"
-			>
+			<button type="button" aria-label="Previous slide">
 				<!-- Generator: Adobe Illustrator 24.2.0, SVG Export Plug-In  -->
 				<svg
 					version="1.1"
@@ -47,12 +42,7 @@
 				</svg>
 			</button>
 
-			<button
-				class="splide__arrow splide__arrow--next text-white opacity-100 right-0 -mr-6 ease-in-out transition-all duration-300"
-				type="button"
-				aria-controls="splide01-track"
-				aria-label="Next slide"
-			>
+			<button type="button" aria-label="Next slide">
 				<!-- Generator: Adobe Illustrator 24.2.0, SVG Export Plug-In  -->
 				<svg
 					version="1.1"
@@ -81,7 +71,7 @@
 			<SplideSlide data-splide-interval="9000">
 				<img
 					src={referenceItem.referenceLogo.url}
-					alt="Hier fehlt der alt text"
+					alt="Kundenlogos von Rhenania Computer GmbH"
 					class="w-10/12 mx-auto"
 				/>
 			</SplideSlide>

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import ReferenceItem from '$lib/components/ReferenceItem/ReferenceItem.svelte';
 	import type { ReferencesContainer } from '$lib/graphql/generated/schema';
+	import { linkTo } from '$lib/helpers';
 	export let module: Partial<ReferencesContainer> = {};
 </script>
 
@@ -17,7 +18,7 @@
 	</div>
 	<div class="col-span-full md:col-span-3 lg:text-right">
 		<a
-			href="/kontakt"
+			href={$linkTo('/kontakt')}
 			class="relative pl-5 pr-3 py-2 bg-rc_red text-white text-sm font-bold uppercase tracking-widest hover:bg-rc_red-darker rc_button_corner"
 			>Jetzt Kontakt aufnehmen</a
 		>

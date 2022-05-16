@@ -913,6 +913,7 @@ export type Aggregate = {
 export type Asset = Node & {
 	__typename?: 'Asset';
 	assetPickerAssetLink: Array<AssetLink>;
+	assetPickerTextAndImage: Array<TextAndImage>;
 	/** The time the document was created */
 	createdAt: Scalars['DateTime'];
 	/** User that created this document */
@@ -936,6 +937,7 @@ export type Asset = Node & {
 	imageEyecatcher: Array<Eyecatcher>;
 	imageHeroImage: Array<HeroImage>;
 	imageImage: Array<Image>;
+	imageTextAndImage: Array<TextAndImage>;
 	/** System Locale field */
 	locale: Locale;
 	/** Get the other localizations for this document */
@@ -973,6 +975,18 @@ export type AssetAssetPickerAssetLinkArgs = {
 	orderBy?: InputMaybe<AssetLinkOrderByInput>;
 	skip?: InputMaybe<Scalars['Int']>;
 	where?: InputMaybe<AssetLinkWhereInput>;
+};
+
+/** Asset system model */
+export type AssetAssetPickerTextAndImageArgs = {
+	after?: InputMaybe<Scalars['String']>;
+	before?: InputMaybe<Scalars['String']>;
+	first?: InputMaybe<Scalars['Int']>;
+	last?: InputMaybe<Scalars['Int']>;
+	locales?: InputMaybe<Array<Locale>>;
+	orderBy?: InputMaybe<TextAndImageOrderByInput>;
+	skip?: InputMaybe<Scalars['Int']>;
+	where?: InputMaybe<TextAndImageWhereInput>;
 };
 
 /** Asset system model */
@@ -1084,6 +1098,18 @@ export type AssetImageImageArgs = {
 };
 
 /** Asset system model */
+export type AssetImageTextAndImageArgs = {
+	after?: InputMaybe<Scalars['String']>;
+	before?: InputMaybe<Scalars['String']>;
+	first?: InputMaybe<Scalars['Int']>;
+	last?: InputMaybe<Scalars['Int']>;
+	locales?: InputMaybe<Array<Locale>>;
+	orderBy?: InputMaybe<TextAndImageOrderByInput>;
+	skip?: InputMaybe<Scalars['Int']>;
+	where?: InputMaybe<TextAndImageWhereInput>;
+};
+
+/** Asset system model */
 export type AssetLocalizationsArgs = {
 	includeCurrent?: Scalars['Boolean'];
 	locales?: Array<Locale>;
@@ -1168,6 +1194,7 @@ export type AssetConnection = {
 
 export type AssetCreateInput = {
 	assetPickerAssetLink?: InputMaybe<AssetLinkCreateManyInlineInput>;
+	assetPickerTextAndImage?: InputMaybe<TextAndImageCreateManyInlineInput>;
 	createdAt?: InputMaybe<Scalars['DateTime']>;
 	fileName: Scalars['String'];
 	handle: Scalars['String'];
@@ -1179,6 +1206,7 @@ export type AssetCreateInput = {
 	imageEyecatcher?: InputMaybe<EyecatcherCreateManyInlineInput>;
 	imageHeroImage?: InputMaybe<HeroImageCreateManyInlineInput>;
 	imageImage?: InputMaybe<ImageCreateManyInlineInput>;
+	imageTextAndImage?: InputMaybe<TextAndImageCreateManyInlineInput>;
 	/** Inline mutations for managing document localizations excluding the default locale */
 	localizations?: InputMaybe<AssetCreateLocalizationsInput>;
 	mimeType?: InputMaybe<Scalars['String']>;
@@ -1712,6 +1740,9 @@ export type AssetManyWhereInput = {
 	assetPickerAssetLink_every?: InputMaybe<AssetLinkWhereInput>;
 	assetPickerAssetLink_none?: InputMaybe<AssetLinkWhereInput>;
 	assetPickerAssetLink_some?: InputMaybe<AssetLinkWhereInput>;
+	assetPickerTextAndImage_every?: InputMaybe<TextAndImageWhereInput>;
+	assetPickerTextAndImage_none?: InputMaybe<TextAndImageWhereInput>;
+	assetPickerTextAndImage_some?: InputMaybe<TextAndImageWhereInput>;
 	createdAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
 	createdAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -1768,6 +1799,9 @@ export type AssetManyWhereInput = {
 	imageImage_every?: InputMaybe<ImageWhereInput>;
 	imageImage_none?: InputMaybe<ImageWhereInput>;
 	imageImage_some?: InputMaybe<ImageWhereInput>;
+	imageTextAndImage_every?: InputMaybe<TextAndImageWhereInput>;
+	imageTextAndImage_none?: InputMaybe<TextAndImageWhereInput>;
+	imageTextAndImage_some?: InputMaybe<TextAndImageWhereInput>;
 	partnerLogoPartnerItem_every?: InputMaybe<PartnerItemWhereInput>;
 	partnerLogoPartnerItem_none?: InputMaybe<PartnerItemWhereInput>;
 	partnerLogoPartnerItem_some?: InputMaybe<PartnerItemWhereInput>;
@@ -1844,6 +1878,7 @@ export type AssetTransformationInput = {
 
 export type AssetUpdateInput = {
 	assetPickerAssetLink?: InputMaybe<AssetLinkUpdateManyInlineInput>;
+	assetPickerTextAndImage?: InputMaybe<TextAndImageUpdateManyInlineInput>;
 	fileName?: InputMaybe<Scalars['String']>;
 	handle?: InputMaybe<Scalars['String']>;
 	height?: InputMaybe<Scalars['Float']>;
@@ -1854,6 +1889,7 @@ export type AssetUpdateInput = {
 	imageEyecatcher?: InputMaybe<EyecatcherUpdateManyInlineInput>;
 	imageHeroImage?: InputMaybe<HeroImageUpdateManyInlineInput>;
 	imageImage?: InputMaybe<ImageUpdateManyInlineInput>;
+	imageTextAndImage?: InputMaybe<TextAndImageUpdateManyInlineInput>;
 	/** Manage document localizations */
 	localizations?: InputMaybe<AssetUpdateLocalizationsInput>;
 	mimeType?: InputMaybe<Scalars['String']>;
@@ -1994,6 +2030,9 @@ export type AssetWhereInput = {
 	assetPickerAssetLink_every?: InputMaybe<AssetLinkWhereInput>;
 	assetPickerAssetLink_none?: InputMaybe<AssetLinkWhereInput>;
 	assetPickerAssetLink_some?: InputMaybe<AssetLinkWhereInput>;
+	assetPickerTextAndImage_every?: InputMaybe<TextAndImageWhereInput>;
+	assetPickerTextAndImage_none?: InputMaybe<TextAndImageWhereInput>;
+	assetPickerTextAndImage_some?: InputMaybe<TextAndImageWhereInput>;
 	createdAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
 	createdAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -2103,6 +2142,9 @@ export type AssetWhereInput = {
 	imageImage_every?: InputMaybe<ImageWhereInput>;
 	imageImage_none?: InputMaybe<ImageWhereInput>;
 	imageImage_some?: InputMaybe<ImageWhereInput>;
+	imageTextAndImage_every?: InputMaybe<TextAndImageWhereInput>;
+	imageTextAndImage_none?: InputMaybe<TextAndImageWhereInput>;
+	imageTextAndImage_some?: InputMaybe<TextAndImageWhereInput>;
 	mimeType?: InputMaybe<Scalars['String']>;
 	/** All values containing the given string. */
 	mimeType_contains?: InputMaybe<Scalars['String']>;
@@ -4426,6 +4468,7 @@ export type CtaLink = Node & {
 	createdBy?: Maybe<User>;
 	/** Get the document in other stages */
 	documentInStages: Array<CtaLink>;
+	headline?: Maybe<Scalars['String']>;
 	/** List of CtaLink versions */
 	history: Array<Version>;
 	/** The unique identifier */
@@ -4507,6 +4550,7 @@ export type CtaLinkConnection = {
 export type CtaLinkCreateInput = {
 	blogPost?: InputMaybe<BlogPostCreateOneInlineInput>;
 	createdAt?: InputMaybe<Scalars['DateTime']>;
+	headline?: InputMaybe<Scalars['String']>;
 	padding: Padding;
 	page?: InputMaybe<PageCreateOneInlineInput>;
 	updatedAt?: InputMaybe<Scalars['DateTime']>;
@@ -4562,6 +4606,25 @@ export type CtaLinkManyWhereInput = {
 	/** All values that are not contained in given list. */
 	createdAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
 	createdBy?: InputMaybe<UserWhereInput>;
+	headline?: InputMaybe<Scalars['String']>;
+	/** All values containing the given string. */
+	headline_contains?: InputMaybe<Scalars['String']>;
+	/** All values ending with the given string. */
+	headline_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are contained in given list. */
+	headline_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values that are not equal to given value. */
+	headline_not?: InputMaybe<Scalars['String']>;
+	/** All values not containing the given string. */
+	headline_not_contains?: InputMaybe<Scalars['String']>;
+	/** All values not ending with the given string */
+	headline_not_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are not contained in given list. */
+	headline_not_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values not starting with the given string. */
+	headline_not_starts_with?: InputMaybe<Scalars['String']>;
+	/** All values starting with the given string. */
+	headline_starts_with?: InputMaybe<Scalars['String']>;
 	id?: InputMaybe<Scalars['ID']>;
 	/** All values containing the given string. */
 	id_contains?: InputMaybe<Scalars['ID']>;
@@ -4629,6 +4692,8 @@ export type CtaLinkManyWhereInput = {
 export enum CtaLinkOrderByInput {
 	CreatedAtAsc = 'createdAt_ASC',
 	CreatedAtDesc = 'createdAt_DESC',
+	HeadlineAsc = 'headline_ASC',
+	HeadlineDesc = 'headline_DESC',
 	IdAsc = 'id_ASC',
 	IdDesc = 'id_DESC',
 	PaddingAsc = 'padding_ASC',
@@ -4641,6 +4706,7 @@ export enum CtaLinkOrderByInput {
 
 export type CtaLinkUpdateInput = {
 	blogPost?: InputMaybe<BlogPostUpdateOneInlineInput>;
+	headline?: InputMaybe<Scalars['String']>;
 	padding?: InputMaybe<Padding>;
 	page?: InputMaybe<PageUpdateOneInlineInput>;
 };
@@ -4663,6 +4729,7 @@ export type CtaLinkUpdateManyInlineInput = {
 };
 
 export type CtaLinkUpdateManyInput = {
+	headline?: InputMaybe<Scalars['String']>;
 	padding?: InputMaybe<Padding>;
 };
 
@@ -4736,6 +4803,25 @@ export type CtaLinkWhereInput = {
 	/** All values that are not contained in given list. */
 	createdAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
 	createdBy?: InputMaybe<UserWhereInput>;
+	headline?: InputMaybe<Scalars['String']>;
+	/** All values containing the given string. */
+	headline_contains?: InputMaybe<Scalars['String']>;
+	/** All values ending with the given string. */
+	headline_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are contained in given list. */
+	headline_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values that are not equal to given value. */
+	headline_not?: InputMaybe<Scalars['String']>;
+	/** All values not containing the given string. */
+	headline_not_contains?: InputMaybe<Scalars['String']>;
+	/** All values not ending with the given string */
+	headline_not_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are not contained in given list. */
+	headline_not_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values not starting with the given string. */
+	headline_not_starts_with?: InputMaybe<Scalars['String']>;
+	/** All values starting with the given string. */
+	headline_starts_with?: InputMaybe<Scalars['String']>;
 	id?: InputMaybe<Scalars['ID']>;
 	/** All values containing the given string. */
 	id_contains?: InputMaybe<Scalars['ID']>;
@@ -5375,7 +5461,7 @@ export type EyecatcherConnection = {
 
 export type EyecatcherCreateInput = {
 	createdAt?: InputMaybe<Scalars['DateTime']>;
-	/** headline input for default locale (en) */
+	/** headline input for default locale (de) */
 	headline?: InputMaybe<Scalars['String']>;
 	image?: InputMaybe<AssetCreateOneInlineInput>;
 	link?: InputMaybe<LinkCreateOneInlineInput>;
@@ -5384,7 +5470,7 @@ export type EyecatcherCreateInput = {
 	paddingBottom?: InputMaybe<Padding>;
 	paddingTop?: InputMaybe<Padding>;
 	page?: InputMaybe<PageCreateOneInlineInput>;
-	/** subheadline input for default locale (en) */
+	/** subheadline input for default locale (de) */
 	subheadline?: InputMaybe<Scalars['String']>;
 	updatedAt?: InputMaybe<Scalars['DateTime']>;
 };
@@ -5549,7 +5635,7 @@ export enum EyecatcherOrderByInput {
 }
 
 export type EyecatcherUpdateInput = {
-	/** headline input for default locale (en) */
+	/** headline input for default locale (de) */
 	headline?: InputMaybe<Scalars['String']>;
 	image?: InputMaybe<AssetUpdateOneInlineInput>;
 	link?: InputMaybe<LinkUpdateOneInlineInput>;
@@ -5558,7 +5644,7 @@ export type EyecatcherUpdateInput = {
 	paddingBottom?: InputMaybe<Padding>;
 	paddingTop?: InputMaybe<Padding>;
 	page?: InputMaybe<PageUpdateOneInlineInput>;
-	/** subheadline input for default locale (en) */
+	/** subheadline input for default locale (de) */
 	subheadline?: InputMaybe<Scalars['String']>;
 };
 
@@ -5600,13 +5686,13 @@ export type EyecatcherUpdateManyInlineInput = {
 };
 
 export type EyecatcherUpdateManyInput = {
-	/** headline input for default locale (en) */
+	/** headline input for default locale (de) */
 	headline?: InputMaybe<Scalars['String']>;
 	/** Optional updates to localizations */
 	localizations?: InputMaybe<EyecatcherUpdateManyLocalizationsInput>;
 	paddingBottom?: InputMaybe<Padding>;
 	paddingTop?: InputMaybe<Padding>;
-	/** subheadline input for default locale (en) */
+	/** subheadline input for default locale (de) */
 	subheadline?: InputMaybe<Scalars['String']>;
 };
 
@@ -6468,6 +6554,11 @@ export type ImageResizeInput = {
 	width?: InputMaybe<Scalars['Int']>;
 };
 
+export enum ImageTextOrientation {
+	ImageLeftAndTextRight = 'ImageLeftAndTextRight',
+	ImageRightAndTextLeft = 'ImageRightAndTextLeft'
+}
+
 /** Transformations for Images */
 export type ImageTransformationInput = {
 	/** Resizes the image */
@@ -6663,7 +6754,8 @@ export type ImageWhereUniqueInput = {
 export enum ImageWidth {
 	ContentWidth = 'ContentWidth',
 	FullWidth = 'FullWidth',
-	Pattern = 'Pattern'
+	HalfContentWidth = 'HalfContentWidth',
+	QuarterContentWidth = 'QuarterContentWidth'
 }
 
 export type Link = Node & {
@@ -6679,6 +6771,10 @@ export type Link = Node & {
 	/** The unique identifier */
 	id: Scalars['ID'];
 	label?: Maybe<Scalars['String']>;
+	/** System Locale field */
+	locale: Locale;
+	/** Get the other localizations for this document */
+	localizations: Array<Link>;
 	/** The time the document was published. Null on documents in draft stage. */
 	publishedAt?: Maybe<Scalars['DateTime']>;
 	/** User that last published this document */
@@ -6691,6 +6787,10 @@ export type Link = Node & {
 	updatedAt: Scalars['DateTime'];
 	/** User that last updated this document */
 	updatedBy?: Maybe<User>;
+};
+
+export type LinkCreatedAtArgs = {
+	variation?: SystemDateTimeFieldVariation;
 };
 
 export type LinkCreatedByArgs = {
@@ -6709,6 +6809,15 @@ export type LinkHistoryArgs = {
 	stageOverride?: InputMaybe<Stage>;
 };
 
+export type LinkLocalizationsArgs = {
+	includeCurrent?: Scalars['Boolean'];
+	locales?: Array<Locale>;
+};
+
+export type LinkPublishedAtArgs = {
+	variation?: SystemDateTimeFieldVariation;
+};
+
 export type LinkPublishedByArgs = {
 	locales?: InputMaybe<Array<Locale>>;
 };
@@ -6725,6 +6834,10 @@ export type LinkScheduledInArgs = {
 
 export type LinkTargetArgs = {
 	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type LinkUpdatedAtArgs = {
+	variation?: SystemDateTimeFieldVariation;
 };
 
 export type LinkUpdatedByArgs = {
@@ -6754,9 +6867,29 @@ export type LinkCreateInput = {
 	ckxj50hw42v6x01xpgtk195ql?: InputMaybe<TextCreateManyInlineInput>;
 	cl0laatxs64os01z2b3np7fuc?: InputMaybe<EyecatcherCreateManyInlineInput>;
 	createdAt?: InputMaybe<Scalars['DateTime']>;
+	/** label input for default locale (de) */
 	label?: InputMaybe<Scalars['String']>;
+	/** Inline mutations for managing document localizations excluding the default locale */
+	localizations?: InputMaybe<LinkCreateLocalizationsInput>;
 	target?: InputMaybe<LinkTargetCreateOneInlineInput>;
 	updatedAt?: InputMaybe<Scalars['DateTime']>;
+};
+
+export type LinkCreateLocalizationDataInput = {
+	createdAt?: InputMaybe<Scalars['DateTime']>;
+	label?: InputMaybe<Scalars['String']>;
+	updatedAt?: InputMaybe<Scalars['DateTime']>;
+};
+
+export type LinkCreateLocalizationInput = {
+	/** Localization input */
+	data: LinkCreateLocalizationDataInput;
+	locale: Locale;
+};
+
+export type LinkCreateLocalizationsInput = {
+	/** Create localizations for the newly-created document */
+	create?: InputMaybe<Array<LinkCreateLocalizationInput>>;
 };
 
 export type LinkCreateManyInlineInput = {
@@ -6827,25 +6960,6 @@ export type LinkManyWhereInput = {
 	id_not_starts_with?: InputMaybe<Scalars['ID']>;
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
-	label?: InputMaybe<Scalars['String']>;
-	/** All values containing the given string. */
-	label_contains?: InputMaybe<Scalars['String']>;
-	/** All values ending with the given string. */
-	label_ends_with?: InputMaybe<Scalars['String']>;
-	/** All values that are contained in given list. */
-	label_in?: InputMaybe<Array<Scalars['String']>>;
-	/** All values that are not equal to given value. */
-	label_not?: InputMaybe<Scalars['String']>;
-	/** All values not containing the given string. */
-	label_not_contains?: InputMaybe<Scalars['String']>;
-	/** All values not ending with the given string */
-	label_not_ends_with?: InputMaybe<Scalars['String']>;
-	/** All values that are not contained in given list. */
-	label_not_in?: InputMaybe<Array<Scalars['String']>>;
-	/** All values not starting with the given string. */
-	label_not_starts_with?: InputMaybe<Scalars['String']>;
-	/** All values starting with the given string. */
-	label_starts_with?: InputMaybe<Scalars['String']>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
 	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -6989,8 +7103,30 @@ export type LinkUpdateInput = {
 	ckx8uschu02xj01zc71rq5bxw?: InputMaybe<CardIconUpdateManyInlineInput>;
 	ckxj50hw42v6x01xpgtk195ql?: InputMaybe<TextUpdateManyInlineInput>;
 	cl0laatxs64os01z2b3np7fuc?: InputMaybe<EyecatcherUpdateManyInlineInput>;
+	/** label input for default locale (de) */
 	label?: InputMaybe<Scalars['String']>;
+	/** Manage document localizations */
+	localizations?: InputMaybe<LinkUpdateLocalizationsInput>;
 	target?: InputMaybe<LinkTargetUpdateOneInlineInput>;
+};
+
+export type LinkUpdateLocalizationDataInput = {
+	label?: InputMaybe<Scalars['String']>;
+};
+
+export type LinkUpdateLocalizationInput = {
+	data: LinkUpdateLocalizationDataInput;
+	locale: Locale;
+};
+
+export type LinkUpdateLocalizationsInput = {
+	/** Localizations to create */
+	create?: InputMaybe<Array<LinkCreateLocalizationInput>>;
+	/** Localizations to delete */
+	delete?: InputMaybe<Array<Locale>>;
+	/** Localizations to update */
+	update?: InputMaybe<Array<LinkUpdateLocalizationInput>>;
+	upsert?: InputMaybe<Array<LinkUpsertLocalizationInput>>;
 };
 
 export type LinkUpdateManyInlineInput = {
@@ -7011,7 +7147,24 @@ export type LinkUpdateManyInlineInput = {
 };
 
 export type LinkUpdateManyInput = {
+	/** label input for default locale (de) */
 	label?: InputMaybe<Scalars['String']>;
+	/** Optional updates to localizations */
+	localizations?: InputMaybe<LinkUpdateManyLocalizationsInput>;
+};
+
+export type LinkUpdateManyLocalizationDataInput = {
+	label?: InputMaybe<Scalars['String']>;
+};
+
+export type LinkUpdateManyLocalizationInput = {
+	data: LinkUpdateManyLocalizationDataInput;
+	locale: Locale;
+};
+
+export type LinkUpdateManyLocalizationsInput = {
+	/** Localizations to update */
+	update?: InputMaybe<Array<LinkUpdateManyLocalizationInput>>;
 };
 
 export type LinkUpdateManyWithNestedWhereInput = {
@@ -7048,6 +7201,12 @@ export type LinkUpsertInput = {
 	create: LinkCreateInput;
 	/** Update document if it exists */
 	update: LinkUpdateInput;
+};
+
+export type LinkUpsertLocalizationInput = {
+	create: LinkCreateLocalizationDataInput;
+	locale: Locale;
+	update: LinkUpdateLocalizationDataInput;
 };
 
 export type LinkUpsertWithNestedWhereUniqueInput = {
@@ -7166,6 +7325,7 @@ export type LinkWhereUniqueInput = {
 /** Locale system enumeration */
 export enum Locale {
 	/** System locale */
+	De = 'de',
 	En = 'en'
 }
 
@@ -7235,6 +7395,8 @@ export type Mutation = {
 	createScheduledRelease?: Maybe<ScheduledRelease>;
 	/** Create one text */
 	createText?: Maybe<Text>;
+	/** Create one textAndImage */
+	createTextAndImage?: Maybe<TextAndImage>;
 	/** Delete one accordionContainer from _all_ existing stages. Returns deleted document. */
 	deleteAccordionContainer?: Maybe<AccordionContainer>;
 	/** Delete one accordionItem from _all_ existing stages. Returns deleted document. */
@@ -7397,6 +7559,13 @@ export type Mutation = {
 	/** Delete many ReferencesItem documents, return deleted documents */
 	deleteManyReferencesItemsConnection: ReferencesItemConnection;
 	/**
+	 * Delete many TextAndImage documents
+	 * @deprecated Please use the new paginated many mutation (deleteManyTextAndImagesConnection)
+	 */
+	deleteManyTextAndImages: BatchPayload;
+	/** Delete many TextAndImage documents, return deleted documents */
+	deleteManyTextAndImagesConnection: TextAndImageConnection;
+	/**
 	 * Delete many Text documents
 	 * @deprecated Please use the new paginated many mutation (deleteManyTextsConnection)
 	 */
@@ -7419,6 +7588,8 @@ export type Mutation = {
 	deleteScheduledRelease?: Maybe<ScheduledRelease>;
 	/** Delete one text from _all_ existing stages. Returns deleted document. */
 	deleteText?: Maybe<Text>;
+	/** Delete one textAndImage from _all_ existing stages. Returns deleted document. */
+	deleteTextAndImage?: Maybe<TextAndImage>;
 	/** Publish one accordionContainer */
 	publishAccordionContainer?: Maybe<AccordionContainer>;
 	/** Publish one accordionItem */
@@ -7581,6 +7752,13 @@ export type Mutation = {
 	/** Publish many ReferencesItem documents */
 	publishManyReferencesItemsConnection: ReferencesItemConnection;
 	/**
+	 * Publish many TextAndImage documents
+	 * @deprecated Please use the new paginated many mutation (publishManyTextAndImagesConnection)
+	 */
+	publishManyTextAndImages: BatchPayload;
+	/** Publish many TextAndImage documents */
+	publishManyTextAndImagesConnection: TextAndImageConnection;
+	/**
 	 * Publish many Text documents
 	 * @deprecated Please use the new paginated many mutation (publishManyTextsConnection)
 	 */
@@ -7599,6 +7777,8 @@ export type Mutation = {
 	publishReferencesItem?: Maybe<ReferencesItem>;
 	/** Publish one text */
 	publishText?: Maybe<Text>;
+	/** Publish one textAndImage */
+	publishTextAndImage?: Maybe<TextAndImage>;
 	/** Schedule to publish one accordionContainer */
 	schedulePublishAccordionContainer?: Maybe<AccordionContainer>;
 	/** Schedule to publish one accordionItem */
@@ -7639,6 +7819,8 @@ export type Mutation = {
 	schedulePublishReferencesItem?: Maybe<ReferencesItem>;
 	/** Schedule to publish one text */
 	schedulePublishText?: Maybe<Text>;
+	/** Schedule to publish one textAndImage */
+	schedulePublishTextAndImage?: Maybe<TextAndImage>;
 	/** Unpublish one accordionContainer from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
 	scheduleUnpublishAccordionContainer?: Maybe<AccordionContainer>;
 	/** Unpublish one accordionItem from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
@@ -7679,6 +7861,8 @@ export type Mutation = {
 	scheduleUnpublishReferencesItem?: Maybe<ReferencesItem>;
 	/** Unpublish one text from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
 	scheduleUnpublishText?: Maybe<Text>;
+	/** Unpublish one textAndImage from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
+	scheduleUnpublishTextAndImage?: Maybe<TextAndImage>;
 	/** Unpublish one accordionContainer from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
 	unpublishAccordionContainer?: Maybe<AccordionContainer>;
 	/** Unpublish one accordionItem from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
@@ -7841,6 +8025,13 @@ export type Mutation = {
 	/** Find many ReferencesItem documents that match criteria in specified stage and unpublish from target stages */
 	unpublishManyReferencesItemsConnection: ReferencesItemConnection;
 	/**
+	 * Unpublish many TextAndImage documents
+	 * @deprecated Please use the new paginated many mutation (unpublishManyTextAndImagesConnection)
+	 */
+	unpublishManyTextAndImages: BatchPayload;
+	/** Find many TextAndImage documents that match criteria in specified stage and unpublish from target stages */
+	unpublishManyTextAndImagesConnection: TextAndImageConnection;
+	/**
 	 * Unpublish many Text documents
 	 * @deprecated Please use the new paginated many mutation (unpublishManyTextsConnection)
 	 */
@@ -7859,6 +8050,8 @@ export type Mutation = {
 	unpublishReferencesItem?: Maybe<ReferencesItem>;
 	/** Unpublish one text from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
 	unpublishText?: Maybe<Text>;
+	/** Unpublish one textAndImage from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
+	unpublishTextAndImage?: Maybe<TextAndImage>;
 	/** Update one accordionContainer */
 	updateAccordionContainer?: Maybe<AccordionContainer>;
 	/** Update one accordionItem */
@@ -8021,6 +8214,13 @@ export type Mutation = {
 	/** Update many ReferencesItem documents */
 	updateManyReferencesItemsConnection: ReferencesItemConnection;
 	/**
+	 * Update many textAndImages
+	 * @deprecated Please use the new paginated many mutation (updateManyTextAndImagesConnection)
+	 */
+	updateManyTextAndImages: BatchPayload;
+	/** Update many TextAndImage documents */
+	updateManyTextAndImagesConnection: TextAndImageConnection;
+	/**
 	 * Update many texts
 	 * @deprecated Please use the new paginated many mutation (updateManyTextsConnection)
 	 */
@@ -8041,6 +8241,8 @@ export type Mutation = {
 	updateScheduledRelease?: Maybe<ScheduledRelease>;
 	/** Update one text */
 	updateText?: Maybe<Text>;
+	/** Update one textAndImage */
+	updateTextAndImage?: Maybe<TextAndImage>;
 	/** Upsert one accordionContainer */
 	upsertAccordionContainer?: Maybe<AccordionContainer>;
 	/** Upsert one accordionItem */
@@ -8081,6 +8283,8 @@ export type Mutation = {
 	upsertReferencesItem?: Maybe<ReferencesItem>;
 	/** Upsert one text */
 	upsertText?: Maybe<Text>;
+	/** Upsert one textAndImage */
+	upsertTextAndImage?: Maybe<TextAndImage>;
 };
 
 export type MutationCreateAccordionContainerArgs = {
@@ -8165,6 +8369,10 @@ export type MutationCreateScheduledReleaseArgs = {
 
 export type MutationCreateTextArgs = {
 	data: TextCreateInput;
+};
+
+export type MutationCreateTextAndImageArgs = {
+	data: TextAndImageCreateInput;
 };
 
 export type MutationDeleteAccordionContainerArgs = {
@@ -8470,6 +8678,19 @@ export type MutationDeleteManyReferencesItemsConnectionArgs = {
 	where?: InputMaybe<ReferencesItemManyWhereInput>;
 };
 
+export type MutationDeleteManyTextAndImagesArgs = {
+	where?: InputMaybe<TextAndImageManyWhereInput>;
+};
+
+export type MutationDeleteManyTextAndImagesConnectionArgs = {
+	after?: InputMaybe<Scalars['ID']>;
+	before?: InputMaybe<Scalars['ID']>;
+	first?: InputMaybe<Scalars['Int']>;
+	last?: InputMaybe<Scalars['Int']>;
+	skip?: InputMaybe<Scalars['Int']>;
+	where?: InputMaybe<TextAndImageManyWhereInput>;
+};
+
 export type MutationDeleteManyTextsArgs = {
 	where?: InputMaybe<TextManyWhereInput>;
 };
@@ -8513,6 +8734,10 @@ export type MutationDeleteScheduledReleaseArgs = {
 
 export type MutationDeleteTextArgs = {
 	where: TextWhereUniqueInput;
+};
+
+export type MutationDeleteTextAndImageArgs = {
+	where: TextAndImageWhereUniqueInput;
 };
 
 export type MutationPublishAccordionContainerArgs = {
@@ -8587,8 +8812,11 @@ export type MutationPublishImageArgs = {
 };
 
 export type MutationPublishLinkArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+	publishBase?: InputMaybe<Scalars['Boolean']>;
 	to?: Array<Stage>;
 	where: LinkWhereUniqueInput;
+	withDefaultLocale?: InputMaybe<Scalars['Boolean']>;
 };
 
 export type MutationPublishManyAccordionContainersArgs = {
@@ -8812,8 +9040,11 @@ export type MutationPublishManyImagesConnectionArgs = {
 };
 
 export type MutationPublishManyLinksArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+	publishBase?: InputMaybe<Scalars['Boolean']>;
 	to?: Array<Stage>;
 	where?: InputMaybe<LinkManyWhereInput>;
+	withDefaultLocale?: InputMaybe<Scalars['Boolean']>;
 };
 
 export type MutationPublishManyLinksConnectionArgs = {
@@ -8822,9 +9053,12 @@ export type MutationPublishManyLinksConnectionArgs = {
 	first?: InputMaybe<Scalars['Int']>;
 	from?: InputMaybe<Stage>;
 	last?: InputMaybe<Scalars['Int']>;
+	locales?: InputMaybe<Array<Locale>>;
+	publishBase?: InputMaybe<Scalars['Boolean']>;
 	skip?: InputMaybe<Scalars['Int']>;
 	to?: Array<Stage>;
 	where?: InputMaybe<LinkManyWhereInput>;
+	withDefaultLocale?: InputMaybe<Scalars['Boolean']>;
 };
 
 export type MutationPublishManyPagesArgs = {
@@ -8907,9 +9141,28 @@ export type MutationPublishManyReferencesItemsConnectionArgs = {
 	where?: InputMaybe<ReferencesItemManyWhereInput>;
 };
 
+export type MutationPublishManyTextAndImagesArgs = {
+	to?: Array<Stage>;
+	where?: InputMaybe<TextAndImageManyWhereInput>;
+};
+
+export type MutationPublishManyTextAndImagesConnectionArgs = {
+	after?: InputMaybe<Scalars['ID']>;
+	before?: InputMaybe<Scalars['ID']>;
+	first?: InputMaybe<Scalars['Int']>;
+	from?: InputMaybe<Stage>;
+	last?: InputMaybe<Scalars['Int']>;
+	skip?: InputMaybe<Scalars['Int']>;
+	to?: Array<Stage>;
+	where?: InputMaybe<TextAndImageManyWhereInput>;
+};
+
 export type MutationPublishManyTextsArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+	publishBase?: InputMaybe<Scalars['Boolean']>;
 	to?: Array<Stage>;
 	where?: InputMaybe<TextManyWhereInput>;
+	withDefaultLocale?: InputMaybe<Scalars['Boolean']>;
 };
 
 export type MutationPublishManyTextsConnectionArgs = {
@@ -8918,9 +9171,12 @@ export type MutationPublishManyTextsConnectionArgs = {
 	first?: InputMaybe<Scalars['Int']>;
 	from?: InputMaybe<Stage>;
 	last?: InputMaybe<Scalars['Int']>;
+	locales?: InputMaybe<Array<Locale>>;
+	publishBase?: InputMaybe<Scalars['Boolean']>;
 	skip?: InputMaybe<Scalars['Int']>;
 	to?: Array<Stage>;
 	where?: InputMaybe<TextManyWhereInput>;
+	withDefaultLocale?: InputMaybe<Scalars['Boolean']>;
 };
 
 export type MutationPublishPageArgs = {
@@ -8949,8 +9205,16 @@ export type MutationPublishReferencesItemArgs = {
 };
 
 export type MutationPublishTextArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+	publishBase?: InputMaybe<Scalars['Boolean']>;
 	to?: Array<Stage>;
 	where: TextWhereUniqueInput;
+	withDefaultLocale?: InputMaybe<Scalars['Boolean']>;
+};
+
+export type MutationPublishTextAndImageArgs = {
+	to?: Array<Stage>;
+	where: TextAndImageWhereUniqueInput;
 };
 
 export type MutationSchedulePublishAccordionContainerArgs = {
@@ -9051,10 +9315,13 @@ export type MutationSchedulePublishImageArgs = {
 };
 
 export type MutationSchedulePublishLinkArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+	publishBase?: InputMaybe<Scalars['Boolean']>;
 	releaseAt?: InputMaybe<Scalars['DateTime']>;
 	releaseId?: InputMaybe<Scalars['String']>;
 	to?: Array<Stage>;
 	where: LinkWhereUniqueInput;
+	withDefaultLocale?: InputMaybe<Scalars['Boolean']>;
 };
 
 export type MutationSchedulePublishPageArgs = {
@@ -9093,10 +9360,20 @@ export type MutationSchedulePublishReferencesItemArgs = {
 };
 
 export type MutationSchedulePublishTextArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+	publishBase?: InputMaybe<Scalars['Boolean']>;
 	releaseAt?: InputMaybe<Scalars['DateTime']>;
 	releaseId?: InputMaybe<Scalars['String']>;
 	to?: Array<Stage>;
 	where: TextWhereUniqueInput;
+	withDefaultLocale?: InputMaybe<Scalars['Boolean']>;
+};
+
+export type MutationSchedulePublishTextAndImageArgs = {
+	releaseAt?: InputMaybe<Scalars['DateTime']>;
+	releaseId?: InputMaybe<Scalars['String']>;
+	to?: Array<Stage>;
+	where: TextAndImageWhereUniqueInput;
 };
 
 export type MutationScheduleUnpublishAccordionContainerArgs = {
@@ -9196,8 +9473,10 @@ export type MutationScheduleUnpublishImageArgs = {
 
 export type MutationScheduleUnpublishLinkArgs = {
 	from?: Array<Stage>;
+	locales?: InputMaybe<Array<Locale>>;
 	releaseAt?: InputMaybe<Scalars['DateTime']>;
 	releaseId?: InputMaybe<Scalars['String']>;
+	unpublishBase?: InputMaybe<Scalars['Boolean']>;
 	where: LinkWhereUniqueInput;
 };
 
@@ -9238,9 +9517,18 @@ export type MutationScheduleUnpublishReferencesItemArgs = {
 
 export type MutationScheduleUnpublishTextArgs = {
 	from?: Array<Stage>;
+	locales?: InputMaybe<Array<Locale>>;
 	releaseAt?: InputMaybe<Scalars['DateTime']>;
 	releaseId?: InputMaybe<Scalars['String']>;
+	unpublishBase?: InputMaybe<Scalars['Boolean']>;
 	where: TextWhereUniqueInput;
+};
+
+export type MutationScheduleUnpublishTextAndImageArgs = {
+	from?: Array<Stage>;
+	releaseAt?: InputMaybe<Scalars['DateTime']>;
+	releaseId?: InputMaybe<Scalars['String']>;
+	where: TextAndImageWhereUniqueInput;
 };
 
 export type MutationUnpublishAccordionContainerArgs = {
@@ -9314,6 +9602,8 @@ export type MutationUnpublishImageArgs = {
 
 export type MutationUnpublishLinkArgs = {
 	from?: Array<Stage>;
+	locales?: InputMaybe<Array<Locale>>;
+	unpublishBase?: InputMaybe<Scalars['Boolean']>;
 	where: LinkWhereUniqueInput;
 };
 
@@ -9535,6 +9825,8 @@ export type MutationUnpublishManyImagesConnectionArgs = {
 
 export type MutationUnpublishManyLinksArgs = {
 	from?: Array<Stage>;
+	locales?: InputMaybe<Array<Locale>>;
+	unpublishBase?: InputMaybe<Scalars['Boolean']>;
 	where?: InputMaybe<LinkManyWhereInput>;
 };
 
@@ -9544,8 +9836,10 @@ export type MutationUnpublishManyLinksConnectionArgs = {
 	first?: InputMaybe<Scalars['Int']>;
 	from?: Array<Stage>;
 	last?: InputMaybe<Scalars['Int']>;
+	locales?: InputMaybe<Array<Locale>>;
 	skip?: InputMaybe<Scalars['Int']>;
 	stage?: InputMaybe<Stage>;
+	unpublishBase?: InputMaybe<Scalars['Boolean']>;
 	where?: InputMaybe<LinkManyWhereInput>;
 };
 
@@ -9629,8 +9923,26 @@ export type MutationUnpublishManyReferencesItemsConnectionArgs = {
 	where?: InputMaybe<ReferencesItemManyWhereInput>;
 };
 
+export type MutationUnpublishManyTextAndImagesArgs = {
+	from?: Array<Stage>;
+	where?: InputMaybe<TextAndImageManyWhereInput>;
+};
+
+export type MutationUnpublishManyTextAndImagesConnectionArgs = {
+	after?: InputMaybe<Scalars['ID']>;
+	before?: InputMaybe<Scalars['ID']>;
+	first?: InputMaybe<Scalars['Int']>;
+	from?: Array<Stage>;
+	last?: InputMaybe<Scalars['Int']>;
+	skip?: InputMaybe<Scalars['Int']>;
+	stage?: InputMaybe<Stage>;
+	where?: InputMaybe<TextAndImageManyWhereInput>;
+};
+
 export type MutationUnpublishManyTextsArgs = {
 	from?: Array<Stage>;
+	locales?: InputMaybe<Array<Locale>>;
+	unpublishBase?: InputMaybe<Scalars['Boolean']>;
 	where?: InputMaybe<TextManyWhereInput>;
 };
 
@@ -9640,8 +9952,10 @@ export type MutationUnpublishManyTextsConnectionArgs = {
 	first?: InputMaybe<Scalars['Int']>;
 	from?: Array<Stage>;
 	last?: InputMaybe<Scalars['Int']>;
+	locales?: InputMaybe<Array<Locale>>;
 	skip?: InputMaybe<Scalars['Int']>;
 	stage?: InputMaybe<Stage>;
+	unpublishBase?: InputMaybe<Scalars['Boolean']>;
 	where?: InputMaybe<TextManyWhereInput>;
 };
 
@@ -9672,7 +9986,14 @@ export type MutationUnpublishReferencesItemArgs = {
 
 export type MutationUnpublishTextArgs = {
 	from?: Array<Stage>;
+	locales?: InputMaybe<Array<Locale>>;
+	unpublishBase?: InputMaybe<Scalars['Boolean']>;
 	where: TextWhereUniqueInput;
+};
+
+export type MutationUnpublishTextAndImageArgs = {
+	from?: Array<Stage>;
+	where: TextAndImageWhereUniqueInput;
 };
 
 export type MutationUpdateAccordionContainerArgs = {
@@ -10030,6 +10351,21 @@ export type MutationUpdateManyReferencesItemsConnectionArgs = {
 	where?: InputMaybe<ReferencesItemManyWhereInput>;
 };
 
+export type MutationUpdateManyTextAndImagesArgs = {
+	data: TextAndImageUpdateManyInput;
+	where?: InputMaybe<TextAndImageManyWhereInput>;
+};
+
+export type MutationUpdateManyTextAndImagesConnectionArgs = {
+	after?: InputMaybe<Scalars['ID']>;
+	before?: InputMaybe<Scalars['ID']>;
+	data: TextAndImageUpdateManyInput;
+	first?: InputMaybe<Scalars['Int']>;
+	last?: InputMaybe<Scalars['Int']>;
+	skip?: InputMaybe<Scalars['Int']>;
+	where?: InputMaybe<TextAndImageManyWhereInput>;
+};
+
 export type MutationUpdateManyTextsArgs = {
 	data: TextUpdateManyInput;
 	where?: InputMaybe<TextManyWhereInput>;
@@ -10078,6 +10414,11 @@ export type MutationUpdateScheduledReleaseArgs = {
 export type MutationUpdateTextArgs = {
 	data: TextUpdateInput;
 	where: TextWhereUniqueInput;
+};
+
+export type MutationUpdateTextAndImageArgs = {
+	data: TextAndImageUpdateInput;
+	where: TextAndImageWhereUniqueInput;
 };
 
 export type MutationUpsertAccordionContainerArgs = {
@@ -10180,6 +10521,11 @@ export type MutationUpsertTextArgs = {
 	where: TextWhereUniqueInput;
 };
 
+export type MutationUpsertTextAndImageArgs = {
+	upsert: TextAndImageUpsertInput;
+	where: TextAndImageWhereUniqueInput;
+};
+
 /** An object with an ID */
 export type Node = {
 	/** The id of the object. */
@@ -10201,6 +10547,7 @@ export type Page = Node & {
 	createdAt: Scalars['DateTime'];
 	/** User that created this document */
 	createdBy?: Maybe<User>;
+	description?: Maybe<Scalars['String']>;
 	/** Get the document in other stages */
 	documentInStages: Array<Page>;
 	/** List of Page versions */
@@ -10217,6 +10564,7 @@ export type Page = Node & {
 	source?: Maybe<Link>;
 	/** System stage field */
 	stage: Stage;
+	title: Scalars['String'];
 	/** The time the document was updated */
 	updatedAt: Scalars['DateTime'];
 	/** User that last updated this document */
@@ -10289,9 +10637,11 @@ export type PageConnection = {
 
 export type PageCreateInput = {
 	createdAt?: InputMaybe<Scalars['DateTime']>;
+	description?: InputMaybe<Scalars['String']>;
 	modules?: InputMaybe<PageModulCreateManyInlineInput>;
 	slug: Scalars['String'];
 	source?: InputMaybe<LinkCreateOneInlineInput>;
+	title: Scalars['String'];
 	updatedAt?: InputMaybe<Scalars['DateTime']>;
 };
 
@@ -10359,6 +10709,25 @@ export type PageManyWhereInput = {
 	/** All values that are not contained in given list. */
 	createdAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
 	createdBy?: InputMaybe<UserWhereInput>;
+	description?: InputMaybe<Scalars['String']>;
+	/** All values containing the given string. */
+	description_contains?: InputMaybe<Scalars['String']>;
+	/** All values ending with the given string. */
+	description_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are contained in given list. */
+	description_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values that are not equal to given value. */
+	description_not?: InputMaybe<Scalars['String']>;
+	/** All values not containing the given string. */
+	description_not_contains?: InputMaybe<Scalars['String']>;
+	/** All values not ending with the given string */
+	description_not_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are not contained in given list. */
+	description_not_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values not starting with the given string. */
+	description_not_starts_with?: InputMaybe<Scalars['String']>;
+	/** All values starting with the given string. */
+	description_starts_with?: InputMaybe<Scalars['String']>;
 	id?: InputMaybe<Scalars['ID']>;
 	/** All values containing the given string. */
 	id_contains?: InputMaybe<Scalars['ID']>;
@@ -10417,6 +10786,25 @@ export type PageManyWhereInput = {
 	/** All values starting with the given string. */
 	slug_starts_with?: InputMaybe<Scalars['String']>;
 	source?: InputMaybe<LinkWhereInput>;
+	title?: InputMaybe<Scalars['String']>;
+	/** All values containing the given string. */
+	title_contains?: InputMaybe<Scalars['String']>;
+	/** All values ending with the given string. */
+	title_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are contained in given list. */
+	title_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values that are not equal to given value. */
+	title_not?: InputMaybe<Scalars['String']>;
+	/** All values not containing the given string. */
+	title_not_contains?: InputMaybe<Scalars['String']>;
+	/** All values not ending with the given string */
+	title_not_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are not contained in given list. */
+	title_not_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values not starting with the given string. */
+	title_not_starts_with?: InputMaybe<Scalars['String']>;
+	/** All values starting with the given string. */
+	title_starts_with?: InputMaybe<Scalars['String']>;
 	updatedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
 	updatedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -10447,7 +10835,8 @@ export type PageModul =
 	| Image
 	| PartnerContainer
 	| ReferencesContainer
-	| Text;
+	| Text
+	| TextAndImage;
 
 export type PageModulConnectInput = {
 	AccordionContainer?: InputMaybe<AccordionContainerConnectInput>;
@@ -10462,6 +10851,7 @@ export type PageModulConnectInput = {
 	PartnerContainer?: InputMaybe<PartnerContainerConnectInput>;
 	ReferencesContainer?: InputMaybe<ReferencesContainerConnectInput>;
 	Text?: InputMaybe<TextConnectInput>;
+	TextAndImage?: InputMaybe<TextAndImageConnectInput>;
 };
 
 export type PageModulCreateInput = {
@@ -10477,6 +10867,7 @@ export type PageModulCreateInput = {
 	PartnerContainer?: InputMaybe<PartnerContainerCreateInput>;
 	ReferencesContainer?: InputMaybe<ReferencesContainerCreateInput>;
 	Text?: InputMaybe<TextCreateInput>;
+	TextAndImage?: InputMaybe<TextAndImageCreateInput>;
 };
 
 export type PageModulCreateManyInlineInput = {
@@ -10506,6 +10897,7 @@ export type PageModulUpdateInput = {
 	PartnerContainer?: InputMaybe<PartnerContainerUpdateInput>;
 	ReferencesContainer?: InputMaybe<ReferencesContainerUpdateInput>;
 	Text?: InputMaybe<TextUpdateInput>;
+	TextAndImage?: InputMaybe<TextAndImageUpdateInput>;
 };
 
 export type PageModulUpdateManyInlineInput = {
@@ -10538,6 +10930,7 @@ export type PageModulUpdateManyWithNestedWhereInput = {
 	PartnerContainer?: InputMaybe<PartnerContainerUpdateManyWithNestedWhereInput>;
 	ReferencesContainer?: InputMaybe<ReferencesContainerUpdateManyWithNestedWhereInput>;
 	Text?: InputMaybe<TextUpdateManyWithNestedWhereInput>;
+	TextAndImage?: InputMaybe<TextAndImageUpdateManyWithNestedWhereInput>;
 };
 
 export type PageModulUpdateOneInlineInput = {
@@ -10568,6 +10961,7 @@ export type PageModulUpdateWithNestedWhereUniqueInput = {
 	PartnerContainer?: InputMaybe<PartnerContainerUpdateWithNestedWhereUniqueInput>;
 	ReferencesContainer?: InputMaybe<ReferencesContainerUpdateWithNestedWhereUniqueInput>;
 	Text?: InputMaybe<TextUpdateWithNestedWhereUniqueInput>;
+	TextAndImage?: InputMaybe<TextAndImageUpdateWithNestedWhereUniqueInput>;
 };
 
 export type PageModulUpsertWithNestedWhereUniqueInput = {
@@ -10583,6 +10977,7 @@ export type PageModulUpsertWithNestedWhereUniqueInput = {
 	PartnerContainer?: InputMaybe<PartnerContainerUpsertWithNestedWhereUniqueInput>;
 	ReferencesContainer?: InputMaybe<ReferencesContainerUpsertWithNestedWhereUniqueInput>;
 	Text?: InputMaybe<TextUpsertWithNestedWhereUniqueInput>;
+	TextAndImage?: InputMaybe<TextAndImageUpsertWithNestedWhereUniqueInput>;
 };
 
 export type PageModulWhereInput = {
@@ -10598,6 +10993,7 @@ export type PageModulWhereInput = {
 	PartnerContainer?: InputMaybe<PartnerContainerWhereInput>;
 	ReferencesContainer?: InputMaybe<ReferencesContainerWhereInput>;
 	Text?: InputMaybe<TextWhereInput>;
+	TextAndImage?: InputMaybe<TextAndImageWhereInput>;
 };
 
 export type PageModulWhereUniqueInput = {
@@ -10613,25 +11009,32 @@ export type PageModulWhereUniqueInput = {
 	PartnerContainer?: InputMaybe<PartnerContainerWhereUniqueInput>;
 	ReferencesContainer?: InputMaybe<ReferencesContainerWhereUniqueInput>;
 	Text?: InputMaybe<TextWhereUniqueInput>;
+	TextAndImage?: InputMaybe<TextAndImageWhereUniqueInput>;
 };
 
 export enum PageOrderByInput {
 	CreatedAtAsc = 'createdAt_ASC',
 	CreatedAtDesc = 'createdAt_DESC',
+	DescriptionAsc = 'description_ASC',
+	DescriptionDesc = 'description_DESC',
 	IdAsc = 'id_ASC',
 	IdDesc = 'id_DESC',
 	PublishedAtAsc = 'publishedAt_ASC',
 	PublishedAtDesc = 'publishedAt_DESC',
 	SlugAsc = 'slug_ASC',
 	SlugDesc = 'slug_DESC',
+	TitleAsc = 'title_ASC',
+	TitleDesc = 'title_DESC',
 	UpdatedAtAsc = 'updatedAt_ASC',
 	UpdatedAtDesc = 'updatedAt_DESC'
 }
 
 export type PageUpdateInput = {
+	description?: InputMaybe<Scalars['String']>;
 	modules?: InputMaybe<PageModulUpdateManyInlineInput>;
 	slug?: InputMaybe<Scalars['String']>;
 	source?: InputMaybe<LinkUpdateOneInlineInput>;
+	title?: InputMaybe<Scalars['String']>;
 };
 
 export type PageUpdateManyInlineInput = {
@@ -10652,8 +11055,8 @@ export type PageUpdateManyInlineInput = {
 };
 
 export type PageUpdateManyInput = {
-	/** No fields in updateMany data input */
-	_?: InputMaybe<Scalars['String']>;
+	description?: InputMaybe<Scalars['String']>;
+	title?: InputMaybe<Scalars['String']>;
 };
 
 export type PageUpdateManyWithNestedWhereInput = {
@@ -10725,6 +11128,25 @@ export type PageWhereInput = {
 	/** All values that are not contained in given list. */
 	createdAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
 	createdBy?: InputMaybe<UserWhereInput>;
+	description?: InputMaybe<Scalars['String']>;
+	/** All values containing the given string. */
+	description_contains?: InputMaybe<Scalars['String']>;
+	/** All values ending with the given string. */
+	description_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are contained in given list. */
+	description_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values that are not equal to given value. */
+	description_not?: InputMaybe<Scalars['String']>;
+	/** All values not containing the given string. */
+	description_not_contains?: InputMaybe<Scalars['String']>;
+	/** All values not ending with the given string */
+	description_not_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are not contained in given list. */
+	description_not_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values not starting with the given string. */
+	description_not_starts_with?: InputMaybe<Scalars['String']>;
+	/** All values starting with the given string. */
+	description_starts_with?: InputMaybe<Scalars['String']>;
 	id?: InputMaybe<Scalars['ID']>;
 	/** All values containing the given string. */
 	id_contains?: InputMaybe<Scalars['ID']>;
@@ -10783,6 +11205,25 @@ export type PageWhereInput = {
 	/** All values starting with the given string. */
 	slug_starts_with?: InputMaybe<Scalars['String']>;
 	source?: InputMaybe<LinkWhereInput>;
+	title?: InputMaybe<Scalars['String']>;
+	/** All values containing the given string. */
+	title_contains?: InputMaybe<Scalars['String']>;
+	/** All values ending with the given string. */
+	title_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are contained in given list. */
+	title_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values that are not equal to given value. */
+	title_not?: InputMaybe<Scalars['String']>;
+	/** All values not containing the given string. */
+	title_not_contains?: InputMaybe<Scalars['String']>;
+	/** All values not ending with the given string */
+	title_not_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are not contained in given list. */
+	title_not_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values not starting with the given string. */
+	title_not_starts_with?: InputMaybe<Scalars['String']>;
+	/** All values starting with the given string. */
+	title_starts_with?: InputMaybe<Scalars['String']>;
 	updatedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
 	updatedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -11730,6 +12171,14 @@ export type Query = {
 	scheduledReleasesConnection: ScheduledReleaseConnection;
 	/** Retrieve a single text */
 	text?: Maybe<Text>;
+	/** Retrieve a single textAndImage */
+	textAndImage?: Maybe<TextAndImage>;
+	/** Retrieve document version */
+	textAndImageVersion?: Maybe<DocumentVersion>;
+	/** Retrieve multiple textAndImages */
+	textAndImages: Array<TextAndImage>;
+	/** Retrieve multiple textAndImages using the Relay connection interface */
+	textAndImagesConnection: TextAndImageConnection;
 	/** Retrieve document version */
 	textVersion?: Maybe<DocumentVersion>;
 	/** Retrieve multiple texts */
@@ -12460,6 +12909,40 @@ export type QueryTextArgs = {
 	locales?: Array<Locale>;
 	stage?: Stage;
 	where: TextWhereUniqueInput;
+};
+
+export type QueryTextAndImageArgs = {
+	locales?: Array<Locale>;
+	stage?: Stage;
+	where: TextAndImageWhereUniqueInput;
+};
+
+export type QueryTextAndImageVersionArgs = {
+	where: VersionWhereInput;
+};
+
+export type QueryTextAndImagesArgs = {
+	after?: InputMaybe<Scalars['String']>;
+	before?: InputMaybe<Scalars['String']>;
+	first?: InputMaybe<Scalars['Int']>;
+	last?: InputMaybe<Scalars['Int']>;
+	locales?: Array<Locale>;
+	orderBy?: InputMaybe<TextAndImageOrderByInput>;
+	skip?: InputMaybe<Scalars['Int']>;
+	stage?: Stage;
+	where?: InputMaybe<TextAndImageWhereInput>;
+};
+
+export type QueryTextAndImagesConnectionArgs = {
+	after?: InputMaybe<Scalars['String']>;
+	before?: InputMaybe<Scalars['String']>;
+	first?: InputMaybe<Scalars['Int']>;
+	last?: InputMaybe<Scalars['Int']>;
+	locales?: Array<Locale>;
+	orderBy?: InputMaybe<TextAndImageOrderByInput>;
+	skip?: InputMaybe<Scalars['Int']>;
+	stage?: Stage;
+	where?: InputMaybe<TextAndImageWhereInput>;
 };
 
 export type QueryTextVersionArgs = {
@@ -13385,7 +13868,8 @@ export type ScheduledOperationAffectedDocument =
 	| PartnerItem
 	| ReferencesContainer
 	| ReferencesItem
-	| Text;
+	| Text
+	| TextAndImage;
 
 export type ScheduledOperationConnectInput = {
 	/** Allow to specify document position in list of connected documents, will default to appending at end of list */
@@ -14322,6 +14806,10 @@ export type Text = Node & {
 	/** The unique identifier */
 	id: Scalars['ID'];
 	link?: Maybe<Link>;
+	/** System Locale field */
+	locale: Locale;
+	/** Get the other localizations for this document */
+	localizations: Array<Text>;
 	paddingBottom?: Maybe<Padding>;
 	paddingTop?: Maybe<Padding>;
 	page?: Maybe<Page>;
@@ -14341,6 +14829,10 @@ export type Text = Node & {
 
 export type TextBlogPostArgs = {
 	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type TextCreatedAtArgs = {
+	variation?: SystemDateTimeFieldVariation;
 };
 
 export type TextCreatedByArgs = {
@@ -14363,8 +14855,17 @@ export type TextLinkArgs = {
 	locales?: InputMaybe<Array<Locale>>;
 };
 
+export type TextLocalizationsArgs = {
+	includeCurrent?: Scalars['Boolean'];
+	locales?: Array<Locale>;
+};
+
 export type TextPageArgs = {
 	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type TextPublishedAtArgs = {
+	variation?: SystemDateTimeFieldVariation;
 };
 
 export type TextPublishedByArgs = {
@@ -14381,8 +14882,629 @@ export type TextScheduledInArgs = {
 	where?: InputMaybe<ScheduledOperationWhereInput>;
 };
 
+export type TextUpdatedAtArgs = {
+	variation?: SystemDateTimeFieldVariation;
+};
+
 export type TextUpdatedByArgs = {
 	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type TextAndImage = Node & {
+	__typename?: 'TextAndImage';
+	assetPicker?: Maybe<Asset>;
+	/** The time the document was created */
+	createdAt: Scalars['DateTime'];
+	/** User that created this document */
+	createdBy?: Maybe<User>;
+	/** Get the document in other stages */
+	documentInStages: Array<TextAndImage>;
+	downloadLabel?: Maybe<Scalars['String']>;
+	heading1?: Maybe<Scalars['String']>;
+	heading2?: Maybe<Scalars['String']>;
+	heading3?: Maybe<Scalars['String']>;
+	/** List of TextAndImage versions */
+	history: Array<Version>;
+	/** The unique identifier */
+	id: Scalars['ID'];
+	image?: Maybe<Asset>;
+	paddingBottom?: Maybe<Padding>;
+	paddingTop?: Maybe<Padding>;
+	page?: Maybe<Page>;
+	/** The time the document was published. Null on documents in draft stage. */
+	publishedAt?: Maybe<Scalars['DateTime']>;
+	/** User that last published this document */
+	publishedBy?: Maybe<User>;
+	scheduledIn: Array<ScheduledOperation>;
+	/** System stage field */
+	stage: Stage;
+	text?: Maybe<RichText>;
+	textImageOrientation?: Maybe<ImageTextOrientation>;
+	/** The time the document was updated */
+	updatedAt: Scalars['DateTime'];
+	/** User that last updated this document */
+	updatedBy?: Maybe<User>;
+};
+
+export type TextAndImageAssetPickerArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type TextAndImageCreatedByArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type TextAndImageDocumentInStagesArgs = {
+	includeCurrent?: Scalars['Boolean'];
+	inheritLocale?: Scalars['Boolean'];
+	stages?: Array<Stage>;
+};
+
+export type TextAndImageHistoryArgs = {
+	limit?: Scalars['Int'];
+	skip?: Scalars['Int'];
+	stageOverride?: InputMaybe<Stage>;
+};
+
+export type TextAndImageImageArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type TextAndImagePageArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type TextAndImagePublishedByArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type TextAndImageScheduledInArgs = {
+	after?: InputMaybe<Scalars['String']>;
+	before?: InputMaybe<Scalars['String']>;
+	first?: InputMaybe<Scalars['Int']>;
+	last?: InputMaybe<Scalars['Int']>;
+	locales?: InputMaybe<Array<Locale>>;
+	skip?: InputMaybe<Scalars['Int']>;
+	where?: InputMaybe<ScheduledOperationWhereInput>;
+};
+
+export type TextAndImageUpdatedByArgs = {
+	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type TextAndImageConnectInput = {
+	/** Allow to specify document position in list of connected documents, will default to appending at end of list */
+	position?: InputMaybe<ConnectPositionInput>;
+	/** Document to connect */
+	where: TextAndImageWhereUniqueInput;
+};
+
+/** A connection to a list of items. */
+export type TextAndImageConnection = {
+	__typename?: 'TextAndImageConnection';
+	aggregate: Aggregate;
+	/** A list of edges. */
+	edges: Array<TextAndImageEdge>;
+	/** Information to aid in pagination. */
+	pageInfo: PageInfo;
+};
+
+export type TextAndImageCreateInput = {
+	assetPicker?: InputMaybe<AssetCreateOneInlineInput>;
+	createdAt?: InputMaybe<Scalars['DateTime']>;
+	downloadLabel?: InputMaybe<Scalars['String']>;
+	heading1?: InputMaybe<Scalars['String']>;
+	heading2?: InputMaybe<Scalars['String']>;
+	heading3?: InputMaybe<Scalars['String']>;
+	image?: InputMaybe<AssetCreateOneInlineInput>;
+	paddingBottom?: InputMaybe<Padding>;
+	paddingTop?: InputMaybe<Padding>;
+	page?: InputMaybe<PageCreateOneInlineInput>;
+	text?: InputMaybe<Scalars['RichTextAST']>;
+	textImageOrientation?: InputMaybe<ImageTextOrientation>;
+	updatedAt?: InputMaybe<Scalars['DateTime']>;
+};
+
+export type TextAndImageCreateManyInlineInput = {
+	/** Connect multiple existing TextAndImage documents */
+	connect?: InputMaybe<Array<TextAndImageWhereUniqueInput>>;
+	/** Create and connect multiple existing TextAndImage documents */
+	create?: InputMaybe<Array<TextAndImageCreateInput>>;
+};
+
+export type TextAndImageCreateOneInlineInput = {
+	/** Connect one existing TextAndImage document */
+	connect?: InputMaybe<TextAndImageWhereUniqueInput>;
+	/** Create and connect one TextAndImage document */
+	create?: InputMaybe<TextAndImageCreateInput>;
+};
+
+/** An edge in a connection. */
+export type TextAndImageEdge = {
+	__typename?: 'TextAndImageEdge';
+	/** A cursor for use in pagination. */
+	cursor: Scalars['String'];
+	/** The item at the end of the edge. */
+	node: TextAndImage;
+};
+
+/** Identifies documents */
+export type TextAndImageManyWhereInput = {
+	/** Logical AND on all given filters. */
+	AND?: InputMaybe<Array<TextAndImageWhereInput>>;
+	/** Logical NOT on all given filters combined by AND. */
+	NOT?: InputMaybe<Array<TextAndImageWhereInput>>;
+	/** Logical OR on all given filters. */
+	OR?: InputMaybe<Array<TextAndImageWhereInput>>;
+	/** Contains search across all appropriate fields. */
+	_search?: InputMaybe<Scalars['String']>;
+	assetPicker?: InputMaybe<AssetWhereInput>;
+	createdAt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than the given value. */
+	createdAt_gt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than or equal the given value. */
+	createdAt_gte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are contained in given list. */
+	createdAt_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	/** All values less than the given value. */
+	createdAt_lt?: InputMaybe<Scalars['DateTime']>;
+	/** All values less than or equal the given value. */
+	createdAt_lte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not equal to given value. */
+	createdAt_not?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not contained in given list. */
+	createdAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	createdBy?: InputMaybe<UserWhereInput>;
+	downloadLabel?: InputMaybe<Scalars['String']>;
+	/** All values containing the given string. */
+	downloadLabel_contains?: InputMaybe<Scalars['String']>;
+	/** All values ending with the given string. */
+	downloadLabel_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are contained in given list. */
+	downloadLabel_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values that are not equal to given value. */
+	downloadLabel_not?: InputMaybe<Scalars['String']>;
+	/** All values not containing the given string. */
+	downloadLabel_not_contains?: InputMaybe<Scalars['String']>;
+	/** All values not ending with the given string */
+	downloadLabel_not_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are not contained in given list. */
+	downloadLabel_not_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values not starting with the given string. */
+	downloadLabel_not_starts_with?: InputMaybe<Scalars['String']>;
+	/** All values starting with the given string. */
+	downloadLabel_starts_with?: InputMaybe<Scalars['String']>;
+	heading1?: InputMaybe<Scalars['String']>;
+	/** All values containing the given string. */
+	heading1_contains?: InputMaybe<Scalars['String']>;
+	/** All values ending with the given string. */
+	heading1_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are contained in given list. */
+	heading1_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values that are not equal to given value. */
+	heading1_not?: InputMaybe<Scalars['String']>;
+	/** All values not containing the given string. */
+	heading1_not_contains?: InputMaybe<Scalars['String']>;
+	/** All values not ending with the given string */
+	heading1_not_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are not contained in given list. */
+	heading1_not_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values not starting with the given string. */
+	heading1_not_starts_with?: InputMaybe<Scalars['String']>;
+	/** All values starting with the given string. */
+	heading1_starts_with?: InputMaybe<Scalars['String']>;
+	heading2?: InputMaybe<Scalars['String']>;
+	/** All values containing the given string. */
+	heading2_contains?: InputMaybe<Scalars['String']>;
+	/** All values ending with the given string. */
+	heading2_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are contained in given list. */
+	heading2_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values that are not equal to given value. */
+	heading2_not?: InputMaybe<Scalars['String']>;
+	/** All values not containing the given string. */
+	heading2_not_contains?: InputMaybe<Scalars['String']>;
+	/** All values not ending with the given string */
+	heading2_not_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are not contained in given list. */
+	heading2_not_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values not starting with the given string. */
+	heading2_not_starts_with?: InputMaybe<Scalars['String']>;
+	/** All values starting with the given string. */
+	heading2_starts_with?: InputMaybe<Scalars['String']>;
+	heading3?: InputMaybe<Scalars['String']>;
+	/** All values containing the given string. */
+	heading3_contains?: InputMaybe<Scalars['String']>;
+	/** All values ending with the given string. */
+	heading3_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are contained in given list. */
+	heading3_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values that are not equal to given value. */
+	heading3_not?: InputMaybe<Scalars['String']>;
+	/** All values not containing the given string. */
+	heading3_not_contains?: InputMaybe<Scalars['String']>;
+	/** All values not ending with the given string */
+	heading3_not_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are not contained in given list. */
+	heading3_not_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values not starting with the given string. */
+	heading3_not_starts_with?: InputMaybe<Scalars['String']>;
+	/** All values starting with the given string. */
+	heading3_starts_with?: InputMaybe<Scalars['String']>;
+	id?: InputMaybe<Scalars['ID']>;
+	/** All values containing the given string. */
+	id_contains?: InputMaybe<Scalars['ID']>;
+	/** All values ending with the given string. */
+	id_ends_with?: InputMaybe<Scalars['ID']>;
+	/** All values that are contained in given list. */
+	id_in?: InputMaybe<Array<Scalars['ID']>>;
+	/** All values that are not equal to given value. */
+	id_not?: InputMaybe<Scalars['ID']>;
+	/** All values not containing the given string. */
+	id_not_contains?: InputMaybe<Scalars['ID']>;
+	/** All values not ending with the given string */
+	id_not_ends_with?: InputMaybe<Scalars['ID']>;
+	/** All values that are not contained in given list. */
+	id_not_in?: InputMaybe<Array<Scalars['ID']>>;
+	/** All values not starting with the given string. */
+	id_not_starts_with?: InputMaybe<Scalars['ID']>;
+	/** All values starting with the given string. */
+	id_starts_with?: InputMaybe<Scalars['ID']>;
+	image?: InputMaybe<AssetWhereInput>;
+	paddingBottom?: InputMaybe<Padding>;
+	/** All values that are contained in given list. */
+	paddingBottom_in?: InputMaybe<Array<Padding>>;
+	/** All values that are not equal to given value. */
+	paddingBottom_not?: InputMaybe<Padding>;
+	/** All values that are not contained in given list. */
+	paddingBottom_not_in?: InputMaybe<Array<Padding>>;
+	paddingTop?: InputMaybe<Padding>;
+	/** All values that are contained in given list. */
+	paddingTop_in?: InputMaybe<Array<Padding>>;
+	/** All values that are not equal to given value. */
+	paddingTop_not?: InputMaybe<Padding>;
+	/** All values that are not contained in given list. */
+	paddingTop_not_in?: InputMaybe<Array<Padding>>;
+	page?: InputMaybe<PageWhereInput>;
+	publishedAt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than the given value. */
+	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than or equal the given value. */
+	publishedAt_gte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are contained in given list. */
+	publishedAt_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	/** All values less than the given value. */
+	publishedAt_lt?: InputMaybe<Scalars['DateTime']>;
+	/** All values less than or equal the given value. */
+	publishedAt_lte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not equal to given value. */
+	publishedAt_not?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not contained in given list. */
+	publishedAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	publishedBy?: InputMaybe<UserWhereInput>;
+	scheduledIn_every?: InputMaybe<ScheduledOperationWhereInput>;
+	scheduledIn_none?: InputMaybe<ScheduledOperationWhereInput>;
+	scheduledIn_some?: InputMaybe<ScheduledOperationWhereInput>;
+	textImageOrientation?: InputMaybe<ImageTextOrientation>;
+	/** All values that are contained in given list. */
+	textImageOrientation_in?: InputMaybe<Array<ImageTextOrientation>>;
+	/** All values that are not equal to given value. */
+	textImageOrientation_not?: InputMaybe<ImageTextOrientation>;
+	/** All values that are not contained in given list. */
+	textImageOrientation_not_in?: InputMaybe<Array<ImageTextOrientation>>;
+	updatedAt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than the given value. */
+	updatedAt_gt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than or equal the given value. */
+	updatedAt_gte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are contained in given list. */
+	updatedAt_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	/** All values less than the given value. */
+	updatedAt_lt?: InputMaybe<Scalars['DateTime']>;
+	/** All values less than or equal the given value. */
+	updatedAt_lte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not equal to given value. */
+	updatedAt_not?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not contained in given list. */
+	updatedAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	updatedBy?: InputMaybe<UserWhereInput>;
+};
+
+export enum TextAndImageOrderByInput {
+	CreatedAtAsc = 'createdAt_ASC',
+	CreatedAtDesc = 'createdAt_DESC',
+	DownloadLabelAsc = 'downloadLabel_ASC',
+	DownloadLabelDesc = 'downloadLabel_DESC',
+	Heading1Asc = 'heading1_ASC',
+	Heading1Desc = 'heading1_DESC',
+	Heading2Asc = 'heading2_ASC',
+	Heading2Desc = 'heading2_DESC',
+	Heading3Asc = 'heading3_ASC',
+	Heading3Desc = 'heading3_DESC',
+	IdAsc = 'id_ASC',
+	IdDesc = 'id_DESC',
+	PaddingBottomAsc = 'paddingBottom_ASC',
+	PaddingBottomDesc = 'paddingBottom_DESC',
+	PaddingTopAsc = 'paddingTop_ASC',
+	PaddingTopDesc = 'paddingTop_DESC',
+	PublishedAtAsc = 'publishedAt_ASC',
+	PublishedAtDesc = 'publishedAt_DESC',
+	TextImageOrientationAsc = 'textImageOrientation_ASC',
+	TextImageOrientationDesc = 'textImageOrientation_DESC',
+	UpdatedAtAsc = 'updatedAt_ASC',
+	UpdatedAtDesc = 'updatedAt_DESC'
+}
+
+export type TextAndImageUpdateInput = {
+	assetPicker?: InputMaybe<AssetUpdateOneInlineInput>;
+	downloadLabel?: InputMaybe<Scalars['String']>;
+	heading1?: InputMaybe<Scalars['String']>;
+	heading2?: InputMaybe<Scalars['String']>;
+	heading3?: InputMaybe<Scalars['String']>;
+	image?: InputMaybe<AssetUpdateOneInlineInput>;
+	paddingBottom?: InputMaybe<Padding>;
+	paddingTop?: InputMaybe<Padding>;
+	page?: InputMaybe<PageUpdateOneInlineInput>;
+	text?: InputMaybe<Scalars['RichTextAST']>;
+	textImageOrientation?: InputMaybe<ImageTextOrientation>;
+};
+
+export type TextAndImageUpdateManyInlineInput = {
+	/** Connect multiple existing TextAndImage documents */
+	connect?: InputMaybe<Array<TextAndImageConnectInput>>;
+	/** Create and connect multiple TextAndImage documents */
+	create?: InputMaybe<Array<TextAndImageCreateInput>>;
+	/** Delete multiple TextAndImage documents */
+	delete?: InputMaybe<Array<TextAndImageWhereUniqueInput>>;
+	/** Disconnect multiple TextAndImage documents */
+	disconnect?: InputMaybe<Array<TextAndImageWhereUniqueInput>>;
+	/** Override currently-connected documents with multiple existing TextAndImage documents */
+	set?: InputMaybe<Array<TextAndImageWhereUniqueInput>>;
+	/** Update multiple TextAndImage documents */
+	update?: InputMaybe<Array<TextAndImageUpdateWithNestedWhereUniqueInput>>;
+	/** Upsert multiple TextAndImage documents */
+	upsert?: InputMaybe<Array<TextAndImageUpsertWithNestedWhereUniqueInput>>;
+};
+
+export type TextAndImageUpdateManyInput = {
+	downloadLabel?: InputMaybe<Scalars['String']>;
+	heading1?: InputMaybe<Scalars['String']>;
+	heading2?: InputMaybe<Scalars['String']>;
+	heading3?: InputMaybe<Scalars['String']>;
+	paddingBottom?: InputMaybe<Padding>;
+	paddingTop?: InputMaybe<Padding>;
+	text?: InputMaybe<Scalars['RichTextAST']>;
+	textImageOrientation?: InputMaybe<ImageTextOrientation>;
+};
+
+export type TextAndImageUpdateManyWithNestedWhereInput = {
+	/** Update many input */
+	data: TextAndImageUpdateManyInput;
+	/** Document search */
+	where: TextAndImageWhereInput;
+};
+
+export type TextAndImageUpdateOneInlineInput = {
+	/** Connect existing TextAndImage document */
+	connect?: InputMaybe<TextAndImageWhereUniqueInput>;
+	/** Create and connect one TextAndImage document */
+	create?: InputMaybe<TextAndImageCreateInput>;
+	/** Delete currently connected TextAndImage document */
+	delete?: InputMaybe<Scalars['Boolean']>;
+	/** Disconnect currently connected TextAndImage document */
+	disconnect?: InputMaybe<Scalars['Boolean']>;
+	/** Update single TextAndImage document */
+	update?: InputMaybe<TextAndImageUpdateWithNestedWhereUniqueInput>;
+	/** Upsert single TextAndImage document */
+	upsert?: InputMaybe<TextAndImageUpsertWithNestedWhereUniqueInput>;
+};
+
+export type TextAndImageUpdateWithNestedWhereUniqueInput = {
+	/** Document to update */
+	data: TextAndImageUpdateInput;
+	/** Unique document search */
+	where: TextAndImageWhereUniqueInput;
+};
+
+export type TextAndImageUpsertInput = {
+	/** Create document if it didn't exist */
+	create: TextAndImageCreateInput;
+	/** Update document if it exists */
+	update: TextAndImageUpdateInput;
+};
+
+export type TextAndImageUpsertWithNestedWhereUniqueInput = {
+	/** Upsert data */
+	data: TextAndImageUpsertInput;
+	/** Unique document search */
+	where: TextAndImageWhereUniqueInput;
+};
+
+/** Identifies documents */
+export type TextAndImageWhereInput = {
+	/** Logical AND on all given filters. */
+	AND?: InputMaybe<Array<TextAndImageWhereInput>>;
+	/** Logical NOT on all given filters combined by AND. */
+	NOT?: InputMaybe<Array<TextAndImageWhereInput>>;
+	/** Logical OR on all given filters. */
+	OR?: InputMaybe<Array<TextAndImageWhereInput>>;
+	/** Contains search across all appropriate fields. */
+	_search?: InputMaybe<Scalars['String']>;
+	assetPicker?: InputMaybe<AssetWhereInput>;
+	createdAt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than the given value. */
+	createdAt_gt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than or equal the given value. */
+	createdAt_gte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are contained in given list. */
+	createdAt_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	/** All values less than the given value. */
+	createdAt_lt?: InputMaybe<Scalars['DateTime']>;
+	/** All values less than or equal the given value. */
+	createdAt_lte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not equal to given value. */
+	createdAt_not?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not contained in given list. */
+	createdAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	createdBy?: InputMaybe<UserWhereInput>;
+	downloadLabel?: InputMaybe<Scalars['String']>;
+	/** All values containing the given string. */
+	downloadLabel_contains?: InputMaybe<Scalars['String']>;
+	/** All values ending with the given string. */
+	downloadLabel_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are contained in given list. */
+	downloadLabel_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values that are not equal to given value. */
+	downloadLabel_not?: InputMaybe<Scalars['String']>;
+	/** All values not containing the given string. */
+	downloadLabel_not_contains?: InputMaybe<Scalars['String']>;
+	/** All values not ending with the given string */
+	downloadLabel_not_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are not contained in given list. */
+	downloadLabel_not_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values not starting with the given string. */
+	downloadLabel_not_starts_with?: InputMaybe<Scalars['String']>;
+	/** All values starting with the given string. */
+	downloadLabel_starts_with?: InputMaybe<Scalars['String']>;
+	heading1?: InputMaybe<Scalars['String']>;
+	/** All values containing the given string. */
+	heading1_contains?: InputMaybe<Scalars['String']>;
+	/** All values ending with the given string. */
+	heading1_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are contained in given list. */
+	heading1_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values that are not equal to given value. */
+	heading1_not?: InputMaybe<Scalars['String']>;
+	/** All values not containing the given string. */
+	heading1_not_contains?: InputMaybe<Scalars['String']>;
+	/** All values not ending with the given string */
+	heading1_not_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are not contained in given list. */
+	heading1_not_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values not starting with the given string. */
+	heading1_not_starts_with?: InputMaybe<Scalars['String']>;
+	/** All values starting with the given string. */
+	heading1_starts_with?: InputMaybe<Scalars['String']>;
+	heading2?: InputMaybe<Scalars['String']>;
+	/** All values containing the given string. */
+	heading2_contains?: InputMaybe<Scalars['String']>;
+	/** All values ending with the given string. */
+	heading2_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are contained in given list. */
+	heading2_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values that are not equal to given value. */
+	heading2_not?: InputMaybe<Scalars['String']>;
+	/** All values not containing the given string. */
+	heading2_not_contains?: InputMaybe<Scalars['String']>;
+	/** All values not ending with the given string */
+	heading2_not_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are not contained in given list. */
+	heading2_not_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values not starting with the given string. */
+	heading2_not_starts_with?: InputMaybe<Scalars['String']>;
+	/** All values starting with the given string. */
+	heading2_starts_with?: InputMaybe<Scalars['String']>;
+	heading3?: InputMaybe<Scalars['String']>;
+	/** All values containing the given string. */
+	heading3_contains?: InputMaybe<Scalars['String']>;
+	/** All values ending with the given string. */
+	heading3_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are contained in given list. */
+	heading3_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values that are not equal to given value. */
+	heading3_not?: InputMaybe<Scalars['String']>;
+	/** All values not containing the given string. */
+	heading3_not_contains?: InputMaybe<Scalars['String']>;
+	/** All values not ending with the given string */
+	heading3_not_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are not contained in given list. */
+	heading3_not_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values not starting with the given string. */
+	heading3_not_starts_with?: InputMaybe<Scalars['String']>;
+	/** All values starting with the given string. */
+	heading3_starts_with?: InputMaybe<Scalars['String']>;
+	id?: InputMaybe<Scalars['ID']>;
+	/** All values containing the given string. */
+	id_contains?: InputMaybe<Scalars['ID']>;
+	/** All values ending with the given string. */
+	id_ends_with?: InputMaybe<Scalars['ID']>;
+	/** All values that are contained in given list. */
+	id_in?: InputMaybe<Array<Scalars['ID']>>;
+	/** All values that are not equal to given value. */
+	id_not?: InputMaybe<Scalars['ID']>;
+	/** All values not containing the given string. */
+	id_not_contains?: InputMaybe<Scalars['ID']>;
+	/** All values not ending with the given string */
+	id_not_ends_with?: InputMaybe<Scalars['ID']>;
+	/** All values that are not contained in given list. */
+	id_not_in?: InputMaybe<Array<Scalars['ID']>>;
+	/** All values not starting with the given string. */
+	id_not_starts_with?: InputMaybe<Scalars['ID']>;
+	/** All values starting with the given string. */
+	id_starts_with?: InputMaybe<Scalars['ID']>;
+	image?: InputMaybe<AssetWhereInput>;
+	paddingBottom?: InputMaybe<Padding>;
+	/** All values that are contained in given list. */
+	paddingBottom_in?: InputMaybe<Array<Padding>>;
+	/** All values that are not equal to given value. */
+	paddingBottom_not?: InputMaybe<Padding>;
+	/** All values that are not contained in given list. */
+	paddingBottom_not_in?: InputMaybe<Array<Padding>>;
+	paddingTop?: InputMaybe<Padding>;
+	/** All values that are contained in given list. */
+	paddingTop_in?: InputMaybe<Array<Padding>>;
+	/** All values that are not equal to given value. */
+	paddingTop_not?: InputMaybe<Padding>;
+	/** All values that are not contained in given list. */
+	paddingTop_not_in?: InputMaybe<Array<Padding>>;
+	page?: InputMaybe<PageWhereInput>;
+	publishedAt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than the given value. */
+	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than or equal the given value. */
+	publishedAt_gte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are contained in given list. */
+	publishedAt_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	/** All values less than the given value. */
+	publishedAt_lt?: InputMaybe<Scalars['DateTime']>;
+	/** All values less than or equal the given value. */
+	publishedAt_lte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not equal to given value. */
+	publishedAt_not?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not contained in given list. */
+	publishedAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	publishedBy?: InputMaybe<UserWhereInput>;
+	scheduledIn_every?: InputMaybe<ScheduledOperationWhereInput>;
+	scheduledIn_none?: InputMaybe<ScheduledOperationWhereInput>;
+	scheduledIn_some?: InputMaybe<ScheduledOperationWhereInput>;
+	textImageOrientation?: InputMaybe<ImageTextOrientation>;
+	/** All values that are contained in given list. */
+	textImageOrientation_in?: InputMaybe<Array<ImageTextOrientation>>;
+	/** All values that are not equal to given value. */
+	textImageOrientation_not?: InputMaybe<ImageTextOrientation>;
+	/** All values that are not contained in given list. */
+	textImageOrientation_not_in?: InputMaybe<Array<ImageTextOrientation>>;
+	updatedAt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than the given value. */
+	updatedAt_gt?: InputMaybe<Scalars['DateTime']>;
+	/** All values greater than or equal the given value. */
+	updatedAt_gte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are contained in given list. */
+	updatedAt_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	/** All values less than the given value. */
+	updatedAt_lt?: InputMaybe<Scalars['DateTime']>;
+	/** All values less than or equal the given value. */
+	updatedAt_lte?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not equal to given value. */
+	updatedAt_not?: InputMaybe<Scalars['DateTime']>;
+	/** All values that are not contained in given list. */
+	updatedAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
+	updatedBy?: InputMaybe<UserWhereInput>;
+};
+
+/** References TextAndImage record uniquely */
+export type TextAndImageWhereUniqueInput = {
+	id?: InputMaybe<Scalars['ID']>;
 };
 
 export type TextConnectInput = {
@@ -14407,13 +15529,35 @@ export type TextCreateInput = {
 	createdAt?: InputMaybe<Scalars['DateTime']>;
 	heading1?: InputMaybe<Scalars['String']>;
 	heading2?: InputMaybe<Scalars['String']>;
+	/** heading3 input for default locale (de) */
 	heading3?: InputMaybe<Scalars['String']>;
 	link?: InputMaybe<LinkCreateOneInlineInput>;
+	/** Inline mutations for managing document localizations excluding the default locale */
+	localizations?: InputMaybe<TextCreateLocalizationsInput>;
 	paddingBottom?: InputMaybe<Padding>;
 	paddingTop?: InputMaybe<Padding>;
 	page?: InputMaybe<PageCreateOneInlineInput>;
+	/** text input for default locale (de) */
 	text?: InputMaybe<Scalars['RichTextAST']>;
 	updatedAt?: InputMaybe<Scalars['DateTime']>;
+};
+
+export type TextCreateLocalizationDataInput = {
+	createdAt?: InputMaybe<Scalars['DateTime']>;
+	heading3?: InputMaybe<Scalars['String']>;
+	text?: InputMaybe<Scalars['RichTextAST']>;
+	updatedAt?: InputMaybe<Scalars['DateTime']>;
+};
+
+export type TextCreateLocalizationInput = {
+	/** Localization input */
+	data: TextCreateLocalizationDataInput;
+	locale: Locale;
+};
+
+export type TextCreateLocalizationsInput = {
+	/** Create localizations for the newly-created document */
+	create?: InputMaybe<Array<TextCreateLocalizationInput>>;
 };
 
 export type TextCreateManyInlineInput = {
@@ -14504,25 +15648,6 @@ export type TextManyWhereInput = {
 	heading2_not_starts_with?: InputMaybe<Scalars['String']>;
 	/** All values starting with the given string. */
 	heading2_starts_with?: InputMaybe<Scalars['String']>;
-	heading3?: InputMaybe<Scalars['String']>;
-	/** All values containing the given string. */
-	heading3_contains?: InputMaybe<Scalars['String']>;
-	/** All values ending with the given string. */
-	heading3_ends_with?: InputMaybe<Scalars['String']>;
-	/** All values that are contained in given list. */
-	heading3_in?: InputMaybe<Array<Scalars['String']>>;
-	/** All values that are not equal to given value. */
-	heading3_not?: InputMaybe<Scalars['String']>;
-	/** All values not containing the given string. */
-	heading3_not_contains?: InputMaybe<Scalars['String']>;
-	/** All values not ending with the given string */
-	heading3_not_ends_with?: InputMaybe<Scalars['String']>;
-	/** All values that are not contained in given list. */
-	heading3_not_in?: InputMaybe<Array<Scalars['String']>>;
-	/** All values not starting with the given string. */
-	heading3_not_starts_with?: InputMaybe<Scalars['String']>;
-	/** All values starting with the given string. */
-	heading3_starts_with?: InputMaybe<Scalars['String']>;
 	id?: InputMaybe<Scalars['ID']>;
 	/** All values containing the given string. */
 	id_contains?: InputMaybe<Scalars['ID']>;
@@ -14620,12 +15745,36 @@ export type TextUpdateInput = {
 	blogPost?: InputMaybe<BlogPostUpdateOneInlineInput>;
 	heading1?: InputMaybe<Scalars['String']>;
 	heading2?: InputMaybe<Scalars['String']>;
+	/** heading3 input for default locale (de) */
 	heading3?: InputMaybe<Scalars['String']>;
 	link?: InputMaybe<LinkUpdateOneInlineInput>;
+	/** Manage document localizations */
+	localizations?: InputMaybe<TextUpdateLocalizationsInput>;
 	paddingBottom?: InputMaybe<Padding>;
 	paddingTop?: InputMaybe<Padding>;
 	page?: InputMaybe<PageUpdateOneInlineInput>;
+	/** text input for default locale (de) */
 	text?: InputMaybe<Scalars['RichTextAST']>;
+};
+
+export type TextUpdateLocalizationDataInput = {
+	heading3?: InputMaybe<Scalars['String']>;
+	text?: InputMaybe<Scalars['RichTextAST']>;
+};
+
+export type TextUpdateLocalizationInput = {
+	data: TextUpdateLocalizationDataInput;
+	locale: Locale;
+};
+
+export type TextUpdateLocalizationsInput = {
+	/** Localizations to create */
+	create?: InputMaybe<Array<TextCreateLocalizationInput>>;
+	/** Localizations to delete */
+	delete?: InputMaybe<Array<Locale>>;
+	/** Localizations to update */
+	update?: InputMaybe<Array<TextUpdateLocalizationInput>>;
+	upsert?: InputMaybe<Array<TextUpsertLocalizationInput>>;
 };
 
 export type TextUpdateManyInlineInput = {
@@ -14648,10 +15797,29 @@ export type TextUpdateManyInlineInput = {
 export type TextUpdateManyInput = {
 	heading1?: InputMaybe<Scalars['String']>;
 	heading2?: InputMaybe<Scalars['String']>;
+	/** heading3 input for default locale (de) */
 	heading3?: InputMaybe<Scalars['String']>;
+	/** Optional updates to localizations */
+	localizations?: InputMaybe<TextUpdateManyLocalizationsInput>;
 	paddingBottom?: InputMaybe<Padding>;
 	paddingTop?: InputMaybe<Padding>;
+	/** text input for default locale (de) */
 	text?: InputMaybe<Scalars['RichTextAST']>;
+};
+
+export type TextUpdateManyLocalizationDataInput = {
+	heading3?: InputMaybe<Scalars['String']>;
+	text?: InputMaybe<Scalars['RichTextAST']>;
+};
+
+export type TextUpdateManyLocalizationInput = {
+	data: TextUpdateManyLocalizationDataInput;
+	locale: Locale;
+};
+
+export type TextUpdateManyLocalizationsInput = {
+	/** Localizations to update */
+	update?: InputMaybe<Array<TextUpdateManyLocalizationInput>>;
 };
 
 export type TextUpdateManyWithNestedWhereInput = {
@@ -14688,6 +15856,12 @@ export type TextUpsertInput = {
 	create: TextCreateInput;
 	/** Update document if it exists */
 	update: TextUpdateInput;
+};
+
+export type TextUpsertLocalizationInput = {
+	create: TextCreateLocalizationDataInput;
+	locale: Locale;
+	update: TextUpdateLocalizationDataInput;
 };
 
 export type TextUpsertWithNestedWhereUniqueInput = {
@@ -15322,141 +16496,112 @@ export enum _SystemDateTimeFieldVariation {
 	Localization = 'localization'
 }
 
-export type LinkFragmentFragment = {
-	__typename?: 'Link';
-	id: string;
-	label?: string | null | undefined;
-	target?:
-		| { __typename: 'BlogPost'; id: string; slug: string }
-		| { __typename: 'Page'; id: string; slug: string }
-		| null
-		| undefined;
-};
-
 export type Unnamed_1_QueryVariables = Exact<{
 	slug: Scalars['String'];
 }>;
 
 export type Unnamed_1_Query = {
 	__typename?: 'Query';
-	blogPost?:
-		| {
-				__typename?: 'BlogPost';
-				id: string;
-				slug: string;
-				teaserHeadline?: string | null | undefined;
-				teaserSubheadline?: string | null | undefined;
-				teaserText?: string | null | undefined;
-				heroBackgroundImage?: { __typename?: 'Asset'; url: string } | null | undefined;
-				modules: Array<
-					| {
-							__typename: 'AccordionContainer';
-							id: string;
-							headline?: string | null | undefined;
-							paddingTop?: Padding | null | undefined;
-							paddingBottom?: Padding | null | undefined;
-							accordionItems: Array<{
-								__typename?: 'AccordionItem';
+	blogPost?: {
+		__typename: 'BlogPost';
+		id: string;
+		slug: string;
+		teaserHeadline?: string | null;
+		teaserSubheadline?: string | null;
+		teaserText?: string | null;
+		heroBackgroundImage?: { __typename?: 'Asset'; url: string } | null;
+		modules: Array<
+			| {
+					__typename: 'AccordionContainer';
+					id: string;
+					headline?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					accordionItems: Array<{
+						__typename?: 'AccordionItem';
+						id: string;
+						headline: string;
+						content: { __typename?: 'RichText'; html: string };
+					}>;
+			  }
+			| { __typename: 'AssetLink' }
+			| {
+					__typename: 'CardsContainer';
+					id: string;
+					headline?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					cards: Array<
+						| {
+								__typename: 'CardIcon';
 								id: string;
-								headline: string;
-								content: { __typename?: 'RichText'; html: string };
-							}>;
-					  }
-					| { __typename: 'AssetLink' }
-					| {
-							__typename: 'CardsContainer';
-							id: string;
-							headline?: string | null | undefined;
-							paddingTop?: Padding | null | undefined;
-							paddingBottom?: Padding | null | undefined;
-							cards: Array<
-								| {
-										__typename: 'CardIcon';
-										id: string;
-										headline?: string | null | undefined;
-										subheadline?: string | null | undefined;
-										backgroundColor?:
-											| {
-													__typename?: 'Color';
-													hex: any;
-													rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
-											  }
-											| null
-											| undefined;
-										icon?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
-										link?:
-											| {
-													__typename?: 'Link';
-													id: string;
-													label?: string | null | undefined;
-													target?:
-														| { __typename: 'BlogPost'; id: string; slug: string }
-														| { __typename: 'Page'; id: string; slug: string }
-														| null
-														| undefined;
-											  }
-											| null
-											| undefined;
-								  }
-								| {
-										__typename: 'CardImage';
-										id: string;
-										headline?: string | null | undefined;
-										linkToId?: string | null | undefined;
-										image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
-										link?:
-											| {
-													__typename?: 'Link';
-													id: string;
-													label?: string | null | undefined;
-													target?:
-														| { __typename: 'BlogPost'; id: string; slug: string }
-														| { __typename: 'Page'; id: string; slug: string }
-														| null
-														| undefined;
-											  }
-											| null
-											| undefined;
-								  }
-							>;
-					  }
-					| { __typename: 'CtaLink'; id: string; padding: Padding }
-					| { __typename: 'Divider'; id: string; padding: Padding }
-					| {
-							__typename: 'Image';
-							id: string;
-							imageWidth?: ImageWidth | null | undefined;
-							paddingTop?: Padding | null | undefined;
-							paddingBottom?: Padding | null | undefined;
-							image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
-					  }
-					| {
-							__typename: 'Text';
-							id: string;
-							heading1?: string | null | undefined;
-							heading2?: string | null | undefined;
-							heading3?: string | null | undefined;
-							paddingTop?: Padding | null | undefined;
-							paddingBottom?: Padding | null | undefined;
-							link?:
-								| {
-										__typename?: 'Link';
-										id: string;
-										label?: string | null | undefined;
-										target?:
-											| { __typename: 'BlogPost'; id: string; slug: string }
-											| { __typename: 'Page'; id: string; slug: string }
-											| null
-											| undefined;
-								  }
-								| null
-								| undefined;
-							text?: { __typename?: 'RichText'; html: string } | null | undefined;
-					  }
-				>;
-		  }
-		| null
-		| undefined;
+								headline?: string | null;
+								subheadline?: string | null;
+								backgroundColor?: {
+									__typename?: 'Color';
+									hex: any;
+									rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
+								} | null;
+								icon?: { __typename?: 'Asset'; id: string; url: string } | null;
+								link?: {
+									__typename: 'Link';
+									id: string;
+									label?: string | null;
+									target?:
+										| { __typename: 'BlogPost'; id: string; slug: string }
+										| { __typename: 'Page'; id: string; slug: string }
+										| null;
+								} | null;
+						  }
+						| {
+								__typename: 'CardImage';
+								id: string;
+								headline?: string | null;
+								linkToId?: string | null;
+								image?: { __typename?: 'Asset'; id: string; url: string } | null;
+								link?: {
+									__typename: 'Link';
+									id: string;
+									label?: string | null;
+									target?:
+										| { __typename: 'BlogPost'; id: string; slug: string }
+										| { __typename: 'Page'; id: string; slug: string }
+										| null;
+								} | null;
+						  }
+					>;
+			  }
+			| { __typename: 'CtaLink'; id: string; padding: Padding }
+			| { __typename: 'Divider'; id: string; padding: Padding }
+			| {
+					__typename: 'Image';
+					id: string;
+					imageWidth?: ImageWidth | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					image?: { __typename?: 'Asset'; id: string; url: string } | null;
+			  }
+			| {
+					__typename: 'Text';
+					id: string;
+					heading1?: string | null;
+					heading2?: string | null;
+					heading3?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					link?: {
+						__typename: 'Link';
+						id: string;
+						label?: string | null;
+						target?:
+							| { __typename: 'BlogPost'; id: string; slug: string }
+							| { __typename: 'Page'; id: string; slug: string }
+							| null;
+					} | null;
+					text?: { __typename?: 'RichText'; html: string } | null;
+			  }
+		>;
+	} | null;
 };
 
 export type Unnamed_2_QueryVariables = Exact<{ [key: string]: never }>;
@@ -15467,11 +16612,298 @@ export type Unnamed_2_Query = {
 		__typename?: 'BlogPost';
 		id: string;
 		slug: string;
-		teaserHeadline?: string | null | undefined;
-		teaserSubheadline?: string | null | undefined;
-		teaserText?: string | null | undefined;
-		heroBackgroundImage?: { __typename?: 'Asset'; url: string } | null | undefined;
+		teaserHeadline?: string | null;
+		teaserSubheadline?: string | null;
+		teaserText?: string | null;
+		heroBackgroundImage?: { __typename?: 'Asset'; url: string } | null;
 	}>;
+};
+
+export type LinkFragmentFragment = {
+	__typename: 'Link';
+	id: string;
+	label?: string | null;
+	target?:
+		| { __typename: 'BlogPost'; id: string; slug: string }
+		| { __typename: 'Page'; id: string; slug: string }
+		| null;
+};
+
+export type PageFragmentFragment = {
+	__typename: 'Page';
+	id: string;
+	slug: string;
+	title: string;
+	description?: string | null;
+	modules: Array<
+		| {
+				__typename: 'AccordionContainer';
+				id: string;
+				headline?: string | null;
+				paddingTop?: Padding | null;
+				paddingBottom?: Padding | null;
+				accordionItems: Array<{
+					__typename?: 'AccordionItem';
+					id: string;
+					headline: string;
+					content: { __typename?: 'RichText'; html: string };
+				}>;
+		  }
+		| {
+				__typename: 'AssetLink';
+				id: string;
+				headline?: string | null;
+				downloadlinkLabel?: string | null;
+				assetPicker?: { __typename?: 'Asset'; url: string } | null;
+		  }
+		| {
+				__typename: 'BlogPost';
+				id: string;
+				slug: string;
+				teaserHeadline?: string | null;
+				teaserSubheadline?: string | null;
+				teaserText?: string | null;
+				heroBackgroundImage?: { __typename?: 'Asset'; url: string } | null;
+		  }
+		| {
+				__typename: 'CardsContainer';
+				id: string;
+				headline?: string | null;
+				paddingTop?: Padding | null;
+				paddingBottom?: Padding | null;
+				cards: Array<
+					| {
+							__typename: 'CardIcon';
+							id: string;
+							headline?: string | null;
+							subheadline?: string | null;
+							backgroundColor?: {
+								__typename?: 'Color';
+								hex: any;
+								rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
+							} | null;
+							icon?: { __typename?: 'Asset'; id: string; url: string } | null;
+							link?: {
+								__typename: 'Link';
+								id: string;
+								label?: string | null;
+								target?:
+									| { __typename: 'BlogPost'; id: string; slug: string }
+									| { __typename: 'Page'; id: string; slug: string }
+									| null;
+							} | null;
+					  }
+					| {
+							__typename: 'CardImage';
+							id: string;
+							headline?: string | null;
+							linkToId?: string | null;
+							image?: { __typename?: 'Asset'; id: string; url: string } | null;
+							link?: {
+								__typename: 'Link';
+								id: string;
+								label?: string | null;
+								target?:
+									| { __typename: 'BlogPost'; id: string; slug: string }
+									| { __typename: 'Page'; id: string; slug: string }
+									| null;
+							} | null;
+					  }
+				>;
+		  }
+		| { __typename: 'CtaLink'; id: string; headline?: string | null; padding: Padding }
+		| { __typename: 'Divider'; id: string; padding: Padding }
+		| {
+				__typename: 'Eyecatcher';
+				id: string;
+				headline?: string | null;
+				subheadline?: string | null;
+				paddingTop?: Padding | null;
+				paddingBottom?: Padding | null;
+				link?: {
+					__typename: 'Link';
+					id: string;
+					label?: string | null;
+					target?:
+						| { __typename: 'BlogPost'; id: string; slug: string }
+						| { __typename: 'Page'; id: string; slug: string }
+						| null;
+				} | null;
+				image?: { __typename?: 'Asset'; id: string; url: string } | null;
+		  }
+		| {
+				__typename: 'HeroImage';
+				id: string;
+				image?: { __typename?: 'Asset'; id: string; url: string } | null;
+				strokeColor?: {
+					__typename?: 'Color';
+					hex: any;
+					rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
+				} | null;
+				icon?: { __typename?: 'Asset'; id: string; url: string } | null;
+		  }
+		| {
+				__typename: 'Image';
+				id: string;
+				imageWidth?: ImageWidth | null;
+				paddingTop?: Padding | null;
+				paddingBottom?: Padding | null;
+				image?: { __typename?: 'Asset'; id: string; url: string } | null;
+		  }
+		| {
+				__typename: 'PartnerContainer';
+				id: string;
+				partnerItems: Array<{
+					__typename?: 'PartnerItem';
+					id: string;
+					partnerLogo?: { __typename?: 'Asset'; id: string; url: string } | null;
+					partnerDescription?: { __typename?: 'RichText'; html: string } | null;
+				}>;
+		  }
+		| {
+				__typename: 'ReferencesContainer';
+				id: string;
+				referenceItems: Array<{
+					__typename?: 'ReferencesItem';
+					id: string;
+					referenceLogo?: { __typename?: 'Asset'; id: string; url: string } | null;
+				}>;
+		  }
+		| {
+				__typename: 'Text';
+				id: string;
+				heading1?: string | null;
+				heading2?: string | null;
+				heading3?: string | null;
+				paddingTop?: Padding | null;
+				paddingBottom?: Padding | null;
+				link?: {
+					__typename: 'Link';
+					id: string;
+					label?: string | null;
+					target?:
+						| { __typename: 'BlogPost'; id: string; slug: string }
+						| { __typename: 'Page'; id: string; slug: string }
+						| null;
+				} | null;
+				text?: { __typename?: 'RichText'; html: string } | null;
+		  }
+		| {
+				__typename: 'TextAndImage';
+				id: string;
+				heading1?: string | null;
+				heading2?: string | null;
+				heading3?: string | null;
+				textImageOrientation?: ImageTextOrientation | null;
+				downloadLabel?: string | null;
+				paddingTop?: Padding | null;
+				paddingBottom?: Padding | null;
+				text?: { __typename?: 'RichText'; html: string } | null;
+				image?: { __typename?: 'Asset'; id: string; url: string } | null;
+				assetPicker?: { __typename?: 'Asset'; url: string } | null;
+		  }
+	>;
+};
+
+export type BlogPostFragmentFragment = {
+	__typename: 'BlogPost';
+	id: string;
+	slug: string;
+	teaserHeadline?: string | null;
+	teaserSubheadline?: string | null;
+	teaserText?: string | null;
+	heroBackgroundImage?: { __typename?: 'Asset'; url: string } | null;
+	modules: Array<
+		| {
+				__typename: 'AccordionContainer';
+				id: string;
+				headline?: string | null;
+				paddingTop?: Padding | null;
+				paddingBottom?: Padding | null;
+				accordionItems: Array<{
+					__typename?: 'AccordionItem';
+					id: string;
+					headline: string;
+					content: { __typename?: 'RichText'; html: string };
+				}>;
+		  }
+		| { __typename: 'AssetLink' }
+		| {
+				__typename: 'CardsContainer';
+				id: string;
+				headline?: string | null;
+				paddingTop?: Padding | null;
+				paddingBottom?: Padding | null;
+				cards: Array<
+					| {
+							__typename: 'CardIcon';
+							id: string;
+							headline?: string | null;
+							subheadline?: string | null;
+							backgroundColor?: {
+								__typename?: 'Color';
+								hex: any;
+								rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
+							} | null;
+							icon?: { __typename?: 'Asset'; id: string; url: string } | null;
+							link?: {
+								__typename: 'Link';
+								id: string;
+								label?: string | null;
+								target?:
+									| { __typename: 'BlogPost'; id: string; slug: string }
+									| { __typename: 'Page'; id: string; slug: string }
+									| null;
+							} | null;
+					  }
+					| {
+							__typename: 'CardImage';
+							id: string;
+							headline?: string | null;
+							linkToId?: string | null;
+							image?: { __typename?: 'Asset'; id: string; url: string } | null;
+							link?: {
+								__typename: 'Link';
+								id: string;
+								label?: string | null;
+								target?:
+									| { __typename: 'BlogPost'; id: string; slug: string }
+									| { __typename: 'Page'; id: string; slug: string }
+									| null;
+							} | null;
+					  }
+				>;
+		  }
+		| { __typename: 'CtaLink'; id: string; padding: Padding }
+		| { __typename: 'Divider'; id: string; padding: Padding }
+		| {
+				__typename: 'Image';
+				id: string;
+				imageWidth?: ImageWidth | null;
+				paddingTop?: Padding | null;
+				paddingBottom?: Padding | null;
+				image?: { __typename?: 'Asset'; id: string; url: string } | null;
+		  }
+		| {
+				__typename: 'Text';
+				id: string;
+				heading1?: string | null;
+				heading2?: string | null;
+				heading3?: string | null;
+				paddingTop?: Padding | null;
+				paddingBottom?: Padding | null;
+				link?: {
+					__typename: 'Link';
+					id: string;
+					label?: string | null;
+					target?:
+						| { __typename: 'BlogPost'; id: string; slug: string }
+						| { __typename: 'Page'; id: string; slug: string }
+						| null;
+				} | null;
+				text?: { __typename?: 'RichText'; html: string } | null;
+		  }
+	>;
 };
 
 export type Unnamed_3_QueryVariables = Exact<{ [key: string]: never }>;
@@ -15484,7 +16916,7 @@ export type Unnamed_3_Query = {
 		referenceItems: Array<{
 			__typename?: 'ReferencesItem';
 			id: string;
-			referenceLogo?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
+			referenceLogo?: { __typename?: 'Asset'; id: string; url: string } | null;
 		}>;
 	}>;
 };
@@ -15495,191 +16927,460 @@ export type Unnamed_4_QueryVariables = Exact<{
 
 export type Unnamed_4_Query = {
 	__typename?: 'Query';
-	page?:
-		| {
-				__typename?: 'Page';
-				id: string;
-				slug: string;
-				modules: Array<
-					| {
-							__typename: 'AccordionContainer';
-							id: string;
-							headline?: string | null | undefined;
-							paddingTop?: Padding | null | undefined;
-							paddingBottom?: Padding | null | undefined;
-							accordionItems: Array<{
-								__typename?: 'AccordionItem';
+	page?: {
+		__typename: 'Page';
+		id: string;
+		slug: string;
+		title: string;
+		description?: string | null;
+		modules: Array<
+			| {
+					__typename: 'AccordionContainer';
+					id: string;
+					headline?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					accordionItems: Array<{
+						__typename?: 'AccordionItem';
+						id: string;
+						headline: string;
+						content: { __typename?: 'RichText'; html: string };
+					}>;
+			  }
+			| {
+					__typename: 'AssetLink';
+					id: string;
+					headline?: string | null;
+					downloadlinkLabel?: string | null;
+					assetPicker?: { __typename?: 'Asset'; url: string } | null;
+			  }
+			| {
+					__typename: 'BlogPost';
+					id: string;
+					slug: string;
+					teaserHeadline?: string | null;
+					teaserSubheadline?: string | null;
+					teaserText?: string | null;
+					heroBackgroundImage?: { __typename?: 'Asset'; url: string } | null;
+			  }
+			| {
+					__typename: 'CardsContainer';
+					id: string;
+					headline?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					cards: Array<
+						| {
+								__typename: 'CardIcon';
 								id: string;
-								headline: string;
-								content: { __typename?: 'RichText'; html: string };
-							}>;
-					  }
-					| {
-							__typename: 'AssetLink';
-							id: string;
-							headline?: string | null | undefined;
-							downloadlinkLabel?: string | null | undefined;
-							assetPicker?: { __typename?: 'Asset'; url: string } | null | undefined;
-					  }
-					| {
-							__typename: 'BlogPost';
-							id: string;
-							slug: string;
-							teaserHeadline?: string | null | undefined;
-							teaserSubheadline?: string | null | undefined;
-							teaserText?: string | null | undefined;
-							heroBackgroundImage?: { __typename?: 'Asset'; url: string } | null | undefined;
-					  }
-					| {
-							__typename: 'CardsContainer';
-							id: string;
-							headline?: string | null | undefined;
-							paddingTop?: Padding | null | undefined;
-							paddingBottom?: Padding | null | undefined;
-							cards: Array<
-								| {
-										__typename: 'CardIcon';
-										id: string;
-										headline?: string | null | undefined;
-										subheadline?: string | null | undefined;
-										backgroundColor?:
-											| {
-													__typename?: 'Color';
-													hex: any;
-													rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
-											  }
-											| null
-											| undefined;
-										icon?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
-										link?:
-											| {
-													__typename?: 'Link';
-													id: string;
-													label?: string | null | undefined;
-													target?:
-														| { __typename: 'BlogPost'; id: string; slug: string }
-														| { __typename: 'Page'; id: string; slug: string }
-														| null
-														| undefined;
-											  }
-											| null
-											| undefined;
-								  }
-								| {
-										__typename: 'CardImage';
-										id: string;
-										headline?: string | null | undefined;
-										linkToId?: string | null | undefined;
-										image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
-										link?:
-											| {
-													__typename?: 'Link';
-													id: string;
-													label?: string | null | undefined;
-													target?:
-														| { __typename: 'BlogPost'; id: string; slug: string }
-														| { __typename: 'Page'; id: string; slug: string }
-														| null
-														| undefined;
-											  }
-											| null
-											| undefined;
-								  }
-							>;
-					  }
-					| { __typename: 'CtaLink'; id: string; padding: Padding }
-					| { __typename: 'Divider'; id: string; padding: Padding }
-					| {
-							__typename: 'Eyecatcher';
-							id: string;
-							headline?: string | null | undefined;
-							subheadline?: string | null | undefined;
-							paddingTop?: Padding | null | undefined;
-							paddingBottom?: Padding | null | undefined;
-							link?:
-								| {
-										__typename?: 'Link';
-										id: string;
-										label?: string | null | undefined;
-										target?:
-											| { __typename: 'BlogPost'; id: string; slug: string }
-											| { __typename: 'Page'; id: string; slug: string }
-											| null
-											| undefined;
-								  }
-								| null
-								| undefined;
-							image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
-					  }
-					| {
-							__typename: 'HeroImage';
-							id: string;
-							image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
-							strokeColor?:
-								| {
-										__typename?: 'Color';
-										hex: any;
-										rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
-								  }
-								| null
-								| undefined;
-							icon?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
-					  }
-					| {
-							__typename: 'Image';
-							id: string;
-							imageWidth?: ImageWidth | null | undefined;
-							paddingTop?: Padding | null | undefined;
-							paddingBottom?: Padding | null | undefined;
-							image?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
-					  }
-					| {
-							__typename: 'PartnerContainer';
-							id: string;
-							partnerItems: Array<{
-								__typename?: 'PartnerItem';
+								headline?: string | null;
+								subheadline?: string | null;
+								backgroundColor?: {
+									__typename?: 'Color';
+									hex: any;
+									rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
+								} | null;
+								icon?: { __typename?: 'Asset'; id: string; url: string } | null;
+								link?: {
+									__typename: 'Link';
+									id: string;
+									label?: string | null;
+									target?:
+										| { __typename: 'BlogPost'; id: string; slug: string }
+										| { __typename: 'Page'; id: string; slug: string }
+										| null;
+								} | null;
+						  }
+						| {
+								__typename: 'CardImage';
 								id: string;
-								partnerLogo?: { __typename?: 'Asset'; id: string; url: string } | null | undefined;
-								partnerDescription?: { __typename?: 'RichText'; html: string } | null | undefined;
-							}>;
-					  }
-					| {
-							__typename: 'ReferencesContainer';
-							id: string;
-							referenceItems: Array<{
-								__typename?: 'ReferencesItem';
+								headline?: string | null;
+								linkToId?: string | null;
+								image?: { __typename?: 'Asset'; id: string; url: string } | null;
+								link?: {
+									__typename: 'Link';
+									id: string;
+									label?: string | null;
+									target?:
+										| { __typename: 'BlogPost'; id: string; slug: string }
+										| { __typename: 'Page'; id: string; slug: string }
+										| null;
+								} | null;
+						  }
+					>;
+			  }
+			| { __typename: 'CtaLink'; id: string; headline?: string | null; padding: Padding }
+			| { __typename: 'Divider'; id: string; padding: Padding }
+			| {
+					__typename: 'Eyecatcher';
+					id: string;
+					headline?: string | null;
+					subheadline?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					link?: {
+						__typename: 'Link';
+						id: string;
+						label?: string | null;
+						target?:
+							| { __typename: 'BlogPost'; id: string; slug: string }
+							| { __typename: 'Page'; id: string; slug: string }
+							| null;
+					} | null;
+					image?: { __typename?: 'Asset'; id: string; url: string } | null;
+			  }
+			| {
+					__typename: 'HeroImage';
+					id: string;
+					image?: { __typename?: 'Asset'; id: string; url: string } | null;
+					strokeColor?: {
+						__typename?: 'Color';
+						hex: any;
+						rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
+					} | null;
+					icon?: { __typename?: 'Asset'; id: string; url: string } | null;
+			  }
+			| {
+					__typename: 'Image';
+					id: string;
+					imageWidth?: ImageWidth | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					image?: { __typename?: 'Asset'; id: string; url: string } | null;
+			  }
+			| {
+					__typename: 'PartnerContainer';
+					id: string;
+					partnerItems: Array<{
+						__typename?: 'PartnerItem';
+						id: string;
+						partnerLogo?: { __typename?: 'Asset'; id: string; url: string } | null;
+						partnerDescription?: { __typename?: 'RichText'; html: string } | null;
+					}>;
+			  }
+			| {
+					__typename: 'ReferencesContainer';
+					id: string;
+					referenceItems: Array<{
+						__typename?: 'ReferencesItem';
+						id: string;
+						referenceLogo?: { __typename?: 'Asset'; id: string; url: string } | null;
+					}>;
+			  }
+			| {
+					__typename: 'Text';
+					id: string;
+					heading1?: string | null;
+					heading2?: string | null;
+					heading3?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					link?: {
+						__typename: 'Link';
+						id: string;
+						label?: string | null;
+						target?:
+							| { __typename: 'BlogPost'; id: string; slug: string }
+							| { __typename: 'Page'; id: string; slug: string }
+							| null;
+					} | null;
+					text?: { __typename?: 'RichText'; html: string } | null;
+			  }
+			| {
+					__typename: 'TextAndImage';
+					id: string;
+					heading1?: string | null;
+					heading2?: string | null;
+					heading3?: string | null;
+					textImageOrientation?: ImageTextOrientation | null;
+					downloadLabel?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					text?: { __typename?: 'RichText'; html: string } | null;
+					image?: { __typename?: 'Asset'; id: string; url: string } | null;
+					assetPicker?: { __typename?: 'Asset'; url: string } | null;
+			  }
+		>;
+	} | null;
+};
+
+export type Unnamed_5_QueryVariables = Exact<{ [key: string]: never }>;
+
+export type Unnamed_5_Query = {
+	__typename?: 'Query';
+	pages: Array<{
+		__typename: 'Page';
+		id: string;
+		slug: string;
+		title: string;
+		description?: string | null;
+		modules: Array<
+			| {
+					__typename: 'AccordionContainer';
+					id: string;
+					headline?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					accordionItems: Array<{
+						__typename?: 'AccordionItem';
+						id: string;
+						headline: string;
+						content: { __typename?: 'RichText'; html: string };
+					}>;
+			  }
+			| {
+					__typename: 'AssetLink';
+					id: string;
+					headline?: string | null;
+					downloadlinkLabel?: string | null;
+					assetPicker?: { __typename?: 'Asset'; url: string } | null;
+			  }
+			| {
+					__typename: 'BlogPost';
+					id: string;
+					slug: string;
+					teaserHeadline?: string | null;
+					teaserSubheadline?: string | null;
+					teaserText?: string | null;
+					heroBackgroundImage?: { __typename?: 'Asset'; url: string } | null;
+			  }
+			| {
+					__typename: 'CardsContainer';
+					id: string;
+					headline?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					cards: Array<
+						| {
+								__typename: 'CardIcon';
 								id: string;
-								referenceLogo?:
-									| { __typename?: 'Asset'; id: string; url: string }
-									| null
-									| undefined;
-							}>;
-					  }
-					| {
-							__typename: 'Text';
-							id: string;
-							heading1?: string | null | undefined;
-							heading2?: string | null | undefined;
-							heading3?: string | null | undefined;
-							paddingTop?: Padding | null | undefined;
-							paddingBottom?: Padding | null | undefined;
-							link?:
-								| {
-										__typename?: 'Link';
-										id: string;
-										label?: string | null | undefined;
-										target?:
-											| { __typename: 'BlogPost'; id: string; slug: string }
-											| { __typename: 'Page'; id: string; slug: string }
-											| null
-											| undefined;
-								  }
-								| null
-								| undefined;
-							text?: { __typename?: 'RichText'; html: string } | null | undefined;
-					  }
-				>;
-		  }
-		| null
-		| undefined;
+								headline?: string | null;
+								subheadline?: string | null;
+								backgroundColor?: {
+									__typename?: 'Color';
+									hex: any;
+									rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
+								} | null;
+								icon?: { __typename?: 'Asset'; id: string; url: string } | null;
+								link?: {
+									__typename: 'Link';
+									id: string;
+									label?: string | null;
+									target?:
+										| { __typename: 'BlogPost'; id: string; slug: string }
+										| { __typename: 'Page'; id: string; slug: string }
+										| null;
+								} | null;
+						  }
+						| {
+								__typename: 'CardImage';
+								id: string;
+								headline?: string | null;
+								linkToId?: string | null;
+								image?: { __typename?: 'Asset'; id: string; url: string } | null;
+								link?: {
+									__typename: 'Link';
+									id: string;
+									label?: string | null;
+									target?:
+										| { __typename: 'BlogPost'; id: string; slug: string }
+										| { __typename: 'Page'; id: string; slug: string }
+										| null;
+								} | null;
+						  }
+					>;
+			  }
+			| { __typename: 'CtaLink'; id: string; headline?: string | null; padding: Padding }
+			| { __typename: 'Divider'; id: string; padding: Padding }
+			| {
+					__typename: 'Eyecatcher';
+					id: string;
+					headline?: string | null;
+					subheadline?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					link?: {
+						__typename: 'Link';
+						id: string;
+						label?: string | null;
+						target?:
+							| { __typename: 'BlogPost'; id: string; slug: string }
+							| { __typename: 'Page'; id: string; slug: string }
+							| null;
+					} | null;
+					image?: { __typename?: 'Asset'; id: string; url: string } | null;
+			  }
+			| {
+					__typename: 'HeroImage';
+					id: string;
+					image?: { __typename?: 'Asset'; id: string; url: string } | null;
+					strokeColor?: {
+						__typename?: 'Color';
+						hex: any;
+						rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
+					} | null;
+					icon?: { __typename?: 'Asset'; id: string; url: string } | null;
+			  }
+			| {
+					__typename: 'Image';
+					id: string;
+					imageWidth?: ImageWidth | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					image?: { __typename?: 'Asset'; id: string; url: string } | null;
+			  }
+			| {
+					__typename: 'PartnerContainer';
+					id: string;
+					partnerItems: Array<{
+						__typename?: 'PartnerItem';
+						id: string;
+						partnerLogo?: { __typename?: 'Asset'; id: string; url: string } | null;
+						partnerDescription?: { __typename?: 'RichText'; html: string } | null;
+					}>;
+			  }
+			| {
+					__typename: 'ReferencesContainer';
+					id: string;
+					referenceItems: Array<{
+						__typename?: 'ReferencesItem';
+						id: string;
+						referenceLogo?: { __typename?: 'Asset'; id: string; url: string } | null;
+					}>;
+			  }
+			| {
+					__typename: 'Text';
+					id: string;
+					heading1?: string | null;
+					heading2?: string | null;
+					heading3?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					link?: {
+						__typename: 'Link';
+						id: string;
+						label?: string | null;
+						target?:
+							| { __typename: 'BlogPost'; id: string; slug: string }
+							| { __typename: 'Page'; id: string; slug: string }
+							| null;
+					} | null;
+					text?: { __typename?: 'RichText'; html: string } | null;
+			  }
+			| {
+					__typename: 'TextAndImage';
+					id: string;
+					heading1?: string | null;
+					heading2?: string | null;
+					heading3?: string | null;
+					textImageOrientation?: ImageTextOrientation | null;
+					downloadLabel?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					text?: { __typename?: 'RichText'; html: string } | null;
+					image?: { __typename?: 'Asset'; id: string; url: string } | null;
+					assetPicker?: { __typename?: 'Asset'; url: string } | null;
+			  }
+		>;
+	}>;
+	blogPosts: Array<{
+		__typename: 'BlogPost';
+		id: string;
+		slug: string;
+		teaserHeadline?: string | null;
+		teaserSubheadline?: string | null;
+		teaserText?: string | null;
+		heroBackgroundImage?: { __typename?: 'Asset'; url: string } | null;
+		modules: Array<
+			| {
+					__typename: 'AccordionContainer';
+					id: string;
+					headline?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					accordionItems: Array<{
+						__typename?: 'AccordionItem';
+						id: string;
+						headline: string;
+						content: { __typename?: 'RichText'; html: string };
+					}>;
+			  }
+			| { __typename: 'AssetLink' }
+			| {
+					__typename: 'CardsContainer';
+					id: string;
+					headline?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					cards: Array<
+						| {
+								__typename: 'CardIcon';
+								id: string;
+								headline?: string | null;
+								subheadline?: string | null;
+								backgroundColor?: {
+									__typename?: 'Color';
+									hex: any;
+									rgba: { __typename?: 'RGBA'; r: any; g: any; b: any; a: any };
+								} | null;
+								icon?: { __typename?: 'Asset'; id: string; url: string } | null;
+								link?: {
+									__typename: 'Link';
+									id: string;
+									label?: string | null;
+									target?:
+										| { __typename: 'BlogPost'; id: string; slug: string }
+										| { __typename: 'Page'; id: string; slug: string }
+										| null;
+								} | null;
+						  }
+						| {
+								__typename: 'CardImage';
+								id: string;
+								headline?: string | null;
+								linkToId?: string | null;
+								image?: { __typename?: 'Asset'; id: string; url: string } | null;
+								link?: {
+									__typename: 'Link';
+									id: string;
+									label?: string | null;
+									target?:
+										| { __typename: 'BlogPost'; id: string; slug: string }
+										| { __typename: 'Page'; id: string; slug: string }
+										| null;
+								} | null;
+						  }
+					>;
+			  }
+			| { __typename: 'CtaLink'; id: string; padding: Padding }
+			| { __typename: 'Divider'; id: string; padding: Padding }
+			| {
+					__typename: 'Image';
+					id: string;
+					imageWidth?: ImageWidth | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					image?: { __typename?: 'Asset'; id: string; url: string } | null;
+			  }
+			| {
+					__typename: 'Text';
+					id: string;
+					heading1?: string | null;
+					heading2?: string | null;
+					heading3?: string | null;
+					paddingTop?: Padding | null;
+					paddingBottom?: Padding | null;
+					link?: {
+						__typename: 'Link';
+						id: string;
+						label?: string | null;
+						target?:
+							| { __typename: 'BlogPost'; id: string; slug: string }
+							| { __typename: 'Page'; id: string; slug: string }
+							| null;
+					} | null;
+					text?: { __typename?: 'RichText'; html: string } | null;
+			  }
+		>;
+	}>;
 };
