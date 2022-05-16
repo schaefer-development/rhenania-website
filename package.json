@@ -44,6 +44,7 @@
 		"@fontsource/red-hat-text": "^4.5.6",
 		"@splidejs/splide-extension-auto-scroll": "^0.4.2",
 		"@splidejs/svelte-splide": "^0.1.17",
+		"nodemailer": "^6.7.3"
 		"graphql": "^16.3.0",
 		"leaflet": "^1.7.1",
 		"svelte-i18n": "^3.4.0"
