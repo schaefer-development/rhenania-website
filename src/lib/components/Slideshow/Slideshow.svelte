@@ -17,9 +17,9 @@
 			}
 		}}
 	>
-		<div class="splide__arrows" slot="before-track">
+		<!--<div class="splide__arrows" slot="before-track">
 			<button type="button" aria-label="Previous slide">
-				<!-- Generator: Adobe Illustrator 24.2.0, SVG Export Plug-In  -->
+				
 				<svg
 					version="1.1"
 					xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@
 			</button>
 
 			<button type="button" aria-label="Next slide">
-				<!-- Generator: Adobe Illustrator 24.2.0, SVG Export Plug-In  -->
+				
 				<svg
 					version="1.1"
 					xmlns="http://www.w3.org/2000/svg"
@@ -65,14 +65,14 @@
 					<polygon class="arrow" points="1.4,39.4 0,38.1 18.3,19.7 0,1.4 1.4,0 21.1,19.7 " />
 				</svg>
 			</button>
-		</div>
+		</div>-->
 
 		{#each referenceItems as referenceItem (referenceItem.id)}
 			<SplideSlide data-splide-interval="9000">
 				<img
 					src={referenceItem.referenceLogo.url}
 					alt="Kundenlogos von Rhenania Computer GmbH"
-					class="w-10/12 mx-auto"
+					class="w-9/12 mx-auto"
 				/>
 			</SplideSlide>
 		{/each}
