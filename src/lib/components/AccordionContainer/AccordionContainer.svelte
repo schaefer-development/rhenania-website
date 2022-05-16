@@ -12,14 +12,28 @@
 			<h1 class="rc_h1 text-rc_darkblue pb-8">{module.headline}</h1>
 			{#each module.accordionItems as accordionItem (accordionItem.id)}
 
+
+			{#if accordionItem.textImageOrientation === 'ImageLeftAndTextRight'}
 				<Accordion id={accordionItem.id}>
-					<span slot="headline" class="item_headline">{accordionItem.heading1}</span>
+					<span slot="headline" class="item_headline">{accordionItem.heading1} ImageLeftAndTextRight</span>
 					<div slot="content" class="item_content">
 						{@html accordionItem.content.html}
 					</div>
 				</Accordion>
+				{/if}
 
-		
+
+				{#if accordionItem.textImageOrientation === 'ImageRightAndTextLeft'}
+				<Accordion id={accordionItem.id}>
+					<span slot="headline" class="item_headline">{accordionItem.heading1} ImageRightAndTextLeft</span>
+					<div slot="content" class="item_content">
+						{@html accordionItem.content.html}
+					</div>
+				</Accordion>
+				{/if}
+
+
+
 			{/each}
 		</div>
 	</div>
