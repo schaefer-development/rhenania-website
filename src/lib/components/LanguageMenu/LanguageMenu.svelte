@@ -13,7 +13,7 @@
 		};
 </script>
 
-<div class="languageMenu">
+<div class="languageMenu flex flex-row">
 	{#each locales as locale (locale.code)}
 		{#if locale.code !== $page.params.lang}
 			<a

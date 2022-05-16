@@ -4,6 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.splide__arrow svg path {
+	fill: white;
+}
+
+.splide__arrow.splide__arrow--prev {
+	margin-left: -2rem;
+}
+
+.splide__arrow.splide__arrow--next {
+	margin-right: -1.5rem;
+}
+
 html {
 	scroll-behavior: smooth;
 }

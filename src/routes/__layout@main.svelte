@@ -7,7 +7,12 @@
 		if (res.ok) {
 			const { data } = await res.json();
 			return {
-				props: { data }
+				props: { data },
+				stuff: {
+					title: 'Rhenania Computer',
+					description:
+						'RC Rhenania Computer optimiert Ihren Versand. Softwarelösungen für die Versandlogistik und die Versandoptimierung seit mehr als 30 Jahren. Mehr erfahren'
+				}
 			};
 		}
 
@@ -31,6 +36,7 @@
 	import Footer from '$lib/components/Footer/Footer.svelte';
 	import LoadingIndicator from '$lib/components/LoadingIndicator/LoadingIndicator.svelte';
 	import { navigating } from '$app/stores';
+	import { page } from '$app/stores';
 
 	let openMenuFull = false;
 	const toggleMenuFull = () => {
@@ -42,11 +48,8 @@
 </script>
 
 <svelte:head>
-	<title>Rhenania Computer</title>
-	<meta
-		name="description"
-		content="Software aus Aegidenberg (Bad Honnef) zum Optimieren des Versandprozesses "
-	/>
+	<title>{$page.stuff['title'] ?? 'Rhenania Computer'}</title>
+	<meta name="description" content={$page.stuff['description'] ?? ''} />
 </svelte:head>
 
 <div

@@ -152,11 +152,6 @@
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Download</a
 				>
-				<a
-					href={$linkTo('/faq/')}
-					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-					>FAQ</a
-				>
 				<!-- right end -->
 			</div>
 		</div>

@@ -6,7 +6,7 @@
 	locales.forEach(({ code, importFunction }) => register(code, importFunction));
 
 	export const load: Load = async ({ params }) => {
-		init({
+		await init({
 			fallbackLocale,
 			initialLocale: params.lang
 		});

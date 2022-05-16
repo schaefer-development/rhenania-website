@@ -1,5 +1,13 @@
 <script context="module" lang="ts">
 	export const prerender = true;
+	import type { Load } from '@sveltejs/kit';
+	export const load: Load = async () => {
+		const title = 'Datenschutz | Rhenania';
+		const description = 'Uns sind Ihre Daten wichtig';
+		return {
+			stuff: { title, description }
+		};
+	};
 </script>
 
 <div
