@@ -2,7 +2,7 @@
 	export let id;
 </script>
 
-<div class="mod_accordion relative tab w-full overflow-hidden pb-4">
+<div class="mod_accordion relative tab w-full overflow-hidden h-auto pb-4 block">
 	<input class="absolute opacity-0 " {id} type="checkbox" name="tabs" />
 	<label class="cursor-pointer flex border-b-2 py-2" for={id}>
 		<div class="w-full font-bold"><slot name="headline" /></div>
@@ -23,7 +23,7 @@
 			</svg>
 		</div>
 	</label>
-	<div class="tab-content">
+	<div class="tab-content h-auto">
 		<div class="pt-4 pb-8"><slot name="content" /></div>
 	</div>
 </div>

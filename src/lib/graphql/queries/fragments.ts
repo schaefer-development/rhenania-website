@@ -94,6 +94,9 @@ export const pageFragment = gql`
 			... on AccordionContainer {
 				id
 				headline
+				introOptional {
+					html
+				}
 				paddingTop
 				paddingBottom
 				accordionItems {
