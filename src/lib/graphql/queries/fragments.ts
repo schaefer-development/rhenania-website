@@ -113,7 +113,6 @@ export const pageFragment = gql`
 					assetPicker {
 						url
 					}
-
 				}
 			}
 			... on Image {
