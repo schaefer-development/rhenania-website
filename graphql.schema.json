@@ -403,6 +403,18 @@
             "deprecationReason": null
           },
           {
+            "name": "introOptional",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "RichText",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "paddingBottom",
             "description": null,
             "args": [],
@@ -852,6 +864,18 @@
             "type": {
               "kind": "SCALAR",
               "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "introOptional",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "RichTextAST",
               "ofType": null
             },
             "defaultValue": null,
@@ -2129,6 +2153,18 @@
             "deprecationReason": null
           },
           {
+            "name": "introOptional",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "RichTextAST",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "paddingBottom",
             "description": null,
             "type": {
@@ -2332,6 +2368,18 @@
             "type": {
               "kind": "SCALAR",
               "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "introOptional",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "RichTextAST",
               "ofType": null
             },
             "defaultValue": null,
@@ -127014,6 +127062,18 @@
             "type": {
               "kind": "ENUM",
               "name": "_SystemDateTimeFieldVariation",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "unionFieldDetailsForVirtualMemberSide",
+            "description": "main side details of union field on component",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
               "ofType": null
             },
             "defaultValue": null,
