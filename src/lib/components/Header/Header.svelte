@@ -114,16 +114,16 @@
 				</button>
 
 				<!-- end of menu points -->
-				
+
 				<div class="pl-6">
 					<LanguageMenu />
 				</div>
 			</div>
 
 			<div id="menu_mobil" class="visible block lg:invisible lg:hidden flex">
-					<div class="flex items-center px-2 sm:px-4 md:px-8">
+				<div class="flex items-center px-2 sm:px-4 md:px-8">
 					<LanguageMenu />
-				</div> 
+				</div>
 
 				<button
 					on:click={toggleMenuFull}
