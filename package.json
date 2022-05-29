@@ -39,7 +39,8 @@
 		"svelte-preprocess": "^4.10.6",
 		"tailwindcss": "^3.0.24",
 		"tslib": "^2.3.1",
-		"typescript": "^4.6.3"
+		"typescript": "^4.6.3",
+		"svelte-hcaptcha": "^0.1.1"
 	},
 	"dependencies": {
 		"@fontsource/red-hat-text": "^4.5.6",
@@ -48,6 +49,7 @@
 		"graphql": "^16.3.0",
 		"leaflet": "^1.7.1",
 		"nodemailer": "^6.7.3",
-		"svelte-i18n": "^3.4.0"
+		"svelte-i18n": "^3.4.0",
+		"hcaptcha": "^0.1.1"
 	}
 }
