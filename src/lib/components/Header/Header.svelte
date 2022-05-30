@@ -8,7 +8,6 @@
 	import ProductMenu from '$lib/components/Drawer/ProductMenu.svelte';
 	import CompanyMenu from '$lib/components/Drawer/CompanyMenu.svelte';
 	import ServiceMenu from '$lib/components/Drawer/ServiceMenu.svelte';
-	import LanguageMenu from '$lib/components/LanguageMenu/LanguageMenu.svelte';
 
 	import MobileDrawer from '$lib/components/Drawer/Mobile/MobileDrawer.svelte';
 
@@ -114,17 +113,9 @@
 				</button>
 
 				<!-- end of menu points -->
-
-				<div class="pl-6">
-					<LanguageMenu />
-				</div>
 			</div>
 
 			<div id="menu_mobil" class="visible block lg:invisible lg:hidden flex">
-				<div class="flex items-center px-2 sm:px-4 md:px-8">
-					<LanguageMenu />
-				</div>
-
 				<button
 					on:click={toggleMenuFull}
 					class="text-rc_red flex w-full items-center justify-end focus:border-0 uppercase font-medium tracking-wider hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red "
