@@ -4,6 +4,8 @@ import { dev } from '$app/env';
 import nodemailer from 'nodemailer';
 import type { Email } from '$lib/mail';
 import email, { defaults } from '$lib/mail';
+import { verify } from 'hcaptcha';
+import { HCAPTCHA_SECRET } from '$lib/env';
 
 const transporter = nodemailer.createTransport({
 	host: SMTP_HOST,
@@ -17,13 +19,24 @@ const transporter = nodemailer.createTransport({
 	}
 });
 
-const formData = ([request]: Parameters<typeof post>): Email => ({
-	firma: request.body.get('firma'),
-	name: request.body.get('name'),
-	emailAdresse: request.body.get('emailAdresse'),
-	telefon: request.body.get('telefon'),
-	nachricht: request.body.get('nachricht')
-});
+const toString: (formData: FormData, keys: string) => string = (formData, key) => {
+	const entry = formData.get(key);
+	if (typeof entry !== 'string') return '';
+	return entry;
+};
+
+const formData = async (request: Request): Promise<Email> => {
+	const fd = await request.formData();
+	const verificationData = await verify(HCAPTCHA_SECRET, toString(fd, 'h-captcha-response'));
+	if (!verificationData.success) throw new Error('HCaptcha Verification failed');
+	return {
+		firma: toString(fd, 'firma'),
+		name: toString(fd, 'name'),
+		emailAdresse: toString(fd, 'emailAdresse'),
+		telefon: toString(fd, 'telefon'),
+		nachricht: toString(fd, 'nachricht')
+	};
+};
 
 const errorBody = `
 <p>Beim Versenden der Best&auml;tigungs-Email ist etwas schiefgegangen</p>
@@ -31,9 +44,10 @@ const errorBody = `
 `;
 
 // POST /:seminarFormat/:url/anmeldung.json
-export const post: RequestHandler<unknown, FormData> = async (...args) => {
-	const { messageId } = await transporter.sendMail(email(formData(args)));
-	const ok = { status: 303, headers: { location: '/kontakt/ok' } };
+export const post: RequestHandler = async ({ request }) => {
+	const emailPayload = await formData(request);
+	const { messageId } = await transporter.sendMail(email(emailPayload));
+	const ok = { status: 303, headers: { location: './kontakt/ok' } };
 	const error = { status: 500, body: errorBody };
 	const response = messageId ? ok : error;
 	return response;
