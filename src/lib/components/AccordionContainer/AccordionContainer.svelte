@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Accordion from '$lib/components/Accordion/Accordion.svelte';
+	import AccordionItem from '$lib/components/AccordionItem/AccordionItem.svelte';
 	import type { AccordionContainer } from '$lib/graphql/generated/schema';
 	import { mapPadding } from '$lib/helpers';
 	export let module: Partial<AccordionContainer> = {};
@@ -20,7 +20,7 @@
 
 			{#each module.accordionItems as accordionItem (accordionItem.id)}
 				{#if accordionItem.textImageOrientation === 'ImageLeftAndTextRight'}
-					<Accordion id={accordionItem.id}>
+					<AccordionItem {accordionItem}>
 						<span slot="headline" class="item_headline">{accordionItem.heading1}</span>
 						<div slot="content" class="item_content">
 							<div
@@ -74,11 +74,11 @@
 								</div>
 							</div>
 						</div>
-					</Accordion>
+					</AccordionItem>
 				{/if}
 
 				{#if accordionItem.textImageOrientation === 'ImageRightAndTextLeft'}
-					<Accordion id={accordionItem.id}>
+					<AccordionItem {accordionItem}>
 						<span slot="headline" class="item_headline">{accordionItem.heading1}</span>
 						<div slot="content" class="item_content">
 							<div
@@ -132,11 +132,11 @@
 								</div>
 							</div>
 						</div>
-					</Accordion>
+					</AccordionItem>
 				{/if}
 
 				{#if accordionItem.textImageOrientation === 'OnlyText'}
-					<Accordion id={accordionItem.id}>
+					<AccordionItem {accordionItem}>
 						<span slot="headline" class="item_headline">{accordionItem.heading1}</span>
 						<div slot="content" class="item_content">
 							{#if accordionItem.heading1}
@@ -175,7 +175,7 @@
 								</div>
 							{/if}
 						</div>
-					</Accordion>
+					</AccordionItem>
 				{/if}
 			{/each}
 		</div>

@@ -1,10 +1,12 @@
-<script>
-	export let id;
+<script lang="ts">
+	import TextAndImage from '$lib/components/TextAndImage/TextAndImage.svelte';
+	import type { AccordionItem } from '$lib/graphql/generated/schema';
+	export let accordionItem: Partial<AccordionItem>;
 </script>
 
 <div class="mod_accordion relative tab w-full overflow-hidden h-auto pb-4 block">
-	<input class="absolute opacity-0 " {id} type="checkbox" name="tabs" />
-	<label class="cursor-pointer flex border-b-2 py-2" for={id}>
+	<input class="absolute opacity-0 " id={accordionItem.id} type="checkbox" name="tabs" />
+	<label class="cursor-pointer flex border-b-2 py-2" for={accordionItem.id}>
 		<div class="w-full font-bold"><slot name="headline" /></div>
 		<div class="icon">
 			<svg
@@ -26,6 +28,9 @@
 	<div class="tab-content h-auto">
 		<div class="pt-4 pb-8"><slot name="content" /></div>
 	</div>
+	{#each accordionItem.textAndImages as textAndImage (textAndImage.id)}
+		<TextAndImage module={textAndImage} />
+	{/each}
 </div>
 
 <style>

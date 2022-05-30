@@ -1,7 +1,15 @@
 import { gql } from '$lib/helpers';
-import { linkFragment, pageFragment, blogPostFragment } from './fragments';
+import {
+	linkFragment,
+	textAndImageFragment,
+	accordingContainerFragment,
+	pageFragment,
+	blogPostFragment
+} from './fragments';
 export const SEARCH = gql`
 	${linkFragment}
+	${textAndImageFragment}
+	${accordingContainerFragment}
 	${pageFragment}
 	${blogPostFragment}
 

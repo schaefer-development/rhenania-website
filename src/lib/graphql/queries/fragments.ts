@@ -1,4 +1,60 @@
 import { gql } from '$lib/helpers';
+export const textAndImageFragment = gql`
+	fragment textAndImageFragment on TextAndImage {
+		id
+		heading1
+		heading2
+		heading3
+		text {
+			html
+		}
+		image {
+			id
+			url
+		}
+		textImageOrientation
+		downloadLabel
+		assetPicker {
+			url
+		}
+		paddingTop
+		paddingBottom
+	}
+`;
+
+export const accordingContainerFragment = gql`
+	fragment accordingContainerFragment on AccordionContainer {
+		id
+		headline
+		introOptional {
+			html
+		}
+		paddingTop
+		paddingBottom
+		accordionItems {
+			id
+			heading1
+			heading2
+			heading3
+			content {
+				html
+			}
+			image {
+				id
+				url
+			}
+			textImageOrientation
+			downloadLabel
+			assetPicker {
+				url
+			}
+			textAndImages {
+				...textAndImageFragment
+			}
+		}
+	}
+`;
+
 export const linkFragment = gql`
 	fragment linkFragment on Link {
 		__typename
@@ -40,24 +96,7 @@ export const pageFragment = gql`
 				padding
 			}
 			... on TextAndImage {
-				id
-				heading1
-				heading2
-				heading3
-				text {
-					html
-				}
-				image {
-					id
-					url
-				}
-				textImageOrientation
-				downloadLabel
-				assetPicker {
-					url
-				}
-				paddingTop
-				paddingBottom
+				...textAndImageFragment
 			}
 			... on CtaLink {
 				id
@@ -92,31 +131,7 @@ export const pageFragment = gql`
 				}
 			}
 			... on AccordionContainer {
-				id
-				headline
-				introOptional {
-					html
-				}
-				paddingTop
-				paddingBottom
-				accordionItems {
-					id
-					heading1
-					heading2
-					heading3
-					content {
-						html
-					}
-					image {
-						id
-						url
-					}
-					textImageOrientation
-					downloadLabel
-					assetPicker {
-						url
-					}
-				}
+				...accordingContainerFragment
 			}
 			... on Image {
 				id
@@ -274,28 +289,7 @@ export const blogPostFragment = gql`
 				}
 			}
 			... on AccordionContainer {
-				id
-				headline
-				paddingTop
-				paddingBottom
-				accordionItems {
-					id
-					heading1
-					heading2
-					heading3
-					content {
-						html
-					}
-					image {
-						id
-						url
-					}
-					textImageOrientation
-					downloadLabel
-					assetPicker {
-						url
-					}
-				}
+				...accordingContainerFragment
 			}
 			... on CardsContainer {
 				id
