@@ -26,11 +26,15 @@
 		</div>
 	</label>
 	<div class="tab-content h-auto">
-		<div class="pt-4 pb-8"><slot name="content" /></div>
+		<div class="pt-4 pb-8">
+			<slot name="content" />
+		</div>
+		<!-- -->
+		{#each accordionItem.textAndImages as textAndImage (textAndImage.id)}
+			<TextAndImage module={textAndImage} />
+		{/each}
+		<!-- -->
 	</div>
-	{#each accordionItem.textAndImages as textAndImage (textAndImage.id)}
-		<TextAndImage module={textAndImage} />
-	{/each}
 </div>
 
 <style>
@@ -42,7 +46,7 @@
 	}
 	/* :checked - resize to full height */
 	.tab input:checked ~ .tab-content {
-		max-height: 300vh;
+		max-height: 1000vh;
 	}
 
 	.tab input[type='checkbox'] + label .icon {

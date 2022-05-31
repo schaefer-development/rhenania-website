@@ -21,7 +21,7 @@
 			{#each module.accordionItems as accordionItem (accordionItem.id)}
 				{#if accordionItem.textImageOrientation === 'ImageLeftAndTextRight'}
 					<AccordionItem {accordionItem}>
-						<span slot="headline" class="item_headline">{accordionItem.heading1}</span>
+						<span slot="headline" class="item_headline">{module.headline}</span>
 						<div slot="content" class="item_content">
 							<div
 								class="flex items-center flex-col pb-8 md:pb-0 gap-y-10 gap-x md:gap-x-20 md:flex-row"
@@ -79,7 +79,7 @@
 
 				{#if accordionItem.textImageOrientation === 'ImageRightAndTextLeft'}
 					<AccordionItem {accordionItem}>
-						<span slot="headline" class="item_headline">{accordionItem.heading1}</span>
+						<span slot="headline" class="item_headline">{module.headline}</span>
 						<div slot="content" class="item_content">
 							<div
 								class="flex items-center flex-col flex-col-reverse pb-8 md:pb-0 gap-y-10 gap-x md:gap-x-20 md:flex-row"
