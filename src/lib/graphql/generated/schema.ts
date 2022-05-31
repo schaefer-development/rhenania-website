@@ -529,6 +529,7 @@ export type AccordionItem = Node & {
 	scheduledIn: Array<ScheduledOperation>;
 	/** System stage field */
 	stage: Stage;
+	textAndImages: Array<TextAndImage>;
 	textImageOrientation?: Maybe<ImageTextOrientation>;
 	/** The time the document was updated */
 	updatedAt: Scalars['DateTime'];
@@ -578,6 +579,17 @@ export type AccordionItemScheduledInArgs = {
 	where?: InputMaybe<ScheduledOperationWhereInput>;
 };
 
+export type AccordionItemTextAndImagesArgs = {
+	after?: InputMaybe<Scalars['String']>;
+	before?: InputMaybe<Scalars['String']>;
+	first?: InputMaybe<Scalars['Int']>;
+	last?: InputMaybe<Scalars['Int']>;
+	locales?: InputMaybe<Array<Locale>>;
+	orderBy?: InputMaybe<TextAndImageOrderByInput>;
+	skip?: InputMaybe<Scalars['Int']>;
+	where?: InputMaybe<TextAndImageWhereInput>;
+};
+
 export type AccordionItemUpdatedByArgs = {
 	locales?: InputMaybe<Array<Locale>>;
 };
@@ -610,6 +622,7 @@ export type AccordionItemCreateInput = {
 	heading3?: InputMaybe<Scalars['String']>;
 	headline?: InputMaybe<Scalars['String']>;
 	image?: InputMaybe<AssetCreateOneInlineInput>;
+	textAndImages?: InputMaybe<TextAndImageCreateManyInlineInput>;
 	textImageOrientation?: InputMaybe<ImageTextOrientation>;
 	updatedAt?: InputMaybe<Scalars['DateTime']>;
 };
@@ -799,6 +812,9 @@ export type AccordionItemManyWhereInput = {
 	scheduledIn_every?: InputMaybe<ScheduledOperationWhereInput>;
 	scheduledIn_none?: InputMaybe<ScheduledOperationWhereInput>;
 	scheduledIn_some?: InputMaybe<ScheduledOperationWhereInput>;
+	textAndImages_every?: InputMaybe<TextAndImageWhereInput>;
+	textAndImages_none?: InputMaybe<TextAndImageWhereInput>;
+	textAndImages_some?: InputMaybe<TextAndImageWhereInput>;
 	textImageOrientation?: InputMaybe<ImageTextOrientation>;
 	/** All values that are contained in given list. */
 	textImageOrientation_in?: InputMaybe<Array<ImageTextOrientation>>;
@@ -857,6 +873,7 @@ export type AccordionItemUpdateInput = {
 	heading3?: InputMaybe<Scalars['String']>;
 	headline?: InputMaybe<Scalars['String']>;
 	image?: InputMaybe<AssetUpdateOneInlineInput>;
+	textAndImages?: InputMaybe<TextAndImageUpdateManyInlineInput>;
 	textImageOrientation?: InputMaybe<ImageTextOrientation>;
 };
 
@@ -1092,6 +1109,9 @@ export type AccordionItemWhereInput = {
 	scheduledIn_every?: InputMaybe<ScheduledOperationWhereInput>;
 	scheduledIn_none?: InputMaybe<ScheduledOperationWhereInput>;
 	scheduledIn_some?: InputMaybe<ScheduledOperationWhereInput>;
+	textAndImages_every?: InputMaybe<TextAndImageWhereInput>;
+	textAndImages_none?: InputMaybe<TextAndImageWhereInput>;
+	textAndImages_some?: InputMaybe<TextAndImageWhereInput>;
 	textImageOrientation?: InputMaybe<ImageTextOrientation>;
 	/** All values that are contained in given list. */
 	textImageOrientation_in?: InputMaybe<Array<ImageTextOrientation>>;
@@ -15252,6 +15272,7 @@ export type TextAndImageConnection = {
 
 export type TextAndImageCreateInput = {
 	assetPicker?: InputMaybe<AssetCreateOneInlineInput>;
+	cl3ta0h2abkrl01xk4uim4gc0?: InputMaybe<AccordionItemCreateManyInlineInput>;
 	createdAt?: InputMaybe<Scalars['DateTime']>;
 	downloadLabel?: InputMaybe<Scalars['String']>;
 	heading1?: InputMaybe<Scalars['String']>;
@@ -15498,6 +15519,7 @@ export enum TextAndImageOrderByInput {
 
 export type TextAndImageUpdateInput = {
 	assetPicker?: InputMaybe<AssetUpdateOneInlineInput>;
+	cl3ta0h2abkrl01xk4uim4gc0?: InputMaybe<AccordionItemUpdateManyInlineInput>;
 	downloadLabel?: InputMaybe<Scalars['String']>;
 	heading1?: InputMaybe<Scalars['String']>;
 	heading2?: InputMaybe<Scalars['String']>;
@@ -16778,6 +16800,7 @@ export type Unnamed_1_Query = {
 					headline?: string | null;
 					paddingTop?: Padding | null;
 					paddingBottom?: Padding | null;
+					introOptional?: { __typename?: 'RichText'; html: string } | null;
 					accordionItems: Array<{
 						__typename?: 'AccordionItem';
 						id: string;
@@ -16789,6 +16812,20 @@ export type Unnamed_1_Query = {
 						content: { __typename?: 'RichText'; html: string };
 						image?: { __typename?: 'Asset'; id: string; url: string } | null;
 						assetPicker?: { __typename?: 'Asset'; url: string } | null;
+						textAndImages: Array<{
+							__typename?: 'TextAndImage';
+							id: string;
+							heading1?: string | null;
+							heading2?: string | null;
+							heading3?: string | null;
+							textImageOrientation?: ImageTextOrientation | null;
+							downloadLabel?: string | null;
+							paddingTop?: Padding | null;
+							paddingBottom?: Padding | null;
+							text?: { __typename?: 'RichText'; html: string } | null;
+							image?: { __typename?: 'Asset'; id: string; url: string } | null;
+							assetPicker?: { __typename?: 'Asset'; url: string } | null;
+						}>;
 					}>;
 			  }
 			| { __typename: 'AssetLink' }
@@ -16886,6 +16923,56 @@ export type Unnamed_2_Query = {
 	}>;
 };
 
+export type TextAndImageFragmentFragment = {
+	__typename?: 'TextAndImage';
+	id: string;
+	heading1?: string | null;
+	heading2?: string | null;
+	heading3?: string | null;
+	textImageOrientation?: ImageTextOrientation | null;
+	downloadLabel?: string | null;
+	paddingTop?: Padding | null;
+	paddingBottom?: Padding | null;
+	text?: { __typename?: 'RichText'; html: string } | null;
+	image?: { __typename?: 'Asset'; id: string; url: string } | null;
+	assetPicker?: { __typename?: 'Asset'; url: string } | null;
+};
+
+export type AccordingContainerFragmentFragment = {
+	__typename?: 'AccordionContainer';
+	id: string;
+	headline?: string | null;
+	paddingTop?: Padding | null;
+	paddingBottom?: Padding | null;
+	introOptional?: { __typename?: 'RichText'; html: string } | null;
+	accordionItems: Array<{
+		__typename?: 'AccordionItem';
+		id: string;
+		heading1: string;
+		heading2?: string | null;
+		heading3?: string | null;
+		textImageOrientation?: ImageTextOrientation | null;
+		downloadLabel?: string | null;
+		content: { __typename?: 'RichText'; html: string };
+		image?: { __typename?: 'Asset'; id: string; url: string } | null;
+		assetPicker?: { __typename?: 'Asset'; url: string } | null;
+		textAndImages: Array<{
+			__typename?: 'TextAndImage';
+			id: string;
+			heading1?: string | null;
+			heading2?: string | null;
+			heading3?: string | null;
+			textImageOrientation?: ImageTextOrientation | null;
+			downloadLabel?: string | null;
+			paddingTop?: Padding | null;
+			paddingBottom?: Padding | null;
+			text?: { __typename?: 'RichText'; html: string } | null;
+			image?: { __typename?: 'Asset'; id: string; url: string } | null;
+			assetPicker?: { __typename?: 'Asset'; url: string } | null;
+		}>;
+	}>;
+};
+
 export type LinkFragmentFragment = {
 	__typename: 'Link';
 	id: string;
@@ -16921,6 +17008,20 @@ export type PageFragmentFragment = {
 					content: { __typename?: 'RichText'; html: string };
 					image?: { __typename?: 'Asset'; id: string; url: string } | null;
 					assetPicker?: { __typename?: 'Asset'; url: string } | null;
+					textAndImages: Array<{
+						__typename?: 'TextAndImage';
+						id: string;
+						heading1?: string | null;
+						heading2?: string | null;
+						heading3?: string | null;
+						textImageOrientation?: ImageTextOrientation | null;
+						downloadLabel?: string | null;
+						paddingTop?: Padding | null;
+						paddingBottom?: Padding | null;
+						text?: { __typename?: 'RichText'; html: string } | null;
+						image?: { __typename?: 'Asset'; id: string; url: string } | null;
+						assetPicker?: { __typename?: 'Asset'; url: string } | null;
+					}>;
 				}>;
 		  }
 		| {
@@ -17094,6 +17195,7 @@ export type BlogPostFragmentFragment = {
 				headline?: string | null;
 				paddingTop?: Padding | null;
 				paddingBottom?: Padding | null;
+				introOptional?: { __typename?: 'RichText'; html: string } | null;
 				accordionItems: Array<{
 					__typename?: 'AccordionItem';
 					id: string;
@@ -17105,6 +17207,20 @@ export type BlogPostFragmentFragment = {
 					content: { __typename?: 'RichText'; html: string };
 					image?: { __typename?: 'Asset'; id: string; url: string } | null;
 					assetPicker?: { __typename?: 'Asset'; url: string } | null;
+					textAndImages: Array<{
+						__typename?: 'TextAndImage';
+						id: string;
+						heading1?: string | null;
+						heading2?: string | null;
+						heading3?: string | null;
+						textImageOrientation?: ImageTextOrientation | null;
+						downloadLabel?: string | null;
+						paddingTop?: Padding | null;
+						paddingBottom?: Padding | null;
+						text?: { __typename?: 'RichText'; html: string } | null;
+						image?: { __typename?: 'Asset'; id: string; url: string } | null;
+						assetPicker?: { __typename?: 'Asset'; url: string } | null;
+					}>;
 				}>;
 		  }
 		| { __typename: 'AssetLink' }
@@ -17232,6 +17348,20 @@ export type Unnamed_4_Query = {
 						content: { __typename?: 'RichText'; html: string };
 						image?: { __typename?: 'Asset'; id: string; url: string } | null;
 						assetPicker?: { __typename?: 'Asset'; url: string } | null;
+						textAndImages: Array<{
+							__typename?: 'TextAndImage';
+							id: string;
+							heading1?: string | null;
+							heading2?: string | null;
+							heading3?: string | null;
+							textImageOrientation?: ImageTextOrientation | null;
+							downloadLabel?: string | null;
+							paddingTop?: Padding | null;
+							paddingBottom?: Padding | null;
+							text?: { __typename?: 'RichText'; html: string } | null;
+							image?: { __typename?: 'Asset'; id: string; url: string } | null;
+							assetPicker?: { __typename?: 'Asset'; url: string } | null;
+						}>;
 					}>;
 			  }
 			| {
@@ -17420,6 +17550,20 @@ export type Unnamed_5_Query = {
 						content: { __typename?: 'RichText'; html: string };
 						image?: { __typename?: 'Asset'; id: string; url: string } | null;
 						assetPicker?: { __typename?: 'Asset'; url: string } | null;
+						textAndImages: Array<{
+							__typename?: 'TextAndImage';
+							id: string;
+							heading1?: string | null;
+							heading2?: string | null;
+							heading3?: string | null;
+							textImageOrientation?: ImageTextOrientation | null;
+							downloadLabel?: string | null;
+							paddingTop?: Padding | null;
+							paddingBottom?: Padding | null;
+							text?: { __typename?: 'RichText'; html: string } | null;
+							image?: { __typename?: 'Asset'; id: string; url: string } | null;
+							assetPicker?: { __typename?: 'Asset'; url: string } | null;
+						}>;
 					}>;
 			  }
 			| {
@@ -17592,6 +17736,7 @@ export type Unnamed_5_Query = {
 					headline?: string | null;
 					paddingTop?: Padding | null;
 					paddingBottom?: Padding | null;
+					introOptional?: { __typename?: 'RichText'; html: string } | null;
 					accordionItems: Array<{
 						__typename?: 'AccordionItem';
 						id: string;
@@ -17603,6 +17748,20 @@ export type Unnamed_5_Query = {
 						content: { __typename?: 'RichText'; html: string };
 						image?: { __typename?: 'Asset'; id: string; url: string } | null;
 						assetPicker?: { __typename?: 'Asset'; url: string } | null;
+						textAndImages: Array<{
+							__typename?: 'TextAndImage';
+							id: string;
+							heading1?: string | null;
+							heading2?: string | null;
+							heading3?: string | null;
+							textImageOrientation?: ImageTextOrientation | null;
+							downloadLabel?: string | null;
+							paddingTop?: Padding | null;
+							paddingBottom?: Padding | null;
+							text?: { __typename?: 'RichText'; html: string } | null;
+							image?: { __typename?: 'Asset'; id: string; url: string } | null;
+							assetPicker?: { __typename?: 'Asset'; url: string } | null;
+						}>;
 					}>;
 			  }
 			| { __typename: 'AssetLink' }
