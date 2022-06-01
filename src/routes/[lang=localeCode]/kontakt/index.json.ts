@@ -14,9 +14,10 @@ const transporter = nodemailer.createTransport({
 		user: SMTP_USERNAME,
 		pass: SMTP_PASSWORD
 	},
+	secure: false, // https://nodemailer.com/smtp/#tls-options
 	tls: {
-		rejectUnauthorized: !dev
-	}
+		rejectUnauthorized: !dev,
+	},
 });
 
 const toString: (formData: FormData, keys: string) => string = (formData, key) => {
