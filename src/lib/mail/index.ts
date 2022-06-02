@@ -14,18 +14,17 @@ export const defaults = {
 const html = (email: Email) => {
 	const contactDetails = `
     Name: ${email.name}<br>
-    E-Mail Adresse: ${email.emailAdresse}<br>
+    E-Mail: ${email.emailAdresse}<br>
     Firma: ${email.firma ?? ''}<br>
-    Telefonnummer: ${email.telefon ?? ''}
+    Telefon: ${email.telefon ?? ''}
   `;
 	return `
-  <p>Hallo ${email.name},</p>
-  <p>wir haben Ihre Nachricht erhalten und werden uns zeitnah bei Ihnen unter folgenden Kontaktdaten melden:</p>
-  <p>${contactDetails}</p>
-  <p>Ihre Nachricht lautete wie folgt:</p>
-  <blockquote>${email.nachricht}</blockquote>
-  <p>Freundliche Grüße</p>
-  <p>Ihre RC Rhenania Computer GmbH</p>
+	<p>Vielen Dank für Ihre Anfrage. Wir werden uns schnellstmöglich um Ihr Anliegen kümmern und mit Ihnen unter den folgenden Daten Kontakt aufnehmen:</p>
+	<p>${contactDetails}</p>
+	<p>Ihre Nachricht:<br>${email.nachricht}</p>
+	<p>Freundliche Grüße
+	<br>
+	Ihr Team der RC Rhenania Computer GmbH</p>
 `;
 };
 
