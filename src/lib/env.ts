@@ -7,3 +7,4 @@ export const HCAPTCHA_SITEKEY = import.meta.env.VITE_HCAPTCHA_SITEKEY as string;
 export const HCAPTCHA_SECRET = import.meta.env.VITE_HCAPTCHA_SECRET as string;
 export const VITE_ALGOLIA_SEARCH_KEY = import.meta.env.VITE_ALGOLIA_SEARCH_KEY as string;
 export const ALGOLIA_ADMIN_KEY = import.meta.env.ALGOLIA_ADMIN_KEY as string;
+export const VITE_ALGOLIA_APP_ID = import.meta.env.VITE_ALGOLIA_APP_ID as string;

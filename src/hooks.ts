@@ -1,6 +1,12 @@
 import type { GetSession } from '@sveltejs/kit';
 import { localeCodes, fallbackLocale } from '$lib/i18n';
 import acceptLanguage from 'accept-language';
+
+import { dev } from '$app/env';
+import { VITE_ALGOLIA_APP_ID, ALGOLIA_ADMIN_KEY } from '$lib/env'
+import pokedex from '../tests/fixtures/pokedex.json';
+import { indexAlgolia } from './lib/server-side';
+
 acceptLanguage.languages(localeCodes);
 
 export const getSession: GetSession = (_event) => {
@@ -10,13 +16,9 @@ export const getSession: GetSession = (_event) => {
 	return { lang };
 };
 
-import { dev } from '$app/env';
-import 'dotenv/config';
-import pokedex from '../tests/fixtures/pokedex.json';
-import { indexAlgolia } from './lib/server-side';
 
-const appId = process.env.VITE_ALGOLIA_APP_ID;
-const apiKey = process.env.ALGOLIA_ADMIN_KEY;
+const appId = VITE_ALGOLIA_APP_ID;
+const apiKey = ALGOLIA_ADMIN_KEY;
 
 // only update Algolia indices if required env vars are defined
 if (dev === false && appId && apiKey) {
