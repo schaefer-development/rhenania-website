@@ -9,14 +9,13 @@
 	import CompanyMenu from '$lib/components/Drawer/CompanyMenu.svelte';
 	import ServiceMenu from '$lib/components/Drawer/ServiceMenu.svelte';
 	import { VITE_ALGOLIA_APP_ID, VITE_ALGOLIA_SEARCH_KEY } from '$lib/env'
-
+	import PokemonHit from '$lib/components/PokemonHit/PokemonHit.svelte';
+	import Search from 'svelte-algolia'
 	import MobileDrawer from '$lib/components/Drawer/Mobile/MobileDrawer.svelte';
 
 	const appId = VITE_ALGOLIA_APP_ID;
 	const searchKey = VITE_ALGOLIA_SEARCH_KEY;
 	let searchEverFocused = false;
-	import PokemonHit from '$lib/components/PokemonHit/PokemonHit.svelte';
-	import Search from '$lib/components/Search/Search.svelte';
 
 	let openMenu: string | null = null;
 	const toggleMenu = (menu: string) => {
