@@ -11,6 +11,12 @@
 
 	import MobileDrawer from '$lib/components/Drawer/Mobile/MobileDrawer.svelte';
 
+	const appId = import.meta.env.VITE_ALGOLIA_APP_ID;
+	const searchKey = import.meta.env.VITE_ALGOLIA_SEARCH_KEY;
+	let searchEverFocused = false;
+	import PokemonHit from '$lib/components/PokemonHit/PokemonHit.svelte';
+	import Search from '$lib/components/Search/Search.svelte';
+
 	let openMenu: string | null = null;
 	const toggleMenu = (menu: string) => {
 		openMenu = openMenu === menu ? null : menu;
@@ -37,7 +43,15 @@
 
 		<div class="flex-grow flex justify-end items-center">
 			<div class="flex-grow px-2 sm:px-6 md:px-10 lg:px-16 flex">
-				<form
+				<Search
+					{appId}
+					{searchKey}
+					indices={{ Pokedex: PokemonHit }}
+					on:focus={() => (searchEverFocused = true)}
+					placeholder="Search Pokedex"
+					--hitsBgColor="black"
+				/>
+				<!--<form
 					class="input-group relative flex items-stretch w-full justify-end pl-4"
 					on:submit|preventDefault={search($page)}
 				>
@@ -71,7 +85,7 @@
 							/>
 						</svg>
 					</button>
-				</form>
+				</form>-->
 			</div>
 
 			<div class="grow lg:grow-0 justify-end items-center hidden lg:flex invisible lg:visible">
