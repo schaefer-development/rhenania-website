@@ -3,7 +3,7 @@ import { localeCodes, fallbackLocale } from '$lib/i18n';
 import acceptLanguage from 'accept-language';
 
 import { dev } from '$app/env';
-import { VITE_ALGOLIA_APP_ID, ALGOLIA_ADMIN_KEY } from '$lib/env'
+import { ALGOLIA_APP_ID, ALGOLIA_ADMIN_KEY } from '$lib/env'
 import pokedex from '../tests/fixtures/pokedex.json';
 import { indexAlgolia } from './lib/server-side';
 
@@ -16,8 +16,7 @@ export const getSession: GetSession = (_event) => {
 	return { lang };
 };
 
-
-const appId = VITE_ALGOLIA_APP_ID;
+const appId = ALGOLIA_APP_ID;
 const apiKey = ALGOLIA_ADMIN_KEY;
 
 // only update Algolia indices if required env vars are defined
