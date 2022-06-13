@@ -10,7 +10,7 @@
 	import ServiceMenu from '$lib/components/Drawer/ServiceMenu.svelte';
 	import { ALGOLIA_APP_ID, ALGOLIA_SEARCH_KEY } from '$lib/env'
 	import PokemonHit from '$lib/components/PokemonHit/PokemonHit.svelte';
-	import Search from 'svelte-algolia'
+	import Search from '$lib/components/Search/Search.svelte'
 	import MobileDrawer from '$lib/components/Drawer/Mobile/MobileDrawer.svelte';
 
 	const appId = ALGOLIA_APP_ID;
@@ -49,7 +49,6 @@
 					indices={{ Pokedex: PokemonHit }}
 					on:focus={() => (searchEverFocused = true)}
 					placeholder="Search Pokedex"
-					--hitsBgColor="black"
 				/>
 				<!--<form
 					class="input-group relative flex items-stretch w-full justify-end pl-4"
