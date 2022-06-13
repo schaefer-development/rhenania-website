@@ -1,5 +1,6 @@
 <script>
 	import { linkTo } from '$lib/helpers';
+
 	export let hit;
 </script>
 
@@ -8,6 +9,7 @@
 	<div class="flex hyperlink pt-1">
 		<div class="relative flex-none text-rc_red font-bold pr-1 searchHit">
 			<a
+				sveltekit:prefetch
 				class="flex"
 				href={hit.__typename === 'BlogPost'
 					? $linkTo(`/blog/${hit.slug}`)

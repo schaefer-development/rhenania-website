@@ -15,7 +15,6 @@
 		hits.length > 0 ? `<span>Ergebnisse: ${hits.length}<span>` : ``;
 	export let placeholder = `Suche`;
 	export let ariaLabel = `Suche`;
-	export let hasFocus = false;
 
 	for (let [key, val] of Object.entries({ appId, searchKey, indices })) {
 		if (!val) console.error(`svelte-algolia: Invalid ${key}: ${val}`);
@@ -63,18 +62,11 @@
 		bind:value={query}
 		on:keyup={() => (promise = search())}
 		on:focus
-		on:blur
-		on:blur={() => (hasFocus = false)}
 		{placeholder}
 		aria-label={ariaLabel}
-		class:hasFocus
-		class="peer w-full max-w-sm px-3 py-2 transition duration-150 ease-in-out focus:text-gray-700 focus:bg-white focus:border-y focus:border-y-black focus:border-l-black focus:border-r-0 focus:outline-none border"
+		class="peer w-full max-w-sm px-3 py-2 transition duration-150 ease-in-out text-gray-700 border-y border-l focus:bg-white focus:border-black focus:border-r-0 focus:outline-none"
 	/>
 	<button
-		on:click={() => {
-			hasFocus = true;
-			input.focus();
-		}}
 		title={ariaLabel}
 		class="peer relative inline-block px-2 sm:px-4 py-2.5 text-black font-medium border-y border-r transition duration-150 ease-in-out focus:text-rc_red focus:outline-none focus:ring-0 active:text-rc_red peer-focus:border-black peer-focus:text-rc_red"
 	>
@@ -95,7 +87,7 @@
 		</svg>
 	</button>
 
-	{#if hasFocus && query}
+	{#if query}
 		<div class="results p-4 shadow-md border border-black">
 			{#await promise}
 				<p>{loadingStr}</p>
@@ -105,11 +97,7 @@
 						{#if hits.length}
 							<section class="w-full max-w-md">
 								{#each hits as hit (hit.objectID)}
-									<svelte:component
-										this={_indices[idxName]}
-										{hit}
-										on:close={() => (hasFocus = false)}
-									/>
+									<svelte:component this={_indices[idxName]} {hit} />
 								{/each}
 							</section>
 						{/if}
@@ -126,14 +114,6 @@
 		grid-area: search;
 	}
 
-	input {
-		outline: none;
-		opacity: 0;
-		line-height: inherit;
-	}
-	input.hasFocus {
-		opacity: 1;
-	}
 	input::placeholder {
 		color: rgba(0, 0, 0, 0.5);
 	}
