@@ -54,7 +54,9 @@
 	}
 </script>
 
-<aside class="svelte-algolia relative flex items-stretch w-full max-w-md justify-end pl-4">
+<aside
+	class="svelte-algolia input-group relative flex items-stretch w-full max-w-md justify-end pl-4"
+>
 	<input
 		type="text"
 		bind:this={input}
@@ -66,7 +68,7 @@
 		{placeholder}
 		aria-label={ariaLabel}
 		class:hasFocus
-		class="w-full max-w-sm px-3 py-2 border transition duration-150 ease-in-out focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none"
+		class="peer w-full max-w-sm px-3 py-2 transition duration-150 ease-in-out focus:text-gray-700 focus:bg-white focus:border-y focus:border-y-black focus:border-l-black focus:border-r-0 focus:outline-none border"
 	/>
 	<button
 		on:click={() => {
@@ -74,7 +76,7 @@
 			input.focus();
 		}}
 		title={ariaLabel}
-		class="relative inline-block px-2 sm:px-4 py-2.5 text-black font-medium border-y border-r transition duration-150 ease-in-out focus:text-rc_red focus:outline-none focus:ring-0 active:text-rc_red"
+		class="peer relative inline-block px-2 sm:px-4 py-2.5 text-black font-medium border-y border-r transition duration-150 ease-in-out focus:text-rc_red focus:outline-none focus:ring-0 active:text-rc_red peer-focus:border-black peer-focus:text-rc_red"
 	>
 		<svg
 			aria-hidden="true"
