@@ -3,19 +3,18 @@
 	import type { SearchClient } from 'algoliasearch/dist/algoliasearch-lite.esm.browser';
 	import algoliasearch from 'algoliasearch/dist/algoliasearch-lite.esm.browser';
 	import { onMount, SvelteComponent } from 'svelte';
-	import SearchIcon from './SearchIcon.svelte';
 
 	type SearchHit = Hit<Record<string, unknown>>;
 
 	export let appId: string;
 	export let searchKey: string;
 	export let indices: Record<string, typeof SvelteComponent> | [string, typeof SvelteComponent][]; // [indexName, component to render search results from that index]
-	export let loadingStr = `Searching...`;
-	export let noResultMsg = (query: string): string => `No results for '${query}'`;
+	export let loadingStr = `Suche...`;
+	export let noResultMsg = (query: string): string => `Keine Ergebnisse für '${query}'`;
 	export let resultCounter = (hits: SearchHit[]): string =>
-		hits.length > 0 ? `<span>Results: ${hits.length}<span>` : ``;
-	export let placeholder = `Search`;
-	export let ariaLabel = `Search`;
+		hits.length > 0 ? `<span>Ergebnisse: ${hits.length}<span>` : ``;
+	export let placeholder = `Suche`;
+	export let ariaLabel = `Suche`;
 	export let hasFocus = false;
 
 	for (let [key, val] of Object.entries({ appId, searchKey, indices })) {
@@ -55,7 +54,7 @@
 	}
 </script>
 
-<aside class="svelte-algolia">
+<aside class="svelte-algolia relative flex items-stretch w-full justify-end pl-4">
 	<input
 		type="text"
 		bind:this={input}
@@ -67,6 +66,7 @@
 		{placeholder}
 		aria-label={ariaLabel}
 		class:hasFocus
+		class="w-full max-w-sm px-3 py-2 border transition duration-150 ease-in-out"
 	/>
 	<button
 		on:click={() => {
@@ -74,12 +74,23 @@
 			input.focus();
 		}}
 		title={ariaLabel}
+		class="relative inline-block px-2 sm:px-4 py-2.5 text-black font-medium border-y border-r transition duration-150 ease-in-out"
 	>
-		<SearchIcon
-			ariaLabel="Search Icon"
-			height="{hasFocus ? 1.9 : 2.3}ex"
-			style="cursor: pointer;"
-		/>
+		<svg
+			aria-hidden="true"
+			focusable="false"
+			data-prefix="fas"
+			data-icon="search"
+			class="w-4"
+			role="img"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 512 512"
+		>
+			<path
+				fill="currentColor"
+				d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+			/>
+		</svg>
 	</button>
 	{#if hasFocus && query}
 		<div class="results">
@@ -100,6 +111,7 @@
 										{hit}
 										on:close={() => (hasFocus = false)}
 									/>
+									<hr />
 								{/each}
 							</section>
 						{/if}
@@ -111,62 +123,23 @@
 </aside>
 
 <style>
-	aside.svelte-algolia {
-		position: relative;
-		display: flex;
-		flex-direction: row-reverse;
-	}
 	button {
 		align-items: center;
-		padding: 0;
 		grid-area: search;
-		color: var(--iconColor);
-		position: relative;
-		background: transparent;
-		border: none;
-		font-size: 2ex;
 	}
-	h2 {
-		color: var(--headingColor);
-		border-bottom: 1px solid;
-		text-align: center;
-		position: relative;
-	}
-	h2 :global(span) {
-		position: absolute;
-		font-size: 1ex;
-		bottom: 0;
-		right: 0;
-	}
+
 	input {
-		background: var(--inputBg);
-		color: var(--inputColor);
-		font-size: var(--inputFontSize, 1em);
-		border-radius: 5pt;
-		border: 0;
 		outline: none;
-		width: 0;
-		cursor: pointer;
-		transition: 0.3s;
 		opacity: 0;
-		padding: 0;
-		height: 2.5ex;
 		line-height: inherit;
 	}
 	input.hasFocus {
 		opacity: 1;
-		width: 8em;
-		background: rgba(0, 0, 0, 0.2);
-		padding: 1pt 4pt 1pt 3ex;
-		margin-left: -2.5ex;
-		border-radius: 3pt;
 	}
 	input::placeholder {
-		color: var(--inputColor);
+		color: #000;
 	}
-	input.hasFocus + button {
-		color: var(--inputColor);
-	}
+
 	div.results {
 		background-color: var(--hitsBgColor, white);
 		box-shadow: var(--hitsShadow, 0 0 2pt black);
@@ -179,12 +152,11 @@
 		overflow: auto;
 		right: 0;
 		padding: 1ex 1em;
-		border-radius: 5pt;
 		overscroll-behavior: none;
 		overflow-wrap: break-word;
 	}
 	section {
-		font-size: 0.7em;
+		font-size: 1em;
 		white-space: initial;
 		width: 100%;
 		max-width: 40em;

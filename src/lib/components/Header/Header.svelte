@@ -48,7 +48,7 @@
 					{searchKey}
 					indices={{ rhenania: SearchResult }}
 					on:focus={() => (searchEverFocused = true)}
-					placeholder="Search Pokedex"
+					placeholder="Suchen"
 				/>
 				<!--<form
 					class="input-group relative flex items-stretch w-full justify-end pl-4"
