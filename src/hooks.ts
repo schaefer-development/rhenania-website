@@ -5,7 +5,7 @@ import acceptLanguage from 'accept-language';
 import { dev } from '$app/env';
 import { ALGOLIA_APP_ID, ALGOLIA_ADMIN_KEY } from '$lib/env'
 import pokedex from '../tests/fixtures/pokedex.json';
-import { indexAlgolia } from './lib/server-side';
+import { indexAlgolia } from 'svelte-algolia/server-side'
 
 acceptLanguage.languages(localeCodes);
 
