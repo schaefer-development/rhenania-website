@@ -54,7 +54,7 @@
 	}
 </script>
 
-<aside class="svelte-algolia relative flex items-stretch w-full justify-end pl-4">
+<aside class="svelte-algolia relative flex items-stretch w-full max-w-md justify-end pl-4">
 	<input
 		type="text"
 		bind:this={input}
@@ -66,7 +66,7 @@
 		{placeholder}
 		aria-label={ariaLabel}
 		class:hasFocus
-		class="w-full max-w-sm px-3 py-2 border transition duration-150 ease-in-out"
+		class="w-full max-w-sm px-3 py-2 border transition duration-150 ease-in-out focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none"
 	/>
 	<button
 		on:click={() => {
@@ -74,7 +74,7 @@
 			input.focus();
 		}}
 		title={ariaLabel}
-		class="relative inline-block px-2 sm:px-4 py-2.5 text-black font-medium border-y border-r transition duration-150 ease-in-out"
+		class="relative inline-block px-2 sm:px-4 py-2.5 text-black font-medium border-y border-r transition duration-150 ease-in-out focus:text-rc_red focus:outline-none focus:ring-0 active:text-rc_red"
 	>
 		<svg
 			aria-hidden="true"
@@ -92,26 +92,22 @@
 			/>
 		</svg>
 	</button>
+
 	{#if hasFocus && query}
-		<div class="results">
+		<div class="results p-4 shadow-md border border-black">
 			{#await promise}
 				<p>{loadingStr}</p>
 			{:then allHits}
 				{#if allHits?.some(({ hits }) => hits.length)}
 					{#each allHits as { index: idxName, hits } (idxName)}
 						{#if hits.length}
-							<section>
-								<h2>
-									{idxName}
-									{@html resultCounter(hits)}
-								</h2>
+							<section class="w-full max-w-md">
 								{#each hits as hit (hit.objectID)}
 									<svelte:component
 										this={_indices[idxName]}
 										{hit}
 										on:close={() => (hasFocus = false)}
 									/>
-									<hr />
 								{/each}
 							</section>
 						{/if}
@@ -137,28 +133,25 @@
 		opacity: 1;
 	}
 	input::placeholder {
-		color: #000;
+		color: rgba(0, 0, 0, 0.5);
 	}
 
 	div.results {
+		max-width: 27rem;
+		width: calc(100% - 8em);
 		background-color: var(--hitsBgColor, white);
-		box-shadow: var(--hitsShadow, 0 0 2pt black);
+
 		z-index: 1;
-		top: 3ex;
+		top: 40px;
 		max-height: 60vh;
 		position: absolute;
 		width: max-content;
-		max-width: 80vw;
 		overflow: auto;
 		right: 0;
-		padding: 1ex 1em;
 		overscroll-behavior: none;
 		overflow-wrap: break-word;
 	}
 	section {
-		font-size: 1em;
 		white-space: initial;
-		width: 100%;
-		max-width: 40em;
 	}
 </style>

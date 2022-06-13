@@ -2,17 +2,17 @@
 	export let hit;
 </script>
 
-<h2>{@html hit.__typename}</h2>
-<p>{@html hit.title}</p>
-<p>{@html hit.description}</p>
-<p>{@html hit.teaserText}</p>
+<div class="py-2">
+	<p>{@html hit.description}</p>
+	<a href="">{@html hit.slug}</a>
+	<hr class="mt-4" />
+</div>
 
 <style>
 	/* highlights text matching the search string */
 	:global(em) {
-		color: darkcyan;
-		line-height: 1.2em;
-		border-radius: 3pt;
+		color: #ea3336;
+		font-weight: bold;
 		font-style: normal;
 	}
 </style>

@@ -24,15 +24,6 @@
 
 	export let openMenuFull: boolean;
 	export let toggleMenuFull: () => void;
-
-	const search =
-		({ url, params }: { url: URL; params: Record<string, string> }) =>
-		async ({ target }) => {
-			const newUrl = new URL(url);
-			newUrl.pathname = `/${params.lang}/suche`;
-			newUrl.searchParams.set('q', target.query.value);
-			await goto(newUrl.toString());
-		};
 </script>
 
 <header class="sticky top-0 z-50 bg-white shadow-md flex space-between">
@@ -42,13 +33,13 @@
 		>
 
 		<div class="flex-grow flex justify-end items-center">
-			<div class="flex-grow px-2 sm:px-6 md:px-10 lg:px-16 flex">
+			<div class="flex-grow px-2 sm:px-6 md:px-10 lg:px-16 flex justify-end">
 				<Search
 					{appId}
 					{searchKey}
 					indices={{ rhenania: SearchResult }}
 					on:focus={() => (searchEverFocused = true)}
-					placeholder="Suchen"
+					placeholder="Suchbegriff"
 				/>
 				<!--<form
 					class="input-group relative flex items-stretch w-full justify-end pl-4"
