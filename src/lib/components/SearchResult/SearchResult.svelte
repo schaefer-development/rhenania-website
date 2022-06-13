@@ -1,4 +1,5 @@
 <script>
+	import { linkTo } from '$lib/helpers';
 	export let hit;
 </script>
 
@@ -6,7 +7,12 @@
 	<p>{@html hit.description}</p>
 	<div class="flex hyperlink pt-1">
 		<div class="relative flex-none text-rc_red font-bold pr-1 searchHit">
-			<a href="#" class="flex" target="_blank">
+			<a
+				class="flex"
+				href={hit.__typename === 'BlogPost'
+					? $linkTo(`/blog/${hit.slug}`)
+					: $linkTo(`/${hit.slug}`)}
+			>
 				<span class="align-middle pr-2">
 					{@html hit.slug}
 				</span>
