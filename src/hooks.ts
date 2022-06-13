@@ -3,9 +3,9 @@ import { localeCodes, fallbackLocale } from '$lib/i18n';
 import acceptLanguage from 'accept-language';
 
 import { dev } from '$app/env';
-import { ALGOLIA_APP_ID, ALGOLIA_ADMIN_KEY } from '$lib/env'
-import pokedex from '../tests/fixtures/pokedex.json';
-import { indexAlgolia } from 'svelte-algolia/server-side'
+import { ALGOLIA_APP_ID, ALGOLIA_ADMIN_KEY } from '$lib/env';
+import rhenania from './rhenania.json';
+import { indexAlgolia } from 'svelte-algolia/server-side';
 
 acceptLanguage.languages(localeCodes);
 
@@ -25,24 +25,23 @@ if (dev === false && appId && apiKey) {
 	const algoliaConfig = {
 		appId,
 		apiKey,
-		indices: [{ name: `Pokedex`, getData: () => pokedex }],
+		indices: [{ name: `rhenania`, getData: () => rhenania.results }],
 		settings: {
-			attributesToHighlight: [
-				`avgSpawns`,
-				`candy`,
-				`candyCount`,
-				`egg`,
-				`height`,
-				`multipliers`,
-				`name`,
-				`nextEvolution.name`,
-				`num`,
-				`prevEvolution.name`,
-				`spawnChance`,
-				`spawnTime`,
-				`type`,
-				`weaknesses`,
-				`weight`
+			searchableAttributes: [
+				'title',
+				'description',
+				'teaserHeadline',
+				'teaserSubheadline',
+				'teaserText',
+				'modules.headline',
+				'modules.heading1',
+				'modules.heading2',
+				'modules.heading3',
+				'modules.text.html',
+				'modules.accordionItems.headline',
+				'modules.accordionItems.content.html',
+				'modules.cards.headline',
+				'modules.cards.subheadline'
 			]
 		}
 	};

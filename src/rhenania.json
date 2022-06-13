@@ -1,0 +1,3492 @@
+{
+	"results": [
+		{
+			"__typename": "Page",
+			"id": "ckwwizf5sg6o40d04cx7g76ln",
+			"slug": "start",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania Computer optimiert Ihren Versand. Softwarel\u00f6sungen f\u00fcr die Versandlogistik und die Versandoptimierung seit mehr als 30 Jahren. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "CardsContainer",
+					"id": "ckxbyoragvtvx0c03m83vvbpi",
+					"headline": "Unser Leistungsangebot",
+					"paddingTop": "Medium",
+					"paddingBottom": "Medium",
+					"cards": [
+						{
+							"__typename": "CardImage",
+							"id": "ckwwk7rm0gd2w0c53qjf7aaug",
+							"headline": "VLS - Versandlogistiksystem",
+							"linkToId": "VLS - Versandlogistiksystem",
+							"image": {
+								"id": "cl2iw2wg7496b0buiczlv50n6",
+								"url": "https://media.graphassets.com/lWw7anYuRZmjDLJ86VZF"
+							},
+							"link": null
+						},
+						{
+							"__typename": "CardImage",
+							"id": "ckxa8ktgozw1u0b51w40tqr8f",
+							"headline": "Versandoptimierung",
+							"linkToId": "Versandoptimierung",
+							"image": {
+								"id": "cl2iw2wg84t8j0bur4cjgw49n",
+								"url": "https://media.graphassets.com/Liwg4lCxSIyI9bmdQ6iL"
+							},
+							"link": null
+						},
+						{
+							"__typename": "CardImage",
+							"id": "ckxa9fguw0dew0c14kq81qi4f",
+							"headline": "Hardware f\u00fcr Versandlogistik",
+							"linkToId": null,
+							"image": {
+								"id": "cl2iw2wgp401h0atbdbean1y5",
+								"url": "https://media.graphassets.com/cSRGEfPZRV9A1aUnarm7"
+							},
+							"link": {
+								"__typename": "Link",
+								"id": "ckz8ek8m8jxaa0b05k8l2odq9",
+								"label": "Mehr erfahren",
+								"target": {
+									"__typename": "Page",
+									"id": "ckz8ffjxkknh80d064o699g5a",
+									"slug": "hardware"
+								}
+							}
+						},
+						{
+							"__typename": "CardImage",
+							"id": "ckxa9gjfs0erg0c143j9l7ivr",
+							"headline": "Support und Programmierung",
+							"linkToId": null,
+							"image": {
+								"id": "cl2iw2wfb44qt0buns0qx7l5i",
+								"url": "https://media.graphassets.com/0QKp7IZQNibQQYIMayJc"
+							},
+							"link": {
+								"__typename": "Link",
+								"id": "ckzip5rdcr19b0b53fx0a3zxj",
+								"label": "Mehr erfahren",
+								"target": {
+									"__typename": "Page",
+									"id": "ckz8pb7y04g4w0c55q15af48i",
+									"slug": "support"
+								}
+							}
+						}
+					]
+				},
+				{
+					"__typename": "Eyecatcher",
+					"id": "ckwwj2ak0flmj0c53ivdf61co",
+					"headline": "25. bis 27. April 2023",
+					"subheadline": "LOGIMAT \u2013 Messe Stuttgart \u2013 Halle 8 , Stand B25",
+					"link": {
+						"__typename": "Link",
+						"id": "cl0lacmlt6tr10cxgf9733kc0",
+						"label": "Mehr",
+						"target": {
+							"__typename": "Page",
+							"id": "ckxbwg4iguzly0c03uvjv9bk3",
+							"slug": "termine"
+						}
+					},
+					"paddingTop": "Medium",
+					"paddingBottom": "Medium",
+					"image": {
+						"id": "ckwwj26p4gdow0b58i23baols",
+						"url": "https://media.graphassets.com/lXg831B8TyGq4qogJDK7"
+					}
+				},
+				{
+					"__typename": "CardsContainer",
+					"id": "ckxaiszbk9h8a0d57c4kv6qra",
+					"headline": "VLS - Versandlogistiksystem",
+					"paddingTop": "Medium",
+					"paddingBottom": "Medium",
+					"cards": [
+						{
+							"__typename": "CardIcon",
+							"id": "ckxaimq0g8y8b0c02tde11nhx",
+							"backgroundColor": {
+								"hex": "#163776",
+								"rgba": {
+									"r": 22,
+									"g": 55,
+									"b": 118,
+									"a": 1
+								}
+							},
+							"icon": {
+								"id": "ckxaikzig914d0b15fzh1jnzm",
+								"url": "https://media.graphassets.com/xx563jO5RLSLHbFoBwFb"
+							},
+							"headline": "K04",
+							"subheadline": "Kommisionieren, kontrollieren und packen",
+							"link": {
+								"__typename": "Link",
+								"id": "ckyu6qmuwc1jv0b62uuw3m9d6",
+								"label": "Mehr",
+								"target": {
+									"__typename": "Page",
+									"id": "ckxbupotsuwsn0d57gs2a7fz6",
+									"slug": "k04"
+								}
+							}
+						},
+						{
+							"__typename": "CardIcon",
+							"id": "ckxagq6f47b210b15h00epdjn",
+							"backgroundColor": {
+								"hex": "#2a499d",
+								"rgba": {
+									"r": 42,
+									"g": 73,
+									"b": 157,
+									"a": 1
+								}
+							},
+							"icon": {
+								"id": "ckwytp68gveh50b5618h5gqia",
+								"url": "https://media.graphassets.com/mLiFcU2cSRiy3BLms6J8"
+							},
+							"headline": "F95",
+							"subheadline": "Paket- und Palettenversand",
+							"link": {
+								"__typename": "Link",
+								"id": "ckyu6powo6si40c564m6xqavb",
+								"label": "Mehr",
+								"target": {
+									"__typename": "Page",
+									"id": "ckxbtiqj4ucaz0b15kokqzcej",
+									"slug": "f95"
+								}
+							}
+						},
+						{
+							"__typename": "CardIcon",
+							"id": "ckxaio3e89c2m0d57qitu82oi",
+							"backgroundColor": {
+								"hex": "#a3d4ff",
+								"rgba": {
+									"r": 163,
+									"g": 212,
+									"b": 255,
+									"a": 1
+								}
+							},
+							"icon": {
+								"id": "ckxaikzig99tc0b51l4soddr2",
+								"url": "https://media.graphassets.com/db5k3NWTrqVX8SRfm26Q"
+							},
+							"headline": "VKA",
+							"subheadline": "Versandkostenkontrolle und Abrechnung",
+							"link": {
+								"__typename": "Link",
+								"id": "ckyu6ra086s980d04t2khxlpj",
+								"label": "Mehr",
+								"target": {
+									"__typename": "Page",
+									"id": "ckxbush4wuty00b5195vtoxmf",
+									"slug": "vka"
+								}
+							}
+						}
+					]
+				},
+				{
+					"__typename": "Divider",
+					"id": "ckwwj4buwfn2o0c53yxxeb192",
+					"padding": "Small"
+				},
+				{
+					"__typename": "CardsContainer",
+					"id": "ckxagnxeg7eid0d57tqwhlna6",
+					"headline": "Versandoptimierung",
+					"paddingTop": "Medium",
+					"paddingBottom": "Large",
+					"cards": [
+						{
+							"__typename": "CardIcon",
+							"id": "ckxaj1dsg9iby0b15237ueo59",
+							"backgroundColor": {
+								"hex": "#59aa25",
+								"rgba": {
+									"r": 89,
+									"g": 170,
+									"b": 37,
+									"a": 1
+								}
+							},
+							"icon": {
+								"id": "cl0i54kkuvrvu0ez8veowu9kr",
+								"url": "https://media.graphassets.com/CEW8GDuwQtgVWpwcMLWg"
+							},
+							"headline": "U12",
+							"subheadline": "Umsatzsteuer Befreiung sichern",
+							"link": {
+								"__typename": "Link",
+								"id": "ckyu6kf3c6lvs0d04pw1jwwc5",
+								"label": "Mehr",
+								"target": {
+									"__typename": "Page",
+									"id": "ckxbv71tsuvw20c14i1binf0d",
+									"slug": "u12"
+								}
+							}
+						},
+						{
+							"__typename": "CardIcon",
+							"id": "ckxaj3cs09k9l0b156xmam77p",
+							"backgroundColor": {
+								"hex": "#25aaa7",
+								"rgba": {
+									"r": 37,
+									"g": 170,
+									"b": 167,
+									"a": 1
+								}
+							},
+							"icon": {
+								"id": "ckxaikzig8wwu0c02vlga9re3",
+								"url": "https://media.graphassets.com/5a6YgmShTz6WRawgjJjL"
+							},
+							"headline": "APK",
+							"subheadline": "Adresspr\u00fcfung und Korrektur",
+							"link": {
+								"__typename": "Link",
+								"id": "ckyu6l5bs6p6r0c56y080mcbs",
+								"label": "Mehr",
+								"target": {
+									"__typename": "Page",
+									"id": "ckxbwa1dkvhj30d57ntzt7abu",
+									"slug": "apk"
+								}
+							}
+						},
+						{
+							"__typename": "CardIcon",
+							"id": "ckxaj46vc9u9g0b51hskt85er",
+							"backgroundColor": {
+								"hex": "#2088c1",
+								"rgba": {
+									"r": 32,
+									"g": 136,
+									"b": 193,
+									"a": 1
+								}
+							},
+							"icon": {
+								"id": "ckxaikzig8ts30c038f3ms62g",
+								"url": "https://media.graphassets.com/1MMi7Pa0R4yT64uCbEU6"
+							},
+							"headline": "DUV",
+							"subheadline": "Dubletten vermeiden",
+							"link": {
+								"__typename": "Link",
+								"id": "ckyu6lwc09th90b44tgnnh6ko",
+								"label": "Mehr",
+								"target": {
+									"__typename": "Page",
+									"id": "cl28xpvwk6yxu0buo91w6hsif",
+									"slug": "desadv"
+								}
+							}
+						},
+						{
+							"__typename": "CardIcon",
+							"id": "ckxaj5a809dve0c141bs8a8kr",
+							"backgroundColor": {
+								"hex": "#631b75",
+								"rgba": {
+									"r": 99,
+									"g": 27,
+									"b": 117,
+									"a": 1
+								}
+							},
+							"icon": {
+								"id": "ckxaikzig99t00b515p8zl5kr",
+								"url": "https://media.graphassets.com/1gALj8AeToyFUjr5myYc"
+							},
+							"headline": "G10",
+							"subheadline": "Versand von Gefahrgut",
+							"link": {
+								"__typename": "Link",
+								"id": "ckyu6o4kwiapi0a07r4g2s6gi",
+								"label": "G10",
+								"target": {
+									"__typename": "Page",
+									"id": "ckxbwc82wveiy0b15dqvz9q3t",
+									"slug": "g10"
+								}
+							}
+						}
+					]
+				},
+				{
+					"__typename": "BlogPost",
+					"id": "ckylo71zsuw9w0b53eajk765b",
+					"slug": "schoner-blog-post",
+					"teaserHeadline": "Blog Post Headline",
+					"teaserSubheadline": "Teaser Subheadline",
+					"teaserText": "Teaser Text ",
+					"heroBackgroundImage": {
+						"url": "https://media.graphassets.com/JXSQxfRQRlGhE38aYiVC"
+					}
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckx7yokw0gfp80c56v8hewa7q",
+			"slug": "karriere",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania Computer optimiert Ihren Versand. Softwarel\u00f6sungen f\u00fcr die Versandlogistik und die Versandoptimierung seit mehr als 30 Jahren. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "Text",
+					"id": "ckxbsjs1ktme60c02uhlcid4c",
+					"heading1": "Karriere bei Rhenania",
+					"heading2": "",
+					"heading3": "",
+					"link": null,
+					"paddingTop": "Small",
+					"paddingBottom": "None",
+					"text": {
+						"html": "<p>Wir suchen:</p><p></p>"
+					}
+				},
+				{
+					"__typename": "Text",
+					"id": "ckxbt8bj4ucxx0d57fz7z51w8",
+					"heading1": "",
+					"heading2": "Java - Entwickler (m/w/d) ",
+					"heading3": "",
+					"link": null,
+					"paddingTop": "None",
+					"paddingBottom": "Large",
+					"text": {
+						"html": "<p>Die Rhenania Computer GmbH mit Sitz in Bad Honnef entwickelt seit \u00fcber 30 Jahren Softwarel\u00f6sungen f\u00fcr die Versandlogistik und die Versandoptimierung. Heute z\u00e4hlt das Unternehmen zu den f\u00fchrenden deutschen Anbietern in diesem Segment.<br>In einem kleinen, flexiblen Team von erfahrenen Entwicklern unterst\u00fctzen wir unsere Kunden bei der Optimierung ihrer Versandprozesse. Unsere Kundenpalette reicht von mittelst\u00e4ndischen Industrie-und Dienstleistungsunternehmen bis hin zu weltweit operierenden Konzernen.</p><p>Aufgrund unseres kontinuierlichen Wachstums und neuer Projekte suchen wir Sie, den Entwickler (m/w/d) zur Verst\u00e4rkung unseres Teams am Standort Bad Honnef zum n\u00e4chstm\u00f6glichen Zeitpunkt.<br><br><strong><br>Ihre Aufgaben:</strong></p><ul><li><div>Kompetent entwickeln Sie anspruchsvolle, webbasierte L\u00f6sungen mit Java und den g\u00e4ngigen Webtechnologien.</div></li><li><div>Im Speziellen wirken Sie in allen Phasen der Softwareentwicklung von der Konzeption, Entwicklung bis hin zum Test und Rollout komplexer Webanwendungen.</div></li><li><div>Dar\u00fcber hinaus sind Sie f\u00fcr die Integration von Fremdsystemen mittels Webservice mit REST und SOAP zust\u00e4ndig.</div></li></ul><p><strong>Ihr Profil:</strong></p><ul><li><div>Abgeschlossene IT- orientierte Ausbildung und oder Studium der Informatik, Mathematik oder eine vergleichbare Qualifikation</div></li><li><div>Erste Erfahrungen in der Softwareentwicklung in Java.</div></li><li><div>Gute Kenntnisse in den Bereichen HTML, CSS, JavaScript, SQL, Webservice.</div></li><li><div>Kenntnisse in RPG, ILE RPG sind von Vorteil.</div></li><li><div>Sie arbeiten l\u00f6sungsorientiert und verf\u00fcgen \u00fcber analytisches Denkverm\u00f6gen.</div></li><li><div>Gute Deutschkenntnisse runden Ihr Profil ab.</div></li></ul><p><strong>Diesen Rahmen bieten wir Ihnen:</strong></p><ul><li><div>Flache Hierarchien sowie kurze Berichts- und Entscheidungswege.</div></li><li><div>Kommunikation und Begegnung auf Augenh\u00f6he \u00fcber alle Hierarchiestufen.</div></li><li><div>Verl\u00e4sslichkeit, Offenheit, Fairness und Respekt in der Zusammenarbeit.</div></li><li><div>Eine sorgf\u00e4ltige Einarbeitung macht auch Sie zum Spezialisten.</div></li><li><div>Es erwarten Sie interessante, anspruchsvolle Aufgaben, gute Rahmenbedingungen<br>sowie ein angenehmes Arbeitsklima in einem sympathischen Team.</div></li></ul><p>Bitte senden Sie uns Ihre aussagekr\u00e4ftigen Bewerbungsunterlagen\u00a0unter Angabe Ihrer Gehaltsvorstellungen und des fr\u00fchestm\u00f6glichen Eintrittstermins per E-Mail an:<br><a title=\"mailto:info@rhenania.biz\" href=\"mailto:info@rhenania.biz\"><u><strong>info@rhenania.biz</strong></u></a><br><br><br></p><div class=\"highlight_blue\" ><p><strong>Wir freuen uns auf Ihre Bewerbung und darauf, Sie kennenzulernen!<br></strong>Bei Fragen zu der Stelle wenden Sie sich gerne an:<br>Herrn Stefan Halbig unter der Rufnummer 0 222 4 - 96 00 00.</p></div><p></p>"
+					}
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckx8tf9xs00u40c021ujtvfc7",
+			"slug": "faq",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania Computer optimiert Ihren Versand. Softwarel\u00f6sungen f\u00fcr die Versandlogistik und die Versandoptimierung seit mehr als 30 Jahren. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "AccordionContainer",
+					"id": "ckzmnwo544vxv0a114w3qg1ws",
+					"headline": "FAQ Headline",
+					"introOptional": null,
+					"paddingTop": "Medium",
+					"paddingBottom": "Medium",
+					"accordionItems": [
+						{
+							"id": "ckwyt8ti0ur5k0e511x6lqzxb",
+							"heading1": "Hier kommt eine Frage",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<p>Hier <em>kommt</em> eine <strong>formatierte</strong> Anwort!</p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": []
+						},
+						{
+							"id": "ckx8u4s5c0v390b15bej3w1lv",
+							"heading1": "Zweite Frage",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<p><em>Zweite</em> Antwort!</p><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckxbtiqj4ucaz0b15kokqzcej",
+			"slug": "f95",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania optimiert Ihren Versand. Versandlogistiksystem F95 als Komplettl\u00f6sung f\u00fcr Ihren Paket- und Plattenversand mit diversen Frachtf\u00fchrern. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "HeroImage",
+					"id": "ckxbthx7ktz9s0c023ur7r1f5",
+					"image": {
+						"id": "cl0l3fg3l0e160cz5lty48fwn",
+						"url": "https://media.graphassets.com/oQwU9gqTrSRf51c9gVPd"
+					},
+					"strokeColor": {
+						"hex": "#2a499d",
+						"rgba": {
+							"r": 42,
+							"g": 73,
+							"b": 157,
+							"a": 1
+						}
+					},
+					"icon": {
+						"id": "ckwytp68gveh50b5618h5gqia",
+						"url": "https://media.graphassets.com/mLiFcU2cSRiy3BLms6J8"
+					}
+				},
+				{
+					"__typename": "Text",
+					"id": "ckxbtimo8tzjj0c02hgdb7oef",
+					"heading1": "F95 \u2013 Paket- und Palettenversand",
+					"heading2": "Branchenunabh\u00e4ngige Komplettl\u00f6sung f\u00fcr den Warenversand mit den unterschiedlichsten Frachtf\u00fchrern.",
+					"heading3": "",
+					"link": null,
+					"paddingTop": "Small",
+					"paddingBottom": "Medium",
+					"text": {
+						"html": "<p>Mit der Versandlogistiksoftware F95 \u2013 Paket- und Palettenversand k\u00f6nnen Sie alle Sendungen beim Betriebsdurchlauf und nach der Auslieferung verwalten. F95 steuert das Fertigmachen der Sendungen und die Einlieferung/Abholung sowie die Verwaltung und Abwicklung beliebig vieler Paketdienstleister und Spediteure.</p><p><br>F95 kann Wiegedaten auswerten, durch Barcodes Sendungen automatisch erkennen sowie Versandetiketten und Versandpapiere drucken.</p><p><br>Das System gibt von der Einlieferung bis zur Zustellung  Auskunft \u00fcber den Verbleib jeder einzelnen Sendung (Tracking &amp; Tracing). Danach steht das F95-Archiv allen Abteilungen f\u00fcr Nachforschungen bzw. Kundenanfragen zur Verf\u00fcgung.</p>"
+					}
+				},
+				{
+					"__typename": "Image",
+					"id": "ckxixcs9c7kga0b607fp65nvm",
+					"image": {
+						"id": "cl1yxd5ibtxhj0dtc5ou3lrzn",
+						"url": "https://media.graphassets.com/9RYPyteITRBdO8AB4Elc"
+					},
+					"imageWidth": "ContentWidth",
+					"paddingTop": "Small",
+					"paddingBottom": "Medium"
+				},
+				{
+					"__typename": "AccordionContainer",
+					"id": "cl0qozkc5bnrb0cux5j7twrti",
+					"headline": "Produktinformationen",
+					"introOptional": null,
+					"paddingTop": "Medium",
+					"paddingBottom": "Medium",
+					"accordionItems": [
+						{
+							"id": "cl0qozfmsc04z0ez816spbq8x",
+							"heading1": "Technische Details",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<ul><li><div>F95 ist jederzeit um zus\u00e4tzliche Module und Optionen aus unseren L\u00f6sungen zur Versandoptimierung erweiterbar. Durch den modularen Aufbau l\u00e4sst sich die Versandsoftware in nahezu jeder Versandumgebung individuell einrichten.</div></li><li><div>Die Einbindung in die bestehende EDV erfolgt mittels Programmschnittstellen mit standardisierten Datenstrukturen. Alternativ ist auch ein Datenaustausch \u00fcber einen  csv-Import und die manuelle Eingabe m\u00f6glich.</div></li><li><div>F95 ist mandantenf\u00e4hig und kann innerhalb eines Unternehmens von mehreren Betriebsst\u00e4tten und Firmen ohne zus\u00e4tzliche Lizenzkosten genutzt werden.</div></li><li><div>F\u00fcr Kunden, die gerne remote arbeiten, bieten wir F95 auch als Cloud-L\u00f6sung an.</div></li><li><div>Bei allen Versandmodulen werden Versandetiketten und DF\u00dc nach den aktuellen Regeln des jeweiligen Frachtf\u00fchrers erstellt und von diesen zuvor in einem Abnahmeverfahren gepr\u00fcft und best\u00e4tigt.</div></li><li><div>Im Versandmodul k\u00f6nnen die mit den Frachtf\u00fchrer vereinbarten Geb\u00fchrentabellen hinterlegt und gepflegt werden. Die Geb\u00fchrenermittlung bietet die M\u00f6glichkeit, die Versandkosten der verf\u00fcgbaren Frachtf\u00fchrer zu vergleichen und Frachtrechnungen zu pr\u00fcfen.</div></li><li><div>Elektronische Paketwaagen, Boden- und Hubwaagen k\u00f6nnen angebunden werden. Das Gewicht wird in F95 verarbeitet, gespeichert und gegebenenfalls an das Vorsystem \u00fcbergeben.</div></li></ul><p></p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": []
+						},
+						{
+							"id": "cl0qp7coab5n70bz7e1eyw9ye",
+							"heading1": "Frachtf\u00fchrer",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<p>F95 unterst\u00fctzt den Warenversand mit nahezu allen Speditionen und KEP-Dienstleistern. Module f\u00fcr nicht vorhandene Frachtf\u00fchrer k\u00f6nnen auf Wunsch realisiert werden.</p><p>Alle Frachtf\u00fchrer k\u00f6nnen an\u00a0<u>einem</u> Arbeitsplatz abgewickelt werden und erfordern keine separaten Arbeitspl\u00e4tze. Damit entfallen aufw\u00e4ndige Insell\u00f6sungen.</p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": []
+						},
+						{
+							"id": "cl0qp9xswcj5p0cxle9xb2jdu",
+							"heading1": "Vorteile",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<ul><li><div>F95 kann einfach in die vorhandene Software/EDV integriert werden.</div></li><li><div><u>Eine</u> Plattform f\u00fcr alle Frachtf\u00fchrer</div></li><li><div>F95 ist mandantenf\u00e4hig und kann innerhalb eines Unternehmens von mehreren Betriebsst\u00e4tten und Firmen ohne zus\u00e4tzliche Lizenzkosten genutzt werden.</div></li><li><div>Die betrieblichen Abl\u00e4ufe werden optimiert.</div></li><li><div>Die Auskunftsbereitschaft gegen\u00fcber Kunden wird verbessert.</div></li><li><div>Die Paketlaufzeiten werden verringert.</div></li><li><div>Kosteneinsparungen werden erzielt.</div></li></ul><p></p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": []
+						}
+					]
+				},
+				{
+					"__typename": "CardsContainer",
+					"id": "ckxer6a000ves0b15z6hwl8e3",
+					"headline": "Produkterweiterungen F95",
+					"paddingTop": "Small",
+					"paddingBottom": "None",
+					"cards": [
+						{
+							"__typename": "CardIcon",
+							"id": "ckxer65dc0m9s0c02yrjgrzcj",
+							"backgroundColor": {
+								"hex": "#2a499d",
+								"rgba": {
+									"r": 42,
+									"g": 73,
+									"b": 157,
+									"a": 1
+								}
+							},
+							"icon": {
+								"id": "ckxg7xe206e590b52qkw6r9ef",
+								"url": "https://media.graphassets.com/8ARwtd5xQROsrc6iCY0P"
+							},
+							"headline": "Frachtkostenmanagement",
+							"subheadline": null,
+							"link": {
+								"__typename": "Link",
+								"id": "ckzmjgy5407fs0a98zvdlwu3o",
+								"label": "Mehr erfahren",
+								"target": {
+									"__typename": "Page",
+									"id": "cky8mkjqgx7hh0e04rjhdjcsf",
+									"slug": "frachtkostenmanagement"
+								}
+							}
+						},
+						{
+							"__typename": "CardIcon",
+							"id": "ckxera1sw0yja0b15k530873q",
+							"backgroundColor": {
+								"hex": "#2a499d",
+								"rgba": {
+									"r": 42,
+									"g": 73,
+									"b": 157,
+									"a": 1
+								}
+							},
+							"icon": {
+								"id": "ckxg7xe207c560c96lxwaypok",
+								"url": "https://media.graphassets.com/YxpgHwKhSsm5zc7PyLWd"
+							},
+							"headline": "Gefahrgutabwicklung",
+							"subheadline": null,
+							"link": {
+								"__typename": "Link",
+								"id": "cl0qq3kb9d9xz0cux4i9dak13",
+								"label": "Mehr",
+								"target": {
+									"__typename": "Page",
+									"id": "ckzmjtal418pk0a48ngw5rmnw",
+									"slug": "gefahrgutabwicklung"
+								}
+							}
+						},
+						{
+							"__typename": "CardIcon",
+							"id": "ckxerav4g13eg0c148kpkjhq1",
+							"backgroundColor": {
+								"hex": "#2a499d",
+								"rgba": {
+									"r": 42,
+									"g": 73,
+									"b": 157,
+									"a": 1
+								}
+							},
+							"icon": {
+								"id": "ckxg7xe207a9p0b05kzs0up6k",
+								"url": "https://media.graphassets.com/p4sVHlh8SjD4gD22H2cx"
+							},
+							"headline": "Verladekontrolle",
+							"subheadline": null,
+							"link": {
+								"__typename": "Link",
+								"id": "ckzmjysw00k640a98stsq3d1m",
+								"label": "Mehr erfahren",
+								"target": {
+									"__typename": "Page",
+									"id": "ckzmjvkdkz84g0d0913s8m4wx",
+									"slug": "verladekontrolle"
+								}
+							}
+						},
+						{
+							"__typename": "CardIcon",
+							"id": "ckxerai080ppn0c020fdnszqd",
+							"backgroundColor": {
+								"hex": "#2a499d",
+								"rgba": {
+									"r": 42,
+									"g": 73,
+									"b": 157,
+									"a": 1
+								}
+							},
+							"icon": {
+								"id": "ckxg7xe207c5k0c96966ad3tj",
+								"url": "https://media.graphassets.com/z3Pip6uATHeAVf9O2fG5"
+							},
+							"headline": "Mailbenachrichtigung",
+							"subheadline": null,
+							"link": {
+								"__typename": "Link",
+								"id": "ckzmjxy0w1dkt0a48uvqg9d77",
+								"label": "Mehr erfahren",
+								"target": {
+									"__typename": "Page",
+									"id": "ckzmju5g80epn0a98d9k4unyn",
+									"slug": "mailbenachrichtigung"
+								}
+							}
+						}
+					]
+				},
+				{
+					"__typename": "AssetLink",
+					"id": "cl0qto7xf3b400bxpdai8p35p",
+					"headline": "Produktbeschreibung herunterladen",
+					"downloadlinkLabel": "Ein Downloadlink",
+					"assetPicker": {
+						"url": "https://media.graphassets.com/9RYPyteITRBdO8AB4Elc"
+					}
+				},
+				{
+					"__typename": "CtaLink",
+					"id": "cl2aesljtesbm0buosv5vak9c",
+					"headline": "M\u00f6chten Sie mehr erfahren?",
+					"padding": "Medium"
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckxbupotsuwsn0d57gs2a7fz6",
+			"slug": "k04",
+			"title": "Rhenania Computer",
+			"description": null,
+			"modules": [
+				{
+					"__typename": "HeroImage",
+					"id": "ckxbuzukgug340c03f4wzb7i7",
+					"image": {
+						"id": "cl0l3fg3tzua30bz7cwlx4uyc",
+						"url": "https://media.graphassets.com/PkRg3qHRcugPYNIkNCPq"
+					},
+					"strokeColor": {
+						"hex": "#203776",
+						"rgba": {
+							"r": 32,
+							"g": 55,
+							"b": 118,
+							"a": 1
+						}
+					},
+					"icon": {
+						"id": "ckxaikzig914d0b15fzh1jnzm",
+						"url": "https://media.graphassets.com/xx563jO5RLSLHbFoBwFb"
+					}
+				},
+				{
+					"__typename": "Text",
+					"id": "ckxes7yhc1ssk0d57tcs8ywuz",
+					"heading1": "K04 \u2013 Kommissionieren, Kontrollieren, Packen",
+					"heading2": "K04 stellt eine fehlerfreie Kommissionierung sicher.",
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Medium",
+					"paddingBottom": "Medium",
+					"text": {
+						"html": "<p>Die Software K04 \u2013 Kommissionieren, Kontrollieren, Packen steuert den gesamten Kommissionierprozess. Der Mitarbeiter wird wegeoptimiert zum Lagerplatz gef\u00fchrt. Ein Artikelabgleich verhindert direkt bei der Entnahme oder auch sp\u00e4ter am Packplatz m\u00f6gliche Kommissionierfehler. K04 unterst\u00fctzt bei der Inventur sowie beim Ein- und Auslagern und verwaltet den Lagerbestand.</p>"
+					}
+				},
+				{
+					"__typename": "Image",
+					"id": "cl28vvfkb4kwd0bunnpt7btve",
+					"image": {
+						"id": "cl28xgjgy6mbf0hul3j87fnaj",
+						"url": "https://media.graphassets.com/JzAwGJ0qTZW22XpQ403b"
+					},
+					"imageWidth": "ContentWidth",
+					"paddingTop": "Small",
+					"paddingBottom": "Medium"
+				},
+				{
+					"__typename": "AccordionContainer",
+					"id": "cl28vzk1m4yl90cuv9jm2hplp",
+					"headline": "Produktinformationen",
+					"introOptional": null,
+					"paddingTop": "Small",
+					"paddingBottom": "Large",
+					"accordionItems": [
+						{
+							"id": "cl28vz7q44sg80buo04o3geuv",
+							"heading1": "Details",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<p>Neben der manuellen Kommissionierung mit Picklisten ist mit K04 auch eine beleglose Abwicklung \u00fcber Funkscanner (Pick-by-Scan / Pick-by-Barcode) m\u00f6glich.\u00a0</p><p><br>Dabei wird der Picker (Kommissionierer) \u00fcber den Scanner wegeoptimiert durchs Lager geleitet. Das System sucht anhand der Sortierung der Daten den n\u00e4chsten Lagerplatz. Danach teilt das System dem Picker mit, welche Artikel in welcher Menge zu entnehmen sind. Die Entnahmemwird durch das Scannen der Artikel best\u00e4tigt.</p><p><br>Falsche oder \u00fcberz\u00e4hlige Artikel werden abgewiesen. Richtige Artikel werden als gepackt gekennzeichnet und k\u00f6nnen mit weiteren Daten wie Seriennummer, Charge und Gewicht angereichert werden.</p><p><br>Sind alle Artikel an einem Platz gescannt, teilt das System dem Picker den n\u00e4chsten Lagerplatz mit. Der Pickvorgang wird fortgesetzt, bis alle Daten der Pickliste abgearbeitet sind.</p><p><br>Wenn mehrere Pakete zu einem Lieferschein geh\u00f6ren, muss f\u00fcr jedes Paket zus\u00e4tzlich &quot;Paketende&quot; ausgel\u00f6st werden, damit die Zuordnung der Artikel zu den Paketen sichergestellt ist. Bei Auftragsende wird auf fehlende Artikel aufmerksam gemacht.\u00a0</p><p><br>Die fertig gepackten Pakete k\u00f6nnen vor dem Versand nochmals gewogen werden. Wird eine einstellbare Toleranz \u00fcber- oder unterschritten, erfolgt eine Nachkontrolle.</p><p><br>Bei Auftragsabschluss werden die Ist-Daten an das Vertriebssystem zur\u00fcckgemeldet und die weiteren Verarbeitungsschritte (z.B. Lieferschein- oder Rechnungsdruck) ausgel\u00f6st.</p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": []
+						},
+						{
+							"id": "cl28w60vd57w20cuvqgd7z8vo",
+							"heading1": "Arbeitsschritte",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<ul><li><div>Bereitstellung Soll-Daten \u00fcber Schnittstelle</div></li><li><div>Erfassung Ist-Daten \u00fcber Scanner oder Tastatur</div></li><li><div>Eindeutige Zuordnung des Artikels zum Packst\u00fcck</div></li><li><div>Soll-/Ist-Vergleich des Warenausgangs</div></li><li><div>Fehlersteuerung: Abweisen falscher Artikel</div></li><li><div>Anzeige der Anzahl der fehlenden Artikel</div></li><li><div>Kennzeichnung der zugeordneten Soll-Daten</div></li></ul><p></p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": []
+						},
+						{
+							"id": "cl28w6q7c5a2c0cunu9jkd51z",
+							"heading1": "Vorteile",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<ul><li><div>Fehler bei der Kommissionierung werden zuverl\u00e4ssig vermieden.</div></li><li><div>Es werden keine falschen Artikel versendet.</div></li><li><div>Es werden keine falschen Mengen versendet.</div></li><li><div>Differenzen im Lagerbestand werden reduziert.</div></li><li><div>Manuelles Papierhandling zwischen Versand und Vertrieb entf\u00e4llt.</div></li><li><div>Nachweisbarer Paketinhalt - auch bei Mehrpaketsendungen</div></li><li><div>Mehrere Sendungen k\u00f6nnen in einem Paket / Palette zusammengefasst werden.</div></li><li><div>Wegeoptimierte Kommissionierung (&quot;Mann-zur-Ware&quot;)</div></li><li><div>Erstellung und Versand DESADV (vorauseilendes Lieferavis)</div></li><li><div>Unterst\u00fctzung bei der Inventur</div></li></ul><p></p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": []
+						}
+					]
+				},
+				{
+					"__typename": "CardsContainer",
+					"id": "cl28ypxd28djd0hulubk4v8nq",
+					"headline": "Produkterweiterungen K04",
+					"paddingTop": "Medium",
+					"paddingBottom": "None",
+					"cards": [
+						{
+							"__typename": "CardIcon",
+							"id": "cl28ypt4o8g720buos744qhfl",
+							"backgroundColor": {
+								"hex": "#203776",
+								"rgba": {
+									"r": 32,
+									"g": 55,
+									"b": 118,
+									"a": 1
+								}
+							},
+							"icon": {
+								"id": "ckxg7xe206e590b52qkw6r9ef",
+								"url": "https://media.graphassets.com/8ARwtd5xQROsrc6iCY0P"
+							},
+							"headline": "Beipacken",
+							"subheadline": null,
+							"link": {
+								"__typename": "Link",
+								"id": "cl28yjb0d81160hulx03ejquw",
+								"label": "Mehr",
+								"target": {
+									"__typename": "Page",
+									"id": "cl28xj5kl71oi0cuvlaugw652",
+									"slug": "beipacken"
+								}
+							}
+						},
+						{
+							"__typename": "CardIcon",
+							"id": "cl28yrcfw8rnx0cuvju3x6noq",
+							"backgroundColor": {
+								"hex": "#203776",
+								"rgba": {
+									"r": 32,
+									"g": 55,
+									"b": 118,
+									"a": 1
+								}
+							},
+							"icon": {
+								"id": "ckxg7xe207c5k0c96966ad3tj",
+								"url": "https://media.graphassets.com/z3Pip6uATHeAVf9O2fG5"
+							},
+							"headline": "Paketinhaltsliste",
+							"subheadline": null,
+							"link": {
+								"__typename": "Link",
+								"id": "cl28yk3x78eot0cuvq60cz147",
+								"label": "Mehr",
+								"target": {
+									"__typename": "Page",
+									"id": "cl28xlmzr73w90aunk1jvbawa",
+									"slug": "paketinhaltsliste"
+								}
+							}
+						},
+						{
+							"__typename": "CardIcon",
+							"id": "cl28yvasq8qux0cun48tpsjw4",
+							"backgroundColor": {
+								"hex": "#203776",
+								"rgba": {
+									"r": 32,
+									"g": 55,
+									"b": 118,
+									"a": 1
+								}
+							},
+							"icon": {
+								"id": "ckxg7xe207a9p0b05kzs0up6k",
+								"url": "https://media.graphassets.com/p4sVHlh8SjD4gD22H2cx"
+							},
+							"headline": "Lagerbestandsf\u00fchrung",
+							"subheadline": null,
+							"link": {
+								"__typename": "Link",
+								"id": "cl28ylnk585sr0hulzgi87flj",
+								"label": "Mehr",
+								"target": {
+									"__typename": "Page",
+									"id": "cl28xocwr6vuf0hultp59hjjb",
+									"slug": "lagerbestandsfuehrung"
+								}
+							}
+						},
+						{
+							"__typename": "CardIcon",
+							"id": "cl28ywzx48pjs0hul97uvpech",
+							"backgroundColor": {
+								"hex": "#203776",
+								"rgba": {
+									"r": 32,
+									"g": 55,
+									"b": 118,
+									"a": 1
+								}
+							},
+							"icon": {
+								"id": "ckxg7xe207c560c96lxwaypok",
+								"url": "https://media.graphassets.com/YxpgHwKhSsm5zc7PyLWd"
+							},
+							"headline": "DESADV (EDI) und EAN 128",
+							"subheadline": null,
+							"link": {
+								"__typename": "Link",
+								"id": "ckyu6lwc09th90b44tgnnh6ko",
+								"label": "Mehr",
+								"target": {
+									"__typename": "Page",
+									"id": "cl28xpvwk6yxu0buo91w6hsif",
+									"slug": "desadv"
+								}
+							}
+						}
+					]
+				},
+				{
+					"__typename": "AssetLink",
+					"id": "cl48gna6y15ad0cuuw2ujwwax",
+					"headline": "Produktbeschreibung herunterladen",
+					"downloadlinkLabel": "Ein Downloadlink K04",
+					"assetPicker": {
+						"url": "https://media.graphassets.com/lXg831B8TyGq4qogJDK7"
+					}
+				},
+				{
+					"__typename": "CtaLink",
+					"id": "cl088nhpvc6u00dywl2iruvjf",
+					"headline": "M\u00f6chten Sie mehr erfahren?",
+					"padding": "Small"
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckxbush4wuty00b5195vtoxmf",
+			"slug": "vka",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania pr\u00fcft Ihre Frachtrechnung. Versandlogistiksystem VKA als L\u00f6sung zur automatisierten Kontrolle von Fracht- und Versandkosten. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "HeroImage",
+					"id": "ckxbv2qqguh8r0c03c4k98zxy",
+					"image": {
+						"id": "cl0l3fg400e1k0cz5y2bwe6cf",
+						"url": "https://media.graphassets.com/HUveO0J3T1GqUD8Llm8e"
+					},
+					"strokeColor": {
+						"hex": "#a3d4ff",
+						"rgba": {
+							"r": 163,
+							"g": 212,
+							"b": 255,
+							"a": 1
+						}
+					},
+					"icon": {
+						"id": "ckxaikzig99tc0b51l4soddr2",
+						"url": "https://media.graphassets.com/db5k3NWTrqVX8SRfm26Q"
+					}
+				},
+				{
+					"__typename": "Text",
+					"id": "ckxbusyvsuy4q0d57vkki3nu3",
+					"heading1": "VKA - Versandkostenkontrolle und Abrechnung",
+					"heading2": "VKA \u00fcbernimmt die Kontrolle Ihrer Fracht- und Versandkosten.",
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Medium",
+					"paddingBottom": "Medium",
+					"text": {
+						"html": "<p>VKA bietet die M\u00f6glichkeit, die Versandkosten automatisiert zu kontrollieren und die Frachtrechnungen der Paketdienstleister und Spediteure einfach und vollst\u00e4ndig zu pr\u00fcfen.</p><p><br>Durch das automatisierte Verfahren entf\u00e4llt der hohe manuelle Kontroll- und Buchungsaufwand. Gleichzeitig werden auswertbare Abrechnungsdaten generiert.</p><p><br>Mit dem Modul Rechnungskontrolle (RK) ist eine effektive \u00dcberpr\u00fcfung der Versandkosten aller ausgehenden Sendungen sichergestellt. Dabei werden die Frachtrechnungen der KEP-Dienstleister und Speditionen in Dateiform importiert und mit den zuvor ermittelten Geb\u00fchren aus unserem Versandsystem F95 \u2013 Paket- und Palettenversand verglichen.</p><p><br>Alternativ k\u00f6nnen mit dem Modul Gutschriftsanzeigeverfahren (GAV) auf Basis der vereinbarten Tarife Gutschriftsanzeigen erstellt und elektronisch oder per Post an den Frachtf\u00fchrer \u00fcbermittelt werden. Damit verlagert sich die \u00dcberpr\u00fcfung der Frachtkosten auf die Seite der Paketdienstleister und Spediteure.</p>"
+					}
+				},
+				{
+					"__typename": "AccordionContainer",
+					"id": "cl1yy2aeztvy20dt8zjqyvx8x",
+					"headline": "Produktinformationen",
+					"introOptional": null,
+					"paddingTop": "Small",
+					"paddingBottom": "Medium",
+					"accordionItems": [
+						{
+							"id": "cl1yy27acu6cc0cugjbu9b6r0",
+							"heading1": "Vorteile",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<ul><li><div>Vollst\u00e4ndige Kostenkontrolle aller Ausgangsfrachten </div></li><li><div>Manuelle Kontrolle der Frachtrechnungen entf\u00e4llt. </div></li><li><div>Gutschriften oder Belastungsanzeigen werden automatisch erstellt. </div></li><li><div>Kontrolle der Frachtkosten au\u00dferhalb der Finanzbuchhaltung </div></li><li><div>Manueller Buchungsaufwand entf\u00e4llt.</div></li><li><div>Abrechnungsdaten stehen f\u00fcr Auswertungen zur Verf\u00fcgung.</div></li></ul><p></p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": []
+						},
+						{
+							"id": "cl1yy7mhaujoy0brxaussc413",
+							"heading1": "Outsourcing",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<p><strong>Service zur Komplettabwicklung der Versandkostenkontrolle<br>- Outsourcing -</strong><br><br>Rhenania Computer bietet neben seiner Inhouse- und Cloudl\u00f6sung auch eine Komplettabwicklung der Versandkostenkontrolle an.<br><br>Bei Wahl der Qutsourcing-L\u00f6sung f\u00fchren wir die komplette Versandkostenkontrolle f\u00fcr Sie durch. Sie \u00fcbertragen uns Ihre Sendungsdaten und wir ermitteln in unserem Versandsystem die Versandkosten anhand der Geb\u00fchren,  die Sie mit dem Frachtf\u00fchrer vereinbart haben. Anschlie\u00dfend importieren wir die elektronische Frachtrechnung Ihres Dienstleisters und vergleichen die Werte auf Positionsebene. Jede Abweichung au\u00dferhalb der Toleranzen wird erkannt und detailliert an Sie zur\u00fcckgemeldet.<br><br>Frachtf\u00fchrer, die dem Gutschriftsanzeigeverfahren zustimmen, erhalten eine Gutschriftsanzeige. Die \u00dcberpr\u00fcfung der Versandkosten liegt dann beim Dienstleister. \u00a0</p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": []
+						}
+					]
+				},
+				{
+					"__typename": "CardsContainer",
+					"id": "cl1z0714wwp0r0btc646zmz9w",
+					"headline": "Module VKA",
+					"paddingTop": "Small",
+					"paddingBottom": "None",
+					"cards": [
+						{
+							"__typename": "CardIcon",
+							"id": "cl1z04u44wm9m0dtcd04rd8aq",
+							"backgroundColor": {
+								"hex": "#a3d4ff",
+								"rgba": {
+									"r": 163,
+									"g": 212,
+									"b": 255,
+									"a": 1
+								}
+							},
+							"icon": {
+								"id": "ckxaikzig91440b15zjye1y72",
+								"url": "https://media.graphassets.com/4w3UpySvTBy6zNSMwTFh"
+							},
+							"headline": "Rechnungskontrolle",
+							"subheadline": null,
+							"link": {
+								"__typename": "Link",
+								"id": "cl1z019hrwigb0dtcy2vpor5c",
+								"label": "Mehr",
+								"target": {
+									"__typename": "Page",
+									"id": "cl1yz0513vd350btcp8nni9h2",
+									"slug": "rechnungskontrolle"
+								}
+							}
+						},
+						{
+							"__typename": "CardIcon",
+							"id": "cl1z0dkq4wu470cumbsk2d1fh",
+							"backgroundColor": {
+								"hex": "#a3d4ff",
+								"rgba": {
+									"r": 163,
+									"g": 212,
+									"b": 255,
+									"a": 1
+								}
+							},
+							"icon": {
+								"id": "ckxg7xe207c5k0c96966ad3tj",
+								"url": "https://media.graphassets.com/z3Pip6uATHeAVf9O2fG5"
+							},
+							"headline": "Gutschriftsanzeige",
+							"subheadline": null,
+							"link": {
+								"__typename": "Link",
+								"id": "cl1z00ufhwgaf0btcjxi8ok1k",
+								"label": "Mehr",
+								"target": {
+									"__typename": "Page",
+									"id": "cl1yyws5tv0vg0cugaielxwgs",
+									"slug": "gutschriftsanzeigeverfahren"
+								}
+							}
+						}
+					]
+				},
+				{
+					"__typename": "AssetLink",
+					"id": "cl1yyfwupuykr0dtcy2hebrn2",
+					"headline": "Produktbeschreibung herunterladen",
+					"downloadlinkLabel": "Download VKA Link1",
+					"assetPicker": {
+						"url": "https://media.graphassets.com/lXg831B8TyGq4qogJDK7"
+					}
+				},
+				{
+					"__typename": "CtaLink",
+					"id": "cl1yyjvbfucg70dt8bp2v8ple",
+					"headline": "M\u00f6chten Sie mehr erfahren?",
+					"padding": "Medium"
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckxbv71tsuvw20c14i1binf0d",
+			"slug": "u12",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania sichert Ihre Umsatzsteuerbefreiung. Software U12 als L\u00f6sung f\u00fcr die gesamte Abwicklung des Gelangensnachweises inklusive Mahnwesen. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "HeroImage",
+					"id": "ckxbvhbfcupnp0c02kspjo9fw",
+					"image": {
+						"id": "ckwytdgxsumw90c07wuqjc5ty",
+						"url": "https://media.graphassets.com/JXSQxfRQRlGhE38aYiVC"
+					},
+					"strokeColor": {
+						"hex": "#59aa25",
+						"rgba": {
+							"r": 89,
+							"g": 170,
+							"b": 37,
+							"a": 1
+						}
+					},
+					"icon": {
+						"id": "cl0i54kkuvrvu0ez8veowu9kr",
+						"url": "https://media.graphassets.com/CEW8GDuwQtgVWpwcMLWg"
+					}
+				},
+				{
+					"__typename": "Text",
+					"id": "ckxbvor68usgc0c02wre4s5wv",
+					"heading1": "U12 \u2013 Umsatzsteuer Befreiung Sichern",
+					"heading2": "U12 erledigt f\u00fcr Sie die Erstellung, den Versand, die Vereinnahmung und Archivierung der Gelangensnachweise. ",
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Medium",
+					"paddingBottom": "Small",
+					"text": {
+						"html": "<p>U12 - Umsatzsteuer Befreiung Sichern beinhaltet die gesamte Abwicklung des Gelangensnachweises inklusive Mahnwesen. Mit dem Modul Abliefernachweis wird die Sicherung der Umsatzsteuerbefreiung sogar vollst\u00e4ndig automatisiert.</p>"
+					}
+				},
+				{
+					"__typename": "CardsContainer",
+					"id": "ckzmpal7k5b8l0c02dcq2ftm7",
+					"headline": "Bestandteile U12",
+					"paddingTop": "None",
+					"paddingBottom": "None",
+					"cards": [
+						{
+							"__typename": "CardIcon",
+							"id": "ckzmp55806x6t0a48rxjih2vg",
+							"backgroundColor": {
+								"hex": "#59aa25",
+								"rgba": {
+									"r": 89,
+									"g": 170,
+									"b": 37,
+									"a": 1
+								}
+							},
+							"icon": {
+								"id": "ckxg7xe206e590b52qkw6r9ef",
+								"url": "https://media.graphassets.com/8ARwtd5xQROsrc6iCY0P"
+							},
+							"headline": "Gelangensnachweis",
+							"subheadline": null,
+							"link": {
+								"__typename": "Link",
+								"id": "ckzmp4xi866o80a116qrav434",
+								"label": "Mehr",
+								"target": {
+									"__typename": "Page",
+									"id": "ckzmozyhs63bv0a98j5dpbiow",
+									"slug": "gelangensbestaetigung"
+								}
+							}
+						},
+						{
+							"__typename": "CardIcon",
+							"id": "ckzmp7ivc691g0a11tdse5i6y",
+							"backgroundColor": {
+								"hex": "#59aa25",
+								"rgba": {
+									"r": 89,
+									"g": 170,
+									"b": 37,
+									"a": 1
+								}
+							},
+							"icon": {
+								"id": "ckxg7xe207a9p0b05kzs0up6k",
+								"url": "https://media.graphassets.com/p4sVHlh8SjD4gD22H2cx"
+							},
+							"headline": "Abliefernachweis ",
+							"subheadline": null,
+							"link": {
+								"__typename": "Link",
+								"id": "ckzmp7dgw58uj0c02u6xyh7qr",
+								"label": "Mehr",
+								"target": {
+									"__typename": "Page",
+									"id": "ckzmp3h1c55er0c02vqbeoqh0",
+									"slug": "abliefernachweis"
+								}
+							}
+						},
+						{
+							"__typename": "CardIcon",
+							"id": "ckzmqff48752o0a11hwza8j94",
+							"backgroundColor": {
+								"hex": "#59aa25",
+								"rgba": {
+									"r": 89,
+									"g": 170,
+									"b": 37,
+									"a": 1
+								}
+							},
+							"icon": {
+								"id": "ckxg7xe207c560c96lxwaypok",
+								"url": "https://media.graphassets.com/YxpgHwKhSsm5zc7PyLWd"
+							},
+							"headline": "Qual. Pr\u00fcfung USt.-ID",
+							"subheadline": null,
+							"link": {
+								"__typename": "Link",
+								"id": "ckzmqp67468dz0d0992fp2ln8",
+								"label": "Mehr",
+								"target": {
+									"__typename": "Page",
+									"id": "ckzmqjihs77os0b534vbc5hb5",
+									"slug": "pruefungustid"
+								}
+							}
+						}
+					]
+				},
+				{
+					"__typename": "AssetLink",
+					"id": "ckziqf9hkrafd0c02y2mcgkwc",
+					"headline": "Produktbeschreibung herunterladen",
+					"downloadlinkLabel": "Download U12 Link1",
+					"assetPicker": {
+						"url": "https://media.graphassets.com/lXg831B8TyGq4qogJDK7"
+					}
+				},
+				{
+					"__typename": "AssetLink",
+					"id": "ckzr1ylc07p1s0f46dg0mk1nz",
+					"headline": "",
+					"downloadlinkLabel": "Noch ein drittes Dokument",
+					"assetPicker": {
+						"url": "https://media.graphassets.com/9RYPyteITRBdO8AB4Elc"
+					}
+				},
+				{
+					"__typename": "CtaLink",
+					"id": "cl088k0xsc5vx0bxprsfr9h1a",
+					"headline": "M\u00f6chten Sie mehr erfahren?",
+					"padding": "Medium"
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckxbvxh7sv8wm0b51ls6jiuo5",
+			"slug": "duv",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania optimiert Ihren Versand. Software DUV als L\u00f6sung zur Identifikation und Bereinigung von Adress-Dubletten bei komplexen Datenbest\u00e4nden. Mehr erfahren..",
+			"modules": [
+				{
+					"__typename": "HeroImage",
+					"id": "ckxbvy1a0vcma0d57ll403umn",
+					"image": {
+						"id": "ckwytdgxsumw90c07wuqjc5ty",
+						"url": "https://media.graphassets.com/JXSQxfRQRlGhE38aYiVC"
+					},
+					"strokeColor": {
+						"hex": "#2088c1",
+						"rgba": {
+							"r": 32,
+							"g": 136,
+							"b": 193,
+							"a": 1
+						}
+					},
+					"icon": {
+						"id": "ckxaikzig8ts30c038f3ms62g",
+						"url": "https://media.graphassets.com/1MMi7Pa0R4yT64uCbEU6"
+					}
+				},
+				{
+					"__typename": "Text",
+					"id": "ckxbw2wfkv7dx0c146ck46ffb",
+					"heading1": "DUV - Dubletten vermeiden",
+					"heading2": "Adress-Dubletten finden und bereinigen ",
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Medium",
+					"paddingBottom": "Medium",
+					"text": {
+						"html": "<p>Eindeutige Adressen sind eine wichtige Voraussetzung f\u00fcr eine gute Kommunikation mit Ihren Kunden. Kundenadressen, die nur einmal gespeichert sind, verbessern den Service, da Sie mit einheitlichen Liefer- und Zahlungskonditionen arbeiten k\u00f6nnen.<br><br>Die Software DUV - Dubletten Vermeiden erleichtert die Arbeit mit gro\u00dfen oder komplexen Datenbest\u00e4nden. Nach minimaler oder vollst\u00e4ndiger Adresseingabe werden automatisch nur die Adressen zur Auswahl gestellt, die alle Suchkriterien erf\u00fcllen. Bei der Erfassung von neuen Adressen werden Duplikate erkannt und gar nicht erst zugelassen. Somit wird DUV zur perfekten Suchmaschine f\u00fcr jeden Adressdatenbestand.</p><p></p>"
+					}
+				},
+				{
+					"__typename": "Image",
+					"id": "ckzpib9qgca0x0c05ltb4cdvm",
+					"image": {
+						"id": "cl1yri99jnfaa0cug8214v3tc",
+						"url": "https://media.graphassets.com/1FgrFM70TECoEu5hCagA"
+					},
+					"imageWidth": "ContentWidth",
+					"paddingTop": "Small",
+					"paddingBottom": "Small"
+				},
+				{
+					"__typename": "AccordionContainer",
+					"id": "ckzpinj3ccuig0c053a8rhcv2",
+					"headline": "Produktionformationen",
+					"introOptional": null,
+					"paddingTop": "Medium",
+					"paddingBottom": "Medium",
+					"accordionItems": [
+						{
+							"id": "ckzpimzswct0l0d680hnxxsz1",
+							"heading1": "Arbeitsweise",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<ul><li><div>Adressen werden nach den Regeln unserer Software APK - Adresspr\u00fcfung und Korrektur normalisiert und auf Richtigkeit gepr\u00fcft.</div></li><li><div>Es wird untersucht, ob zu einer Anschrift mehrere Adressen vorhanden sind.</div></li><li><div>Falls ja, werden alle Adressen mit der gleichen postalischen Adresse eingelesen.</div></li><li><div>Mit Hilfe des DUV-Thesaurus werden die Namenszeilen in pr\u00fcfbare Elemente aufgeteilt.</div></li><li><div>Anschlie\u00dfend erfolgt der Abgleich zwischen den vorhandenen und den erfassten Daten.</div></li><li><div>Ist die Adresse vorhanden, \u00fcbertr\u00e4gt DUV alle Informationen.</div></li><li><div>Ist keine eindeutige Zuordnung m\u00f6glich, wird eine Liste mit Vorschl\u00e4gen bereitgestellt und am Bildschirm angezeigt.</div></li><li><div>Wenn aus den Vorschl\u00e4gen ausgew\u00e4hlt wird, werden wieder alle Daten an die aufrufende Anwendung zur\u00fcck\u00fcbertragen.</div></li></ul><p>DUV arbeitet mit CALL-Modulen f\u00fcr die interaktive Pr\u00fcfung. Diese CALL-Module k\u00f6nnen in jede beliebige Adressanwendung mit geringem Aufwand eingebunden werden.<br><br>Die zu pr\u00fcfenden Adressen werden in eine Datenstruktur gestellt und an die entsprechenden Pr\u00fcfprogramme \u00fcbergeben. \u00dcber eine Optionsart in der Datenstruktur wird Art und Umfang der Pr\u00fcfung definiert.</p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": []
+						},
+						{
+							"id": "ckzzoacz4yf220d03s2jkgaal",
+							"heading1": "Weitere Informationen",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<p>Vor ihrer Speicherung pr\u00fcft DUV die erfassten Namenszeilen und Anschriften<br>darauf, ob sie vorhanden sind.\u00a0<br><br>DUV hat folgende wesentliche Leistungsmerkmale:</p><ul><li><div><p>Erfassung der relevanten Namens- und Anschriftendaten</p></div></li><li><div><p>\u00dcbernahme der bekannten Matchcode-Funktionen</p></div></li><li><div><p>DUV-Thesaurus f\u00fcr die Normalisierung von Begriffen</p></div></li><li><div><p>Erkennung gespeicherter Adressen und Bereitstellung von Daten</p></div></li><li><div><p>Abspeicherung neuer Adressen in DUV</p></div></li></ul><p>Neue Adressen werden sofort nach der Speicherung in der DUV-Datenbank abgelegt und stehen f\u00fcr eine Pr\u00fcfung zur Verf\u00fcgung. Zus\u00e4tzlich zur Sicherstellung eindeutiger Adressen spart DUV Zeit und Erfassungskapazit\u00e4t. DUV ermittelt entweder einen richtigen Satz oder unterbreitet Ihnen Vorschl\u00e4ge \u00e4hnlich lautender Adressen. Wenn Sie keinen der Vorschl\u00e4ge akzeptieren, also eine neue Adresse erfassen wollen, k\u00f6nnen Sie die bereits vorhandenen Daten an Ihre Adressverwaltung \u00fcbergeben.</p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": []
+						},
+						{
+							"id": "ckzzocob4yh530d034yb5bbyy",
+							"heading1": "Vorteile",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<ul><li><div>Sie vermeiden grunds\u00e4tzlich doppelte Adressen.</div></li><li><div>Kunden haben eindeutige Zahlungs- und Lieferbedingungen.</div></li><li><div>Sie vermeiden doppelte Werbung und mehrfachen Musterversand.</div></li><li><div>DUV hilft bei der Aufdeckung von Betrugsversuchen im Versandhandel.</div></li><li><div>Durch Zusammenarbeit mit APK sind Ihre Adressen postalisch korrekt.</div></li><li><div>DUV ist die perfekte Adress-Suchmaschine.</div></li></ul><p></p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": []
+						}
+					]
+				},
+				{
+					"__typename": "AssetLink",
+					"id": "cl48gpwew1daz0buupqw6f57i",
+					"headline": "Produktbeschreibung herunterladen",
+					"downloadlinkLabel": "Downloadlink DUV",
+					"assetPicker": {
+						"url": "https://media.graphassets.com/lXg831B8TyGq4qogJDK7"
+					}
+				},
+				{
+					"__typename": "CtaLink",
+					"id": "cl2aes14nepz00bun4bgw8v0k",
+					"headline": "M\u00f6chten Sie mehr erfahren?",
+					"padding": "Medium"
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckxbwa1dkvhj30d57ntzt7abu",
+			"slug": "apk",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania optimiert Ihre Adressdaten. Software APK als L\u00f6sung zur Validierung, Pr\u00fcfung und Korrektur von Adressen, national und international. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "HeroImage",
+					"id": "ckxbw9coov0b10c02nbbdspkr",
+					"image": {
+						"id": "ckwytdgxsumw90c07wuqjc5ty",
+						"url": "https://media.graphassets.com/JXSQxfRQRlGhE38aYiVC"
+					},
+					"strokeColor": {
+						"hex": "#25aaa7",
+						"rgba": {
+							"r": 37,
+							"g": 170,
+							"b": 167,
+							"a": 1
+						}
+					},
+					"icon": {
+						"id": "ckxaikzig8wwu0c02vlga9re3",
+						"url": "https://media.graphassets.com/5a6YgmShTz6WRawgjJjL"
+					}
+				},
+				{
+					"__typename": "Text",
+					"id": "ckxbw9s48ux5l0c038ymdf3zt",
+					"heading1": "APK - Adresspr\u00fcfung und Korrektur",
+					"heading2": "Versandoptimierung durch Validierung, Pr\u00fcfung und Korrektur von Adressen",
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Medium",
+					"paddingBottom": "Medium",
+					"text": {
+						"html": "<p>APK pr\u00fcft und korrigiert automatisch oder manuell deutsche Adressen im Dialog und im Batchlauf entsprechend den Leitdaten der Deutschen Post AG. \u2028Internationale Adressen pr\u00fcft APK mittels eines Webservices, der auf Referenzadressdaten zugreift.</p>"
+					}
+				},
+				{
+					"__typename": "Image",
+					"id": "ckysuxm2ge94p0b0290evsge6",
+					"image": {
+						"id": "cl1yra7yvniet0cumu9m25wfw",
+						"url": "https://media.graphassets.com/3Jepv2kvQ1eHcxLGXJgY"
+					},
+					"imageWidth": "ContentWidth",
+					"paddingTop": "None",
+					"paddingBottom": "None"
+				},
+				{
+					"__typename": "Text",
+					"id": "ckystrso0o5lu0a07mwajlohd",
+					"heading1": null,
+					"heading2": null,
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Small",
+					"paddingBottom": "Medium",
+					"text": {
+						"html": "<p>Korrekte Adressen sind die Grundvoraussetzung f\u00fcr eine maschinelle Bearbeitung. Brief-, Paket-  oder Frachtsendungen mit korrekten Adressen erm\u00f6glichen die schnelle Zustellung an den Empf\u00e4nger durch jeden Transporteur.\u2028\u2028<br><br>APK - Adresspr\u00fcfung und Korrektur l\u00e4sst sich leicht an jedes Vorsystem (CRM, Webshop etc.) anbinden. So verhindert APK verl\u00e4sslich falsche oder fehlerhafte Adressen bei der Adresserfassung und -verwaltung.</p>"
+					}
+				},
+				{
+					"__typename": "AssetLink",
+					"id": "cl03vo88pb82i0dywf3fan63q",
+					"headline": "Produktbeschreibung herunterladen",
+					"downloadlinkLabel": "APK Download Link1",
+					"assetPicker": {
+						"url": "https://media.graphassets.com/q84yWBgSZaxe4bANpsf4"
+					}
+				},
+				{
+					"__typename": "CtaLink",
+					"id": "cl088lwxac0t10bz1ckcceart",
+					"headline": "M\u00f6chten Sie mehr erfahren?",
+					"padding": "Medium"
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckxbwc82wveiy0b15dqvz9q3t",
+			"slug": "g10",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania optimiert Ihren Gefahrgutversand. Software G10 zur Unterst\u00fctzung und Vereinfachung des Versandes von Gefahrg\u00fctern aller Art. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "HeroImage",
+					"id": "ckxbwc4zsvesq0b51m1i9w6w4",
+					"image": {
+						"id": "ckwytdgxsumw90c07wuqjc5ty",
+						"url": "https://media.graphassets.com/JXSQxfRQRlGhE38aYiVC"
+					},
+					"strokeColor": {
+						"hex": "#631b75",
+						"rgba": {
+							"r": 99,
+							"g": 27,
+							"b": 117,
+							"a": 1
+						}
+					},
+					"icon": {
+						"id": "ckxaikzig99t00b515p8zl5kr",
+						"url": "https://media.graphassets.com/1gALj8AeToyFUjr5myYc"
+					}
+				},
+				{
+					"__typename": "Text",
+					"id": "ckxbwcp20vbeh0c142sjh67yk",
+					"heading1": "G10 - Gefahrgutversand",
+					"heading2": "G10 unterst\u00fctzt den Mitarbeiter im Versand bei der Abwicklung von Gefahrgutsendungen.",
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Medium",
+					"paddingBottom": "Small",
+					"text": {
+						"html": "<p>Die Software G10 - Gefahrgutversand unterst\u00fctzt und vereinfacht den Versand von Gefahrg\u00fctern aller Art.<br><br>Alle Verkehrstr\u00e4ger (Land-, Luft- und Seetransporte) werden ber\u00fccksichtigt. Ein Gefahrgutarchiv mit Dialogauskunft ist ebenfalls enthalten. Je nach Ausbaustufe erkennt G10 automatisch nur anhand der Artikelnummer, wenn Sendungen Gefahrgut enthalten. G10 pr\u00fcft in diesen F\u00e4llen die Zul\u00e4ssigkeit der Versandauftr\u00e4ge in Abh\u00e4ngigkeit von Versandart, Gefahrgut, Menge und Verpackung und erstellt die notwendigen Dokumente und Etiketten.</p><p><br>In der\u00a0Grundausstattung wird ein Bildschirmdialog mit Quittierung f\u00fcr jedes einzelne Dokument aufgef\u00fchrt und im Archiv protokolliert. Alternativ kann der Bildschirmdialog durch eine Druckausgabe (Belegliste) ersetzt werden. </p>"
+					}
+				},
+				{
+					"__typename": "Image",
+					"id": "ckzh11dxkov060b07qv46msd7",
+					"image": {
+						"id": "cl1ys1h7poa2r0cumsuznpy2r",
+						"url": "https://media.graphassets.com/KkhFbOuqSqKIo3kSLUKq"
+					},
+					"imageWidth": "ContentWidth",
+					"paddingTop": "Small",
+					"paddingBottom": "Small"
+				},
+				{
+					"__typename": "AccordionContainer",
+					"id": "ckzml6iyo0qsa0c02ut2il6mz",
+					"headline": "Zus\u00e4tzliche Optionen",
+					"introOptional": null,
+					"paddingTop": "Medium",
+					"paddingBottom": "Medium",
+					"accordionItems": [
+						{
+							"id": "ckzmlbjio0w6f0c029ajsujrq",
+							"heading1": "Automatische Erkennung",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<p>Die G10-Option Automatische Erkennung identifiziert anhand der Artikelnummer einen Gefahrgutartikel und erstellt die notwendigen Etiketten und Begleitdokumente. Es werden Kennzeichen gesetzt und im Archiv protokolliert. Diese Kennzeichen k\u00f6nnen auch \u00fcber eine Schnittstelle aus dem Vorsystem importiert werden.\u00a0</p><p></p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": []
+						},
+						{
+							"id": "ckzml90gw1uo60a112ndclc8c",
+							"heading1": "Zul\u00e4ssigkeitspr\u00fcfung",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<p>Auf Wunsch ist als weitere G10-Option eine\u00a0Zul\u00e4ssigkeitspr\u00fcfung mit entsprechender Protokollierung enthalten. Hierbei wird auf Unzul\u00e4ssigkeiten per Dialog oder Dokumentenliste hingewiesen.<br><br>In den F\u00e4llen, in denen mehrere Packst\u00fccke in einer Umverpackung, auf einer Palette oder zu einer Sendung zusammengefasst werden, m\u00fcssen die Gefahrstoffe kumuliert und die Zul\u00e4ssigkeit erneut \u00fcberpr\u00fcft werden.<br><br>Bei einem mehrstufigen Packprozess findet in jeder Packstufe eine Zul\u00e4ssigkeitspr\u00fcfung statt. Die Daten der vorherigen Packstufe werden in G10 gespeichert und bilden so die Grundlage f\u00fcr die Pr\u00fcfung in der n\u00e4chsten Stufe.</p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": []
+						},
+						{
+							"id": "ckzmlacb40v1h0c02qacy0hx6",
+							"heading1": "Belegdruck",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<p>Mit der\u00a0G10-Option Belegdruck werden erg\u00e4nzend einzelne oder alle Etiketten / Dokumente am Arbeitsplatz m\u00f6glichst in direkter Verbindung mit dem Versandetikett gedruckt.<br><br>Grunds\u00e4tzlich ermittelt G10 anhand von eigenen St\u00fccklisten die enthaltenen Gefahrstoffe und Gefahrstoffmengen. Wenn im Vorsystem f\u00fcr jeden Artikel alle Gefahrstoffe und Gefahrstoffmengen (St\u00fccklisten) enthalten sind, k\u00f6nnen diese \u00fcber Schnittstelle nach G10 exportiert werden.\u00a0</p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": []
+						}
+					]
+				},
+				{
+					"__typename": "AssetLink",
+					"id": "cl48gs7sq1bz90it704y9jsxz",
+					"headline": "Produktbeschreibung herunterladen",
+					"downloadlinkLabel": "G10 - Produktbeschreibung",
+					"assetPicker": {
+						"url": "https://media.graphassets.com/8bJZWlzHQhivGmTOTmgZ"
+					}
+				},
+				{
+					"__typename": "CtaLink",
+					"id": "ckzoagpswsaww0c05jpazzqji",
+					"headline": "M\u00f6chten Sie mehr erfahren?",
+					"padding": "Medium"
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckxbwg4iguzly0c03uvjv9bk3",
+			"slug": "termine",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania Computer optimiert Ihren Versand. Softwarel\u00f6sungen f\u00fcr die Versandlogistik und die Versandoptimierung seit mehr als 30 Jahren. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "Image",
+					"id": "cl0lard49756o0cxl9afxephq",
+					"image": {
+						"id": "cl2abk7zhalhl0bunf8h80iq2",
+						"url": "https://media.graphassets.com/Ax2LGARrR9OYHaDKEbBA"
+					},
+					"imageWidth": "FullWidth",
+					"paddingTop": "None",
+					"paddingBottom": "Medium"
+				},
+				{
+					"__typename": "TextAndImage",
+					"id": "cl2hvwq0lalhl0burq018v1fn",
+					"heading1": "25. bis 27. April 2023",
+					"heading2": "LOGIMAT \u2013 Messe Stuttgart \u2013 Halle 8 , Stand B25",
+					"heading3": "Wir laden Sie herzlich zu einem Besuch an unserem Messestand ein!",
+					"text": {
+						"html": "<p>Die LogiMAT, Internationale Fachmesse f\u00fcr Intralogistik-L\u00f6sungen und Prozessmanagement, setzt als gr\u00f6\u00dfte j\u00e4hrlich stattfindende Intralogistikmesse in Europa neue Ma\u00dfst\u00e4be.</p><p>\u2060Die LogiMAT bietet Ihnen einen vollst\u00e4ndigen Markt\u00fcberblick \u00fcber alles, was die Intralogistik-Branche bewegt - von der Beschaffung \u00fcber die Produktion bis zur Auslieferung. Internationale Aussteller zeigen hier innovative Technologien, Produkte, Systeme und L\u00f6sungen zur Rationalisierung, Prozessoptimierung und Kostensenkung der innerbetrieblichen logistischen Prozesse.</p><p><br><br>Bildnachweis: LogiMAT2022 und EUROEXPO GmbH</p><p><br>Mehr Informationen zur Messe: <a title=\"https://www.logimat-messe.de/\" href=\"https://www.logimat-messe.de/\">https://www.logimat-messe.de</a></p>"
+					},
+					"image": {
+						"id": "ckwwj26p4gdow0b58i23baols",
+						"url": "https://media.graphassets.com/lXg831B8TyGq4qogJDK7"
+					},
+					"textImageOrientation": "ImageLeftAndTextRight",
+					"downloadLabel": null,
+					"assetPicker": null,
+					"paddingTop": "Small",
+					"paddingBottom": "Large"
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckxbwtoxsv7cy0c02jdayh9o9",
+			"slug": "cloudloesung",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania Computer optimiert Ihren Versand. Softwarel\u00f6sungen f\u00fcr die Versandlogistik und die Versandoptimierung seit mehr als 30 Jahren. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "Text",
+					"id": "ckxbwtluovl630b51rj7cq8ba",
+					"heading1": "Versandlogistik in der Cloud",
+					"heading2": null,
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Medium",
+					"paddingBottom": "Medium",
+					"text": {
+						"html": "<p>Alternativ zur klassischen Inhouse-Installation bieten wir unsere Softwareprodukte auch als Cloudl\u00f6sung im Rechenzentrum an.</p><p><br></p><p>Durch den Einsatz in der Cloud wird unser Versandlogistiksystem und unsere Produkte zur Versandoptimierung auch f\u00fcr kleinere und mittelst\u00e4ndische Unternehmen interessant, da keine eigene IT-Infrastruktur ben\u00f6tigt wird. Das Hosting der Anwendungen und auch die Datensicherung \u00fcbernimmt das Rechenzentrum.</p><p><br></p><p>Logistikprozesse bleiben auch in der Cloud jederzeit funktionsf\u00e4hig und performant durch TCP/IP-Kommunikation. Der Zugriff auf unsere Versandlogistiksoftware ist von beliebig vielen Standorten und Betriebsst\u00e4tten eines Unternehmens m\u00f6glich.</p>"
+					}
+				},
+				{
+					"__typename": "AccordionContainer",
+					"id": "cl31f31540i0s0btad1egdx1t",
+					"headline": "Produktinformationen",
+					"introOptional": null,
+					"paddingTop": "Small",
+					"paddingBottom": "Medium",
+					"accordionItems": [
+						{
+							"id": "cl31f2teizpo90bruhru59h6s",
+							"heading1": "Vorteile",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<ul><li><div>Handling und Datensicherung erfolgen im Rechenzentrum.</div></li><li><div>Hohe Datensicherheit durch die Infrastruktur des Rechenzentrums</div></li><li><div>Minimaler Setup-Aufwand bzw. kein Aufwand f\u00fcr den Kunden</div></li><li><div>Einfache Anbindung weiterer externer Versanddienstleister</div></li><li><div>Jederzeit von \u00fcberall volle Zugriffsm\u00f6glichkeit auf die eigenen Daten</div></li><li><div>Problemloser Austausch der Frachtf\u00fchrer<br></div></li></ul><p></p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": []
+						},
+						{
+							"id": "cl31f463mzrlo0bru0nbd40lf",
+							"heading1": "Rechenzentrum",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<p>Unser Partner AHP Automotive Hosting Partner GmbH betreibt in Oberhausen auf dem Gel\u00e4nde der RITTER Technologie ein renommiertes und modernes Rechenzentrum. AHP garantiert f\u00fcr die Sicherheit Ihrer Daten, auf Wunsch auch mit einer Hochverf\u00fcgbarkeitsl\u00f6sung.</p><p><br></p><p>Das Rechenzentrum verf\u00fcgt \u00fcber zwei getrennte Stromzuf\u00fchrungen im Ring. F\u00fcr den sehr unwahrscheinlichen Fall einer l\u00e4ngeren St\u00f6rung ist ein Notstromaggregat (600kVA Dieselgenerator) mit Vorrat f\u00fcr 10 Tage installiert.</p><p><br></p><p>Das Gel\u00e4nde des Rechenzentrums ist \u00fcber 4 Glasfaser- und 2 getrennte Kupferzuf\u00fchrungen ans Internet angeschlossen. Die Datensicherung erfolgt t\u00e4glich, w\u00f6chentlich und monatlich auf Festplatten und B\u00e4ndern.</p><p><br></p><p>Alle Serverr\u00e4ume sind durch ein spezielles Schlie\u00dfsystem gesichert, das sich nur mit einem RFID Token \u00f6ffnen l\u00e4sst. Zutrittsberechtigung erhalten nur Administratoren bzw. verantwortliche Aufsichtspersonen.<br></p><p><br></p><img src=\"https://media.graphassets.com/LKizOql5TxOMRPSzbyXj\" alt=\"AHP_Infrastruktur.png\" title=\"AHP_Infrastruktur.png\" width=\"2000\" height=\"1158\" /><p></p><p><br>Mehr Informationen zu AHP: <br><br><strong>AHP Automotive Hosting Partner GmbH<br></strong>Essener Str. 2 \u2013 24<br>46047 Oberhausen<br><a target='_blank' title=\"https://www.ahponline.de/\" href=\"https://www.ahponline.de/\">ahponline.de</a></p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckxbwv66gvq7o0d5707po7mf3",
+			"slug": "onlinesupport",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania Computer optimiert Ihren Versand. Softwarel\u00f6sungen f\u00fcr die Versandlogistik und die Versandoptimierung seit mehr als 30 Jahren. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "Text",
+					"id": "ckxbwvhr4vqcp0d5766nknq1u",
+					"heading1": "Online-Support",
+					"heading2": "",
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Medium",
+					"paddingBottom": "Medium",
+					"text": {
+						"html": "<p>F\u00fcr Online-Support, Fernwartung, Schulungen und Pr\u00e4sentationen nutzen wir neben den bekannten Tools wie MS Teams, Google Meet und ZOOM Cloud Meetings auch die Produkte von Mikogo und TeamViewer.</p>"
+					}
+				},
+				{
+					"__typename": "AccordionContainer",
+					"id": "cl31gfaon25be0bt94ghallmj",
+					"headline": "Optionen",
+					"introOptional": null,
+					"paddingTop": "None",
+					"paddingBottom": "Medium",
+					"accordionItems": [
+						{
+							"id": "cl31gggew2miz0btab0thkid7",
+							"heading1": "Mikogo",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<p><br>Alternative 1: Teilnahme \u00fcber das Verbindungsprogramm </p><ul><li><div>F\u00fcr die Teilnahme \u00fcber das Verbindungsprogramm ben\u00f6tigen Sie einen PC mit WindowsTM XP, 2003, Vista oder Windows 7 als Betriebssystem, alternativ einen Intel Mac (nicht PowerPC) mit Mac OS X 10.5.0 oder h\u00f6her. </div></li><li><div>Zus\u00e4tzlich ist eine Internetverbindung erforderlich. </div></li><li><div>Die Mikogo Software m\u00fcssen Sie nicht installieren. Sie laden lediglich das Verbindungsprogramm von der Mikogo Website und f\u00fchren dieses in einem tempor\u00e4ren Ordner aus.<br><br></div></li></ul><p>Alternative 2: Teilnahme \u00fcber den HTML-Viewer</p><ul><li><div>Wenn Sie \u00fcber den HTML-Viewer teilnehmen, sind lediglich ein Internetzugang und ein Browser erforderlich. Cookies m\u00fcssen aktiviert sein.</div></li><li><div>Die Verbindung erfolgt \u00fcber den HTML-Viewer, der Download der Mikogo Verbindungssoftware entf\u00e4llt. </div></li></ul><p>Mehr Informationen zu Mikogo: <br><a target='_blank' title=\"https://www.mikogo.de/mikogo-desktop\" href=\"https://www.mikogo.de/mikogo-desktop\">www.mikogo.de/mikogo-destop</a></p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": []
+						},
+						{
+							"id": "cl31gthq82j480bru1aonof6r",
+							"heading1": "TeamViewer",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<p>TeamViewer ist eine umfassende L\u00f6sung f\u00fcr Fernzugriff, Fernsteuerung und Fernwartung, die mit nahezu allen Desktop- und Mobilplattformen funktioniert.<br><br>Um an TeamViewer-Sitzungen teilzunehmen, klicken Sie auf den folgenden TeamViewer Link, laden die Installationsdatei herunter und f\u00fchren diese anschlie\u00dfend aus.</p><p><br><a target='_blank' title=\"https://www.teamviewer.com/\" href=\"https://www.teamviewer.com/\">teamviewer.com</a></p><p><br></p><img src=\"https://media.graphassets.com/resize=width:1000,height:227/9rSSu6wQCbZzRTXcYbgA\" alt=\"teamviewer.jpg\" title=\"teamviewer.jpg\" width=\"1000\" height=\"227\" /><p></p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckxbx736wvlww0c148fuqg3lh",
+			"slug": "download",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania Computer optimiert Ihren Versand. Softwarel\u00f6sungen f\u00fcr die Versandlogistik und die Versandoptimierung seit mehr als 30 Jahren. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "Text",
+					"id": "ckxbx70vkva2c0c0375drys4h",
+					"heading1": "Download",
+					"heading2": "",
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Medium",
+					"paddingBottom": "Medium",
+					"text": {
+						"html": "<p>Hier finden Sie unsere Produktbeschreibungen als PDF-Datei zum Download.</p>"
+					}
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckxbxk3k0vv8p0b15gmz2i9j1",
+			"slug": "waagen",
+			"title": "Waagen | Rhenania Computer",
+			"description": "RC Rhenania optimiert Ihren Versand. Barcodescanner, Waagen, Etikettendrucker und Verbrauchsmaterial passend zur Versandlogistiksoftware. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "Text",
+					"id": "ckxbxk0gwvv4q0b15l4gsap33",
+					"heading1": "Waagen",
+					"heading2": null,
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Medium",
+					"paddingBottom": "Small",
+					"text": {
+						"html": "<p>F\u00fcr die unterschiedlichen Anforderungen im Bereich Lager und Logistik k\u00f6nnen wir Ihnen speziell auf Ihre Bed\u00fcrfnisse zugeschnittene Paket- und Bodenwaagen anbieten.</p><p><br></p><p>In Verbindung mit unseren Versandlogistikl\u00f6sungen F95 - Paket- und Palettenversand und K04 - Kommissionieren, Kontrollieren, Packen setzen wir vorzugsweise auf elektronische Waagen renommierter Hersteller wie Bizerba, Mettler-Toledo und RHEWA.</p>"
+					}
+				},
+				{
+					"__typename": "AccordionContainer",
+					"id": "cl3u4sqp9imkc0eujbb8dofj2",
+					"headline": "Waagentypen",
+					"introOptional": null,
+					"paddingTop": "Small",
+					"paddingBottom": "Small",
+					"accordionItems": [
+						{
+							"id": "cl3u501fekp220ctcrybub3tc",
+							"heading1": "Paketwaagen",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<p>Im Lager- und Versandbereich bieten wir elektronische Paketwaagen der Marken Bizerba, Mettler-Toledo und RHEWA an. Das Wiegeergebnis wird in unserem Versandlogistiksystem verarbeitet, gespeichert und gegebenenfalls an das Vorsystem (ERP/WMS) \u00fcbergeben. <br><br>Alle Paketwaagen entsprechen dem Industriestandard und sind daher robust und langlebig, auf Wunsch auch geeicht und mit einem Alibi-Speicher ausgestattet. Die Bandbreite reicht hier von der Standardpaketwaage 60 kg bis zur hochaufl\u00f6senden 2-Bereichswaage, die im unteren Bereich auch grammgenau Briefsendungen erfassen kann. <br><br>Alle Paketwaagen sind sowohl als Stand-alone-L\u00f6sung als auch zum Einbau in Packtischen und Rollenbahnen geeignet.\u00a0<br><br>Die Paketwaagen werden vor dem Versand f\u00fcr den Einsatz beim Kunden vorbereitet und k\u00f6nnen sofort in Betrieb genommen werden.<br><br>Hier ein kleiner \u00dcberblick der Modelle, die von unseren Kunden in Kombination mit unserer Versandlogistiksoftware am h\u00e4ufigsten genutzt werden:</p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": [
+								{
+									"id": "cl31hmaob3xd30bruk1mzl7sa",
+									"heading1": null,
+									"heading2": "Bizerba Lastaufnehmer iL Precision 35F/HY",
+									"heading3": null,
+									"text": {
+										"html": "<p>Der Lastaufnehmer iL Precision 35F/HY von Bizerba ist ideal f\u00fcr Anwendungen, die eine h\u00f6here Pr\u00e4zision erfordern.\u00a0<br><br>Anders als bei vergleichbaren Pr\u00e4zisionswaagen erreicht die iL Precision 35F/HY exakte W\u00e4geergebnisse ohne motorische Justiereinrichtung.\u00a0In der Ausstattung bis 35 kg betr\u00e4gt der Eichwert 1 g. Das Wiegeergebnis l\u00e4sst sich mit einer Genauigkeit von 0,1 g\u00a0ablesen. Damit ist die IL Precision 35F/HY auch f\u00fcr den Briefversand geeignet.<br><br>Bildquelle: Bizerba</p>"
+									},
+									"image": {
+										"id": "cl31iao9e4d660cur1ch5khaj",
+										"url": "https://media.graphassets.com/eF5XnB6CTAaUWee9ttb1"
+									},
+									"textImageOrientation": "ImageLeftAndTextRight",
+									"downloadLabel": "Datenblatt herunterladen",
+									"assetPicker": {
+										"url": "https://media.graphassets.com/amLxgU1pTQS6DQfHHjMB"
+									},
+									"paddingTop": "Small",
+									"paddingBottom": "Small"
+								},
+								{
+									"id": "cl3u2hstcep0k0cuiv1go11ti",
+									"heading1": "",
+									"heading2": "Mettler-Toledo Kompaktwaage ICS445",
+									"heading3": null,
+									"text": {
+										"html": "<p>Die ICS445 von Mettler-Toledo in der Ausstattung mit der Plattform B60 (400 x 500 mm), bis 60 kg und einer Ablesegenauigkeit von 20 g ist eine h\u00e4ufig verkaufte Standardwaage.\u00a0</p><p><br></p><p>Aufgrund des robusten Edelstahlgeh\u00e4uses ist die Waage gut geeignet f\u00fcr den Einbau in Packtische oder in F\u00f6rdertechnik. Die Waage ist eichf\u00e4hig und kann mit einem Alibi-Speicher ausgestattet werden.\u00a0</p>"
+									},
+									"image": {
+										"id": "cl3bes91bt2xx0gtgajr5vd6c",
+										"url": "https://media.graphassets.com/yDmJO7IQv6heEmpp1VkQ"
+									},
+									"textImageOrientation": "ImageRightAndTextLeft",
+									"downloadLabel": "Datenblatt herunterladen",
+									"assetPicker": {
+										"url": "https://media.graphassets.com/1S65lX8gRCq1m4PS5BuA"
+									},
+									"paddingTop": "Small",
+									"paddingBottom": "Medium"
+								},
+								{
+									"id": "cl3u2lnemetpx0cui49acejwr",
+									"heading1": null,
+									"heading2": "RHEWA Tischwaage 833A",
+									"heading3": null,
+									"text": {
+										"html": "<p>Die Tischwaage 833A von RHEWA ist eine sehr gel\u00e4ufige 2-Bereichswaage mit einem guten Preis-Leistungsverh\u00e4ltnis.\u00a0</p><p><br></p><p>Im unteren Bereich bis 30 kg wiegt sie mit einer Genauigkeit von 10 g, ab 30 kg sind es 20 g. Die Waage hat eine Plattformgr\u00f6\u00dfe von 400 x 500 mm und verwiegt Packst\u00fccke bis 60 kg. Die Tischwaage 833A ist eichf\u00e4hig und kann mit einem Alibi-Speicher ausgestattet werden.\u00a0</p>"
+									},
+									"image": {
+										"id": "cl3bevyectqhp0buql9fpcypl",
+										"url": "https://media.graphassets.com/FRVSr8XvQoG7djkdETMV"
+									},
+									"textImageOrientation": "ImageLeftAndTextRight",
+									"downloadLabel": "Datenblatt herunterladen",
+									"assetPicker": {
+										"url": "https://media.graphassets.com/44hjNvpRveuecRXKR9RA"
+									},
+									"paddingTop": "Small",
+									"paddingBottom": "Medium"
+								}
+							]
+						},
+						{
+							"id": "cl3u42dmyizrp0dupnyojit9h",
+							"heading1": "Bodenwaagen",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<p>Im Lager- und Versandbereich bieten wir elektronische Bodenwaagen der Marken Mettler-Toledo und RHEWA an.<br><br>Das Wiegeergebnis wird in unserem Versandlogistiksystem verarbeitet, gespeichert und gegebenenfalls an das Vorsystem (ERP/WMS) \u00fcbergeben.\u00a0<br><br>Hier ein kleiner \u00dcberblick der Modelle, die von unseren Kunden in Kombination mit unserer Versandlogistiksoftware am h\u00e4ufigsten genutzt werden:</p><p></p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": [
+								{
+									"id": "cl3u4fuopihkz0bulgw6y01lh",
+									"heading1": null,
+									"heading2": "Mettler-Toledo Bodenwaage PFA584",
+									"heading3": null,
+									"text": {
+										"html": "<p>Die Bodenwaage PFA584 von Mettler-Toledo erfasst Gewichte mit einer Aufl\u00f6sung von 500 g. Die Waage hat eine Plattformgr\u00f6\u00dfe von 1.500 x 1.250 mm und verwiegt Paletten bis 1.500 kg. Optional ist die Waage auch in der Lage Gewichte bis 1.200 kg mit einer Genauigkeit von 200 g zu erfassen. Die PFA584 ist eichf\u00e4hig.\u00a0</p><p><br></p><p>W\u00e4geplattform und Unterbau sind lackiert, die Waage kann freistehend montiert oder ebenerdig in den Fu\u00dfboden eingebaut werden. Bei einer freistehenden Montage ist zus\u00e4tzlich noch eine Auffahrrampe erforderlich.\u00a0</p><p><br></p><p>Das Terminal wird zur Wandmontage geliefert und kann optional auch auf einem Bodenstativ\u00a0montiert werden.</p>"
+									},
+									"image": {
+										"id": "cl3bf46zwtkc80gtiags1t60b",
+										"url": "https://media.graphassets.com/RKsV6hIKQ3Ow5REKD3l0"
+									},
+									"textImageOrientation": "ImageLeftAndTextRight",
+									"downloadLabel": "Datenblatt herunterladen",
+									"assetPicker": {
+										"url": "https://media.graphassets.com/sj8lCkKLSuSxkxi66EPt"
+									},
+									"paddingTop": "Small",
+									"paddingBottom": "Medium"
+								},
+								{
+									"id": "cl3u4hguujq0n0ctc4bhhmyrn",
+									"heading1": null,
+									"heading2": "RHEWA Bodenwaage 870c",
+									"heading3": null,
+									"text": {
+										"html": "<p>Die Bodenwaage 870c von RHEWA ist eine g\u00e4ngige 2-Bereichswaage mit einem guten Preis-Leistungsverh\u00e4ltnis.\u00a0<br><br>Im unteren Bereich bis 600 kg wiegt sie mit einer Genauigkeit von 200 g, ab 600 kg sind es 500 g. Die Waage hat eine Plattformgr\u00f6\u00dfe von 1.500 x 1.250 mm und verwiegt Paletten bis 1.500 kg. Die maximale Traglast betr\u00e4gt 3.500 kg. Die Bodenwaage 870c ist eichf\u00e4hig.<br><br>W\u00e4geplattform und Unterbau sind gepulvert, durch die Flachbauweise kann die Waage freistehend montiert oder ebenerdig in den Fu\u00dfboden eingebaut werden. Bei einer freistehenden Montage ist zus\u00e4tzlich noch eine Auffahrrampe erforderlich.\u00a0<br><br>Das Terminal wird zur Wandmontage geliefert und kann optional auch auf einem Bodenstativ\u00a0montiert werden.</p>"
+									},
+									"image": {
+										"id": "cl3bf8xbotvtl0bui86tixiaa",
+										"url": "https://media.graphassets.com/r5MZLURT7qviHsDRGqBA"
+									},
+									"textImageOrientation": "ImageRightAndTextLeft",
+									"downloadLabel": "Datenblatt herunterladen",
+									"assetPicker": {
+										"url": "https://media.graphassets.com/vsltfN4bTKmREg4dSiSc"
+									},
+									"paddingTop": "Small",
+									"paddingBottom": "Medium"
+								},
+								{
+									"id": "cl3u4mharibwe0cuiezj0d882",
+									"heading1": null,
+									"heading2": "RHEWA W\u00e4gebr\u00fccke Typ 050",
+									"heading3": null,
+									"text": {
+										"html": "<p>Die Bodenwaage Typ 050 von RHEWA ist eine U-f\u00f6rmige W\u00e4gebr\u00fccke f\u00fcr den mobilen Einsatz, ausgestattet mit R\u00e4dern und Handgriff, alternativ auch als Typ 051 station\u00e4r zur Festmontage.\u00a0</p><p><br></p><p>Optional k\u00f6nnen beide Waagen mit Anfahrschutz oder Einfahrschutzrahmen abgesichert werden.\u00a0</p><p><br></p><p>Beide Modelle sind in verschiedenen Plattformgr\u00f6\u00dfen von 1.250 x 840 mm bis maximal 1.500 x 1.400 mm verf\u00fcgbar. Abh\u00e4ngig von der Gr\u00f6\u00dfe der Plattform k\u00f6nnen Paletten und Gitterboxen bis. maximal 3.000 kg verwogen werden. Im unteren Bereich bis 600 kg wiegen beide Modelle mit einer Genauigkeit von 200 g, bis 1.500 kg sind es 500 g. Die Bodenwaage ist eichf\u00e4hig.</p><p><br></p><p>Das Terminal wird zur Wandmontage geliefert und kann optional auch auf einem Bodenstativ\u00a0montiert werden.\u00a0</p>"
+									},
+									"image": {
+										"id": "cl3bfgdavu3tf0bui1g2cy7o3",
+										"url": "https://media.graphassets.com/BmwEctvR3Wt7PoHoxXBF"
+									},
+									"textImageOrientation": "ImageLeftAndTextRight",
+									"downloadLabel": "Datenblatt herunterladen",
+									"assetPicker": {
+										"url": "https://media.graphassets.com/cEYfwt1BQ8aDZZUP0CKr"
+									},
+									"paddingTop": "Small",
+									"paddingBottom": "Medium"
+								}
+							]
+						},
+						{
+							"id": "cl3u45iabj8380dup98oyvq4p",
+							"heading1": "Hubwagenwaagen",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<p>Alternativ zu einer Paletten- oder Bodenwaage bieten wir auch Hubwagenwaagen an, die \u00fcber\u00a0ein elektronisches Wiegesystem verf\u00fcgen und mit einem WLAN-Modul ausgestattet sind.\u00a0<br><br>Das Wiegeergebnis wird \u00fcber WLAN an unser Versandlogistiksystem \u00fcbertragen, verarbeitet, gespeichert und gegebenenfalls an das Vorsystem (ERP/WMS) \u00fcbergeben.\u00a0<br><br>Das nachfolgend aufgef\u00fchrte Modell der Firma RHEWA ist bei unseren Kunden in Kombination mit unserer Versandlogistiksoftware schon seit einigen Jahren erfolgreich im Einsatz:</p><p></p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": [
+								{
+									"id": "cl3u48jjmj8wi0ctc7ne5eer8",
+									"heading1": null,
+									"heading2": "RHEWA Hubwagenwaage 856Cplus mit WLAN-Modul",
+									"heading3": null,
+									"text": {
+										"html": "<p>Die Palettenwaage RHEWA 856Cplus ist ein robuster Handhubwagen mit integrierter 2-Bereichswaage.</p><p><br></p><p>Das Wiegeergebnis wird \u00fcber WLAN an unser Versandlogistiksystem \u00fcbertragen. Die Tragf\u00e4higkeit betr\u00e4gt maximal 2.300 kg.\u00a0</p><p><br></p><p>Im unteren Bereich bis 1.000 kg wird das Gewicht mit einer Genauigkeit von 500 g erfasst. Ab 1.000 kg betr\u00e4gt die Genauigkeit nur noch 1.000 g. Die Handhubwagenwaage ist eichf\u00e4hig und optional mit Alibi-Speicher ausgestattet.\u00a0</p>"
+									},
+									"image": {
+										"id": "cl3bfu5g0v0b10dup1xusrr6n",
+										"url": "https://media.graphassets.com/ro1ldwZWRYq3XGWLoJmh"
+									},
+									"textImageOrientation": "ImageLeftAndTextRight",
+									"downloadLabel": "Datenblatt herunterladen",
+									"assetPicker": {
+										"url": "https://media.graphassets.com/XSBrUOB3RoaMFhzxLnsy"
+									},
+									"paddingTop": "Small",
+									"paddingBottom": "Medium"
+								}
+							]
+						}
+					]
+				},
+				{
+					"__typename": "CtaLink",
+					"id": "cl3bezl0ptb4o0gtg6yijxw4m",
+					"headline": "M\u00f6chten Sie mehr erfahren?",
+					"padding": "Small"
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckxbxkpxkveon0c03xjh28ojd",
+			"slug": "etikettendrucker",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania optimiert Ihren Versand. Barcodescanner, Waagen, Etikettendrucker und Verbrauchsmaterial passend zur Versandlogistiksoftware. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "Text",
+					"id": "ckxbxkmugvvye0b51th5smk13",
+					"heading1": "Etikettendrucker",
+					"heading2": null,
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Medium",
+					"paddingBottom": "Small",
+					"text": {
+						"html": "<p>Bei der Auswahl des richtigen Etikettendruckers beraten wir Sie gerne. Hierbei w\u00e4hlen wir individuell nach Ihrem Druckvolumen und der von Ihnen ben\u00f6tigten Druckaufl\u00f6sung sowie dem gew\u00fcnschten Druckverfahren (Thermodirekt- und Thermotransferdruck) den f\u00fcr Sie am besten geeigneten Etikettendrucker aus. <br><br>Wir liefern Ihnen auch die entsprechenden Farbb\u00e4nder und Etiketten in verschiedenen Gr\u00f6\u00dfen und Qualit\u00e4tsstufen f\u00fcr die unterschiedlichsten Einsatzzwecke.<br><br>Etikettendrucker werden vor dem Versand f\u00fcr den Einsatz beim Kunden vorbereitet und k\u00f6nnen sofort in Betrieb genommen werden.<br><br>Hier ein \u00dcberblick der Modelle, die von unseren Kunden in Kombination mit unserer Versandlogistiksoftware am h\u00e4ufigsten genutzt werden:</p>"
+					}
+				},
+				{
+					"__typename": "TextAndImage",
+					"id": "cl2hlvkir15sc0dulne24c9fw",
+					"heading1": null,
+					"heading2": "Desktopdrucker Toshiba B-FV4",
+					"heading3": null,
+					"text": {
+						"html": "<p>Unsere Desktop-Etikettendrucker Empfehlung zum Einsatz bei kleinen bis mittleren Druckvolumen ist der Toshiba B-FV4. <br><br>Der B-FV4 verarbeitet Etikettenrollen mit max. 475 Versandetiketten (102 x 152 mm). Er druckt im Thermodirekt- oder im Thermotransferverfahren und ist wahlweise mit einer Aufl\u00f6sung von 203 dpi und 300 dpi erh\u00e4ltlich. <br><br>Das Ger\u00e4t kann u. a. mit einer Einzelspendevorrichtung und einem Schneidemesser ausgestattet werden. </p>"
+					},
+					"image": {
+						"id": "cl2iwhzbq4exs0dtbk42byv0y",
+						"url": "https://media.graphassets.com/vUzNzECQCeikghodhfFQ"
+					},
+					"textImageOrientation": "ImageLeftAndTextRight",
+					"downloadLabel": "Datenblatt herunterladen",
+					"assetPicker": {
+						"url": "https://media.graphassets.com/vThoE3fbS3yvDa7dIkzJ"
+					},
+					"paddingTop": "Small",
+					"paddingBottom": "Small"
+				},
+				{
+					"__typename": "TextAndImage",
+					"id": "cl2hm6k2r1f650bui7m5fyqm0",
+					"heading1": null,
+					"heading2": "Industriedrucker Toshiba B-EX4",
+					"heading3": null,
+					"text": {
+						"html": "<p>Unsere Etikettendrucker Empfehlung zum Einsatz bei hohen Druckvolumen ist der Toshiba B-EX4, ein Industrieger\u00e4t mit hoher Druckgeschwindigkeit im mittleren Preissegment f\u00fcr eine Vielzahl von Anwendungen. <br><br>Der B-EX4 verarbeitet gro\u00dfe Etikettenrollen mit max. 1.100 Versandetiketten (102 x 152 mm). Er druckt im Thermodirekt- und Thermotransferverfahren und ist wahlweise mit einer Aufl\u00f6sung von 203 dpi und 305 dpi erh\u00e4ltlich. <br><br>Das Ger\u00e4t kann mit einer Einzelspendevorrichtung, einem Schneide- oder Rotationsmesser, RFID-Kit und WLAN ausgestattet werden. </p>"
+					},
+					"image": {
+						"id": "cl2iwhzcc5gdx0dulfic864hw",
+						"url": "https://media.graphassets.com/AYnIknBgSFWKP7J1qPC8"
+					},
+					"textImageOrientation": "ImageRightAndTextLeft",
+					"downloadLabel": "Datenblatt herunterladen",
+					"assetPicker": {
+						"url": "https://media.graphassets.com/xMgeSZ09Q5qQoukofjQi"
+					},
+					"paddingTop": "Small",
+					"paddingBottom": "Small"
+				},
+				{
+					"__typename": "CtaLink",
+					"id": "cl2hm8ao612an0dtbbko4rdvx",
+					"headline": "M\u00f6chten Sie mehr erfahren?",
+					"padding": "Small"
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckxbxlnvsvexf0c031gjdr5bx",
+			"slug": "barcodescanner",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania optimiert Ihren Versand. Barcodescanner, Waagen, Etikettendrucker und Verbrauchsmaterial passend zur Versandlogistiksoftware. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "Text",
+					"id": "ckxbxlksow0e40d57vtscs66p",
+					"heading1": "Barcodescanner",
+					"heading2": null,
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Medium",
+					"paddingBottom": "Small",
+					"text": {
+						"html": "<p>F\u00fcr die mobile Datenerfassung und Kommissionierung im Wareneingang und Warenausgang haben wir unterschiedliche Scanner (Funk, WLAN oder kabelgebunden) in unserem Sortiment.<br><br>Dabei setzen wir f\u00fcr unsere Versandlogistikl\u00f6sungen F95 - Paket- und Palettenversand und K04 - Kommissionieren, Kontrollieren, Packen gerne Barcodescanner des Marktf\u00fchrers Honeywell ein. Die Angebotspalette reicht vom einfachen 2D Reader \u00fcber Industrie-Funkscanner bis hin zum Portalscanner f\u00fcr die Verladekontrolle.<br><br>Alle Scanner werden vor dem Versand f\u00fcr den Einsatz beim Kunden vorbereitet und k\u00f6nnen sofort in Betrieb genommen werden.<br><br>Hier ein kleiner \u00dcberblick der Modelle, die von unseren Kunden in Kombination mit unserer Versandlogistiksoftware am h\u00e4ufigsten genutzt werden:</p>"
+					}
+				},
+				{
+					"__typename": "TextAndImage",
+					"id": "cl2he43x6tmgh0buitikcj9qy",
+					"heading1": "",
+					"heading2": "Universalscanner Honeywell Voyager 1470g",
+					"heading3": null,
+					"text": {
+						"html": "<p>Der Honeywell Voyager 1470g ist ein robuster und zuverl\u00e4ssiger, kabelgebundener 1D- und 2D-Barcodescanner.</p><p><br>Das Ger\u00e4t \u00fcberzeugt durch eine Top-Scanleistung bei herk\u00f6mmlichen Barcodes und Digitaldisplays und auch bei besch\u00e4digten oder schlecht gedruckten Barcodes.</p>"
+					},
+					"image": {
+						"id": "cl2hia8pmxa940atbrml0ayr8",
+						"url": "https://media.graphassets.com/K8uuTO8LQcmoDy1C6jVe"
+					},
+					"textImageOrientation": "ImageLeftAndTextRight",
+					"downloadLabel": "Datenblatt herunterladen",
+					"assetPicker": {
+						"url": "https://media.graphassets.com/qrs9F60iRWyGEQkJtbjM"
+					},
+					"paddingTop": "Small",
+					"paddingBottom": "Medium"
+				},
+				{
+					"__typename": "TextAndImage",
+					"id": "cl2hhtx54wzsv0dtb4kyszqnm",
+					"heading1": null,
+					"heading2": "Funkscanner Honeywell Voyager 1472g",
+					"heading3": null,
+					"text": {
+						"html": "<p>Der Honeywell Voyager 1472g ist ein robuster, kabelloser Barcodescanner. <br><br>Das Ger\u00e4t ist darauf ausgerichtet, selbst schlecht zu erreichende 1D- und 2D-Barcodes pr\u00e4zise und schnell zu erfassen. Dank seiner kabellosen Konzeption und der gro\u00dfen Bluetooth-Reichweite bietet der Voyager 1472g eine hohe Flexibilit\u00e4t.</p>"
+					},
+					"image": {
+						"id": "cl2hia8pfx3k80bunc8u2vk0k",
+						"url": "https://media.graphassets.com/spfooKjHSVap6MfhIvFZ"
+					},
+					"textImageOrientation": "ImageRightAndTextLeft",
+					"downloadLabel": "Datenblatt herunterladen",
+					"assetPicker": {
+						"url": "https://media.graphassets.com/GDofWHg2Riyo9McJ8Epy"
+					},
+					"paddingTop": "Small",
+					"paddingBottom": "Medium"
+				},
+				{
+					"__typename": "TextAndImage",
+					"id": "cl2hif711xfxs0atbj69r6x1c",
+					"heading1": null,
+					"heading2": "MDE-Ger\u00e4t Honeywell CK65",
+					"heading3": null,
+					"text": {
+						"html": "<p>Der mobile Computer CK65 von Honeywell z\u00e4hlt zu den leistungsst\u00e4rksten MDE-Ger\u00e4ten der Branche. <br><br>Er zeichnet sich durch extreme Robustheit und lange Akku-Laufzeiten von mehr als 28 Stunden aus.  Das Android-Betriebssystem l\u00e4sst sich bis zur Version 12 updaten. Modernste Scan-Technologie erm\u00f6glicht das Einlesen von Barcodes im Nahbereich sowie auf mittlere und sogar gro\u00dfe Distanzen mit nur einem Ger\u00e4t. <br><br>Der Scanner ist wahlweise mit numerischer oder alphanumerischer Tastatur ausgestattet. Zus\u00e4tzlich erh\u00e4ltlich ist eine 13-Megapixel-Kamera. Eine weitere Option ist die Duo-Scan-Engine, die Barcodes sowohl im Nah- als auch im Fernbereich scannt und eigenst\u00e4ndig umschaltet</p>"
+					},
+					"image": {
+						"id": "cl2iwm4og5naj0dullusmv8pq",
+						"url": "https://media.graphassets.com/O5ye9XjTruC4c7MIavIQ"
+					},
+					"textImageOrientation": "ImageLeftAndTextRight",
+					"downloadLabel": "Datenblatt herunterladen",
+					"assetPicker": {
+						"url": "https://media.graphassets.com/n5jVc2XcRkqn8yCJkwYa"
+					},
+					"paddingTop": "Small",
+					"paddingBottom": "Small"
+				},
+				{
+					"__typename": "CtaLink",
+					"id": "cl2hlp7ry0l5p0dtbmvdwcgrf",
+					"headline": "M\u00f6chten Sie mehr erfahren?",
+					"padding": "Small"
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckxg4v78g17a40b52z1aeptlx",
+			"slug": "blog1",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania Computer optimiert Ihren Versand. Softwarel\u00f6sungen f\u00fcr die Versandlogistik und die Versandoptimierung seit mehr als 30 Jahren. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "Text",
+					"id": "ckxg4w3n426k70b54l4v2au4i",
+					"heading1": "Blog 1 ",
+					"heading2": null,
+					"heading3": null,
+					"link": null,
+					"paddingTop": null,
+					"paddingBottom": null,
+					"text": {
+						"html": "<p>Blogeintrag Nummer 1</p>"
+					}
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "cky8mkjqgx7hh0e04rjhdjcsf",
+			"slug": "frachtkostenmanagement",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania Computer optimiert Ihren Versand. Softwarel\u00f6sungen f\u00fcr die Versandlogistik und die Versandoptimierung seit mehr als 30 Jahren. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "HeroImage",
+					"id": "cl0qpqgldcpy00cxgjlx1zgfs",
+					"image": {
+						"id": "cl0l3fg3l0e160cz5lty48fwn",
+						"url": "https://media.graphassets.com/oQwU9gqTrSRf51c9gVPd"
+					},
+					"strokeColor": {
+						"hex": "#2a499d",
+						"rgba": {
+							"r": 42,
+							"g": 73,
+							"b": 157,
+							"a": 1
+						}
+					},
+					"icon": {
+						"id": "ckxg7xe206e590b52qkw6r9ef",
+						"url": "https://media.graphassets.com/8ARwtd5xQROsrc6iCY0P"
+					}
+				},
+				{
+					"__typename": "Text",
+					"id": "cky8ml974x5tu0c12i9gt0jwt",
+					"heading1": "Frachkostenmanagement",
+					"heading2": null,
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Small",
+					"paddingBottom": "Medium",
+					"text": {
+						"html": "<p>Mit der F95-Option Frachtkostenmanagement lassen sich beliebig viele Business-Rules hinterlegen, um f\u00fcr jede Sendung automatisch den richtigen Frachtf\u00fchrer / Versandart zu ermitteln. Stehen nach Abfrage der Business-Rules mehrere Frachtf\u00fchrer zur Auswahl, entscheiden die Frachtkosten.\u00a0\u00a0Jede Sendung durchl\u00e4uft das Frachtkostenmanagement, indem der Kunde individuell die Versandregeln nach seinen Vorgaben festlegen kann.</p>"
+					}
+				},
+				{
+					"__typename": "AccordionContainer",
+					"id": "cl0qs1jz51ehp0cw89ff5znf3",
+					"headline": "Weitere Details",
+					"introOptional": null,
+					"paddingTop": "Small",
+					"paddingBottom": "Large",
+					"accordionItems": [
+						{
+							"id": "cl0qs0nut1ffh0cz7awpgt83d",
+							"heading1": "Beispiele f\u00fcr Business-Rules ",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<ul><li><div>Pr\u00e4ferenz-Festlegung der Versandart</div></li><li><div>Sendungen mit Euro-Palette nur mit Frachtf\u00fchrer X versenden</div></li><li><div>Sendungen in das Postleitzahlengebiet 53604 nur mit Frachtf\u00fchrer Y</div></li><li><div>Pakete ab 5 kg grunds\u00e4tzlich mit Frachtf\u00fchrer \u2026</div></li><li><div>Sperrgut immer mit Frachtf\u00fchrer \u2026</div></li><li><div>Expresssendungen mit Frachtf\u00fchrer \u2026</div></li><li><div>usw.</div></li></ul><p></p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": []
+						},
+						{
+							"id": "cl0qs1bit1h8a0bz0r8msa96k",
+							"heading1": "Vorteile",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<ul><li><div>Reduzierung der Versandkosten durch Geb\u00fchrenvergleich</div></li><li><div>Der Frachtf\u00fchrer muss nicht mehr \u00fcbergeben oder am Packplatz ausgew\u00e4hlt werden.</div></li><li><div>Automatische Ermittlung des Gurtma\u00dfes (Sperrgut)</div></li><li><div>Automatische Ermittlung der Versandart</div></li><li><div>Festlegung von Kontingenten f\u00fcr UPS, DHL usw. </div></li><li><div>Festlegung von Ein- und Ausschlussgebieten</div></li></ul><p></p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckz8ffjxkknh80d064o699g5a",
+			"slug": "hardware",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania optimiert Ihren Versand. Barcodescanner, Waagen, Etikettendrucker und Verbrauchsmaterial passend zur Versandlogistiksoftware. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "Text",
+					"id": "ckz8ebhswjnsg0d06yopojkxe",
+					"heading1": "Hardware",
+					"heading2": null,
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Medium",
+					"paddingBottom": "Small",
+					"text": {
+						"html": "<p>Passend zu unseren Softwarel\u00f6sungen f\u00fcr die Versandlogistik und die Versandoptimierung liefern wir Ihnen mit Barcodescannern, Waagen, Etikettendruckern und Etiketten auch die ben\u00f6tigte Hardware und das Verbrauchsmaterial. <br><br>Unser Sortiment umfasst eine gro\u00dfe Auswahl industrietauglicher Produkte f\u00fchrender Hersteller. Wir beraten Sie gerne und stimmen die von Ihnen ben\u00f6tigte Hardware und das Verbrauchmaterial individuell auf Ihren tats\u00e4chlichen Bedarf ab.\u2060<br><br>Etikettendrucker, Scanner und Waagen werden vor dem Versand f\u00fcr den Einsatz beim Kunden vorbereitet und k\u00f6nnen sofort in Betrieb genommen werden.</p>"
+					}
+				},
+				{
+					"__typename": "CardsContainer",
+					"id": "cl0e21js0numl0cz7golbi1wz",
+					"headline": "",
+					"paddingTop": "Small",
+					"paddingBottom": "Large",
+					"cards": [
+						{
+							"__typename": "CardIcon",
+							"id": "cl0e1yfo7ntuq0cz7hlwfm4gw",
+							"backgroundColor": {
+								"hex": "#2a499d",
+								"rgba": {
+									"r": 42,
+									"g": 73,
+									"b": 157,
+									"a": 1
+								}
+							},
+							"icon": {
+								"id": "cl0i55qznvspv0ez8id1tqr9w",
+								"url": "https://media.graphassets.com/ibKx6cG4ThGGjby88FC0"
+							},
+							"headline": "Etikettendrucker",
+							"subheadline": null,
+							"link": {
+								"__typename": "Link",
+								"id": "cl0e2fizgnxvq0cz7mewlzenz",
+								"label": "Mehr",
+								"target": {
+									"__typename": "Page",
+									"id": "ckxbxkpxkveon0c03xjh28ojd",
+									"slug": "etikettendrucker"
+								}
+							}
+						},
+						{
+							"__typename": "CardIcon",
+							"id": "cl0e2bhctoaz40bz5ukd9pv8m",
+							"backgroundColor": {
+								"hex": "#2a499d",
+								"rgba": {
+									"r": 42,
+									"g": 73,
+									"b": 157,
+									"a": 1
+								}
+							},
+							"icon": {
+								"id": "cl0i5576uvtlr0cxlso8eg59k",
+								"url": "https://media.graphassets.com/UiUfcOpoTYex6lS4ROH9"
+							},
+							"headline": "Waagen",
+							"subheadline": null,
+							"link": {
+								"__typename": "Link",
+								"id": "cl0e2be0onzhy0cxsfni79r98",
+								"label": "Mehr",
+								"target": {
+									"__typename": "Page",
+									"id": "ckxbxk3k0vv8p0b15gmz2i9j1",
+									"slug": "waagen"
+								}
+							}
+						},
+						{
+							"__typename": "CardIcon",
+							"id": "cl0e2a1w4nwec0axmaa7i0gum",
+							"backgroundColor": {
+								"hex": "#2a499d",
+								"rgba": {
+									"r": 42,
+									"g": 73,
+									"b": 157,
+									"a": 1
+								}
+							},
+							"icon": {
+								"id": "cl0e28t89nzr40awa05ukf6us",
+								"url": "https://media.graphassets.com/0RTSSn0SiCHVeu5BB8Sd"
+							},
+							"headline": "Barcodescanner",
+							"subheadline": null,
+							"link": {
+								"__typename": "Link",
+								"id": "cl0e29ylwnwdc0axmkj1w4cjs",
+								"label": "Mehr",
+								"target": {
+									"__typename": "Page",
+									"id": "ckxbxlnvsvexf0c031gjdr5bx",
+									"slug": "barcodescanner"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckz8pb7y04g4w0c55q15af48i",
+			"slug": "support",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania Computer optimiert Ihren Versand. Softwarel\u00f6sungen f\u00fcr die Versandlogistik und die Versandoptimierung seit mehr als 30 Jahren. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "Text",
+					"id": "ckz8pbl284gjm0c55usao0o1a",
+					"heading1": "Headline Support",
+					"heading2": null,
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Medium",
+					"paddingBottom": "Medium",
+					"text": {
+						"html": "<p>lorem ipsum</p>"
+					}
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckzgyfsc0mnxn0e51a57oc90c",
+			"slug": "sandbox",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania Computer optimiert Ihren Versand. Softwarel\u00f6sungen f\u00fcr die Versandlogistik und die Versandoptimierung seit mehr als 30 Jahren. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "Text",
+					"id": "ckzgygjc8n3dp0b46h2sylld7",
+					"heading1": "Testumgebung",
+					"heading2": "Hier ...",
+					"heading3": "... kann ...",
+					"link": null,
+					"paddingTop": "Large",
+					"paddingBottom": "Small",
+					"text": {
+						"html": "<p>...  <u>getestet</u> werden!</p>"
+					}
+				},
+				{
+					"__typename": "CardsContainer",
+					"id": "ckzr1k8cw7d820d610qzotz67",
+					"headline": "20220217_CardContainer",
+					"paddingTop": null,
+					"paddingBottom": null,
+					"cards": [
+						{
+							"__typename": "CardIcon",
+							"id": "ckzr1joao761x0f46v09uittj",
+							"backgroundColor": {
+								"hex": "#e01085",
+								"rgba": {
+									"r": 224,
+									"g": 16,
+									"b": 133,
+									"a": 0.82
+								}
+							},
+							"icon": {
+								"id": "ckxaikzig91440b15zjye1y72",
+								"url": "https://media.graphassets.com/4w3UpySvTBy6zNSMwTFh"
+							},
+							"headline": "Sturmtief",
+							"subheadline": "Sturmtief_Subheadline",
+							"link": {
+								"__typename": "Link",
+								"id": "ckzr1c68g6x5w0c11h8mbgmvh",
+								"label": "Testlink-20220217",
+								"target": {
+									"__typename": "Page",
+									"id": "ckzgyfsc0mnxn0e51a57oc90c",
+									"slug": "sandbox"
+								}
+							}
+						}
+					]
+				},
+				{
+					"__typename": "AccordionContainer",
+					"id": "ckzr2jurk8sim0d619o5f66x1",
+					"headline": "FAQ Sandbox",
+					"introOptional": null,
+					"paddingTop": null,
+					"paddingBottom": null,
+					"accordionItems": [
+						{
+							"id": "ckzr2jj6w8m8e0c54abyjulz2",
+							"heading1": "Frage 1",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<ul><li><div>Antworttext 1</div></li><li><div>Antworttext2</div></li></ul><p></p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": []
+						}
+					]
+				},
+				{
+					"__typename": "Text",
+					"id": "ckzy8ktjkajxd0b48mafx1app",
+					"heading1": "lorem ipsum",
+					"heading2": null,
+					"heading3": null,
+					"link": null,
+					"paddingTop": null,
+					"paddingBottom": null,
+					"text": {
+						"html": "<div class=\"highlight\" ><p>text test</p></div><p>Lorem ipsum<br><a data-gcms-embed-id=\"ckwwizf5sg6o40d04cx7g76ln\" data-gcms-embed-type=\"Page\">\u2060Links</a></p><p></p><div class=\"hightlight2\" ><p>bjkbjknj</p></div><div class=\"hightlight\" ><p>dfgkdfngjdfg</p></div><p></p>"
+					}
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckzmjtal418pk0a48ngw5rmnw",
+			"slug": "gefahrgutabwicklung",
+			"title": "Rhenania Computer",
+			"description": null,
+			"modules": [
+				{
+					"__typename": "HeroImage",
+					"id": "cl0qrekkl09oa0cw1ob4a858u",
+					"image": {
+						"id": "cl0l3fg3l0e160cz5lty48fwn",
+						"url": "https://media.graphassets.com/oQwU9gqTrSRf51c9gVPd"
+					},
+					"strokeColor": {
+						"hex": "#2a499d",
+						"rgba": {
+							"r": 42,
+							"g": 73,
+							"b": 157,
+							"a": 1
+						}
+					},
+					"icon": {
+						"id": "ckxg7xe207c560c96lxwaypok",
+						"url": "https://media.graphassets.com/YxpgHwKhSsm5zc7PyLWd"
+					}
+				},
+				{
+					"__typename": "Text",
+					"id": "ckzmjt6q818o70a48wu8fnqea",
+					"heading1": "Gefahrgutabwicklung",
+					"heading2": null,
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Small",
+					"paddingBottom": "Medium",
+					"text": {
+						"html": "<p>F\u00fcr Ihre Frachtf\u00fchrer bieten wir zus\u00e4tzlich die F95-Option Gefahrabwicklung an. Diese ermittelt die Gefahrgutpunkte und sendet die erforderlichen Gefahrgutdaten an den jeweiligen Frachtf\u00fchrer. Sollte die F95-Option Gefahrgutabwicklung nicht ausreichend sein, stellen wir im Rahmen unserer Versandoptimierungsprodukte mit G10 \u2013 Gefahrgutabwicklung eine L\u00f6sung zur Verf\u00fcgung, die Sie bei Ihrer kompletten Gefahrgutabwicklung unterst\u00fctzt.</p>"
+					}
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckzmju5g80epn0a98d9k4unyn",
+			"slug": "mailbenachrichtigung",
+			"title": "Rhenania Computer",
+			"description": null,
+			"modules": [
+				{
+					"__typename": "HeroImage",
+					"id": "cl0qrgw4p0pi00bz0awglg75k",
+					"image": {
+						"id": "cl0l3fg3l0e160cz5lty48fwn",
+						"url": "https://media.graphassets.com/oQwU9gqTrSRf51c9gVPd"
+					},
+					"strokeColor": {
+						"hex": "#2a499d",
+						"rgba": {
+							"r": 42,
+							"g": 73,
+							"b": 157,
+							"a": 1
+						}
+					},
+					"icon": {
+						"id": "ckxg7xe207c5k0c96966ad3tj",
+						"url": "https://media.graphassets.com/z3Pip6uATHeAVf9O2fG5"
+					}
+				},
+				{
+					"__typename": "Text",
+					"id": "ckzmju34wz75w0d09pexct8q9",
+					"heading1": "Mailbenachrichtigung des Sendungsempf\u00e4ngers",
+					"heading2": null,
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Small",
+					"paddingBottom": "Large",
+					"text": {
+						"html": "<p>\u00dcber die F95-Option Mailbenachrichtigung des Sendungsempf\u00e4ngers erh\u00e4lt Ihr Kunde mit dem Ausdruck der Einlieferungsliste eine Mitteilung, dass seine Ware versendet wurde. Den Text der Mail k\u00f6nnen Sie frei gestalten. Die Mail enth\u00e4lt zus\u00e4tzlich einen Tracking-Link, anhand dessen Ihr Kunde seine Sendung selbst nachverfolgen kann. Zusammen mit der Mailbenachrichtigung k\u00f6nnen auch Dokumente wie z.B. Rechnungen oder Lieferscheine versendet werden.</p>"
+					}
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckzmjvkdkz84g0d0913s8m4wx",
+			"slug": "verladekontrolle",
+			"title": "Rhenania Computer",
+			"description": null,
+			"modules": [
+				{
+					"__typename": "HeroImage",
+					"id": "cl0qrj3x60dge0bxphsjn06on",
+					"image": {
+						"id": "cl0l3fg3l0e160cz5lty48fwn",
+						"url": "https://media.graphassets.com/oQwU9gqTrSRf51c9gVPd"
+					},
+					"strokeColor": {
+						"hex": "#2a499d",
+						"rgba": {
+							"r": 42,
+							"g": 73,
+							"b": 157,
+							"a": 1
+						}
+					},
+					"icon": {
+						"id": "ckxg7xe207a9p0b05kzs0up6k",
+						"url": "https://media.graphassets.com/p4sVHlh8SjD4gD22H2cx"
+					}
+				},
+				{
+					"__typename": "Text",
+					"id": "ckzmjvvy80hz90a11o06u31u7",
+					"heading1": "Verladekontrolle",
+					"heading2": null,
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Small",
+					"paddingBottom": "Medium",
+					"text": {
+						"html": "<p>Mit der F95-Option Verladekontrolle k\u00f6nnen alle Pakete und Paletten bei der Verladung in den Lkw oder Trailer automatisch oder manuell gescannt werden. Die Verbindung zu den im F95-Archiv gespeicherten Paketdaten wird automatisch hergestellt. Nicht korrekte Sendungen werden erkannt und abgewiesen, eine vollst\u00e4ndige \u00dcbergabe der Sendung sichergestellt.</p>"
+					}
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckzmozyhs63bv0a98j5dpbiow",
+			"slug": "gelangensbestaetigung",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania sichert Ihre Umsatzsteuerbefreiung. Software U12 als L\u00f6sung f\u00fcr die gesamte Abwicklung des Gelangensnachweises inklusive Mahnwesen. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "Text",
+					"id": "ckzmq7n0w7pag0a48x7fur78j",
+					"heading1": "Gelangensnachweis",
+					"heading2": "(Einzel- und Sammelbest\u00e4tigung)",
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Medium",
+					"paddingBottom": "Medium",
+					"text": {
+						"html": "<p>U12 erh\u00e4lt die Daten aus dem Vorsystem, erstellt den Gelangensnachweis, wandelt ihn in eine PDF-Datei um und versendet diese per E-Mail als Einzel- oder Sammelbest\u00e4tigungen an einen zuvor festgelegten Ansprechpartner.<br><br>Die R\u00fcckmails werden in einem separaten Postfach gesammelt und automatisch ausgelesen.  U12 markiert den zur\u00fcckgesendeten Gelangensnachweis als &quot;vereinnahmt&quot; und verschiebt ihn in ein Archiv-Postfach. R\u00fcckmails, die nicht erkannt werden bzw. zu denen der Anhang fehlt, werden in ein eigenes Postfach verschoben und sind dort manuell nachzubearbeiten.<br><br>Die Software beinhaltet au\u00dferdem ein mehrstufiges Mahnverfahren, um noch ausstehende Gelangensnachweise beim Kunden anzufordern.</p>"
+					}
+				},
+				{
+					"__typename": "Image",
+					"id": "ckzmsltnc0x7y0b48eabpaghc",
+					"image": {
+						"id": "cl1ys6lcio7gi0brxind4j3p8",
+						"url": "https://media.graphassets.com/hNMsXoAmSDq68RHpeiZT"
+					},
+					"imageWidth": "ContentWidth",
+					"paddingTop": "Small",
+					"paddingBottom": "Medium"
+				},
+				{
+					"__typename": "Text",
+					"id": "ckzmsa54g0w740a50y6rdjp6o",
+					"heading1": null,
+					"heading2": "Service zur Komplettabwicklung des Gelangensnachweises \u2028- Outsourcing -",
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Small",
+					"paddingBottom": "Large",
+					"text": {
+						"html": "<p>Rhenania Computer bietet neben seiner Inhouse- und Cloudl\u00f6sung auch eine Komplettabwicklung der Gelangensnachweise an.<br><br>Bei Wahl der Qutsourcing-L\u00f6sung f\u00fchren wir die komplette Abwicklung der Gelangensnachweise f\u00fcr Sie durch. Die Erstellung, der Versand, die Verkn\u00fcpfung mit den Rechnungen sowie das Mahnwesen und die Archivierung der zur\u00fcckgesendeten Gelangensnachweise \u00fcbernehmen wir f\u00fcr Sie in unserem Rechenzentrum.</p>"
+					}
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckzmp3h1c55er0c02vqbeoqh0",
+			"slug": "abliefernachweis",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania sichert Ihre Umsatzsteuerbefreiung. Software U12 als L\u00f6sung f\u00fcr die gesamte Abwicklung des Gelangensnachweises inklusive Mahnwesen. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "Text",
+					"id": "ckzmp3d6g6vgc0a48j7w2jnsc",
+					"heading1": "Abliefernachweis ",
+					"heading2": "(aus Zustellbelegen der Frachtf\u00fchrer)",
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Medium",
+					"paddingBottom": "Small",
+					"text": {
+						"html": "<p>Der Nachweis des Wareneingangs im EU-Ausland kann alternativ anhand der Zustellbelege der KEP-Dienstleister und Spediteure erfolgen. Dazu bietet U12 das Modul ALN - Abliefernachweis.</p><p>Die Vereinnahmung der Abliefernachweise erfolgt in der einfachen Version manuell. Als Option ist bei ausgew\u00e4hlten Frachtf\u00fchrern eine automatisierte Vereinnahmung und Zuordnung ihrer Sendungsdaten m\u00f6glich.</p>"
+					}
+				},
+				{
+					"__typename": "Image",
+					"id": "ckzmsj92011h40d68qyq8syfd",
+					"image": {
+						"id": "cl1ysc4giokop0dtc49y9qd31",
+						"url": "https://media.graphassets.com/4sgHoLJ2RMKnpaqIAgPq"
+					},
+					"imageWidth": "ContentWidth",
+					"paddingTop": "Small",
+					"paddingBottom": "Large"
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckzmqjihs77os0b534vbc5hb5",
+			"slug": "pruefungustid",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania sichert Ihre Umsatzsteuerbefreiung. Software U12 als L\u00f6sung f\u00fcr die gesamte Abwicklung des Gelangensnachweises inklusive Mahnwesen. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "Text",
+					"id": "ckzmqjemw77fh0a118pun78pv",
+					"heading1": "Qualifizierte Pr\u00fcfung der Umsatzsteuer-Identnummer mit Archivierung",
+					"heading2": null,
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Medium",
+					"paddingBottom": "Medium",
+					"text": {
+						"html": "<p>Ein weiterer Bestandteil der Softwarel\u00f6sung U12 - Umsatzsteuer Befreiung Sichern ist die vom Gesetzgeber vorgeschriebene qualifizierte Pr\u00fcfung der Umsatzsteuer-Identnummer mit Archivierung der Pr\u00fcfergebnisse.\u2028<br><br>H\u00e4ufig kommt es vor, dass die Adresse in Ihren Kundenstammdaten von der hinterlegten Adresse der ausl\u00e4ndischen Finanzverwaltung abweicht, da diese Anschriften selten nachgepflegt werden. In U12 k\u00f6nnen wir bei Abweichungen die Anschrift Ihres Kunden gem\u00e4\u00df der Erfassung bei der ausl\u00e4ndischen Finanzverwaltung ermitteln und in U12 als Alias-Adresse abspeichern.</p><p></p>"
+					}
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckzpjaf60e5ec0b48o625lmw3",
+			"slug": "partner",
+			"title": "Rhenania Computer",
+			"description": null,
+			"modules": [
+				{
+					"__typename": "Text",
+					"id": "ckzpjacuodnq40a509lme4xwv",
+					"heading1": "Partner",
+					"heading2": "Kooperationen und Partnerschaften sind uns willkommen.",
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Medium",
+					"paddingBottom": "Medium",
+					"text": {
+						"html": "<p>Wir sind bestrebt, unsere Produkte und Dienstleistungen mit bzw. \u00fcber Partner zu vertreiben. Dabei sind wir offen f\u00fcr Softwareh\u00e4user, Systemh\u00e4user und Endkunden. <br><br>Hier finden Sie einen Auszug unserer Partner:</p>"
+					}
+				},
+				{
+					"__typename": "PartnerContainer",
+					"id": "cl0i82kovzhnf0cz5y4gmw1ls",
+					"partnerItems": [
+						{
+							"id": "cl0i9012rzhb60cxgjpedoa9y",
+							"partnerLogo": {
+								"id": "cl0i78y87xxkx0ez8ceo3ua38",
+								"url": "https://media.graphassets.com/Ee7iRG2RK61zmUkDjEt4"
+							},
+							"partnerDescription": {
+								"html": "<p><strong>AHP Automotive Hosting Partner GmbH</strong></p><p>Essener Str. 2 \u2013 24</p><p>46047 Oberhausen</p><p><a target='_blank' title=\"https://www.ahponline.de/\" href=\"https://www.ahponline.de/\">ahponline.de</a></p>"
+							}
+						},
+						{
+							"id": "cl0i7c92mxzcl0cxlr5h19lff",
+							"partnerLogo": {
+								"id": "cl0i78y37xxjo0ez8yvtfcl0w",
+								"url": "https://media.graphassets.com/rpdOymXUT3mZxVYw4KC5"
+							},
+							"partnerDescription": {
+								"html": "<p><strong>DHL Paket GmbH</strong></p><p>Str\u00e4\u00dfchensweg 10</p><p>53113 Bonn</p><p><a target='_blank' title=\"https://www.dhl.de/\" href=\"https://www.dhl.de/\">dhl.de</a></p>"
+							}
+						},
+						{
+							"id": "cl0i8zeaxzgs00cxg35pzwgas",
+							"partnerLogo": {
+								"id": "cl0i78xm0xwny0cuxfavmmgvs",
+								"url": "https://media.graphassets.com/WEkmMdjkSgKfEXf3x33N"
+							},
+							"partnerDescription": {
+								"html": "<p><strong>GBK GmbH Global Regulatory Compliance</strong></p><p>K\u00f6nigsberger Stra\u00dfe 29</p><p>55218 Ingelheim</p><p><a target='_blank' title=\"https://www.gbk-ingelheim.de/\" href=\"https://www.gbk-ingelheim.de/\">gbk-ingelheim.de</a></p><p></p>"
+							}
+						},
+						{
+							"id": "cl0i90qj3zr060ez8u1r95q0o",
+							"partnerLogo": {
+								"id": "cl0i78xp0xnvl0cxguglk9sl5",
+								"url": "https://media.graphassets.com/RXZGryqQ3CqpzDdd23jX"
+							},
+							"partnerDescription": {
+								"html": "<p><strong>H\u00fcbner IT Solutions GmbH</strong></p><p>V\u00f6llesbruchstra\u00dfe 6</p><p>52152 Simmerath</p><p><a target='_blank' title=\"https://www.huebner-it-solutions.de/\" href=\"https://www.huebner-it-solutions.de/\">huebner-it-solutions.de</a></p><p></p>"
+							}
+						},
+						{
+							"id": "cl0i8y1j9zoqm0ez8cwgqidcy",
+							"partnerLogo": {
+								"id": "cl0i78xltxvi80cxl7qk313on",
+								"url": "https://media.graphassets.com/fas27ONhQAW0tpjxjhOd"
+							},
+							"partnerDescription": {
+								"html": "<p><strong>ROHA Software Support GmbH</strong></p><p>Ameisgasse 49 -51</p><p>1140 Wien </p><p>\u00d6sterreich</p><p><a target='_blank' title=\"https://roha.at/de-de/\" href=\"https://roha.at/de-de/\">roha.at</a></p>"
+							}
+						},
+						{
+							"id": "cl0i8m30bz6c00bz7wxhupfei",
+							"partnerLogo": {
+								"id": "cl0i78yalyg6z0cz5gl18nze4",
+								"url": "https://media.graphassets.com/Amq1eLNWSjCl89En208d"
+							},
+							"partnerDescription": {
+								"html": "<p><strong>Toshiba Tec Germany Imaging Systems GmbH</strong></p><p>Carl-Schurz-Stra\u00dfe 7</p><p>41460 Neuss</p><p><a target='_blank' title=\"https://de.toshibatec.eu/\" href=\"https://de.toshibatec.eu/\">de.toshibatec.eu</a></p>"
+							}
+						}
+					]
+				},
+				{
+					"__typename": "Text",
+					"id": "cl0i5fanovtab0bz7d1ehxgic",
+					"heading1": null,
+					"heading2": "Sehen Sie sich hierzu unsere Partner- und Kooperationsangebote an.",
+					"heading3": "Mit folgenden Kooperationsmodellen haben wir Erfahrung:",
+					"link": null,
+					"paddingTop": "Small",
+					"paddingBottom": "Small",
+					"text": {
+						"html": "<ul><li><div>Ein Lizenzvertrag \u00fcber eines unserer Produkte kommt zwischen Ihnen und Ihrem Endkunden zustande, wobei Sie die gesamte Akquisition selbst\u00e4ndig durchgef\u00fchrt haben.</div></li><li><div>Sie nennen uns die Adresse eines Interessenten, wir begleiten den Akquisitionsprozess aktiv und schlie\u00dfen einen Lizenzvertrag ab.</div></li><li><div>Sie nennen uns die Adresse eines Interessenten, wir akquirieren ohne Ihre Mitwirkung und schlie\u00dfen einen Lizenzvertrag ab.</div></li></ul><p></p>"
+					}
+				},
+				{
+					"__typename": "Divider",
+					"id": "cl0i5davzw29i0cxllajyak3w",
+					"padding": "None"
+				},
+				{
+					"__typename": "CtaLink",
+					"id": "cl0iklr5p6l4t0cxgqyagussx",
+					"headline": "Haben Sie individuelle Vorschl\u00e4ge oder m\u00f6chten Sie mehr erfahren?",
+					"padding": "Medium"
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "ckzzjjbkgvw7j0d53lrkzujov",
+			"slug": "referenzen",
+			"title": "Rhenania Computer",
+			"description": null,
+			"modules": [
+				{
+					"__typename": "ReferencesContainer",
+					"id": "ckzsxxv6oe9rz0b48amctqoj6",
+					"referenceItems": [
+						{
+							"id": "ckzsy916we6sd0d63tx9j9oqv",
+							"referenceLogo": {
+								"id": "ckzsy7628ebq30b48hik53295",
+								"url": "https://media.graphassets.com/iZPQrhBsQQiwlvqKcxUR"
+							}
+						},
+						{
+							"id": "ckzsyc0g05d4w0a57qjlx66xl",
+							"referenceLogo": {
+								"id": "ckzsy7628dynr0b10ftjuop7n",
+								"url": "https://media.graphassets.com/NuUYRcyGTF6SSdQ2U2aW"
+							}
+						},
+						{
+							"id": "ckzzmhf0gogg20a572h5mdx5n",
+							"referenceLogo": {
+								"id": "ckzsy76u05c420a57a7jog3i5",
+								"url": "https://media.graphassets.com/ZHOzpM9iTeudmKbN3nwo"
+							}
+						},
+						{
+							"id": "ckzzmiquooh7r0a57row3ecac",
+							"referenceLogo": {
+								"id": "ckzsy76u0e2p10d03593xo3wl",
+								"url": "https://media.graphassets.com/6xlaGDEXQyucHeZssVML"
+							}
+						},
+						{
+							"id": "ckzzmjr48xfux0d63744bk84z",
+							"referenceLogo": {
+								"id": "ckzsy76u0ebqi0b48bh8h8gcg",
+								"url": "https://media.graphassets.com/YT7cUkPkRxWJY69zVJhl"
+							}
+						},
+						{
+							"id": "ckzzmqaggxkjr0d63aibpm2qp",
+							"referenceLogo": {
+								"id": "ckzsy76u05c5c0a57fh0374xc",
+								"url": "https://media.graphassets.com/6d5zVzZ4Rsajbxvn7QTD"
+							}
+						},
+						{
+							"id": "ckzzmqrfkxvn40b48ih5vrl2l",
+							"referenceLogo": {
+								"id": "ckzsy76u0e2ob0d03tdk4vnrt",
+								"url": "https://media.graphassets.com/zCVKhWMpRdqU54phbm0g"
+							}
+						},
+						{
+							"id": "ckzzmrfcoyhxx0d53xm39ssam",
+							"referenceLogo": {
+								"id": "cl08jpb9rjt3r0cxr2p3vwbk8",
+								"url": "https://media.graphassets.com/JapXZDQVTw2IacwBW6CL"
+							}
+						},
+						{
+							"id": "ckzzmrzewxwik0b4865tgc3tr",
+							"referenceLogo": {
+								"id": "ckzsy76u0efsz0d536phc2vkw",
+								"url": "https://media.graphassets.com/WXRKrVNQgOhXv9q4QGjC"
+							}
+						},
+						{
+							"id": "ckzzmshxkxwy70b48cyf431fc",
+							"referenceLogo": {
+								"id": "ckzsy7628e6cj0d633fy89nr7",
+								"url": "https://media.graphassets.com/n42lLotVTN21OKAo9H1s"
+							}
+						},
+						{
+							"id": "ckzzmsy4wxmoi0d63dt2crdtl",
+							"referenceLogo": {
+								"id": "ckzsy76u0e6dd0d63lxl6e1on",
+								"url": "https://media.graphassets.com/QTTrcIHTeGLh084B8wpE"
+							}
+						},
+						{
+							"id": "ckzzmtb94x48k0d03cvzgmygm",
+							"referenceLogo": {
+								"id": "ckzsy76u0e6cy0d63j3b2dlla",
+								"url": "https://media.graphassets.com/UwvMmVrhR5aiZ1hweMqL"
+							}
+						},
+						{
+							"id": "ckzzmtw34x4pl0d03zbo126my",
+							"referenceLogo": {
+								"id": "ckzsy76u0eftt0d53wraobddv",
+								"url": "https://media.graphassets.com/CIx9RNcqS5a6yFtJCrHS"
+							}
+						},
+						{
+							"id": "ckzzmuj8gxzok0b48fzol6wzp",
+							"referenceLogo": {
+								"id": "ckzsy76u0dyp00b10e4564pcx",
+								"url": "https://media.graphassets.com/MRYxaN0lQIiDomSMOuAZ"
+							}
+						},
+						{
+							"id": "ckzzmvgewxp150d63secuus6q",
+							"referenceLogo": {
+								"id": "ckzsy76u0dyo60b106jcgljxs",
+								"url": "https://media.graphassets.com/drXWIErYTvqWniVpucSf"
+							}
+						},
+						{
+							"id": "ckzzmvxe0yls70d53ly87i1xf",
+							"referenceLogo": {
+								"id": "ckzsy76u0e2or0d03hue9slsc",
+								"url": "https://media.graphassets.com/FQMGkK8QBy0Ud0GZm1A0"
+							}
+						},
+						{
+							"id": "ckzzmwc1sym2v0d53cmfhtuq4",
+							"referenceLogo": {
+								"id": "ckzsy76u0eftf0d53cdisswaj",
+								"url": "https://media.graphassets.com/Z0JnhBAqQfCGTwRzpn5j"
+							}
+						},
+						{
+							"id": "ckzzmx320y27c0b48opv0dmkt",
+							"referenceLogo": {
+								"id": "cl082gcgy6bsl0dywtv9a767f",
+								"url": "https://media.graphassets.com/CS428zzQRyyEA2JSmiJw"
+							}
+						},
+						{
+							"id": "ckzzmxvlsxrkp0d635afm2xio",
+							"referenceLogo": {
+								"id": "ckzsy76u05c4h0a57kg6031bu",
+								"url": "https://media.graphassets.com/TWt5q1ARkG6tPtx5KJ8R"
+							}
+						},
+						{
+							"id": "ckzzmylu8y3fp0b48z4emkpk4",
+							"referenceLogo": {
+								"id": "ckzsy76u0dyol0b10s8ho5g12",
+								"url": "https://media.graphassets.com/3DISDwd3RDeTKl0rWaQl"
+							}
+						},
+						{
+							"id": "ckzzmz21kyo4m0d53ek9un6rw",
+							"referenceLogo": {
+								"id": "ckzsy76u0ebqy0b48uysbq72p",
+								"url": "https://media.graphassets.com/SAlIIu7ERB2zyTQ8OHbm"
+							}
+						},
+						{
+							"id": "ckzzmzxogy4ak0b48yri8vcqm",
+							"referenceLogo": {
+								"id": "ckzsy76u0ebt50b48hlqm42xu",
+								"url": "https://media.graphassets.com/j28gawc2SKzbYY8UvgKe"
+							}
+						},
+						{
+							"id": "ckzzn08hcxrzf0b105colwimi",
+							"referenceLogo": {
+								"id": "cl2q8wm3t1xny0duo3yg2qdx5",
+								"url": "https://media.graphassets.com/74DnQaXTQSnvLDNSbCGA"
+							}
+						},
+						{
+							"id": "ckzzn0ja8oxxr0a5762erbfal",
+							"referenceLogo": {
+								"id": "ckzsy76u05c4w0a57fmfj5aym",
+								"url": "https://media.graphassets.com/rHAbiGTQ2GJVG4l3aib0"
+							}
+						},
+						{
+							"id": "ckzzn1ddkxbe00d03sjxivu3e",
+							"referenceLogo": {
+								"id": "ckzsy76u05c5q0a57rver79u3",
+								"url": "https://media.graphassets.com/tYV0Az3FQvSx8Dml7cNF"
+							}
+						},
+						{
+							"id": "ckzzn1st4xtja0b10q9c1mrxq",
+							"referenceLogo": {
+								"id": "ckzsy76u0e6ds0d63j44n7epi",
+								"url": "https://media.graphassets.com/woOVGioQeuVQRw0zbC41"
+							}
+						},
+						{
+							"id": "ckzzmxduwx84v0d03mn3ciibx",
+							"referenceLogo": {
+								"id": "cl0dw98nym3t40cxslhq8byyd",
+								"url": "https://media.graphassets.com/bkVUrhzBQuSizUeWoCMh"
+							}
+						},
+						{
+							"id": "ckzzn255kozdb0a57l9n6kyx0",
+							"referenceLogo": {
+								"id": "ckzsy76u0e6e70d63js0sbep8",
+								"url": "https://media.graphassets.com/kGfuIcSsRRG5YrYWigTB"
+							}
+						},
+						{
+							"id": "ckzzn2no8y5ux0b48uhqnzxew",
+							"referenceLogo": {
+								"id": "ckzsy76u0ebrs0b4886frvk9m",
+								"url": "https://media.graphassets.com/toj73bbSJSdFwVxSYAwj"
+							}
+						},
+						{
+							"id": "ckzzn38i8xump0b10zjx0pls9",
+							"referenceLogo": {
+								"id": "ckzsy76u0ebrc0b486u01l1li",
+								"url": "https://media.graphassets.com/adBuo0dQ5iwgtjmFiIXE"
+							}
+						},
+						{
+							"id": "ckzzn3opkxdan0d03m6zdksdt",
+							"referenceLogo": {
+								"id": "ckzsy76u0dypu0b107irgj7s6",
+								"url": "https://media.graphassets.com/ljoGoUfmQvQVVvQJlrjQ"
+							}
+						},
+						{
+							"id": "ckzzn3xywxdgq0d03u2x512pg",
+							"referenceLogo": {
+								"id": "ckzsy76u0e2qt0d03l05nmiyn",
+								"url": "https://media.graphassets.com/felnS25EQnudz9zf1flP"
+							}
+						},
+						{
+							"id": "ckzzn4buwxdq10d03rltet4fe",
+							"referenceLogo": {
+								"id": "ckzsy76u0ebsd0b48h60lq0yi",
+								"url": "https://media.graphassets.com/eDKT5SO1QPCLVgE7VqYK"
+							}
+						},
+						{
+							"id": "ckzzn4mnsxe3b0d030sur29w0",
+							"referenceLogo": {
+								"id": "cl2q8xcmc1yt40duoxkwuh7nk",
+								"url": "https://media.graphassets.com/G7AZL29tTae1OWyrxez8"
+							}
+						},
+						{
+							"id": "ckzzn4zs0xx3z0d63ukcjnpgu",
+							"referenceLogo": {
+								"id": "ckzsy76u0efv20d532qruabge",
+								"url": "https://media.graphassets.com/TlHflUsSTCBlDJKiJcJ6"
+							}
+						},
+						{
+							"id": "ckzzn5bcoxest0d03kwb533go",
+							"referenceLogo": {
+								"id": "ckzsy76u0e2q00d03ozueut04",
+								"url": "https://media.graphassets.com/Fmg4MaiQlmf0hacNDX1G"
+							}
+						},
+						{
+							"id": "ckzzn6a2oxxyc0d630usxd731",
+							"referenceLogo": {
+								"id": "cl2q8xxa41zq50duocq5k0m6y",
+								"url": "https://media.graphassets.com/O4dbE2d0Rm2DmNCAZlG3"
+							}
+						},
+						{
+							"id": "ckzzn6ik8xy4s0d63pkdk5fj5",
+							"referenceLogo": {
+								"id": "ckzsy76u0dyqo0b10swu86e9k",
+								"url": "https://media.graphassets.com/qpkn9toBQ96skjlG4sJW"
+							}
+						},
+						{
+							"id": "ckzzn6qa0p33m0a57bm8b9o3p",
+							"referenceLogo": {
+								"id": "ckzsy76u0e2qe0d03m61btibk",
+								"url": "https://media.graphassets.com/b5sp9Xc3TnKw0WHpqBG4"
+							}
+						},
+						{
+							"id": "ckzzn70b4xyjk0b107p4kgzfi",
+							"referenceLogo": {
+								"id": "ckzsy76u0efu90d53qk7plffz",
+								"url": "https://media.graphassets.com/6E2c2SlTRuCsVSH4A6QM"
+							}
+						},
+						{
+							"id": "ckzzn79kgxyz60b10som5egjx",
+							"referenceLogo": {
+								"id": "ckzsy76u0e6f10d63lcd91gqm",
+								"url": "https://media.graphassets.com/O1pqqk2cTsKGEUos71wR"
+							}
+						},
+						{
+							"id": "ckzzn7jlkp4cd0a5767gxtnyd",
+							"referenceLogo": {
+								"id": "ckzsy76u05c660a57mloot137",
+								"url": "https://media.graphassets.com/buPsNsgtTuKblX5K23eW"
+							}
+						},
+						{
+							"id": "ckzzn7v68xh490d03k90te9yq",
+							"referenceLogo": {
+								"id": "ckzsy76u0e6en0d63ku27zlxh",
+								"url": "https://media.graphassets.com/4v9ZtXbTwKY04p7uc0rf"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "cl1yyws5tv0vg0cugaielxwgs",
+			"slug": "gutschriftsanzeigeverfahren",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania pr\u00fcft Ihre Frachtrechnung. Versandlogistiksystem VKA als L\u00f6sung zur automatisierten Kontrolle von Fracht- und Versandkosten. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "HeroImage",
+					"id": "cl1yyung4v8cz0cum3op4go9f",
+					"image": {
+						"id": "cl0l3fg3l0e160cz5lty48fwn",
+						"url": "https://media.graphassets.com/oQwU9gqTrSRf51c9gVPd"
+					},
+					"strokeColor": {
+						"hex": "#a3d4ff",
+						"rgba": {
+							"r": 163,
+							"g": 212,
+							"b": 255,
+							"a": 1
+						}
+					},
+					"icon": {
+						"id": "ckxg7xe206e590b52qkw6r9ef",
+						"url": "https://media.graphassets.com/8ARwtd5xQROsrc6iCY0P"
+					}
+				},
+				{
+					"__typename": "Text",
+					"id": "cl1yyv4pkv98n0btc58cpzg3j",
+					"heading1": "VKA-Modul Gutschriftsanzeigeverfahren (GAV)",
+					"heading2": null,
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Small",
+					"paddingBottom": "Medium",
+					"text": {
+						"html": "<p>Mit dem Gutschriftsanzeigeverfahren werden anhand der zuvor im Versandsystem ermittelten Geb\u00fchren automatisiert Gutschriften erstellt.\u00a0<br><br>Die Gutschriften werden an die Finanzbuchhaltung \u00fcbermittelt und gleichzeitig elektronisch oder in gedruckter Form an die Versanddienstleister gesendet.<br><br>Bei Einsatz des Gutschriftsanzeigeverfahrens entf\u00e4llt die Rechnungskontrolle, da diese vom Frachtf\u00fchrer \u00fcbernommen wird.<br><br><br><strong>Option: Schnittstellen zur FiBu und zum ERP-System<br><br></strong>Als Option k\u00f6nnen \u00fcber Schnittstellen alle VKA-Daten an das ERP-System \u00fcbergeben werden. Ebenso k\u00f6nnen die von VKA erzeugten Rechnungen und Gutschriften an die Finanzbuchhaltung transferiert und dort automatisch verbucht werden.</p>"
+					}
+				},
+				{
+					"__typename": "Image",
+					"id": "cl26ckgmc8uj40cuqqem5kale",
+					"image": {
+						"id": "cl1z0p1ugx3ap0cuglec9iqqq",
+						"url": "https://media.graphassets.com/X0QtEIAPS5e31fxgnjXG"
+					},
+					"imageWidth": "ContentWidth",
+					"paddingTop": "Small",
+					"paddingBottom": "Large"
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "cl1yz0513vd350btcp8nni9h2",
+			"slug": "rechnungskontrolle",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania pr\u00fcft Ihre Frachtrechnung. Versandlogistiksystem VKA als L\u00f6sung zur automatisierten Kontrolle von Fracht- und Versandkosten. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "HeroImage",
+					"id": "cl1yyytt4vfiu0dtckueve1rl",
+					"image": {
+						"id": "cl0l3fg3l0e160cz5lty48fwn",
+						"url": "https://media.graphassets.com/oQwU9gqTrSRf51c9gVPd"
+					},
+					"strokeColor": {
+						"hex": "#a3d4ff",
+						"rgba": {
+							"r": 163,
+							"g": 212,
+							"b": 255,
+							"a": 1
+						}
+					},
+					"icon": {
+						"id": "ckxg7xe206e590b52qkw6r9ef",
+						"url": "https://media.graphassets.com/8ARwtd5xQROsrc6iCY0P"
+					}
+				},
+				{
+					"__typename": "Text",
+					"id": "cl1yyzreivcoh0brxkedkbw6n",
+					"heading1": "VKA-Modul Rechnungskontrolle (RK)",
+					"heading2": null,
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Medium",
+					"paddingBottom": "Medium",
+					"text": {
+						"html": "<p>VKA erh\u00e4lt aus dem Versandsystem die zuvor ermittelten und mit dem Frachtf\u00fchrer vertraglich vereinbarten Geb\u00fchren. Die so ermittelten Versandkosten (SOLL-Daten) werden analog zur Frachtrechnung aufbereitet und archiviert. Die Eingangsrechnungen der Frachtf\u00fchrer (IST-Daten) werden ebenfalls nach VKA importiert.<br><br>Die Software vergleicht die Eingangsrechnungen mit den zuvor im Versandsystem ermittelten Versandkosten und protokolliert alle Abweichungen, die sich au\u00dferhalb voreingestellter Toleranzen bewegen.<br>Abweichungen innerhalb der Toleranzgrenzen werden akzeptiert und zur automatischen Verbuchung \u00fcber eine Schnittstelle an die Finanzbuchhaltung \u00fcbergeben.<br>Rechnungspositionen, bei denen die Toleranzgrenzen \u00fcberschritten wurden, m\u00fcssen vor ihrer \u00dcbergabe an die Buchhaltung manuell \u00fcberpr\u00fcft werden.<br><br><br><strong>Option: Schnittstellen zur FiBu und zum ERP-System<br><br></strong>Als Option k\u00f6nnen \u00fcber Schnittstellen alle VKA-Daten an das ERP-System \u00fcbergeben werden. Ebenso k\u00f6nnen die von VKA erzeugten Rechnungen und Gutschriften an die Finanzbuchhaltung transferiert und dort automatisch verbucht werden.</p>"
+					}
+				},
+				{
+					"__typename": "Image",
+					"id": "cl1z0q2qexf7o0btc7w5i8kxl",
+					"image": {
+						"id": "cl1z0p1vrworo0dt8amcg7cva",
+						"url": "https://media.graphassets.com/oJZ6uApaRieuNGVpjwmY"
+					},
+					"imageWidth": "ContentWidth",
+					"paddingTop": "Small",
+					"paddingBottom": "Large"
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "cl28xj5kl71oi0cuvlaugw652",
+			"slug": "beipacken",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania optimiert Ihre Kommissionierung. Versandlogistiksystem K04 als L\u00f6sung zur fehlerfreien Steuerung des gesamten Kommissionierprozesses. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "HeroImage",
+					"id": "cl2aax7fbao7t0aunib2w5k1x",
+					"image": {
+						"id": "cl0l3fg3l0e160cz5lty48fwn",
+						"url": "https://media.graphassets.com/oQwU9gqTrSRf51c9gVPd"
+					},
+					"strokeColor": {
+						"hex": "#203776",
+						"rgba": {
+							"r": 32,
+							"g": 55,
+							"b": 118,
+							"a": 1
+						}
+					},
+					"icon": {
+						"id": "ckxg7xe206e590b52qkw6r9ef",
+						"url": "https://media.graphassets.com/8ARwtd5xQROsrc6iCY0P"
+					}
+				},
+				{
+					"__typename": "Text",
+					"id": "cl28xj0o571i10cuvul3rvwiq",
+					"heading1": "Beipacken",
+					"heading2": null,
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Small",
+					"paddingBottom": "Large",
+					"text": {
+						"html": "<p>Mit der K04-Option Beipacken k\u00f6nnen mehrere Auftr\u00e4ge zu einer Sendung zusammengefasst werden, um Versandkosten zu reduzieren. Nach dem Abholen der Ware kann man zudem im Sendungsarchiv unseres Versandsystems <a title=\"./f95\" href=\"./f95\">F95 \u2013 Paket- und Palettenversand</a> einsehen, welche Auftr\u00e4ge zu der jeweiligen Sendungsnummer geh\u00f6ren.</p>"
+					}
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "cl28xlmzr73w90aunk1jvbawa",
+			"slug": "paketinhaltsliste",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania optimiert Ihre Kommissionierung. Versandlogistiksystem K04 als L\u00f6sung zur fehlerfreien Steuerung des gesamten Kommissionierprozesses. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "HeroImage",
+					"id": "cl2ab0h4ibdg80cuvfge4yc8s",
+					"image": {
+						"id": "cl0l3fg3l0e160cz5lty48fwn",
+						"url": "https://media.graphassets.com/oQwU9gqTrSRf51c9gVPd"
+					},
+					"strokeColor": {
+						"hex": "#203776",
+						"rgba": {
+							"r": 32,
+							"g": 55,
+							"b": 118,
+							"a": 1
+						}
+					},
+					"icon": {
+						"id": "ckxg7xe207c5k0c96966ad3tj",
+						"url": "https://media.graphassets.com/z3Pip6uATHeAVf9O2fG5"
+					}
+				},
+				{
+					"__typename": "Text",
+					"id": "cl28xl8ge6vvf0bun1ab6o4aj",
+					"heading1": "Paketinhaltsliste",
+					"heading2": null,
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Small",
+					"paddingBottom": "Large",
+					"text": {
+						"html": "<p>Die K04-Option Paketinhaltsliste gibt Auskunft \u00fcber den genauen Inhalt von Paketen und Paletten. Am Packplatz werden die Artikel noch einmal erfasst, das fertig gepackte Paket oder die Palette abgeschlossen, die Inhaltsliste gedruckt und der Sendung beigef\u00fcgt. Alternativ kann die Inhaltsliste auch als pdf-Datei \u00fcbermittelt werden. Nach dem Abholen der Ware kann man zudem in K04 oder im Sendungsarchiv unseres Versandsystems F95 \u2013 Paket- und Plattenversand einsehen, welche Artikel sich in den einzelnen Paketen oder auf der jeweiligen Palette befinden.</p>"
+					}
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "cl28xocwr6vuf0hultp59hjjb",
+			"slug": "lagerbestandsfuehrung",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania optimiert Ihre Kommissionierung. Versandlogistiksystem K04 als L\u00f6sung zur fehlerfreien Steuerung des gesamten Kommissionierprozesses. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "HeroImage",
+					"id": "cl2ab2o2sa9ti0buncly4yald",
+					"image": {
+						"id": "cl0l3fg3l0e160cz5lty48fwn",
+						"url": "https://media.graphassets.com/oQwU9gqTrSRf51c9gVPd"
+					},
+					"strokeColor": {
+						"hex": "#203776",
+						"rgba": {
+							"r": 32,
+							"g": 55,
+							"b": 118,
+							"a": 1
+						}
+					},
+					"icon": {
+						"id": "ckxg7xe207a9p0b05kzs0up6k",
+						"url": "https://media.graphassets.com/p4sVHlh8SjD4gD22H2cx"
+					}
+				},
+				{
+					"__typename": "Text",
+					"id": "cl28xoxp977kd0cuvsvgwaieg",
+					"heading1": "Lagerbestandsf\u00fchrung",
+					"heading2": null,
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Small",
+					"paddingBottom": "Large",
+					"text": {
+						"html": "<p>Mit der K04-Option Lagerbestandsf\u00fchrung hat der Mitarbeiter im Vertrieb jederzeit \u00dcberblick \u00fcber den aktuellen Bestand. Der Mitarbeiter im Lager erkennt zudem, an welchem Lagerplatz sich der Artikel befindet.</p><p>Mit jeder Ein-, Um- und Auslagerung wird der Bestand zeitgleich mit dem Scannen des Artikels angepasst.</p>"
+					}
+				}
+			]
+		},
+		{
+			"__typename": "Page",
+			"id": "cl28xpvwk6yxu0buo91w6hsif",
+			"slug": "desadv",
+			"title": "Rhenania Computer",
+			"description": "RC Rhenania optimiert Ihre Kommissionierung. Versandlogistiksystem K04 als L\u00f6sung zur fehlerfreien Steuerung des gesamten Kommissionierprozesses. Mehr erfahren.",
+			"modules": [
+				{
+					"__typename": "HeroImage",
+					"id": "cl2ab4ekdabku0bunzcvysgvg",
+					"image": {
+						"id": "cl0l3fg3l0e160cz5lty48fwn",
+						"url": "https://media.graphassets.com/oQwU9gqTrSRf51c9gVPd"
+					},
+					"strokeColor": {
+						"hex": "#203776",
+						"rgba": {
+							"r": 32,
+							"g": 55,
+							"b": 118,
+							"a": 1
+						}
+					},
+					"icon": {
+						"id": "ckxg7xe207c560c96lxwaypok",
+						"url": "https://media.graphassets.com/YxpgHwKhSsm5zc7PyLWd"
+					}
+				},
+				{
+					"__typename": "Text",
+					"id": "cl28xqi4z6znx0buo0spo7c4k",
+					"heading1": "DESADV (EDI) und EAN 128",
+					"heading2": null,
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Small",
+					"paddingBottom": "Medium",
+					"text": {
+						"html": "<p>Die Software K04 \u2013 Kommissionieren, Kontrollieren, Packen bietet optional auch die M\u00f6glichkeit des Datenaustauschs mit dem Besteller bzw. Warenempf\u00e4nger in der EDI-Nachrichtenart DESADV sowie die Kennzeichnung der Transporteinheiten mittels EAN 128 Etiketten.</p>"
+					}
+				},
+				{
+					"__typename": "AccordionContainer",
+					"id": "cl28y8s387kob0hulm7hnibfd",
+					"headline": "Produktinformationen",
+					"introOptional": null,
+					"paddingTop": "Small",
+					"paddingBottom": "Large",
+					"accordionItems": [
+						{
+							"id": "cl28y8o1n7sei0aunkk27zmbe",
+							"heading1": "Details",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<p>Gro\u00dfe Warenempf\u00e4nger (Handelsh\u00e4user) fordern das vorauseilende Lieferavis und die begleitende Auszeichnung der Transporteinheiten und dies oft in einer vergleichbaren Detaillierung f\u00fcr Lieferavis und Etikett. Abh\u00e4ngig von dem Warenbesteller bzw. Warenempf\u00e4nger sind aber auch andere Regelungen m\u00f6glich.</p><p><br></p><p>Das Verfahren kann in mehreren Ausbaustufen angewendet werden. F\u00fcr Stufe 1 reichen die vorhandenen Soll-Daten aus dem jeweils vorhandenen System aus. Ein EAN 128 Etikett ist nicht erforderlich.</p><p><br></p><p>Ab Stufe 2 m\u00fcssen grunds\u00e4tzlich die Ist-Daten erfasst und verwendet werden. Das Lieferavis muss alle Detailinformationen der Lieferung enthalten. Das begleitende EAN 128 Etikett muss mindestens die NVE (Nummer der Versandeinheit) ausweisen.</p><p><br></p><p>F\u00fcr Stufe 1 werden alle Daten aus dem Lieferschein \u00fcbernommen und im K04-Archiv gespeichert.</p><p><br></p><p>Ab Stufe 2 werden zus\u00e4tzlich zu den vorhandenen Daten regelm\u00e4\u00dfig Ist-Daten \u00fcber den Inhalt der einzelnen Collis und die NVE im Versand erfasst. Mit K04 - Kommissionieren, Kontrollieren, Packen werden nach der Kommissionierung und vor oder beim Packen der Ware alle Artikel gescannt und mit der NVE verkn\u00fcpft. Diese Daten werden im K04-Archiv gespeichert und dann f\u00fcr das Lieferavis und die begleitende Auszeichnung ausgewertet bzw. verwendet.</p><p><br></p><p>F\u00fcr die Datenerfassung, das EAN 128 Etikett und die Nachrichtenart DESADV werden Stati im K04-Archiv gef\u00fchrt. Diese k\u00f6nnen zwar in Abh\u00e4ngigkeit voneinander ver\u00e4ndert werden, m\u00fcssen jedoch auch einzeln zur\u00fccksetzbar sein, um z.B. ein Etikett, eine Liste, Auswertung oder Daten\u00fcbertragung neu erstellen zu k\u00f6nnen.</p><p><br></p><p>F\u00fcr Artikel ohne Barcode wird ein Suchverfahren eingerichtet. Eine EAN-Nummer (im Stammsatz) ist unbedingt notwendig. F\u00fcr eine eventuelle Umsetzung von Handelsartikeln in Verkaufsartikel und das Suchverfahren ist eine Schnittstelle zum vorhandenen Artikelstamm bzw. eine redundante Artikelsuchverwaltung in K04 - Kommissionieren, Kontrollieren, Packen erforderlich.</p><p><br></p><p>Es wird eine Schnittstelle zu den Auftrags-, Lieferschein- oder Rechnungsdaten im Warenwirtschaftssystem eingerichtet. Gleiches gilt f\u00fcr den Kundenstamm. Eventuell wird zus\u00e4tzlich eine Kundenstammverwaltung ausschlie\u00dflich f\u00fcr folgende Informationen in K04 installiert:</p><ul><li><div>Klassifizierung bzw. Anwendungstiefe des gew\u00fcnschten EAN-Etiketts</div></li><li><div>ILN des EDI-Empf\u00e4ngers</div></li><li><div>ILN des Warenempf\u00e4ngers</div></li></ul><p><br></p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": []
+						},
+						{
+							"id": "cl28yamsu7pb40buns72umt2z",
+							"heading1": "Arbeitsschritte",
+							"heading2": null,
+							"heading3": null,
+							"content": {
+								"html": "<p>F\u00fcr Stufe 1 werden alle Daten bei Lieferscheinschreibung automatisch \u00fcbernommen und im K04-Archiv gespeichert.</p><p><br>Ab Stufe 2 werden mit einer regelm\u00e4\u00dfig neu einzurichtenden Funktion oder an einem neuen Arbeitsplatz zu Beginn eines Pack- oder Ladevorganges der begleitende Beleg (Auftrags-, Lieferschein- oder Rechnungsnummer) gescannt oder eingegeben. Gleichzeitig vergibt das System eine NVE.</p><p><br>Soweit unser Versandsystem F95 - Paket- und Palettenversand im Einsatz ist, kann K04 wahlweise eine NVE von dort \u00fcbernehmen. Die \u00dcbernahme einer NVE vom F95-Etikett ist von Vorteil, weil dadurch Verwechslungen ausgeschlossen werden k\u00f6nnen. Alternativ kann eine neue NVE durch K04 vergeben und von F95 \u00fcbernommen werden.</p><p><br>Anschlie\u00dfend wird jeder einzelne Artikel als Handelsartikel oder Verkaufsartikel gescannt. Falls erforderlich, werden EAN-Nummern f\u00fcr Handelseinheiten (Masterpaket) automatisch in EAN-Nummern f\u00fcr Verkaufseinheiten umgesetzt.</p><p><br>Sobald ein Colli voll ist, wird dem System durch Scannen eines speziellen Barcodes mitgeteilt, dass dieser Colli abgeschlossen ist. Das entsprechende EAN-Etikett wird jeweils bei Colli-Ende automatisch nach den Vorgaben und Vereinbarungen mit dem Warenempf\u00e4nger in der gew\u00fcnschten St\u00fcckzahl ausgedruckt.</p><p><br>Automatisch wird eine neue NVE vergeben bzw. durch Scannen eines NVE-Etiketts aus F95 \u00fcbernommen. Die gleiche Prozedur beginnt mit dem n\u00e4chsten Colli, bis auch dieser voll ist bzw. das Auftragsende erreicht wird. Das Auftragsende wird dem System durch Scannen eines speziellen Barcodes mitgeteilt.</p><p><br>Alle so gewonnenen Daten sind miteinander verkn\u00fcpft und im K04-Archiv gespeichert.</p><p><br>Wiederholungen sind beliebig oft m\u00f6glich. Durch Scannen einer bereits vorhandenen NVE-Nummer werden alle Daten f\u00fcr einen Colli gel\u00f6scht und neu erfasst. Durch Scannen einer bereits vorhanden Auftrags-, Lieferschein- oder Rechnungsnummer werden s\u00e4mtliche Daten aller zugeh\u00f6rigen Collis gel\u00f6scht und neu erfasst. Wiederholungen m\u00fcssen in einem separaten Bild quittiert werden.</p><p><br>Zu jedem beliebigen Zeitpunkt, mindestens jedoch einmal t\u00e4glich nach Arbeitsende, sollte eine Men\u00fcfunktion aufgerufen werden, die die EDI-Nachrichtenart DESADV (Lieferavis) f\u00fcr alle noch nicht avisierten Sendungen generiert und f\u00fcr den Versand an die Warenbesteller bzw. Warenempf\u00e4nger einem EDI-Konverter zur Verf\u00fcgung stellt. Hierbei sind durch die Nachrichtenart DESADV/D96.A alle technischen Gegebenheiten festgelegt. Im Bedarfsfall werden die besonderen W\u00fcnsche von einzelnen Partnern bzw. Empf\u00e4ngern ber\u00fccksichtigt.</p>"
+							},
+							"image": null,
+							"textImageOrientation": "OnlyText",
+							"downloadLabel": null,
+							"assetPicker": null,
+							"textAndImages": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"__typename": "BlogPost",
+			"id": "ckylo71zsuw9w0b53eajk765b",
+			"slug": "schoner-blog-post",
+			"teaserHeadline": "Blog Post Headline",
+			"teaserSubheadline": "Teaser Subheadline",
+			"teaserText": "Teaser Text ",
+			"heroBackgroundImage": {
+				"url": "https://media.graphassets.com/JXSQxfRQRlGhE38aYiVC"
+			},
+			"modules": [
+				{
+					"__typename": "Text",
+					"id": "ckyloijkov4ey0c036hsu3mfz",
+					"heading1": "Ich bin ein Text von einem Blog Post",
+					"heading2": "Heading 2 Blogpost",
+					"heading3": "Heading 3 Blogpost Lorem ipsum",
+					"link": null,
+					"paddingTop": "Medium",
+					"paddingBottom": "Small",
+					"text": {
+						"html": "<p>..dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>"
+					}
+				},
+				{
+					"__typename": "Divider",
+					"id": "ckxes7nog1c410c03wktolsgm",
+					"padding": "Small"
+				},
+				{
+					"__typename": "Text",
+					"id": "ckysxn8q8s7un0a07xpyabrcp",
+					"heading1": null,
+					"heading2": null,
+					"heading3": null,
+					"link": null,
+					"paddingTop": "Small",
+					"paddingBottom": "Large",
+					"text": {
+						"html": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>"
+					}
+				}
+			]
+		}
+	]
+}

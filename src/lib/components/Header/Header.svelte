@@ -8,9 +8,9 @@
 	import ProductMenu from '$lib/components/Drawer/ProductMenu.svelte';
 	import CompanyMenu from '$lib/components/Drawer/CompanyMenu.svelte';
 	import ServiceMenu from '$lib/components/Drawer/ServiceMenu.svelte';
-	import { ALGOLIA_APP_ID, ALGOLIA_SEARCH_KEY } from '$lib/env'
-	import PokemonHit from '$lib/components/PokemonHit/PokemonHit.svelte';
-	import Search from '$lib/components/Search/Search.svelte'
+	import { ALGOLIA_APP_ID, ALGOLIA_SEARCH_KEY } from '$lib/env';
+	import SearchResult from '$lib/components/SearchResult/SearchResult.svelte';
+	import Search from '$lib/components/Search/Search.svelte';
 	import MobileDrawer from '$lib/components/Drawer/Mobile/MobileDrawer.svelte';
 
 	const appId = ALGOLIA_APP_ID;
@@ -46,7 +46,7 @@
 				<Search
 					{appId}
 					{searchKey}
-					indices={{ Pokedex: PokemonHit }}
+					indices={{ rhenania: SearchResult }}
 					on:focus={() => (searchEverFocused = true)}
 					placeholder="Search Pokedex"
 				/>
