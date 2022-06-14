@@ -86,7 +86,7 @@
 	</button>
 
 	{#if query}
-		<div class="results p-2 max-w-md shadow-md">
+		<div class="results p-4 max-w-md shadow-md">
 			{#await promise}
 				<p>{loadingStr}</p>
 			{:then allHits}
