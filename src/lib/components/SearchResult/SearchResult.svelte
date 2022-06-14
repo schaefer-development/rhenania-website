@@ -4,7 +4,7 @@
 	export let hit;
 </script>
 
-<div class="relative pb-1 ">
+<div class="relative pb-3 ">
 	<p>{@html hit.description}</p>
 	<div class="flex hyperlink pt-1">
 		<div class="relative flex-none text-rc_red font-bold pr-1 searchHit">

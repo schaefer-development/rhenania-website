@@ -97,7 +97,7 @@
 								{#each hits as hit (hit.objectID)}
 									<svelte:component this={_indices[idxName]} {hit} />
 
-									<hr class="mt-1 last:hidden" />
+									<hr class="mt-2 last:hidden" />
 								{/each}
 							</section>
 						{/if}
