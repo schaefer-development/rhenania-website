@@ -42,7 +42,8 @@ if (dev === false && appId && apiKey) {
 				'modules.accordionItems.content.html',
 				'modules.cards.headline',
 				'modules.cards.subheadline'
-			]
+			],
+			attributesToSnippet: ['*:80']
 		}
 	};
 	indexAlgolia(algoliaConfig);

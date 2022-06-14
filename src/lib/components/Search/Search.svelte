@@ -29,27 +29,12 @@
 
 	onMount(() => (client = algoliasearch(appId, searchKey)));
 
-	function processHits(hits: SearchHit[]) {
-		return hits.map((hit) => {
-			for (const [key, val] of Object.entries(hit)) {
-				if (key.endsWith(`Orig`)) continue;
-				const processedVal =
-					hit?._snippetResult?.[key]?.value || hit?._highlightResult?.[key]?.value;
-				if (processedVal) {
-					hit[`${key}Orig`] = val;
-					hit[key] = processedVal;
-				}
-			}
-			return hit;
-		});
-	}
-
 	async function search() {
 		const { results } = await client.search(
 			Object.keys(_indices).map((indexName) => ({ indexName, query }))
 		);
 
-		return results.map(({ hits, index }) => ({ hits: processHits(hits), index }));
+		return results;
 	}
 </script>
 

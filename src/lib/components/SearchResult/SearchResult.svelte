@@ -2,10 +2,11 @@
 	import { linkTo } from '$lib/helpers';
 
 	export let hit;
+	const { _snippetResult: snippet } = hit;
 </script>
 
 <div class="relative pb-3 ">
-	<p>{@html hit.description}</p>
+	<p>{@html snippet.description.value}</p>
 	<div class="flex hyperlink pt-1">
 		<div class="relative flex-none text-rc_red font-bold pr-1 searchHit">
 			<a
@@ -16,7 +17,7 @@
 					: $linkTo(`/${hit.slug}`)}
 			>
 				<span class="align-middle pr-2">
-					{@html hit.slug}
+					{@html hit.title}
 				</span>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
