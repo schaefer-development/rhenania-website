@@ -43,7 +43,7 @@ if (dev === false && appId && apiKey) {
 				'modules.cards.headline',
 				'modules.cards.subheadline'
 			],
-			attributesToSnippet: ['*:80']
+			attributesToSnippet: ['*:25']
 		}
 	};
 	indexAlgolia(algoliaConfig);
