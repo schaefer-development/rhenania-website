@@ -1,12 +1,29 @@
-<script>
+<script lang="ts">
 	import { linkTo } from '$lib/helpers';
+
+	function eachRecursive(obj, highlights = []) {
+		const localHighlights = [...highlights];
+		for (var k in obj) {
+			const { value, matchLevel } = obj[k];
+			if (value && matchLevel && matchLevel !== 'none') {
+				localHighlights.push(value);
+			}
+			if (typeof obj[k] == 'object' && obj[k] !== null) {
+				localHighlights.push(...eachRecursive(obj[k], highlights));
+			}
+		}
+		return localHighlights;
+	}
 
 	export let hit;
 	const { _snippetResult: snippet } = hit;
+	const highlights: string[] = eachRecursive(snippet);
 </script>
 
 <div class="relative pb-3 ">
-	<p>{@html snippet.description.value}</p>
+	{#each highlights as highlight, i (i)}
+		<p class="pb-4">{@html highlight}</p>
+	{/each}
 	<div class="flex hyperlink pt-1">
 		<div class="relative flex-none text-rc_red font-bold pr-1 searchHit">
 			<a
