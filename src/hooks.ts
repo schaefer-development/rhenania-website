@@ -20,7 +20,7 @@ const appId = ALGOLIA_APP_ID;
 const apiKey = ALGOLIA_ADMIN_KEY;
 
 // only update Algolia indices if required env vars are defined
-if (dev === false && appId && apiKey) {
+if (false && appId && apiKey) {
 	// update Algolia search indices on production builds
 	const algoliaConfig = {
 		appId,
