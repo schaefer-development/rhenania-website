@@ -4,7 +4,7 @@
 	export let hit;
 </script>
 
-<div class="py-2 ">
+<div class="relative pb-1 ">
 	<p>{@html hit.description}</p>
 	<div class="flex hyperlink pt-1">
 		<div class="relative flex-none text-rc_red font-bold pr-1 searchHit">
@@ -35,11 +35,10 @@
 			</a>
 		</div>
 	</div>
-	<hr class="mt-4" />
 </div>
 
 <style>
-	/* highlights text matching the search string */
+	/* highlights text matching the search string   */
 	:global(em) {
 		color: #ea3336;
 		font-weight: bold;

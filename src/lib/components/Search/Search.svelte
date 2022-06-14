@@ -53,9 +53,7 @@
 	}
 </script>
 
-<aside
-	class="svelte-algolia input-group relative flex items-stretch w-full max-w-md justify-end pl-4"
->
+<aside class="svelte-algolia input-group relative flex items-stretch w-full max-w-sm justify-end">
 	<input
 		type="text"
 		bind:this={input}
@@ -88,7 +86,7 @@
 	</button>
 
 	{#if query}
-		<div class="results p-4 shadow-md border border-black">
+		<div class="results p-2 max-w-md shadow-md">
 			{#await promise}
 				<p>{loadingStr}</p>
 			{:then allHits}
@@ -98,6 +96,8 @@
 							<section class="w-full max-w-md">
 								{#each hits as hit (hit.objectID)}
 									<svelte:component this={_indices[idxName]} {hit} />
+
+									<hr class="mt-1 last:hidden" />
 								{/each}
 							</section>
 						{/if}
@@ -111,7 +111,6 @@
 <style>
 	button {
 		align-items: center;
-		grid-area: search;
 	}
 
 	input::placeholder {
@@ -119,15 +118,11 @@
 	}
 
 	div.results {
-		max-width: 27rem;
-		width: calc(100% - 8em);
 		background-color: var(--hitsBgColor, white);
-
 		z-index: 1;
-		top: 40px;
-		max-height: 60vh;
+		top: 2.8em;
+		max-height: 62vh;
 		position: absolute;
-		width: max-content;
 		overflow: auto;
 		right: 0;
 		overscroll-behavior: none;
