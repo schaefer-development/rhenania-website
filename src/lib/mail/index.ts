@@ -1,3 +1,4 @@
+import { SMTP_EMAIL_FROM } from '$lib/env';
 export type Email = {
 	firma?: string;
 	name: string;
@@ -33,6 +34,7 @@ const text = (email: Email) => html(email).replace(/(<([^>]+)>)/gi, '');
 export default function contactRequest(email: Email) {
 	return {
 		...defaults,
+		from: SMTP_EMAIL_FROM,
 		subject: 'Kontaktanfrage',
 		to: email.emailAdresse,
 		text: text(email),
