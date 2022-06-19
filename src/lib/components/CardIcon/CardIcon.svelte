@@ -13,8 +13,11 @@
 				class="cardIcon h-48 bg-red flex items-center justify-center"
 				style="background-color:{card.backgroundColor.hex}"
 			>
-				<img src={card.icon.url} alt="Rhenania Icon" />
+				{#if card?.icon?.url}
+					<img src={card.icon.url} alt="Rhenania Icon" />
+				{/if}
 			</div>
+
 			<div class="text px-6 py-6 flex flex-col text-center">
 				<div class="rc_h3 text-rc_darkblue mb-2">{card.headline}</div>
 				{#if card.subheadline}
@@ -46,7 +49,9 @@
 			class="cardIcon h-48 bg-red flex items-center justify-center"
 			style="background-color:{card.backgroundColor.hex}"
 		>
-			<img src={card.icon.url} alt="Rhenania Icon" />
+			{#if card?.icon?.url}
+				<img src={card.icon.url} alt="Rhenania Icon" />
+			{/if}
 		</div>
 		<div class="text px-6 py-6 flex flex-col text-center">
 			<div class="rc_h3 text-rc_darkblue mb-2">{card.headline}</div>
