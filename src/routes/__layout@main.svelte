@@ -38,6 +38,15 @@
 	import { navigating } from '$app/stores';
 	import { page } from '$app/stores';
 
+	import { afterNavigate, beforeNavigate } from '$app/navigation';
+
+	beforeNavigate(() => {
+		document.documentElement.style.scrollBehavior = 'auto';
+	});
+	afterNavigate(() => {
+		document.documentElement.style.scrollBehavior = '';
+	});
+
 	let openMenuFull = false;
 	const toggleMenuFull = () => {
 		openMenuFull = !openMenuFull;
