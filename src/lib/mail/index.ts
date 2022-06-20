@@ -35,7 +35,7 @@ export default function contactRequest(email: Email) {
 	return {
 		...defaults,
 		from: SMTP_EMAIL_FROM,
-		subject: 'Kontaktanfrage',
+		subject: 'Nachricht via Kontaktformular',
 		to: email.emailAdresse,
 		text: text(email),
 		html: html(email)
