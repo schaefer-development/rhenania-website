@@ -64,6 +64,7 @@
 <div
 	class="flex flex-col min-h-screen justify-between bg-gray-50"
 	class:rc_menuIsOpen={openMenuFull}
+	id="top"
 >
 	<Header {toggleMenuFull} {openMenuFull} />
 	{#if $navigating}
