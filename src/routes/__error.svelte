@@ -29,7 +29,6 @@
 				<a
 					href="/"
 					class="flex w-full text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-					target="_blank"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
