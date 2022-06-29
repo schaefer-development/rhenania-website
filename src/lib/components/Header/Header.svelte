@@ -17,10 +17,8 @@
 	const searchKey = ALGOLIA_SEARCH_KEY;
 	let searchEverFocused = false;
 
-	let openMenu: string | null = null;
-	const toggleMenu = (menu: string) => {
-		openMenu = openMenu === menu ? null : menu;
-	};
+	export let openMenu: string | null;
+	export let toggleMenu: (menu: string) => void;
 
 	export let openMenuFull: boolean;
 	export let toggleMenuFull: () => void;
