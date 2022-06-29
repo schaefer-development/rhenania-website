@@ -45,9 +45,15 @@
 	});
 	afterNavigate(() => {
 		document.documentElement.style.scrollBehavior = '';
+		openMenu = null;
 	});
 
 	let openMenuFull = false;
+	let openMenu = null;
+
+	const toggleMenu = (menu: string) => {
+		openMenu = openMenu === menu ? null : menu;
+	};
 	const toggleMenuFull = () => {
 		openMenuFull = !openMenuFull;
 	};
@@ -66,7 +72,7 @@
 	class:rc_menuIsOpen={openMenuFull}
 	id="top"
 >
-	<Header {toggleMenuFull} {openMenuFull} />
+	<Header {toggleMenuFull} {openMenuFull} {openMenu} {toggleMenu} />
 	{#if $navigating}
 		<LoadingIndicator />
 	{:else}
