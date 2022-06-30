@@ -13,7 +13,9 @@
 	</h1>
 
 	<h2 class="rc_h2 text-black py-2">Suchergebnisse:</h2>
-	{#each results as result (result.item.id)}
-		<SearchResult {result} />
+	{#each results as hit (hit.objectID)}
+		<SearchResult {hit} />
+
+		<hr class="mt-2 last:hidden" />
 	{/each}
 </div>

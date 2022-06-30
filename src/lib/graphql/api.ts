@@ -3,10 +3,12 @@ import { GRAPHCMS_ENDPOINT } from '$lib/env';
 import { fallbackLocale } from '$lib/i18n';
 
 type Api = (query: string, variables?: Record<string, unknown>) => RequestHandler;
+interface HasParams extends Pick<Parameters<RequestHandler>[0], 'params'> {}
+
 type GraphQlRequest = (
 	query: string,
 	variables?: Record<string, unknown>
-) => (event: Parameters<RequestHandler>[0]) => Promise<Response>;
+) => (event: HasParams) => Promise<Response>;
 
 export const graphQlRequest: GraphQlRequest = (query, variables) => async (event) => {
 	const { lang: requestedLocale } = event.params;
