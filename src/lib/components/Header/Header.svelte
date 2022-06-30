@@ -48,15 +48,15 @@
 						type="search"
 						name="query"
 						value={(!prerendering && $page.url.searchParams.get('q')) ?? ''}
-						class="form-control relative flex-auto min-w-0 block w-full max-w-sm px-3 py-2 font-normal bg-white bg-clip-padding peer border-y border-l border-gray-400 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none"
+						class="form-control relative flex-auto min-w-0 block w-full max-w-sm px-3 py-2 font-normal bg-white bg-clip-padding peer border-y border-l border-gray-400 rounded-none transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none"
 						placeholder="Suchen"
 						aria-label="Search"
 						aria-describedby="button-addon"
 					/>
 					<button
-						class="btn inline-block px-2 sm:px-4 py-2.5 text-black font-medium border-y border-r  text-xs leading-tight border-gray-400 peer-focus:border-black uppercase peer-focus:text-rc_red hover:text-rc_red focus:text-rc_red focus:outline-none focus:ring-0 active:text-rc_red transition duration-150 ease-in-out flex items-center"
-						type="button"
+						class="btn inline-block px-2 sm:px-4 py-2.5 text-black font-medium border-y border-r rounded-none text-xs leading-tight border-gray-400 peer-focus:border-black uppercase peer-focus:text-rc_red hover:text-rc_red focus:text-rc_red focus:outline-none focus:ring-0 active:text-rc_red transition duration-150 ease-in-out flex items-center"
 						id="button-addon"
+						type="submit"
 					>
 						<svg
 							aria-hidden="true"
