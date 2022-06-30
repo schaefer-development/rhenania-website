@@ -58,7 +58,8 @@
 <style>
 	/* highlights text matching the search string   */
 	:global(em) {
-		color: #ea3336;
+		background-color: #ea3336;
+		color: #fff;
 		font-weight: bold;
 		font-style: normal;
 	}
