@@ -1,11 +1,8 @@
 import type { GetSession } from '@sveltejs/kit';
 import { localeCodes, fallbackLocale } from '$lib/i18n';
 import acceptLanguage from 'accept-language';
-
 import { dev } from '$app/env';
-import { ALGOLIA_APP_ID, ALGOLIA_ADMIN_KEY } from '$lib/env';
-import rhenania from './rhenania.json';
-import { indexAlgolia } from 'svelte-algolia/server-side';
+import { updateIndex } from './searchindex';
 
 acceptLanguage.languages(localeCodes);
 
@@ -16,35 +13,13 @@ export const getSession: GetSession = (_event) => {
 	return { lang };
 };
 
-const appId = ALGOLIA_APP_ID;
-const apiKey = ALGOLIA_ADMIN_KEY;
-
-// only update Algolia indices if required env vars are defined
-if (false && appId && apiKey) {
-	// update Algolia search indices on production builds
-	const algoliaConfig = {
-		appId,
-		apiKey,
-		indices: [{ name: `rhenania`, getData: () => rhenania.results }],
-		settings: {
-			searchableAttributes: [
-				'title',
-				'description',
-				'teaserHeadline',
-				'teaserSubheadline',
-				'teaserText',
-				'modules.headline',
-				'modules.heading1',
-				'modules.heading2',
-				'modules.heading3',
-				'modules.text.html',
-				'modules.accordionItems.headline',
-				'modules.accordionItems.content.html',
-				'modules.cards.headline',
-				'modules.cards.subheadline'
-			],
-			attributesToSnippet: ['*:25']
-		}
-	};
-	indexAlgolia(algoliaConfig);
+if (dev === false) {
+	updateIndex()
+		.then((savedObjects) => {
+			console.log('Successfully updated search index.', savedObjects);
+		})
+		.catch((error) => {
+			console.error(error.message);
+			process.exit(1);
+		});
 }
