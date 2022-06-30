@@ -17,56 +17,6 @@
 			}
 		}}
 	>
-		<!--<div class="splide__arrows" slot="before-track">
-			<button type="button" aria-label="Previous slide">
-				
-				<svg
-					version="1.1"
-					xmlns="http://www.w3.org/2000/svg"
-					xmlns:xlink="http://www.w3.org/1999/xlink"
-					x="0px"
-					y="0px"
-					width="21.1px"
-					height="39.4px"
-					viewBox="0 0 21.1 39.4"
-					style="overflow:visible;enable-background:new 0 0 21.1 39.4;"
-					xml:space="preserve"
-				>
-					<style type="text/css">
-						.arrow {
-							fill: #ffffff;
-						}
-					</style>
-					<defs />
-					<polygon class="arrow" points="1.4,39.4 0,38.1 18.3,19.7 0,1.4 1.4,0 21.1,19.7 " />
-				</svg>
-			</button>
-
-			<button type="button" aria-label="Next slide">
-				
-				<svg
-					version="1.1"
-					xmlns="http://www.w3.org/2000/svg"
-					xmlns:xlink="http://www.w3.org/1999/xlink"
-					x="0px"
-					y="0px"
-					width="21.1px"
-					height="39.4px"
-					viewBox="0 0 21.1 39.4"
-					style="overflow:visible;enable-background:new 0 0 21.1 39.4;"
-					xml:space="preserve"
-				>
-					<style type="text/css">
-						.arrow {
-							fill: #ffffff;
-						}
-					</style>
-					<defs />
-					<polygon class="arrow" points="1.4,39.4 0,38.1 18.3,19.7 0,1.4 1.4,0 21.1,19.7 " />
-				</svg>
-			</button>
-		</div>-->
-
 		{#each referenceItems as referenceItem (referenceItem.id)}
 			<SplideSlide data-splide-interval="9000">
 				<img
