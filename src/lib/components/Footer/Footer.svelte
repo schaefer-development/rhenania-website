@@ -211,12 +211,7 @@
 					>Datenschutz</a
 				>
 				<br />
-				Copyright {date}<br />
-				<a
-					href={$linkTo('/sandbox/')}
-					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-					>Sandbox</a
-				>
+				Copyright {date}
 			</p>
 		</div>
 	</div>
