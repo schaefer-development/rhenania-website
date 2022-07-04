@@ -16,7 +16,7 @@
 	}
 
 	export let hit;
-	const { _snippetResult: snippet } = hit;
+	const { _highlightResult: snippet } = hit;
 	const highlights: string[] = eachRecursive(snippet);
 </script>
 
