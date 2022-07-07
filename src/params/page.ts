@@ -21,6 +21,7 @@ const pages = [
 	'k04',
 	'karriere',
 	'lagerbestandsfuehrung',
+	'landing1',
 	'mailbenachrichtigung',
 	'onlinesupport',
 	'paketinhaltsliste',
