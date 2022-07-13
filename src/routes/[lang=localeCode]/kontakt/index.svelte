@@ -10,6 +10,7 @@
 
 	let captcha;
 	let valid = false;
+	let datapolicy = false;
 	const handleError = () => {
 		captcha.reset();
 	};
@@ -96,10 +97,25 @@
 				Alternativ können Sie uns auch gerne eine E-Mail senden.
 			</noscript>
 		</div>
+
+		<div class="mb-6 flex flex-row items-center">
+			<div>
+				<input type="checkbox" bind:checked={datapolicy} />
+			</div>
+			<div class="px-3">
+				Ich habe die <a
+					href={$linkTo('/datenschutz/')}
+					class="font-bold py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					>Datenschutzerklärung</a
+				>
+				gelesen und stimme dieser zu.
+			</div>
+		</div>
+
 		<div class="md:flex md:items-center">
 			<div class="md:w-1/3">
 				{#if browser}
-					{#if valid}
+					{#if valid && datapolicychecked}
 						<button
 							class="relative mt-4 pl-5 pr-3 py-2 bg-rc_red text-white text-sm font-bold uppercase tracking-widest hover:bg-rc_red-darker rc_button_corner"
 							type="submit">Nachricht absenden</button

@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="relative z-10 max-w-screen-lg mx-auto px-10 pt-20 pb-48 grid grid-cols-1 md:grid-cols-2 gap-4"
+	class="page_impressum relative z-10 max-w-screen-lg mx-auto px-10 pt-20 pb-48 grid grid-cols-1 md:grid-cols-2 gap-4"
 >
 	<div class="col-span-full">
 		<h1 class="rc_h1 text-rc_darkblue">Impressum</h1>
@@ -85,6 +85,31 @@
 			Videosequenzen und Texte in anderen elektronischen oder gedruckten Publikationen ist ohne
 			ausdrückliche Zustimmung des Autors nicht gestattet.
 		</p>
-		<p class="py-4">Bildquellennachweise:</p>
+		<h3 class="rc_h3 pt-8">4. Bildquellennachweise</h3>
+		<ul>
+			<li>Shutterstock 1443614867</li>
+			<li>Shutterstock 147070202</li>
+			<li>Shutterstock 1470160268</li>
+			<li>Shutterstock 1742346929</li>
+		</ul>
 	</div>
 </div>
+
+<style>
+	:global(.page_impressum ul) {
+		padding: 1.5em 0;
+		margin-left: 2em;
+	}
+
+	:global(.page_impressum ul li) {
+		list-style-type: none;
+		padding: 0.25em 1em 0.5em 0.25em;
+	}
+
+	:global(.page_impressum ul li:before) {
+		position: absolute;
+		content: '■';
+		color: rgba(42, 73, 157, 1);
+		margin-left: -2em;
+	}
+</style>
