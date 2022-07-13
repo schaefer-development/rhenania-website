@@ -115,7 +115,7 @@
 		<div class="md:flex md:items-center">
 			<div class="md:w-1/3">
 				{#if browser}
-					{#if valid && datapolicychecked}
+					{#if valid && datapolicy}
 						<button
 							class="relative mt-4 pl-5 pr-3 py-2 bg-rc_red text-white text-sm font-bold uppercase tracking-widest hover:bg-rc_red-darker rc_button_corner"
 							type="submit">Nachricht absenden</button
