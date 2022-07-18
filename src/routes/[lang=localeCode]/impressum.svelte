@@ -87,10 +87,22 @@
 		</p>
 		<h3 class="rc_h3 pt-8">4. Bildquellennachweise</h3>
 		<ul>
-			<li>Shutterstock 1443614867</li>
-			<li>Shutterstock 147070202</li>
-			<li>Shutterstock 1470160268</li>
-			<li>Shutterstock 1742346929</li>
+			<li>Shutterstock, ID: 1443614867</li>
+			<li>Shutterstock, ID: 147070202</li>
+			<li>Shutterstock, ID: 1470160268</li>
+			<li>Shutterstock, ID: 1742346929</li>
+			<li>iStock, ID: 1154059152 (sfe-co2)</li>
+			<li>iStock, ID: 1159754563 (marchmeena29)</li>
+			<li>iStock, ID: 845455818 (utah778)</li>
+			<li>Adobe Stock, ID: 232588168</li>
+			<li>Adobe Stock, ID: 44580299</li>
+			<li>Pixabay</li>
+			<li>RHEWA-WAAGENFABRIK, August Freudewald GmbH & Co. KG, Mettmann<br /></li>
+			<li>Bizerba SE & Co. KG, Bochum</li>
+			<li>Mettler-Toledo GmbH, Gießen</li>
+			<li>Toshibs TEC Germany Imaging Systems GmbH</li>
+			<li>Bild unter "Termine"<br />LogiMAT2022 und EUROEXPO GmbH</li>
+			<li>Grafik Rechenzentrum:<br />AHP Automotive Hosting Partner GmbH</li>
 		</ul>
 	</div>
 </div>
