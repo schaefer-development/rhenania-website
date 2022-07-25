@@ -9,23 +9,23 @@
 		<h1 class="rc_h1 text-rc_darkblue">Impressum</h1>
 	</div>
 	<div class="col-span-1">
-		<h3 class="rc_h3 py-2">1. Angaben gemäß §5 TMG</h3>
+		<h3 class="rc_h3 pt-6 pb-2">1. Angaben gemäß §5 TMG</h3>
 		<table class="w-full">
 			<tr>
-				<td class="w-6/12 align-top pb-2">Name und Anschrift des Unternehmens:</td>
-				<td class="w-6/12 align-top pb-2"
+				<td class="w-6/12 align-top pb-4">Name und Anschrift des Unternehmens:</td>
+				<td class="w-6/12 align-top pb-4"
 					>RC Rhenania Computer GmbH<br />Aegidiusplatz 15 b <br />53604 Bad Honnef</td
 				>
 			</tr>
 
 			<tr>
-				<td class="w-5/12 align-top pb-2">Geschäftsführer:</td>
-				<td class="w-7/12 align-top pb-2">Stefan Halbig</td>
+				<td class="w-5/12 align-top pb-4">Geschäftsführer:</td>
+				<td class="w-7/12 align-top pb-4">Stefan Halbig</td>
 			</tr>
 
 			<tr>
-				<td class="w-5/12 align-top pb-2">Kontakt:</td>
-				<td class="w-7/12 align-top pb-2">
+				<td class="w-5/12 align-top pb-4">Kontakt:</td>
+				<td class="w-7/12 align-top pb-4">
 					Telefon: 02224 - 96 00 00<br />
 					Telefax: 02224 - 960 00 96<br />
 					E-Mail:
@@ -39,22 +39,22 @@
 			</tr>
 
 			<tr>
-				<td class="w-5/12 align-top pb-2">Registergericht:</td>
-				<td class="w-7/12 align-top pb-2">Amtsgericht Siegburg</td>
+				<td class="w-5/12 align-top pb-4">Registergericht:</td>
+				<td class="w-7/12 align-top pb-4">Amtsgericht Siegburg</td>
 			</tr>
 			<tr>
-				<td class="w-5/12 align-top pb-2">Registernummer:</td>
-				<td class="w-7/12 align-top pb-2">HRB 6761</td>
+				<td class="w-5/12 align-top pb-4">Registernummer:</td>
+				<td class="w-7/12 align-top pb-4">HRB 6761</td>
 			</tr>
 
 			<tr>
-				<td class="w-5/12 align-top pb-2">Umsatzsteuer-Identifikationsnummer:</td>
-				<td class="w-7/12 align-top pb-2">DE123377354</td>
+				<td class="w-5/12 align-top pb-4">Umsatzsteuer-Identifikationsnummer:</td>
+				<td class="w-7/12 align-top pb-4">DE123377354</td>
 			</tr>
 		</table>
 	</div>
 	<div>
-		<h3 class="rc_h3 pt-2">2. Inhalt des Onlineangebotes</h3>
+		<h3 class="rc_h3 pt-6">2. Inhalt des Onlineangebotes</h3>
 		<p class="py-2">
 			Der Autor übernimmt keinerlei Gewähr für die Aktualität, Korrektheit, Vollständigkeit oder
 			Qualität der bereitgestellten Informationen. Haftungsansprüche gegen den Autor, welche sich

@@ -11,13 +11,13 @@
 </script>
 
 <div
-	class="relative z-10 max-w-screen-lg mx-auto px-10 pt-20 pb-48 grid grid-cols-1 md:grid-cols-2 gap-8"
+	class="relative z-10 max-w-screen-lg mx-auto px-10 pt-20 pb-48 grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8"
 >
 	<div class="col-span-full">
 		<h1 class="rc_h1 text-rc_darkblue">Datenschutz</h1>
-		<h3 class="rc_h3 py-2">RC Rhenania Computer GmbH</h3>
 	</div>
 	<div class="col-span-1">
+		<h3 class="rc_h3 py-2">RC Rhenania Computer GmbH</h3>
 		<p class="py-2">
 			Aegidiusplatz 15 b<br />
 			53604 Bad Honnef
