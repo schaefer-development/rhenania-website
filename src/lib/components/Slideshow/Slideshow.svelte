@@ -13,12 +13,12 @@
 			perMove: 1,
 			pagination: false,
 			autoScroll: {
-				speed: 2
+				speed: 1
 			}
 		}}
 	>
 		{#each referenceItems as referenceItem (referenceItem.id)}
-			<SplideSlide data-splide-interval="9000">
+			<SplideSlide data-splide-interval="1401">
 				<img
 					src={referenceItem.referenceLogo.url}
 					alt="Kundenlogos von Rhenania Computer GmbH"

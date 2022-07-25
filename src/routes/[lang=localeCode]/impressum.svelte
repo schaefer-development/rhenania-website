@@ -3,38 +3,58 @@
 </script>
 
 <div
-	class="page_impressum relative z-10 max-w-screen-lg mx-auto px-10 pt-20 pb-48 grid grid-cols-1 md:grid-cols-2 gap-4"
+	class="page_impressum relative z-10 max-w-screen-lg mx-auto px-10 pt-20 pb-48 grid grid-cols-1 md:grid-cols-2 gap-x-8"
 >
 	<div class="col-span-full">
 		<h1 class="rc_h1 text-rc_darkblue">Impressum</h1>
-		<h3 class="rc_h3 py-2">RC Rhenania Computer GmbH</h3>
 	</div>
 	<div class="col-span-1">
-		<p class="py-2">
-			Aegidiusplatz 15 b<br />
-			53604 Bad Honnef
-		</p>
-		<p class="py-2">
-			Telefon: 02224 - 96 00 00<br />
-			Telefax: 02224 - 960 00 96<br />
-			E-Mail:
-			<a
-				href="mailto:info@rhenania.biz"
-				alt="Eine E-Mail mit Ihrem Standard Mailprogramm schreiben"
-				class="w-full py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-				>info@rhenania.biz</a
-			>
-		</p>
-		<p class="py-2">
-			HRB: 6761 Siegburg<br />
-			UST-ID: 123377354<br />
-			Rechtsform: GmbH<br />
-			Gründungsjahr: 1990<br />
-			Geschäftsführer: Stefan Halbig
-		</p>
+		<h3 class="rc_h3 py-2">1. Angaben gemäß §5 TMG</h3>
+		<table class="w-full">
+			<tr>
+				<td class="w-6/12 align-top pb-2">Name und Anschrift des Unternehmens:</td>
+				<td class="w-6/12 align-top pb-2"
+					>RC Rhenania Computer GmbH<br />Aegidiusplatz 15 b <br />53604 Bad Honnef</td
+				>
+			</tr>
+
+			<tr>
+				<td class="w-5/12 align-top pb-2">Geschäftsführer:</td>
+				<td class="w-7/12 align-top pb-2">Stefan Halbig</td>
+			</tr>
+
+			<tr>
+				<td class="w-5/12 align-top pb-2">Kontakt:</td>
+				<td class="w-7/12 align-top pb-2">
+					Telefon: 02224 - 96 00 00<br />
+					Telefax: 02224 - 960 00 96<br />
+					E-Mail:
+					<a
+						href="mailto:info@rhenania.biz"
+						alt="Eine E-Mail mit Ihrem Standard Mailprogramm schreiben"
+						class="w-full py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+						>info@rhenania.biz</a
+					></td
+				>
+			</tr>
+
+			<tr>
+				<td class="w-5/12 align-top pb-2">Registergericht:</td>
+				<td class="w-7/12 align-top pb-2">Amtsgericht Siegburg</td>
+			</tr>
+			<tr>
+				<td class="w-5/12 align-top pb-2">Registernummer:</td>
+				<td class="w-7/12 align-top pb-2">HRB 6761</td>
+			</tr>
+
+			<tr>
+				<td class="w-5/12 align-top pb-2">Umsatzsteuer-Identifikationsnummer:</td>
+				<td class="w-7/12 align-top pb-2">DE123377354</td>
+			</tr>
+		</table>
 	</div>
 	<div>
-		<h3 class="rc_h3 pt-2">1. Inhalt des Onlineangebotes</h3>
+		<h3 class="rc_h3 pt-2">2. Inhalt des Onlineangebotes</h3>
 		<p class="py-2">
 			Der Autor übernimmt keinerlei Gewähr für die Aktualität, Korrektheit, Vollständigkeit oder
 			Qualität der bereitgestellten Informationen. Haftungsansprüche gegen den Autor, welche sich
@@ -46,7 +66,7 @@
 			Seiten oder das gesamte Angebot ohne gesonderte Ankündigung zu verändern, zu ergänzen, zu
 			löschen oder die Veröffentlichung zeitweise oder endgültig einzustellen.
 		</p>
-		<h3 class="rc_h3 pt-8">2. Verweise und Links</h3>
+		<h3 class="rc_h3 pt-8">3. Verweise und Links</h3>
 		<p class="py-2">
 			Bei direkten oder indirekten Verweisen auf fremde Webseiten ("Hyperlinks"), die außerhalb des
 			Verantwortungsbereiches des Autors liegen, würde eine Haftungsverpflichtung ausschließlich in
@@ -65,7 +85,7 @@
 			Informationen entstehen, haftet allein der Anbieter der Seite, auf welche verwiesen wurde,
 			nicht derjenige, der über Links auf die jeweilige Veröffentlichung lediglich verweist.
 		</p>
-		<h3 class="rc_h3 pt-8">3. Urheber- und Kennzeichenrecht</h3>
+		<h3 class="rc_h3 pt-8">4. Urheber- und Kennzeichenrecht</h3>
 		<p class="py-2">
 			Der Autor ist bestrebt, in allen Publikationen die Urheberrechte der verwendeten Grafiken,
 			Tondokumente, Videosequenzen und Texte zu beachten, von ihm selbst erstellte Grafiken,
@@ -85,7 +105,8 @@
 			Videosequenzen und Texte in anderen elektronischen oder gedruckten Publikationen ist ohne
 			ausdrückliche Zustimmung des Autors nicht gestattet.
 		</p>
-		<h3 class="rc_h3 pt-8">4. Bildquellennachweise</h3>
+
+		<p class="py-2">Bildquellennachweise:</p>
 		<ul>
 			<li>Adobe Stock, ID: 232588168</li>
 			<li>Adobe Stock, ID: 44580299</li>
@@ -103,14 +124,20 @@
 			<li>Shutterstock, ID: 147070202</li>
 			<li>Shutterstock, ID: 1470160268</li>
 			<li>Shutterstock, ID: 1742346929</li>
-			<li>Toshiba TEC Germany Imaging Systems GmbH, Neuss</li>
+			<li>Toshiba TEC Germany Imaging Systems GmbH, Neuss.</li>
 		</ul>
+		<h3 class="rc_h3 pt-8">5. Rechtswirksamkeit dieses Haftungsausschlusses</h3>
+		<p class="py-2">
+			Dieser Haftungsausschluss ist als Teil des Internetangebotes zu betrachten, von dem aus auf
+			diese Seite verwiesen wurde. Sofern Teile oder einzelne Formulierungen dieses Textes der
+			geltenden Rechtslage nicht, nicht mehr oder nicht vollständig entsprechen sollten, bleiben die
+			übrigen Teile des Dokumentes in ihrem Inhalt und ihrer Gültigkeit davon unberührt.
+		</p>
 	</div>
 </div>
 
 <style>
 	:global(.page_impressum ul) {
-		padding: 1.5em 0;
 		margin-left: 2em;
 	}
 
