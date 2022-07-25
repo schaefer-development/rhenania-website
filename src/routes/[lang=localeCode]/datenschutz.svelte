@@ -11,7 +11,7 @@
 </script>
 
 <div
-	class="relative z-10 max-w-screen-lg mx-auto px-10 pt-20 pb-48 grid grid-cols-1 md:grid-cols-2 gap-4"
+	class="relative z-10 max-w-screen-lg mx-auto px-10 pt-20 pb-48 grid grid-cols-1 md:grid-cols-2 gap-8"
 >
 	<div class="col-span-full">
 		<h1 class="rc_h1 text-rc_darkblue">Datenschutz</h1>
