@@ -22,10 +22,10 @@
 
 <div class="relative pb-3 ">
 	{#each highlights as highlight, i (i)}
-		<p class="pb-4">{@html highlight}</p>
+		<p class="pb-4 font-normal text-black">{@html highlight}</p>
 	{/each}
 	<div class="flex hyperlink pt-1">
-		<div class="relative flex-none text-rc_red font-bold pr-1 searchHit">
+		<div class="relative flex-none pr-1 searchHit">
 			<a
 				sveltekit:prefetch
 				class="flex"

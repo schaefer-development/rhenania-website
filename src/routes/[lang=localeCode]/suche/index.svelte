@@ -50,14 +50,16 @@
 </div>
 
 <div class="relative z-10 max-w-screen-lg mx-auto px-10 pt-12 pb-24 text-rc_red font-bold">
-	<h1 class="rc_h1 text-rc_darkblue pb-8">
-		Suchanfrage:<br />"{$page.url.searchParams.get('q') ?? ''}"
-	</h1>
+	<h1 class="rc_h2 text-black py-2">Suchanfrage:</h1>
+
+	<h2 class="rc_h1 text-rc_darkblue pb-12">
+		{$page.url.searchParams.get('q') ?? ''}
+	</h2>
 
 	<h2 class="rc_h2 text-black py-2">Suchergebnisse:</h2>
 	{#each results as hit (hit.objectID)}
 		<SearchResult {hit} />
 
-		<hr class="mt-2 last:hidden" />
+		<hr class="mt-3 mb-2 last:hidden" />
 	{/each}
 </div>
