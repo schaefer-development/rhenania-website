@@ -37,6 +37,7 @@
 	import LoadingIndicator from '$lib/components/LoadingIndicator/LoadingIndicator.svelte';
 	import { navigating } from '$app/stores';
 	import { page } from '$app/stores';
+	import { TRACKING_CODE } from '$lib/env';
 
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
 
@@ -65,6 +66,7 @@
 <svelte:head>
 	<title>{$page.stuff['title'] ?? 'Rhenania Computer'}</title>
 	<meta name="description" content={$page.stuff['description'] ?? ''} />
+	{@html TRACKING_CODE}
 </svelte:head>
 
 <div
