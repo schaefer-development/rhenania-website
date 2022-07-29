@@ -9,3 +9,4 @@ export const HCAPTCHA_SECRET = import.meta.env.VITE_HCAPTCHA_SECRET as string;
 export const ALGOLIA_SEARCH_KEY = import.meta.env.VITE_ALGOLIA_SEARCH_KEY as string;
 export const ALGOLIA_ADMIN_KEY = import.meta.env.VITE_ALGOLIA_ADMIN_KEY as string;
 export const ALGOLIA_APP_ID = import.meta.env.VITE_ALGOLIA_APP_ID as string;
+export const TRACKING_CODE = import.meta.env.VITE_TRACKING_CODE as string;
