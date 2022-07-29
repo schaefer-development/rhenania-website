@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { linkTo } from '$lib/helpers';
+	import SearchIcon from './SearchIcon.svelte';
 
 	function eachRecursive(obj, highlights = []) {
 		const localHighlights = [...highlights];
@@ -26,31 +27,21 @@
 	{/each}
 	<div class="flex hyperlink pt-1">
 		<div class="relative flex-none pr-1 searchHit">
-			<a
-				sveltekit:prefetch
-				class="flex"
-				href={hit.__typename === 'BlogPost'
-					? $linkTo(`/blog/${hit.slug}`)
-					: $linkTo(`/${hit.slug}`)}
-			>
-				<span class="align-middle pr-2">
-					{@html hit.title}
-				</span>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-6 w-6"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M17 8l4 4m0 0l-4 4m4-4H3"
-					/>
-				</svg>
-			</a>
+			{#if hit.__typename === 'BlogPost'}
+				<a sveltekit:prefetch class="flex" href={$linkTo(`/blog/${hit.slug}`)}>
+					<span class="align-middle pr-2">
+						{@html hit.teaserHeadline}
+					</span>
+					<SearchIcon />
+				</a>
+			{:else}
+				<a sveltekit:prefetch class="flex" href={$linkTo(`/${hit.slug}`)}>
+					<span class="align-middle pr-2">
+						{@html hit.title}
+					</span>
+					<SearchIcon />
+				</a>
+			{/if}
 		</div>
 	</div>
 </div>
