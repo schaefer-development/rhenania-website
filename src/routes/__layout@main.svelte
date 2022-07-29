@@ -66,7 +66,7 @@
 <svelte:head>
 	<title>{$page.stuff['title'] ?? 'Rhenania Computer'}</title>
 	<meta name="description" content={$page.stuff['description'] ?? ''} />
-	{@html TRACKING_CODE}
+	{@html TRACKING_CODE ?? ''}
 </svelte:head>
 
 <div
