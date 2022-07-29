@@ -27,7 +27,7 @@
 		</div>
 		<div class="w-full md:w-10/12 break-words p-2">
 			Für optimale Suchergebnisse empfehlen wir einzelne, präzise Suchbegriffe einzugeben und auf
-			substantivische Zusammensetzungen zu verzichten.
+			substantivische Zusammensetzungen ("Schlangenwörter") zu verzichten.
 		</div>
 	</div>
 </div>
