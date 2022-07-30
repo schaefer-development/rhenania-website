@@ -6,6 +6,7 @@ const pages = [
 	'barcodescanner',
 	'beipacken',
 	'cloudloesung',
+	'datenschutz',
 	'desadv',
 	'download',
 	'duv',
@@ -18,6 +19,7 @@ const pages = [
 	'gelangensnachweis',
 	'gutschriftsanzeigeverfahren',
 	'hardware',
+	'impressum',
 	'k04',
 	'karriere',
 	'lagerbestandsfuehrung',
@@ -34,6 +36,7 @@ const pages = [
 	'support',
 	'termine',
 	'u12',
+	'ueberuns',
 	'verladekontrolle',
 	'vka',
 	'waagen'
