@@ -26,7 +26,7 @@
 			</svg>
 		</div>
 		<div class="w-full md:w-10/12 break-words p-2">
-			Für optimale Suchergebnisse empfehlen wir einzelne, präzise Suchbegriffe einzugeben und auf
+			Für optimale Suchergebnisse empfehlen, wir einzelne, präzise Suchbegriffe einzugeben und auf
 			substantivische Zusammensetzungen ("Schlangenwörter") zu verzichten.
 		</div>
 	</div>
