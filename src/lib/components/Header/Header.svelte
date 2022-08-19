@@ -47,7 +47,7 @@
 					<input
 						type="search"
 						name="query"
-						value={(!prerendering && $page.url.searchParams.get('q')) ?? ''}
+						value={(!prerendering && $page.url.searchParams.get('q')) || ''}
 						class="form-control relative flex-auto min-w-0 block w-full max-w-sm px-3 py-2 font-normal bg-white bg-clip-padding peer border-y border-l border-gray-400 rounded-none transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none"
 						placeholder="Suchen"
 						aria-label="Search"
