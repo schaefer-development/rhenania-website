@@ -6,6 +6,7 @@
 </script>
 
 <svelte:window bind:scrollY={y} />
+
 <div class="mod_heroImage relative">
 	<div class="w-full h-30v mb-24 overflow-hidden">
 		<div
@@ -21,7 +22,11 @@
 	<div class="absolute -bottom-3 w-full h-4" style="background-color:{module.strokeColor.hex}" />
 	<div class="absolute -bottom-20 w-full h-36">
 		<div class="max-w-screen-lg mx-auto h-full px-10">
-			<img src={module.icon.url} alt="Rhenania Icon" class="w-36 h-36" />
+			{#if module?.icon?.url}
+				<img src={module.icon.url} alt="Rhenania Icon" class="w-36 h-36" />
+			{:else}
+				<!-- -->
+			{/if}
 		</div>
 	</div>
 </div>
