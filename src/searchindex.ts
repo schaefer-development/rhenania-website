@@ -37,9 +37,8 @@ export const updateIndex = async () => {
 			],
 			attributesToSnippet: ['*:25']
 		};
-		await index.clearObjects();
 		const { taskID } = await index.setSettings(settings);
 		await index.waitTask(taskID);
-		return index.saveObjects(documents).wait();
+		return index.replaceAllObjects(documents).wait();
 	}
 };
