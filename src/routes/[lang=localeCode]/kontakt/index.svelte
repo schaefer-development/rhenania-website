@@ -20,7 +20,12 @@
 </script>
 
 <div class="contact_form col-span-2">
-	<h1 class="rc_h1 text-rc_darkblue">Nutzen Sie das Kontaktformular</h1>
+	<h1 class="rc_h1 text-rc_darkblue">Nutzen Sie das folgende Kontaktformular</h1>
+	<p class="py-2">
+		oder kontaktieren Sie uns direkt über <a class="hyperlink" href="mailto:info@rhenania.biz"
+			>info@rhenania.biz</a
+		>
+	</p>
 	<!-- contact form-->
 	<form class="w-full pt-12" action={$linkTo(`/kontakt.json`)} method="post">
 		<div class="flex flex-wrap -mx-3 mb-6">
@@ -134,3 +139,36 @@
 	</form>
 	<!-- -->
 </div>
+
+<style>
+	:global(.contact_form a) {
+		position: relative;
+		display: inline-block;
+		font-weight: bold;
+		color: #ea3336;
+	}
+
+	:global(.contact_form a::after) {
+		background-color: #ea3336;
+		bottom: -7px;
+		content: '';
+		display: block;
+		height: 4px;
+		position: absolute;
+		width: 0%;
+		transition: all;
+		transition-duration: 0.25s;
+	}
+
+	:global(.contact_form a:hover::after) {
+		background-color: #ea3336;
+		bottom: -7px;
+		content: '';
+		display: block;
+		height: 4px;
+		position: absolute;
+		width: 100%;
+		transition: all;
+		transition-duration: 0.25s;
+	}
+</style>
