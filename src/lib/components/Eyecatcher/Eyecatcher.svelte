@@ -24,8 +24,8 @@
 			</div>
 			<div class="col-span-full md:col-span-3">
 				<div class="self-center pt-10 pb-5">
-					<h1 class="text-white rc_h1">{module.headline}</h1>
-					<h2 class="text-rc_skyblue rc_h3 pb-4">{module.subheadline}</h2>
+					<h2 class="text-white rc_h1">{module.headline}</h2>
+					<h3 class="text-rc_skyblue rc_h3 pb-4">{module.subheadline}</h3>
 					<div class="block bg-rc_darkblue-darkest h-0.5 my-4" />
 				</div>
 				<a
