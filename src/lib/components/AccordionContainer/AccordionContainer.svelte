@@ -10,7 +10,7 @@
 	<div class="relative bg-white py-12 shadow-md">
 		<div class="relative z-10 max-w-screen-lg mx-auto px-10 ">
 			<div class="accordionHeader pb-8">
-				<h1 class="rc_h1 text-rc_darkblue">{module.headline}</h1>
+				<h2 class="rc_h1 text-rc_darkblue">{module.headline}</h2>
 				{#if module.introOptional}
 					<p class="py-6">
 						{@html module.introOptional.html}

@@ -20,7 +20,7 @@
 </script>
 
 <div class="contact_form col-span-2">
-	<h1 class="rc_h1 text-rc_darkblue">Nutzen Sie das folgende Kontaktformular</h1>
+	<h2 class="rc_h1 text-rc_darkblue">Nutzen Sie das folgende Kontaktformular</h2>
 	<p class="py-2">
 		oder kontaktieren Sie uns direkt über <a class="hyperlink" href="mailto:info@rhenania.biz"
 			>info@rhenania.biz</a
