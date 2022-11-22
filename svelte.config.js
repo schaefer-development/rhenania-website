@@ -12,7 +12,7 @@ const config = {
 		prerender: {
 			default: true,
 			crawl: true,
-			entries: ['*', '/en', '/de']
+			entries: ['*', '/de']
 		}
 	}
 };
