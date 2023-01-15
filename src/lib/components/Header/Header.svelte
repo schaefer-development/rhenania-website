@@ -118,15 +118,44 @@
 				<!-- end of menu points -->
 			</div>
 
-			<div id="menu_mobil" class="visible block lg:invisible lg:hidden flex">
+			<div class=" grow lg:grow-0 flex justify-end pl-0 lg:pl-4">
+				<a
+					href={$linkTo('/kontakt')}
+					class="bg-rc_red hover:bg-rc_red-darker text-white hover:text-white text-xs md:text-sm uppercase font-medium uppercase tracking-wider px-2 flex justify-center items-center h-9"
+					title="Nehmen Sie Kontakt auf">Kontakt</a
+				>
+
+				<a
+					href={$linkTo('/kontakt')}
+					class="bg-white hover:bg-rc_red-darker border-2 border-rc_red hover:border-rc_red-darker text-rc_red hover:text-white font-medium uppercase px-2 flex justify-center items-center p-1 ml-4 hidden md:block"
+					title="Nehmen Sie Kontakt auf"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="w-6 h-6"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+						/>
+					</svg>
+				</a>
+			</div>
+
+			<div id="menu_mobil" class="visible block lg:invisible lg:hidden flex pl-4 md:pl-8">
 				<button
 					on:click={toggleMenuFull}
 					class="text-rc_red flex w-full items-center justify-end focus:border-0 uppercase font-medium tracking-wider hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red "
 				>
-					<span class="uppercase font-medium px-1">Menu</span>
+					<!--<span class="uppercase font-medium px-1">Menu</span>-->
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						class="h-6 w-6"
+						class="h-8 w-"
 						fill="none"
 						viewBox="0 0 24 24"
 						stroke="currentColor"
