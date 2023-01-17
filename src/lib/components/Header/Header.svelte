@@ -121,7 +121,7 @@
 			<div class="grow lg:grow-0 flex justify-end pl-0 lg:pl-4">
 				<a
 					href={$linkTo('/kontakt')}
-					class="bg-rc_red hover:bg-rc_red-darker text-white hover:text-white ext-sm uppercase font-medium uppercase tracking-wider px-2 flex justify-center items-center h-9"
+					class="bg-rc_red hover:bg-rc_red-darker text-white hover:text-white text-sm uppercase font-medium uppercase tracking-wider px-2 flex justify-center items-center h-9"
 					title="Nehmen Sie Kontakt auf">Kontakt</a
 				>
 				<a
