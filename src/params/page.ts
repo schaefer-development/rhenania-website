@@ -41,7 +41,24 @@ const pages = [
 	'ueberuns',
 	'verladekontrolle',
 	'vka',
-	'waagen'
+	'waagen',
+	'warenversand',
+	'gelangensbestaetigung',
+	'versandsoftware',
+	'versandsystem',
+	'dhl-paket-prio-mit-geld-zurueck-garantie',
+	'bilanz-3-jahre-gelangensbestaetigung',
+	'logistiksystem-automatisiert-den-versandprozess',
+	'logistiksoftware-vom-wareneingang-ueber-die-kommissionierung-bis-zum-warenversand',
+	'logistiksystem-automatisiert-den-versandprozess',
+	'versandabwicklung-wichtiger-erfolgsfaktor',
+	'paketversandsoftware-fuer-effektive-versandabwicklung',
+	'dublettenpruefung-fuer-eindeutige-kundendaten',
+	'versandkostenberechnung-senkt-kosten',
+	'adressqualitaet-steigert-die-kundenzufriedenheit',
+	'adresspruefung-spart-zeit-und-kosten',
+	'kommissionieren',
+	'laendernachweis-und-rfid-etiketten'
 ];
 
 export const match: ParamMatcher = (param) => {

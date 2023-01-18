@@ -10,7 +10,7 @@
 	on:click={toggleMenuFull}
 	class="{openMenuFull
 		? 'rc_menu_visible'
-		: 'rc_menu_hidden'} absolute visible lg:hidden rc_menu left-0 top-20 w-full min-h-screen overflow-auto ease-in-out transform duration-300 transition-all z-40"
+		: 'rc_menu_hidden'} absolute visible lg:hidden rc_menu left-0 top-32 sm:top-20 w-full min-h-screen overflow-auto ease-in-out transform duration-300 transition-all z-40"
 >
 	<div class="relative flex flex-row w-full max-w-screen-2xl mx-auto">
 		<div
