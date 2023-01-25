@@ -227,7 +227,7 @@
 <style>
 	.menupoint::after {
 		background-color: #ea3336;
-		bottom: -7px;
+		bottom: -2px;
 		content: '';
 		display: block;
 		height: 4px;
@@ -239,7 +239,7 @@
 
 	.menupoint_underline::after {
 		background-color: #ea3336;
-		bottom: -7px;
+		bottom: -2px;
 		content: '';
 		display: block;
 		height: 4px;

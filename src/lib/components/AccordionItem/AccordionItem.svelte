@@ -73,7 +73,7 @@
 
 	:global(.item_content a::after) {
 		background-color: #ea3336;
-		bottom: -7px;
+		bottom: -2px;
 		content: '';
 		display: block;
 		height: 4px;
@@ -85,7 +85,7 @@
 
 	:global(.item_content a:hover::after) {
 		background-color: #ea3336;
-		bottom: -7px;
+		bottom: -2px;
 		content: '';
 		display: block;
 		height: 4px;
