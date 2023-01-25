@@ -36,7 +36,7 @@
 <style>
 	.mod_assetlink div.hyperlink div a::after {
 		background-color: #ea3336;
-		bottom: -7px;
+		bottom: -2px;
 		content: '';
 		display: block;
 		height: 4px;
@@ -48,7 +48,7 @@
 
 	.mod_assetlink div.hyperlink:hover div a::after {
 		background-color: #ea3336;
-		bottom: -7px;
+		bottom: -2px;
 		content: '';
 		display: block;
 		height: 4px;

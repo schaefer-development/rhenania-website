@@ -181,7 +181,7 @@
 
 	:global(.mod_textAndImage a::after) {
 		background-color: #ea3336;
-		bottom: -7px;
+		bottom: -2px;
 		content: '';
 		display: block;
 		height: 4px;
@@ -193,7 +193,7 @@
 
 	:global(.mod_textAndImage a:hover::after) {
 		background-color: #ea3336;
-		bottom: -7px;
+		bottom: -2px;
 		content: '';
 		display: block;
 		height: 4px;

@@ -56,7 +56,7 @@
 	}
 	.searchHit a::after {
 		background-color: #ea3336;
-		bottom: -7px;
+		bottom: -2px;
 		content: '';
 		display: block;
 		height: 4px;
@@ -68,7 +68,7 @@
 
 	.searchHit a:hover::after {
 		background-color: #ea3336;
-		bottom: -7px;
+		bottom: -2px;
 		content: '';
 		display: block;
 		height: 4px;

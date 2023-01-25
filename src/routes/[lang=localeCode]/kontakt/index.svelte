@@ -110,7 +110,7 @@
 			<div class="px-3">
 				Ich habe die <a
 					href={$linkTo('/datenschutz/')}
-					class="font-bold py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					class="font-bold hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Datenschutzerklärung</a
 				>
 				gelesen und stimme dieser zu.
@@ -150,7 +150,7 @@
 
 	:global(.contact_form a::after) {
 		background-color: #ea3336;
-		bottom: -7px;
+		bottom: -2px;
 		content: '';
 		display: block;
 		height: 4px;
@@ -162,7 +162,7 @@
 
 	:global(.contact_form a:hover::after) {
 		background-color: #ea3336;
-		bottom: -7px;
+		bottom: -2px;
 		content: '';
 		display: block;
 		height: 4px;
