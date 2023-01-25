@@ -230,7 +230,7 @@
 		bottom: -2px;
 		content: '';
 		display: block;
-		height: 4px;
+		height: 3px;
 		position: absolute;
 		width: 0%;
 		transition: all;
@@ -242,7 +242,7 @@
 		bottom: -2px;
 		content: '';
 		display: block;
-		height: 4px;
+		height: 3px;
 		position: absolute;
 		width: 100%;
 		transition: all;
