@@ -84,7 +84,7 @@
 					<span
 						class="{$page.url.pathname === '/'
 							? 'menupoint_underline'
-							: ''}  relative menupoint font-medium uppercase text-black hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
+							: ''}  relative py-0.5 menupoint font-medium uppercase text-black hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
 						>Start</span
 					>
 				</a>
@@ -93,7 +93,7 @@
 					<span
 						class="{openMenu === 'produkte'
 							? 'menupoint_underline text-rc_red'
-							: ''} font-medium uppercase py-1 hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
+							: ''} font-medium uppercase hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
 						>Produkte</span
 					>
 				</button>
@@ -102,7 +102,7 @@
 					<span
 						class="{openMenu === 'unternehmen'
 							? 'menupoint_underline text-rc_red'
-							: ''} font-medium uppercase py-1 hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
+							: ''} font-medium uppercase hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
 						>Unternehmen</span
 					>
 				</button>
@@ -110,7 +110,7 @@
 					<span
 						class="{openMenu === 'service'
 							? 'menupoint_underline text-rc_red'
-							: ''} font-medium uppercase py-1 hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
+							: ''} font-medium uppercase hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
 						>Service</span
 					>
 				</button>
