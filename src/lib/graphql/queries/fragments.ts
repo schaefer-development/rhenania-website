@@ -277,9 +277,6 @@ export const blogPostFragment = gql`
 				heading1
 				heading2
 				heading3
-				link {
-					...linkFragment
-				}
 				paddingTop
 				paddingBottom
 				text {
