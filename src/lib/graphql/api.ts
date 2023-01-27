@@ -32,7 +32,9 @@ export const api: Api = (query, variables) => async (event) => {
 	const res = await graphQlRequest(query, variables)(event);
 	const { status } = res;
 	const body = await res.json();
-
+	if (!status.toString().startsWith('2')) {
+		console.log(body);
+	}
 	return {
 		status,
 		body
