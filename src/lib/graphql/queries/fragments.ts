@@ -33,6 +33,7 @@ export const accordingContainerFragment = gql`
 		paddingBottom
 		accordionItems {
 			id
+			headline
 			heading1
 			heading2
 			heading3
