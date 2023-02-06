@@ -46,7 +46,6 @@ const pages = [
 	'gelangensbestaetigung',
 	'versandsoftware',
 	'versandsystem',
-	'dhl-paket-prio-mit-geld-zurueck-garantie',
 	'bilanz-3-jahre-gelangensbestaetigung',
 	'logistiksystem-automatisiert-den-versandprozess',
 	'logistiksoftware-vom-wareneingang-ueber-die-kommissionierung-bis-zum-warenversand',
@@ -57,8 +56,7 @@ const pages = [
 	'versandkostenberechnung-senkt-kosten',
 	'adressqualitaet-steigert-die-kundenzufriedenheit',
 	'adresspruefung-spart-zeit-und-kosten',
-	'kommissionieren',
-	'laendernachweis-und-rfid-etiketten'
+	'kommissionieren'
 ];
 
 export const match: ParamMatcher = (param) => {
