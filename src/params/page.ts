@@ -56,7 +56,8 @@ const pages = [
 	'versandkostenberechnung-senkt-kosten',
 	'adressqualitaet-steigert-die-kundenzufriedenheit',
 	'adresspruefung-spart-zeit-und-kosten',
-	'kommissionieren'
+	'kommissionieren',
+	'versandlogistik-info'
 ];
 
 export const match: ParamMatcher = (param) => {
