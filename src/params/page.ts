@@ -57,7 +57,8 @@ const pages = [
 	'adressqualitaet-steigert-die-kundenzufriedenheit',
 	'adresspruefung-spart-zeit-und-kosten',
 	'kommissionieren',
-	'versandlogistik-info'
+	'versandlogistik-info',
+	'dpd-zertifiziert-shipping-tools'
 ];
 
 export const match: ParamMatcher = (param) => {
