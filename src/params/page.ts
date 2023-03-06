@@ -58,7 +58,8 @@ const pages = [
 	'adresspruefung-spart-zeit-und-kosten',
 	'kommissionieren',
 	'versandlogistik-info',
-	'dpd-zertifiziert-shipping-tools'
+	'dpd-zertifiziert-shipping-tools',
+	'dpd-startet-georouting-transformation'
 ];
 
 export const match: ParamMatcher = (param) => {
