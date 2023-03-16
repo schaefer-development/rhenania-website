@@ -156,9 +156,9 @@
 				><br />
 
 				<a
-					href={$linkTo('/termine/')}
+					href={$linkTo('/versandlogistik-info/')}
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-					>Termine</a
+					>Neues</a
 				><br />
 
 				<a
