@@ -115,9 +115,9 @@
 					>Karriere</a
 				>
 				<a
-					href={$linkTo('/termine/')}
+					href={$linkTo('/versandlogistik-info/')}
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-					>Termine</a
+					>Neues</a
 				>
 				<a
 					href={$linkTo('/partner/')}
