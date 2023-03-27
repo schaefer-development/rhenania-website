@@ -10,7 +10,7 @@
 >
 	<div class="col-span-full">
 		<h1 class="rc_h1 text-rc_darkblue">Referenzen</h1>
-		<h2 class="rc_h3 py-2">Hier finden Sie einen Auszug unserer Referenzkunden</h2>
+		<h2 class="rc_h2 py-2">Hier finden Sie einen Auszug unserer Referenzkunden</h2>
 	</div>
 	<div class="col-span-full md:col-span-5 font-bold">
 		Gerne nennen wir Ihnen für Ihren konkreten Anwendungsfall weitere Referenzen – auch mit
