@@ -59,7 +59,8 @@ const pages = [
 	'kommissionieren',
 	'versandlogistik-info',
 	'dpd-zertifiziert-shipping-tools',
-	'dpd-startet-georouting-transformation'
+	'dpd-startet-georouting-transformation',
+	'kontakt'
 ];
 
 export const match: ParamMatcher = (param) => {

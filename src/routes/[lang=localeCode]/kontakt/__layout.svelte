@@ -8,6 +8,14 @@
 	export const prerender = true;
 </script>
 
+<svelte:head>
+	<title>Kontakt | RC Rhenania</title>
+	<meta
+		name="description"
+		content="Sie haben Fragen zu einem unserer Produkte oder unserem Unternehmen ? Füllen Sie einfach das Formular aus und wir melden uns ✓ | rhenania-computer.de"
+	/>
+</svelte:head>
+
 <section>
 	<Map {mapAttributes} />
 
