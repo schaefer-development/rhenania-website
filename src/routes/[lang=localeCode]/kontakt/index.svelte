@@ -1,6 +1,16 @@
 <script context="module" lang="ts">
 	export const prerender = true;
 	import { linkTo } from '$lib/helpers';
+
+	let title = 'Kontakt - Nutzen Sie unser Kontaktformular bei Fragen';
+	let description =
+		'Sie haben Fragen zu einem unserer Produkte oder unserem Unternehmen ? Füllen Sie einfach das Formular aus und wir melden uns ✓ | rhenania-computer.de';
+	import type { Load } from '@sveltejs/kit';
+	export const load: Load = async () => {
+		return {
+			stuff: { title, description }
+		};
+	};
 </script>
 
 <script lang="ts">
