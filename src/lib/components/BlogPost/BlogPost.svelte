@@ -5,7 +5,7 @@
 	import Image from '$lib/components/Image/Image.svelte';
 	import Text from '$lib/components/Text/Text.svelte';
 
-	export let blogPost: Partial<BlogPost> = {};
+	export let blogPost: Partial<BlogPost> | undefined;
 	const mapping = {
 		Divider,
 		CardsContainer,
