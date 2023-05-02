@@ -9,7 +9,9 @@
 			return {
 				props: { data },
 				stuff: {
-					title: 'Rhenania Computer'
+					title: 'Rhenania Computer',
+					description:
+						'RC Rhenania Computer optimiert Ihren Versand. Softwarelösungen für die Versandlogistik und die Versandoptimierung seit mehr als 30 Jahren. Mehr erfahren'
 				}
 			};
 		}
