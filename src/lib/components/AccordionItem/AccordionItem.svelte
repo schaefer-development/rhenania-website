@@ -7,7 +7,7 @@
 <div class="mod_accordion relative tab w-full overflow-hidden h-auto pb-4 block">
 	<input class="absolute opacity-0 " id={accordionItem.id} type="checkbox" name="tabs" />
 	<label class="cursor-pointer flex border-b-2 py-2" for={accordionItem.id}>
-		<div class="w-full font-bold"><slot name="headline" /></div>
+		<h3 class="w-full font-bold"><slot name="headline" /></h3>
 		<div class="icon">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
