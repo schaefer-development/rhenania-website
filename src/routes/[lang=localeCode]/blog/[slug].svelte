@@ -8,4 +8,8 @@
 	export let data: { blogPost: BlogPost } = { blogPost: undefined };
 </script>
 
+<svelte:head>
+	<meta name="description" content={data.blogPost.blogpostMetaDescription} />
+</svelte:head>
+
 <BlogPostWrapper blogPost={data.blogPost} />

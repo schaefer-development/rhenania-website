@@ -9,9 +9,7 @@
 			return {
 				props: { data },
 				stuff: {
-					title: 'Rhenania Computer',
-					description:
-						'RC Rhenania Computer optimiert Ihren Versand. Softwarelösungen für die Versandlogistik und die Versandoptimierung seit mehr als 30 Jahren. Mehr erfahren'
+					title: 'Rhenania Computer'
 				}
 			};
 		}
@@ -38,7 +36,6 @@
 	import { navigating } from '$app/stores';
 	import { page } from '$app/stores';
 	import { TRACKING_CODE } from '$lib/env';
-
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
 
 	beforeNavigate(() => {

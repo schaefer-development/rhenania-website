@@ -220,6 +220,7 @@ export const pageFragment = gql`
 			... on BlogPost {
 				id
 				slug
+				blogpostMetaDescription
 				teaserHeadline
 				teaserSubheadline
 				teaserText
@@ -246,6 +247,7 @@ export const blogPostFragment = gql`
 		__typename
 		id
 		slug
+		blogpostMetaDescription
 		teaserHeadline
 		teaserSubheadline
 		teaserText
