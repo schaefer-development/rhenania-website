@@ -10,10 +10,13 @@
 		if (!blogPost) {
 			return { props };
 		}
-		const { blogpostMetaDescription } = blogPost;
+		const { blogpostTitle, blogpostMetaDescription } = blogPost;
 		return {
 			props,
-			stuff: { description: blogpostMetaDescription }
+			stuff: {
+				title: blogpostTitle,
+				description: blogpostMetaDescription
+			}
 		};
 	};
 </script>
