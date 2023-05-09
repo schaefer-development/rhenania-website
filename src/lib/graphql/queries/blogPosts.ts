@@ -4,6 +4,7 @@ export const BLOG_POSTS = gql`
 		blogPosts {
 			id
 			slug
+			blogpostTitle
 			blogpostMetaDescription
 			teaserHeadline
 			teaserSubheadline
