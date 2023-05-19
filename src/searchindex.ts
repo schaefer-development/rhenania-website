@@ -22,6 +22,8 @@ export const updateIndex = async () => {
 			searchableAttributes: [
 				'title',
 				'description',
+				'blogpostTitle',
+				'blogpostMetaDescription',
 				'teaserHeadline',
 				'teaserSubheadline',
 				'teaserText',
