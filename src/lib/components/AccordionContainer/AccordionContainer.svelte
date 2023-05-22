@@ -3,7 +3,12 @@
 	import type { AccordionContainer } from '$lib/graphql/generated/schema';
 	import { mapPadding } from '$lib/helpers';
 	export let module: Partial<AccordionContainer> = {};
+
+	import LDTag from '$lib/components/JSON-LD/LDTag.svelte';
+	import { websiteSchema } from '$lib/components/JSON-LD/json-ld';
 </script>
+
+<LDTag schema={websiteSchema} />
 
 <div class="mod_accordionContainer relative">
 	<div class="relative w-full {mapPadding(module.paddingTop)}" />
