@@ -30,7 +30,7 @@
 			{#if hit.__typename === 'BlogPost'}
 				<a sveltekit:prefetch class="flex" href={$linkTo(`/blog/${hit.slug}`)}>
 					<span class="align-middle pr-2">
-						{@html hit.teaserHeadline}
+						{@html hit.blogpostTitle}
 					</span>
 					<SearchIcon />
 				</a>
