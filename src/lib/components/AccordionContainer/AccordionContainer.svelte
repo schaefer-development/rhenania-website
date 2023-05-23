@@ -3,7 +3,13 @@
 	import type { AccordionContainer } from '$lib/graphql/generated/schema';
 	import { mapPadding } from '$lib/helpers';
 	export let module: Partial<AccordionContainer> = {};
+
+	import { accordionContainerToJsonLd } from '$lib/jsonLd';
 </script>
+
+<svelte:head>
+	{@html accordionContainerToJsonLd(module)}
+</svelte:head>
 
 <div class="mod_accordionContainer relative">
 	<div class="relative w-full {mapPadding(module.paddingTop)}" />
