@@ -4,11 +4,12 @@
 	import { mapPadding } from '$lib/helpers';
 	export let module: Partial<AccordionContainer> = {};
 
-	import LDTag from '$lib/components/JSON-LD/LDTag.svelte';
-	import { websiteSchema } from '$lib/components/JSON-LD/json-ld';
+	import { accordionContainerToJsonLd } from '$lib/jsonLd';
 </script>
 
-<LDTag schema={websiteSchema} />
+<svelte:head>
+	{@html accordionContainerToJsonLd(module)}
+</svelte:head>
 
 <div class="mod_accordionContainer relative">
 	<div class="relative w-full {mapPadding(module.paddingTop)}" />

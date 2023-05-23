@@ -39,6 +39,7 @@ export const accordingContainerFragment = gql`
 			heading3
 			content {
 				html
+				text
 			}
 			image {
 				id
