@@ -30,14 +30,33 @@
 </script>
 
 <div class="contact_form col-span-2">
-	<h2 class="rc_h1 text-rc_darkblue">Nutzen Sie das folgende Kontaktformular</h2>
-	<p class="py-2">
-		oder kontaktieren Sie uns direkt über <a class="hyperlink" href="mailto:info@rhenania.biz"
-			>info@rhenania.biz</a
+	<h2 class="rc_h1 text-rc_darkblue headlinelink">
+		Schreiben Sie eine E-Mail direkt an <a
+			class="font-normal text-rc_darkblue "
+			href="mailto:info@rhenania.biz">info@rhenania.biz</a
 		>
-	</p>
+	</h2>
+	<div class="mod_divider relative">
+		<div class="mod_divider w-full py-12">
+			<div class="h-1 w-full border-gray-300 border-b-4" />
+			<div class="mx-auto max-w-screen-2xl w-full h-1 -mt-1 flex flew-row">
+				<div class="bg-gray-300" style="width:50%;" />
+				<div class="bg-gray-50" style="width:6%;" />
+				<div class="bg-gray-300" style="width:5%;" />
+				<div class="bg-gray-50" style="width:6%;" />
+				<div class="bg-gray-300" style="width:7%;" />
+				<div class="bg-gray-50" style="width:8%;" />
+				<div class="bg-gray-300" style="width:8%;" />
+				<div class="bg-gray-50" style="width:4%;" />
+				<div class="bg-gray-300" style="width:6%;" />
+			</div>
+		</div>
+	</div>
+
+	<h3 class="font-bold text-black pt-6 px-1 uppercase tracking-wider">Kontaktformular</h3>
+
 	<!-- contact form-->
-	<form class="w-full pt-12" action={$linkTo(`/kontakt.json`)} method="post">
+	<form class="w-full pt-4" action={$linkTo(`/kontakt.json`)} method="post">
 		<div class="flex flex-wrap -mx-3 mb-6">
 			<div class="w-full px-3 mb-10">
 				<label class="block uppercase tracking-widest text-gray-700 text-xs px-1 font-bold ">
@@ -117,10 +136,10 @@
 			<div>
 				<input type="checkbox" bind:checked={datapolicy} />
 			</div>
-			<div class="px-3">
+			<div class="px-3 dataprivacy">
 				Ich habe die <a
 					href={$linkTo('/datenschutz/')}
-					class="font-bold hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					class=" font-bold text-rc_red hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Datenschutzerklärung</a
 				>
 				gelesen und stimme dieser zu.
@@ -151,14 +170,43 @@
 </div>
 
 <style>
-	:global(.contact_form a) {
+	:global(.headlinelink a) {
+		position: relative;
+		display: inline-block;
+	}
+
+	:global(.headlinelink a::after) {
+		background-color: #2a499d;
+		bottom: -2px;
+		content: '';
+		display: block;
+		height: 3px;
+		position: absolute;
+		width: 0%;
+		transition: all;
+		transition-duration: 0.25s;
+	}
+
+	:global(.headlinelink a:hover::after) {
+		background-color: #2a499d;
+		bottom: -2px;
+		content: '';
+		display: block;
+		height: 3px;
+		position: absolute;
+		width: 100%;
+		transition: all;
+		transition-duration: 0.25s;
+	}
+
+	:global(.dataprivacy a) {
 		position: relative;
 		display: inline-block;
 		font-weight: bold;
 		color: #ea3336;
 	}
 
-	:global(.contact_form a::after) {
+	:global(.dataprivacy a::after) {
 		background-color: #ea3336;
 		bottom: -2px;
 		content: '';
@@ -170,7 +218,7 @@
 		transition-duration: 0.25s;
 	}
 
-	:global(.contact_form a:hover::after) {
+	:global(.dataprivacy a:hover::after) {
 		background-color: #ea3336;
 		bottom: -2px;
 		content: '';
