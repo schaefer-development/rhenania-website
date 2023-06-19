@@ -125,7 +125,7 @@
 
 	{#if showBanner}
 		<div
-			class="cookie-banner fixed bg-rc_darkblue-darker text-white bottom-0 left-0 w-full p-8 text-center "
+			class="cookie-banner fixed bg-rc_darkblue-darker text-white bottom-0 left-0 w-full p-8 text-center z-50"
 		>
 			<p class="py-4">
 				Wir verwenden Cookies (Google Analytics), um Ihre Erfahrung zu verbessern. Durch die Nutzung
@@ -141,7 +141,6 @@
 
 <style>
 	.cookie-banner {
-		z-index: 9999;
-		box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3s);
+		box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.3);
 	}
 </style>
