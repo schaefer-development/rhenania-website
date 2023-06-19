@@ -128,8 +128,8 @@
 			class="cookie-banner fixed bg-rc_darkblue-darker text-white bottom-0 left-0 w-full p-8 text-center "
 		>
 			<p class="py-4">
-				Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Durch die Nutzung unserer Website
-				stimmen Sie der Verwendung von Cookies zu.
+				Wir verwenden Cookies (Google Analytics), um Ihre Erfahrung zu verbessern. Durch die Nutzung
+				unserer Website stimmen Sie der Verwendung von Cookies zu.
 			</p>
 			<button
 				class="relative mt-2 pl-5 pr-3 py-2 bg-rc_red text-white text-sm font-bold uppercase tracking-widest hover:bg-rc_red-darker rc_button_corner"
@@ -142,6 +142,6 @@
 <style>
 	.cookie-banner {
 		z-index: 9999;
-		box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+		box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3s);
 	}
 </style>
