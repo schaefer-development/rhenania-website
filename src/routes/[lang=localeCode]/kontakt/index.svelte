@@ -177,17 +177,17 @@
 							</div>
 
 							<div class="md:flex md:items-center w-full px-3">
-								<div class="md:w-1/3">
+								<div class="w-full">
 									{#if browser}
 										{#if valid && datapolicy}
 											<button
-												class="relative mt-4 pl-5 pr-3 py-2 bg-rc_red text-white text-sm font-bold uppercase tracking-widest hover:bg-rc_red-darker rc_button_corner"
+												class="inline-block relative mt-4 pl-5 pr-3 py-2 bg-rc_red text-white text-sm font-bold uppercase tracking-widest hover:bg-rc_red-darker rc_button_corner"
 												type="submit">Nachricht absenden</button
 											>
 										{:else}
 											<button
 												disabled
-												class="relative mt-4 pl-5 pr-3 py-2 bg-gray-300 text-white text-sm font-bold uppercase tracking-widest rc_button_corner"
+												class="inline-block relative mt-4 pl-5 pr-3 py-2 bg-gray-300 text-white text-sm font-bold uppercase tracking-widest rc_button_corner"
 												type="submit">Nachricht absenden</button
 											>
 										{/if}
