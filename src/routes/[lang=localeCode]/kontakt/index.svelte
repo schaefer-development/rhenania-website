@@ -81,8 +81,8 @@
 			<div class="tab-content h-auto">
 				<div class="pt-4 pb-8">
 					<form class="w-full pt-4" action={$linkTo(`/kontakt.json`)} method="post">
-						<div class="flex flex-wrap -mx-3 mb-6">
-							<div class="w-full px-3 mb-10">
+						<div class="flex flex-wrap mb-6">
+							<div class="w-full px-3 mt-5 mb-10">
 								<label
 									class="block uppercase tracking-widest text-gray-700 text-xs px-1 font-bold "
 								>
@@ -147,7 +147,7 @@
 									Ihre Nachricht
 								</label>
 							</div>
-
+							<!-- hcaptcha -->
 							<div class="py-6 flex justify-center relative border w-full">
 								<HCaptcha
 									sitekey={HCAPTCHA_SITEKEY}
@@ -161,8 +161,8 @@
 									Alternativ können Sie uns auch gerne eine E-Mail senden.
 								</noscript>
 							</div>
-
-							<div class="mb-6 flex flex-row items-center w-full">
+							<!-- end hcaptcha  -->
+							<div class="p-3 flex flex-row items-center w-full">
 								<div>
 									<input type="checkbox" bind:checked={datapolicy} />
 								</div>
@@ -176,7 +176,7 @@
 								</div>
 							</div>
 
-							<div class="md:flex md:items-center">
+							<div class="md:flex md:items-center w-full px-3">
 								<div class="md:w-1/3">
 									{#if browser}
 										{#if valid && datapolicy}
@@ -201,8 +201,9 @@
 		</div>
 	</div>
 
+	<!--
 	<div class="w-full h-24 border" />
-	<!-- contact form-->
+	 contact form
 	<form class="w-full pt-4" action={$linkTo(`/kontakt.json`)} method="post">
 		<div class="flex flex-wrap -mx-3 mb-6">
 			<div class="w-full px-3 mb-10">
@@ -265,7 +266,7 @@
 				</label>
 			</div>
 		</div>
-		<!--	<div class="pb-8 flex justify-center relative z-1">
+		<div class="pb-8 flex justify-center relative z-1">
 				<HCaptcha
 					sitekey={HCAPTCHA_SITEKEY}
 					hl="de"
@@ -277,7 +278,7 @@
 					Sie benötigen einen JavaScript-fähigen Browser für die Kontaktanfrage per Browser.
 					Alternativ können Sie uns auch gerne eine E-Mail senden.
 				</noscript>
-			</div>-->
+			</div>
 
 		<div class="mb-6 flex flex-row items-center">
 			<div>
@@ -312,7 +313,7 @@
 			</div>
 		</div>
 	</form>
-	<!-- -->
+	-->
 </div>
 
 <style>
