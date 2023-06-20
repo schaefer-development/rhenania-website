@@ -60,7 +60,7 @@
 		<div class="mod_accordion relative tab w-full overflow-hidden h-auto pb-4 block">
 			<input class="absolute opacity-0 " id="contactform" type="checkbox" name="tabs" />
 			<label class="cursor-pointer flex border-b-2 py-2" for="contactform">
-				<h3 class="w-full font-bold">Oder Sie nutzen das Kontaktformular</h3>
+				<h3 class="w-full font-bold">Oder Sie nutzen unser Kontaktformular</h3>
 				<div class="icon">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
