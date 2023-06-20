@@ -148,7 +148,7 @@
 								</label>
 							</div>
 							<!-- hcaptcha -->
-							<div class="py-6 flex justify-center relative border w-full">
+							<div class="py-6 flex justify-center relative w-full">
 								<HCaptcha
 									sitekey={HCAPTCHA_SITEKEY}
 									hl="de"
