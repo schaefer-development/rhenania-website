@@ -30,12 +30,14 @@
 </script>
 
 <div class="contact_form col-span-2">
-	<h2 class="rc_h1 text-rc_darkblue headlinelink">
-		Schreiben Sie eine E-Mail direkt an <a
-			class="font-normal text-rc_darkblue "
+	<h2 class="rc_h1 text-rc_darkblue headlinelink">Kontaktieren Sie uns direkt per E-Mail an</h2>
+
+	<div class="relative flex justify-center">
+		<a
+			class="relative mt-2 pl-5 pr-3 py-2 bg-rc_red text-white text-sm font-bold uppercase tracking-widest hover:bg-rc_red-darker rc_button_corner"
 			href="mailto:info@rhenania.biz">info@rhenania.biz</a
 		>
-	</h2>
+	</div>
 	<div class="mod_divider relative">
 		<div class="mod_divider w-full py-12">
 			<div class="h-1 w-full border-gray-300 border-b-4" />
