@@ -61,18 +61,18 @@
 					>
 					<div slot="content" class="pb-2 ">
 						<a
-							href={$linkTo('/k04/')}
+							href={$linkTo('/k04')}
 							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 							>– K04</a
 						>
 						<a
-							href={$linkTo('/f95/')}
+							href={$linkTo('/f95')}
 							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 							>– F95</a
 						>
 
 						<a
-							href={$linkTo('/vka/')}
+							href={$linkTo('/vka')}
 							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 							>– VKA</a
 						>
@@ -87,22 +87,22 @@
 					>
 					<div slot="content" class="pb-2">
 						<a
-							href={$linkTo('/u12/')}
+							href={$linkTo('/u12')}
 							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 							>– U12</a
 						>
 						<a
-							href={$linkTo('/apk/')}
+							href={$linkTo('/apk')}
 							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 							>– APK</a
 						>
 						<a
-							href={$linkTo('/duv/')}
+							href={$linkTo('/duv')}
 							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 							>– DUV</a
 						>
 						<a
-							href={$linkTo('/g10/')}
+							href={$linkTo('/g10')}
 							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 							>– G10</a
 						>
@@ -117,17 +117,17 @@
 					>
 					<div slot="content" class="pb-2">
 						<a
-							href={$linkTo('/etikettendrucker/')}
+							href={$linkTo('/etikettendrucker')}
 							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 							>– Etikettendrucker</a
 						>
 						<a
-							href={$linkTo('/waagen/')}
+							href={$linkTo('/waagen')}
 							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 							>– Waagen</a
 						>
 						<a
-							href={$linkTo('/barcodescanner/')}
+							href={$linkTo('/barcodescanner')}
 							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 							>– Barcodescanner</a
 						>
@@ -139,36 +139,36 @@
 			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Unternehmen</p>
 			<p class="text-center sm:text-left tracking-wide leading-relaxed">
 				<a
-					href={$linkTo('/ueberuns/')}
+					href={$linkTo('/ueberuns')}
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Über uns</a
 				><br />
 				<a
-					href={$linkTo('/kontakt/')}
+					href={$linkTo('/kontakt')}
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Kontakt und Anfahrt</a
 				><br />
 
 				<a
-					href={$linkTo('/karriere/')}
+					href={$linkTo('/karriere')}
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Karriere</a
 				><br />
 
 				<a
-					href={$linkTo('/versandlogistik-info/')}
+					href={$linkTo('/versandlogistik-info')}
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Neues</a
 				><br />
 
 				<a
-					href={$linkTo('/partner/')}
+					href={$linkTo('/partner')}
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Partner</a
 				><br />
 
 				<a
-					href={$linkTo('/referenzen/')}
+					href={$linkTo('/referenzen')}
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Referenzen</a
 				><br />
@@ -178,18 +178,18 @@
 			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Service</p>
 			<p class="text-center sm:text-left tracking-wide leading-relaxed">
 				<a
-					href={$linkTo('/cloudloesung/')}
+					href={$linkTo('/cloudloesung')}
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Cloudlösung</a
 				><br />
 				<a
-					href={$linkTo('/onlinesupport/')}
+					href={$linkTo('/onlinesupport')}
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Online-Support</a
 				><br />
 
 				<a
-					href={$linkTo('/download/')}
+					href={$linkTo('/download')}
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Download</a
 				><br />
@@ -199,14 +199,14 @@
 			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Kontakt</p>
 			<p class="text-center sm:text-left tracking-wide leading-relaxed">
 				<a
-					href={$linkTo('/impressum/')}
+					href={$linkTo('/impressum')}
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Impressum</a
 				>
 				<br />
 
 				<a
-					href={$linkTo('/datenschutz/')}
+					href={$linkTo('/datenschutz')}
 					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Datenschutz</a
 				>
