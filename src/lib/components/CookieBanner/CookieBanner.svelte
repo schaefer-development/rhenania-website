@@ -1,31 +1,47 @@
-<script>
+<script lang="ts">
 	import { linkTo } from '$lib/helpers';
 	import { onMount } from 'svelte';
 
 	let showBanner = true;
+	let hasConsent = false;
+
+	onMount(() => {
+		hasConsent = localStorage.getItem('cookie_consent');
+		showBanner = !hasConsent;
+		window.dataLayer = window.dataLayer || [];
+		dataLayer.push('js', new Date());
+		dataLayer.push('config', 'G-HNKX3R4NPX');
+	});
 
 	function cookieSettings() {
 		showBanner = true;
 	}
 
-	function acceptCookies() {
-		localStorage.setItem('cookieConsent', 'true');
-		showBanner = false;
-		// Füge hier den Code hinzu, um die Cookies zu aktivieren (z.B. Google Analytics)
-	}
-
 	function rejectCookies() {
-		localStorage.setItem('cookieConsent', 'false');
+		localStorage.setItem('cookie_consent', 'false');
 		showBanner = false;
-		// Füge hier den Code hinzu, um die Cookies zu deaktivieren
+		// Deaktiviere das Tracking von Google Analytics
+		window['ga-disable-G-HNKX3R4NPX'] = true;
+		// Setze die src-Eigenschaft des Google Analytics-Scripts auf eine leere Zeichenkette,
+		// um das Laden und Ausführen des Skripts zu verhindern
+		const script = document.querySelector(
+			'script[src="https://www.googletagmanager.com/gtag/js?id=G-HNKX3R4NPX"]'
+		);
+		if (script) {
+			script.remove();
+		}
 	}
 
-	onMount(() => {
-		const consent = localStorage.getItem('cookieConsent');
-		if (consent === 'true' || consent === 'false') {
-			showBanner = false;
-		}
-	});
+	function acceptCookies() {
+		localStorage.setItem('cookie_consent', 'true');
+		hasConsent = true;
+		showBanner = false;
+		window['ga-disable-G-HNKX3R4NPX'] = undefined;
+		const script = document.createElement('script');
+		script.src = 'https://www.googletagmanager.com/gtag/js?id=G-HNKX3R4NPX';
+		script.async = true;
+		document.head.appendChild(script);
+	}
 </script>
 
 <div
@@ -57,12 +73,11 @@
 
 			<div class="flex gap-4 pt-4 lg:pt-0">
 				<button
-					class="relative pl-5 pr-3 py-2 bg-rc_red border-2 border-rc_red text-white text-sm font-bold uppercase tracking-widest hover:bg-rc_red-darker hover:border-rc_red-darker"
+					class="relative px-3 py-1 bg-rc_red border-2 border-rc_red text-white text-sm font-bold uppercase tracking-widest hover:bg-rc_red-darker hover:border-rc_red-darker"
 					on:click={acceptCookies}>Akzeptieren</button
 				>
-
 				<button
-					class="relative pl-5 pr-3 py-2 border-2 text-white text-sm font-bold uppercase tracking-widest hover:text-rc_skyblue hover:border-rc_skyblue"
+					class="relative px-3 py-1 border-2 text-white text-sm font-bold uppercase tracking-widest hover:text-rc_skyblue hover:border-rc_skyblue"
 					on:click={rejectCookies}>Ablehnen</button
 				>
 			</div>
@@ -77,5 +92,35 @@
 
 	.cookie-banner {
 		box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.3);
+	}
+
+	:global(.cookie-banner a) {
+		position: relative;
+		display: inline-block;
+		font-weight: bold;
+	}
+
+	:global(.cookie-banner a::after) {
+		background-color: #fff;
+		bottom: -2px;
+		content: '';
+		display: block;
+		height: 3px;
+		position: absolute;
+		width: 0%;
+		transition: all;
+		transition-duration: 0.25s;
+	}
+
+	:global(.cookie-banner a:hover::after) {
+		background-color: #fff;
+		bottom: -2px;
+		content: '';
+		display: block;
+		height: 3px;
+		position: absolute;
+		width: 100%;
+		transition: all;
+		transition-duration: 0.25s;
 	}
 </style>
