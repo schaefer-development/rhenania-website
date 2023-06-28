@@ -14,7 +14,7 @@
 	<div
 		class="relative z-10 max-w-screen-xl mx-auto px-10 pt-20 pb-32 grid grid-cols-1 lg:grid-cols-3 gap-x-0 gap-y-16 lg:gap-x-20 lg:gap-y-0"
 	>
-		<div class="col-span-1 -mt-32 text-white flex items-start">
+		<div class="col-span-1 -mt-32 text-white flex items-start contact_box">
 			<div class="bg-rc_darkblue px-8 py-8 h-auto lg:w-full">
 				<div>
 					<h1 class="rc_h1">Kontakt</h1>
@@ -26,9 +26,18 @@
 						53604 Bad Honnef
 					</p>
 					<p class="pt-2 pb-4">
-						Telefon: 0 222 4 - 96 00 00<br />
+						Telefon: <a
+							href="tel:+492224960000"
+							title="Rufen Sie jetzt die Nummer 02224 - 96 00 00 an"
+						>
+							0 222 4 - 96 00 00</a
+						><br />
 						Fax: 0 222 4 - 960 00 96<br />
-						E-Mail: info@rhenania.biz<br />
+						E-Mail:
+						<a
+							href="mailto:info@rhenania.biz"
+							title="Schreiben Sie jetzt eine E-Mail an info@rhenania.biz">info@rhenania.biz</a
+						><br />
 					</p>
 				</div>
 			</div>
@@ -36,3 +45,36 @@
 		<slot />
 	</div>
 </section>
+
+<style>
+	:global(.contact_box a) {
+		position: relative;
+		display: inline-block;
+		font-weight: normal;
+		color: #fff;
+	}
+
+	:global(.contact_box a::after) {
+		background-color: #fff;
+		bottom: -2px;
+		content: '';
+		display: block;
+		height: 3px;
+		position: absolute;
+		width: 0%;
+		transition: all;
+		transition-duration: 0.25s;
+	}
+
+	:global(.contact_box a:hover::after) {
+		background-color: #fff;
+		bottom: -2px;
+		content: '';
+		display: block;
+		height: 3px;
+		position: absolute;
+		width: 100%;
+		transition: all;
+		transition-duration: 0.25s;
+	}
+</style>
