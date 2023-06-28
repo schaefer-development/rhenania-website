@@ -82,7 +82,7 @@
 
 				<a href={$linkTo('/')} class="relative mx-2 lg:mx-3">
 					<span
-						class="{$page.url.pathname === '/'
+						class="{$page.url.pathname === ''
 							? 'menupoint_underline'
 							: ''}  relative py-0.5 menupoint font-medium uppercase text-black hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
 						>Start</span

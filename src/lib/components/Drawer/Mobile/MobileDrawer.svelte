@@ -41,7 +41,7 @@
 			<div class="left">
 				<!-- left start -->
 				<a
-					href={$linkTo('/')}
+					href={$linkTo('')}
 					class="font-medium text-xl uppercase tracking-wider break-words text-rc_skyblue text-rc_skyblue"
 					>Start</a
 				>
@@ -56,7 +56,7 @@
 						<a href={$linkTo('/k04')} class="rc_desktopmenu_subpoint"
 							>K04 - Kommissionieren, Kontrollieren, Packen</a
 						>
-						<a href={$linkTo('/f95/')} class="rc_desktopmenu_subpoint"
+						<a href={$linkTo('/f95')} class="rc_desktopmenu_subpoint"
 							>F95 - Paket- und Palettenversand</a
 						>
 
@@ -68,24 +68,24 @@
 				<DrawerAccordion id="versandoptimierung_drawer_full">
 					<span slot="headline">Versandoptimierung</span>
 					<div slot="content">
-						<a href={$linkTo('/u12/')} class="rc_desktopmenu_subpoint"
+						<a href={$linkTo('/u12')} class="rc_desktopmenu_subpoint"
 							>U12 - Umsatzsteuer Befreiung sichern</a
 						>
-						<a href={$linkTo('/duv/')} class="rc_desktopmenu_subpoint">DUV - Dubletten vermeiden</a>
-						<a href={$linkTo('/apk/')} class="rc_desktopmenu_subpoint"
+						<a href={$linkTo('/duv')} class="rc_desktopmenu_subpoint">DUV - Dubletten vermeiden</a>
+						<a href={$linkTo('/apk')} class="rc_desktopmenu_subpoint"
 							>APK - Adressprüfung und Korrektur</a
 						>
-						<a href={$linkTo('/g10/')} class="rc_desktopmenu_subpoint">G10 - Gefahrgutversand</a>
+						<a href={$linkTo('/g10')} class="rc_desktopmenu_subpoint">G10 - Gefahrgutversand</a>
 					</div>
 				</DrawerAccordion>
 				<DrawerAccordion id="hardware_drawer_full">
 					<span slot="headline">Hardware</span>
 					<div slot="content">
-						<a href={$linkTo('/etikettendrucker/')} class="rc_desktopmenu_subpoint"
+						<a href={$linkTo('/etikettendrucker')} class="rc_desktopmenu_subpoint"
 							>Etikettendrucker</a
 						>
-						<a href={$linkTo('/waagen/')} class="rc_desktopmenu_subpoint">Waagen</a>
-						<a href={$linkTo('/barcodescanner/')} class="rc_desktopmenu_subpoint">Barcodescanner</a>
+						<a href={$linkTo('/waagen')} class="rc_desktopmenu_subpoint">Waagen</a>
+						<a href={$linkTo('/barcodescanner')} class="rc_desktopmenu_subpoint">Barcodescanner</a>
 					</div>
 				</DrawerAccordion>
 
@@ -100,27 +100,27 @@
 				</p>
 
 				<a
-					href={$linkTo('/ueberuns/')}
+					href={$linkTo('/ueberuns')}
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Über uns</a
 				>
 				<a
-					href={$linkTo('/kontakt/')}
+					href={$linkTo('/kontakt')}
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Kontakt und Anfahrt</a
 				>
 				<a
-					href={$linkTo('/karriere/')}
+					href={$linkTo('/karriere')}
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Karriere</a
 				>
 				<a
-					href={$linkTo('/versandlogistik-info/')}
+					href={$linkTo('/versandlogistik-info')}
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Neues</a
 				>
 				<a
-					href={$linkTo('/partner/')}
+					href={$linkTo('/partner')}
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Partner</a
 				>
@@ -138,7 +138,7 @@
 				</p>
 
 				<a
-					href={$linkTo('/cloudloesung/')}
+					href={$linkTo('/cloudloesung')}
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Cloudlösung</a
 				>
@@ -148,7 +148,7 @@
 					>Online-Support</a
 				>
 				<a
-					href={$linkTo('/download/')}
+					href={$linkTo('/download')}
 					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
 					>Download</a
 				>
