@@ -34,6 +34,8 @@
 	import '@fontsource/red-hat-text/700.css';
 	import Header from '$lib/components/Header/Header.svelte';
 	import Footer from '$lib/components/Footer/Footer.svelte';
+	import CookieBanner from '$lib/components/CookieBanner/CookieBanner.svelte';
+
 	import LoadingIndicator from '$lib/components/LoadingIndicator/LoadingIndicator.svelte';
 	import { navigating } from '$app/stores';
 	import { page } from '$app/stores';
@@ -82,4 +84,6 @@
 		</main>
 	{/if}
 	<Footer {data} />
+
+	<CookieBanner />
 </div>
