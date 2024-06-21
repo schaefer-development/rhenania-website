@@ -60,7 +60,8 @@ const pages = [
 	'versandlogistik-info',
 	'dpd-zertifiziert-shipping-tools',
 	'dpd-startet-georouting-transformation',
-	'gelangensbestaetigung-service-abwicklung'
+	'gelangensbestaetigung-service-abwicklung',
+	'gls-loest-unibox-durch-neue-shipit-api-ab'
 ];
 
 export const match: ParamMatcher = (param) => {
