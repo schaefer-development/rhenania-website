@@ -61,7 +61,8 @@ const pages = [
 	'dpd-zertifiziert-shipping-tools',
 	'dpd-startet-georouting-transformation',
 	'gelangensbestaetigung-service-abwicklung',
-	'gls-loest-unibox-durch-neue-shipit-api-ab'
+	'gls-loest-unibox-durch-neue-shipit-api-ab',
+	'dhl-warenpost-kleinpaket'
 ];
 
 export const match: ParamMatcher = (param) => {
