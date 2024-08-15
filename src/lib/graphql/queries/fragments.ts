@@ -288,6 +288,9 @@ export const blogPostFragment = gql`
 					html
 				}
 			}
+			... on TextAndImage {
+				...textAndImageFragment
+			}
 			... on PartnerContainer {
 				id
 				partnerItems {
