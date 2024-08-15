@@ -288,6 +288,19 @@ export const blogPostFragment = gql`
 					html
 				}
 			}
+			... on PartnerContainer {
+				id
+				partnerItems {
+					id
+					partnerLogo {
+						id
+						url
+					}
+					partnerDescription {
+						html
+					}
+				}
+			}
 			... on AccordionContainer {
 				...accordingContainerFragment
 			}

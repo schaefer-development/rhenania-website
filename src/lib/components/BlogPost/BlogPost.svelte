@@ -4,13 +4,15 @@
 	import CardsContainer from '$lib/components/CardsContainer/CardsContainer.svelte';
 	import Image from '$lib/components/Image/Image.svelte';
 	import Text from '$lib/components/Text/Text.svelte';
+	import PartnerContainer from '$lib/components/PartnerContainer/PartnerContainer.svelte';
 
 	export let blogPost: Partial<BlogPost> | undefined;
 	const mapping = {
 		Divider,
 		CardsContainer,
 		Image,
-		Text
+		Text,
+		PartnerContainer
 	};
 </script>
 
