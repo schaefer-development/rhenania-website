@@ -62,7 +62,8 @@ const pages = [
 	'dpd-startet-georouting-transformation',
 	'gelangensbestaetigung-service-abwicklung',
 	'gls-loest-unibox-durch-neue-shipit-api-ab',
-	'dhl-warenpost-kleinpaket'
+	'dhl-warenpost-kleinpaket',
+	'dhl-paketlabel-gewichtsstufen'
 ];
 
 export const match: ParamMatcher = (param) => {
