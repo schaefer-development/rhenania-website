@@ -265,6 +265,7 @@ export const blogPostFragment = gql`
 			}
 			... on CtaLink {
 				id
+				headline
 				padding
 			}
 			... on Image {
