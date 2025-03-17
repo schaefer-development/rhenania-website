@@ -8,7 +8,7 @@
 
 	export let appId: string;
 	export let searchKey: string;
-	export let indices: Record<string, typeof SvelteComponent> | [string, typeof SvelteComponent][]; // [indexName, component to render search results from that index]
+	export let indices: Record<string, typeof SvelteComponent<any>> | [string, typeof SvelteComponent<any>][]; // [indexName, component to render search results from that index]
 	export let loadingStr = `Suche...`;
 	export let noResultMsg = (query: string): string => `Keine Ergebnisse für '${query}'`;
 	export let resultCounter = (hits: SearchHit[]): string =>
