@@ -6,6 +6,7 @@
 	import Text from '$lib/components/Text/Text.svelte';
 	import PartnerContainer from '$lib/components/PartnerContainer/PartnerContainer.svelte';
 	import TextAndImage from '$lib/components/TextAndImage/TextAndImage.svelte';
+	import CtaLink from '$lib/components/CtaLink/CtaLink.svelte';
 
 	export let blogPost: Partial<BlogPost> | undefined;
 	const mapping = {
@@ -14,7 +15,8 @@
 		Image,
 		Text,
 		PartnerContainer,
-		TextAndImage
+		TextAndImage,
+		CtaLink
 	};
 </script>
 
