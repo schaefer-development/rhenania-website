@@ -2,6 +2,10 @@
 	import Header from '$lib/components/Header/Header.svelte';
 	import '../app.css';
 
+
+	import '@fontsource/red-hat-text/400.css';
+	import '@fontsource/red-hat-text/500.css';
+	import '@fontsource/red-hat-text/700.css';
 	let { children } = $props();
 </script>
 
