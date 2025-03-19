@@ -4,13 +4,17 @@
 	import { linkTo } from '$lib/helpers';
 	import { page } from '$app/stores';
 	import Logo from '$lib/components/Logo/Logo.svelte';
-	import Drawer from '$lib/components/Drawer/Drawer.svelte';
-	import ProductMenu from '$lib/components/Drawer/ProductMenu.svelte';
-	import CompanyMenu from '$lib/components/Drawer/CompanyMenu.svelte';
-	import ServiceMenu from '$lib/components/Drawer/ServiceMenu.svelte';
+	//	import Drawer from '$lib/components/Drawer/Drawer.svelte';
+
+	import NavigationDesktop from '$lib/components/Header/NavigationDesktop.svelte';
+	import NavigationMobile from '$lib/components/Header/NavigationMobile.svelte';
+
+	//	import ProductMenu from '$lib/components/Drawer/ProductMenu.svelte';
+	//	import CompanyMenu from '$lib/components/Drawer/CompanyMenu.svelte';
+	//	import ServiceMenu from '$lib/components/Drawer/ServiceMenu.svelte';
 	import { ALGOLIA_APP_ID, ALGOLIA_SEARCH_KEY } from '$lib/env';
 	import SearchResult from '$lib/components/SearchResult/SearchResult.svelte';
-	import MobileDrawer from '$lib/components/Drawer/Mobile/MobileDrawer.svelte';
+	//	import MobileDrawer from '$lib/components/Drawer/Mobile/MobileDrawer.svelte';
 
 	const appId = ALGOLIA_APP_ID;
 	const searchKey = ALGOLIA_SEARCH_KEY;
@@ -32,7 +36,7 @@
 		};
 </script>
 
-<header class="space-between sticky top-0 z-50 flex flex-col bg-white shadow-md">
+<header class="space-between sticky top-0 z-40 flex flex-col bg-white shadow-md">
 	<div class="mx-auto flex h-20 w-full max-w-screen-2xl flex-row items-center px-4 md:px-10">
 		<a href={$linkTo('/')} class="text-rc_darkblue w-20 shrink-0 md:w-28"><Logo /></a>
 
@@ -79,56 +83,19 @@
 				</form>
 			</div>
 
-			<div class="invisible hidden grow items-center justify-end lg:visible lg:flex lg:grow-0">
-				<!-- menu points -->
-
-				<a href={$linkTo('/')} class="relative mx-2 lg:mx-3">
-					<span
-						class="{$page.url.pathname === ''
-							? 'menupoint_underline'
-							: ''}  menupoint hover:text-rc_red focus:text-rc_red relative py-0.5 text-sm font-medium tracking-wider text-black uppercase focus:ring-0 focus:outline-none"
-						>Start</span
-					>
-				</a>
-
-				<button on:click={() => toggleMenu('produkte')} class="menupoint relative mx-2 lg:mx-3">
-					<span
-						class="{openMenu === 'produkte'
-							? 'menupoint_underline text-rc_red'
-							: ''} hover:text-rc_red focus:text-rc_red text-sm font-medium tracking-wider uppercase focus:ring-0 focus:outline-none"
-						>Produkte</span
-					>
-				</button>
-
-				<button on:click={() => toggleMenu('unternehmen')} class="menupoint relative mx-2 lg:mx-3">
-					<span
-						class="{openMenu === 'unternehmen'
-							? 'menupoint_underline text-rc_red'
-							: ''} hover:text-rc_red focus:text-rc_red text-sm font-medium tracking-wider uppercase focus:ring-0 focus:outline-none"
-						>Unternehmen</span
-					>
-				</button>
-				<button on:click={() => toggleMenu('service')} class="menupoint relative mx-2 lg:mx-3">
-					<span
-						class="{openMenu === 'service'
-							? 'menupoint_underline text-rc_red'
-							: ''} hover:text-rc_red focus:text-rc_red text-sm font-medium tracking-wider uppercase focus:ring-0 focus:outline-none"
-						>Service</span
-					>
-				</button>
-
-				<!-- end of menu points -->
+			<div class="hidden grow items-center justify-end lg:block lg:grow-0">
+				<NavigationDesktop></NavigationDesktop>
 			</div>
 
 			<div class="flex grow justify-end pl-0 lg:grow-0 lg:pl-4">
 				<a
 					href={$linkTo('/kontakt')}
-					class="bg-rc_red hover:bg-rc_red-darker flex h-9 items-center justify-center px-2 text-sm font-medium tracking-wider text-white uppercase uppercase hover:text-white"
+					class="flex h-9 items-center justify-center bg-red-600 px-2 text-sm font-medium tracking-wider text-white uppercase uppercase hover:bg-red-700 hover:text-white"
 					title="Nehmen Sie Kontakt auf">Kontakt</a
 				>
 				<a
 					href="tel:+492224960000"
-					class="hover:bg-rc_red-darker border-rc_red hover:border-rc_red-darker text-rc_red ml-4 flex items-center justify-center border-2 bg-white p-1 px-2 font-medium uppercase hover:text-white"
+					class="ml-4 flex items-center justify-center border-2 border-red-600 bg-white p-1 px-2 font-medium text-red-600 uppercase hover:border-red-700 hover:bg-red-600 hover:text-white"
 					aria-label="Rufen Sie jetzt die Nummer 02224 - 96 00 00 an"
 					title="Rufen Sie jetzt die Nummer 02224 - 96 00 00 an"
 				>
@@ -149,27 +116,8 @@
 				</a>
 			</div>
 
-			<div id="menu_mobil" class="visible block flex pl-4 md:pl-8 lg:invisible lg:hidden">
-				<button
-					on:click={toggleMenuFull}
-					class="text-rc_red hover:text-rc_red focus:text-rc_red flex w-full items-center justify-end font-medium tracking-wider uppercase focus:border-0 focus:ring-0 focus:outline-none"
-				>
-					<!--<span class="uppercase font-medium px-1">Menu</span>-->
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						class="w- h-8"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke="currentColor"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M4 6h16M4 12h16M4 18h16"
-						/>
-					</svg>
-				</button>
+			<div class="block lg:hidden">
+				<NavigationMobile></NavigationMobile>
 			</div>
 		</div>
 	</div>
@@ -218,7 +166,7 @@
 	</div>
 </header>
 
-<!-- aside menu -->
+<!-- aside menu --
 <Drawer {openMenu} {toggleMenu} menuLabel={'produkte'}>
 	<ProductMenu></ProductMenu>
 </Drawer>
@@ -229,7 +177,7 @@
 	<ServiceMenu></ServiceMenu>
 </Drawer>
 
-<MobileDrawer {openMenuFull} {toggleMenuFull} />
+<MobileDrawer {openMenuFull} {toggleMenuFull} />-->
 
 <style>
 	.menupoint::after {

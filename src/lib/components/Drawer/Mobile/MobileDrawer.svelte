@@ -5,7 +5,7 @@
 	export let openMenuFull: boolean;
 </script>
 
-<aside
+<div
 	id="drawerFull"
 	on:click={toggleMenuFull}
 	class="{openMenuFull
@@ -36,7 +36,7 @@
 						/>
 					</svg>
 				</button>
-				<div class="bg-rc_red my-2 block h-0.5" />
+				<div class="bg-rc_red my-2 block h-0.5"></div>
 			</div>
 			<div class="left">
 				<!-- left start -->
@@ -156,4 +156,4 @@
 			</div>
 		</div>
 	</div>
-</aside>
+</div>
