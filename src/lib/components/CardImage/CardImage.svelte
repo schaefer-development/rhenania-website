@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { linkTo } from '$lib/helpers';
 	import type { CardImage } from '$lib/graphql/generated/schema';
 	export let card: Partial<CardImage> = {};
 </script>
@@ -9,7 +8,7 @@
 	class="mod_cardImage relative mx-5 my-5 grow overflow-hidden bg-white shadow-sm duration-150 ease-in-out hover:shadow-lg"
 >
 	{#if card?.link?.target}
-		<a href={$linkTo(card.link.target.slug)} title={card.headline}>
+		<a href={card.link.target.slug} title={card.headline}>
 			<div class="cardImageWrapper h-48 overflow-hidden">
 				<div
 					class="cardImage h-full bg-cover bg-center"

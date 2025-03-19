@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { linkTo } from '$lib/helpers';
 </script>
 
 <div class="mx-auto flex w-full max-w-screen-2xl flex-col">
@@ -29,32 +28,32 @@
 	<div class="mx-auto flex w-full max-w-screen-2xl flex-row">
 		<div class="flex w-full flex-row px-10 pt-4 pb-10 text-center">
 			<a
-				href={$linkTo('/ueberuns')}
+				href="/ueberuns"
 				class="hover:text-rc_red focus:text-rc_red w-full py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 				>Über uns</a
 			>
 			<a
-				href={$linkTo('/kontakt')}
+				href="/kontakt"
 				class="hover:text-rc_red focus:text-rc_red w-full py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 				>Kontakt und Anfahrt</a
 			>
 			<a
-				href={$linkTo('/karriere')}
+				href="/karriere"
 				class="hover:text-rc_red focus:text-rc_red w-full py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 				>Karriere</a
 			>
 			<a
-				href={$linkTo('/versandlogistik-info')}
+				href="/versandlogistik-info"
 				class="hover:text-rc_red focus:text-rc_red w-full py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 				>Neues</a
 			>
 			<a
-				href={$linkTo('/partner')}
+				href="/partner"
 				class="hover:text-rc_red focus:text-rc_red w-full py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 				>Partner</a
 			>
 			<a
-				href={$linkTo('/referenzen')}
+				href="/referenzen"
 				class="hover:text-rc_red focus:text-rc_red w-full py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 				>Referenzen</a
 			>

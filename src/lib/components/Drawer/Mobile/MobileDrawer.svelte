@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { linkTo } from '$lib/helpers';
 	import DrawerAccordion from '$lib/components/Drawer/DrawerAccordion.svelte';
 	export let toggleMenuFull: () => void;
 	export let openMenuFull: boolean;
@@ -41,7 +40,7 @@
 			<div class="left">
 				<!-- left start -->
 				<a
-					href={$linkTo('')}
+					href="#"
 					class="text-rc_skyblue text-rc_skyblue text-xl font-medium tracking-wider break-words uppercase"
 					>Start</a
 				>
@@ -53,14 +52,12 @@
 				<DrawerAccordion id="versandlogistiksystem_drawer_full">
 					<span slot="headline">Versandlogistiksystem</span>
 					<div slot="content">
-						<a href={$linkTo('/k04')} class="rc_desktopmenu_subpoint"
+						<a href="/k04" class="rc_desktopmenu_subpoint"
 							>K04 - Kommissionieren, Kontrollieren, Packen</a
 						>
-						<a href={$linkTo('/f95')} class="rc_desktopmenu_subpoint"
-							>F95 - Paket- und Palettenversand</a
-						>
+						<a href="/f95" class="rc_desktopmenu_subpoint">F95 - Paket- und Palettenversand</a>
 
-						<a href={$linkTo('/vka')} class="rc_desktopmenu_subpoint"
+						<a href="/vka" class="rc_desktopmenu_subpoint"
 							>VKA - Versandkostenkontrolle und Abrechnung</a
 						>
 					</div>
@@ -68,24 +65,18 @@
 				<DrawerAccordion id="versandoptimierung_drawer_full">
 					<span slot="headline">Versandoptimierung</span>
 					<div slot="content">
-						<a href={$linkTo('/u12')} class="rc_desktopmenu_subpoint"
-							>U12 - Umsatzsteuer Befreiung sichern</a
-						>
-						<a href={$linkTo('/duv')} class="rc_desktopmenu_subpoint">DUV - Dubletten vermeiden</a>
-						<a href={$linkTo('/apk')} class="rc_desktopmenu_subpoint"
-							>APK - Adressprüfung und Korrektur</a
-						>
-						<a href={$linkTo('/g10')} class="rc_desktopmenu_subpoint">G10 - Gefahrgutversand</a>
+						<a href="/u12" class="rc_desktopmenu_subpoint">U12 - Umsatzsteuer Befreiung sichern</a>
+						<a href="/duv" class="rc_desktopmenu_subpoint">DUV - Dubletten vermeiden</a>
+						<a href="/apk" class="rc_desktopmenu_subpoint">APK - Adressprüfung und Korrektur</a>
+						<a href="/g10" class="rc_desktopmenu_subpoint">G10 - Gefahrgutversand</a>
 					</div>
 				</DrawerAccordion>
 				<DrawerAccordion id="hardware_drawer_full">
 					<span slot="headline">Hardware</span>
 					<div slot="content">
-						<a href={$linkTo('/etikettendrucker')} class="rc_desktopmenu_subpoint"
-							>Etikettendrucker</a
-						>
-						<a href={$linkTo('/waagen')} class="rc_desktopmenu_subpoint">Waagen</a>
-						<a href={$linkTo('/barcodescanner')} class="rc_desktopmenu_subpoint">Barcodescanner</a>
+						<a href="/etikettendrucker" class="rc_desktopmenu_subpoint">Etikettendrucker</a>
+						<a href="/waagen" class="rc_desktopmenu_subpoint">Waagen</a>
+						<a href="/barcodescanner" class="rc_desktopmenu_subpoint">Barcodescanner</a>
 					</div>
 				</DrawerAccordion>
 
@@ -100,32 +91,32 @@
 				</p>
 
 				<a
-					href={$linkTo('/ueberuns')}
+					href="/ueberuns"
 					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Über uns</a
 				>
 				<a
-					href={$linkTo('/kontakt')}
+					href="/kontakt"
 					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Kontakt und Anfahrt</a
 				>
 				<a
-					href={$linkTo('/karriere')}
+					href="/karriere"
 					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Karriere</a
 				>
 				<a
-					href={$linkTo('/versandlogistik-info')}
+					href="/versandlogistik-info"
 					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Neues</a
 				>
 				<a
-					href={$linkTo('/partner')}
+					href="/partner"
 					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Partner</a
 				>
 				<a
-					href={$linkTo('/referenzen')}
+					href="/referenzen"
 					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Referenzen</a
 				>
@@ -138,17 +129,17 @@
 				</p>
 
 				<a
-					href={$linkTo('/cloudloesung')}
+					href="/cloudloesung"
 					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Cloudlösung</a
 				>
 				<a
-					href={$linkTo('/onlinesupport')}
+					href="/onlinesupport"
 					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Online-Support</a
 				>
 				<a
-					href={$linkTo('/download')}
+					href="/download"
 					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Download</a
 				>
