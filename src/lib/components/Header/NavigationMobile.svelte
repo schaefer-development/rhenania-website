@@ -15,8 +15,16 @@
 		{
 			title: 'Versandlogistiksystem',
 			links: [
-				{ title: 'Über uns', link: '#' },
-				{ title: 'Kontakt und Anfahrt', link: '#' }
+				{ title: 'K04', link: '#' },
+				{ title: 'F95', link: '#' }
+			]
+		},
+
+		{
+			title: 'Versandoptimierung',
+			links: [
+				{ title: 'text', link: '#' },
+				{ title: 'test22', link: '#' }
 			]
 		}
 	];
@@ -88,52 +96,56 @@
 				class="text-rc_skyblue flex grow flex-col space-y-2 text-xl font-medium tracking-wider uppercase"
 			>
 				<a href="/" class="text-sky-200">Start</a>
+				<hr class="my-2 h-0.75 w-full bg-blue-600" />
+
 				<a href="/" class="text-sky-200">Produkte</a>
 
 				<div class="flex grow flex-col">
-					<!-- Unternehmen Accordion -->
-					<button
-						class="text-rc_skyblue flex w-full items-center justify-between text-left text-xl font-medium tracking-wider uppercase focus:outline-none"
-						on:click={() => toggleAccordion(0)}
-					>
-						<span
-							class="w-full self-center text-sm font-medium tracking-widest text-white uppercase"
-							>Versandlogistiksystem</span
-						>
+					{#each accordionItems as accordionItem, i}
+						{i}
 
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							class="{openIndex === 0 ? 'text-white' : 'text-red-500'} h-6 w-6"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
+						<button
+							class="text-rc_skyblue flex w-full items-center justify-between text-left text-xl font-medium tracking-wider uppercase focus:outline-none"
+							on:click={() => toggleAccordion(i)}
 						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
-							/>
-						</svg>
-					</button>
-					<div
-						class="overflow-hidden transition-all duration-300 ease-in-out"
-						style="max-height: {openIndex === 0 ? '500px' : '0'}"
-					>
-						<div class="py-4 text-gray-700">
-							<a
-								href="#"
-								class="focus:text-rc_red block py-1 text-sm font-medium tracking-widest text-sky-200 text-white uppercase focus:ring-0 focus:outline-none"
-								>sdsdf</a
+							<span
+								class="w-full cursor-pointer self-center text-sm font-medium tracking-widest text-white uppercase hover:text-red-500"
+								>{accordionItem.title}</span
 							>
-							<a
-								href="#"
-								class="block py-1 text-sm font-medium tracking-widest text-white uppercase"
-								>Kontakt und Anfahrt</a
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="{openIndex === i ? 'text-white' : 'text-red-500'} h-6 w-6"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
 							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+								/>
+							</svg>
+						</button>
+						<hr class="my-2 h-0.75 w-full bg-blue-600" />
+
+						<!-- Unternehmen Accordion -->
+
+						<div
+							class="overflow-hidden transition-all duration-300 ease-in-out"
+							style="max-height: {openIndex === i ? '500px' : '0'}"
+						>
+							<div class="py-2">
+								<a
+									href="#"
+									class="block pb-1 text-sm font-medium tracking-widest text-cyan-200 uppercase hover:text-red-500 focus:ring-0 focus:outline-none"
+									>sdfsdf</a
+								>
+								<hr class="my-2 h-0.5 w-full bg-blue-600" />
+							</div>
 						</div>
-					</div>
-					<!-- -->
+						<!-- -->
+					{/each}
 				</div>
 			</div>
 
