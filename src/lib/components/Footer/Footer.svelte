@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Logo from '$lib/components/Logo/Logo.svelte';
-	import { linkTo } from '$lib/helpers';
 	import FooterAccordion from '$lib/components/Footer/FooterAccordion.svelte';
 
 	import Slideshow from '$lib/components/Slideshow/Slideshow.svelte';
@@ -61,18 +60,18 @@
 					>
 					<div slot="content" class="pb-2">
 						<a
-							href={$linkTo('/k04')}
+							href="/k04"
 							class="hover:text-rc_red focus:text-rc_red block pl-2 text-white focus:ring-0 focus:outline-none"
 							>– K04</a
 						>
 						<a
-							href={$linkTo('/f95')}
+							href="/f95"
 							class="hover:text-rc_red focus:text-rc_red block pl-2 text-white focus:ring-0 focus:outline-none"
 							>– F95</a
 						>
 
 						<a
-							href={$linkTo('/vka')}
+							href="/vka"
 							class="hover:text-rc_red focus:text-rc_red block pl-2 text-white focus:ring-0 focus:outline-none"
 							>– VKA</a
 						>
@@ -87,22 +86,22 @@
 					>
 					<div slot="content" class="pb-2">
 						<a
-							href={$linkTo('/u12')}
+							href="/u12"
 							class="hover:text-rc_red focus:text-rc_red block pl-2 text-white focus:ring-0 focus:outline-none"
 							>– U12</a
 						>
 						<a
-							href={$linkTo('/apk')}
+							href="/apk"
 							class="hover:text-rc_red focus:text-rc_red block pl-2 text-white focus:ring-0 focus:outline-none"
 							>– APK</a
 						>
 						<a
-							href={$linkTo('/duv')}
+							href="/duv"
 							class="hover:text-rc_red focus:text-rc_red block pl-2 text-white focus:ring-0 focus:outline-none"
 							>– DUV</a
 						>
 						<a
-							href={$linkTo('/g10')}
+							href="/g10"
 							class="hover:text-rc_red focus:text-rc_red block pl-2 text-white focus:ring-0 focus:outline-none"
 							>– G10</a
 						>
@@ -117,17 +116,17 @@
 					>
 					<div slot="content" class="pb-2">
 						<a
-							href={$linkTo('/etikettendrucker')}
+							href="/etikettendrucker"
 							class="hover:text-rc_red focus:text-rc_red block pl-2 text-white focus:ring-0 focus:outline-none"
 							>– Etikettendrucker</a
 						>
 						<a
-							href={$linkTo('/waagen')}
+							href="/waagen"
 							class="hover:text-rc_red focus:text-rc_red block pl-2 text-white focus:ring-0 focus:outline-none"
 							>– Waagen</a
 						>
 						<a
-							href={$linkTo('/barcodescanner')}
+							href="/barcodescanner"
 							class="hover:text-rc_red focus:text-rc_red block pl-2 text-white focus:ring-0 focus:outline-none"
 							>– Barcodescanner</a
 						>
@@ -139,36 +138,36 @@
 			<p class="pb-2 text-center font-bold tracking-wider uppercase sm:text-left">Unternehmen</p>
 			<p class="text-center leading-relaxed tracking-wide sm:text-left">
 				<a
-					href={$linkTo('/ueberuns')}
+					href="/ueberuns"
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Über uns</a
 				><br />
 				<a
-					href={$linkTo('/kontakt')}
+					href="/kontakt"
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Kontakt und Anfahrt</a
 				><br />
 
 				<a
-					href={$linkTo('/karriere')}
+					href="/karriere"
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Karriere</a
 				><br />
 
 				<a
-					href={$linkTo('/versandlogistik-info')}
+					href="/versandlogistik-info"
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Neues</a
 				><br />
 
 				<a
-					href={$linkTo('/partner')}
+					href="/partner"
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Partner</a
 				><br />
 
 				<a
-					href={$linkTo('/referenzen')}
+					href="/referenzen"
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Referenzen</a
 				><br />
@@ -178,18 +177,18 @@
 			<p class="pb-2 text-center font-bold tracking-wider uppercase sm:text-left">Service</p>
 			<p class="text-center leading-relaxed tracking-wide sm:text-left">
 				<a
-					href={$linkTo('/cloudloesung')}
+					href="/cloudloesung"
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Cloudlösung</a
 				><br />
 				<a
-					href={$linkTo('/onlinesupport')}
+					href="/onlinesupport"
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Online-Support</a
 				><br />
 
 				<a
-					href={$linkTo('/download')}
+					href="/download"
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Download</a
 				><br />
@@ -199,14 +198,14 @@
 			<p class="pb-2 text-center font-bold tracking-wider uppercase sm:text-left">Kontakt</p>
 			<p class="text-center leading-relaxed tracking-wide sm:text-left">
 				<a
-					href={$linkTo('/impressum')}
+					href="/impressum"
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Impressum</a
 				>
 				<br />
 
 				<a
-					href={$linkTo('/datenschutz')}
+					href="/datenschutz"
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Datenschutz</a
 				>

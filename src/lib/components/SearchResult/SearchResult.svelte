@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { linkTo } from '$lib/helpers';
 	import SearchIcon from './SearchIcon.svelte';
 
 	function eachRecursive(obj, highlights = []) {
@@ -28,14 +27,14 @@
 	<div class="hyperlink flex pt-1">
 		<div class="searchHit relative flex-none pr-1">
 			{#if hit.__typename === 'BlogPost'}
-				<a sveltekit:prefetch class="flex" href={$linkTo(`/blog/${hit.slug}`)}>
+				<a sveltekit:prefetch class="flex" href={`/blog/${hit.slug}`}>
 					<span class="pr-2 align-middle">
 						{@html hit.blogpostTitle}
 					</span>
 					<SearchIcon />
 				</a>
 			{:else}
-				<a sveltekit:prefetch class="flex" href={$linkTo(`/${hit.slug}`)}>
+				<a sveltekit:prefetch class="flex" href={`/${hit.slug}`}>
 					<span class="pr-2 align-middle">
 						{@html hit.title}
 					</span>

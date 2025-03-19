@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { linkTo } from '$lib/helpers';
 	import type { CardIcon } from '$lib/graphql/generated/schema';
 	export let card: Partial<CardIcon> = {};
 </script>
@@ -8,7 +7,7 @@
 	class="mod_cardIcon relative mx-5 my-5 grow overflow-hidden bg-white shadow-sm duration-150 ease-in-out hover:shadow-lg"
 >
 	{#if card?.link?.target}
-		<a href={$linkTo(card.link.target.slug)} title={card.headline}>
+		<a href={card.link.target.slug} title={card.headline}>
 			<div
 				class="cardIcon bg-red flex h-48 items-center justify-center"
 				style="background-color:{card.backgroundColor.hex}"

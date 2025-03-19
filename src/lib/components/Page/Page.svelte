@@ -28,10 +28,10 @@
 		TextAndImage,
 		HeroImage,
 		BlogPost
-	};
+	} as const;
 </script>
 
-{#if page}
+{#if page && page.modules}
 	<div class="relative">
 		{#each page.modules as module (module.id)}
 			<svelte:component this={mapping[module.__typename]} {module} />

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { linkTo } from '$lib/helpers';
 </script>
 
 <div class="mx-auto flex w-full max-w-screen-2xl flex-col">
@@ -28,17 +27,17 @@
 	<div class="mx-auto flex w-full max-w-screen-2xl flex-row">
 		<div class="flex w-full flex-row px-10 pt-4 pb-10 text-center">
 			<a
-				href={$linkTo('/cloudloesung')}
+				href="/cloudloesung"
 				class="hover:text-rc_red focus:text-rc_red w-full py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 				>Cloudlösung</a
 			>
 			<a
-				href={$linkTo('/onlinesupport')}
+				href="/onlinesupport"
 				class="hover:text-rc_red focus:text-rc_red w-full py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 				>Online-Support</a
 			>
 			<a
-				href={$linkTo('/download')}
+				href="/download"
 				class="hover:text-rc_red focus:text-rc_red w-full py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 				>Download</a
 			>

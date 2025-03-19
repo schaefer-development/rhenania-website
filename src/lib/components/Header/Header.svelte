@@ -1,7 +1,6 @@
 <script lang="ts">
 	// to do import { prerendering } from '$app/env';
 	import { goto } from '$app/navigation';
-	import { linkTo } from '$lib/helpers';
 	import { page } from '$app/stores';
 	import Logo from '$lib/components/Logo/Logo.svelte';
 	//	import Drawer from '$lib/components/Drawer/Drawer.svelte';
@@ -38,7 +37,7 @@
 
 <header class="space-between sticky top-0 z-40 flex flex-col bg-white shadow-md">
 	<div class="mx-auto flex h-20 w-full max-w-screen-2xl flex-row items-center px-4 md:px-10">
-		<a href={$linkTo('/')} class="text-rc_darkblue w-20 shrink-0 md:w-28"><Logo /></a>
+		<a href="/" class="text-rc_darkblue w-20 shrink-0 md:w-28"><Logo /></a>
 
 		<div class="flex flex-grow items-center justify-end">
 			<div class="flex hidden flex-grow justify-end px-6 sm:block md:px-10">
@@ -89,8 +88,8 @@
 
 			<div class="flex grow justify-end pl-0 lg:grow-0 lg:pl-4">
 				<a
-					href={$linkTo('/kontakt')}
-					class="flex h-9 items-center justify-center bg-red-600 px-2 text-sm font-medium tracking-wider text-white uppercase uppercase hover:bg-red-700 hover:text-white"
+					href="/kontakt"
+					class="bg-rc_red hover:bg-rc_red-darker flex h-9 items-center justify-center px-2 text-sm font-medium tracking-wider text-white uppercase uppercase hover:text-white"
 					title="Nehmen Sie Kontakt auf">Kontakt</a
 				>
 				<a

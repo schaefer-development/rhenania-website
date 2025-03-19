@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { BlogPost } from '$lib/graphql/generated/schema';
-	import { linkTo } from '$lib/helpers';
 	export let module: Partial<BlogPost> = {};
 </script>
 
@@ -20,7 +19,7 @@
 				{module.teaserText}
 			</p>
 			<a
-				href={$linkTo(`/blog/${module.slug}`)}
+				href={`/blog/${module.slug}`}
 				class="bg-rc_red hover:bg-rc_red-darker rc_button_corner relative mt-6 py-2 pr-3 pl-5 text-xs font-bold tracking-widest text-white uppercase md:text-sm"
 				>mehr erfahren</a
 			>
