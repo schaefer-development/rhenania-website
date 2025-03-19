@@ -1,143 +1,108 @@
-/* app.css */
-@import '@splidejs/splide/dist/css/splide.min.css';
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@import '@fontsource/fira-mono';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
 
-.splide__arrow svg path {
-	fill: white;
-}
-
-.splide__arrow.splide__arrow--prev {
-	margin-left: -2rem;
-}
-
-.splide__arrow.splide__arrow--next {
-	margin-right: -1.5rem;
-}
-
-html {
-	scroll-behavior: smooth;
+:root {
+	--font-body:
+		Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+		'Open Sans', 'Helvetica Neue', sans-serif;
+	--font-mono: 'Fira Mono', monospace;
+	--color-bg-0: rgb(202, 216, 228);
+	--color-bg-1: hsl(209, 36%, 86%);
+	--color-bg-2: hsl(224, 44%, 95%);
+	--color-theme-1: #ff3e00;
+	--color-theme-2: #4075a6;
+	--color-text: rgba(0, 0, 0, 0.7);
+	--column-width: 42rem;
+	--column-margin-top: 4rem;
+	font-family: var(--font-body);
+	color: var(--color-text);
 }
 
 body {
-	font-family: 'Red Hat Text';
-	font-size: calc(12.5px + 0.25vw);
+	min-height: 100vh;
+	margin: 0;
+	background-attachment: fixed;
+	background-color: var(--color-bg-1);
+	background-size: 100vw 100vh;
+	background-image:
+		radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 100%),
+		linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%);
 }
 
-.rc_h1 {
-	@apply font-normal text-xl md:text-2xl lg:text-4xl uppercase tracking-wider;
+h1,
+h2,
+p {
+	font-weight: 400;
 }
 
-.rc_h2 {
-	@apply font-bold text-base lg:text-xl uppercase tracking-widest;
+p {
+	line-height: 1.5;
 }
 
-.rc_h3 {
-	@apply font-bold text-sm lg:text-base uppercase tracking-wider;
+a {
+	color: var(--color-theme-1);
+	text-decoration: none;
 }
 
-.rc_h4 {
-	@apply font-bold text-xs lg:text-sm uppercase tracking-widest;
+a:hover {
+	text-decoration: underline;
 }
 
-.rc_break_hyphens {
-	-moz-hyphens: auto;
-	hyphens: auto;
+h1 {
+	font-size: 2rem;
+	text-align: center;
 }
 
-.rc_desktopmenu_subpoint {
-	@apply block py-2 text-rc_skyblue uppercase tracking-wider border-b border-rc_darkblue text-sm font-medium hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red;
+h2 {
+	font-size: 1rem;
 }
 
-.rc_rotate {
-	transform: rotate(45deg);
+pre {
+	font-size: 16px;
+	font-family: var(--font-mono);
+	background-color: rgba(255, 255, 255, 0.45);
+	border-radius: 3px;
+	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
+	padding: 0.5em;
+	overflow-x: auto;
+	color: var(--color-text);
 }
 
-.rc_text_shadow {
-	text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+.text-column {
+	display: flex;
+	max-width: 48rem;
+	flex: 0.6;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto;
 }
 
-.rc_button_corner:after {
-	content: '';
-	position: absolute;
-	right: -1em;
-	top: 0px;
-	width: 1em;
-	height: 100%;
-	background: inherit;
-	clip-path: polygon(100% 0, 0 0, 0 100%);
+input,
+button {
+	font-size: inherit;
+	font-family: inherit;
 }
 
-.blogteaserbg {
-	background: rgba(42, 73, 157, 0.95);
+button:focus:not(:focus-visible) {
+	outline: none;
 }
 
-.rc_background_triangle {
-	background-image: url(/triangle.svg);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: 0 50%;
+@media (min-width: 720px) {
+	h1 {
+		font-size: 2.4rem;
+	}
 }
 
-.rc_menu {
+.visually-hidden {
+	border: 0;
+	clip: rect(0 0 0 0);
 	height: auto;
-	background-color: rgba(21, 37, 79, 0.99);
-}
-
-.rc_menuIsOpen {
-	/* only mobile */
-	max-height: 100vh;
+	margin: 0;
 	overflow: hidden;
-}
-
-.rc_menu_visible {
-	margin-top: 0;
-}
-
-.rc_menu_hidden {
-	margin-top: -333vh;
-}
-
-.rc_blur {
-	filter: blur(0.25em);
-}
-
-.rc_padding_small {
-	height: 2vw;
-}
-
-.rc_padding_medium {
-	height: 5vw;
-}
-
-.rc_padding_large {
-	height: 10vw;
-}
-
-hr {
-	height: 12px;
-}
-
-blockquote {
-	padding: 0.5em 1em;
-	margin: 1em 0;
-	border-left: 2px solid #7a7a7a;
-}
-
-.mod_accordion .item_content ul {
-	padding: 1.5em 0;
-	margin-left: 2em;
-}
-
-.mod_accordion .item_content ul li {
-	list-style-type: none;
-	padding: 0.25em 1em 0.5em 0.25em;
-}
-
-.mod_accordion .item_content ul li:before {
+	padding: 0;
 	position: absolute;
-	content: '■';
-	color: rgba(42, 73, 157, 1);
-	margin-left: -2em;
+	width: 1px;
+	white-space: nowrap;
 }
