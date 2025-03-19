@@ -2,15 +2,15 @@
 	import { linkTo } from '$lib/helpers';
 </script>
 
-<div class="flex flex-col w-full max-w-screen-2xl mx-auto">
-	<div class="w-full grid grid-cols-1 px-10 pt-10 max-w-screen-2xl mx-auto">
+<div class="mx-auto flex w-full max-w-screen-2xl flex-col">
+	<div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 px-10 pt-10">
 		<button
-			class="flex w-full items-center justify-end focus:border-0 text-rc_red uppercase font-medium tracking-wider hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red "
+			class="text-rc_red hover:text-rc_red focus:text-rc_red flex w-full items-center justify-end font-medium tracking-wider uppercase focus:border-0 focus:ring-0 focus:outline-none"
 		>
-			<span class="uppercase font-medium px-2">Schliessen</span>
+			<span class="px-2 font-medium uppercase">Schliessen</span>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
-				class="fill-current h-6 w-6"
+				class="h-6 w-6 fill-current"
 				fill="none"
 				viewBox="0 0 24 24"
 				stroke="currentColor"
@@ -23,39 +23,39 @@
 				/>
 			</svg>
 		</button>
-		<div class="block bg-rc_red h-0.5 my-2" />
+		<div class="bg-rc_red my-2 block h-0.5"></div>
 	</div>
 
-	<div class="flex flex-row w-full max-w-screen-2xl mx-auto">
-		<div class="w-full px-10 pt-4 pb-10 text-center flex flex-row">
+	<div class="mx-auto flex w-full max-w-screen-2xl flex-row">
+		<div class="flex w-full flex-row px-10 pt-4 pb-10 text-center">
 			<a
 				href={$linkTo('/ueberuns')}
-				class="w-full text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+				class="hover:text-rc_red focus:text-rc_red w-full py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 				>Über uns</a
 			>
 			<a
 				href={$linkTo('/kontakt')}
-				class="w-full text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+				class="hover:text-rc_red focus:text-rc_red w-full py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 				>Kontakt und Anfahrt</a
 			>
 			<a
 				href={$linkTo('/karriere')}
-				class="w-full text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+				class="hover:text-rc_red focus:text-rc_red w-full py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 				>Karriere</a
 			>
 			<a
 				href={$linkTo('/versandlogistik-info')}
-				class="w-full text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+				class="hover:text-rc_red focus:text-rc_red w-full py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 				>Neues</a
 			>
 			<a
 				href={$linkTo('/partner')}
-				class="w-full text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+				class="hover:text-rc_red focus:text-rc_red w-full py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 				>Partner</a
 			>
 			<a
 				href={$linkTo('/referenzen')}
-				class="w-full text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+				class="hover:text-rc_red focus:text-rc_red w-full py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 				>Referenzen</a
 			>
 		</div>

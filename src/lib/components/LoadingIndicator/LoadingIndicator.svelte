@@ -1,7 +1,7 @@
-<div class="py-12 text-center min-h-screen">
+<div class="min-h-screen py-12 text-center">
 	<svg
 		role="status"
-		class="inline mr-2 w-10 h-10 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+		class="mr-2 inline h-10 w-10 animate-spin fill-blue-600 text-gray-200 dark:text-gray-600"
 		viewBox="0 0 100 101"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"

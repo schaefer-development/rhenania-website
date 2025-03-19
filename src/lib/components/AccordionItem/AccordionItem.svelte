@@ -4,9 +4,9 @@
 	export let accordionItem: Partial<AccordionItem>;
 </script>
 
-<div class="mod_accordion relative tab w-full overflow-hidden h-auto pb-4 block">
-	<input class="absolute opacity-0 " id={accordionItem.id} type="checkbox" name="tabs" />
-	<label class="cursor-pointer flex border-b-2 py-2" for={accordionItem.id}>
+<div class="mod_accordion tab relative block h-auto w-full overflow-hidden pb-4">
+	<input class="absolute opacity-0" id={accordionItem.id} type="checkbox" name="tabs" />
+	<label class="flex cursor-pointer border-b-2 py-2" for={accordionItem.id}>
 		<h3 class="w-full font-bold"><slot name="headline" /></h3>
 		<div class="icon">
 			<svg

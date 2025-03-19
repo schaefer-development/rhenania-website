@@ -4,17 +4,17 @@
 </script>
 
 <div class="mod_assetlink relative">
-	<div class="relative z-10 max-w-screen-lg mx-auto px-10 py-2">
+	<div class="relative z-10 mx-auto max-w-screen-lg px-10 py-2">
 		{#if module?.headline}
-			<h2 class="rc_h2 pb-6 text-rc_red">{module.headline}</h2>
+			<h2 class="rc_h2 text-rc_red pb-6">{module.headline}</h2>
 		{/if}
 
-		<div class="flex hyperlink">
-			<div class="relative flex-none text-rc_red font-bold pr-1">
+		<div class="hyperlink flex">
+			<div class="text-rc_red relative flex-none pr-1 font-bold">
 				<a href={module.assetPicker.url} class="flex" target="_blank">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						class="h-6 w-6 mr-2"
+						class="mr-2 h-6 w-6"
 						fill="none"
 						viewBox="0 0 24 24"
 						stroke="currentColor"

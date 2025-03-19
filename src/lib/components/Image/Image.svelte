@@ -9,26 +9,26 @@
 	<div class="relative flex flex-col">
 		{#if module.imageWidth == 'FullWidth'}
 			<div
-				class="w-full h-30v bg-cover bg-center"
+				class="h-30v w-full bg-cover bg-center"
 				style="background-image: url({module.image.url})"
 			/>
 		{/if}
 
 		{#if module.imageWidth == 'ContentWidth'}
-			<div class="relative max-w-screen-lg mx-auto px-10">
-				<img src={module.image.url} alt="Rhenania" class="w-full mx-auto h-auto" />
+			<div class="relative mx-auto max-w-screen-lg px-10">
+				<img src={module.image.url} alt="Rhenania" class="mx-auto h-auto w-full" />
 			</div>
 		{/if}
 
 		{#if module.imageWidth == 'HalfContentWidth'}
-			<div class="relative max-w-screen-lg mx-auto px-10">
-				<img src={module.image.url} alt="Rhenania" class="w-6/12 mx-auto h-auto" />
+			<div class="relative mx-auto max-w-screen-lg px-10">
+				<img src={module.image.url} alt="Rhenania" class="mx-auto h-auto w-6/12" />
 			</div>
 		{/if}
 
 		{#if module.imageWidth == 'QuarterContentWidth'}
-			<div class="relative max-w-screen-lg mx-auto px-10">
-				<img src={module.image.url} alt="Rhenania" class="w-3/12 mx-auto h-auto" />
+			<div class="relative mx-auto max-w-screen-lg px-10">
+				<img src={module.image.url} alt="Rhenania" class="mx-auto h-auto w-3/12" />
 			</div>
 		{/if}
 	</div>

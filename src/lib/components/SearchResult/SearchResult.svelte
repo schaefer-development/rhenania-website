@@ -21,22 +21,22 @@
 	const highlights: string[] = eachRecursive(snippet);
 </script>
 
-<div class="relative pb-3 ">
+<div class="relative pb-3">
 	{#each highlights as highlight, i (i)}
 		<p class="pb-4 font-normal text-black">{@html highlight}</p>
 	{/each}
-	<div class="flex hyperlink pt-1">
-		<div class="relative flex-none pr-1 searchHit">
+	<div class="hyperlink flex pt-1">
+		<div class="searchHit relative flex-none pr-1">
 			{#if hit.__typename === 'BlogPost'}
 				<a sveltekit:prefetch class="flex" href={$linkTo(`/blog/${hit.slug}`)}>
-					<span class="align-middle pr-2">
+					<span class="pr-2 align-middle">
 						{@html hit.blogpostTitle}
 					</span>
 					<SearchIcon />
 				</a>
 			{:else}
 				<a sveltekit:prefetch class="flex" href={$linkTo(`/${hit.slug}`)}>
-					<span class="align-middle pr-2">
+					<span class="pr-2 align-middle">
 						{@html hit.title}
 					</span>
 					<SearchIcon />

@@ -10,20 +10,20 @@
 	on:click={toggleMenuFull}
 	class="{openMenuFull
 		? 'rc_menu_visible'
-		: 'rc_menu_hidden'} absolute visible lg:hidden rc_menu left-0 top-32 sm:top-20 w-full min-h-screen overflow-auto ease-in-out transform duration-300 transition-all z-40"
+		: 'rc_menu_hidden'} rc_menu visible absolute top-32 left-0 z-40 min-h-screen w-full transform overflow-auto transition-all duration-300 ease-in-out sm:top-20 lg:hidden"
 >
-	<div class="relative flex flex-row w-full max-w-screen-2xl mx-auto">
+	<div class="relative mx-auto flex w-full max-w-screen-2xl flex-row">
 		<div
-			class="w-full px-4 md:px-10 py-10 grid grid-cols-1 sm:grid-cols-2 gap-x-10 md:gap-x-20 gap-y-4 text-white "
+			class="grid w-full grid-cols-1 gap-x-10 gap-y-4 px-4 py-10 text-white sm:grid-cols-2 md:gap-x-20 md:px-10"
 		>
 			<div class="col-span-1 sm:col-span-2">
 				<button
-					class="flex w-full items-center justify-end focus:border-0 text-rc_red uppercase font-medium tracking-wider hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red "
+					class="text-rc_red hover:text-rc_red focus:text-rc_red flex w-full items-center justify-end font-medium tracking-wider uppercase focus:border-0 focus:ring-0 focus:outline-none"
 				>
-					<span class="uppercase font-medium px-2">Schliessen</span>
+					<span class="px-2 font-medium uppercase">Schliessen</span>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						class="fill-current h-6 w-6"
+						class="h-6 w-6 fill-current"
 						fill="none"
 						viewBox="0 0 24 24"
 						stroke="currentColor"
@@ -36,18 +36,18 @@
 						/>
 					</svg>
 				</button>
-				<div class="block bg-rc_red h-0.5 my-2" />
+				<div class="bg-rc_red my-2 block h-0.5" />
 			</div>
 			<div class="left">
 				<!-- left start -->
 				<a
 					href={$linkTo('')}
-					class="font-medium text-xl uppercase tracking-wider break-words text-rc_skyblue text-rc_skyblue"
+					class="text-rc_skyblue text-rc_skyblue text-xl font-medium tracking-wider break-words uppercase"
 					>Start</a
 				>
 
-				<div class="block bg-rc_darkblue h-0.5 my-4" />
-				<p class="font-medium text-xl uppercase tracking-wider break-words text-rc_skyblue">
+				<div class="bg-rc_darkblue my-4 block h-0.5" />
+				<p class="text-rc_skyblue text-xl font-medium tracking-wider break-words uppercase">
 					Produkte
 				</p>
 				<DrawerAccordion id="versandlogistiksystem_drawer_full">
@@ -94,62 +94,62 @@
 			<div class="right">
 				<!-- right start -->
 				<p
-					class="font-medium text-xl uppercase tracking-wider break-words text-rc_skyblue text-rc_skyblue"
+					class="text-rc_skyblue text-rc_skyblue text-xl font-medium tracking-wider break-words uppercase"
 				>
 					Unternehmen
 				</p>
 
 				<a
 					href={$linkTo('/ueberuns')}
-					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Über uns</a
 				>
 				<a
 					href={$linkTo('/kontakt')}
-					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Kontakt und Anfahrt</a
 				>
 				<a
 					href={$linkTo('/karriere')}
-					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Karriere</a
 				>
 				<a
 					href={$linkTo('/versandlogistik-info')}
-					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Neues</a
 				>
 				<a
 					href={$linkTo('/partner')}
-					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Partner</a
 				>
 				<a
 					href={$linkTo('/referenzen')}
-					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Referenzen</a
 				>
-				<div class="block bg-rc_darkblue h-0.5 my-4" />
+				<div class="bg-rc_darkblue my-4 block h-0.5" />
 				<!---  -->
 				<p
-					class="font-medium text-xl uppercase tracking-wider break-words text-rc_skyblue text-rc_skyblue"
+					class="text-rc_skyblue text-rc_skyblue text-xl font-medium tracking-wider break-words uppercase"
 				>
 					Service
 				</p>
 
 				<a
 					href={$linkTo('/cloudloesung')}
-					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Cloudlösung</a
 				>
 				<a
 					href={$linkTo('/onlinesupport')}
-					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Online-Support</a
 				>
 				<a
 					href={$linkTo('/download')}
-					class="block text-white font-medium text-sm tracking-widest uppercase py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Download</a
 				>
 				<!-- right end -->

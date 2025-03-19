@@ -8,22 +8,22 @@
 
 <svelte:window bind:scrollY={y} />
 
-<div class="mod_heroStart relative w-full overflow-hidden h-60v">
+<div class="mod_heroStart h-60v relative w-full overflow-hidden">
 	<div
-		class="relative parallax h-60v"
+		class="parallax h-60v relative"
 		style="transform: translate(0, {y < 2 ? y * 1 : y * paraEffect}px)"
 	>
 		<div
-			class="bg_layer absolute w-full h-60v bg-cover bg-center "
+			class="bg_layer h-60v absolute w-full bg-cover bg-center"
 			style="background-image: url({base}/hero_example.jpg)"
 		/>
-		<div class="bg_layer absolute w-full h-60v bg-rc_darkblue-darker opacity-90" />
-		<div class="bg_layer absolute w-full h-60v rc_background_triangle" />
+		<div class="bg_layer h-60v bg-rc_darkblue-darker absolute w-full opacity-90" />
+		<div class="bg_layer h-60v rc_background_triangle absolute w-full" />
 		<div
-			class="content relative z-2 w-full h-full max-w-screen-2xl mx-auto px-16 flex flex-col items-center justify-center text-center"
+			class="content relative z-2 mx-auto flex h-full w-full max-w-screen-2xl flex-col items-center justify-center px-16 text-center"
 		>
 			<h1
-				class="font-bold text-4xl md:text-5xl lg:text-6xl uppercase tracking-wider text-white pb-2 rc_text_shadow"
+				class="rc_text_shadow pb-2 text-4xl font-bold tracking-wider text-white uppercase md:text-5xl lg:text-6xl"
 			>
 				{$_('components.HeroStart.headline')}
 			</h1>
@@ -32,7 +32,7 @@
 			<a
 				href="#Unser Leistungsangebot"
 				title="Unser Leistungsangebot"
-				class="relative mt-8 pl-5 pr-3 py-2 bg-rc_red text-white text-sm font-bold uppercase tracking-widest hover:bg-rc_red-darker rc_button_corner"
+				class="bg-rc_red hover:bg-rc_red-darker rc_button_corner relative mt-8 py-2 pr-3 pl-5 text-sm font-bold tracking-widest text-white uppercase"
 			>
 				Mehr erfahren
 			</a>

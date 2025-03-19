@@ -8,7 +8,7 @@
 	on:click={() => toggleMenu(menuLabel)}
 	class="{openMenu === menuLabel
 		? 'rc_menu_visible hidden lg:block'
-		: 'rc_menu_hidden'} rc_menu left-0 top-20 w-full shadow-md fixed overflow-auto ease-in-out transform transition-all duration-300 z-40"
+		: 'rc_menu_hidden'} rc_menu fixed top-20 left-0 z-40 w-full transform overflow-auto shadow-md transition-all duration-300 ease-in-out"
 >
 	<slot />
 </aside>
