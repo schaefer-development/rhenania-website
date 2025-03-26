@@ -39,6 +39,8 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
-		"@fontsource/red-hat-text": "^5.2.5"
+		"@fontsource/red-hat-text": "^5.2.5",
+		"@splidejs/splide-extension-auto-scroll": "^0.4.2",
+		"@splidejs/svelte-splide": "^0.1.17"
 	}
 }
