@@ -40,7 +40,7 @@
 	},
 	"dependencies": {
 		"@fontsource/red-hat-text": "^5.2.5",
-		"@splidejs/splide-extension-auto-scroll": "^0.4.2",
-		"@splidejs/svelte-splide": "^0.1.17"
+		"@splidejs/splide-extension-auto-scroll": "^0.5.3",
+		"@splidejs/svelte-splide": "^0.2.9"
 	}
 }
