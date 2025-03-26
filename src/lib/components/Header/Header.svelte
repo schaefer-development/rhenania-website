@@ -15,11 +15,15 @@
 	const searchKey = ALGOLIA_SEARCH_KEY;
 	let searchEverFocused = false;
 
-	export let openMenu: string | null;
-	export let toggleMenu: (menu: string) => void;
+	let openMenuFull = $state(false);
+	let openMenu: string | null = $state(null);
 
-	export let openMenuFull: boolean;
-	export let toggleMenuFull: () => void;
+	const toggleMenu = (menu: string) => {
+		openMenu = openMenu === menu ? null : menu;
+	};
+	const toggleMenuFull = () => {
+		openMenuFull = !openMenuFull;
+	};
 
 	const search =
 		({ url, params }: { url: URL; params: Record<string, string> }) =>
@@ -218,13 +222,13 @@
 </header>
 
 <!-- aside menu -->
-<Drawer {openMenu} {toggleMenu} menuLabel={'produkte'}>
+<Drawer {openMenu} {toggleMenu} menuLabel='produkte'>
 	<ProductMenu></ProductMenu>
 </Drawer>
-<Drawer {openMenu} {toggleMenu} menuLabel={'unternehmen'}>
+<Drawer {openMenu} {toggleMenu} menuLabel='unternehmen'>
 	<CompanyMenu></CompanyMenu>
 </Drawer>
-<Drawer {openMenu} {toggleMenu} menuLabel={'service'}>
+<Drawer {openMenu} {toggleMenu} menuLabel='service'>
 	<ServiceMenu></ServiceMenu>
 </Drawer>
 

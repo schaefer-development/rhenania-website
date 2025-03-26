@@ -5,23 +5,13 @@
 
 	let { children } = $props();
 
-	let openMenuFull = false;
-	let openMenu = null;
-
-	const toggleMenu = (menu: string) => {
-		openMenu = openMenu === menu ? null : menu;
-	};
-	const toggleMenuFull = () => {
-		openMenuFull = !openMenuFull;
-	};
 </script>
 
 <div
 	id="top"
 	class="flex min-h-screen flex-col justify-between bg-gray-50"
-	class:rc_menuIsOpen={openMenuFull}
 >
-	<Header {toggleMenuFull} {openMenuFull} {openMenu} {toggleMenu} />
+	<Header />
 
 	<main class="mb-auto">
 		{@render children()}
