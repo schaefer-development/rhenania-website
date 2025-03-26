@@ -123,7 +123,7 @@
 			</div>
 		{/if}
 	</div>
-	<div class="relative w-full {mapPadding(module.paddingBottom)}" />
+	<div class="relative w-full {mapPadding(module.paddingBottom)}" ></div>
 </div>
 
 <style>

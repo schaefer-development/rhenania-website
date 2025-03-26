@@ -45,7 +45,7 @@
 					>Start</a
 				>
 
-				<div class="bg-rc_darkblue my-4 block h-0.5" />
+				<div class="bg-rc_darkblue my-4 block h-0.5" ></div>
 				<p class="text-rc_skyblue text-xl font-medium tracking-wider break-words uppercase">
 					Produkte
 				</p>
@@ -120,7 +120,7 @@
 					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Referenzen</a
 				>
-				<div class="bg-rc_darkblue my-4 block h-0.5" />
+				<div class="bg-rc_darkblue my-4 block h-0.5" ></div>
 				<!---  -->
 				<p
 					class="text-rc_skyblue text-rc_skyblue text-xl font-medium tracking-wider break-words uppercase"

@@ -77,15 +77,5 @@
 		transition-duration: 0.25s;
 	}
 
-	.searchHit a svg {
-		margin-left: 0.25em;
-		margin-right: 0.5em;
-		transition: all;
-		transition-duration: 0.25s;
-	}
 
-	.searchHit:hover svg {
-		margin-left: 0.5em;
-		margin-right: 0.25em;
-	}
 </style>

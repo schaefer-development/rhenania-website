@@ -5,13 +5,13 @@
 </script>
 
 <div class="mod_image relative">
-	<div class="relative w-full {mapPadding(module.paddingTop)}" />
+	<div class="relative w-full {mapPadding(module.paddingTop)}" ></div>
 	<div class="relative flex flex-col">
 		{#if module.imageWidth == 'FullWidth'}
 			<div
 				class="h-30v w-full bg-cover bg-center"
 				style="background-image: url({module.image.url})"
-			/>
+			></div>
 		{/if}
 
 		{#if module.imageWidth == 'ContentWidth'}
@@ -32,5 +32,5 @@
 			</div>
 		{/if}
 	</div>
-	<div class="relative w-full {mapPadding(module.paddingBottom)}" />
+	<div class="relative w-full {mapPadding(module.paddingBottom)}" ></div>
 </div>

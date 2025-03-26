@@ -13,7 +13,7 @@
 				<div
 					class="cardImage h-full bg-cover bg-center"
 					style="background-image: url({card.image.url})"
-				/>
+				></div>
 			</div>
 			<div class="text flex flex-col px-6 py-6 text-center">
 				<div class="rc_h3 text-rc_darkblue mb-2">{card.headline}</div>
@@ -42,7 +42,7 @@
 				<div
 					class="cardImage h-full bg-cover bg-center"
 					style="background-image: url({card.image.url})"
-				/>
+				></div>
 			</div>
 			<div class="text flex flex-col px-6 py-6 text-center">
 				<div class="rc_h3 text-rc_darkblue mb-2">{card.headline}</div>
@@ -70,7 +70,7 @@
 			<div
 				class="cardImage h-full bg-cover bg-center"
 				style="background-image: url({card.image.url})"
-			/>
+			></div>
 		</div>
 		<div class="text flex flex-col px-6 py-6 text-center">
 			<div class="rc_h3 text-rc_darkblue mb-2">{card.headline}</div>
