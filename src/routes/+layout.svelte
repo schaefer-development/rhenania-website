@@ -1,9 +1,10 @@
 <script lang="ts">
+	import type { LayoutProps } from './$types';
 	import Header from '$lib/components/Header/Header.svelte';
-	//	import Footer from '$lib/components/Footer/Footer.svelte';
+	import Footer from '$lib/components/Footer/Footer.svelte';
 	import '../app.css';
 
-	let { children } = $props();
+	let { children, data  }: LayoutProps = $props();
 
 </script>
 
@@ -17,7 +18,7 @@
 		{@render children()}
 	</main>
 
-	<!--<Footer {data} />-->
+	<Footer {data} />
 </div>
 
 <!--
