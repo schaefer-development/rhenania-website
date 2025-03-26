@@ -1,12 +1,15 @@
 @import 'tailwindcss';
-@import '@fontsource/fira-mono';
+@import '@fontsource/red-hat-text/400.css';
+@import '@fontsource/red-hat-text/500.css';
+@import '@fontsource/red-hat-text/700.css';
+
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
 :root {
 	--font-body:
-		Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-		'Open Sans', 'Helvetica Neue', sans-serif;
+		'Red Hat Text', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	--font-mono: 'Fira Mono', monospace;
 	--color-bg-0: rgb(202, 216, 228);
 	--color-bg-1: hsl(209, 36%, 86%);
@@ -31,78 +34,36 @@ body {
 		linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%);
 }
 
-h1,
-h2,
-p {
-	font-weight: 400;
-}
+@theme {
+	--color-rc_darkblue-darkest: #15254f;
+	--color-rc_darkblue-darker: #203776;
+	--color-rc_darkblue: #2a499d;
+	--color-rc_darkblue-lighter: #556db1;
+	--color-rc_darkblue-lightest: #7f92c4;
 
-p {
-	line-height: 1.5;
-}
+	--color-rc_skyblue-darkest: #526a80;
+	--color-rc_skyblue-darker: #7a9fbf;
+	--color-rc_skyblue: #a3d4ff;
+	--color-rc_skyblue-lighter: #b5ddff;
+	--color-rc_skyblue-lightest: #c8e5ff;
 
-a {
-	color: var(--color-theme-1);
-	text-decoration: none;
-}
+	--color-rc_red-darker: #b02629;
+	--color-rc_red: #ea3336;
+	--color-rc_red-lighter: #ee5c5e;
 
-a:hover {
-	text-decoration: underline;
-}
+	--color-rc_green-darker: #43801c;
+	--color-rc_green: #59aa25;
+	--color-rc_green-lighter: #7abb51;
 
-h1 {
-	font-size: 2rem;
-	text-align: center;
-}
+	--color-rc_turquoise-darker: #1c807d;
+	--color-rc_turquoise: #25aaa7;
+	--color-rc_turquoise-lighter: #7cccca;
 
-h2 {
-	font-size: 1rem;
-}
+	--color-rc_petrol-darker: #186691;
+	--color-rc_petrol: #2088c1;
+	--color-rc_petrol-lighter: #79b8da;
 
-pre {
-	font-size: 16px;
-	font-family: var(--font-mono);
-	background-color: rgba(255, 255, 255, 0.45);
-	border-radius: 3px;
-	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
-	padding: 0.5em;
-	overflow-x: auto;
-	color: var(--color-text);
-}
-
-.text-column {
-	display: flex;
-	max-width: 48rem;
-	flex: 0.6;
-	flex-direction: column;
-	justify-content: center;
-	margin: 0 auto;
-}
-
-input,
-button {
-	font-size: inherit;
-	font-family: inherit;
-}
-
-button:focus:not(:focus-visible) {
-	outline: none;
-}
-
-@media (min-width: 720px) {
-	h1 {
-		font-size: 2.4rem;
-	}
-}
-
-.visually-hidden {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: auto;
-	margin: 0;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-	white-space: nowrap;
+	--color-rc_purple-darker: #4a1457;
+	--color-rc_purple: #631b75;
+	--color-rc_purple-lighter: #824990;
 }
