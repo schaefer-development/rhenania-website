@@ -38,7 +38,7 @@
 
 				<a
 					href="mailto:info@rhenania.biz"
-					alt="Eine E-Mail mit Ihrem Standard Mailprogramm schreiben"
+					title="Eine E-Mail mit Ihrem Standard Mailprogramm schreiben"
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>info@rhenania.biz</a
 				>
