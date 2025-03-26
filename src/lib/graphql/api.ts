@@ -3,7 +3,7 @@ import { GRAPHCMS_ENDPOINT } from '$lib/env';
 export const api = async (query: string, variables: Record<string, unknown>) => {
 	const headers = {
 		'Content-Type': 'application/json',
-		Accept: 'application/json',
+		Accept: 'application/json'
 	};
 
 	const res = await fetch(GRAPHCMS_ENDPOINT, {

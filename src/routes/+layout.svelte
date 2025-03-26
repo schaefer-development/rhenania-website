@@ -1,57 +1,51 @@
 <script lang="ts">
 	import Header from '$lib/components/Header/Header.svelte';
+	//	import Footer from '$lib/components/Footer/Footer.svelte';
 	import '../app.css';
 
 	let { children } = $props();
+
+	let openMenuFull = false;
+	let openMenu = null;
+
+	const toggleMenu = (menu: string) => {
+		openMenu = openMenu === menu ? null : menu;
+	};
+	const toggleMenuFull = () => {
+		openMenuFull = !openMenuFull;
+	};
 </script>
 
-<div class="app">
-	<Header />
+<div
+	id="top"
+	class="flex min-h-screen flex-col justify-between bg-gray-50"
+	class:rc_menuIsOpen={openMenuFull}
+>
+	<Header {toggleMenuFull} {openMenuFull} {openMenu} {toggleMenu} />
 
-	<main>
+	<main class="mb-auto">
 		{@render children()}
 	</main>
 
-	<footer>
-		<p>
-			visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to learn about SvelteKit
-		</p>
-	</footer>
+	<!--<Footer {data} />-->
 </div>
 
-<style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
+<!--
 
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
+<div
+	class="flex flex-col min-h-screen justify-between bg-gray-50"
+	class:rc_menuIsOpen={openMenuFull}
+	id="top"
+>
+	<Header {toggleMenuFull} {openMenuFull} {openMenu} {toggleMenu} />
+	{#if $navigating}
+		<LoadingIndicator />
+	{:else}
+		<main class="mb-auto">
+			<slot />
+		</main>
+	{/if}
+	<Footer {data} />
+</div>
 
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
-	}
-</style>
+-->

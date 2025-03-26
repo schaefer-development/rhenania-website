@@ -5,7 +5,7 @@
 </script>
 
 <div class="mod_image relative">
-	<div class="relative w-full {mapPadding(module.paddingTop)}" ></div>
+	<div class="relative w-full {mapPadding(module.paddingTop)}"></div>
 	<div class="relative flex flex-col">
 		{#if module.imageWidth == 'FullWidth'}
 			<div
@@ -32,5 +32,5 @@
 			</div>
 		{/if}
 	</div>
-	<div class="relative w-full {mapPadding(module.paddingBottom)}" ></div>
+	<div class="relative w-full {mapPadding(module.paddingBottom)}"></div>
 </div>

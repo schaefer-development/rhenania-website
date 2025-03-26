@@ -5,7 +5,7 @@
 </script>
 
 <div class="mod_ctalink relative">
-	<div class="w-full {mapPadding(module.padding)}" ></div>
+	<div class="w-full {mapPadding(module.padding)}"></div>
 	<div class="mx-auto block w-full max-w-screen-lg px-4 py-6 lg:px-10 lg:py-12">
 		<h2 class="rc_h2 pb-6 text-black">{module.headline}</h2>
 
@@ -16,5 +16,5 @@
 			>Jetzt Kontakt aufnehmen</a
 		>
 	</div>
-	<div class="relative w-full {mapPadding(module.padding)}" ></div>
+	<div class="relative w-full {mapPadding(module.padding)}"></div>
 </div>

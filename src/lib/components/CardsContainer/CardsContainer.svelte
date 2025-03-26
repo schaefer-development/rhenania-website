@@ -11,7 +11,7 @@
 </script>
 
 <div id={module.headline} class="mod_cardsContainer relative">
-	<div class="relative {mapPadding(module.paddingTop)}" ></div>
+	<div class="relative {mapPadding(module.paddingTop)}"></div>
 	<div class="mx-auto max-w-screen-2xl px-4 py-6 lg:px-10 lg:py-12">
 		{#if module?.headline}
 			<h2 id={module.headline} class="rc_h1 text-rc_darkblue pb-4 text-center">
@@ -26,5 +26,5 @@
 			{/each}
 		</div>
 	</div>
-	<div class="relative w-full {mapPadding(module.paddingBottom)}" ></div>
+	<div class="relative w-full {mapPadding(module.paddingBottom)}"></div>
 </div>

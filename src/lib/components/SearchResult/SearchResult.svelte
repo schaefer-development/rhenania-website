@@ -76,6 +76,4 @@
 		transition: all;
 		transition-duration: 0.25s;
 	}
-
-
 </style>

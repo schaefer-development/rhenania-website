@@ -19,7 +19,10 @@
 			></div>
 		</div>
 	</div>
-	<div class="absolute -bottom-3 h-4 w-full" style="background-color:{module.strokeColor.hex}" ></div>
+	<div
+		class="absolute -bottom-3 h-4 w-full"
+		style="background-color:{module.strokeColor.hex}"
+	></div>
 	<div class="absolute -bottom-20 h-36 w-full">
 		<div class="mx-auto h-full max-w-screen-lg px-10">
 			{#if module?.icon?.url}
