@@ -1,4 +1,4 @@
-import type { LayoutServerLoad} from './$types';
+import type { LayoutServerLoad } from './$types';
 import type { ReferencesContainer } from '$lib/graphql/generated/schema';
 import { api } from '$lib/graphql/api';
 import { FOOTER } from '$lib/graphql/queries';

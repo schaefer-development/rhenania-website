@@ -4,21 +4,17 @@
 	import Footer from '$lib/components/Footer/Footer.svelte';
 	import '../app.css';
 
-	let { children, data  }: LayoutProps = $props();
-
+	let { children, data }: LayoutProps = $props();
 </script>
 
-<div
-	id="top"
-	class="flex min-h-screen flex-col justify-between bg-gray-50"
->
+<div id="top" class="flex min-h-screen flex-col justify-between bg-gray-50">
 	<Header />
 
 	<main class="mb-auto">
 		{@render children()}
 	</main>
 
-	<Footer {data} />
+	<!--	<Footer {data} />-->
 </div>
 
 <!--

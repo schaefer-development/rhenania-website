@@ -98,7 +98,7 @@
 					<span
 						class="{openMenu === 'produkte'
 							? 'menupoint_underline text-rc_red'
-							: ''} hover:text-rc_red focus:text-rc_red text-sm font-medium tracking-wider uppercase focus:ring-0 focus:outline-none"
+							: ''} hover:text-rc_red focus:text-rc_red cursor-pointer text-sm font-medium tracking-wider text-black uppercase focus:ring-0 focus:outline-none"
 						>Produkte</span
 					>
 				</button>
@@ -107,7 +107,7 @@
 					<span
 						class="{openMenu === 'unternehmen'
 							? 'menupoint_underline text-rc_red'
-							: ''} hover:text-rc_red focus:text-rc_red text-sm font-medium tracking-wider uppercase focus:ring-0 focus:outline-none"
+							: ''} hover:text-rc_red focus:text-rc_red cursor-pointer text-sm font-medium tracking-wider text-black uppercase focus:ring-0 focus:outline-none"
 						>Unternehmen</span
 					>
 				</button>
@@ -115,7 +115,7 @@
 					<span
 						class="{openMenu === 'service'
 							? 'menupoint_underline text-rc_red'
-							: ''} hover:text-rc_red focus:text-rc_red text-sm font-medium tracking-wider uppercase focus:ring-0 focus:outline-none"
+							: ''} hover:text-rc_red focus:text-rc_red cursor-pointer text-sm font-medium tracking-wider text-black uppercase focus:ring-0 focus:outline-none"
 						>Service</span
 					>
 				</button>
@@ -155,7 +155,7 @@
 			<div id="menu_mobil" class="visible block flex pl-4 md:pl-8 lg:invisible lg:hidden">
 				<button
 					on:click={toggleMenuFull}
-					class="text-rc_red hover:text-rc_red focus:text-rc_red flex w-full items-center justify-end font-medium tracking-wider uppercase focus:border-0 focus:ring-0 focus:outline-none"
+					class="text-rc_red hover:text-rc_red focus:text-rc_red flex w-full cursor-pointer items-center justify-end font-medium tracking-wider uppercase focus:border-0 focus:ring-0 focus:outline-none"
 				>
 					<!--<span class="uppercase font-medium px-1">Menu</span>-->
 					<svg
@@ -222,13 +222,13 @@
 </header>
 
 <!-- aside menu -->
-<Drawer {openMenu} {toggleMenu} menuLabel='produkte'>
+<Drawer {openMenu} {toggleMenu} menuLabel="produkte">
 	<ProductMenu></ProductMenu>
 </Drawer>
-<Drawer {openMenu} {toggleMenu} menuLabel='unternehmen'>
+<Drawer {openMenu} {toggleMenu} menuLabel="unternehmen">
 	<CompanyMenu></CompanyMenu>
 </Drawer>
-<Drawer {openMenu} {toggleMenu} menuLabel='service'>
+<Drawer {openMenu} {toggleMenu} menuLabel="service">
 	<ServiceMenu></ServiceMenu>
 </Drawer>
 

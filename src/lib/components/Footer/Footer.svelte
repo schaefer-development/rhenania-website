@@ -2,7 +2,7 @@
 	import Logo from '$lib/components/Logo/Logo.svelte';
 	import FooterAccordion from '$lib/components/Footer/FooterAccordion.svelte';
 
-	import Slideshow from '$lib/components/Slideshow/Slideshow.svelte';
+	//import Slideshow from '$lib/components/Slideshow/Slideshow.svelte';
 	import type { ReferencesContainer } from '$lib/graphql/generated/schema';
 
 	let date = new Date().getFullYear();
@@ -12,7 +12,7 @@
 <footer class="bg-rc_darkblue-darkest relative text-white">
 	<div class="bg-rc_darkblue w-full">
 		<div class="text-rc_darkblue-darkest mx-auto flex max-w-screen-2xl items-center px-10">
-			<Slideshow referenceItems={data?.referencesContainers?.[0].referenceItems} />
+			<!--	<Slideshow referenceItems={data?.referencesContainers?.[0].referenceItems} />-->
 		</div>
 	</div>
 
@@ -51,8 +51,7 @@
 		</div>
 		<div class="pb-8">
 			<p class="pb-2 text-center font-bold tracking-wider uppercase sm:text-left">Produkte</p>
-			<p class="text-center leading-relaxed tracking-wide sm:text-left">
-			</p>
+			<p class="text-center leading-relaxed tracking-wide sm:text-left"></p>
 		</div>
 		<div class="pb-8">
 			<p class="pb-2 text-center font-bold tracking-wider uppercase sm:text-left">Unternehmen</p>

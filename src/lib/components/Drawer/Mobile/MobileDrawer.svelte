@@ -5,11 +5,9 @@
 </script>
 
 <aside
-	id="drawerFull"
-	on:click={toggleMenuFull}
 	class="{openMenuFull
-		? 'rc_menu_visible'
-		: 'rc_menu_hidden'} rc_menu visible absolute top-32 left-0 z-40 min-h-screen w-full transform overflow-auto transition-all duration-300 ease-in-out sm:top-20 lg:hidden"
+		? ' open translate-y'
+		: 'close -translate-y-full border-4'} bg-rc_darkblue-darkest/98 rc_menu visible absolute top-32 left-0 z-40 block min-h-screen w-full transform overflow-auto transition-all duration-300 ease-in-out sm:top-20 lg:hidden lg:hidden"
 >
 	<div class="relative mx-auto flex w-full max-w-screen-2xl flex-row">
 		<div
@@ -17,7 +15,8 @@
 		>
 			<div class="col-span-1 sm:col-span-2">
 				<button
-					class="text-rc_red hover:text-rc_red focus:text-rc_red flex w-full items-center justify-end font-medium tracking-wider uppercase focus:border-0 focus:ring-0 focus:outline-none"
+					on:click={toggleMenuFull}
+					class="text-rc_red hover:text-rc_red focus:text-rc_red flex w-full cursor-pointer items-center justify-end font-medium tracking-wider uppercase focus:border-0 focus:ring-0 focus:outline-none"
 				>
 					<span class="px-2 font-medium uppercase">Schliessen</span>
 					<svg
@@ -35,7 +34,7 @@
 						/>
 					</svg>
 				</button>
-				<div class="bg-rc_red my-2 block h-0.5" />
+				<div class="bg-rc_red my-2 block h-0.5"></div>
 			</div>
 			<div class="left">
 				<!-- left start -->
@@ -51,32 +50,67 @@
 				</p>
 				<DrawerAccordion id="versandlogistiksystem_drawer_full">
 					<span slot="headline">Versandlogistiksystem</span>
-					<div slot="content">
-						<a href="/k04" class="rc_desktopmenu_subpoint"
+					<div slot="content" class="flex flex-col">
+						<a
+							href="/k04"
+							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
 							>K04 - Kommissionieren, Kontrollieren, Packen</a
 						>
-						<a href="/f95" class="rc_desktopmenu_subpoint">F95 - Paket- und Palettenversand</a>
+						<a
+							href="/f95"
+							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
+							>F95 - Paket- und Palettenversand</a
+						>
 
-						<a href="/vka" class="rc_desktopmenu_subpoint"
+						<a
+							href="/vka"
+							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
 							>VKA - Versandkostenkontrolle und Abrechnung</a
 						>
 					</div>
 				</DrawerAccordion>
 				<DrawerAccordion id="versandoptimierung_drawer_full">
 					<span slot="headline">Versandoptimierung</span>
-					<div slot="content">
-						<a href="/u12" class="rc_desktopmenu_subpoint">U12 - Umsatzsteuer Befreiung sichern</a>
-						<a href="/duv" class="rc_desktopmenu_subpoint">DUV - Dubletten vermeiden</a>
-						<a href="/apk" class="rc_desktopmenu_subpoint">APK - Adressprüfung und Korrektur</a>
-						<a href="/g10" class="rc_desktopmenu_subpoint">G10 - Gefahrgutversand</a>
+					<div slot="content" class="flex flex-col">
+						<a
+							href="/u12"
+							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
+							>U12 - Umsatzsteuer Befreiung sichern</a
+						>
+						<a
+							href="/duv"
+							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
+							>DUV - Dubletten vermeiden</a
+						>
+						<a
+							href="/apk"
+							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
+							>APK - Adressprüfung und Korrektur</a
+						>
+						<a
+							href="/g10"
+							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
+							>G10 - Gefahrgutversand</a
+						>
 					</div>
 				</DrawerAccordion>
 				<DrawerAccordion id="hardware_drawer_full">
 					<span slot="headline">Hardware</span>
-					<div slot="content">
-						<a href="/etikettendrucker" class="rc_desktopmenu_subpoint">Etikettendrucker</a>
-						<a href="/waagen" class="rc_desktopmenu_subpoint">Waagen</a>
-						<a href="/barcodescanner" class="rc_desktopmenu_subpoint">Barcodescanner</a>
+					<div slot="content" class="flex flex-col">
+						<a
+							href="/etikettendrucker"
+							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
+							>Etikettendrucker</a
+						>
+						<a
+							href="/waagen"
+							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium">Waagen</a
+						>
+						<a
+							href="/barcodescanner"
+							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
+							>Barcodescanner</a
+						>
 					</div>
 				</DrawerAccordion>
 
