@@ -14,6 +14,7 @@
 		{@render children()}
 	</main>
 
+	<Footer></Footer>
 	<!--	<Footer {data} />-->
 </div>
 

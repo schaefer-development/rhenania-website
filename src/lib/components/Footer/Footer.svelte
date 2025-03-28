@@ -2,8 +2,13 @@
 	import Logo from '$lib/components/Logo/Logo.svelte';
 	import FooterAccordion from '$lib/components/Footer/FooterAccordion.svelte';
 
-	//import Slideshow from '$lib/components/Slideshow/Slideshow.svelte';
+	import type { ReferencesItem } from '$lib/graphql/generated/schema';
+	export let referenceItems: ReferencesItem[] = [];
+
 	import type { ReferencesContainer } from '$lib/graphql/generated/schema';
+
+	import '@splidejs/svelte-splide/css';
+	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 
 	let date = new Date().getFullYear();
 	export let data: { referencesContainers: ReferencesContainer[] };
@@ -13,6 +18,60 @@
 	<div class="bg-rc_darkblue w-full">
 		<div class="text-rc_darkblue-darkest mx-auto flex max-w-screen-2xl items-center px-10">
 			<!--	<Slideshow referenceItems={data?.referencesContainers?.[0].referenceItems} />-->
+
+			<Splide
+				aria-label="Kundenlogos von Rhenania Computer GmbH"
+				class="relative w-full"
+				options={{
+					autoplay: true,
+					rewind: true,
+					perPage: 5,
+					perMove: 1,
+					pagination: false,
+					arrows: false,
+					autoScroll: {
+						speed: 1
+					}
+				}}
+			>
+				<SplideSlide>
+					<img src="image2.jpg" alt="Image 2" class="mx-auto w-9/12 border" />
+				</SplideSlide>
+				<SplideSlide>
+					<img src="image2.jpg" alt="Image 2" class="mx-auto w-9/12" />
+				</SplideSlide>
+
+				<SplideSlide>
+					<img src="image2.jpg" alt="Image 2" class="mx-auto w-9/12" />
+				</SplideSlide>
+
+				<SplideSlide>
+					<img src="image2.jpg" alt="Image 2" class="mx-auto w-9/12" />
+				</SplideSlide>
+
+				<SplideSlide>
+					<img src="image2.jpg" alt="Image 2" class="mx-auto w-9/12" />
+				</SplideSlide>
+
+				<SplideSlide>
+					<img src="image2.jpg" alt="Image 2" class="mx-auto w-9/12" />
+				</SplideSlide>
+				<SplideSlide>
+					<img src="image2.jpg" alt="Image 2" class="mx-auto w-9/12" />
+				</SplideSlide>
+
+				<SplideSlide>
+					<img src="image2.jpg" alt="Image 2" class="mx-auto w-9/12" />
+				</SplideSlide>
+			</Splide>
+
+			<!-- {#each referenceItems as referenceItem (referenceItem.id)}
+					{referenceItem.referenceLogo.url}
+
+
+			  {/each}-->
+
+			<hr />
 		</div>
 	</div>
 
