@@ -15,7 +15,7 @@
 				on:click={toggleMenu}
 				class="text-rc_red hover:text-rc_red flex w-full cursor-pointer items-center justify-end font-medium tracking-wider uppercase focus:outline-none"
 			>
-				<span class="px-2">Schliessssen</span>
+				<span class="px-2">Schliessen</span>
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current" viewBox="0 0 24 24">
 					<path
 						stroke="currentColor"

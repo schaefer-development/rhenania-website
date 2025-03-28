@@ -19,7 +19,7 @@
 				/>
 			</div>
 			<div class="col-span-full flex items-stretch md:col-span-1">
-				<span class="rc_rotate mx-auto inline-block w-px transform border-r"></span>
+				<span class="mx-auto inline-block w-px rotate-45 transform border-r"></span>
 			</div>
 			<div class="col-span-full md:col-span-3">
 				<div class="self-center pt-10 pb-5">
