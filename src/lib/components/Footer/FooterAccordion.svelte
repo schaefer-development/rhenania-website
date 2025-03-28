@@ -12,7 +12,7 @@
 	}
 </script>
 
-<div class="w-8/12">
+<div class="w-10/12">
 	{#each items as item, index (item)}
 		<div class="">
 			<button
