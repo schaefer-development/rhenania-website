@@ -2,6 +2,34 @@
 	import Logo from '$lib/components/Logo/Logo.svelte';
 	import FooterAccordion from '$lib/components/Footer/FooterAccordion.svelte';
 
+	const accordionItems = [
+		{
+			title: 'Versandlogistiksystem',
+			subpoints: [
+				{ name: 'K04', href: '/de/k04' },
+				{ name: 'F95', href: '/de/f96' },
+				{ name: 'VKA', href: '/de/vka' }
+			]
+		},
+		{
+			title: 'Versandoptimierung',
+			subpoints: [
+				{ name: 'U12', href: '/de/u12' },
+				{ name: 'APK', href: '/de/apk' },
+				{ name: 'DUV', href: '/de/duv' },
+				{ name: 'G10', href: '/de/g10' }
+			]
+		},
+		{
+			title: 'Hardware',
+			subpoints: [
+				{ name: 'Etikettendrucker', href: '/de/etikettendrucker' },
+				{ name: 'Waagen', href: '/de/waagen' },
+				{ name: 'Barcodescanner', href: '/de/barcodescanner' }
+			]
+		}
+	];
+
 	import type { ReferencesItem } from '$lib/graphql/generated/schema';
 	export let referenceItems: ReferencesItem[] = [];
 
@@ -111,6 +139,9 @@
 		<div class="pb-8">
 			<p class="pb-2 text-center font-bold tracking-wider uppercase sm:text-left">Produkte</p>
 			<p class="text-center leading-relaxed tracking-wide sm:text-left">
+				<FooterAccordion items={accordionItems} />
+
+				<!--
 				<FooterAccordion id="FooterVersandlogistiksystem">
 					<span
 						slot="headline"
@@ -191,6 +222,9 @@
 						>
 					</div>
 				</FooterAccordion>
+
+
+				-->
 			</p>
 		</div>
 		<div class="pb-8">

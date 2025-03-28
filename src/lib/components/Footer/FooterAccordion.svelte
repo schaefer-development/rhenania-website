@@ -1,26 +1,39 @@
-<script>
-	export let id;
+<script lang="ts">
+	export let items: {
+		title: string;
+		subpoints: { name: string; href: string }[];
+	}[] = [];
+
+	let openItems = new Set<number>();
+
+	function toggleItem(index: number) {
+		openItems.has(index) ? openItems.delete(index) : openItems.add(index);
+		openItems = new Set(openItems); // reactivity
+	}
 </script>
 
-<div class="mod_accordion tab relative w-full overflow-hidden">
-	<input class="absolute opacity-0" {id} type="checkbox" name="tabs" />
-	<label class="cursor-pointer" for={id}>
-		<div class="w-full"><slot name="headline" /></div>
-	</label>
-	<div class="tab-content overflow-hidden">
-		<div class=""><slot name="content" /></div>
-	</div>
-</div>
+<div class="w-8/12">
+	{#each items as item, index (item)}
+		<div class="">
+			<button
+				class="hover:text-rc_red flex w-full cursor-pointer items-center justify-between text-left transition"
+				on:click={() => toggleItem(index)}
+			>
+				{item.title}
+				<span>{openItems.has(index) ? '−' : '+'}</span>
+			</button>
 
-<style>
-	.tab-content {
-		max-height: 0;
-		-webkit-transition: max-height 0.5s;
-		-o-transition: max-height 0.5s;
-		transition: max-height 0.5s;
-	}
-	/* :checked - resize to full height */
-	.tab input:checked ~ .tab-content {
-		max-height: 100vh;
-	}
-</style>
+			{#if openItems.has(index)}
+				<ul class="pb-4 text-white">
+					{#each item.subpoints as sub (sub)}
+						<li class="px-2">
+							<a href={sub.href} class="hover:text-rc_red text-white">
+								{sub.name}
+							</a>
+						</li>
+					{/each}
+				</ul>
+			{/if}
+		</div>
+	{/each}
+</div>
