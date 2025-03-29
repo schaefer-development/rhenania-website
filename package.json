@@ -40,6 +40,7 @@
 	},
 	"dependencies": {
 		"@fontsource/red-hat-text": "^5.2.5",
-		"@splidejs/svelte-splide": "^0.2.9"
+		"@splidejs/svelte-splide": "^0.2.9",
+		"leaflet": "^1.9.4"
 	}
 }

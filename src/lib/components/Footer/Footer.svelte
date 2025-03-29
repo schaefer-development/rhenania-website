@@ -63,7 +63,7 @@
 				}}
 			>
 				<SplideSlide>
-					<img src="image2.jpg" alt="Image 2" class="mx-auto w-9/12 border" />
+					<img src="$lib/test.jpg" alt="Image 2" class="mx-auto w-9/12 border" />
 				</SplideSlide>
 				<SplideSlide>
 					<img src="image2.jpg" alt="Image 2" class="mx-auto w-9/12" />

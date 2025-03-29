@@ -1,11 +1,11 @@
 <script lang="ts">
 	const links = [
-		{ href: '/ueberuns', label: 'Über uns' },
-		{ href: '/kontakt', label: 'Kontakt und Anfahrt' },
-		{ href: '/karriere', label: 'Karriere' },
-		{ href: '/versandlogistik-info', label: 'Neues' },
-		{ href: '/partner', label: 'Partner' },
-		{ href: '/referenzen', label: 'Referenzen' }
+		{ href: '/de/ueberuns', label: 'Über uns' },
+		{ href: '/de/kontakt', label: 'Kontakt und Anfahrt' },
+		{ href: '/de/karriere', label: 'Karriere' },
+		{ href: '/de/versandlogistik-info', label: 'Neues' },
+		{ href: '/de/partner', label: 'Partner' },
+		{ href: '/de/referenzen', label: 'Referenzen' }
 	];
 </script>
 

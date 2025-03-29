@@ -52,18 +52,18 @@
 					<span slot="headline">Versandlogistiksystem</span>
 					<div slot="content" class="flex flex-col">
 						<a
-							href="/k04"
+							href="/de/k04"
 							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
 							>K04 - Kommissionieren, Kontrollieren, Packen</a
 						>
 						<a
-							href="/f95"
+							href="/de/f95"
 							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
 							>F95 - Paket- und Palettenversand</a
 						>
 
 						<a
-							href="/vka"
+							href="/de/vka"
 							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
 							>VKA - Versandkostenkontrolle und Abrechnung</a
 						>
@@ -73,22 +73,22 @@
 					<span slot="headline">Versandoptimierung</span>
 					<div slot="content" class="flex flex-col">
 						<a
-							href="/u12"
+							href="/de/u12"
 							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
 							>U12 - Umsatzsteuer Befreiung sichern</a
 						>
 						<a
-							href="/duv"
+							href="/de/duv"
 							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
 							>DUV - Dubletten vermeiden</a
 						>
 						<a
-							href="/apk"
+							href="/de/apk"
 							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
 							>APK - Adressprüfung und Korrektur</a
 						>
 						<a
-							href="/g10"
+							href="/de/g10"
 							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
 							>G10 - Gefahrgutversand</a
 						>
@@ -98,16 +98,16 @@
 					<span slot="headline">Hardware</span>
 					<div slot="content" class="flex flex-col">
 						<a
-							href="/etikettendrucker"
+							href="/de/etikettendrucker"
 							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
 							>Etikettendrucker</a
 						>
 						<a
-							href="/waagen"
+							href="/de/waagen"
 							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium">Waagen</a
 						>
 						<a
-							href="/barcodescanner"
+							href="/de/barcodescanner"
 							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
 							>Barcodescanner</a
 						>
@@ -125,32 +125,32 @@
 				</p>
 
 				<a
-					href="/ueberuns"
+					href="/de/ueberuns"
 					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Über uns</a
 				>
 				<a
-					href="/kontakt"
+					href="/de/kontakt"
 					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Kontakt und Anfahrt</a
 				>
 				<a
-					href="/karriere"
+					href="/de/karriere"
 					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Karriere</a
 				>
 				<a
-					href="/versandlogistik-info"
+					href="/de/versandlogistik-info"
 					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Neues</a
 				>
 				<a
-					href="/partner"
+					href="/de/partner"
 					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Partner</a
 				>
 				<a
-					href="/referenzen"
+					href="/de/referenzen"
 					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Referenzen</a
 				>
@@ -163,17 +163,17 @@
 				</p>
 
 				<a
-					href="/cloudloesung"
+					href="/de/cloudloesung"
 					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Cloudlösung</a
 				>
 				<a
-					href="/onlinesupport"
+					href="/de/onlinesupport"
 					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Online-Support</a
 				>
 				<a
-					href="/download"
+					href="/de/download"
 					class="hover:text-rc_red focus:text-rc_red block py-2 text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 					>Download</a
 				>

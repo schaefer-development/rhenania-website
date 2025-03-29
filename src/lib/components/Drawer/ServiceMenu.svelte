@@ -1,8 +1,8 @@
 <script lang="ts">
 	const links = [
-		{ href: '/cloudloesung', label: 'Cloudlösung' },
-		{ href: '/onlinesupport', label: 'Online-Support' },
-		{ href: '/download', label: 'Download' }
+		{ href: '/de/cloudloesung', label: 'Cloudlösung' },
+		{ href: '/de/onlinesupport', label: 'Online-Support' },
+		{ href: '/de/download', label: 'Download' }
 	];
 </script>
 

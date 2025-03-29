@@ -6,28 +6,28 @@
 			id: 'versandlogistiksystem',
 			title: 'Versandlogistiksystem',
 			links: [
-				{ href: '/k04', label: 'K04 - Kommissionieren, Kontrollieren, Packen' },
-				{ href: '/f95', label: 'F95 - Paket- und Palettenversand' },
-				{ href: '/vka', label: 'VKA - Versandkostenkontrolle und Abrechnung' }
+				{ href: '/de/k04', label: 'K04 - Kommissionieren, Kontrollieren, Packen' },
+				{ href: '/de/f95', label: 'F95 - Paket- und Palettenversand' },
+				{ href: '/de/vka', label: 'VKA - Versandkostenkontrolle und Abrechnung' }
 			]
 		},
 		{
 			id: 'versandoptimierung',
 			title: 'Versandoptimierung',
 			links: [
-				{ href: '/u12', label: 'U12 - Umsatzsteuer Befreiung sichern' },
-				{ href: '/apk', label: 'APK - Adressprüfung und Korrektur' },
-				{ href: '/duv', label: 'DUV - Dubletten vermeiden' },
-				{ href: '/g10', label: 'G10 - Gefahrgutversand' }
+				{ href: '/de/u12', label: 'U12 - Umsatzsteuer Befreiung sichern' },
+				{ href: '/de/apk', label: 'APK - Adressprüfung und Korrektur' },
+				{ href: '/de/duv', label: 'DUV - Dubletten vermeiden' },
+				{ href: '/de/g10', label: 'G10 - Gefahrgutversand' }
 			]
 		},
 		{
 			id: 'hardware',
 			title: 'Hardware',
 			links: [
-				{ href: '/etikettendrucker', label: 'Etikettendrucker' },
-				{ href: '/waagen', label: 'Waagen' },
-				{ href: '/barcodescanner', label: 'Barcodescanner' }
+				{ href: '/de/etikettendrucker', label: 'Etikettendrucker' },
+				{ href: '/de/waagen', label: 'Waagen' },
+				{ href: '/de/barcodescanner', label: 'Barcodescanner' }
 			]
 		}
 	];
