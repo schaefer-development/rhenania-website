@@ -31,32 +31,32 @@
 
 	<div class="relative flex justify-center">
 		<a
-			class="relative mt-2 pl-5 pr-3 py-2 bg-rc_red text-white text-sm font-bold uppercase tracking-widest hover:bg-rc_red-darker rc_button_corner"
+			class="bg-rc_red hover:bg-rc_red-darker rc_button_corner relative mt-2 py-2 pr-3 pl-5 text-sm font-bold tracking-widest text-white uppercase"
 			href="mailto:info@rhenania.biz">info@rhenania.biz</a
 		>
 	</div>
 	<div class="mod_divider relative">
 		<div class="mod_divider w-full py-12">
-			<div class="h-1 w-full border-gray-300 border-b-4" />
-			<div class="mx-auto max-w-screen-2xl w-full h-1 -mt-1 flex flew-row">
-				<div class="bg-gray-300" style="width:50%;" ></div>
+			<div class="h-1 w-full border-b-4 border-gray-300" />
+			<div class="flew-row mx-auto -mt-1 flex h-1 w-full max-w-screen-2xl">
+				<div class="bg-gray-300" style="width:50%;"></div>
 				<div class="bg-gray-50" style="width:6%;"></div>
-				<div class="bg-gray-300" style="width:5%;" ></div>
-				<div class="bg-gray-50" style="width:6%;" ></div>
-				<div class="bg-gray-300" style="width:7%;" ></div>
-				<div class="bg-gray-50" style="width:8%;" ></div>
-				<div class="bg-gray-300" style="width:8%;" ></div>
-				<div class="bg-gray-50" style="width:4%;" ></div>
-				<div class="bg-gray-300" style="width:6%;" ></div>
+				<div class="bg-gray-300" style="width:5%;"></div>
+				<div class="bg-gray-50" style="width:6%;"></div>
+				<div class="bg-gray-300" style="width:7%;"></div>
+				<div class="bg-gray-50" style="width:8%;"></div>
+				<div class="bg-gray-300" style="width:8%;"></div>
+				<div class="bg-gray-50" style="width:4%;"></div>
+				<div class="bg-gray-300" style="width:6%;"></div>
 			</div>
 		</div>
 	</div>
 
 	<div class="mod_contactFormAccordion relative">
-		<div class="relative w-full" ></div>
-		<div class="mod_accordion relative tab w-full overflow-hidden h-auto pb-4 block">
-			<input class="absolute opacity-0 " id="contactform" type="checkbox" name="tabs" />
-			<label class="cursor-pointer flex border-b-2 py-2" for="contactform">
+		<div class="relative w-full"></div>
+		<div class="mod_accordion tab relative block h-auto w-full overflow-hidden pb-4">
+			<input class="absolute opacity-0" id="contactform" type="checkbox" name="tabs" />
+			<label class="flex cursor-pointer border-b-2 py-2" for="contactform">
 				<h3 class="w-full font-bold">Oder Sie nutzen unser Kontaktformular</h3>
 				<div class="icon">
 					<svg
@@ -77,14 +77,12 @@
 			</label>
 			<div class="tab-content h-auto">
 				<div class="pt-4 pb-8">
-					<form class="w-full pt-4" action={(`/kontakt.json`)} method="post">
-						<div class="flex flex-wrap mb-6">
-							<div class="w-full px-3 mt-5 mb-10">
-								<label
-									class="block uppercase tracking-widest text-gray-700 text-xs px-1 font-bold "
-								>
+					<form class="w-full pt-4" action={`/kontakt.json`} method="post">
+						<div class="mb-6 flex flex-wrap">
+							<div class="mt-5 mb-10 w-full px-3">
+								<label class="block px-1 text-xs font-bold tracking-widest text-gray-700 uppercase">
 									<input
-										class="appearance-none block w-full bg-white text-gray-700 text-lg border border-gray-400 py-3 px-3 mb-2 leading-tight focus:outline-none focus:bg-white focus:border-black"
+										class="mb-2 block w-full appearance-none border border-gray-400 bg-white px-3 py-3 text-lg leading-tight text-gray-700 focus:border-black focus:bg-white focus:outline-none"
 										name="firma"
 										type="text"
 										placeholder="Musterfirma"
@@ -93,10 +91,10 @@
 								</label>
 							</div>
 
-							<div class="w-full px-3 mb-10">
-								<label class="block uppercase tracking-widest text-gray-700 text-xs px-1 font-bold">
+							<div class="mb-10 w-full px-3">
+								<label class="block px-1 text-xs font-bold tracking-widest text-gray-700 uppercase">
 									<input
-										class="appearance-none block w-full bg-white text-gray-700 text-lg border border-gray-400 py-3 px-3 mb-2 leading-tight focus:outline-none focus:bg-white focus:border-black"
+										class="mb-2 block w-full appearance-none border border-gray-400 bg-white px-3 py-3 text-lg leading-tight text-gray-700 focus:border-black focus:bg-white focus:outline-none"
 										name="name"
 										type="text"
 										placeholder="Max Mustermann"
@@ -105,12 +103,10 @@
 								</label>
 							</div>
 
-							<div class="w-full px-3 mb-10">
-								<label
-									class="block uppercase tracking-widest text-gray-700 text-xs px-1 font-bold "
-								>
+							<div class="mb-10 w-full px-3">
+								<label class="block px-1 text-xs font-bold tracking-widest text-gray-700 uppercase">
 									<input
-										class="appearance-none block w-full bg-white text-gray-700 text-lg border border-gray-400 py-3 px-3 mb-2 leading-tight focus:outline-none focus:bg-white focus:border-black"
+										class="mb-2 block w-full appearance-none border border-gray-400 bg-white px-3 py-3 text-lg leading-tight text-gray-700 focus:border-black focus:bg-white focus:outline-none"
 										name="emailAdresse"
 										type="email"
 										placeholder="mail@beispiel.de"
@@ -119,12 +115,10 @@
 								</label>
 							</div>
 
-							<div class="w-full px-3 mb-4">
-								<label
-									class="block uppercase tracking-widest text-gray-700 text-xs px-1 font-bold "
-								>
+							<div class="mb-4 w-full px-3">
+								<label class="block px-1 text-xs font-bold tracking-widest text-gray-700 uppercase">
 									<input
-										class="appearance-none block w-full bg-white text-gray-700 text-lg border border-gray-400 py-3 px-3 mb-2 leading-tight focus:outline-none focus:bg-white focus:border-black"
+										class="mb-2 block w-full appearance-none border border-gray-400 bg-white px-3 py-3 text-lg leading-tight text-gray-700 focus:border-black focus:bg-white focus:outline-none"
 										name="telefon"
 										type="text"
 										placeholder="0123456789"
@@ -135,17 +129,18 @@
 
 							<div class="w-full px-3">
 								<label
-									class="block uppercase tracking-widest text-gray-700 text-xs px-1 font-bold mb-1"
+									class="mb-1 block px-1 text-xs font-bold tracking-widest text-gray-700 uppercase"
 								>
 									<textarea
-										class=" no-resize appearance-none block w-full bg-white text-gray-700 text-lg border border-gray-400 py-3 px-3 mb-2 leading-tight focus:outline-none focus:bg-white focus:border-black h-48 resize-none"
+										class=" no-resize mb-2 block h-48 w-full resize-none appearance-none border border-gray-400 bg-white px-3 py-3 text-lg leading-tight text-gray-700 focus:border-black focus:bg-white focus:outline-none"
 										name="nachricht"
 									>
-									Ihre Nachricht
+										Ihre Nachricht
+									</textarea>
 								</label>
 							</div>
 							<!-- hcaptcha -->
-							<div class="py-6 flex justify-center relative w-full">
+							<div class="relative flex w-full justify-center py-6">
 								<HCaptcha
 									sitekey={HCAPTCHA_SITEKEY}
 									hl="de"
@@ -159,32 +154,32 @@
 								</noscript>
 							</div>
 							<!-- end hcaptcha  -->
-							<div class="p-3 flex flex-row items-center w-full">
+							<div class="flex w-full flex-row items-center p-3">
 								<div>
 									<input type="checkbox" bind:checked={datapolicy} />
 								</div>
-								<div class="px-3 dataprivacy">
+								<div class="dataprivacy px-3">
 									Ich habe die <a
-										href='/datenschutz/'
-										class=" font-bold text-rc_red hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+										href="/datenschutz/"
+										class=" text-rc_red hover:text-rc_red focus:text-rc_red font-bold focus:ring-0 focus:outline-none"
 										>Datenschutzerklärung</a
 									>
 									gelesen und stimme dieser zu.
 								</div>
 							</div>
 
-							<div class="md:flex md:items-center w-full px-3">
+							<div class="w-full px-3 md:flex md:items-center">
 								<div class="w-full">
 									{#if browser}
 										{#if valid && datapolicy}
 											<button
-												class="inline-block relative mt-4 pl-5 pr-3 py-2 bg-rc_red text-white text-sm font-bold uppercase tracking-widest hover:bg-rc_red-darker rc_button_corner"
+												class="bg-rc_red hover:bg-rc_red-darker rc_button_corner relative mt-4 inline-block py-2 pr-3 pl-5 text-sm font-bold tracking-widest text-white uppercase"
 												type="submit">Nachricht absenden</button
 											>
 										{:else}
 											<button
 												disabled
-												class="inline-block relative mt-4 pl-5 pr-3 py-2 bg-gray-300 text-white text-sm font-bold uppercase tracking-widest rc_button_corner"
+												class="rc_button_corner relative mt-4 inline-block bg-gray-300 py-2 pr-3 pl-5 text-sm font-bold tracking-widest text-white uppercase"
 												type="submit">Nachricht absenden</button
 											>
 										{/if}

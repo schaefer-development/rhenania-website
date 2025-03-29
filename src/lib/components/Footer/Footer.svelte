@@ -2,6 +2,10 @@
 	import Logo from '$lib/components/Logo/Logo.svelte';
 	import FooterAccordion from '$lib/components/Footer/FooterAccordion.svelte';
 
+	import heroExample from '$lib/images/hero_example.jpg';
+	import heroExample2 from '$lib/images/hero_example2.jpg';
+	import svelteWelcome from '$lib/images/svelte-welcome.png';
+
 	const accordionItems = [
 		{
 			title: 'Versandlogistiksystem',
@@ -63,33 +67,36 @@
 				}}
 			>
 				<SplideSlide>
-					<img src="$lib/test.jpg" alt="Image 2" class="mx-auto w-9/12 border" />
+					<img src={heroExample} alt="Image 2" class="mx-auto w-9/12 border" />
 				</SplideSlide>
 				<SplideSlide>
-					<img src="image2.jpg" alt="Image 2" class="mx-auto w-9/12" />
-				</SplideSlide>
-
-				<SplideSlide>
-					<img src="image2.jpg" alt="Image 2" class="mx-auto w-9/12" />
+					<img src={heroExample2} alt="Image 2" class="mx-auto w-9/12" />
 				</SplideSlide>
 
 				<SplideSlide>
-					<img src="image2.jpg" alt="Image 2" class="mx-auto w-9/12" />
+					<img src={svelteWelcome} alt="Image 2" class="mx-auto w-9/12" />
 				</SplideSlide>
 
 				<SplideSlide>
-					<img src="image2.jpg" alt="Image 2" class="mx-auto w-9/12" />
+					<img src={heroExample} alt="Image 2" class="mx-auto w-9/12 border" />
+				</SplideSlide>
+				<SplideSlide>
+					<img src={heroExample2} alt="Image 2" class="mx-auto w-9/12" />
 				</SplideSlide>
 
 				<SplideSlide>
-					<img src="image2.jpg" alt="Image 2" class="mx-auto w-9/12" />
-				</SplideSlide>
-				<SplideSlide>
-					<img src="image2.jpg" alt="Image 2" class="mx-auto w-9/12" />
+					<img src={svelteWelcome} alt="Image 2" class="mx-auto w-9/12" />
 				</SplideSlide>
 
 				<SplideSlide>
-					<img src="image2.jpg" alt="Image 2" class="mx-auto w-9/12" />
+					<img src={heroExample} alt="Image 2" class="mx-auto w-9/12 border" />
+				</SplideSlide>
+				<SplideSlide>
+					<img src={heroExample2} alt="Image 2" class="mx-auto w-9/12" />
+				</SplideSlide>
+
+				<SplideSlide>
+					<img src={svelteWelcome} alt="Image 2" class="mx-auto w-9/12" />
 				</SplideSlide>
 			</Splide>
 

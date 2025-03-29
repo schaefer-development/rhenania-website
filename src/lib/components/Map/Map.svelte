@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { base } from '$app/paths';
+	import mapMarker from '$lib/images/mapmarker.png';
 	import type { IconOptions, LatLngTuple } from 'leaflet';
 	export let iconOptions: IconOptions = {
-		iconUrl: `${base}/mapmarker.png`,
+		iconUrl: mapMarker,
 		iconSize: [40, 50],
 		iconAnchor: [20, 50]
 	};
