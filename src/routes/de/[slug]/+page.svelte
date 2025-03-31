@@ -5,4 +5,9 @@
 	let { data }: PageProps = $props();
 </script>
 
+<svelte:head>
+	<title>{data.page.title ?? data.meta.title}</title>
+	<meta name="description" content={data.page.description ?? data.meta.description} />
+</svelte:head>
+
 <PageWrapper page={data.page} />
