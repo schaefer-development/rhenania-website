@@ -15,13 +15,13 @@
 		>
 			<div
 				class="h-30v absolute w-full scale-105 bg-cover bg-center"
-				style="background-image: url({module.image.url}"
+				style="background-image: url({module.image?.url}"
 			></div>
 		</div>
 	</div>
 	<div
 		class="absolute -bottom-3 h-4 w-full"
-		style="background-color:{module.strokeColor.hex}"
+		style="background-color:{module.strokeColor?.hex}"
 	></div>
 	<div class="absolute -bottom-20 h-36 w-full">
 		<div class="mx-auto h-full max-w-screen-lg px-10">
