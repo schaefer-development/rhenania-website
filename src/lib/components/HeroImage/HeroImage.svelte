@@ -8,13 +8,13 @@
 <svelte:window bind:scrollY={y} />
 
 <div class="mod_heroImage relative">
-	<div class="h-30v mb-24 w-full overflow-hidden">
+	<div class="mb-24 h-[30vh] w-full overflow-hidden">
 		<div
-			class="parallax h-60v relative"
+			class="parallax relative h-[60vh]"
 			style="transform: translate(0, {y < 2 ? y * 1 : y * paraEffect}px)"
 		>
 			<div
-				class="h-30v absolute w-full scale-105 bg-cover bg-center"
+				class="absolute h-[30vh] w-full scale-105 bg-cover bg-center"
 				style="background-image: url({module.image?.url}"
 			></div>
 		</div>
