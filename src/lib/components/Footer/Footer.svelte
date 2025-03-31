@@ -2,10 +2,6 @@
 	import Logo from '$lib/components/Logo/Logo.svelte';
 	import FooterAccordion from '$lib/components/Footer/FooterAccordion.svelte';
 
-	import heroExample from '$lib/images/hero_example.jpg';
-	import heroExample2 from '$lib/images/hero_example2.jpg';
-	import svelteWelcome from '$lib/images/svelte-welcome.png';
-
 	const accordionItems = [
 		{
 			title: 'Versandlogistiksystem',
@@ -49,8 +45,6 @@
 <footer class="bg-rc_darkblue-darkest relative text-white">
 	<div class="bg-rc_darkblue w-full">
 		<div class="text-rc_darkblue-darkest mx-auto flex max-w-screen-2xl items-center px-10">
-			<!--	<Slideshow referenceItems={data?.referencesContainers?.[0].referenceItems} />-->
-
 			<Splide
 				aria-label="Kundenlogos von Rhenania Computer GmbH"
 				class="relative w-full"
@@ -66,45 +60,18 @@
 					}
 				}}
 			>
-				<SplideSlide>
-					<img src={heroExample} alt="Image 2" class="mx-auto w-9/12 border" />
-				</SplideSlide>
-				<SplideSlide>
-					<img src={heroExample2} alt="Image 2" class="mx-auto w-9/12" />
-				</SplideSlide>
-
-				<SplideSlide>
-					<img src={svelteWelcome} alt="Image 2" class="mx-auto w-9/12" />
-				</SplideSlide>
-
-				<SplideSlide>
-					<img src={heroExample} alt="Image 2" class="mx-auto w-9/12 border" />
-				</SplideSlide>
-				<SplideSlide>
-					<img src={heroExample2} alt="Image 2" class="mx-auto w-9/12" />
-				</SplideSlide>
-
-				<SplideSlide>
-					<img src={svelteWelcome} alt="Image 2" class="mx-auto w-9/12" />
-				</SplideSlide>
-
-				<SplideSlide>
-					<img src={heroExample} alt="Image 2" class="mx-auto w-9/12 border" />
-				</SplideSlide>
-				<SplideSlide>
-					<img src={heroExample2} alt="Image 2" class="mx-auto w-9/12" />
-				</SplideSlide>
-
-				<SplideSlide>
-					<img src={svelteWelcome} alt="Image 2" class="mx-auto w-9/12" />
-				</SplideSlide>
+				{#each data.referencesContainers?.[0].referenceItems as referenceItem (referenceItem.id)}
+					{#if referenceItem.referenceLogo}
+						<SplideSlide>
+							<img
+								src={referenceItem.referenceLogo.url}
+								alt="Kundenlogo von Rhenania Computer"
+								class="mx-auto w-9/12"
+							/>
+						</SplideSlide>
+					{/if}
+				{/each}-->
 			</Splide>
-
-			<!-- {#each referenceItems as referenceItem (referenceItem.id)}
-					{referenceItem.referenceLogo.url}
-
-
-			  {/each}-->
 
 			<hr />
 		</div>
