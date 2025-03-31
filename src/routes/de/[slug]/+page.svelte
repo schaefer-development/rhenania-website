@@ -1,5 +1,8 @@
-<script context="module" lang="ts">
-	import HeroStart from '$lib/components/HeroStart/HeroStart.svelte';
+<script lang="ts">
+	import type { PageProps } from './$types';
+	import PageWrapper from '$lib/components/Page/Page.svelte';
+
+	let { data }: PageProps = $props();
 </script>
 
-<HeroStart />
+<PageWrapper page={data.page} />
