@@ -41,4 +41,4 @@
 	/>
 </svelte:head>
 
-<div id="map" {...mapAttributes} class="mod_map z-10" />
+<div id="map" {...mapAttributes} class="mod_map z-10"></div>
