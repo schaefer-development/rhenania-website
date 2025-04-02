@@ -8,11 +8,11 @@
 	class="mod_cardImage relative mx-5 my-5 grow overflow-hidden bg-white shadow-sm duration-150 ease-in-out hover:shadow-lg"
 >
 	{#if card?.link?.target}
-		<a href={card.link.target.slug} title={card.headline}>
+		<a href="/de/{card.link.target.slug}" title={card.headline}>
 			<div class="cardImageWrapper h-48 overflow-hidden">
 				<div
 					class="cardImage h-full bg-cover bg-center"
-					style="background-image: url({card.image.url})"
+					style="background-image: url({card.image?.url})"
 				></div>
 			</div>
 			<div class="text flex flex-col px-6 py-6 text-center">
@@ -37,11 +37,11 @@
 			</div>
 		</a>
 	{:else if card?.linkToId}
-		<a href="{base}#{card.linkToId}" title={card.headline}>
+		<a href="#{card.linkToId}" title={card.headline}>
 			<div class="cardImageWrapper h-48 overflow-hidden">
 				<div
 					class="cardImage h-full bg-cover bg-center"
-					style="background-image: url({card.image.url})"
+					style="background-image: url({card.image?.url})"
 				></div>
 			</div>
 			<div class="text flex flex-col px-6 py-6 text-center">
@@ -69,7 +69,7 @@
 		<div class="cardImageWrapper h-48 overflow-hidden">
 			<div
 				class="cardImage h-full bg-cover bg-center"
-				style="background-image: url({card.image.url})"
+				style="background-image: url({card.image?.url})"
 			></div>
 		</div>
 		<div class="text flex flex-col px-6 py-6 text-center">

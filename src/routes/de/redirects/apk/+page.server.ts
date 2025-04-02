@@ -1,8 +1,5 @@
 import { redirect } from '@sveltejs/kit';
 
 export function load() {
-	redirect(307, '/de/multi-carrier-versandsoftware');
+	redirect(307, '/de/adresspruefung-software');
 }
-
-
-
