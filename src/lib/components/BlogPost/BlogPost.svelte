@@ -24,7 +24,7 @@
 	<div class="mod_blogEntry relative h-auto w-full overflow-hidden">
 		<div
 			class="bg_layer absolute h-full w-full bg-cover bg-center"
-			style="background-image: url({blogPost.heroBackgroundImage.url})"
+			style="background-image: url({blogPost.heroBackgroundImage?.url})"
 		></div>
 		<div
 			class="h-30v relative z-2 mx-auto flex max-w-screen-md items-center px-4 py-16 lg:px-10 lg:py-24"
