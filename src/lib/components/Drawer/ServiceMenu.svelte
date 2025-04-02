@@ -10,7 +10,7 @@
 	{#each links as { href, label } (href)}
 		<a
 			{href}
-			class="hover:text-rc_red focus:text-rc_red grow py-6 text-center text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
+			class="hover:text-rc_red focus:text-rc_red grow cursor-pointer py-6 text-center text-sm font-medium tracking-widest text-white uppercase focus:ring-0 focus:outline-none"
 			>{label}</a
 		>
 	{/each}

@@ -11,6 +11,8 @@
 	import SearchResult from '$lib/components/SearchResult/SearchResult.svelte';
 	import MobileDrawer from '$lib/components/Drawer/Mobile/MobileDrawer.svelte';
 
+	import { afterNavigate } from '$app/navigation';
+
 	const appId = ALGOLIA_APP_ID;
 	const searchKey = ALGOLIA_SEARCH_KEY;
 	let searchEverFocused = false;
@@ -33,6 +35,10 @@
 			newUrl.searchParams.set('q', target.query.value);
 			await goto(newUrl.toString());
 		};
+
+	afterNavigate(() => {
+		openMenu = null;
+	});
 </script>
 
 <header class="space-between sticky top-0 z-50 flex flex-col bg-white shadow-md">
