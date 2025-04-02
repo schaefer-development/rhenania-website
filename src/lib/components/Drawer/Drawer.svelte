@@ -7,7 +7,7 @@
 <aside
 	class="{openMenu === menuLabel
 		? 'open top-20'
-		: 'closed -top-[50vh]'} bg-rc_darkblue-darkest/98 absolute left-0 z-40 hidden w-full overflow-auto shadow-md transition-all duration-300 ease-in-out lg:block"
+		: 'closed -top-[50vh]'} bg-rc_darkblue-darkest/98 fixed left-0 z-40 hidden w-full overflow-auto shadow-md transition-all duration-300 ease-in-out lg:block"
 >
 	<div class="mx-auto flex w-full max-w-7xl flex-col p-10">
 		<div class="close_section">
