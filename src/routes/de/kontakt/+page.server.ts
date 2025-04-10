@@ -1,6 +1,6 @@
-import type { RequestHandler } from '@sveltejs/kit';
+import type { Actions } from './$types';
 import { SMTP_HOST, SMTP_PORT, SMTP_USERNAME, SMTP_PASSWORD } from '$lib/env';
-import { dev } from '$app/env';
+import { dev } from '$app/environment';
 import nodemailer from 'nodemailer';
 import type { Email } from '$lib/mail';
 import email, { defaults } from '$lib/mail';
@@ -44,12 +44,10 @@ const errorBody = `
 <p>Bitte kontaktieren Sie uns mit einer E-Mail an ${defaults.from}</p>
 `;
 
-// POST /:seminarFormat/:url/anmeldung.json
-export const post: RequestHandler = async ({ request }) => {
-	const emailPayload = await formData(request);
-	const { messageId } = await transporter.sendMail(email(emailPayload));
-	const ok = { status: 303, headers: { location: './kontakt/ok' } };
-	const error = { status: 500, body: errorBody };
-	const response = messageId ? ok : error;
-	return response;
-};
+export const actions = {
+	default: async ({ request }) => {
+		const emailPayload = await formData(request);
+		const { messageId } = await transporter.sendMail(email(emailPayload));
+		return { success: !!messageId };
+	}
+} satisfies Actions;
