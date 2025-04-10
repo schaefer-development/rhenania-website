@@ -11,7 +11,7 @@
 </script>
 
 <script lang="ts">
-	import HCaptcha from 'svelte-hcaptcha';
+	import HCaptcha from '$lib/components/HCaptcha/HCaptcha';
 	import { HCAPTCHA_SITEKEY } from '$lib/env';
 	import { browser } from '$app/env';
 

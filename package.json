@@ -47,6 +47,7 @@
 		"@fontsource/red-hat-text": "^5.2.5",
 		"@splidejs/svelte-splide": "^0.2.9",
 		"graphql": "^16.10.0",
+		"hcaptcha": "^0.1.1",
 		"leaflet": "^1.9.4"
 	}
 }
