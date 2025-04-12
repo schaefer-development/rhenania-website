@@ -26,7 +26,7 @@
 	<title>Kontakt - Nutzen Sie unser Kontaktformular bei Fragen</title>
 	<meta
 		name="description"
-		content="Sie haben Fragen zu einem unserer Produkte oder unserem Unternehmen ? Füllen Sie einfach das Formular aus und wir melden uns ✓ | rhenania-computer.de"
+		content="Sie haben Fragen zu einem unserer Produkte oder unserem Unternehmen? Füllen Sie einfach das Formular aus und wir melden uns ✓ | rhenania-computer.de"
 	/>
 </svelte:head>
 
@@ -134,7 +134,7 @@
 												class="block px-1 text-xs font-bold tracking-widest text-gray-700 uppercase"
 											>
 												<input
-													class="mb-2 block w-full appearance-none border border-gray-400 bg-white px-3 py-3 text-lg leading-tight text-gray-700 focus:border-black focus:bg-white focus:outline-none"
+													class="mb-2 block w-full appearance-none border border-gray-400 bg-white px-3 py-3 text-lg leading-tight font-normal text-gray-700 focus:border-black focus:bg-white focus:outline-none"
 													name="firma"
 													type="text"
 													placeholder="Musterfirma"
@@ -148,7 +148,7 @@
 												class="block px-1 text-xs font-bold tracking-widest text-gray-700 uppercase"
 											>
 												<input
-													class="mb-2 block w-full appearance-none border border-gray-400 bg-white px-3 py-3 text-lg leading-tight text-gray-700 focus:border-black focus:bg-white focus:outline-none"
+													class="mb-2 block w-full appearance-none border border-gray-400 bg-white px-3 py-3 text-lg leading-tight font-normal text-gray-700 focus:border-black focus:bg-white focus:outline-none"
 													name="name"
 													type="text"
 													placeholder="Max Mustermann"
@@ -162,7 +162,7 @@
 												class="block px-1 text-xs font-bold tracking-widest text-gray-700 uppercase"
 											>
 												<input
-													class="mb-2 block w-full appearance-none border border-gray-400 bg-white px-3 py-3 text-lg leading-tight text-gray-700 focus:border-black focus:bg-white focus:outline-none"
+													class="mb-2 block w-full appearance-none border border-gray-400 bg-white px-3 py-3 text-lg leading-tight font-normal text-gray-700 focus:border-black focus:bg-white focus:outline-none"
 													name="emailAdresse"
 													type="email"
 													placeholder="mail@beispiel.de"
@@ -176,7 +176,7 @@
 												class="block px-1 text-xs font-bold tracking-widest text-gray-700 uppercase"
 											>
 												<input
-													class="mb-2 block w-full appearance-none border border-gray-400 bg-white px-3 py-3 text-lg leading-tight text-gray-700 focus:border-black focus:bg-white focus:outline-none"
+													class="mb-2 block w-full appearance-none border border-gray-400 bg-white px-3 py-3 text-lg leading-tight font-normal text-gray-700 focus:border-black focus:bg-white focus:outline-none"
 													name="telefon"
 													type="text"
 													placeholder="0123456789"
@@ -190,7 +190,7 @@
 												class="mb-1 block px-1 text-xs font-bold tracking-widest text-gray-700 uppercase"
 											>
 												<textarea
-													class=" no-resize mb-2 block h-48 w-full resize-none appearance-none border border-gray-400 bg-white px-3 py-3 text-lg leading-tight text-gray-700 focus:border-black focus:bg-white focus:outline-none"
+													class=" no-resize mb-2 block h-48 w-full resize-none appearance-none border border-gray-400 bg-white px-3 py-3 text-lg leading-tight font-normal text-gray-700 focus:border-black focus:bg-white focus:outline-none"
 													name="nachricht"
 												>
 													Ihre Nachricht
