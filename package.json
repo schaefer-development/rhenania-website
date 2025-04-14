@@ -44,10 +44,10 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
-		"algoliasearch": "^4.13.1",
 		"@fontsource/red-hat-text": "^5.2.5",
 		"@splidejs/svelte-splide": "^0.2.9",
 		"@types/nodemailer": "^6.4.17",
+		"algoliasearch": "^5.23.3",
 		"graphql": "^16.10.0",
 		"hcaptcha": "^0.1.1",
 		"leaflet": "^1.9.4",
