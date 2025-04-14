@@ -205,36 +205,36 @@
 			<p class="pb-2 text-center font-bold tracking-wider uppercase sm:text-left">Unternehmen</p>
 			<p class="text-center leading-relaxed tracking-wide sm:text-left">
 				<a
-					href="/ueberuns"
+					href="/de/ueberuns"
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Über uns</a
 				><br />
 				<a
-					href="/kontakt"
+					href="/de/kontakt"
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Kontakt und Anfahrt</a
 				><br />
 
 				<a
-					href="/karriere"
+					href="/de/karriere"
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Karriere</a
 				><br />
 
 				<a
-					href="/versandlogistik-info"
+					href="/de/versandlogistik-info"
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Neues</a
 				><br />
 
 				<a
-					href="/partner"
+					href="/de/partner"
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Partner</a
 				><br />
 
 				<a
-					href="/referenzen"
+					href="/de/referenzen"
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Referenzen</a
 				><br />
@@ -244,18 +244,18 @@
 			<p class="pb-2 text-center font-bold tracking-wider uppercase sm:text-left">Service</p>
 			<p class="text-center leading-relaxed tracking-wide sm:text-left">
 				<a
-					href="/cloudloesung"
+					href="/de/cloudloesung"
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Cloudlösung</a
 				><br />
 				<a
-					href="/onlinesupport"
+					href="/de/onlinesupport"
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Online-Support</a
 				><br />
 
 				<a
-					href="/download"
+					href="/de/download"
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Download</a
 				><br />
@@ -265,14 +265,14 @@
 			<p class="pb-2 text-center font-bold tracking-wider uppercase sm:text-left">Kontakt</p>
 			<p class="text-center leading-relaxed tracking-wide sm:text-left">
 				<a
-					href="/impressum"
+					href="/de/impressum"
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Impressum</a
 				>
 				<br />
 
 				<a
-					href="/datenschutz"
+					href="/de/datenschutz"
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Datenschutz</a
 				>
