@@ -1,4 +1,6 @@
 <script lang="ts">
+	import type { BlogPost, Page } from '$lib/graphql/generated/schema';
+	import type { SearchResponse } from '@algolia/client-search';
 	import SearchIcon from './SearchIcon.svelte';
 
 	function eachRecursive(obj, highlights = []) {
@@ -15,7 +17,7 @@
 		return localHighlights;
 	}
 
-	export let hit;
+	export let hit: SearchResponse<Page | BlogPost>['hits'][number];
 	const { _snippetResult: snippet } = hit;
 	const highlights: string[] = eachRecursive(snippet);
 </script>
@@ -27,14 +29,14 @@
 	<div class="hyperlink flex pt-1">
 		<div class="searchHit relative flex-none pr-1">
 			{#if hit.__typename === 'BlogPost'}
-				<a sveltekit:prefetch class="flex" href={`/blog/${hit.slug}`}>
+				<a class="flex" href={`/de/blog/${hit.slug}`}>
 					<span class="pr-2 align-middle">
 						{@html hit.blogpostTitle}
 					</span>
 					<SearchIcon />
 				</a>
-			{:else}
-				<a sveltekit:prefetch class="flex" href={`/${hit.slug}`}>
+			{:else if hit.__typename === 'Page'}
+				<a class="flex" href={`/de/${hit.slug}`}>
 					<span class="pr-2 align-middle">
 						{@html hit.title}
 					</span>

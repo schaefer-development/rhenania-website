@@ -1,21 +1,16 @@
 <script lang="ts">
 	// to do import { prerendering } from '$app/env';
+	import type { EventHandler } from 'svelte/elements';
 	import { goto } from '$app/navigation';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import Logo from '$lib/components/Logo/Logo.svelte';
 	import Drawer from '$lib/components/Drawer/Drawer.svelte';
 	import ProductMenu from '$lib/components/Drawer/ProductMenu.svelte';
 	import CompanyMenu from '$lib/components/Drawer/CompanyMenu.svelte';
 	import ServiceMenu from '$lib/components/Drawer/ServiceMenu.svelte';
-	import { ALGOLIA_APP_ID, ALGOLIA_SEARCH_KEY } from '$lib/env';
-	import SearchResult from '$lib/components/SearchResult/SearchResult.svelte';
 	import MobileDrawer from '$lib/components/Drawer/Mobile/MobileDrawer.svelte';
 
 	import { afterNavigate } from '$app/navigation';
-
-	const appId = ALGOLIA_APP_ID;
-	const searchKey = ALGOLIA_SEARCH_KEY;
-	let searchEverFocused = false;
 
 	let openMenuFull = $state(false);
 	let openMenu: string | null = $state(null);
@@ -27,14 +22,16 @@
 		openMenuFull = !openMenuFull;
 	};
 
-	const search =
-		({ url, params }: { url: URL; params: Record<string, string> }) =>
-		async ({ target }) => {
-			const newUrl = new URL(url);
-			newUrl.pathname = `/${params.lang}/suche`;
-			newUrl.searchParams.set('q', target.query.value);
-			await goto(newUrl.toString());
-		};
+	const search: EventHandler<SubmitEvent, HTMLFormElement> = async (e) => {
+		const formData = new FormData(e.currentTarget);
+		const data = new URLSearchParams();
+		for (let field of formData) {
+			const [key, value] = field;
+			data.append(key, value.toString());
+		}
+
+		await goto(`/de/suche?${data.toString()}`);
+	};
 
 	afterNavigate(() => {
 		openMenu = null;
@@ -49,12 +46,12 @@
 			<div class="flex hidden flex-grow justify-end px-6 sm:block md:px-10">
 				<form
 					class="input-group relative flex w-full items-stretch justify-end pl-4"
-					on:submit|preventDefault={search($page)}
+					on:submit|preventDefault={search}
 				>
 					<input
 						type="search"
-						name="query"
-						value={$page.url.searchParams.get('q') || ''}
+						name="q"
+						value={page.url.searchParams.get('q') || ''}
 						class="form-control peer relative m-0 block w-full max-w-sm min-w-0 flex-auto rounded-none border-y border-l border-gray-400 bg-white bg-clip-padding px-3 py-2 font-normal transition ease-in-out focus:border-black focus:bg-white focus:text-gray-700 focus:outline-none"
 						placeholder="Suchen"
 						aria-label="Search"
@@ -93,7 +90,7 @@
 
 				<a href="/" class="relative mx-2 lg:mx-3">
 					<span
-						class="{$page.url.pathname === ''
+						class="{page.url.pathname === ''
 							? 'menupoint_underline'
 							: ''}  menupoint hover:text-rc_red focus:text-rc_red relative py-0.5 text-sm font-medium tracking-wider text-black uppercase focus:ring-0 focus:outline-none"
 						>Start</span
@@ -186,11 +183,11 @@
 		<div class="mx-4 h-10 w-full">
 			<!-- second row -->
 
-			<form class="input-group relative flex w-full" on:submit|preventDefault={search($page)}>
+			<form class="input-group relative flex w-full" on:submit|preventDefault={search}>
 				<input
 					type="search"
-					name="query"
-					value={$page.url.searchParams.get('q') || ''}
+					name="q"
+					value={page.url.searchParams.get('q') || ''}
 					class="form-control peer relative m-0 block w-full min-w-0 flex-auto rounded-none border-y border-l border-gray-400 bg-white bg-clip-padding px-3 py-2 font-normal transition ease-in-out focus:border-black focus:bg-white focus:text-gray-700 focus:outline-none"
 					placeholder="Suchen"
 					aria-label="Search"
