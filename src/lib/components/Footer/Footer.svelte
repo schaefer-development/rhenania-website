@@ -7,7 +7,7 @@
 			title: 'Versandlogistiksystem',
 			subpoints: [
 				{ name: 'K04', href: '/de/k04' },
-				{ name: 'F95', href: '/de/f96' },
+				{ name: 'F95', href: '/de/f95' },
 				{ name: 'VKA', href: '/de/vka' }
 			]
 		},
