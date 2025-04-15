@@ -1,7 +1,6 @@
 <script lang="ts">
 	export let error;
 	export let status;
-	import { page } from '$app/state';
 </script>
 
 <svelte:head>

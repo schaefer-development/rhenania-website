@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import type { CardImage } from '$lib/graphql/generated/schema';
 	export let card: Partial<CardImage> = {};
 </script>

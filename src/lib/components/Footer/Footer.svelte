@@ -70,7 +70,7 @@
 							/>
 						</SplideSlide>
 					{/if}
-				{/each}-->
+				{/each}
 			</Splide>
 
 			<hr />
@@ -112,94 +112,9 @@
 		</div>
 		<div class="pb-8">
 			<p class="pb-2 text-center font-bold tracking-wider uppercase sm:text-left">Produkte</p>
-			<p class="text-center leading-relaxed tracking-wide sm:text-left">
+			<div class="text-center leading-relaxed tracking-wide sm:text-left">
 				<FooterAccordion items={accordionItems} />
-
-				<!--
-				<FooterAccordion id="FooterVersandlogistiksystem">
-					<span
-						slot="headline"
-						class="hover:text-rc_red focus:text-rc_red block text-white focus:ring-0 focus:outline-none"
-						>Versandlogistiksystem</span
-					>
-					<div slot="content" class="pb-2">
-						<a
-							href="/k04"
-							class="hover:text-rc_red focus:text-rc_red block pl-2 text-white focus:ring-0 focus:outline-none"
-							>– K04</a
-						>
-						<a
-							href="/f95"
-							class="hover:text-rc_red focus:text-rc_red block pl-2 text-white focus:ring-0 focus:outline-none"
-							>– F95</a
-						>
-
-						<a
-							href="/vka"
-							class="hover:text-rc_red focus:text-rc_red block pl-2 text-white focus:ring-0 focus:outline-none"
-							>– VKA</a
-						>
-					</div>
-				</FooterAccordion>
-
-				<FooterAccordion id="FooterVersandoptimierung">
-					<span
-						slot="headline"
-						class="hover:text-rc_red focus:text-rc_red block text-white focus:ring-0 focus:outline-none"
-						>Versandlogistiksystem</span
-					>
-					<div slot="content" class="pb-2">
-						<a
-							href="/u12"
-							class="hover:text-rc_red focus:text-rc_red block pl-2 text-white focus:ring-0 focus:outline-none"
-							>– U12</a
-						>
-						<a
-							href="/apk"
-							class="hover:text-rc_red focus:text-rc_red block pl-2 text-white focus:ring-0 focus:outline-none"
-							>– APK</a
-						>
-						<a
-							href="/duv"
-							class="hover:text-rc_red focus:text-rc_red block pl-2 text-white focus:ring-0 focus:outline-none"
-							>– DUV</a
-						>
-						<a
-							href="/g10"
-							class="hover:text-rc_red focus:text-rc_red block pl-2 text-white focus:ring-0 focus:outline-none"
-							>– G10</a
-						>
-					</div>
-				</FooterAccordion>
-
-				<FooterAccordion id="FooterHardware">
-					<span
-						slot="headline"
-						class="hover:text-rc_red focus:text-rc_red block text-white focus:ring-0 focus:outline-none"
-						>Hardware</span
-					>
-					<div slot="content" class="pb-2">
-						<a
-							href="/etikettendrucker"
-							class="hover:text-rc_red focus:text-rc_red block pl-2 text-white focus:ring-0 focus:outline-none"
-							>– Etikettendrucker</a
-						>
-						<a
-							href="/waagen"
-							class="hover:text-rc_red focus:text-rc_red block pl-2 text-white focus:ring-0 focus:outline-none"
-							>– Waagen</a
-						>
-						<a
-							href="/barcodescanner"
-							class="hover:text-rc_red focus:text-rc_red block pl-2 text-white focus:ring-0 focus:outline-none"
-							>– Barcodescanner</a
-						>
-					</div>
-				</FooterAccordion>
-
-
-				-->
-			</p>
+			</div>
 		</div>
 		<div class="pb-8">
 			<p class="pb-2 text-center font-bold tracking-wider uppercase sm:text-left">Unternehmen</p>

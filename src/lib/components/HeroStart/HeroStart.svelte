@@ -1,7 +1,4 @@
 <script lang="ts">
-	import { base } from '$app/paths';
-	//	import { _ } from 'svelte-i18n';
-
 	let y: number;
 	let paraEffect = 0.5;
 
