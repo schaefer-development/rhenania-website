@@ -4,6 +4,8 @@ import { error } from '@sveltejs/kit';
 import { api } from '$lib/graphql/api';
 import { PAGE } from '$lib/graphql/queries';
 
+export const prerender = false;
+
 export const load: PageServerLoad = async ({ params: { slug } }) => {
 	const { body } = await api(PAGE, { slug });
 

@@ -7,6 +7,8 @@ import email, { defaults } from '$lib/mail';
 import { verify } from 'hcaptcha';
 import { HCAPTCHA_SECRET } from '$lib/env';
 
+export const prerender = false;
+
 const transporter = nodemailer.createTransport({
 	host: SMTP_HOST,
 	port: SMTP_PORT,

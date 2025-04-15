@@ -5,6 +5,8 @@ import { error } from '@sveltejs/kit';
 import { api } from '$lib/graphql/api';
 import { BLOG_POST } from '$lib/graphql/queries';
 
+export const prerender = 'auto';
+
 export const load: PageServerLoad = async ({ params: { slug } }) => {
 	const { body } = await api(BLOG_POST, { slug });
 
