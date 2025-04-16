@@ -4,7 +4,7 @@
 </script>
 
 <div class="mod_partnerItem relative grid grid-cols-1 gap-4 sm:grid-cols-2">
-	<div class="grid content-center border bg-white">
+	<div class="grid content-center border border-gray-200 bg-white">
 		<img src={partnerItem.partnerLogo.url} alt="Rhenania Referenzen" class="mx-auto w-full" />
 	</div>
 	<div class="grid content-center lg:content-start">

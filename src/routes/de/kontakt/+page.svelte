@@ -66,7 +66,6 @@
 		</div>
 		<div class="col-span-2">
 			<h2 class="rc_h1 text-rc_darkblue headlinelink pb-3">Kontaktieren Sie uns per E-Mail</h2>
-
 			<div class="relative flex justify-center">
 				<a
 					class="bg-rc_red hover:bg-rc_red-darker rc_button_corner relative mt-2 py-2 pr-3 pl-5 text-sm font-bold tracking-widest text-white uppercase"
@@ -190,11 +189,10 @@
 												class="mb-1 block px-1 text-xs font-bold tracking-widest text-gray-700 uppercase"
 											>
 												<textarea
-													class=" no-resize mb-2 block h-48 w-full resize-none appearance-none border border-gray-400 bg-white px-3 py-3 text-lg leading-tight font-normal text-gray-700 focus:border-black focus:bg-white focus:outline-none"
+													class="no-resize mb-2 block h-48 w-full resize-none appearance-none border border-gray-400 bg-white px-3 py-3 text-lg leading-tight font-normal text-gray-700 focus:border-black focus:bg-white focus:outline-none"
 													name="nachricht"
-												>
-													Ihre Nachricht
-												</textarea>
+												></textarea>
+												Ihre Nachricht
 											</label>
 										</div>
 										<!-- hcaptcha -->

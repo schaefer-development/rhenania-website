@@ -4,7 +4,7 @@
 </script>
 
 <div
-	class="mod_cardIcon relative mx-5 my-5 grow overflow-hidden bg-white shadow-sm duration-150 ease-in-out hover:shadow-lg"
+	class="mod_cardIcon relative mx-5 my-5 grow overflow-hidden bg-white shadow-xs duration-150 ease-in-out hover:shadow-lg"
 >
 	{#if card?.link?.target}
 		<a href="/de/{card.link.target.slug}" title={card.headline}>

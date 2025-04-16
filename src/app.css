@@ -16,7 +16,7 @@
 	--color-bg-2: hsl(224, 44%, 95%);
 	--color-theme-1: #ff3e00;
 	--color-theme-2: #4075a6;
-	--color-text: rgba(0, 0, 0, 0.7);
+	--color-text: rgba(0, 0, 0, 1);
 	--column-width: 42rem;
 	--column-margin-top: 4rem;
 	font-family: var(--font-body);
@@ -149,4 +149,20 @@ blockquote {
 	content: '■';
 	color: rgba(42, 73, 157, 1);
 	margin-left: -2em;
+}
+
+.splide__arrow {
+	background: none;
+}
+
+.splide__arrow svg path {
+	fill: white;
+}
+
+.splide__arrow.splide__arrow--prev {
+	margin-left: -2rem;
+}
+
+.splide__arrow.splide__arrow--next {
+	margin-right: -1.5rem;
 }

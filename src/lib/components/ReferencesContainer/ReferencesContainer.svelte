@@ -28,7 +28,7 @@
 	class="relative z-10 mx-auto grid max-w-screen-lg grid-cols-3 gap-2 px-10 pb-24 sm:grid-cols-4 md:grid-cols-5"
 >
 	{#each module.referenceItems as referenceItem (referenceItem.id)}
-		<div class="col-span-1 border bg-white">
+		<div class="col-span-1 border border-gray-200 bg-white">
 			<ReferenceItem {referenceItem} />
 		</div>
 	{/each}

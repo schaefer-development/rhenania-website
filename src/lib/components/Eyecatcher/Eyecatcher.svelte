@@ -29,7 +29,7 @@
 				</div>
 				<a
 					class="bg-rc_red hover:bg-rc_red-darker rc_button_corner relative mt-8 py-2 pr-3 pl-5 text-sm font-bold tracking-widest text-white uppercase"
-					href={module.link?.target.slug}
+					href="/de/{module.link?.target.slug}"
 					title={module.headline}>{module.link?.label}</a
 				>
 			</div>
