@@ -16,7 +16,7 @@
 	{#each items as item, index (item)}
 		<div class="">
 			<button
-				class="hover:text-rc_red flex w-full cursor-pointer items-center justify-between text-left transition"
+				class="hover:text-rc_red flex w-full cursor-pointer items-center justify-between text-left tracking-wider uppercase transition"
 				on:click={() => toggleItem(index)}
 			>
 				{item.title}
@@ -26,8 +26,8 @@
 			{#if openItems.has(index)}
 				<ul class="pb-4 text-white">
 					{#each item.subpoints as sub (sub)}
-						<li class="px-2">
-							<a href={sub.href} class="hover:text-rc_red text-white">
+						<li class="ml-2 list-disc">
+							<a href={sub.href} class="hover:text-rc_red block pb-1 pl-1 text-white">
 								{sub.name}
 							</a>
 						</li>
