@@ -128,7 +128,7 @@
 
 			<div class="flex grow justify-end pl-0 lg:grow-0 lg:pl-4">
 				<a
-					href="de/kontakt"
+					href="/de/kontakt"
 					class="bg-rc_red hover:bg-rc_red-darker flex h-9 items-center justify-center px-2 text-sm font-medium tracking-wider text-white uppercase uppercase hover:text-white"
 					title="Nehmen Sie Kontakt auf">Kontakt</a
 				>
