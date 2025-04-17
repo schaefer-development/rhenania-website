@@ -14,7 +14,7 @@
 				<p>Hm, wir können diese Seite leider nicht finden.</p>
 			{/if}
 		{:else}
-			<h1 class="rc_h1 text-rc_darkblue pb-2">Upsi, da ist was schief gelaufen</h1>
+			<h1 class="rc_h1 text-rc_darkblue pb-2">Da ist was schief gelaufen</h1>
 			{#if page.error}
 				<p>{page.error.message}</p>
 			{/if}
