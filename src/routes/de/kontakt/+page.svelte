@@ -65,30 +65,6 @@
 			</div>
 		</div>
 		<div class="col-span-2">
-			<h2 class="rc_h1 text-rc_darkblue headlinelink pb-3">Kontaktieren Sie uns per E-Mail</h2>
-			<div class="relative flex justify-center">
-				<a
-					class="bg-rc_red hover:bg-rc_red-darker rc_button_corner relative mt-2 py-2 pr-3 pl-5 text-sm font-bold tracking-widest text-white uppercase"
-					href="mailto:info@rhenania.biz">info@rhenania.biz</a
-				>
-			</div>
-			<div class="mod_divider relative">
-				<div class="mod_divider w-full py-12">
-					<div class="h-1 w-full border-b-4 border-gray-300"></div>
-					<div class="flew-row mx-auto -mt-1 flex h-1 w-full max-w-screen-2xl">
-						<div class="bg-gray-300" style="width:50%;"></div>
-						<div class="bg-gray-50" style="width:6%;"></div>
-						<div class="bg-gray-300" style="width:5%;"></div>
-						<div class="bg-gray-50" style="width:6%;"></div>
-						<div class="bg-gray-300" style="width:7%;"></div>
-						<div class="bg-gray-50" style="width:8%;"></div>
-						<div class="bg-gray-300" style="width:8%;"></div>
-						<div class="bg-gray-50" style="width:4%;"></div>
-						<div class="bg-gray-300" style="width:6%;"></div>
-					</div>
-				</div>
-			</div>
-
 			{#if form?.success}
 				<div class="col-span-2">
 					<h1 class="rc_h1 text-rc_darkblue">Vielen Dank für Ihre Anfrage.</h1>
@@ -101,6 +77,29 @@
 					</p>
 				</div>
 			{:else}
+				<h2 class="rc_h1 text-rc_darkblue headlinelink pb-3">Kontaktieren Sie uns per E-Mail</h2>
+				<div class="relative flex justify-center">
+					<a
+						class="bg-rc_red hover:bg-rc_red-darker rc_button_corner relative mt-2 py-2 pr-3 pl-5 text-sm font-bold tracking-widest text-white uppercase"
+						href="mailto:info@rhenania.biz">info@rhenania.biz</a
+					>
+				</div>
+				<div class="mod_divider relative">
+					<div class="mod_divider w-full py-12">
+						<div class="h-1 w-full border-b-4 border-gray-300"></div>
+						<div class="flew-row mx-auto -mt-1 flex h-1 w-full max-w-screen-2xl">
+							<div class="bg-gray-300" style="width:50%;"></div>
+							<div class="bg-gray-50" style="width:6%;"></div>
+							<div class="bg-gray-300" style="width:5%;"></div>
+							<div class="bg-gray-50" style="width:6%;"></div>
+							<div class="bg-gray-300" style="width:7%;"></div>
+							<div class="bg-gray-50" style="width:8%;"></div>
+							<div class="bg-gray-300" style="width:8%;"></div>
+							<div class="bg-gray-50" style="width:4%;"></div>
+							<div class="bg-gray-300" style="width:6%;"></div>
+						</div>
+					</div>
+				</div>
 				<div class="mod_contactFormAccordion relative">
 					<div class="relative w-full"></div>
 					<div class="mod_accordion tab relative block h-auto w-full overflow-hidden pb-4">
