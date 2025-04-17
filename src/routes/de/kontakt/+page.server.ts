@@ -41,11 +41,6 @@ const formData = async (request: Request): Promise<Email> => {
 	};
 };
 
-const errorBody = `
-<p>Beim Versenden der Best&auml;tigungs-Email ist etwas schiefgegangen</p>
-<p>Bitte kontaktieren Sie uns mit einer E-Mail an ${defaults.from}</p>
-`;
-
 export const actions = {
 	default: async ({ request }) => {
 		const emailPayload = await formData(request);
