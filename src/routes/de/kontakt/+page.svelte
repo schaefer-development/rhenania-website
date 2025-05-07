@@ -5,7 +5,7 @@
 	import { browser } from '$app/environment';
 	import Map from '$lib/components/Map/Map.svelte';
 
-	let captcha;
+	let captcha: HCaptcha;
 	let valid = $state(false);
 	let datapolicy = $state(false);
 	const handleError = () => {
