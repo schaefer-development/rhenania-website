@@ -17,7 +17,7 @@
 			style="transform: translate(0, {y < 2 ? y * 1 : y * paraEffect}px)"
 		>
 			<h1
-				class="rc_text_shadow pb-2 text-4xl font-bold tracking-wider text-white uppercase md:text-5xl lg:text-6xl"
+				class="rc_text_shadow pb-2 text-center text-4xl font-bold tracking-wider text-white uppercase md:text-5xl lg:text-6xl"
 			>
 				Wir optimieren Ihren Versand
 			</h1>

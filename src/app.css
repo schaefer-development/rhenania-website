@@ -29,6 +29,7 @@ body {
 	background-attachment: fixed;
 	background-size: 100vw 100vh;
 	scroll-behavior: smooth;
+	font-size: calc(12.5px + 0.25vw);
 }
 
 @theme {

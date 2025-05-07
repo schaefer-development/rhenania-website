@@ -16,11 +16,44 @@
 	{#each items as item, index (item)}
 		<div class="">
 			<button
-				class="hover:text-rc_red flex w-full cursor-pointer items-center justify-between text-left tracking-wider uppercase transition"
+				class="hover:text-rc_red flex w-full cursor-pointer items-center justify-between text-left tracking-wider transition"
 				on:click={() => toggleItem(index)}
 			>
-				{item.title}
-				<span>{openItems.has(index) ? '−' : '+'}</span>
+				<span class="grow">{item.title}</span>
+
+				<span>
+					{#if openItems.has(index)}
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="aspect-square w-4"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+							/>
+						</svg>
+					{:else}
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="aspect-square w-4"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+							/>
+						</svg>
+					{/if}
+				</span>
 			</button>
 
 			{#if openItems.has(index)}
