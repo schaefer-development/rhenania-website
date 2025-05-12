@@ -6,18 +6,27 @@
 			id: 'versandlogistiksystem',
 			title: 'Versandlogistiksystem',
 			links: [
-				{ href: '/de/k04', label: 'K04 - Kommissionieren, Kontrollieren, Packen' },
-				{ href: '/de/f95', label: 'F95 - Paket- und Palettenversand' },
-				{ href: '/de/vka', label: 'VKA - Versandkostenkontrolle und Abrechnung' }
+				{
+					href: '/de/beleglose-kommissionierung-software',
+					label: 'K04 - Kommissionieren, Kontrollieren, Packen'
+				},
+				{ href: '/de/multi-carrier-versandsoftware', label: 'F95 - Paket- und Palettenversand' },
+				{
+					href: '/de/versandkosten-frachtkosten-software',
+					label: 'VKA - Versandkostenkontrolle und Abrechnung'
+				}
 			]
 		},
 		{
 			id: 'versandoptimierung',
 			title: 'Versandoptimierung',
 			links: [
-				{ href: '/de/u12', label: 'U12 - Umsatzsteuer Befreiung sichern' },
-				{ href: '/de/apk', label: 'APK - Adressprüfung und Korrektur' },
-				{ href: '/de/duv', label: 'DUV - Dubletten vermeiden' },
+				{
+					href: '/de/gelangensbestaetigung-software',
+					label: 'U12 - Umsatzsteuer Befreiung sichern'
+				},
+				{ href: '/de/adresspruefung-software', label: 'APK - Adressprüfung und Korrektur' },
+				{ href: '/de/dublettenpruefung-software', label: 'DUV - Dubletten vermeiden' },
 				{ href: '/de/gefahrgut-versand-software', label: 'G10 - Gefahrgutversand' }
 			]
 		},
