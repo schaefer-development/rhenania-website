@@ -52,18 +52,18 @@
 					<span slot="headline">Versandlogistiksystem</span>
 					<div slot="content" class="flex flex-col">
 						<a
-							href="/de/k04"
+							href="/de/beleglose-kommissionierung-software"
 							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
 							>K04 - Kommissionieren, Kontrollieren, Packen</a
 						>
 						<a
-							href="/de/f95"
+							href="/de/multi-carrier-versandsoftware"
 							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
 							>F95 - Paket- und Palettenversand</a
 						>
 
 						<a
-							href="/de/vka"
+							href="/de/versandkosten-frachtkosten-software"
 							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
 							>VKA - Versandkostenkontrolle und Abrechnung</a
 						>
@@ -73,17 +73,17 @@
 					<span slot="headline">Versandoptimierung</span>
 					<div slot="content" class="flex flex-col">
 						<a
-							href="/de/u12"
+							href="/de/gelangensbestaetigung-software"
 							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
 							>U12 - Umsatzsteuer Befreiung sichern</a
 						>
 						<a
-							href="/de/duv"
+							href="/de/dublettenpruefung-software"
 							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
 							>DUV - Dubletten vermeiden</a
 						>
 						<a
-							href="/de/apk"
+							href="/de/adresspruefung-software"
 							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
 							>APK - Adressprüfung und Korrektur</a
 						>
