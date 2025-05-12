@@ -18,7 +18,7 @@
 				{ href: '/de/u12', label: 'U12 - Umsatzsteuer Befreiung sichern' },
 				{ href: '/de/apk', label: 'APK - Adressprüfung und Korrektur' },
 				{ href: '/de/duv', label: 'DUV - Dubletten vermeiden' },
-				{ href: '/de/g10', label: 'G10 - Gefahrgutversand' }
+				{ href: '/de/gefahrgut-versand-software', label: 'G10 - Gefahrgutversand' }
 			]
 		},
 		{

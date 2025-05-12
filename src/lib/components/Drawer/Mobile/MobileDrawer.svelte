@@ -88,7 +88,7 @@
 							>APK - Adressprüfung und Korrektur</a
 						>
 						<a
-							href="/de/g10"
+							href="/de/gefahrgut-versand-software"
 							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
 							>G10 - Gefahrgutversand</a
 						>
