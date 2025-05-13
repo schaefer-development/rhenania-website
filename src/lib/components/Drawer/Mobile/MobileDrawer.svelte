@@ -1,7 +1,13 @@
 <script lang="ts">
+	import { afterNavigate } from '$app/navigation';
 	import DrawerAccordion from '$lib/components/Drawer/DrawerAccordion.svelte';
+
 	export let toggleMenuFull: () => void;
 	export let openMenuFull: boolean;
+
+	afterNavigate(() => {
+		if (openMenuFull) toggleMenuFull();
+	});
 </script>
 
 <aside
@@ -39,13 +45,13 @@
 			<div class="left">
 				<!-- left start -->
 				<a
-					href="#"
+					href="/"
 					class="text-rc_skyblue text-rc_skyblue text-xl font-medium tracking-wider break-words uppercase"
 					>Start</a
 				>
 
 				<div class="bg-rc_darkblue my-4 block h-0.5"></div>
-				<p class="text-rc_skyblue text-xl font-medium tracking-wider break-words uppercase">
+				<p class="text-rc_skyblue pb-2 text-xl font-medium tracking-wider break-words uppercase">
 					Produkte
 				</p>
 				<DrawerAccordion id="versandlogistiksystem_drawer_full">
@@ -53,18 +59,18 @@
 					<div slot="content" class="flex flex-col">
 						<a
 							href="/de/beleglose-kommissionierung-software"
-							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
+							class="text-rc_skyblue upppercase border-b border-blue-700 py-3 font-medium"
 							>K04 - Kommissionieren, Kontrollieren, Packen</a
 						>
 						<a
 							href="/de/multi-carrier-versandsoftware"
-							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
+							class="text-rc_skyblue upppercase border-b border-blue-700 py-3 font-medium"
 							>F95 - Paket- und Palettenversand</a
 						>
 
 						<a
 							href="/de/versandkosten-frachtkosten-software"
-							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
+							class="text-rc_skyblue upppercase border-b border-blue-700 py-3 font-medium"
 							>VKA - Versandkostenkontrolle und Abrechnung</a
 						>
 					</div>
@@ -74,22 +80,22 @@
 					<div slot="content" class="flex flex-col">
 						<a
 							href="/de/gelangensbestaetigung-software"
-							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
+							class="text-rc_skyblue upppercase border-b border-blue-700 py-3 font-medium"
 							>U12 - Umsatzsteuer Befreiung sichern</a
 						>
 						<a
 							href="/de/dublettenpruefung-software"
-							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
+							class="text-rc_skyblue upppercase border-b border-blue-700 py-3 font-medium"
 							>DUV - Dubletten vermeiden</a
 						>
 						<a
 							href="/de/adresspruefung-software"
-							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
+							class="text-rc_skyblue upppercase border-b border-blue-700 py-3 font-medium"
 							>APK - Adressprüfung und Korrektur</a
 						>
 						<a
 							href="/de/gefahrgut-versand-software"
-							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
+							class="text-rc_skyblue upppercase border-b border-blue-700 py-3 font-medium"
 							>G10 - Gefahrgutversand</a
 						>
 					</div>
@@ -99,16 +105,16 @@
 					<div slot="content" class="flex flex-col">
 						<a
 							href="/de/etikettendrucker"
-							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
+							class="text-rc_skyblue upppercase border-b border-blue-700 py-3 font-medium"
 							>Etikettendrucker</a
 						>
 						<a
 							href="/de/waagen"
-							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium">Waagen</a
+							class="text-rc_skyblue upppercase border-b border-blue-700 py-3 font-medium">Waagen</a
 						>
 						<a
 							href="/de/barcodescanner"
-							class="text-rc_skyblue upppercase border-b border-blue-700 py-2 font-medium"
+							class="text-rc_skyblue upppercase border-b border-blue-700 py-3 font-medium"
 							>Barcodescanner</a
 						>
 					</div>

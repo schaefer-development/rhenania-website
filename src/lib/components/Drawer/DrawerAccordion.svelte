@@ -1,10 +1,20 @@
 <script lang="ts">
+	import { afterNavigate } from '$app/navigation';
+	import { onMount } from 'svelte';
 	export let id: string;
+
+	let checkbox: HTMLInputElement;
+
+	afterNavigate(() => {
+		if (checkbox) {
+			checkbox.checked = false;
+		}
+	});
 </script>
 
-<div class="tab w-full overflow-hidden py-4">
-	<input class="absolute opacity-0" {id} type="checkbox" name="tabs" />
-	<label class="flex flex cursor-pointer items-stretch border-b-2 border-blue-800 py-2" for={id}>
+<div class="tab w-full overflow-hidden py-3">
+	<input bind:this={checkbox} class="absolute opacity-0" {id} type="checkbox" name="tabs" />
+	<label class="flex flex cursor-pointer items-stretch" for={id}>
 		<div
 			class="hover:text-rc_red w-full self-center text-sm font-medium tracking-widest text-white uppercase"
 		>
