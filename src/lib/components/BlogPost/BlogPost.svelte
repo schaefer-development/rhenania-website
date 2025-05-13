@@ -21,14 +21,14 @@
 </script>
 
 {#if blogPost}
-	<div class="mod_blogEntry relative w-full overflow-hidden h-auto">
+	<div class="mod_blogEntry relative h-auto w-full overflow-hidden">
 		<div
-			class="bg_layer absolute w-full h-full bg-cover bg-center "
-			style="background-image: url({blogPost.heroBackgroundImage.url})"
-		/>
+			class="bg_layer absolute h-full w-full bg-cover bg-center"
+			style="background-image: url({blogPost.heroBackgroundImage?.url})"
+		></div>
 		<div
-			class="relative z-2 h-30v flex items-center max-w-screen-md mx-auto px-4 lg:px-10 py-16 lg:py-24"
-		/>
+			class="h-30v relative z-2 mx-auto flex max-w-screen-md items-center px-4 py-16 lg:px-10 lg:py-24"
+		></div>
 	</div>
 	<div class="relative">
 		{#each blogPost.modules as module (module.id)}

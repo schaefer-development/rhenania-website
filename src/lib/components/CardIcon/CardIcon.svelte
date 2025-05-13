@@ -1,16 +1,15 @@
 <script lang="ts">
-	import { linkTo } from '$lib/helpers';
 	import type { CardIcon } from '$lib/graphql/generated/schema';
 	export let card: Partial<CardIcon> = {};
 </script>
 
 <div
-	class="mod_cardIcon mx-5 my-5 grow relative overflow-hidden bg-white shadow-sm hover:shadow-lg duration-150 ease-in-out"
+	class="mod_cardIcon relative mx-5 my-5 grow overflow-hidden bg-white shadow-xs duration-150 ease-in-out hover:shadow-lg"
 >
 	{#if card?.link?.target}
-		<a href={$linkTo(card.link.target.slug)} title={card.headline}>
+		<a href="/de/{card.link.target.slug}" title={card.headline}>
 			<div
-				class="cardIcon h-48 bg-red flex items-center justify-center"
+				class="cardIcon bg-red flex h-48 items-center justify-center"
 				style="background-color:{card.backgroundColor.hex}"
 			>
 				{#if card?.icon?.url}
@@ -18,14 +17,14 @@
 				{/if}
 			</div>
 
-			<div class="text px-6 py-6 flex flex-col text-center">
+			<div class="text flex flex-col px-6 py-6 text-center">
 				<div class="rc_h3 text-rc_darkblue mb-2">{card.headline}</div>
 				{#if card.subheadline}
 					<div class="mb-2">{card.subheadline}</div>
 				{/if}
 				{#if card.link}
-					<span class="relative flex flex-row items-center mx-auto text-rc_red">
-						<span class="uppercase tracking-wider text-sm font-medium">Mehr</span>
+					<span class="text-rc_red relative mx-auto flex flex-row items-center">
+						<span class="text-sm font-medium tracking-wider uppercase">Mehr</span>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							class="h-6 w-6"
@@ -46,14 +45,14 @@
 		</a>
 	{:else}
 		<div
-			class="cardIcon h-48 bg-red flex items-center justify-center"
+			class="cardIcon bg-red flex h-48 items-center justify-center"
 			style="background-color:{card.backgroundColor.hex}"
 		>
 			{#if card?.icon?.url}
 				<img src={card.icon.url} alt="Rhenania Icon" />
 			{/if}
 		</div>
-		<div class="text px-6 py-6 flex flex-col text-center">
+		<div class="text flex flex-col px-6 py-6 text-center">
 			<div class="rc_h3 text-rc_darkblue mb-2">{card.headline}</div>
 			{#if card.subheadline}
 				<div class="mb-2">{card.subheadline}</div>

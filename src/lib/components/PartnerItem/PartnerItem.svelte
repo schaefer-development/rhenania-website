@@ -3,9 +3,9 @@
 	export let partnerItem: Partial<PartnerItem> = {};
 </script>
 
-<div class="mod_partnerItem relative grid grid-cols-1 sm:grid-cols-2 gap-4">
-	<div class="bg-white border grid content-center">
-		<img src={partnerItem.partnerLogo.url} alt="Rhenania Referenzen" class="w-full mx-auto" />
+<div class="mod_partnerItem relative grid grid-cols-1 gap-4 sm:grid-cols-2">
+	<div class="grid content-center border border-gray-200 bg-white">
+		<img src={partnerItem.partnerLogo.url} alt="Rhenania Referenzen" class="mx-auto w-full" />
 	</div>
 	<div class="grid content-center lg:content-start">
 		{@html partnerItem.partnerDescription.html}

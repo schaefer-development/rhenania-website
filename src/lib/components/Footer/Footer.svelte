@@ -1,35 +1,103 @@
 <script lang="ts">
 	import Logo from '$lib/components/Logo/Logo.svelte';
-	import { linkTo } from '$lib/helpers';
 	import FooterAccordion from '$lib/components/Footer/FooterAccordion.svelte';
 
-	import Slideshow from '$lib/components/Slideshow/Slideshow.svelte';
+	const accordionItems = [
+		{
+			title: 'Versandlogistiksystem',
+			subpoints: [
+				{
+					name: 'K04 - Kommissionieren, Kontrollieren, Packen',
+					href: '/de/beleglose-kommissionierung-software'
+				},
+				{ name: 'F95 - Paket- und Palettenversand', href: '/de/multi-carrier-versandsoftware' },
+				{
+					name: 'VKA - Versandkostenkontrolle und Abrechnung',
+					href: '/de/versandkosten-frachtkosten-software'
+				}
+			]
+		},
+		{
+			title: 'Versandoptimierung',
+			subpoints: [
+				{
+					name: 'U12 - Umsatzsteuer Befreiung sichern',
+					href: '/de/gelangensbestaetigung-software'
+				},
+				{ name: 'APK - Adressprüfung und Korrektur', href: '/de/adresspruefung-software' },
+				{ name: 'DUV - Dubletten vermeiden', href: '/de/dublettenpruefung-software' },
+				{ name: 'G10 - Gefahrgutversand', href: '/de/gefahrgut-versand-software' }
+			]
+		},
+		{
+			title: 'Hardware',
+			subpoints: [
+				{ name: 'Etikettendrucker', href: '/de/etikettendrucker' },
+				{ name: 'Waagen', href: '/de/waagen' },
+				{ name: 'Barcodescanner', href: '/de/barcodescanner' }
+			]
+		}
+	];
+
+	import type { ReferencesItem } from '$lib/graphql/generated/schema';
+	export let referenceItems: ReferencesItem[] = [];
+
 	import type { ReferencesContainer } from '$lib/graphql/generated/schema';
+
+	import '@splidejs/svelte-splide/css';
+	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 
 	let date = new Date().getFullYear();
 	export let data: { referencesContainers: ReferencesContainer[] };
 </script>
 
-<footer class="text-white bg-rc_darkblue-darkest relative">
+<footer class="bg-rc_darkblue-darkest relative text-white">
 	<div class="bg-rc_darkblue w-full">
-		<div class="mx-auto max-w-screen-2xl px-10 text-rc_darkblue-darkest flex items-center">
-			<Slideshow referenceItems={data?.referencesContainers?.[0].referenceItems} />
+		<div class="text-rc_darkblue-darkest mx-auto flex max-w-screen-2xl items-center px-10">
+			<Splide
+				aria-label="Kundenlogos von Rhenania Computer GmbH"
+				class="relative w-full"
+				options={{
+					autoplay: true,
+					rewind: true,
+					perPage: 5,
+					perMove: 1,
+					pagination: false,
+					autoScroll: {
+						speed: 1
+					}
+				}}
+			>
+				{#each data.referencesContainers?.[0].referenceItems as referenceItem (referenceItem.id)}
+					{#if referenceItem.referenceLogo}
+						<SplideSlide data-splide-interval="1401">
+							<img
+								src={referenceItem.referenceLogo.url}
+								alt="Kundenlogo von Rhenania Computer"
+								class="mx-auto w-9/12"
+							/>
+						</SplideSlide>
+					{/if}
+				{/each}
+			</Splide>
+
+			<hr />
 		</div>
 	</div>
 
 	<div
-		class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-4 mx-auto max-w-screen-2xl px-10 pt-20 pb-10 text-xs "
+		class="mx-auto grid max-w-screen-2xl grid-cols-1 gap-4 px-10 pt-20 pb-10 text-xs sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6"
 	>
-		<div class="col-span-full text-white grid">
+		<div class="col-span-full grid text-white">
 			<div class="w-16 justify-self-center sm:justify-self-start">
 				<Logo />
 			</div>
 		</div>
-		<div class="col-span-full xl:col-span-1 pb-8">
-			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2 leading-relaxed">
+		<div class="col-span-full pb-8 xl:col-span-1">
+			<p class="pb-2 text-center leading-relaxed font-bold tracking-wider uppercase sm:text-left">
 				RC Rhenania Computer
 			</p>
-			<p class="text-center sm:text-left tracking-wide leading-relaxed">
+			<p class="text-center leading-relaxed tracking-wide sm:text-left">
 				Aegidiusplatz 15 b<br />
 				53604 Bad Honnef
 				<br /><br />
@@ -39,175 +107,96 @@
 
 				<a
 					href="mailto:info@rhenania.biz"
-					alt="Eine E-Mail mit Ihrem Standard Mailprogramm schreiben"
-					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					title="Eine E-Mail mit Ihrem Standard Mailprogramm schreiben"
+					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>info@rhenania.biz</a
 				>
 			</p>
 		</div>
-		<div class="pb-8 hidden xl:block w-full">
-			<div class="w-full aspect-square flex justify-center  ">
-				<div class="border-r h-32 rc_rotate" />
+		<div class="hidden w-full pb-8 xl:block">
+			<div class="flex aspect-square w-full justify-center">
+				<div class="h-32 rotate-45 border-r"></div>
 			</div>
 		</div>
 		<div class="pb-8">
-			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Produkte</p>
-			<p class="text-center sm:text-left tracking-wide leading-relaxed">
-				<FooterAccordion id="FooterVersandlogistiksystem">
-					<span
-						slot="headline"
-						class="block text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-						>Versandlogistiksystem</span
-					>
-					<div slot="content" class="pb-2 ">
-						<a
-							href={$linkTo('/k04')}
-							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-							>– K04</a
-						>
-						<a
-							href={$linkTo('/f95')}
-							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-							>– F95</a
-						>
-
-						<a
-							href={$linkTo('/vka')}
-							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-							>– VKA</a
-						>
-					</div>
-				</FooterAccordion>
-
-				<FooterAccordion id="FooterVersandoptimierung">
-					<span
-						slot="headline"
-						class="block text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-						>Versandlogistiksystem</span
-					>
-					<div slot="content" class="pb-2">
-						<a
-							href={$linkTo('/u12')}
-							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-							>– U12</a
-						>
-						<a
-							href={$linkTo('/apk')}
-							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-							>– APK</a
-						>
-						<a
-							href={$linkTo('/duv')}
-							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-							>– DUV</a
-						>
-						<a
-							href={$linkTo('/g10')}
-							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-							>– G10</a
-						>
-					</div>
-				</FooterAccordion>
-
-				<FooterAccordion id="FooterHardware">
-					<span
-						slot="headline"
-						class="block text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-						>Hardware</span
-					>
-					<div slot="content" class="pb-2">
-						<a
-							href={$linkTo('/etikettendrucker')}
-							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-							>– Etikettendrucker</a
-						>
-						<a
-							href={$linkTo('/waagen')}
-							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-							>– Waagen</a
-						>
-						<a
-							href={$linkTo('/barcodescanner')}
-							class="block pl-2 text-white hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
-							>– Barcodescanner</a
-						>
-					</div>
-				</FooterAccordion>
-			</p>
+			<p class="pb-2 text-center font-bold tracking-wider uppercase sm:text-left">Produkte</p>
+			<div class="text-center leading-relaxed tracking-wide sm:text-left">
+				<FooterAccordion items={accordionItems} />
+			</div>
 		</div>
 		<div class="pb-8">
-			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Unternehmen</p>
-			<p class="text-center sm:text-left tracking-wide leading-relaxed">
+			<p class="pb-2 text-center font-bold tracking-wider uppercase sm:text-left">Unternehmen</p>
+			<p class="text-center leading-relaxed tracking-wide sm:text-left">
 				<a
-					href={$linkTo('/ueberuns')}
-					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					href="/de/ueberuns"
+					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Über uns</a
 				><br />
 				<a
-					href={$linkTo('/kontakt')}
-					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					href="/de/kontakt"
+					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Kontakt und Anfahrt</a
 				><br />
 
 				<a
-					href={$linkTo('/karriere')}
-					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					href="/de/karriere"
+					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Karriere</a
 				><br />
 
 				<a
-					href={$linkTo('/versandlogistik-info')}
-					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					href="/de/versandlogistik-info"
+					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Neues</a
 				><br />
 
 				<a
-					href={$linkTo('/partner')}
-					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					href="/de/partner"
+					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Partner</a
 				><br />
 
 				<a
-					href={$linkTo('/referenzen')}
-					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					href="/de/referenzen"
+					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Referenzen</a
 				><br />
 			</p>
 		</div>
 		<div class="pb-8">
-			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Service</p>
-			<p class="text-center sm:text-left tracking-wide leading-relaxed">
+			<p class="pb-2 text-center font-bold tracking-wider uppercase sm:text-left">Service</p>
+			<p class="text-center leading-relaxed tracking-wide sm:text-left">
 				<a
-					href={$linkTo('/cloudloesung')}
-					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					href="/de/cloudloesung"
+					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Cloudlösung</a
 				><br />
 				<a
-					href={$linkTo('/onlinesupport')}
-					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					href="/de/onlinesupport"
+					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Online-Support</a
 				><br />
 
 				<a
-					href={$linkTo('/download')}
-					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					href="/de/download"
+					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Download</a
 				><br />
 			</p>
 		</div>
 		<div class="pb-8">
-			<p class="uppercase font-bold text-center sm:text-left tracking-wider pb-2">Kontakt</p>
-			<p class="text-center sm:text-left tracking-wide leading-relaxed">
+			<p class="pb-2 text-center font-bold tracking-wider uppercase sm:text-left">Kontakt</p>
+			<p class="text-center leading-relaxed tracking-wide sm:text-left">
 				<a
-					href={$linkTo('/impressum')}
-					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					href="/de/impressum"
+					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Impressum</a
 				>
 				<br />
 
 				<a
-					href={$linkTo('/datenschutz')}
-					class="w-full text-white py-2 hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red"
+					href="/de/datenschutz"
+					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Datenschutz</a
 				>
 				<br />

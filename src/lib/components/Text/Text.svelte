@@ -5,26 +5,26 @@
 </script>
 
 <div class="mod_text relative">
-	<div class="relative w-full {mapPadding(module.paddingTop)}" />
+	<div class="relative w-full {mapPadding(module.paddingTop)}"></div>
 
-	<div class="relative z-10 max-w-screen-lg mx-auto px-4 lg:px-10">
+	<div class="relative z-10 mx-auto max-w-screen-lg px-4 lg:px-10">
 		{#if module.heading1}
 			<h1 class="rc_h1 text-rc_darkblue">{module.heading1}</h1>
 		{/if}
 		{#if module.heading2}
-			<h2 class="rc_h2 text-black py-2">{module.heading2}</h2>
+			<h2 class="rc_h2 py-2 text-black">{module.heading2}</h2>
 		{/if}
 		{#if module.heading3}
 			<h3 class="rc_h3 py-2">{module.heading3}</h3>
 		{/if}
 		{#if module.text}
-			<div class="py-4 rc_break_hyphens">
+			<div class="rc_break_hyphens py-4">
 				{@html module.text.html}
 			</div>
 		{/if}
 	</div>
 
-	<div class="relative w-full {mapPadding(module.paddingBottom)}" />
+	<div class="relative w-full {mapPadding(module.paddingBottom)}"></div>
 </div>
 
 <style>

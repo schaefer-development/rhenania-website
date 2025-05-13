@@ -1,25 +1,23 @@
 <script lang="ts">
-	import { base } from '$app/paths';
-	import { linkTo } from '$lib/helpers';
 	import type { CardImage } from '$lib/graphql/generated/schema';
 	export let card: Partial<CardImage> = {};
 </script>
 
 <div
-	class="mod_cardImage relative mx-5 my-5 grow overflow-hidden bg-white shadow-sm hover:shadow-lg duration-150 ease-in-out"
+	class="mod_cardImage relative mx-5 my-5 grow overflow-hidden bg-white shadow-xs duration-150 ease-in-out hover:shadow-lg"
 >
 	{#if card?.link?.target}
-		<a href={$linkTo(card.link.target.slug)} title={card.headline}>
+		<a href="/de/{card.link.target.slug}" title={card.headline}>
 			<div class="cardImageWrapper h-48 overflow-hidden">
 				<div
 					class="cardImage h-full bg-cover bg-center"
-					style="background-image: url({card.image.url})"
-				/>
+					style="background-image: url({card.image?.url})"
+				></div>
 			</div>
-			<div class="text px-6 py-6 flex flex-col text-center">
+			<div class="text flex flex-col px-6 py-6 text-center">
 				<div class="rc_h3 text-rc_darkblue mb-2">{card.headline}</div>
-				<span class="relative flex flex-row items-center mx-auto text-rc_red">
-					<span class="uppercase tracking-wider text-sm font-medium">Mehr</span>
+				<span class="text-rc_red relative mx-auto flex flex-row items-center">
+					<span class="text-sm font-medium tracking-wider uppercase">Mehr</span>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="h-6 w-6"
@@ -38,17 +36,17 @@
 			</div>
 		</a>
 	{:else if card?.linkToId}
-		<a href="{base}#{card.linkToId}" title={card.headline}>
+		<a href="#{card.linkToId}" title={card.headline}>
 			<div class="cardImageWrapper h-48 overflow-hidden">
 				<div
 					class="cardImage h-full bg-cover bg-center"
-					style="background-image: url({card.image.url})"
-				/>
+					style="background-image: url({card.image?.url})"
+				></div>
 			</div>
-			<div class="text px-6 py-6 flex flex-col text-center">
+			<div class="text flex flex-col px-6 py-6 text-center">
 				<div class="rc_h3 text-rc_darkblue mb-2">{card.headline}</div>
-				<span class="relative flex flex-row items-center mx-auto text-rc_red">
-					<span class="uppercase tracking-wider text-sm font-medium">Mehr</span>
+				<span class="text-rc_red relative mx-auto flex flex-row items-center">
+					<span class="text-sm font-medium tracking-wider uppercase">Mehr</span>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="h-6 w-6"
@@ -70,10 +68,10 @@
 		<div class="cardImageWrapper h-48 overflow-hidden">
 			<div
 				class="cardImage h-full bg-cover bg-center"
-				style="background-image: url({card.image.url})"
-			/>
+				style="background-image: url({card.image?.url})"
+			></div>
 		</div>
-		<div class="text px-6 py-6 flex flex-col text-center">
+		<div class="text flex flex-col px-6 py-6 text-center">
 			<div class="rc_h3 text-rc_darkblue mb-2">{card.headline}</div>
 		</div>
 	{/if}

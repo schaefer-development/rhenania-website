@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { linkTo } from '$lib/helpers';
+	import type { BlogPost, Page } from '$lib/graphql/generated/schema';
+	import type { SearchResponse } from '@algolia/client-search';
 	import SearchIcon from './SearchIcon.svelte';
 
 	function eachRecursive(obj, highlights = []) {
@@ -16,27 +17,27 @@
 		return localHighlights;
 	}
 
-	export let hit;
+	export let hit: SearchResponse<Page | BlogPost>['hits'][number];
 	const { _snippetResult: snippet } = hit;
 	const highlights: string[] = eachRecursive(snippet);
 </script>
 
-<div class="relative pb-3 ">
+<div class="relative pb-3">
 	{#each highlights as highlight, i (i)}
 		<p class="pb-4 font-normal text-black">{@html highlight}</p>
 	{/each}
-	<div class="flex hyperlink pt-1">
-		<div class="relative flex-none pr-1 searchHit">
+	<div class="hyperlink flex pt-1">
+		<div class="searchHit relative flex-none pr-1">
 			{#if hit.__typename === 'BlogPost'}
-				<a sveltekit:prefetch class="flex" href={$linkTo(`/blog/${hit.slug}`)}>
-					<span class="align-middle pr-2">
+				<a class="flex" href={`/de/blog/${hit.slug}`}>
+					<span class="pr-2 align-middle">
 						{@html hit.blogpostTitle}
 					</span>
 					<SearchIcon />
 				</a>
-			{:else}
-				<a sveltekit:prefetch class="flex" href={$linkTo(`/${hit.slug}`)}>
-					<span class="align-middle pr-2">
+			{:else if hit.__typename === 'Page'}
+				<a class="flex" href={`/de/${hit.slug}`}>
+					<span class="pr-2 align-middle">
 						{@html hit.title}
 					</span>
 					<SearchIcon />
@@ -76,17 +77,5 @@
 		width: 100%;
 		transition: all;
 		transition-duration: 0.25s;
-	}
-
-	.searchHit a svg {
-		margin-left: 0.25em;
-		margin-right: 0.5em;
-		transition: all;
-		transition-duration: 0.25s;
-	}
-
-	.searchHit:hover svg {
-		margin-left: 0.5em;
-		margin-right: 0.25em;
 	}
 </style>

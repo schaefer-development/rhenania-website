@@ -1,57 +1,91 @@
-/* app.css */
-@import '@splidejs/splide/dist/css/splide.min.css';
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@import '@fontsource/red-hat-text/400.css';
+@import '@fontsource/red-hat-text/500.css';
+@import '@fontsource/red-hat-text/700.css';
 
-.splide__arrow svg path {
-	fill: white;
-}
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
 
-.splide__arrow.splide__arrow--prev {
-	margin-left: -2rem;
-}
-
-.splide__arrow.splide__arrow--next {
-	margin-right: -1.5rem;
-}
-
-html {
-	scroll-behavior: smooth;
+:root {
+	--font-body:
+		'Red Hat Text', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	--font-mono: 'Fira Mono', monospace;
+	--color-bg-0: rgb(202, 216, 228);
+	--color-bg-1: hsl(209, 36%, 86%);
+	--color-bg-2: hsl(224, 44%, 95%);
+	--color-theme-1: #ff3e00;
+	--color-theme-2: #4075a6;
+	--color-text: rgba(0, 0, 0, 1);
+	--column-width: 42rem;
+	--column-margin-top: 4rem;
+	font-family: var(--font-body);
+	color: var(--color-text);
 }
 
 body {
-	font-family: 'Red Hat Text';
+	min-height: 100vh;
+	margin: 0;
+	background-attachment: fixed;
+	background-size: 100vw 100vh;
+	scroll-behavior: smooth;
 	font-size: calc(12.5px + 0.25vw);
 }
 
+@theme {
+	--color-rc_darkblue-darkest: #15254f;
+	--color-rc_darkblue-darker: #203776;
+	--color-rc_darkblue: #2a499d;
+	--color-rc_darkblue-lighter: #556db1;
+	--color-rc_darkblue-lightest: #7f92c4;
+
+	--color-rc_skyblue-darkest: #526a80;
+	--color-rc_skyblue-darker: #7a9fbf;
+	--color-rc_skyblue: #a3d4ff;
+	--color-rc_skyblue-lighter: #b5ddff;
+	--color-rc_skyblue-lightest: #c8e5ff;
+
+	--color-rc_red-darker: #b02629;
+	--color-rc_red: #ea3336;
+	--color-rc_red-lighter: #ee5c5e;
+
+	--color-rc_green-darker: #43801c;
+	--color-rc_green: #59aa25;
+	--color-rc_green-lighter: #7abb51;
+
+	--color-rc_turquoise-darker: #1c807d;
+	--color-rc_turquoise: #25aaa7;
+	--color-rc_turquoise-lighter: #7cccca;
+
+	--color-rc_petrol-darker: #186691;
+	--color-rc_petrol: #2088c1;
+	--color-rc_petrol-lighter: #79b8da;
+
+	--color-rc_purple-darker: #4a1457;
+	--color-rc_purple: #631b75;
+	--color-rc_purple-lighter: #824990;
+}
+
 .rc_h1 {
-	@apply font-normal text-xl md:text-2xl lg:text-4xl uppercase tracking-wider;
+	@apply text-xl font-normal tracking-wider uppercase md:text-2xl lg:text-4xl;
 }
 
 .rc_h2 {
-	@apply font-bold text-base lg:text-xl uppercase tracking-widest;
+	@apply text-base font-bold tracking-widest uppercase lg:text-xl;
 }
 
 .rc_h3 {
-	@apply font-bold text-sm lg:text-base uppercase tracking-wider;
+	@apply text-sm font-bold tracking-wider uppercase lg:text-base;
 }
 
 .rc_h4 {
-	@apply font-bold text-xs lg:text-sm uppercase tracking-widest;
+	@apply text-xs font-bold tracking-widest uppercase lg:text-sm;
 }
 
+p,
 .rc_break_hyphens {
 	-moz-hyphens: auto;
 	hyphens: auto;
-}
-
-.rc_desktopmenu_subpoint {
-	@apply block py-2 text-rc_skyblue uppercase tracking-wider border-b border-rc_darkblue text-sm font-medium hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red;
-}
-
-.rc_rotate {
-	transform: rotate(45deg);
 }
 
 .rc_text_shadow {
@@ -69,34 +103,11 @@ body {
 	clip-path: polygon(100% 0, 0 0, 0 100%);
 }
 
-.blogteaserbg {
-	background: rgba(42, 73, 157, 0.95);
-}
-
 .rc_background_triangle {
 	background-image: url(/triangle.svg);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: 0 50%;
-}
-
-.rc_menu {
-	height: auto;
-	background-color: rgba(21, 37, 79, 0.99);
-}
-
-.rc_menuIsOpen {
-	/* only mobile */
-	max-height: 100vh;
-	overflow: hidden;
-}
-
-.rc_menu_visible {
-	margin-top: 0;
-}
-
-.rc_menu_hidden {
-	margin-top: -333vh;
 }
 
 .rc_blur {
@@ -140,4 +151,20 @@ blockquote {
 	content: '■';
 	color: rgba(42, 73, 157, 1);
 	margin-left: -2em;
+}
+
+.splide__arrow {
+	background: none;
+}
+
+.splide__arrow svg path {
+	fill: white;
+}
+
+.splide__arrow.splide__arrow--prev {
+	margin-left: -2rem;
+}
+
+.splide__arrow.splide__arrow--next {
+	margin-right: -1.5rem;
 }

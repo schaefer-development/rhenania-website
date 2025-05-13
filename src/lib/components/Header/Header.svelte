@@ -1,62 +1,70 @@
 <script lang="ts">
-	import { prerendering } from '$app/env';
+	// to do import { prerendering } from '$app/env';
+	import type { EventHandler } from 'svelte/elements';
 	import { goto } from '$app/navigation';
-	import { linkTo } from '$lib/helpers';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import Logo from '$lib/components/Logo/Logo.svelte';
 	import Drawer from '$lib/components/Drawer/Drawer.svelte';
 	import ProductMenu from '$lib/components/Drawer/ProductMenu.svelte';
 	import CompanyMenu from '$lib/components/Drawer/CompanyMenu.svelte';
 	import ServiceMenu from '$lib/components/Drawer/ServiceMenu.svelte';
-	import { ALGOLIA_APP_ID, ALGOLIA_SEARCH_KEY } from '$lib/env';
-	import SearchResult from '$lib/components/SearchResult/SearchResult.svelte';
 	import MobileDrawer from '$lib/components/Drawer/Mobile/MobileDrawer.svelte';
 
-	const appId = ALGOLIA_APP_ID;
-	const searchKey = ALGOLIA_SEARCH_KEY;
-	let searchEverFocused = false;
+	import { afterNavigate } from '$app/navigation';
 
-	export let openMenu: string | null;
-	export let toggleMenu: (menu: string) => void;
+	let openMenuFull = $state(false);
+	let openMenu: string | null = $state(null);
 
-	export let openMenuFull: boolean;
-	export let toggleMenuFull: () => void;
+	const toggleMenu = (menu: string) => {
+		openMenu = openMenu === menu ? null : menu;
+	};
+	const toggleMenuFull = () => {
+		openMenuFull = !openMenuFull;
+	};
 
-	const search =
-		({ url, params }: { url: URL; params: Record<string, string> }) =>
-		async ({ target }) => {
-			const newUrl = new URL(url);
-			newUrl.pathname = `/${params.lang}/suche`;
-			newUrl.searchParams.set('q', target.query.value);
-			await goto(newUrl.toString());
-		};
+	const search: EventHandler<SubmitEvent, HTMLFormElement> = async (e) => {
+		const formData = new FormData(e.currentTarget);
+		const data = new URLSearchParams();
+		for (let field of formData) {
+			const [key, value] = field;
+			data.append(key, value.toString());
+		}
+
+		await goto(`/de/suche?${data.toString()}`);
+	};
+
+	afterNavigate(() => {
+		openMenu = null;
+	});
 </script>
 
-<header class="sticky top-0 z-50 bg-white shadow-md flex space-between flex-col">
-	<div class="w-full max-w-screen-2xl mx-auto flex flex-row items-center h-20 px-4 md:px-10 ">
-		<a sveltekit:prefetch href={$linkTo('/')} class="text-rc_darkblue w-20 md:w-28 shrink-0"
-			><Logo /></a
-		>
+<header class="space-between sticky top-0 z-50 flex flex-col bg-white shadow-md">
+	<div class="mx-auto flex h-20 w-full max-w-screen-2xl flex-row items-center px-4 md:px-10">
+		<a href="/" class="text-rc_darkblue w-20 shrink-0 md:w-28"><Logo /></a>
 
-		<div class="flex-grow flex justify-end items-center">
-			<div class="flex-grow px-6 md:px-10 flex justify-end hidden sm:block">
+		<div class="flex flex-grow items-center justify-end">
+			<div class="flex hidden flex-grow justify-end px-6 sm:block md:px-10">
 				<form
-					class="input-group relative flex items-stretch w-full justify-end pl-4"
-					on:submit|preventDefault={search($page)}
+					class="input-group relative flex w-full items-stretch justify-end pl-4"
+					on:submit|preventDefault={search}
 				>
 					<input
 						type="search"
-						name="query"
-						value={(!prerendering && $page.url.searchParams.get('q')) || ''}
-						class="form-control relative flex-auto min-w-0 block w-full max-w-sm px-3 py-2 font-normal bg-white bg-clip-padding peer border-y border-l border-gray-400 rounded-none transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none"
+						name="q"
+						value={page.url.searchParams.get('q') || ''}
+						class="form-control peer relative m-0 block w-full max-w-sm min-w-0 flex-auto rounded-none border-y border-l border-gray-400 bg-white bg-clip-padding px-3 py-2 font-normal transition ease-in-out focus:border-black focus:bg-white focus:text-gray-700 focus:outline-none"
 						placeholder="Suchen"
 						aria-label="Search"
 						aria-describedby="button-addon"
 					/>
+
+					<!--to-do urspruenglicher wert oben value={(!prerendering && $page.url.searchParams.get('q')) || ''}
+					-->
 					<button
-						class="btn inline-block px-2 sm:px-4 py-2.5 text-black font-medium border-y border-r rounded-none text-xs leading-tight border-gray-400 peer-focus:border-black uppercase peer-focus:text-rc_red hover:text-rc_red focus:text-rc_red focus:outline-none focus:ring-0 active:text-rc_red transition duration-150 ease-in-out flex items-center"
+						class="btn peer-focus:text-rc_red hover:text-rc_red focus:text-rc_red active:text-rc_red flex inline-block items-center rounded-none border-y border-r border-gray-400 px-2 py-2.5 text-xs leading-tight font-medium text-black uppercase transition duration-150 ease-in-out peer-focus:border-black focus:ring-0 focus:outline-none sm:px-4"
 						id="button-addon"
 						type="submit"
+						aria-label="Suchen"
 					>
 						<svg
 							aria-hidden="true"
@@ -77,40 +85,40 @@
 				</form>
 			</div>
 
-			<div class="grow lg:grow-0 justify-end items-center hidden lg:flex invisible lg:visible">
+			<div class="invisible hidden grow items-center justify-end lg:visible lg:flex lg:grow-0">
 				<!-- menu points -->
 
-				<a href={$linkTo('/')} class="relative mx-2 lg:mx-3">
+				<a href="/" class="relative mx-2 lg:mx-3">
 					<span
-						class="{$page.url.pathname === ''
+						class="{page.url.pathname === ''
 							? 'menupoint_underline'
-							: ''}  relative py-0.5 menupoint font-medium uppercase text-black hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
+							: ''}  menupoint hover:text-rc_red focus:text-rc_red relative py-0.5 text-sm font-medium tracking-wider text-black uppercase focus:ring-0 focus:outline-none"
 						>Start</span
 					>
 				</a>
 
-				<button on:click={() => toggleMenu('produkte')} class="relative menupoint mx-2 lg:mx-3">
+				<button on:click={() => toggleMenu('produkte')} class="menupoint relative mx-2 lg:mx-3">
 					<span
 						class="{openMenu === 'produkte'
 							? 'menupoint_underline text-rc_red'
-							: ''} font-medium uppercase hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
+							: ''} hover:text-rc_red focus:text-rc_red cursor-pointer text-sm font-medium tracking-wider text-black uppercase focus:ring-0 focus:outline-none"
 						>Produkte</span
 					>
 				</button>
 
-				<button on:click={() => toggleMenu('unternehmen')} class="relative menupoint mx-2 lg:mx-3">
+				<button on:click={() => toggleMenu('unternehmen')} class="menupoint relative mx-2 lg:mx-3">
 					<span
 						class="{openMenu === 'unternehmen'
 							? 'menupoint_underline text-rc_red'
-							: ''} font-medium uppercase hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
+							: ''} hover:text-rc_red focus:text-rc_red cursor-pointer text-sm font-medium tracking-wider text-black uppercase focus:ring-0 focus:outline-none"
 						>Unternehmen</span
 					>
 				</button>
-				<button on:click={() => toggleMenu('service')} class="relative menupoint mx-2 lg:mx-3">
+				<button on:click={() => toggleMenu('service')} class="menupoint relative mx-2 lg:mx-3">
 					<span
 						class="{openMenu === 'service'
 							? 'menupoint_underline text-rc_red'
-							: ''} font-medium uppercase hover:text-rc_red text-sm focus:ring-0 focus:outline-none focus:text-rc_red tracking-wider"
+							: ''} hover:text-rc_red focus:text-rc_red cursor-pointer text-sm font-medium tracking-wider text-black uppercase focus:ring-0 focus:outline-none"
 						>Service</span
 					>
 				</button>
@@ -118,15 +126,16 @@
 				<!-- end of menu points -->
 			</div>
 
-			<div class="grow lg:grow-0 flex justify-end pl-0 lg:pl-4">
+			<div class="flex grow justify-end pl-0 lg:grow-0 lg:pl-4">
 				<a
-					href={$linkTo('/kontakt')}
-					class="bg-rc_red hover:bg-rc_red-darker text-white hover:text-white text-sm uppercase font-medium uppercase tracking-wider px-2 flex justify-center items-center h-9"
+					href="/de/kontakt"
+					class="bg-rc_red hover:bg-rc_red-darker flex h-9 items-center justify-center px-2 text-sm font-medium tracking-wider text-white uppercase uppercase hover:text-white"
 					title="Nehmen Sie Kontakt auf">Kontakt</a
 				>
 				<a
 					href="tel:+492224960000"
-					class="bg-white hover:bg-rc_red-darker border-2 border-rc_red hover:border-rc_red-darker text-rc_red hover:text-white font-medium uppercase px-2 flex justify-center items-center p-1 ml-4"
+					class="hover:bg-rc_red-darker border-rc_red hover:border-rc_red-darker text-rc_red ml-4 flex items-center justify-center border-2 bg-white p-1 px-2 font-medium uppercase hover:text-white"
+					aria-label="Rufen Sie jetzt die Nummer 02224 - 96 00 00 an"
 					title="Rufen Sie jetzt die Nummer 02224 - 96 00 00 an"
 				>
 					<svg
@@ -135,7 +144,7 @@
 						viewBox="0 0 24 24"
 						stroke-width="1.5"
 						stroke="currentColor"
-						class="w-6 h-6"
+						class="h-6 w-6"
 					>
 						<path
 							stroke-linecap="round"
@@ -146,15 +155,15 @@
 				</a>
 			</div>
 
-			<div id="menu_mobil" class="visible block lg:invisible lg:hidden flex pl-4 md:pl-8">
+			<div id="menu_mobil" class="visible block flex pl-4 md:pl-8 lg:invisible lg:hidden">
 				<button
 					on:click={toggleMenuFull}
-					class="text-rc_red flex w-full items-center justify-end focus:border-0 uppercase font-medium tracking-wider hover:text-rc_red focus:ring-0 focus:outline-none focus:text-rc_red "
+					class="text-rc_red hover:text-rc_red focus:text-rc_red flex w-full cursor-pointer items-center justify-end font-medium tracking-wider uppercase focus:border-0 focus:ring-0 focus:outline-none"
 				>
 					<!--<span class="uppercase font-medium px-1">Menu</span>-->
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						class="h-8 w-"
+						class="w- h-8"
 						fill="none"
 						viewBox="0 0 24 24"
 						stroke="currentColor"
@@ -170,23 +179,27 @@
 			</div>
 		</div>
 	</div>
-	<div class="block sm:hidden flex w-full pb-4">
-		<div class="h-10 w-full mx-4">
+	<div class="block flex w-full pb-4 sm:hidden">
+		<div class="mx-4 h-10 w-full">
 			<!-- second row -->
 
-			<form class="input-group relative flex w-full" on:submit|preventDefault={search($page)}>
+			<form class="input-group relative flex w-full" on:submit|preventDefault={search}>
 				<input
 					type="search"
-					name="query"
-					value={(!prerendering && $page.url.searchParams.get('q')) || ''}
-					class="form-control relative flex-auto min-w-0 block w-full px-3 py-2 font-normal bg-white bg-clip-padding peer border-y border-l border-gray-400 rounded-none transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none"
+					name="q"
+					value={page.url.searchParams.get('q') || ''}
+					class="form-control peer relative m-0 block w-full min-w-0 flex-auto rounded-none border-y border-l border-gray-400 bg-white bg-clip-padding px-3 py-2 font-normal transition ease-in-out focus:border-black focus:bg-white focus:text-gray-700 focus:outline-none"
 					placeholder="Suchen"
 					aria-label="Search"
 					aria-describedby="button-addon"
 				/>
+				<!-- to do urspruenglicher wert value={(!prerendering && $page.url.searchParams.get('q')) || ''}
+			-->
+
 				<button
-					class="btn inline-block px-2 sm:px-4 py-2.5 text-black font-medium border-y border-r rounded-none text-xs leading-tight border-gray-400 peer-focus:border-black uppercase peer-focus:text-rc_red hover:text-rc_red focus:text-rc_red focus:outline-none focus:ring-0 active:text-rc_red transition duration-150 ease-in-out flex items-center"
+					class="btn peer-focus:text-rc_red hover:text-rc_red focus:text-rc_red active:text-rc_red flex inline-block items-center rounded-none border-y border-r border-gray-400 px-2 py-2.5 text-xs leading-tight font-medium text-black uppercase transition duration-150 ease-in-out peer-focus:border-black focus:ring-0 focus:outline-none sm:px-4"
 					id="button-addon"
+					aria-label="Suchen"
 					type="submit"
 				>
 					<svg
@@ -212,14 +225,14 @@
 </header>
 
 <!-- aside menu -->
-<Drawer {openMenu} {toggleMenu} menuLabel={'produkte'}>
-	<ProductMenu />
+<Drawer {openMenu} {toggleMenu} menuLabel="produkte">
+	<ProductMenu></ProductMenu>
 </Drawer>
-<Drawer {openMenu} {toggleMenu} menuLabel={'unternehmen'}>
-	<CompanyMenu />
+<Drawer {openMenu} {toggleMenu} menuLabel="unternehmen">
+	<CompanyMenu></CompanyMenu>
 </Drawer>
-<Drawer {openMenu} {toggleMenu} menuLabel={'service'}>
-	<ServiceMenu />
+<Drawer {openMenu} {toggleMenu} menuLabel="service">
+	<ServiceMenu></ServiceMenu>
 </Drawer>
 
 <MobileDrawer {openMenuFull} {toggleMenuFull} />

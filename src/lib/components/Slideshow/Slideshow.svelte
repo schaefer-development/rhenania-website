@@ -4,7 +4,7 @@
 	export let referenceItems: ReferencesItem[] = [];
 </script>
 
-<div id="custom_splide" class="w-full relative">
+<div id="custom_splide" class="relative w-full">
 	<Splide
 		options={{
 			autoplay: true,
@@ -22,7 +22,7 @@
 				<img
 					src={referenceItem.referenceLogo.url}
 					alt="Kundenlogos von Rhenania Computer GmbH"
-					class="w-9/12 mx-auto"
+					class="mx-auto w-9/12"
 				/>
 			</SplideSlide>
 		{/each}

@@ -5,7 +5,7 @@
 </script>
 
 <div
-	class="relative z-10 max-w-screen-lg mx-auto px-10 pb-24 grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-12"
+	class="relative z-10 mx-auto grid max-w-screen-lg grid-cols-1 gap-x-20 gap-y-12 px-10 pb-24 lg:grid-cols-2"
 >
 	{#each module.partnerItems as partnerItem (partnerItem.id)}
 		<div class="col-span-1">

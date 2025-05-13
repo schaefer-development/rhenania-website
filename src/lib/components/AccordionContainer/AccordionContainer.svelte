@@ -12,9 +12,9 @@
 </svelte:head>
 
 <div class="mod_accordionContainer relative">
-	<div class="relative w-full {mapPadding(module.paddingTop)}" />
+	<div class="relative w-full {mapPadding(module.paddingTop)}"></div>
 	<div class="relative bg-white py-12 shadow-md">
-		<div class="relative z-10 max-w-screen-lg mx-auto px-10 ">
+		<div class="relative z-10 mx-auto max-w-screen-lg px-10">
 			<div class="accordionHeader pb-8">
 				<h2 class="rc_h1 text-rc_darkblue">{module.headline}</h2>
 				{#if module.introOptional}
@@ -30,35 +30,35 @@
 						<span slot="headline" class="item_headline">{accordionItem.headline}</span>
 						<div slot="content" class="item_content">
 							<div
-								class="flex items-center flex-col pb-8 md:pb-0 gap-y-10 gap-x md:gap-x-20 md:flex-row"
+								class="gap-x flex flex-col items-center gap-y-10 pb-8 md:flex-row md:gap-x-20 md:pb-0"
 							>
 								<div class="w-full md:w-6/12">
 									{#if accordionItem.image}
 										<img
 											src={accordionItem.image.url}
 											alt="Rhenania"
-											class="w-auto mx-auto h-auto max-h-56 md:max-h-full"
+											class="mx-auto h-auto max-h-56 w-auto md:max-h-full"
 										/>
 									{/if}
 								</div>
 								<div class="w-full md:w-6/12">
 									{#if accordionItem.heading1}
-										<h2 class="rc_h2 text-black py-2">{accordionItem.heading1}</h2>
+										<h2 class="rc_h2 py-2 text-black">{accordionItem.heading1}</h2>
 									{/if}
 									{#if accordionItem.heading2}
 										<h3 class="rc_h3 py-2">{accordionItem.heading2}</h3>
 									{/if}
 									{#if accordionItem.heading2}
-										<h3 class="block font-bold py-2">{accordionItem.heading3}</h3>
+										<h3 class="block py-2 font-bold">{accordionItem.heading3}</h3>
 									{/if}
 									{@html accordionItem.content.html}
 									{#if accordionItem.assetPicker}
-										<div class="flex hyperlink py-4">
-											<div class="relative flex-none text-rc_red font-bold pr-1">
+										<div class="hyperlink flex py-4">
+											<div class="text-rc_red relative flex-none pr-1 font-bold">
 												<a href={accordionItem.assetPicker.url} class="flex" target="_blank">
 													<svg
 														xmlns="http://www.w3.org/2000/svg"
-														class="h-6 w-6 mr-2 inline align-middle"
+														class="mr-2 inline h-6 w-6 align-middle"
 														fill="none"
 														viewBox="0 0 24 24"
 														stroke="currentColor"
@@ -88,26 +88,26 @@
 						<span slot="headline" class="item_headline">{accordionItem.headline}</span>
 						<div slot="content" class="item_content">
 							<div
-								class="flex items-center flex-col flex-col-reverse pb-8 md:pb-0 gap-y-10 gap-x md:gap-x-20 md:flex-row"
+								class="gap-x flex flex-col flex-col-reverse items-center gap-y-10 pb-8 md:flex-row md:gap-x-20 md:pb-0"
 							>
 								<div class="w-full md:w-6/12">
 									{#if accordionItem.heading1}
-										<h2 class="rc_h2 text-black py-2">{accordionItem.heading1}</h2>
+										<h2 class="rc_h2 py-2 text-black">{accordionItem.heading1}</h2>
 									{/if}
 									{#if accordionItem.heading2}
 										<h3 class="rc_h3 py-2">{accordionItem.heading2}</h3>
 									{/if}
 									{#if accordionItem.heading2}
-										<h3 class="block font-bold py-2">{accordionItem.heading3}</h3>
+										<h3 class="block py-2 font-bold">{accordionItem.heading3}</h3>
 									{/if}
 									{@html accordionItem.content.html}
 									{#if accordionItem.assetPicker}
-										<div class="flex hyperlink py-4">
-											<div class="relative flex-none text-rc_red font-bold pr-1">
+										<div class="hyperlink flex py-4">
+											<div class="text-rc_red relative flex-none pr-1 font-bold">
 												<a href={accordionItem.assetPicker.url} class="flex" target="_blank">
 													<svg
 														xmlns="http://www.w3.org/2000/svg"
-														class="h-6 w-6 mr-2 inline align-middle"
+														class="mr-2 inline h-6 w-6 align-middle"
 														fill="none"
 														viewBox="0 0 24 24"
 														stroke="currentColor"
@@ -132,7 +132,7 @@
 										<img
 											src={accordionItem.image.url}
 											alt="Rhenania"
-											class="w-auto mx-auto h-auto max-h-56 md:max-h-full"
+											class="mx-auto h-auto max-h-56 w-auto md:max-h-full"
 										/>
 									{/if}
 								</div>
@@ -146,22 +146,22 @@
 						<span slot="headline" class="item_headline">{accordionItem.headline}</span>
 						<div slot="content" class="item_content">
 							{#if accordionItem.heading1}
-								<h2 class="rc_h2 text-black py-2">{accordionItem.heading1}</h2>
+								<h2 class="rc_h2 py-2 text-black">{accordionItem.heading1}</h2>
 							{/if}
 							{#if accordionItem.heading2}
 								<h3 class="rc_h3 py-2">{accordionItem.heading2}</h3>
 							{/if}
 							{#if accordionItem.heading2}
-								<h3 class="block font-bold py-2">{accordionItem.heading3}</h3>
+								<h3 class="block py-2 font-bold">{accordionItem.heading3}</h3>
 							{/if}
 							{@html accordionItem.content.html}
 							{#if accordionItem.assetPicker}
-								<div class="flex hyperlink py-4">
-									<div class="relative flex-none text-rc_red font-bold pr-1">
+								<div class="hyperlink flex py-4">
+									<div class="text-rc_red relative flex-none pr-1 font-bold">
 										<a href={accordionItem.assetPicker.url} class="flex" target="_blank">
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
-												class="h-6 w-6 mr-2 inline align-middle"
+												class="mr-2 inline h-6 w-6 align-middle"
 												fill="none"
 												viewBox="0 0 24 24"
 												stroke="currentColor"
@@ -186,7 +186,7 @@
 			{/each}
 		</div>
 	</div>
-	<div class="relative w-full {mapPadding(module.paddingBottom)}" />
+	<div class="relative w-full {mapPadding(module.paddingBottom)}"></div>
 </div>
 
 <style>

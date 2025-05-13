@@ -8,22 +8,25 @@
 <svelte:window bind:scrollY={y} />
 
 <div class="mod_heroImage relative">
-	<div class="w-full h-30v mb-24 overflow-hidden">
+	<div class="mb-24 h-[30vh] w-full overflow-hidden">
 		<div
-			class="relative parallax h-60v"
+			class="parallax relative h-[60vh]"
 			style="transform: translate(0, {y < 2 ? y * 1 : y * paraEffect}px)"
 		>
 			<div
-				class="absolute w-full h-30v bg-cover bg-center scale-105"
-				style="background-image: url({module.image.url}"
-			/>
+				class="absolute h-[30vh] w-full scale-105 bg-cover bg-center"
+				style="background-image: url({module.image?.url}"
+			></div>
 		</div>
 	</div>
-	<div class="absolute -bottom-3 w-full h-4" style="background-color:{module.strokeColor.hex}" />
-	<div class="absolute -bottom-20 w-full h-36">
-		<div class="max-w-screen-lg mx-auto h-full px-10">
+	<div
+		class="absolute -bottom-3 h-4 w-full"
+		style="background-color:{module.strokeColor?.hex}"
+	></div>
+	<div class="absolute -bottom-20 h-36 w-full">
+		<div class="mx-auto h-full max-w-screen-lg px-10">
 			{#if module?.icon?.url}
-				<img src={module.icon.url} alt="Rhenania Icon" class="w-36 h-36" />
+				<img src={module.icon.url} alt="Rhenania Icon" class="h-36 w-36" />
 			{:else}
 				<!-- -->
 			{/if}

@@ -5,16 +5,16 @@
 </script>
 
 <div class="mod_textAndImage relative">
-	<div class="relative w-full {mapPadding(module.paddingTop)}" />
-	<div class="relative z-10 max-w-screen-lg mx-auto px-4 md:px-10">
+	<div class="relative w-full {mapPadding(module.paddingTop)}"></div>
+	<div class="relative z-10 mx-auto max-w-screen-lg px-4 md:px-10">
 		{#if module.textImageOrientation == 'ImageLeftAndTextRight'}
-			<div class="flex items-center flex-col pb-8 md:pb-0 gap-y-10 gap-x md:gap-x-20 md:flex-row">
+			<div class="gap-x flex flex-col items-center gap-y-10 pb-8 md:flex-row md:gap-x-20 md:pb-0">
 				<div class="w-full md:w-6/12">
 					{#if module.image}
 						<img
 							src={module.image.url}
 							alt="Rhenania"
-							class="w-auto mx-auto h-auto max-h-56 md:max-h-full"
+							class="mx-auto h-auto max-h-56 w-auto md:max-h-full"
 						/>
 					{/if}
 				</div>
@@ -24,24 +24,24 @@
 					{/if}
 
 					{#if module.heading2}
-						<h2 class="rc_h2 text-black py-2">{module.heading2}</h2>
+						<h2 class="rc_h2 py-2 text-black">{module.heading2}</h2>
 					{/if}
 					{#if module.heading3}
 						<h3 class="rc_h3 py-2">{module.heading3}</h3>
 					{/if}
 					{#if module.text.html}
-						<div class="py-4 rc_break_hyphens">
+						<div class="rc_break_hyphens py-4">
 							{@html module.text.html}
 						</div>
 					{/if}
 
 					{#if module.assetPicker}
-						<div class="flex hyperlink">
-							<div class="relative flex-none text-rc_red font-bold pr-1">
+						<div class="hyperlink flex">
+							<div class="text-rc_red relative flex-none pr-1 font-bold">
 								<a href={module.assetPicker.url} class="flex" target="_blank">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="h-6 w-6 mr-2 inline align-middle"
+										class="mr-2 inline h-6 w-6 align-middle"
 										fill="none"
 										viewBox="0 0 24 24"
 										stroke="currentColor"
@@ -66,7 +66,7 @@
 
 		{#if module.textImageOrientation == 'ImageRightAndTextLeft'}
 			<div
-				class="flex items-center flex-col flex-col-reverse pb-8 md:pb-0 gap-y-10 gap-x md:gap-x-20 md:flex-row"
+				class="gap-x flex flex-col flex-col-reverse items-center gap-y-10 pb-8 md:flex-row md:gap-x-20 md:pb-0"
 			>
 				<div class="w-full md:w-6/12">
 					{#if module.heading1}
@@ -74,24 +74,24 @@
 					{/if}
 
 					{#if module.heading2}
-						<h2 class="rc_h2 text-black py-2">{module.heading2}</h2>
+						<h2 class="rc_h2 py-2 text-black">{module.heading2}</h2>
 					{/if}
 					{#if module.heading3}
 						<h3 class="rc_h3 py-2">{module.heading3}</h3>
 					{/if}
 					{#if module.text.html}
-						<div class="py-4 rc_break_hyphens">
+						<div class="rc_break_hyphens py-4">
 							{@html module.text.html}
 						</div>
 					{/if}
 
 					{#if module.assetPicker}
-						<div class="flex hyperlink">
-							<div class="relative flex-none text-rc_red font-bold pr-1">
+						<div class="hyperlink flex">
+							<div class="text-rc_red relative flex-none pr-1 font-bold">
 								<a href={module.assetPicker.url} class="flex" target="_blank">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="h-6 w-6 mr-2 inline align-middle"
+										class="mr-2 inline h-6 w-6 align-middle"
 										fill="none"
 										viewBox="0 0 24 24"
 										stroke="currentColor"
@@ -116,14 +116,14 @@
 						<img
 							src={module.image.url}
 							alt="Rhenania"
-							class="w-auto mx-auto h-auto max-h-56 md:max-h-full"
+							class="mx-auto h-auto max-h-56 w-auto md:max-h-full"
 						/>
 					{/if}
 				</div>
 			</div>
 		{/if}
 	</div>
-	<div class="relative w-full {mapPadding(module.paddingBottom)}" />
+	<div class="relative w-full {mapPadding(module.paddingBottom)}"></div>
 </div>
 
 <style>

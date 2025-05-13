@@ -18,12 +18,12 @@
 		{#if locale.code !== $page.params.lang}
 			<a
 				href={getHref($page)(locale.code)}
-				class="relative px-1.5 text-gray-400 text-sm hover:text-rc_red"
+				class="hover:text-rc_red relative px-1.5 text-sm text-gray-400"
 			>
 				{locale.label}
 			</a>
 		{:else}
-			<span class="relative font-medium px-1.5 text-black text-sm">
+			<span class="relative px-1.5 text-sm font-medium text-black">
 				<!-- active -->
 				{locale.label}
 			</span>

@@ -38,7 +38,7 @@
 	}
 </script>
 
-<aside class="svelte-algolia input-group relative flex items-stretch w-full max-w-sm justify-end">
+<aside class="svelte-algolia input-group relative flex w-full max-w-sm items-stretch justify-end">
 	<input
 		type="text"
 		bind:this={input}
@@ -47,11 +47,12 @@
 		on:focus
 		{placeholder}
 		aria-label={ariaLabel}
-		class="peer w-full max-w-sm px-3 py-2 transition duration-150 ease-in-out text-gray-700 border-y border-l focus:bg-white focus:border-black focus:border-r-0 focus:outline-none"
+		class="peer w-full max-w-sm border-y border-l px-3 py-2 text-gray-700 transition duration-150 ease-in-out focus:border-r-0 focus:border-black focus:bg-white focus:outline-none"
 	/>
 	<button
 		title={ariaLabel}
-		class="peer relative inline-block px-2 sm:px-4 py-2.5 text-black font-medium border-y border-r transition duration-150 ease-in-out focus:text-rc_red focus:outline-none focus:ring-0 active:text-rc_red peer-focus:border-black peer-focus:text-rc_red"
+		aria-label="Suchen"
+		class="peer focus:text-rc_red active:text-rc_red peer-focus:text-rc_red relative inline-block border-y border-r px-2 py-2.5 font-medium text-black transition duration-150 ease-in-out peer-focus:border-black focus:ring-0 focus:outline-none sm:px-4"
 	>
 		<svg
 			aria-hidden="true"
@@ -71,7 +72,7 @@
 	</button>
 
 	{#if query}
-		<div class="results p-4 max-w-md shadow-md">
+		<div class="results max-w-md p-4 shadow-md">
 			{#await promise}
 				<p>{loadingStr}</p>
 			{:then allHits}

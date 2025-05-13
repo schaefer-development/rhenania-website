@@ -1,27 +1,26 @@
 <script lang="ts">
 	import type { BlogPost } from '$lib/graphql/generated/schema';
-	import { linkTo } from '$lib/helpers';
 	export let module: Partial<BlogPost> = {};
 </script>
 
-<div class="mod_blogEntry relative w-full overflow-hidden h-auto">
+<div class="mod_blogEntry relative h-auto w-full overflow-hidden">
 	<div
-		class="bg_layer absolute w-full h-full bg-cover bg-center "
+		class="bg_layer absolute h-full w-full bg-cover bg-center"
 		style="background-image: url({module.heroBackgroundImage.url})"
-	/>
+	></div>
 	<div
-		class="relative z-2 h-full flex items-center max-w-screen-md mx-auto px-4 lg:px-10 py-16 lg:py-24"
+		class="relative z-2 mx-auto flex h-full max-w-screen-md items-center px-4 py-16 lg:px-10 lg:py-24"
 	>
-		<div class="blogteaserbg w-full  px-6 lg:px-10 py-6 lg:py-10">
+		<div class="bg-rc_darkblue-darker/90 w-full px-6 py-6 lg:px-10 lg:py-10">
 			<h2 class="rc_h1 text-rc_skyblue">{module.teaserHeadline}</h2>
-			<h3 class="rc_h3 text-white py-2 w-full md:w-10/12">{module.teaserSubheadline}</h3>
-			<div class="block bg-rc_darkblue-darkest h-0.5 my-4" />
-			<p class="text-white w-full md:w-10/12 pt-2 pb-6">
+			<h3 class="rc_h3 w-full py-2 text-white md:w-10/12">{module.teaserSubheadline}</h3>
+			<div class="bg-rc_darkblue-darkest my-4 block h-0.5"></div>
+			<p class="w-full pt-2 pb-6 text-white md:w-10/12">
 				{module.teaserText}
 			</p>
 			<a
-				href={$linkTo(`/blog/${module.slug}`)}
-				class="relative mt-6 pl-5 pr-3 py-2 bg-rc_red text-white text-xs md:text-sm font-bold uppercase tracking-widest hover:bg-rc_red-darker rc_button_corner"
+				href={`/de/blog/${module.slug}`}
+				class="bg-rc_red hover:bg-rc_red-darker rc_button_corner relative mt-6 py-2 pr-3 pl-5 text-xs font-bold tracking-widest text-white uppercase md:text-sm"
 				>mehr erfahren</a
 			>
 		</div>
