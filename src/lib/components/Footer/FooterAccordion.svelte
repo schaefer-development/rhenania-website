@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { afterNavigate } from '$app/navigation';
+	import { tick } from 'svelte';
+
 	export let items: {
 		title: string;
 		subpoints: { name: string; href: string }[];
@@ -7,9 +10,19 @@
 	let openItems = new Set<number>();
 
 	function toggleItem(index: number) {
-		openItems.has(index) ? openItems.delete(index) : openItems.add(index);
-		openItems = new Set(openItems); // reactivity
+		if (openItems.has(index)) {
+			openItems.delete(index);
+		} else {
+			openItems.add(index);
+		}
+		openItems = new Set(openItems); // trigger reactivity
 	}
+
+	afterNavigate(async () => {
+		openItems.clear();
+		openItems = new Set(); // force reactivity
+		await tick(); // ensure DOM updates if needed
+	});
 </script>
 
 <div class="w-10/12">
