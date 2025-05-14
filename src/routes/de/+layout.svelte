@@ -5,7 +5,7 @@
 
 	import LoadingIndicator from '$lib/components/LoadingIndicator/LoadingIndicator.svelte';
 	import { navigating } from '$app/stores';
-	import '../app.css';
+	import '../../app.css';
 
 	let { children, data }: LayoutProps = $props();
 </script>
