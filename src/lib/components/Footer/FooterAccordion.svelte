@@ -25,16 +25,16 @@
 	});
 </script>
 
-<div class="mx-auto w-10/12">
+<div class="mx-auto w-full">
 	{#each items as item, index (item)}
 		<div class="">
 			<button
-				class="hover:text-rc_red flex w-full cursor-pointer items-center justify-between pb-2 text-left tracking-wider transition"
+				class=" hover:text-rc_red mb-2 flex w-full cursor-pointer items-center justify-center text-left tracking-wider transition sm:justify-start"
 				on:click={() => toggleItem(index)}
 			>
-				<span class="grow">{item.title}</span>
+				<span class="w-6/12 sm:w-8/12 md:w-9/12">{item.title}</span>
 
-				<span>
+				<span class="flex justify-start">
 					{#if openItems.has(index)}
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
