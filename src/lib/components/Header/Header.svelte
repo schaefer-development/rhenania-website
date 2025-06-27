@@ -155,15 +155,15 @@
 				</a>
 			</div>
 
-			<div id="menu_mobil" class="visible block flex pl-4 md:pl-8 lg:invisible lg:hidden">
+			<div id="menu_mobil" class="visible relative z-50 ml-4 block flex lg:invisible lg:hidden">
 				<button
 					on:click={toggleMenuFull}
-					class="text-rc_red hover:text-rc_red focus:text-rc_red flex w-full cursor-pointer items-center justify-end font-medium tracking-wider uppercase focus:border-0 focus:ring-0 focus:outline-none"
+					class="text-rc_red hover:text-rc_red focus:text-rc_red flex w-full cursor-pointer items-center justify-end p-4 font-medium tracking-wider uppercase focus:border-0 focus:ring-0 focus:outline-none"
 				>
 					<!--<span class="uppercase font-medium px-1">Menu</span>-->
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						class="w- h-8"
+						class="h-8 w-8"
 						fill="none"
 						viewBox="0 0 24 24"
 						stroke="currentColor"

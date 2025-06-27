@@ -21,7 +21,9 @@
 			>
 				Wir optimieren Ihren Versand
 			</h1>
-			<h2 class="rc_h2 text-rc_skyblue rc_text_shadow">Software und Systeme für Versandlogistik</h2>
+			<h2 class="rc_h2 text-rc_skyblue rc_text_shadow text-center">
+				Software und Systeme für Versandlogistik
+			</h2>
 
 			<a
 				href="#Unser Leistungsangebot"
