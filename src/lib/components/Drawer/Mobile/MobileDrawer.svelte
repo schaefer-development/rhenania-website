@@ -13,7 +13,7 @@
 <aside
 	class="{openMenuFull
 		? ' open translate-y'
-		: 'close -translate-y-full border-4'} bg-rc_darkblue-darkest/98 rc_menu visible absolute top-32 left-0 z-40 block min-h-screen w-full transform overflow-auto transition-all duration-300 ease-in-out sm:top-20 lg:hidden lg:hidden"
+		: 'close -translate-y-full border-4'} bg-rc_darkblue-darkest/98 rc_menu visible absolute top-32 left-0 z-40 block min-h-screen w-full transform overflow-auto transition-all duration-300 ease-in-out sm:top-20 lg:hidden"
 >
 	<div class="relative mx-auto flex w-full max-w-screen-2xl flex-row">
 		<div
