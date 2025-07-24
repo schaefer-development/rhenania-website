@@ -1,5 +1,5 @@
 import { redirect } from '@sveltejs/kit';
 
 export function load() {
-	redirect(307, '/de/gefahrgut-versand-software');
+	redirect(307, '/de/versandabwicklung-wichtiger-erfolgsfaktor');
 }
