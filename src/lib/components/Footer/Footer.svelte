@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Logo from '$lib/components/Logo/Logo.svelte';
 	import FooterAccordion from '$lib/components/Footer/FooterAccordion.svelte';
+	import type { Snippet } from 'svelte';
 
 	const accordionItems = [
 		{
@@ -40,10 +41,11 @@
 	];
 
 	let date = new Date().getFullYear();
+	let { children }: { children?: Snippet } = $props();
 </script>
 
 <footer class="bg-rc_darkblue-darkest relative text-white">
-	<slot></slot>
+	{@render children?.()}
 
 	<div
 		class="mx-auto grid max-w-screen-2xl grid-cols-1 gap-4 px-10 pt-20 pb-10 text-xs sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6"
