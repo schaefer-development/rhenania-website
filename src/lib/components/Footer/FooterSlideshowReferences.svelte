@@ -39,9 +39,3 @@
 		<hr />
 	</div>
 </div>
-
-<style>
-	button.splide__arrow {
-		background-color: none;
-	}
-</style>

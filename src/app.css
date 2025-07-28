@@ -153,18 +153,18 @@ blockquote {
 	margin-left: -2em;
 }
 
-.splide__arrow {
+button.splide__arrow {
 	background: none;
 }
 
-.splide__arrow svg path {
+button.splide__arrow svg path {
 	fill: white;
 }
 
-.splide__arrow.splide__arrow--prev {
+button.splide__arrow.splide__arrow--prev {
 	margin-left: -2rem;
 }
 
-.splide__arrow.splide__arrow--next {
+button.splide__arrow.splide__arrow--next {
 	margin-right: -1.5rem;
 }
