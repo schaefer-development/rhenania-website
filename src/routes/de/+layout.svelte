@@ -2,7 +2,7 @@
 	import type { LayoutProps } from './$types';
 	import Header from '$lib/components/Header/Header.svelte';
 	import Footer from '$lib/components/Footer/Footer.svelte';
-
+	import FooterSlideshowReferences from '$lib/components/Footer/FooterSlideshowReferences.svelte';
 	import LoadingIndicator from '$lib/components/LoadingIndicator/LoadingIndicator.svelte';
 	import { navigating } from '$app/stores';
 	import '../../app.css';
@@ -21,6 +21,8 @@
 		</main>
 	{/if}
 
-	<Footer {data}></Footer>
+	<Footer>
+		<FooterSlideshowReferences {data}></FooterSlideshowReferences>
+	</Footer>
 	<!--	<Footer {data} />-->
 </div>

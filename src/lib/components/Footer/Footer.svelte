@@ -39,51 +39,11 @@
 		}
 	];
 
-	import type { ReferencesItem } from '$lib/graphql/generated/schema';
-	export let referenceItems: ReferencesItem[] = [];
-
-	import type { ReferencesContainer } from '$lib/graphql/generated/schema';
-
-	import '@splidejs/svelte-splide/css';
-	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
-
 	let date = new Date().getFullYear();
-	export let data: { referencesContainers: ReferencesContainer[] };
 </script>
 
 <footer class="bg-rc_darkblue-darkest relative text-white">
-	<div class="bg-rc_darkblue w-full">
-		<div class="text-rc_darkblue-darkest mx-auto flex max-w-screen-2xl items-center px-10">
-			<Splide
-				aria-label="Kundenlogos von Rhenania Computer GmbH"
-				class="relative w-full"
-				options={{
-					autoplay: true,
-					rewind: true,
-					perPage: 5,
-					perMove: 1,
-					pagination: false,
-					autoScroll: {
-						speed: 1
-					}
-				}}
-			>
-				{#each data.referencesContainers?.[0].referenceItems as referenceItem (referenceItem.id)}
-					{#if referenceItem.referenceLogo}
-						<SplideSlide data-splide-interval="1401">
-							<img
-								src={referenceItem.referenceLogo.url}
-								alt="Kundenlogo von Rhenania Computer"
-								class="mx-auto w-9/12"
-							/>
-						</SplideSlide>
-					{/if}
-				{/each}
-			</Splide>
-
-			<hr />
-		</div>
-	</div>
+	<slot></slot>
 
 	<div
 		class="mx-auto grid max-w-screen-2xl grid-cols-1 gap-4 px-10 pt-20 pb-10 text-xs sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6"
@@ -176,7 +136,6 @@
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
 					>Online-Support</a
 				><br />
-
 				<a
 					href="/de/download"
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
@@ -193,7 +152,6 @@
 					>Impressum</a
 				>
 				<br />
-
 				<a
 					href="/de/datenschutz"
 					class="hover:text-rc_red focus:text-rc_red w-full py-2 text-white focus:ring-0 focus:outline-none"
