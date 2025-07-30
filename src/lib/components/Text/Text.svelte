@@ -2,6 +2,25 @@
 	import { mapPadding } from '$lib/helpers';
 	import type { Text } from '$lib/graphql/generated/schema';
 	export let module: Partial<Text> = {};
+	import { astToHtmlString } from '@graphcms/rich-text-html-renderer';
+
+	const { text } = module;
+	const rendered = text
+		? astToHtmlString({
+				content: text.json,
+				references: text.references,
+				renderers: {
+					link: {
+						Page: ({ slug, children }) => {
+							return `<a href="/de/${slug}">${children}</a>`;
+						},
+						BlogPost: ({ slug, children }) => {
+							return `<a href="/de/blog/${slug}">${children}</a>`;
+						}
+					}
+				}
+			})
+		: null;
 </script>
 
 <div class="mod_text relative">
@@ -17,9 +36,10 @@
 		{#if module.heading3}
 			<h3 class="rc_h3 py-2">{module.heading3}</h3>
 		{/if}
-		{#if module.text}
+		{#if rendered}
 			<div class="rc_break_hyphens py-4">
-				{@html module.text.html}
+				<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+				{@html rendered}
 			</div>
 		{/if}
 	</div>
