@@ -7,4 +7,7 @@ const mapping = {
 	Medium: 'rc_padding_medium',
 	Large: 'rc_padding_large'
 } as const;
-export const mapPadding = (padding: keyof typeof mapping) => mapping[padding];
+export const mapPadding = (padding: keyof typeof mapping | null | undefined) => {
+	if (!padding) return '';
+	return mapping[padding];
+};

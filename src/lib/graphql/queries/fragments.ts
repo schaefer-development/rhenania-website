@@ -173,7 +173,17 @@ export const pageFragment = gql`
 				paddingTop
 				paddingBottom
 				text {
-					html
+					json
+					references {
+						... on BlogPost {
+							id
+							slug
+						}
+						... on Page {
+							id
+							slug
+						}
+					}
 				}
 			}
 			... on CardsContainer {
@@ -286,7 +296,17 @@ export const blogPostFragment = gql`
 				paddingTop
 				paddingBottom
 				text {
-					html
+					json
+					references {
+						... on BlogPost {
+							id
+							slug
+						}
+						... on Page {
+							id
+							slug
+						}
+					}
 				}
 			}
 			... on TextAndImage {
