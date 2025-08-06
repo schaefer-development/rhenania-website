@@ -584,6 +584,7 @@ export type AccordionItemAccordionContainerArgs = {
 export type AccordionItemAssetPickerArgs = {
 	forceParentLocale?: InputMaybe<Scalars['Boolean']['input']>;
 	locales?: InputMaybe<Array<Locale>>;
+	where?: InputMaybe<AssetSingleRelationWhereInput>;
 };
 
 export type AccordionItemCreatedByArgs = {
@@ -606,6 +607,7 @@ export type AccordionItemHistoryArgs = {
 export type AccordionItemImageArgs = {
 	forceParentLocale?: InputMaybe<Scalars['Boolean']['input']>;
 	locales?: InputMaybe<Array<Locale>>;
+	where?: InputMaybe<AssetSingleRelationWhereInput>;
 };
 
 export type AccordionItemPublishedByArgs = {
@@ -1273,6 +1275,8 @@ export type Asset = Entity &
 		updatedAt: Scalars['DateTime']['output'];
 		/** User that last updated this document */
 		updatedBy?: Maybe<User>;
+		/** Returns information you need to upload the asset. The type of upload is dependant on what you pass into asset creations as upload type. */
+		upload?: Maybe<AssetUpload>;
 		/** Get the url for the asset with provided transformations applied. */
 		url: Scalars['String']['output'];
 		/** The file width */
@@ -1553,9 +1557,7 @@ export type AssetCreateInput = {
 	assetPickerAssetLink?: InputMaybe<AssetLinkCreateManyInlineInput>;
 	assetPickerTextAndImage?: InputMaybe<TextAndImageCreateManyInlineInput>;
 	createdAt?: InputMaybe<Scalars['DateTime']['input']>;
-	fileName: Scalars['String']['input'];
-	handle: Scalars['String']['input'];
-	height?: InputMaybe<Scalars['Float']['input']>;
+	fileName?: InputMaybe<Scalars['String']['input']>;
 	heroBackgroundImageBlogPost?: InputMaybe<BlogPostCreateManyInlineInput>;
 	iconCardIcon?: InputMaybe<CardIconCreateManyInlineInput>;
 	iconHeroImage?: InputMaybe<HeroImageCreateManyInlineInput>;
@@ -1567,23 +1569,19 @@ export type AssetCreateInput = {
 	imageTextAndImage?: InputMaybe<TextAndImageCreateManyInlineInput>;
 	/** Inline mutations for managing document localizations excluding the default locale */
 	localizations?: InputMaybe<AssetCreateLocalizationsInput>;
-	mimeType?: InputMaybe<Scalars['String']['input']>;
 	partnerLogoPartnerItem?: InputMaybe<PartnerItemCreateManyInlineInput>;
 	referenceLogoReferencesItem?: InputMaybe<ReferencesItemCreateManyInlineInput>;
-	size?: InputMaybe<Scalars['Float']['input']>;
 	updatedAt?: InputMaybe<Scalars['DateTime']['input']>;
-	width?: InputMaybe<Scalars['Float']['input']>;
+	/** Optionally the system can upload a file for you, for that you need to provide a publicly accessible url */
+	uploadUrl?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type AssetCreateLocalizationDataInput = {
 	createdAt?: InputMaybe<Scalars['DateTime']['input']>;
-	fileName: Scalars['String']['input'];
-	handle: Scalars['String']['input'];
-	height?: InputMaybe<Scalars['Float']['input']>;
-	mimeType?: InputMaybe<Scalars['String']['input']>;
-	size?: InputMaybe<Scalars['Float']['input']>;
+	fileName?: InputMaybe<Scalars['String']['input']>;
 	updatedAt?: InputMaybe<Scalars['DateTime']['input']>;
-	width?: InputMaybe<Scalars['Float']['input']>;
+	/** Optionally the system can upload a file for you, for that you need to provide a publicly accessible url */
+	uploadUrl?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type AssetCreateLocalizationInput = {
@@ -1654,6 +1652,7 @@ export type AssetLink = Entity &
 export type AssetLinkAssetPickerArgs = {
 	forceParentLocale?: InputMaybe<Scalars['Boolean']['input']>;
 	locales?: InputMaybe<Array<Locale>>;
+	where?: InputMaybe<AssetSingleRelationWhereInput>;
 };
 
 export type AssetLinkBlogPostArgs = {
@@ -2244,6 +2243,7 @@ export type AssetManyWhereInput = {
 	/** All values that are not contained in given list. */
 	updatedAt_not_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']['input']>>>;
 	updatedBy?: InputMaybe<UserWhereInput>;
+	upload?: InputMaybe<AssetUploadWhereInput>;
 };
 
 export enum AssetOrderByInput {
@@ -2269,6 +2269,17 @@ export enum AssetOrderByInput {
 	WidthDesc = 'width_DESC'
 }
 
+/** Identifies documents */
+export type AssetSingleRelationWhereInput = {
+	/** Logical AND on all given filters. */
+	AND?: InputMaybe<Array<AssetSingleRelationWhereInput>>;
+	/** Logical NOT on all given filters combined by AND. */
+	NOT?: InputMaybe<Array<AssetSingleRelationWhereInput>>;
+	/** Logical OR on all given filters. */
+	OR?: InputMaybe<Array<AssetSingleRelationWhereInput>>;
+	upload?: InputMaybe<AssetUploadWhereInput>;
+};
+
 /** Transformations for Assets */
 export type AssetTransformationInput = {
 	document?: InputMaybe<DocumentTransformationInput>;
@@ -2282,8 +2293,6 @@ export type AssetUpdateInput = {
 	assetPickerAssetLink?: InputMaybe<AssetLinkUpdateManyInlineInput>;
 	assetPickerTextAndImage?: InputMaybe<TextAndImageUpdateManyInlineInput>;
 	fileName?: InputMaybe<Scalars['String']['input']>;
-	handle?: InputMaybe<Scalars['String']['input']>;
-	height?: InputMaybe<Scalars['Float']['input']>;
 	heroBackgroundImageBlogPost?: InputMaybe<BlogPostUpdateManyInlineInput>;
 	iconCardIcon?: InputMaybe<CardIconUpdateManyInlineInput>;
 	iconHeroImage?: InputMaybe<HeroImageUpdateManyInlineInput>;
@@ -2295,20 +2304,20 @@ export type AssetUpdateInput = {
 	imageTextAndImage?: InputMaybe<TextAndImageUpdateManyInlineInput>;
 	/** Manage document localizations */
 	localizations?: InputMaybe<AssetUpdateLocalizationsInput>;
-	mimeType?: InputMaybe<Scalars['String']['input']>;
 	partnerLogoPartnerItem?: InputMaybe<PartnerItemUpdateManyInlineInput>;
+	/** Use this to define if its a reupload for the asset */
+	reUpload?: InputMaybe<Scalars['Boolean']['input']>;
 	referenceLogoReferencesItem?: InputMaybe<ReferencesItemUpdateManyInlineInput>;
-	size?: InputMaybe<Scalars['Float']['input']>;
-	width?: InputMaybe<Scalars['Float']['input']>;
+	/** Optionally the system can upload a file for you, for that you need to provide a publicly accessible url */
+	uploadUrl?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type AssetUpdateLocalizationDataInput = {
 	fileName?: InputMaybe<Scalars['String']['input']>;
-	handle?: InputMaybe<Scalars['String']['input']>;
-	height?: InputMaybe<Scalars['Float']['input']>;
-	mimeType?: InputMaybe<Scalars['String']['input']>;
-	size?: InputMaybe<Scalars['Float']['input']>;
-	width?: InputMaybe<Scalars['Float']['input']>;
+	/** Use this to define if its a reupload for the asset */
+	reUpload?: InputMaybe<Scalars['Boolean']['input']>;
+	/** Optionally the system can upload a file for you, for that you need to provide a publicly accessible url */
+	uploadUrl?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type AssetUpdateLocalizationInput = {
@@ -2344,31 +2353,8 @@ export type AssetUpdateManyInlineInput = {
 };
 
 export type AssetUpdateManyInput = {
-	fileName?: InputMaybe<Scalars['String']['input']>;
-	height?: InputMaybe<Scalars['Float']['input']>;
-	/** Optional updates to localizations */
-	localizations?: InputMaybe<AssetUpdateManyLocalizationsInput>;
-	mimeType?: InputMaybe<Scalars['String']['input']>;
-	size?: InputMaybe<Scalars['Float']['input']>;
-	width?: InputMaybe<Scalars['Float']['input']>;
-};
-
-export type AssetUpdateManyLocalizationDataInput = {
-	fileName?: InputMaybe<Scalars['String']['input']>;
-	height?: InputMaybe<Scalars['Float']['input']>;
-	mimeType?: InputMaybe<Scalars['String']['input']>;
-	size?: InputMaybe<Scalars['Float']['input']>;
-	width?: InputMaybe<Scalars['Float']['input']>;
-};
-
-export type AssetUpdateManyLocalizationInput = {
-	data: AssetUpdateManyLocalizationDataInput;
-	locale: Locale;
-};
-
-export type AssetUpdateManyLocalizationsInput = {
-	/** Localizations to update */
-	update?: InputMaybe<Array<AssetUpdateManyLocalizationInput>>;
+	/** No fields in updateMany data input */
+	_?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type AssetUpdateManyWithNestedWhereInput = {
@@ -2398,6 +2384,119 @@ export type AssetUpdateWithNestedWhereUniqueInput = {
 	data: AssetUpdateInput;
 	/** Unique document search */
 	where: AssetWhereUniqueInput;
+};
+
+/** Asset Upload */
+export type AssetUpload = {
+	__typename?: 'AssetUpload';
+	/** Asset Upload Error */
+	error?: Maybe<AssetUploadError>;
+	/** Expiry Timestamp */
+	expiresAt?: Maybe<Scalars['DateTime']['output']>;
+	/** Asset Request Data for upload */
+	requestPostData?: Maybe<AssetUploadRequestPostData>;
+	/** Asset Request Data for upload */
+	status?: Maybe<AssetUploadStatus>;
+};
+
+/** Represents asset upload error */
+export type AssetUploadError = {
+	__typename?: 'AssetUploadError';
+	code: Scalars['String']['output'];
+	message: Scalars['String']['output'];
+};
+
+/** Asset Upload Request Post Data */
+export type AssetUploadRequestPostData = {
+	__typename?: 'AssetUploadRequestPostData';
+	/** The algorithm to use in the form field. This value should be passed in the `X-Amz-Algorithm` form field. */
+	algorithm: Scalars['String']['output'];
+	/** The credential to use in the form field. This value should be passed in the `X-Amz-Credential` form field. */
+	credential: Scalars['String']['output'];
+	/** The date the request was signed, formatted as YYYYMMDDTHHMMSSZ. This value should be passed in the `X-Amz-Date` header. */
+	date: Scalars['String']['output'];
+	/** The key to use in the form field. This value should be passed in the `Key` form field. */
+	key: Scalars['String']['output'];
+	/** The policy to use in the form field. This value should be passed in the `Policy` form field. */
+	policy: Scalars['String']['output'];
+	/** The security token to use in the form field. This field is optional only pass it if its not null. This value should be passed in the `X-Amz-Security-Token` form field if not null. */
+	securityToken?: Maybe<Scalars['String']['output']>;
+	/** The signature to use in the form field. This value should be passed in the `X-Amz-Signature` form field. */
+	signature: Scalars['String']['output'];
+	/** The URL to which the file should be uploaded with a POST request. */
+	url: Scalars['String']['output'];
+};
+
+/** System Asset Upload Status */
+export enum AssetUploadStatus {
+	AssetCreatePending = 'ASSET_CREATE_PENDING',
+	AssetErrorUpload = 'ASSET_ERROR_UPLOAD',
+	AssetUpdatePending = 'ASSET_UPDATE_PENDING',
+	AssetUploadComplete = 'ASSET_UPLOAD_COMPLETE'
+}
+
+/** Identifies documents */
+export type AssetUploadWhereInput = {
+	/** Logical AND on all given filters. */
+	AND?: InputMaybe<Array<AssetUploadWhereInput>>;
+	/** Logical NOT on all given filters combined by AND. */
+	NOT?: InputMaybe<Array<AssetUploadWhereInput>>;
+	/** Logical OR on all given filters. */
+	OR?: InputMaybe<Array<AssetUploadWhereInput>>;
+	expiresAt?: InputMaybe<Scalars['DateTime']['input']>;
+	/** All values greater than the given value. */
+	expiresAt_gt?: InputMaybe<Scalars['DateTime']['input']>;
+	/** All values greater than or equal the given value. */
+	expiresAt_gte?: InputMaybe<Scalars['DateTime']['input']>;
+	/** All values that are contained in given list. */
+	expiresAt_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']['input']>>>;
+	/** All values less than the given value. */
+	expiresAt_lt?: InputMaybe<Scalars['DateTime']['input']>;
+	/** All values less than or equal the given value. */
+	expiresAt_lte?: InputMaybe<Scalars['DateTime']['input']>;
+	/** Any other value that exists and is not equal to the given value. */
+	expiresAt_not?: InputMaybe<Scalars['DateTime']['input']>;
+	/** All values that are not contained in given list. */
+	expiresAt_not_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']['input']>>>;
+	status?: InputMaybe<AssetUploadStatus>;
+	/** All values that are contained in given list. */
+	status_in?: InputMaybe<Array<InputMaybe<AssetUploadStatus>>>;
+	/** Any other value that exists and is not equal to the given value. */
+	status_not?: InputMaybe<AssetUploadStatus>;
+	/** All values that are not contained in given list. */
+	status_not_in?: InputMaybe<Array<InputMaybe<AssetUploadStatus>>>;
+};
+
+/** Identifies documents */
+export type AssetUploadWhereStageInput = {
+	/** Logical AND on all given filters. */
+	AND?: InputMaybe<Array<AssetUploadWhereInput>>;
+	/** Logical NOT on all given filters combined by AND. */
+	NOT?: InputMaybe<Array<AssetUploadWhereInput>>;
+	/** Logical OR on all given filters. */
+	OR?: InputMaybe<Array<AssetUploadWhereInput>>;
+	expiresAt?: InputMaybe<Scalars['DateTime']['input']>;
+	/** All values greater than the given value. */
+	expiresAt_gt?: InputMaybe<Scalars['DateTime']['input']>;
+	/** All values greater than or equal the given value. */
+	expiresAt_gte?: InputMaybe<Scalars['DateTime']['input']>;
+	/** All values that are contained in given list. */
+	expiresAt_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']['input']>>>;
+	/** All values less than the given value. */
+	expiresAt_lt?: InputMaybe<Scalars['DateTime']['input']>;
+	/** All values less than or equal the given value. */
+	expiresAt_lte?: InputMaybe<Scalars['DateTime']['input']>;
+	/** Any other value that exists and is not equal to the given value. */
+	expiresAt_not?: InputMaybe<Scalars['DateTime']['input']>;
+	/** All values that are not contained in given list. */
+	expiresAt_not_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']['input']>>>;
+	status?: InputMaybe<AssetUploadStatus>;
+	/** All values that are contained in given list. */
+	status_in?: InputMaybe<Array<InputMaybe<AssetUploadStatus>>>;
+	/** Any other value that exists and is not equal to the given value. */
+	status_not?: InputMaybe<AssetUploadStatus>;
+	/** All values that are not contained in given list. */
+	status_not_in?: InputMaybe<Array<InputMaybe<AssetUploadStatus>>>;
 };
 
 export type AssetUpsertInput = {
@@ -2638,6 +2737,7 @@ export type AssetWhereInput = {
 	/** All values that are not contained in given list. */
 	updatedAt_not_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']['input']>>>;
 	updatedBy?: InputMaybe<UserWhereInput>;
+	upload?: InputMaybe<AssetUploadWhereInput>;
 	width?: InputMaybe<Scalars['Float']['input']>;
 	/** All values greater than the given value. */
 	width_gt?: InputMaybe<Scalars['Float']['input']>;
@@ -2730,6 +2830,7 @@ export type BlogPostDocumentInStagesArgs = {
 export type BlogPostHeroBackgroundImageArgs = {
 	forceParentLocale?: InputMaybe<Scalars['Boolean']['input']>;
 	locales?: InputMaybe<Array<Locale>>;
+	where?: InputMaybe<AssetSingleRelationWhereInput>;
 };
 
 export type BlogPostHistoryArgs = {
@@ -3596,6 +3697,7 @@ export type CardIconHistoryArgs = {
 export type CardIconIconArgs = {
 	forceParentLocale?: InputMaybe<Scalars['Boolean']['input']>;
 	locales?: InputMaybe<Array<Locale>>;
+	where?: InputMaybe<AssetSingleRelationWhereInput>;
 };
 
 export type CardIconLinkArgs = {
@@ -4098,6 +4200,7 @@ export type CardImageHistoryArgs = {
 export type CardImageImageArgs = {
 	forceParentLocale?: InputMaybe<Scalars['Boolean']['input']>;
 	locales?: InputMaybe<Array<Locale>>;
+	where?: InputMaybe<AssetSingleRelationWhereInput>;
 };
 
 export type CardImageLinkArgs = {
@@ -6047,22 +6150,17 @@ export type DividerWhereUniqueInput = {
 };
 
 export enum DocumentFileTypes {
-	Doc = 'doc',
-	Docx = 'docx',
-	Html = 'html',
+	/** Automatically selects the best format for the image based on the browser's capabilities. */
+	AutoImage = 'autoImage',
+	Avif = 'avif',
+	Bmp = 'bmp',
+	Gif = 'gif',
+	Heic = 'heic',
 	Jpg = 'jpg',
-	Odp = 'odp',
-	Ods = 'ods',
-	Odt = 'odt',
-	Pdf = 'pdf',
 	Png = 'png',
-	Ppt = 'ppt',
-	Pptx = 'pptx',
 	Svg = 'svg',
-	Txt = 'txt',
-	Webp = 'webp',
-	Xls = 'xls',
-	Xlsx = 'xlsx'
+	Tiff = 'tiff',
+	Webp = 'webp'
 }
 
 export type DocumentOutputInput = {
@@ -6070,27 +6168,15 @@ export type DocumentOutputInput = {
 	 * Transforms a document into a desired file type.
 	 * See this matrix for format support:
 	 *
-	 * PDF:	jpg, odp, ods, odt, png, svg, txt, and webp
-	 * DOC:	docx, html, jpg, odt, pdf, png, svg, txt, and webp
-	 * DOCX:	doc, html, jpg, odt, pdf, png, svg, txt, and webp
-	 * ODT:	doc, docx, html, jpg, pdf, png, svg, txt, and webp
-	 * XLS:	jpg, pdf, ods, png, svg, xlsx, and webp
-	 * XLSX:	jpg, pdf, ods, png, svg, xls, and webp
-	 * ODS:	jpg, pdf, png, xls, svg, xlsx, and webp
-	 * PPT:	jpg, odp, pdf, png, svg, pptx, and webp
-	 * PPTX:	jpg, odp, pdf, png, svg, ppt, and webp
-	 * ODP:	jpg, pdf, png, ppt, svg, pptx, and webp
-	 * BMP:	jpg, odp, ods, odt, pdf, png, svg, and webp
-	 * GIF:	jpg, odp, ods, odt, pdf, png, svg, and webp
-	 * JPG:	jpg, odp, ods, odt, pdf, png, svg, and webp
-	 * PNG:	jpg, odp, ods, odt, pdf, png, svg, and webp
-	 * WEBP:	jpg, odp, ods, odt, pdf, png, svg, and webp
-	 * TIFF:	jpg, odp, ods, odt, pdf, png, svg, and webp
-	 * AI:	    jpg, odp, ods, odt, pdf, png, svg, and webp
-	 * PSD:	jpg, odp, ods, odt, pdf, png, svg, and webp
-	 * SVG:	jpg, odp, ods, odt, pdf, png, and webp
-	 * HTML:	jpg, odt, pdf, svg, txt, and webp
-	 * TXT:	jpg, html, odt, pdf, svg, and webp
+	 * JPG:	autoImage, bmp, gif, jpg, png, webp, tiff
+	 * PNG:	autoImage, bmp, gif, jpg, png, webp, tiff, svg
+	 * SVG:	autoImage, bmp, gif, jpg, png, webp, tiff
+	 * WEBP:	autoImage, bmp, gif, jpg, png, webp, tiff, svg
+	 * GIF:	autoImage, bmp, gif, jpg, png, webp, tiff, svg
+	 * TIFF:	autoImage, bmp, gif, jpg, png, webp, tiff, svg
+	 * AVIF:	autoImage, bmp, gif, jpg, png, webp, tiff, svg
+	 * PDF: 	autoImage, gif, jpg, png, webp, tiff
+	 *
 	 */
 	format?: InputMaybe<DocumentFileTypes>;
 };
@@ -6221,6 +6307,7 @@ export type EyecatcherHistoryArgs = {
 export type EyecatcherImageArgs = {
 	forceParentLocale?: InputMaybe<Scalars['Boolean']['input']>;
 	locales?: InputMaybe<Array<Locale>>;
+	where?: InputMaybe<AssetSingleRelationWhereInput>;
 };
 
 export type EyecatcherLinkArgs = {
@@ -6803,11 +6890,13 @@ export type HeroImageHistoryArgs = {
 export type HeroImageIconArgs = {
 	forceParentLocale?: InputMaybe<Scalars['Boolean']['input']>;
 	locales?: InputMaybe<Array<Locale>>;
+	where?: InputMaybe<AssetSingleRelationWhereInput>;
 };
 
 export type HeroImageImageArgs = {
 	forceParentLocale?: InputMaybe<Scalars['Boolean']['input']>;
 	locales?: InputMaybe<Array<Locale>>;
+	where?: InputMaybe<AssetSingleRelationWhereInput>;
 };
 
 export type HeroImagePageArgs = {
@@ -7225,6 +7314,7 @@ export type ImageHistoryArgs = {
 export type ImageImageArgs = {
 	forceParentLocale?: InputMaybe<Scalars['Boolean']['input']>;
 	locales?: InputMaybe<Array<Locale>>;
+	where?: InputMaybe<AssetSingleRelationWhereInput>;
 };
 
 export type ImagePageArgs = {
@@ -7251,6 +7341,26 @@ export type ImageScheduledInArgs = {
 export type ImageUpdatedByArgs = {
 	forceParentLocale?: InputMaybe<Scalars['Boolean']['input']>;
 	locales?: InputMaybe<Array<Locale>>;
+};
+
+export type ImageBlurInput = {
+	/** The amount of blurring to apply to the image. The value must be an integer from 1 to 20. */
+	amount: Scalars['Int']['input'];
+};
+
+/** Adds a border to the image. */
+export type ImageBorderInput = {
+	/** The background color of the border. The value must be a valid hex color code. Or one of the supported color names. */
+	background: Scalars['String']['input'];
+	/** The color of the border. The value must be a valid hex color code. Or one of the supported color names. */
+	color: Scalars['String']['input'];
+	/** The width of the border in pixels. The value must be an integer from 1 to 1000. */
+	width: Scalars['Int']['input'];
+};
+
+export type ImageCompressInput = {
+	/** Preserves the metadata of the image. */
+	metadata: Scalars['Boolean']['input'];
 };
 
 export type ImageConnectInput = {
@@ -7293,6 +7403,23 @@ export type ImageCreateOneInlineInput = {
 	connect?: InputMaybe<ImageWhereUniqueInput>;
 	/** Create and connect one Image document */
 	create?: InputMaybe<ImageCreateInput>;
+};
+
+/**
+ * Crops the image to the specified dimensions.
+ * The starting points for X and Y coordinates are [0,0], aligning with the top-left corner of the image.
+ * The width and height parameters determine the size in pixels of the cropping rectangle.
+ * The output will include only the portion of the image within the designated crop area.
+ */
+export type ImageCropInput = {
+	/** The height in pixels to resize the image to. The value must be an integer from 1 to 10000. */
+	height: Scalars['Int']['input'];
+	/** The width in pixels to resize the image to. The value must be an integer from 1 to 10000. */
+	width: Scalars['Int']['input'];
+	/** The x coordinate of the image. The value must be an integer from 0 to 10000. */
+	x: Scalars['Int']['input'];
+	/** The y coordinate of the image. The value must be an integer from 0 to 10000. */
+	y: Scalars['Int']['input'];
 };
 
 /** An edge in a connection. */
@@ -7441,6 +7568,11 @@ export enum ImageOrderByInput {
 	UpdatedAtDesc = 'updatedAt_DESC'
 }
 
+export type ImageQualityInput = {
+	/** The quality of the image. The value must be an integer from 1 to 100. */
+	value: Scalars['Int']['input'];
+};
+
 export type ImageResizeInput = {
 	/** The default value for the fit parameter is fit:clip. */
 	fit?: InputMaybe<ImageFit>;
@@ -7448,6 +7580,11 @@ export type ImageResizeInput = {
 	height?: InputMaybe<Scalars['Int']['input']>;
 	/** The width in pixels to resize the image to. The value must be an integer from 1 to 10000. */
 	width?: InputMaybe<Scalars['Int']['input']>;
+};
+
+export type ImageSharpenInput = {
+	/** The amount of sharpening to apply to the image. The value must be an integer from 1 to 20. */
+	amount: Scalars['Int']['input'];
 };
 
 export enum ImageTextOrientation {
@@ -7458,8 +7595,23 @@ export enum ImageTextOrientation {
 
 /** Transformations for Images */
 export type ImageTransformationInput = {
+	/** Blurs the image. */
+	blur?: InputMaybe<ImageBlurInput>;
+	/** Adds a border to the image. */
+	border?: InputMaybe<ImageBorderInput>;
+	/** Compresses the image. */
+	compress?: InputMaybe<ImageCompressInput>;
+	/** Crops the image to the specified dimensions. */
+	crop?: InputMaybe<ImageCropInput>;
+	/**
+	 * Changes the quality of the image. The value must be an integer from 1 to 100.
+	 * Only supported for the following formats jpeg, jpg, webp, gif, heif, tiff, avif.
+	 */
+	quality?: InputMaybe<ImageQualityInput>;
 	/** Resizes the image */
 	resize?: InputMaybe<ImageResizeInput>;
+	/** Sharpens the image. */
+	sharpen?: InputMaybe<ImageSharpenInput>;
 };
 
 export type ImageUpdateInput = {
@@ -8312,10 +8464,7 @@ export type Mutation = {
 	createAccordionContainer?: Maybe<AccordionContainer>;
 	/** Create one accordionItem */
 	createAccordionItem?: Maybe<AccordionItem>;
-	/**
-	 * Create one asset
-	 * @deprecated Asset mutations will be overhauled soon
-	 */
+	/** Create an asset. Use the returned info to finish the creation process by uploading the asset. */
 	createAsset?: Maybe<Asset>;
 	/** Create one assetLink */
 	createAssetLink?: Maybe<AssetLink>;
@@ -12729,6 +12878,7 @@ export type PartnerItemHistoryArgs = {
 export type PartnerItemPartnerLogoArgs = {
 	forceParentLocale?: InputMaybe<Scalars['Boolean']['input']>;
 	locales?: InputMaybe<Array<Locale>>;
+	where?: InputMaybe<AssetSingleRelationWhereInput>;
 };
 
 export type PartnerItemPublishedByArgs = {
@@ -14577,6 +14727,7 @@ export type ReferencesItemPublishedByArgs = {
 export type ReferencesItemReferenceLogoArgs = {
 	forceParentLocale?: InputMaybe<Scalars['Boolean']['input']>;
 	locales?: InputMaybe<Array<Locale>>;
+	where?: InputMaybe<AssetSingleRelationWhereInput>;
 };
 
 export type ReferencesItemScheduledInArgs = {
@@ -16118,6 +16269,7 @@ export type TextAndImage = Entity &
 export type TextAndImageAssetPickerArgs = {
 	forceParentLocale?: InputMaybe<Scalars['Boolean']['input']>;
 	locales?: InputMaybe<Array<Locale>>;
+	where?: InputMaybe<AssetSingleRelationWhereInput>;
 };
 
 export type TextAndImageBlogPostArgs = {
@@ -16145,6 +16297,7 @@ export type TextAndImageHistoryArgs = {
 export type TextAndImageImageArgs = {
 	forceParentLocale?: InputMaybe<Scalars['Boolean']['input']>;
 	locales?: InputMaybe<Array<Locale>>;
+	where?: InputMaybe<AssetSingleRelationWhereInput>;
 };
 
 export type TextAndImagePageArgs = {
@@ -16997,7 +17150,7 @@ export type TextTextRichTextReferencesArgs = {
 	skip?: InputMaybe<Scalars['Int']['input']>;
 };
 
-export type TextTextRichTextEmbeddedTypes = Page;
+export type TextTextRichTextEmbeddedTypes = BlogPost | Page;
 
 export type TextUpdateInput = {
 	blogPost?: InputMaybe<BlogPostUpdateOneInlineInput>;
@@ -17731,6 +17884,7 @@ export enum _FilterKind {
 	ContainsAll = 'contains_all',
 	ContainsNone = 'contains_none',
 	ContainsSome = 'contains_some',
+	DescendantsOf = 'descendants_of',
 	EndsWith = 'ends_with',
 	Eq = 'eq',
 	EqNot = 'eq_not',
@@ -18950,26 +19104,51 @@ export type ResolversUnionTypes<_RefType extends Record<string, unknown>> = {
 				scheduledIn: Array<_RefType['ScheduledOperation']>;
 				updatedBy?: Maybe<_RefType['User']>;
 		  });
-	TextTextRichTextEmbeddedTypes: Omit<
-		Page,
-		| 'createdBy'
-		| 'documentInStages'
-		| 'history'
-		| 'incomingLinks'
-		| 'modules'
-		| 'publishedBy'
-		| 'scheduledIn'
-		| 'updatedBy'
-	> & {
-		createdBy?: Maybe<_RefType['User']>;
-		documentInStages: Array<_RefType['Page']>;
-		history: Array<_RefType['Version']>;
-		incomingLinks: Array<_RefType['Link']>;
-		modules: Array<_RefType['PageModul']>;
-		publishedBy?: Maybe<_RefType['User']>;
-		scheduledIn: Array<_RefType['ScheduledOperation']>;
-		updatedBy?: Maybe<_RefType['User']>;
-	};
+	TextTextRichTextEmbeddedTypes:
+		| (Omit<
+				BlogPost,
+				| 'createdBy'
+				| 'documentInStages'
+				| 'heroBackgroundImage'
+				| 'history'
+				| 'incomingLinks'
+				| 'modules'
+				| 'page'
+				| 'publishedBy'
+				| 'scheduledIn'
+				| 'updatedBy'
+		  > & {
+				createdBy?: Maybe<_RefType['User']>;
+				documentInStages: Array<_RefType['BlogPost']>;
+				heroBackgroundImage?: Maybe<_RefType['Asset']>;
+				history: Array<_RefType['Version']>;
+				incomingLinks: Array<_RefType['Link']>;
+				modules: Array<_RefType['BlogPostModules']>;
+				page?: Maybe<_RefType['Page']>;
+				publishedBy?: Maybe<_RefType['User']>;
+				scheduledIn: Array<_RefType['ScheduledOperation']>;
+				updatedBy?: Maybe<_RefType['User']>;
+		  })
+		| (Omit<
+				Page,
+				| 'createdBy'
+				| 'documentInStages'
+				| 'history'
+				| 'incomingLinks'
+				| 'modules'
+				| 'publishedBy'
+				| 'scheduledIn'
+				| 'updatedBy'
+		  > & {
+				createdBy?: Maybe<_RefType['User']>;
+				documentInStages: Array<_RefType['Page']>;
+				history: Array<_RefType['Version']>;
+				incomingLinks: Array<_RefType['Link']>;
+				modules: Array<_RefType['PageModul']>;
+				publishedBy?: Maybe<_RefType['User']>;
+				scheduledIn: Array<_RefType['ScheduledOperation']>;
+				updatedBy?: Maybe<_RefType['User']>;
+		  });
 };
 
 /** Mapping of interface types */
@@ -20200,6 +20379,7 @@ export type ResolversTypes = {
 	AssetLinkWhereUniqueInput: AssetLinkWhereUniqueInput;
 	AssetManyWhereInput: AssetManyWhereInput;
 	AssetOrderByInput: AssetOrderByInput;
+	AssetSingleRelationWhereInput: AssetSingleRelationWhereInput;
 	AssetTransformationInput: AssetTransformationInput;
 	AssetUpdateInput: AssetUpdateInput;
 	AssetUpdateLocalizationDataInput: AssetUpdateLocalizationDataInput;
@@ -20207,12 +20387,15 @@ export type ResolversTypes = {
 	AssetUpdateLocalizationsInput: AssetUpdateLocalizationsInput;
 	AssetUpdateManyInlineInput: AssetUpdateManyInlineInput;
 	AssetUpdateManyInput: AssetUpdateManyInput;
-	AssetUpdateManyLocalizationDataInput: AssetUpdateManyLocalizationDataInput;
-	AssetUpdateManyLocalizationInput: AssetUpdateManyLocalizationInput;
-	AssetUpdateManyLocalizationsInput: AssetUpdateManyLocalizationsInput;
 	AssetUpdateManyWithNestedWhereInput: AssetUpdateManyWithNestedWhereInput;
 	AssetUpdateOneInlineInput: AssetUpdateOneInlineInput;
 	AssetUpdateWithNestedWhereUniqueInput: AssetUpdateWithNestedWhereUniqueInput;
+	AssetUpload: ResolverTypeWrapper<AssetUpload>;
+	AssetUploadError: ResolverTypeWrapper<AssetUploadError>;
+	AssetUploadRequestPostData: ResolverTypeWrapper<AssetUploadRequestPostData>;
+	AssetUploadStatus: AssetUploadStatus;
+	AssetUploadWhereInput: AssetUploadWhereInput;
+	AssetUploadWhereStageInput: AssetUploadWhereStageInput;
 	AssetUpsertInput: AssetUpsertInput;
 	AssetUpsertLocalizationInput: AssetUpsertLocalizationInput;
 	AssetUpsertWithNestedWhereUniqueInput: AssetUpsertWithNestedWhereUniqueInput;
@@ -20679,6 +20862,9 @@ export type ResolversTypes = {
 			updatedBy?: Maybe<ResolversTypes['User']>;
 		}
 	>;
+	ImageBlurInput: ImageBlurInput;
+	ImageBorderInput: ImageBorderInput;
+	ImageCompressInput: ImageCompressInput;
 	ImageConnectInput: ImageConnectInput;
 	ImageConnection: ResolverTypeWrapper<
 		Omit<ImageConnection, 'edges'> & { edges: Array<ResolversTypes['ImageEdge']> }
@@ -20686,11 +20872,14 @@ export type ResolversTypes = {
 	ImageCreateInput: ImageCreateInput;
 	ImageCreateManyInlineInput: ImageCreateManyInlineInput;
 	ImageCreateOneInlineInput: ImageCreateOneInlineInput;
+	ImageCropInput: ImageCropInput;
 	ImageEdge: ResolverTypeWrapper<Omit<ImageEdge, 'node'> & { node: ResolversTypes['Image'] }>;
 	ImageFit: ImageFit;
 	ImageManyWhereInput: ImageManyWhereInput;
 	ImageOrderByInput: ImageOrderByInput;
+	ImageQualityInput: ImageQualityInput;
 	ImageResizeInput: ImageResizeInput;
+	ImageSharpenInput: ImageSharpenInput;
 	ImageTextOrientation: ImageTextOrientation;
 	ImageTransformationInput: ImageTransformationInput;
 	ImageUpdateInput: ImageUpdateInput;
@@ -21457,6 +21646,7 @@ export type ResolversParentTypes = {
 	AssetLinkWhereStageInput: AssetLinkWhereStageInput;
 	AssetLinkWhereUniqueInput: AssetLinkWhereUniqueInput;
 	AssetManyWhereInput: AssetManyWhereInput;
+	AssetSingleRelationWhereInput: AssetSingleRelationWhereInput;
 	AssetTransformationInput: AssetTransformationInput;
 	AssetUpdateInput: AssetUpdateInput;
 	AssetUpdateLocalizationDataInput: AssetUpdateLocalizationDataInput;
@@ -21464,12 +21654,14 @@ export type ResolversParentTypes = {
 	AssetUpdateLocalizationsInput: AssetUpdateLocalizationsInput;
 	AssetUpdateManyInlineInput: AssetUpdateManyInlineInput;
 	AssetUpdateManyInput: AssetUpdateManyInput;
-	AssetUpdateManyLocalizationDataInput: AssetUpdateManyLocalizationDataInput;
-	AssetUpdateManyLocalizationInput: AssetUpdateManyLocalizationInput;
-	AssetUpdateManyLocalizationsInput: AssetUpdateManyLocalizationsInput;
 	AssetUpdateManyWithNestedWhereInput: AssetUpdateManyWithNestedWhereInput;
 	AssetUpdateOneInlineInput: AssetUpdateOneInlineInput;
 	AssetUpdateWithNestedWhereUniqueInput: AssetUpdateWithNestedWhereUniqueInput;
+	AssetUpload: AssetUpload;
+	AssetUploadError: AssetUploadError;
+	AssetUploadRequestPostData: AssetUploadRequestPostData;
+	AssetUploadWhereInput: AssetUploadWhereInput;
+	AssetUploadWhereStageInput: AssetUploadWhereStageInput;
 	AssetUpsertInput: AssetUpsertInput;
 	AssetUpsertLocalizationInput: AssetUpsertLocalizationInput;
 	AssetUpsertWithNestedWhereUniqueInput: AssetUpsertWithNestedWhereUniqueInput;
@@ -21896,6 +22088,9 @@ export type ResolversParentTypes = {
 		scheduledIn: Array<ResolversParentTypes['ScheduledOperation']>;
 		updatedBy?: Maybe<ResolversParentTypes['User']>;
 	};
+	ImageBlurInput: ImageBlurInput;
+	ImageBorderInput: ImageBorderInput;
+	ImageCompressInput: ImageCompressInput;
 	ImageConnectInput: ImageConnectInput;
 	ImageConnection: Omit<ImageConnection, 'edges'> & {
 		edges: Array<ResolversParentTypes['ImageEdge']>;
@@ -21903,9 +22098,12 @@ export type ResolversParentTypes = {
 	ImageCreateInput: ImageCreateInput;
 	ImageCreateManyInlineInput: ImageCreateManyInlineInput;
 	ImageCreateOneInlineInput: ImageCreateOneInlineInput;
+	ImageCropInput: ImageCropInput;
 	ImageEdge: Omit<ImageEdge, 'node'> & { node: ResolversParentTypes['Image'] };
 	ImageManyWhereInput: ImageManyWhereInput;
+	ImageQualityInput: ImageQualityInput;
 	ImageResizeInput: ImageResizeInput;
+	ImageSharpenInput: ImageSharpenInput;
 	ImageTransformationInput: ImageTransformationInput;
 	ImageUpdateInput: ImageUpdateInput;
 	ImageUpdateManyInlineInput: ImageUpdateManyInlineInput;
@@ -22762,6 +22960,7 @@ export type AssetResolvers<
 		ContextType,
 		Partial<AssetUpdatedByArgs>
 	>;
+	upload?: Resolver<Maybe<ResolversTypes['AssetUpload']>, ParentType, ContextType>;
 	url?: Resolver<ResolversTypes['String'], ParentType, ContextType, Partial<AssetUrlArgs>>;
 	width?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
 	__isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
@@ -22872,6 +23071,47 @@ export type AssetLinkEdgeResolvers<
 > = {
 	cursor?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
 	node?: Resolver<ResolversTypes['AssetLink'], ParentType, ContextType>;
+	__isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
+export type AssetUploadResolvers<
+	ContextType = any,
+	ParentType extends ResolversParentTypes['AssetUpload'] = ResolversParentTypes['AssetUpload']
+> = {
+	error?: Resolver<Maybe<ResolversTypes['AssetUploadError']>, ParentType, ContextType>;
+	expiresAt?: Resolver<Maybe<ResolversTypes['DateTime']>, ParentType, ContextType>;
+	requestPostData?: Resolver<
+		Maybe<ResolversTypes['AssetUploadRequestPostData']>,
+		ParentType,
+		ContextType
+	>;
+	status?: Resolver<Maybe<ResolversTypes['AssetUploadStatus']>, ParentType, ContextType>;
+	__isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
+export type AssetUploadErrorResolvers<
+	ContextType = any,
+	ParentType extends
+		ResolversParentTypes['AssetUploadError'] = ResolversParentTypes['AssetUploadError']
+> = {
+	code?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+	message?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+	__isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
+export type AssetUploadRequestPostDataResolvers<
+	ContextType = any,
+	ParentType extends
+		ResolversParentTypes['AssetUploadRequestPostData'] = ResolversParentTypes['AssetUploadRequestPostData']
+> = {
+	algorithm?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+	credential?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+	date?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+	key?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+	policy?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+	securityToken?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+	signature?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+	url?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
 	__isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
@@ -27493,7 +27733,7 @@ export type TextTextRichTextEmbeddedTypesResolvers<
 	ParentType extends
 		ResolversParentTypes['TextTextRichTextEmbeddedTypes'] = ResolversParentTypes['TextTextRichTextEmbeddedTypes']
 > = {
-	__resolveType: TypeResolveFn<'Page', ParentType, ContextType>;
+	__resolveType: TypeResolveFn<'BlogPost' | 'Page', ParentType, ContextType>;
 };
 
 export type UserResolvers<
@@ -27562,6 +27802,9 @@ export type Resolvers<ContextType = any> = {
 	AssetLink?: AssetLinkResolvers<ContextType>;
 	AssetLinkConnection?: AssetLinkConnectionResolvers<ContextType>;
 	AssetLinkEdge?: AssetLinkEdgeResolvers<ContextType>;
+	AssetUpload?: AssetUploadResolvers<ContextType>;
+	AssetUploadError?: AssetUploadErrorResolvers<ContextType>;
+	AssetUploadRequestPostData?: AssetUploadRequestPostDataResolvers<ContextType>;
 	BatchPayload?: BatchPayloadResolvers<ContextType>;
 	BlogPost?: BlogPostResolvers<ContextType>;
 	BlogPostConnection?: BlogPostConnectionResolvers<ContextType>;
