@@ -7,8 +7,10 @@ import { fileURLToPath } from 'node:url';
 import ts from 'typescript-eslint';
 import svelteConfig from './svelte.config.js';
 const gitignorePath = fileURLToPath(new URL('./.gitignore', import.meta.url));
+import { globalIgnores } from 'eslint/config';
 
 export default ts.config(
+	globalIgnores(['./src/lib/graphql/generated/schema.ts']),
 	includeIgnoreFile(gitignorePath),
 	js.configs.recommended,
 	...ts.configs.recommended,
@@ -26,7 +28,6 @@ export default ts.config(
 	{
 		files: ['**/*.svelte', '**/*.svelte.ts', '**/*.svelte.js'],
 		ignores: ['eslint.config.js', 'svelte.config.js'],
-
 		languageOptions: {
 			parserOptions: {
 				projectService: true,
