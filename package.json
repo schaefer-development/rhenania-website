@@ -52,6 +52,6 @@
 		"graphql": "^16.11.0",
 		"hcaptcha": "^0.2.0",
 		"leaflet": "^1.9.4",
-		"nodemailer": "^7.0.5"
+		"nodemailer": "^6.10.5"
 	}
 }
