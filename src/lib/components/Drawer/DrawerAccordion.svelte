@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
-	import { onMount } from 'svelte';
 	export let id: string;
 
 	let checkbox: HTMLInputElement;

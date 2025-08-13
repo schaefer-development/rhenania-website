@@ -3,7 +3,7 @@ import { SMTP_HOST, SMTP_PORT, SMTP_USERNAME, SMTP_PASSWORD } from '$lib/env';
 import { dev } from '$app/environment';
 import nodemailer from 'nodemailer';
 import type { Email } from '$lib/mail';
-import email, { defaults } from '$lib/mail';
+import email from '$lib/mail';
 import { verify } from 'hcaptcha';
 import { HCAPTCHA_SECRET } from '$lib/env';
 
