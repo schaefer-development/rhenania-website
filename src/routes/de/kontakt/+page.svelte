@@ -215,7 +215,7 @@
 											</div>
 											<div class="dataprivacy px-3">
 												Ich habe die <a
-													href="/datenschutz/"
+													href="/de/datenschutz/"
 													class=" text-rc_red hover:text-rc_red focus:text-rc_red font-bold focus:ring-0 focus:outline-none"
 													>Datenschutzerklärung</a
 												>
