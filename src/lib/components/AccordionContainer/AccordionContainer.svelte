@@ -52,7 +52,8 @@
 									{#if accordionItem.heading2}
 										<h3 class="block py-2 font-bold">{accordionItem.heading3}</h3>
 									{/if}
-									{@html accordionItem.content.html}
+									<EmbedText text={accordionItem.content}></EmbedText>
+
 									{#if accordionItem.assetPicker}
 										<div class="hyperlink flex py-4">
 											<div class="text-rc_red relative flex-none pr-1 font-bold">
@@ -101,7 +102,7 @@
 									{#if accordionItem.heading2}
 										<h3 class="block py-2 font-bold">{accordionItem.heading3}</h3>
 									{/if}
-									{@html accordionItem.content.html}
+									<EmbedText text={accordionItem.content}></EmbedText>
 									{#if accordionItem.assetPicker}
 										<div class="hyperlink flex py-4">
 											<div class="text-rc_red relative flex-none pr-1 font-bold">
@@ -155,7 +156,7 @@
 							{#if accordionItem.heading2}
 								<h3 class="block py-2 font-bold">{accordionItem.heading3}</h3>
 							{/if}
-							{@html accordionItem.content.html}
+							<EmbedText text={accordionItem.content}></EmbedText>
 							{#if accordionItem.assetPicker}
 								<div class="hyperlink flex py-4">
 									<div class="text-rc_red relative flex-none pr-1 font-bold">
