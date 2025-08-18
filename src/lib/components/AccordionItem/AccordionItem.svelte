@@ -2,6 +2,8 @@
 	import TextAndImage from '$lib/components/TextAndImage/TextAndImage.svelte';
 	import type { AccordionItem } from '$lib/graphql/generated/schema';
 	export let accordionItem: Partial<AccordionItem>;
+
+	console.log(accordionItem.textAndImages);
 </script>
 
 <div class="mod_accordion tab relative block h-auto w-full overflow-hidden pb-4">

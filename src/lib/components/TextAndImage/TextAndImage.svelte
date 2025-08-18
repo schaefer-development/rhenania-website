@@ -1,4 +1,5 @@
 <script lang="ts">
+	import EmbedText from '$lib/components/EmbedText/EmbedText.svelte';
 	import { mapPadding } from '$lib/helpers';
 	import type { TextAndImage } from '$lib/graphql/generated/schema';
 	export let module: Partial<TextAndImage> = {};
@@ -29,11 +30,7 @@
 					{#if module.heading3}
 						<h3 class="rc_h3 py-2">{module.heading3}</h3>
 					{/if}
-					{#if module.text.html}
-						<div class="rc_break_hyphens py-4">
-							{@html module.text.html}
-						</div>
-					{/if}
+					<EmbedText text={module.text}></EmbedText>
 
 					{#if module.assetPicker}
 						<div class="hyperlink flex">
@@ -79,11 +76,7 @@
 					{#if module.heading3}
 						<h3 class="rc_h3 py-2">{module.heading3}</h3>
 					{/if}
-					{#if module.text.html}
-						<div class="rc_break_hyphens py-4">
-							{@html module.text.html}
-						</div>
-					{/if}
+					<EmbedText text={module.text}></EmbedText>
 
 					{#if module.assetPicker}
 						<div class="hyperlink flex">

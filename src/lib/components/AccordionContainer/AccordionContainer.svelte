@@ -1,4 +1,5 @@
 <script lang="ts">
+	import EmbedText from '$lib/components/EmbedText/EmbedText.svelte';
 	import AccordionItem from '$lib/components/AccordionItem/AccordionItem.svelte';
 	import type { AccordionContainer } from '$lib/graphql/generated/schema';
 	import { mapPadding } from '$lib/helpers';
@@ -18,9 +19,9 @@
 			<div class="accordionHeader pb-8">
 				<h2 class="rc_h1 text-rc_darkblue">{module.headline}</h2>
 				{#if module.introOptional}
-					<p class="py-6">
-						{@html module.introOptional.html}
-					</p>
+					<div class="py-6">
+						<EmbedText text={module.introOptional}></EmbedText>
+					</div>
 				{/if}
 			</div>
 
