@@ -1,4 +1,5 @@
 <script lang="ts">
+	import EmbedText from '$lib/components/EmbedText/EmbedText.svelte';
 	import AccordionItem from '$lib/components/AccordionItem/AccordionItem.svelte';
 	import type { AccordionContainer } from '$lib/graphql/generated/schema';
 	import { mapPadding } from '$lib/helpers';
@@ -18,9 +19,9 @@
 			<div class="accordionHeader pb-8">
 				<h2 class="rc_h1 text-rc_darkblue">{module.headline}</h2>
 				{#if module.introOptional}
-					<p class="py-6">
-						{@html module.introOptional.html}
-					</p>
+					<div class="py-6">
+						<EmbedText text={module.introOptional}></EmbedText>
+					</div>
 				{/if}
 			</div>
 
@@ -51,7 +52,8 @@
 									{#if accordionItem.heading2}
 										<h3 class="block py-2 font-bold">{accordionItem.heading3}</h3>
 									{/if}
-									{@html accordionItem.content.html}
+									<EmbedText text={accordionItem.content}></EmbedText>
+
 									{#if accordionItem.assetPicker}
 										<div class="hyperlink flex py-4">
 											<div class="text-rc_red relative flex-none pr-1 font-bold">
@@ -100,7 +102,7 @@
 									{#if accordionItem.heading2}
 										<h3 class="block py-2 font-bold">{accordionItem.heading3}</h3>
 									{/if}
-									{@html accordionItem.content.html}
+									<EmbedText text={accordionItem.content}></EmbedText>
 									{#if accordionItem.assetPicker}
 										<div class="hyperlink flex py-4">
 											<div class="text-rc_red relative flex-none pr-1 font-bold">
@@ -154,7 +156,7 @@
 							{#if accordionItem.heading2}
 								<h3 class="block py-2 font-bold">{accordionItem.heading3}</h3>
 							{/if}
-							{@html accordionItem.content.html}
+							<EmbedText text={accordionItem.content}></EmbedText>
 							{#if accordionItem.assetPicker}
 								<div class="hyperlink flex py-4">
 									<div class="text-rc_red relative flex-none pr-1 font-bold">

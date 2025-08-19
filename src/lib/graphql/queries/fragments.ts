@@ -6,7 +6,17 @@ export const textAndImageFragment = gql`
 		heading2
 		heading3
 		text {
-			html
+			json
+			references {
+				... on BlogPost {
+					id
+					slug
+				}
+				... on Page {
+					id
+					slug
+				}
+			}
 		}
 		image {
 			id
@@ -27,7 +37,17 @@ export const accordingContainerFragment = gql`
 		id
 		headline
 		introOptional {
-			html
+			json
+			references {
+				... on BlogPost {
+					id
+					slug
+				}
+				... on Page {
+					id
+					slug
+				}
+			}
 		}
 		paddingTop
 		paddingBottom
@@ -38,8 +58,17 @@ export const accordingContainerFragment = gql`
 			heading2
 			heading3
 			content {
-				html
-				text
+				json
+				references {
+					... on BlogPost {
+						id
+						slug
+					}
+					... on Page {
+						id
+						slug
+					}
+				}
 			}
 			image {
 				id
