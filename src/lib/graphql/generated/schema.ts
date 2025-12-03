@@ -22405,8 +22405,8 @@ export type ResolversParentTypes = {
 
 export type AccordionContainerResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['AccordionContainer'] = ResolversParentTypes['AccordionContainer']
+	ParentType extends ResolversParentTypes['AccordionContainer'] =
+		ResolversParentTypes['AccordionContainer']
 > = {
 	accordionItems?: Resolver<
 		Array<ResolversTypes['AccordionItem']>,
@@ -22479,8 +22479,8 @@ export type AccordionContainerResolvers<
 
 export type AccordionContainerConnectionResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['AccordionContainerConnection'] = ResolversParentTypes['AccordionContainerConnection']
+	ParentType extends ResolversParentTypes['AccordionContainerConnection'] =
+		ResolversParentTypes['AccordionContainerConnection']
 > = {
 	aggregate?: Resolver<ResolversTypes['Aggregate'], ParentType, ContextType>;
 	edges?: Resolver<Array<ResolversTypes['AccordionContainerEdge']>, ParentType, ContextType>;
@@ -22490,8 +22490,8 @@ export type AccordionContainerConnectionResolvers<
 
 export type AccordionContainerEdgeResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['AccordionContainerEdge'] = ResolversParentTypes['AccordionContainerEdge']
+	ParentType extends ResolversParentTypes['AccordionContainerEdge'] =
+		ResolversParentTypes['AccordionContainerEdge']
 > = {
 	cursor?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
 	node?: Resolver<ResolversTypes['AccordionContainer'], ParentType, ContextType>;
@@ -22579,8 +22579,8 @@ export type AccordionItemResolvers<
 
 export type AccordionItemConnectionResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['AccordionItemConnection'] = ResolversParentTypes['AccordionItemConnection']
+	ParentType extends ResolversParentTypes['AccordionItemConnection'] =
+		ResolversParentTypes['AccordionItemConnection']
 > = {
 	aggregate?: Resolver<ResolversTypes['Aggregate'], ParentType, ContextType>;
 	edges?: Resolver<Array<ResolversTypes['AccordionItemEdge']>, ParentType, ContextType>;
@@ -22590,8 +22590,8 @@ export type AccordionItemConnectionResolvers<
 
 export type AccordionItemEdgeResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['AccordionItemEdge'] = ResolversParentTypes['AccordionItemEdge']
+	ParentType extends ResolversParentTypes['AccordionItemEdge'] =
+		ResolversParentTypes['AccordionItemEdge']
 > = {
 	cursor?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
 	node?: Resolver<ResolversTypes['AccordionItem'], ParentType, ContextType>;
@@ -22769,8 +22769,8 @@ export type AssetResolvers<
 
 export type AssetConnectionResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['AssetConnection'] = ResolversParentTypes['AssetConnection']
+	ParentType extends ResolversParentTypes['AssetConnection'] =
+		ResolversParentTypes['AssetConnection']
 > = {
 	aggregate?: Resolver<ResolversTypes['Aggregate'], ParentType, ContextType>;
 	edges?: Resolver<Array<ResolversTypes['AssetEdge']>, ParentType, ContextType>;
@@ -22857,8 +22857,8 @@ export type AssetLinkResolvers<
 
 export type AssetLinkConnectionResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['AssetLinkConnection'] = ResolversParentTypes['AssetLinkConnection']
+	ParentType extends ResolversParentTypes['AssetLinkConnection'] =
+		ResolversParentTypes['AssetLinkConnection']
 > = {
 	aggregate?: Resolver<ResolversTypes['Aggregate'], ParentType, ContextType>;
 	edges?: Resolver<Array<ResolversTypes['AssetLinkEdge']>, ParentType, ContextType>;
@@ -22963,8 +22963,8 @@ export type BlogPostResolvers<
 
 export type BlogPostConnectionResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['BlogPostConnection'] = ResolversParentTypes['BlogPostConnection']
+	ParentType extends ResolversParentTypes['BlogPostConnection'] =
+		ResolversParentTypes['BlogPostConnection']
 > = {
 	aggregate?: Resolver<ResolversTypes['Aggregate'], ParentType, ContextType>;
 	edges?: Resolver<Array<ResolversTypes['BlogPostEdge']>, ParentType, ContextType>;
@@ -22983,8 +22983,8 @@ export type BlogPostEdgeResolvers<
 
 export type BlogPostModulesResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['BlogPostModules'] = ResolversParentTypes['BlogPostModules']
+	ParentType extends ResolversParentTypes['BlogPostModules'] =
+		ResolversParentTypes['BlogPostModules']
 > = {
 	__resolveType: TypeResolveFn<
 		| 'AccordionContainer'
@@ -23072,8 +23072,8 @@ export type CardIconResolvers<
 
 export type CardIconConnectionResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['CardIconConnection'] = ResolversParentTypes['CardIconConnection']
+	ParentType extends ResolversParentTypes['CardIconConnection'] =
+		ResolversParentTypes['CardIconConnection']
 > = {
 	aggregate?: Resolver<ResolversTypes['Aggregate'], ParentType, ContextType>;
 	edges?: Resolver<Array<ResolversTypes['CardIconEdge']>, ParentType, ContextType>;
@@ -23160,8 +23160,8 @@ export type CardImageResolvers<
 
 export type CardImageConnectionResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['CardImageConnection'] = ResolversParentTypes['CardImageConnection']
+	ParentType extends ResolversParentTypes['CardImageConnection'] =
+		ResolversParentTypes['CardImageConnection']
 > = {
 	aggregate?: Resolver<ResolversTypes['Aggregate'], ParentType, ContextType>;
 	edges?: Resolver<Array<ResolversTypes['CardImageEdge']>, ParentType, ContextType>;
@@ -23249,16 +23249,16 @@ export type CardsContainerResolvers<
 
 export type CardsContainerCardResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['CardsContainerCard'] = ResolversParentTypes['CardsContainerCard']
+	ParentType extends ResolversParentTypes['CardsContainerCard'] =
+		ResolversParentTypes['CardsContainerCard']
 > = {
 	__resolveType: TypeResolveFn<'CardIcon' | 'CardImage', ParentType, ContextType>;
 };
 
 export type CardsContainerConnectionResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['CardsContainerConnection'] = ResolversParentTypes['CardsContainerConnection']
+	ParentType extends ResolversParentTypes['CardsContainerConnection'] =
+		ResolversParentTypes['CardsContainerConnection']
 > = {
 	aggregate?: Resolver<ResolversTypes['Aggregate'], ParentType, ContextType>;
 	edges?: Resolver<Array<ResolversTypes['CardsContainerEdge']>, ParentType, ContextType>;
@@ -23268,8 +23268,8 @@ export type CardsContainerConnectionResolvers<
 
 export type CardsContainerEdgeResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['CardsContainerEdge'] = ResolversParentTypes['CardsContainerEdge']
+	ParentType extends ResolversParentTypes['CardsContainerEdge'] =
+		ResolversParentTypes['CardsContainerEdge']
 > = {
 	cursor?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
 	node?: Resolver<ResolversTypes['CardsContainer'], ParentType, ContextType>;
@@ -23345,8 +23345,8 @@ export type CtaLinkResolvers<
 
 export type CtaLinkConnectionResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['CtaLinkConnection'] = ResolversParentTypes['CtaLinkConnection']
+	ParentType extends ResolversParentTypes['CtaLinkConnection'] =
+		ResolversParentTypes['CtaLinkConnection']
 > = {
 	aggregate?: Resolver<ResolversTypes['Aggregate'], ParentType, ContextType>;
 	edges?: Resolver<Array<ResolversTypes['CtaLinkEdge']>, ParentType, ContextType>;
@@ -23367,8 +23367,10 @@ export interface DateScalarConfig extends GraphQLScalarTypeConfig<ResolversTypes
 	name: 'Date';
 }
 
-export interface DateTimeScalarConfig
-	extends GraphQLScalarTypeConfig<ResolversTypes['DateTime'], any> {
+export interface DateTimeScalarConfig extends GraphQLScalarTypeConfig<
+	ResolversTypes['DateTime'],
+	any
+> {
 	name: 'DateTime';
 }
 
@@ -23430,8 +23432,8 @@ export type DividerResolvers<
 
 export type DividerConnectionResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['DividerConnection'] = ResolversParentTypes['DividerConnection']
+	ParentType extends ResolversParentTypes['DividerConnection'] =
+		ResolversParentTypes['DividerConnection']
 > = {
 	aggregate?: Resolver<ResolversTypes['Aggregate'], ParentType, ContextType>;
 	edges?: Resolver<Array<ResolversTypes['DividerEdge']>, ParentType, ContextType>;
@@ -23450,8 +23452,8 @@ export type DividerEdgeResolvers<
 
 export type DocumentVersionResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['DocumentVersion'] = ResolversParentTypes['DocumentVersion']
+	ParentType extends ResolversParentTypes['DocumentVersion'] =
+		ResolversParentTypes['DocumentVersion']
 > = {
 	createdAt?: Resolver<ResolversTypes['DateTime'], ParentType, ContextType>;
 	data?: Resolver<Maybe<ResolversTypes['Json']>, ParentType, ContextType>;
@@ -23591,8 +23593,8 @@ export type EyecatcherResolvers<
 
 export type EyecatcherConnectionResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['EyecatcherConnection'] = ResolversParentTypes['EyecatcherConnection']
+	ParentType extends ResolversParentTypes['EyecatcherConnection'] =
+		ResolversParentTypes['EyecatcherConnection']
 > = {
 	aggregate?: Resolver<ResolversTypes['Aggregate'], ParentType, ContextType>;
 	edges?: Resolver<Array<ResolversTypes['EyecatcherEdge']>, ParentType, ContextType>;
@@ -23678,8 +23680,8 @@ export type HeroImageResolvers<
 
 export type HeroImageConnectionResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['HeroImageConnection'] = ResolversParentTypes['HeroImageConnection']
+	ParentType extends ResolversParentTypes['HeroImageConnection'] =
+		ResolversParentTypes['HeroImageConnection']
 > = {
 	aggregate?: Resolver<ResolversTypes['Aggregate'], ParentType, ContextType>;
 	edges?: Resolver<Array<ResolversTypes['HeroImageEdge']>, ParentType, ContextType>;
@@ -23766,8 +23768,8 @@ export type ImageResolvers<
 
 export type ImageConnectionResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['ImageConnection'] = ResolversParentTypes['ImageConnection']
+	ParentType extends ResolversParentTypes['ImageConnection'] =
+		ResolversParentTypes['ImageConnection']
 > = {
 	aggregate?: Resolver<ResolversTypes['Aggregate'], ParentType, ContextType>;
 	edges?: Resolver<Array<ResolversTypes['ImageEdge']>, ParentType, ContextType>;
@@ -26141,8 +26143,8 @@ export type PageModulResolvers<
 
 export type PartnerContainerResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['PartnerContainer'] = ResolversParentTypes['PartnerContainer']
+	ParentType extends ResolversParentTypes['PartnerContainer'] =
+		ResolversParentTypes['PartnerContainer']
 > = {
 	blogPost?: Resolver<
 		Maybe<ResolversTypes['BlogPost']>,
@@ -26211,8 +26213,8 @@ export type PartnerContainerResolvers<
 
 export type PartnerContainerConnectionResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['PartnerContainerConnection'] = ResolversParentTypes['PartnerContainerConnection']
+	ParentType extends ResolversParentTypes['PartnerContainerConnection'] =
+		ResolversParentTypes['PartnerContainerConnection']
 > = {
 	aggregate?: Resolver<ResolversTypes['Aggregate'], ParentType, ContextType>;
 	edges?: Resolver<Array<ResolversTypes['PartnerContainerEdge']>, ParentType, ContextType>;
@@ -26222,8 +26224,8 @@ export type PartnerContainerConnectionResolvers<
 
 export type PartnerContainerEdgeResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['PartnerContainerEdge'] = ResolversParentTypes['PartnerContainerEdge']
+	ParentType extends ResolversParentTypes['PartnerContainerEdge'] =
+		ResolversParentTypes['PartnerContainerEdge']
 > = {
 	cursor?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
 	node?: Resolver<ResolversTypes['PartnerContainer'], ParentType, ContextType>;
@@ -26287,8 +26289,8 @@ export type PartnerItemResolvers<
 
 export type PartnerItemConnectionResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['PartnerItemConnection'] = ResolversParentTypes['PartnerItemConnection']
+	ParentType extends ResolversParentTypes['PartnerItemConnection'] =
+		ResolversParentTypes['PartnerItemConnection']
 > = {
 	aggregate?: Resolver<ResolversTypes['Aggregate'], ParentType, ContextType>;
 	edges?: Resolver<Array<ResolversTypes['PartnerItemEdge']>, ParentType, ContextType>;
@@ -26298,8 +26300,8 @@ export type PartnerItemConnectionResolvers<
 
 export type PartnerItemEdgeResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['PartnerItemEdge'] = ResolversParentTypes['PartnerItemEdge']
+	ParentType extends ResolversParentTypes['PartnerItemEdge'] =
+		ResolversParentTypes['PartnerItemEdge']
 > = {
 	cursor?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
 	node?: Resolver<ResolversTypes['PartnerItem'], ParentType, ContextType>;
@@ -26893,20 +26895,24 @@ export type RgbaResolvers<
 	__isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export interface RgbaHueScalarConfig
-	extends GraphQLScalarTypeConfig<ResolversTypes['RGBAHue'], any> {
+export interface RgbaHueScalarConfig extends GraphQLScalarTypeConfig<
+	ResolversTypes['RGBAHue'],
+	any
+> {
 	name: 'RGBAHue';
 }
 
-export interface RgbaTransparencyScalarConfig
-	extends GraphQLScalarTypeConfig<ResolversTypes['RGBATransparency'], any> {
+export interface RgbaTransparencyScalarConfig extends GraphQLScalarTypeConfig<
+	ResolversTypes['RGBATransparency'],
+	any
+> {
 	name: 'RGBATransparency';
 }
 
 export type ReferencesContainerResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['ReferencesContainer'] = ResolversParentTypes['ReferencesContainer']
+	ParentType extends ResolversParentTypes['ReferencesContainer'] =
+		ResolversParentTypes['ReferencesContainer']
 > = {
 	createdAt?: Resolver<ResolversTypes['DateTime'], ParentType, ContextType>;
 	createdBy?: Resolver<
@@ -26969,8 +26975,8 @@ export type ReferencesContainerResolvers<
 
 export type ReferencesContainerConnectionResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['ReferencesContainerConnection'] = ResolversParentTypes['ReferencesContainerConnection']
+	ParentType extends ResolversParentTypes['ReferencesContainerConnection'] =
+		ResolversParentTypes['ReferencesContainerConnection']
 > = {
 	aggregate?: Resolver<ResolversTypes['Aggregate'], ParentType, ContextType>;
 	edges?: Resolver<Array<ResolversTypes['ReferencesContainerEdge']>, ParentType, ContextType>;
@@ -26980,8 +26986,8 @@ export type ReferencesContainerConnectionResolvers<
 
 export type ReferencesContainerEdgeResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['ReferencesContainerEdge'] = ResolversParentTypes['ReferencesContainerEdge']
+	ParentType extends ResolversParentTypes['ReferencesContainerEdge'] =
+		ResolversParentTypes['ReferencesContainerEdge']
 > = {
 	cursor?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
 	node?: Resolver<ResolversTypes['ReferencesContainer'], ParentType, ContextType>;
@@ -27044,8 +27050,8 @@ export type ReferencesItemResolvers<
 
 export type ReferencesItemConnectionResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['ReferencesItemConnection'] = ResolversParentTypes['ReferencesItemConnection']
+	ParentType extends ResolversParentTypes['ReferencesItemConnection'] =
+		ResolversParentTypes['ReferencesItemConnection']
 > = {
 	aggregate?: Resolver<ResolversTypes['Aggregate'], ParentType, ContextType>;
 	edges?: Resolver<Array<ResolversTypes['ReferencesItemEdge']>, ParentType, ContextType>;
@@ -27055,8 +27061,8 @@ export type ReferencesItemConnectionResolvers<
 
 export type ReferencesItemEdgeResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['ReferencesItemEdge'] = ResolversParentTypes['ReferencesItemEdge']
+	ParentType extends ResolversParentTypes['ReferencesItemEdge'] =
+		ResolversParentTypes['ReferencesItemEdge']
 > = {
 	cursor?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
 	node?: Resolver<ResolversTypes['ReferencesItem'], ParentType, ContextType>;
@@ -27074,15 +27080,17 @@ export type RichTextResolvers<
 	__isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export interface RichTextAstScalarConfig
-	extends GraphQLScalarTypeConfig<ResolversTypes['RichTextAST'], any> {
+export interface RichTextAstScalarConfig extends GraphQLScalarTypeConfig<
+	ResolversTypes['RichTextAST'],
+	any
+> {
 	name: 'RichTextAST';
 }
 
 export type ScheduledOperationResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['ScheduledOperation'] = ResolversParentTypes['ScheduledOperation']
+	ParentType extends ResolversParentTypes['ScheduledOperation'] =
+		ResolversParentTypes['ScheduledOperation']
 > = {
 	affectedDocuments?: Resolver<
 		Array<ResolversTypes['ScheduledOperationAffectedDocument']>,
@@ -27137,8 +27145,8 @@ export type ScheduledOperationResolvers<
 
 export type ScheduledOperationAffectedDocumentResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['ScheduledOperationAffectedDocument'] = ResolversParentTypes['ScheduledOperationAffectedDocument']
+	ParentType extends ResolversParentTypes['ScheduledOperationAffectedDocument'] =
+		ResolversParentTypes['ScheduledOperationAffectedDocument']
 > = {
 	__resolveType: TypeResolveFn<
 		| 'AccordionContainer'
@@ -27169,8 +27177,8 @@ export type ScheduledOperationAffectedDocumentResolvers<
 
 export type ScheduledOperationConnectionResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['ScheduledOperationConnection'] = ResolversParentTypes['ScheduledOperationConnection']
+	ParentType extends ResolversParentTypes['ScheduledOperationConnection'] =
+		ResolversParentTypes['ScheduledOperationConnection']
 > = {
 	aggregate?: Resolver<ResolversTypes['Aggregate'], ParentType, ContextType>;
 	edges?: Resolver<Array<ResolversTypes['ScheduledOperationEdge']>, ParentType, ContextType>;
@@ -27180,8 +27188,8 @@ export type ScheduledOperationConnectionResolvers<
 
 export type ScheduledOperationEdgeResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['ScheduledOperationEdge'] = ResolversParentTypes['ScheduledOperationEdge']
+	ParentType extends ResolversParentTypes['ScheduledOperationEdge'] =
+		ResolversParentTypes['ScheduledOperationEdge']
 > = {
 	cursor?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
 	node?: Resolver<ResolversTypes['ScheduledOperation'], ParentType, ContextType>;
@@ -27190,8 +27198,8 @@ export type ScheduledOperationEdgeResolvers<
 
 export type ScheduledReleaseResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['ScheduledRelease'] = ResolversParentTypes['ScheduledRelease']
+	ParentType extends ResolversParentTypes['ScheduledRelease'] =
+		ResolversParentTypes['ScheduledRelease']
 > = {
 	createdAt?: Resolver<ResolversTypes['DateTime'], ParentType, ContextType>;
 	createdBy?: Resolver<
@@ -27243,8 +27251,8 @@ export type ScheduledReleaseResolvers<
 
 export type ScheduledReleaseConnectionResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['ScheduledReleaseConnection'] = ResolversParentTypes['ScheduledReleaseConnection']
+	ParentType extends ResolversParentTypes['ScheduledReleaseConnection'] =
+		ResolversParentTypes['ScheduledReleaseConnection']
 > = {
 	aggregate?: Resolver<ResolversTypes['Aggregate'], ParentType, ContextType>;
 	edges?: Resolver<Array<ResolversTypes['ScheduledReleaseEdge']>, ParentType, ContextType>;
@@ -27254,8 +27262,8 @@ export type ScheduledReleaseConnectionResolvers<
 
 export type ScheduledReleaseEdgeResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['ScheduledReleaseEdge'] = ResolversParentTypes['ScheduledReleaseEdge']
+	ParentType extends ResolversParentTypes['ScheduledReleaseEdge'] =
+		ResolversParentTypes['ScheduledReleaseEdge']
 > = {
 	cursor?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
 	node?: Resolver<ResolversTypes['ScheduledRelease'], ParentType, ContextType>;
@@ -27431,8 +27439,8 @@ export type TextAndImageResolvers<
 
 export type TextAndImageConnectionResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['TextAndImageConnection'] = ResolversParentTypes['TextAndImageConnection']
+	ParentType extends ResolversParentTypes['TextAndImageConnection'] =
+		ResolversParentTypes['TextAndImageConnection']
 > = {
 	aggregate?: Resolver<ResolversTypes['Aggregate'], ParentType, ContextType>;
 	edges?: Resolver<Array<ResolversTypes['TextAndImageEdge']>, ParentType, ContextType>;
@@ -27442,8 +27450,8 @@ export type TextAndImageConnectionResolvers<
 
 export type TextAndImageEdgeResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['TextAndImageEdge'] = ResolversParentTypes['TextAndImageEdge']
+	ParentType extends ResolversParentTypes['TextAndImageEdge'] =
+		ResolversParentTypes['TextAndImageEdge']
 > = {
 	cursor?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
 	node?: Resolver<ResolversTypes['TextAndImage'], ParentType, ContextType>;
@@ -27471,8 +27479,8 @@ export type TextEdgeResolvers<
 
 export type TextTextRichTextResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['TextTextRichText'] = ResolversParentTypes['TextTextRichText']
+	ParentType extends ResolversParentTypes['TextTextRichText'] =
+		ResolversParentTypes['TextTextRichText']
 > = {
 	html?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
 	json?: Resolver<ResolversTypes['RichTextAST'], ParentType, ContextType>;
@@ -27490,8 +27498,8 @@ export type TextTextRichTextResolvers<
 
 export type TextTextRichTextEmbeddedTypesResolvers<
 	ContextType = any,
-	ParentType extends
-		ResolversParentTypes['TextTextRichTextEmbeddedTypes'] = ResolversParentTypes['TextTextRichTextEmbeddedTypes']
+	ParentType extends ResolversParentTypes['TextTextRichTextEmbeddedTypes'] =
+		ResolversParentTypes['TextTextRichTextEmbeddedTypes']
 > = {
 	__resolveType: TypeResolveFn<'Page', ParentType, ContextType>;
 };
