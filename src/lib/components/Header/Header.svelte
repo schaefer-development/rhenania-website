@@ -42,7 +42,7 @@
 <header class="space-between sticky top-0 z-50 flex flex-col bg-white shadow-md">
 	<div class="mx-auto flex h-20 w-full max-w-screen-2xl flex-row items-center px-4 md:px-10">
 		<a href="/" class="text-rc_darkblue w-20 shrink-0 md:w-28">
-			<img src="logo.png" alt="Logo Rhenania Computer" />
+			<img src="/logo.png" alt="Logo Rhenania Computer" />
 		</a>
 
 		<div class="flex flex-grow items-center justify-end">
